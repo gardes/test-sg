@@ -8,7 +8,7 @@ language
 description
 	original_author = <
 		["name"] = <"Sam Heard">
-		["organisation"] = <"Ocean Informatics">
+		["organisation"] = <"Ocean Informatics NEW">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"18/06/2010">
 	>
@@ -58,7 +58,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
