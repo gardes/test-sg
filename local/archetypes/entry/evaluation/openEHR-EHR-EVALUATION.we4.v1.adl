@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.we.v1
+	openEHR-EHR-EVALUATION.we4.v1
 
 concept
 	[at0000]	-- We
