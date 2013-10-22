@@ -1,0 +1,240 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.invasive_device_removal_mnd.v1
+
+concept
+	[at0000]	-- Removal of invasive device
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"mag. Biljana Prinčič">
+				["organisation"] = <"Marand d.o.o., Ljubljana, Slovenia">
+				["email"] = <"biljana.princic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"23/12/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information related tothe removal of an invasive device. ">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za beleženje informacij o odstranitvi tujka iz telesa pacienta">
+			use = <"">
+			keywords = <"odstranitev", "tujek">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"4A30A7C0B1233E14283B7EAC8469F513">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Odstranitev tujka
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Razlog odstranitve
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005, 	-- Ni več potreben
+							at0006, 	-- Sum na sepso
+							at0007, 	-- Zamašitev
+							at0008, 	-- Pojav gnoja
+							at0009, 	-- Oteklina
+							at0010, 	-- Rdečina
+							at0011, 	-- Vnetje
+							at0012, 	-- Pacient odstranil sam
+							at0013, 	-- Izpad
+							at0014, 	-- Načrtovana odstranitev zaradi predvidene menjave
+							at0015, 	-- Zamenjava 
+							at0016]	-- Napaka
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Vzorec poslan na mikrobiloške preiskave
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Pacient odstranil sam
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Zapleti
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Removal of invasive device">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Reason for removal">
+					description = <"The reason for removing a device">
+				>
+				["at0002"] = <
+					text = <"Send tip to microbiology">
+					description = <"If true the device tip should be sent, or has been sent, for microbiological analysis.">
+				>
+				["at0003"] = <
+					text = <"Complications">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Self-removal by patient">
+					description = <"The patient removed the device themselves.">
+				>
+				["at0005"] = <
+					text = <"No longer needed">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Suspicion of sepsis">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Obturation">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Appearance of pus">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Swelling">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Redness">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Inflammation">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Pulled out by patient">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Fall out ">
+					description = <"Fall out ">
+				>
+				["at0014"] = <
+					text = <"Planned removal because of expected change">
+					description = <"Planned removal because of expected change">
+				>
+				["at0015"] = <
+					text = <"Exchange with the new">
+					description = <"Exchange with the new">
+				>
+				["at0016"] = <
+					text = <"Mistake">
+					description = <"Mistake">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Odstranitev tujka">
+					description = <"Odstranitev tujka">
+				>
+				["at0001"] = <
+					text = <"Razlog odstranitve">
+					description = <"Razlog odstranitve tujka">
+				>
+				["at0002"] = <
+					text = <"Vzorec poslan na mikrobiloške preiskave">
+					description = <"Ali je vzorec tujka poslan na mikrobiloške preiskave?">
+				>
+				["at0003"] = <
+					text = <"Zapleti">
+					description = <"Zapleti pri odstranitvi tujka">
+				>
+				["at0004"] = <
+					text = <"Pacient odstranil sam">
+					description = <"Pacient je sam odstranil tujek iz svojega telesa">
+				>
+				["at0005"] = <
+					text = <"Ni več potreben">
+					description = <"Ni več potreben">
+				>
+				["at0006"] = <
+					text = <"Sum na sepso">
+					description = <"Sum na sepso">
+				>
+				["at0007"] = <
+					text = <"Zamašitev">
+					description = <"Zamašitev">
+				>
+				["at0008"] = <
+					text = <"Pojav gnoja">
+					description = <"Pojav gnoja">
+				>
+				["at0009"] = <
+					text = <"Oteklina">
+					description = <"Oteklina">
+				>
+				["at0010"] = <
+					text = <"Rdečina">
+					description = <"Rdečina">
+				>
+				["at0011"] = <
+					text = <"Vnetje">
+					description = <"Vnetje">
+				>
+				["at0012"] = <
+					text = <"Pacient odstranil sam">
+					description = <"Ispuljen s strani pacienta">
+				>
+				["at0013"] = <
+					text = <"Izpad">
+					description = <"Izpad">
+				>
+				["at0014"] = <
+					text = <"Načrtovana odstranitev zaradi predvidene menjave">
+					description = <"Načrtovana odstranitev zaradi predvidene menjave">
+				>
+				["at0015"] = <
+					text = <"Zamenjava ">
+					description = <"Zamenjava z novim">
+				>
+				["at0016"] = <
+					text = <"Napaka">
+					description = <"Napaka">
+				>
+			>
+		>
+	>

@@ -1,0 +1,132 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.insulin_infusion_setup.v1
+
+concept
+	[at0000]	-- Insulin infusion setup procedure
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"27/10/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To records details of the administration of flexible (or Functional) insulin therapy , including therapy administered by insulin pump.">
+			use = <"">
+			keywords = <"insulin", "diabetes", "pump">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"7EB0B6B64344E37359A73E7F11AB08F8">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Insulin infusion setup procedure
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0017] occurrences matches {0..1} matches {	-- Date last changed
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Frequency
+				value matches {
+					DV_DURATION matches {
+						value matches {PD/|>=P0D|}
+					}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {	-- Priming volume
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::385]>
+						list = <
+							["1"] = <
+								units = <"IU">
+								magnitude = <|>=0.0|>
+								precision = <|0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Skin cleaner
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Skin care ointment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Insulin infusion setup procedure">
+					description = <"Records details of a nursing procedure to setup an insulin infusion set.">
+				>
+				["at0017"] = <
+					text = <"Date last changed">
+					description = <"The date that the infusion set was last changed.">
+				>
+				["at0018"] = <
+					text = <"Frequency">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Priming volume">
+					description = <"The amount of insulin used to prime the infusion set.">
+				>
+				["at0020"] = <
+					text = <"Skin cleaner">
+					description = <"The skin cleaner used.">
+				>
+				["at0021"] = <
+					text = <"Skin care ointment">
+					description = <"The skin care ointment used.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Insulin infusion setup procedure(en)">
+					description = <"*Records details of a nursing procedure to setup an insulin infusion set.(en)">
+				>
+				["at0017"] = <
+					text = <"*Date last changed(en)">
+					description = <"*The date that the infusion set was last changed.(en)">
+				>
+				["at0018"] = <
+					text = <"*Frequency(en)">
+					description = <"**(en)">
+				>
+				["at0019"] = <
+					text = <"*Priming volume(en)">
+					description = <"*The amount of insulin used to prime the infusion set.(en)">
+				>
+				["at0020"] = <
+					text = <"*Skin cleaner(en)">
+					description = <"*The skin cleaner used.(en)">
+				>
+				["at0021"] = <
+					text = <"*Skin care ointment(en)">
+					description = <"*The skin care ointment used.(en)">
+				>
+			>
+		>
+	>

@@ -1,0 +1,433 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.flexible_insulin_therapy.v1
+
+concept
+	[at0000]	-- Flexible insulin therapy
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"27/10/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To records details of the administration of flexible (or Functional) insulin therapy , including therapy administered by insulin pump.">
+			use = <"">
+			keywords = <"insulin", "diabetes", "pump">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"10C634B3AEDBD0886ACD72BF6C33C190">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Flexible insulin therapy
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0027] occurrences matches {0..1} matches {	-- Dosage parameters
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Maximum correction bolus
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0029] occurrences matches {0..1} matches {	-- Blood glucose target
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::119]>
+								list = <
+									["1"] = <
+										units = <"mmol/l">
+										magnitude = <|>=0.0|>
+										precision = <|1|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Insulin to carbohydrate ratio rule
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0031] occurrences matches {0..*} matches {	-- Anticipated meal coverage
+						items cardinality matches {2..*; unordered} matches {
+							ELEMENT[at0032] matches {	-- Meal
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0033, 	-- Breakfast
+											at0034, 	-- Lunch
+											at0035, 	-- Dinner
+											at0036]	-- Supper
+										}
+									}
+								}
+							}
+							ELEMENT[at0037] matches {	-- Coverage
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0002] occurrences matches {0..*} matches {	-- Bolus
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Administration time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Bolus reason
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0047, 	-- Pre-meal
+									at0048, 	-- Correction
+									at0049]	-- Regular
+								}
+							}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Total daily insulin bolus dose
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::385]>
+								list = <
+									["1"] = <
+										units = <"IU">
+										magnitude = <|>=0.0|>
+										precision = <|0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Carboydrate counting
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0003] occurrences matches {0..1} matches {	-- Infusion
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Start time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- End time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Infusion type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[local::]}
+							}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Planned infusion rate
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::118]>
+							>
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Administered infusion rate
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::118]>
+							>
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0013] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Total Insulin Daily Dose (TIDD)
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::503]>
+					>
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Flexible insulin therapy">
+					description = <"Records details of the administration of flexible (or Functional) insluin therapy , including therapy administered by insulin pump.">
+				>
+				["at0001"] = <
+					text = <"Total Insulin Daily Dose (TIDD)">
+					description = <"The cumulative daily dose of insulin.">
+				>
+				["at0002"] = <
+					text = <"Bolus">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Infusion">
+					description = <"The reason for the bolus administration.">
+				>
+				["at0004"] = <
+					text = <"Bolus reason">
+					description = <"The type or reason for the bolus.">
+				>
+				["at0006"] = <
+					text = <"Administration time">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Start time">
+					description = <"The time that the infusion was started.">
+				>
+				["at0008"] = <
+					text = <"End time">
+					description = <"The time that the infusion was ended.">
+				>
+				["at0011"] = <
+					text = <"Carboydrate counting">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Total daily insulin bolus dose">
+					description = <"The cumulative daily bolus dose">
+				>
+				["at0013"] = <
+					text = <"Device">
+					description = <"Details of the device used to administer the insulin.">
+				>
+				["at0014"] = <
+					text = <"Planned infusion rate">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Administered infusion rate">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Infusion type">
+					description = <"The type of infusion.">
+				>
+				["at0027"] = <
+					text = <"Dosage parameters">
+					description = <"Parameters used to aid dosage calculation.">
+				>
+				["at0028"] = <
+					text = <"Maximum correction bolus">
+					description = <"Maximum correction bolus per kilogram of body weight [U].">
+				>
+				["at0029"] = <
+					text = <"Blood glucose target">
+					description = <"The target blood glucose.">
+				>
+				["at0030"] = <
+					text = <"Insulin to carbohydrate ratio rule">
+					description = <"The insulin to carbohydrate ratio rule applied.">
+				>
+				["at0031"] = <
+					text = <"Anticipated meal coverage">
+					description = <"Anticipated bolus coverage of meals.">
+				>
+				["at0032"] = <
+					text = <"Meal">
+					description = <"The mealtime to which the bolus coverage should be applied.">
+				>
+				["at0033"] = <
+					text = <"Breakfast">
+					description = <"Breakfast or early morning meal.">
+				>
+				["at0034"] = <
+					text = <"Lunch">
+					description = <"Lunch or mid-day meal.">
+				>
+				["at0035"] = <
+					text = <"Dinner">
+					description = <"Dinner or evening meal.">
+				>
+				["at0036"] = <
+					text = <"Supper">
+					description = <"Supper or late-night meal">
+				>
+				["at0037"] = <
+					text = <"Coverage">
+					description = <"The bolus coverage required for the given meal.">
+				>
+				["at0047"] = <
+					text = <"Pre-meal">
+					description = <"The bolus was given as a pre-meal dose">
+				>
+				["at0048"] = <
+					text = <"Correction">
+					description = <"The bolus was given as a corrective dose.">
+				>
+				["at0049"] = <
+					text = <"Regular">
+					description = <"The bolus is part of the regular regime.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Flexible insulin therapy(en)">
+					description = <"*Records details of the administration of flexible (or Functional) insluin therapy , including therapy administered by insulin pump.(en)">
+				>
+				["at0001"] = <
+					text = <"*Total Insulin Daily Dose (TIDD)(en)">
+					description = <"*The cumulative daily dose of insulin.(en)">
+				>
+				["at0002"] = <
+					text = <"*Bolus(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Infusion(en)">
+					description = <"*The reason for the bolus administration.(en)">
+				>
+				["at0004"] = <
+					text = <"*Bolus reason(en)">
+					description = <"*The type or reason for the bolus.(en)">
+				>
+				["at0006"] = <
+					text = <"*Administration time(en)">
+					description = <"**(en)">
+				>
+				["at0007"] = <
+					text = <"*Start time(en)">
+					description = <"*The time that the infusion was started.(en)">
+				>
+				["at0008"] = <
+					text = <"*End time(en)">
+					description = <"*The time that the infusion was ended.(en)">
+				>
+				["at0011"] = <
+					text = <"*Carboydrate counting(en)">
+					description = <"**(en)">
+				>
+				["at0012"] = <
+					text = <"*Total daily insulin bolus dose(en)">
+					description = <"*The cumulative daily bolus dose(en)">
+				>
+				["at0013"] = <
+					text = <"*Device(en)">
+					description = <"*Details of the device used to administer the insulin.(en)">
+				>
+				["at0014"] = <
+					text = <"*Planned infusion rate(en)">
+					description = <"**(en)">
+				>
+				["at0015"] = <
+					text = <"*Administered infusion rate(en)">
+					description = <"**(en)">
+				>
+				["at0022"] = <
+					text = <"*Comment(en)">
+					description = <"**(en)">
+				>
+				["at0023"] = <
+					text = <"*Comment(en)">
+					description = <"**(en)">
+				>
+				["at0024"] = <
+					text = <"*Infusion type(en)">
+					description = <"*The type of infusion.(en)">
+				>
+				["at0027"] = <
+					text = <"*Dosage parameters(en)">
+					description = <"*Parameters used to aid dosage calculation.(en)">
+				>
+				["at0028"] = <
+					text = <"*Maximum correction bolus(en)">
+					description = <"*Maximum correction bolus per kilogram of body weight [U].(en)">
+				>
+				["at0029"] = <
+					text = <"*Blood glucose target(en)">
+					description = <"*The target blood glucose.(en)">
+				>
+				["at0030"] = <
+					text = <"*Insulin to carbohydrate ratio rule(en)">
+					description = <"*The insulin to carbohydrate ratio rule applied.(en)">
+				>
+				["at0031"] = <
+					text = <"*Anticipated meal coverage(en)">
+					description = <"*Anticipated bolus coverage of meals.(en)">
+				>
+				["at0032"] = <
+					text = <"*Meal(en)">
+					description = <"*The mealtime to which the bolus coverage should be applied.(en)">
+				>
+				["at0033"] = <
+					text = <"*Breakfast(en)">
+					description = <"*Breakfast or early morning meal.(en)">
+				>
+				["at0034"] = <
+					text = <"*Lunch(en)">
+					description = <"*Lunch or mid-day meal.(en)">
+				>
+				["at0035"] = <
+					text = <"*Dinner(en)">
+					description = <"*Dinner or evening meal.(en)">
+				>
+				["at0036"] = <
+					text = <"*Supper(en)">
+					description = <"*Supper or late-night meal(en)">
+				>
+				["at0037"] = <
+					text = <"*Coverage(en)">
+					description = <"*The bolus coverage required for the given meal.(en)">
+				>
+				["at0047"] = <
+					text = <"*Pre-meal(en)">
+					description = <"*The bolus was given as a pre-meal dose(en)">
+				>
+				["at0048"] = <
+					text = <"*Correction(en)">
+					description = <"*The bolus was given as a corrective dose.(en)">
+				>
+				["at0049"] = <
+					text = <"*Regular(en)">
+					description = <"*The bolus is part of the regular regime.(en)">
+				>
+			>
+		>
+	>

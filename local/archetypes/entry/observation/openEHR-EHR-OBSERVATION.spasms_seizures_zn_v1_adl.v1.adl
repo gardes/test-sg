@@ -1,0 +1,1504 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.spasms_seizures_zn_v1_adl.v1
+
+concept
+	[at0000]	-- Seizure record
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"mag.Biljana Prinčič">
+				["organisation"] = <"Marand d.o.o., Ljubljana, Slovenija">
+				["email"] = <"Biljana Prinčič">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"mag. Biljana Princic">
+		["organisation"] = <"Marand d.o.o., Ljubljana, Slovenia">
+		["email"] = <"biljana.princic@marand.si">
+		["date"] = <"22.8.2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For observation of spasms, seizures and similar events.">
+			use = <"For recording data for an observed or described single spasm, seizure or attack.">
+			keywords = <"spasms", "spasm", "attack", "neuro", "seizures", "epileptic">
+			misuse = <"For recording of physical attaks on objects or people.">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za opazovanje napadov, krčev ali podobnih stanj pacienta">
+			use = <"Za zapisovanje podatkov opazovanega napada ali krča pri pacientu, ki ima težave nevrološke narave">
+			keywords = <"napadi", "napad", "nevro napadi", "epi napadi", "krči">
+			misuse = <"Za opisovanje psihičnega stanja pacienta ali opisovanje napadov pacienta na ljudi in objekte">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E58BA17C84E4A0616821AB9AF4FB1BFD">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Ocena ZN napadov in krčev
+		data matches {
+			HISTORY[at0001] matches {	-- *Event Series(en)
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0122] occurrences matches {0..*} matches {	-- Napad/krč
+						data matches {
+							ITEM_TREE[at0003] matches {	-- *Tree(en)
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Opis posameznega napada
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0151] occurrences matches {0..1} matches {	-- Prisotni
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0142] occurrences matches {0..1} matches {	-- Datum in čas dogodka
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Lokacija dogodka
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Kdaj je prišlo do napada
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0023, 	-- Med spanjem
+													at0024, 	-- Ob prebujanju
+													at0025, 	-- V budnosti
+													at0026]	-- Med aktivnostjo
+												}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Možni sprožilni dejavniki
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Prisotne ponovitve
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {	-- Število ponovitev
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|>=1|}
+											}
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Trajanje posamezne ponovitve
+										value matches {
+											DV_DURATION matches {
+												value matches {|>=PT0S|}
+											}
+										}
+									}
+									ELEMENT[at0148] occurrences matches {0..1} matches {	-- Prisotne serije
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0149] occurrences matches {0..1} matches {	-- Število serij
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0150] occurrences matches {0..1} matches {	-- Interval serije
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"min">
+														magnitude = <|>=0.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Pacient je bil nameščen v stabilen bočni položaj
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Prisotnost člana negovalnega tima ob začetku napada
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Opis začetka in zaporedja kliničnih znakov med napadom
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..*} matches {	-- Stanje pacienta ob napadu
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0031, 	-- Bil nezavesten
+													at0032, 	-- Se odzival na zvočne dražljaje
+													at0033, 	-- Smiselno odgovarjal na vprašanja
+													at0034, 	-- Se je pomokril
+													at0035, 	-- Imel peno na ustih
+													at0036, 	-- Nekontrolirano opletal z jezikom
+													at0037, 	-- Poškodoval
+													at0143]	-- Se je ugriznil v jezik
+												}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {	-- Po napadu
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0038, 	-- Odziven
+													at0039]	-- Neodziven
+												}
+											}
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Neodziven 
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0041] occurrences matches {0..1} matches {	-- Video
+										value matches {
+											DV_MULTIMEDIA matches {
+												media_type matches {
+													[openEHR::
+													401, 
+													402, 
+													404, 
+													405, 
+													406, 
+													407, 
+													414, 
+													425, 
+													426, 
+													427, 
+													428, 
+													429, 
+													387, 
+													388, 
+													389, 
+													390, 
+													391, 
+													392, 
+													393, 
+													394, 
+													395, 
+													396, 
+													397, 
+													398, 
+													399, 
+													400, 
+													409, 
+													410, 
+													411, 
+													412, 
+													413]
+												}
+											}
+										}
+									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {	-- Dodatni komentar
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0043] occurrences matches {0..1} matches {	-- Vzorec napada
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0044] occurrences matches {0..*} matches {	-- Prikriti
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0049, 	-- Premikanje oči
+															at0050, 	-- Mežikanje
+															at0051, 	-- Nenadoma se zastrmi
+															at0052, 	-- Nenadna ohlapnost
+															at0053, 	-- Nenadna otrdelost
+															at0054, 	-- Sesanje
+															at0055, 	-- Ponavljajoči se gibi z ustnicam in jezikom
+															at0056, 	-- Iztekanje sline
+															at0057, 	-- Pediliranje
+															at0058]	-- Kolesarjenje
+														}
+													}
+												}
+											}
+											ELEMENT[at0045] occurrences matches {0..*} matches {	-- Klonični
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0059, 	-- Leva roka
+															at0060, 	-- Leva noga
+															at0061, 	-- Desna noga
+															at0062, 	-- Desna roka
+															at0063, 	-- Obe roki
+															at0064, 	-- Obe nogi
+															at0065, 	-- Roka in noga
+															at0066, 	-- Obe roki in obe nogi
+															at0067, 	-- Leva stran telesa
+															at0068, 	-- Desna stran telesa
+															at0069, 	-- Celotno telo
+															at0144, 	-- Noga ali roka
+															at0145]	-- Več udov
+														}
+													}
+												}
+											}
+											ELEMENT[at0046] occurrences matches {0..*} matches {	-- Tonični
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0070, 	-- Trup ali/in vrat
+															at0071, 	-- Leva roka
+															at0072, 	-- Desna roka
+															at0073, 	-- Desna noga
+															at0074, 	-- Leva noga
+															at0075, 	-- Fleksija rok z ekstenzijo nog
+															at0076, 	-- Ekstenzija rok in nog
+															at0077]	-- Horizontalni premik oči
+														}
+													}
+												}
+											}
+											ELEMENT[at0047] occurrences matches {0..1} matches {	-- Mioklonični
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0078, 	-- Zgibki rok
+															at0079, 	-- Trzljaji nog
+															at0080, 	-- Trzljaji različnih delov telesa
+															at0081, 	-- Spremembe obraznih mišic
+															at0082, 	-- Konvulzivni trzljaji udov
+															at0083, 	-- Negativni mioklonus
+															at0084]	-- Infantilni spazmi
+														}
+													}
+												}
+											}
+											ELEMENT[at0089] occurrences matches {0..*} matches {	-- Prevladujoči
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0090, 	-- Tremor
+															at0091, 	-- Zgibki
+															at0092, 	-- Spazem
+															at0146]	-- Afektni napadi
+														}
+													}
+												}
+											}
+											ELEMENT[at0126] occurrences matches {0..*} matches {	-- Fokalni
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0130, 	-- Preprosti
+															at0131, 	-- Kompleksni
+															at0132]	-- Sekundarno generalizirani
+														}
+													}
+												}
+											}
+											ELEMENT[at0127] occurrences matches {0..*} matches {	-- Generalizirani
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0133, 	-- Mioklonični
+															at0134, 	-- Klonični
+															at0135, 	-- Tonični
+															at0136, 	-- Tonično-klonični
+															at0137, 	-- Atonični
+															at0147]	-- Absence
+														}
+													}
+												}
+											}
+											ELEMENT[at0128] occurrences matches {0..1} matches {	-- Nepredvidljivi
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0129] occurrences matches {0..*} matches {	-- Status epilepticus
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0138, 	-- Konvulzivni
+															at0139, 	-- Nekonvulzivni
+															at0140, 	-- Preprosti parcialni 
+															at0141]	-- Prikriti
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0104] occurrences matches {0..1} matches {	-- Občutki pacienta pred napadom
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0088] occurrences matches {0..*} matches {	-- Napad ustavi
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0097] occurrences matches {0..1} matches {	-- Opažene značilnosti napada
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0098] occurrences matches {0..*} matches {	-- Spanje
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0105, 	-- Zaspan
+															at0106]	-- Daljša obdobja spanja
+														}
+													}
+												}
+											}
+											ELEMENT[at0099] occurrences matches {0..*} matches {	-- Umirjanje
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0107, 	-- Daljša obdobja joka
+															at0108, 	-- V naročju se pomiri
+															at0109]	-- Težko se pomiri
+														}
+													}
+												}
+											}
+											ELEMENT[at0100] occurrences matches {0..*} matches {	-- Hranjenje
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0110, 	-- Sesa in požira
+															at0111, 	-- Med hranjenjem poliva
+															at0112, 	-- Med hranjenjem se utruja
+															at0113]	-- Po hranjenju poliva
+														}
+													}
+												}
+											}
+											ELEMENT[at0101] occurrences matches {0..1} matches {	-- Mišični tonus
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0114, 	-- Povišan
+															at0115, 	-- Normalen
+															at0116, 	-- Ohlapen
+															at0117]	-- Opistotonus
+														}
+													}
+												}
+											}
+											ELEMENT[at0102] occurrences matches {0..*} matches {	-- Odziv
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0118, 	-- Vzpostavi očesni stik
+															at0119, 	-- Se odzove na glas in se pomiri
+															at0120]	-- Pretirano reagira na dražljaje
+														}
+													}
+												}
+											}
+											ELEMENT[at0121] occurrences matches {0..1} matches {	-- Komentar opozaovalca
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Seizure record">
+					description = <"Details of a seizure/spasm or similar event.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Summary description">
+					description = <"Description of characteristics 
+of spasms/seizures. ">
+				>
+				["at0006"] = <
+					text = <"Nurse present at onset">
+					description = <"Was the nurse present during onset?">
+				>
+				["at0009"] = <
+					text = <"Recovery position adopted">
+					description = <"Was the patient put in a recovery position?">
+				>
+				["at0012"] = <
+					text = <"Possible triggers">
+					description = <"Possible triggers for spasm or seizure">
+				>
+				["at0014"] = <
+					text = <"Location where occured">
+					description = <"Physical location where spasm/seizure occured. i.e home, ward, shower.">
+				>
+				["at0017"] = <
+					text = <"Repetitions">
+					description = <"Was the seizure event repeated?">
+				>
+				["at0020"] = <
+					text = <"Number of repetitions">
+					description = <"How many repetitions has been present">
+				>
+				["at0021"] = <
+					text = <"Duration of single repetition">
+					description = <"Time interval of one repetition">
+				>
+				["at0022"] = <
+					text = <"Sleep state at onset">
+					description = <"The sleep state during which the spasm/seizure has been occured?">
+				>
+				["at0023"] = <
+					text = <"Asleep">
+					description = <"Spasm/seizure occured while the subject was asleep.">
+				>
+				["at0024"] = <
+					text = <"Waking up">
+					description = <"Spasm/seizure occured while the subject was waking up.">
+				>
+				["at0025"] = <
+					text = <"Awake">
+					description = <"Spasm/seizure occured while the patient was awake.">
+				>
+				["at0026"] = <
+					text = <"Active">
+					description = <"Spasm/seizure occured while the subject was  performing an activity.">
+				>
+				["at0028"] = <
+					text = <"Description of onset and course">
+					description = <"Description of onset and time
+sequence of clinical signs during seizure/spasm">
+				>
+				["at0029"] = <
+					text = <"Features during event">
+					description = <"Patient features noted during the event.">
+				>
+				["at0030"] = <
+					text = <"Post- event responsiveness">
+					description = <"State of patient after the seizure/spasm">
+				>
+				["at0031"] = <
+					text = <"Absent- minded">
+					description = <"During the seizure patient has been absent- minded">
+				>
+				["at0032"] = <
+					text = <"Responsive to audible stimuli">
+					description = <"During the seizure patient responsives to audible stimuli (i.e.call)">
+				>
+				["at0033"] = <
+					text = <"Makes sensible responses to questions">
+					description = <"During the seizure patient makes sensible responses to questions">
+				>
+				["at0034"] = <
+					text = <"Wets">
+					description = <"During the seizure patient wets (i.e. the bad)">
+				>
+				["at0035"] = <
+					text = <"Foams at mouth">
+					description = <"During the seizure patient foams at mouth">
+				>
+				["at0036"] = <
+					text = <"Tongue biting">
+					description = <"During the seizure patient bits with the tongue">
+				>
+				["at0037"] = <
+					text = <"Inflicts injury">
+					description = <"During the seizure patient inflicts injury">
+				>
+				["at0038"] = <
+					text = <"Responsive">
+					description = <"After the seizure/spasm patient has been responsive">
+				>
+				["at0039"] = <
+					text = <"Non responsive">
+					description = <"After the seizure/spasm patient has not been responsive">
+				>
+				["at0040"] = <
+					text = <"Non-responsive period">
+					description = <"Time interval of non responsiveness after the spasm/sezure">
+				>
+				["at0041"] = <
+					text = <"Video">
+					description = <"Video image of event when the spasm/seizure has appeared">
+				>
+				["at0043"] = <
+					text = <"Seizure patterns">
+					description = <"Description of single spasm">
+				>
+				["at0044"] = <
+					text = <"Absences">
+					description = <"Subtle abnormal movements during the spasm/seizure.">
+				>
+				["at0045"] = <
+					text = <"Clonic">
+					description = <"The clonic movements of patient in period of spasm/seizure">
+				>
+				["at0046"] = <
+					text = <"Tonic">
+					description = <"The tonic movements of patient in period of spasm/seizure">
+				>
+				["at0047"] = <
+					text = <"Myoclonic">
+					description = <"The myoclonic movements of patient in period of spasm/seizure">
+				>
+				["at0048"] = <
+					text = <"Additional comment">
+					description = <"Additional comments regarding event, not captured in other elements.">
+				>
+				["at0049"] = <
+					text = <"Abnormal eyes movement">
+					description = <"Subtile reaction during the spasm/sezure is abnormal eyes movement">
+				>
+				["at0050"] = <
+					text = <"Eyes blinking">
+					description = <"Subtile reaction during the spasm/sezure is eyes blinking">
+				>
+				["at0051"] = <
+					text = <"Fixed staring">
+					description = <"Subtile reaction during the spasm/sezure is fixed staring">
+				>
+				["at0052"] = <
+					text = <"Sudden hypotonia">
+					description = <"Subtile reaction during the spasm/sezure is sudden hypotonia">
+				>
+				["at0053"] = <
+					text = <"Sudden hypertonia">
+					description = <"Subtile reaction during the spasm/sezure is sudden hypertonia">
+				>
+				["at0054"] = <
+					text = <"Sucking">
+					description = <"Subtile reaction during the spasm/sezure is sucking">
+				>
+				["at0055"] = <
+					text = <"Repetitive tongue and mouth movements">
+					description = <"Subtile reaction during the spasm/sezure are repetitive tongue and mouth movements">
+				>
+				["at0056"] = <
+					text = <"Leaking mucose">
+					description = <"Subtile reaction during the spasm/sezure is leakining mucose">
+				>
+				["at0057"] = <
+					text = <"Pedeling">
+					description = <"Subtile reaction during the spasm/sezure is pedeling (movements in ankles)">
+				>
+				["at0058"] = <
+					text = <"Bicycling">
+					description = <"Subtile reaction during the spasm/sezure is bicycling (movements in knees)">
+				>
+				["at0059"] = <
+					text = <"Left arm ">
+					description = <"The clonic movements of left arm in period of spasm/seizure">
+				>
+				["at0060"] = <
+					text = <"Left leg">
+					description = <"The clonic movements of left leg in period of spasm/seizure">
+				>
+				["at0061"] = <
+					text = <"Right leg">
+					description = <"The clonic movements of right leg in period of spasm/seizure">
+				>
+				["at0062"] = <
+					text = <"Right arm">
+					description = <"The clonic movements of right arm in period of spasm/seizure">
+				>
+				["at0063"] = <
+					text = <"Boat arms">
+					description = <"The clonic movements of boat arms in period of spasm/seizure">
+				>
+				["at0064"] = <
+					text = <"Boat legs">
+					description = <"The clonic movements of boat legs in period of spasm/seizure">
+				>
+				["at0065"] = <
+					text = <"One arm and one leg">
+					description = <"The clonic movements of one arm and one leg in period of spasm/seizure">
+				>
+				["at0066"] = <
+					text = <"Both arms and both legs">
+					description = <"The clonic movements of both arms and both legs  in period of spasm/seizure">
+				>
+				["at0067"] = <
+					text = <"Left side of body">
+					description = <"The clonic movements of left side of the body in period of spasm/seizure">
+				>
+				["at0068"] = <
+					text = <"Right side of the body">
+					description = <"The clonic movements of right side of the body in period of spasm/seizure">
+				>
+				["at0069"] = <
+					text = <"Entire body">
+					description = <"The clonic movements of entire body in period of spasm/seizure">
+				>
+				["at0070"] = <
+					text = <"Torso and/or neck">
+					description = <"Tonic movements of torso and /or neck muscles in period of spasm/seizure">
+				>
+				["at0071"] = <
+					text = <"Left arm">
+					description = <"Tonic movements of left arm in period of spasm/seizure">
+				>
+				["at0072"] = <
+					text = <"Right arm">
+					description = <"Tonic movements of right arm in period of spasm/seizure">
+				>
+				["at0073"] = <
+					text = <"Right leg">
+					description = <"Tonic movements of right leg in period of spasm/seizure">
+				>
+				["at0074"] = <
+					text = <"Left leg">
+					description = <"Tonic movements of left leg in period of spasm/seizure">
+				>
+				["at0075"] = <
+					text = <"Sustained flexion of arms with extension of legs">
+					description = <"The sustained flexion of upper limbs with extension of lower limbs in period of spasm/seizure">
+				>
+				["at0076"] = <
+					text = <"Extension of arms and legs">
+					description = <"Extension of arms and legs in period of spasm/seizure">
+				>
+				["at0077"] = <
+					text = <"Horizontal rapid eye movements">
+					description = <"Horizontal rapid eye movements in period of spasm/seizure">
+				>
+				["at0078"] = <
+					text = <"Arms">
+					description = <"The myoclonic movements of arms in period of spasm/seizure">
+				>
+				["at0079"] = <
+					text = <"Legs">
+					description = <"The myoclonic movements of legs in period of spasm/seizure">
+				>
+				["at0080"] = <
+					text = <"Several body parts">
+					description = <"The myoclonic movements of several body parts in period of spasm/seizure">
+				>
+				["at0081"] = <
+					text = <"Facial muscles">
+					description = <"The myoclonic movements of facial musles in the period of spasm/seizure">
+				>
+				["at0082"] = <
+					text = <"Convulsive twitches of extremitets">
+					description = <"Convulsive twitches of extremitets in the period of spasm/seizure">
+				>
+				["at0083"] = <
+					text = <"Negative myoclonus">
+					description = <"The negative myoclonus in the period of spasm/seizure">
+				>
+				["at0084"] = <
+					text = <"Infantile spasms">
+					description = <"Infantile spasms in the period of spasm/seizure">
+				>
+				["at0088"] = <
+					text = <"Cessation trigger">
+					description = <"Triggers leading to cessation of general body movements.">
+				>
+				["at0089"] = <
+					text = <"Prevailing global pattern">
+					description = <"Prevailing movement of body at the time of spasm/seazure">
+				>
+				["at0090"] = <
+					text = <"Tremor">
+					description = <"The tremor is preaviling movement of body at the time of spasm/seazure">
+				>
+				["at0091"] = <
+					text = <"Twitching (includes tingling / fasciculation)">
+					description = <"The twichingis  (includes tingling / fasciculation) are preaviling movements of body at the time of spasm/seazure">
+				>
+				["at0092"] = <
+					text = <"Spasms">
+					description = <"The spasms sre the preaviling movements of body at the time of spasm/seazure">
+				>
+				["at0097"] = <
+					text = <"Witnessed features">
+					description = <"Features observed bywhere the patient is unable to speak. ">
+				>
+				["at0098"] = <
+					text = <"Sleepfulness">
+					description = <"Description of sleepfulness of the subject.">
+				>
+				["at0099"] = <
+					text = <"Distress">
+					description = <"Description of subject's distress">
+				>
+				["at0100"] = <
+					text = <"Feeding">
+					description = <"Description of feeding state of non speaking patient">
+				>
+				["at0101"] = <
+					text = <"Muscle tonus">
+					description = <"Description of muscle tonus of non speaking patient">
+				>
+				["at0102"] = <
+					text = <"Responsiveness">
+					description = <"Description of response of non speaking patient">
+				>
+				["at0104"] = <
+					text = <"Self description">
+					description = <"Patient's own description of seizure event.">
+				>
+				["at0105"] = <
+					text = <"Drowsy">
+					description = <"The patient is drowsy sliper">
+				>
+				["at0106"] = <
+					text = <"Prolonged sleeping">
+					description = <"The patient has long sliping periods">
+				>
+				["at0107"] = <
+					text = <"Long crying period">
+					description = <"Patient has long crying period">
+				>
+				["at0108"] = <
+					text = <"Consoles in arms or in the lap">
+					description = <"The patient consoles in arms or  in the lap">
+				>
+				["at0109"] = <
+					text = <"Difficult to console">
+					description = <"The patient difficult to console">
+				>
+				["at0110"] = <
+					text = <"Sucks and swallows">
+					description = <"The patient during the feeding sucks and swallows">
+				>
+				["at0111"] = <
+					text = <"Spitting up / reflux DURING feeding">
+					description = <"The patient spitting up /has reflux during feeding ">
+				>
+				["at0112"] = <
+					text = <"Signs of fatigue before adequate intake has been achieved">
+					description = <"The patient has signs of fatigue before adequate intake has been achieved">
+				>
+				["at0113"] = <
+					text = <"Spitting up / reflux AFTER feeding">
+					description = <"The patient spitting up /has reflux after feeding ">
+				>
+				["at0114"] = <
+					text = <"Hypertonus">
+					description = <"Patient has hypertonus">
+				>
+				["at0115"] = <
+					text = <"Normal">
+					description = <"Patient muscle tonus is normal">
+				>
+				["at0116"] = <
+					text = <"Hypotonus">
+					description = <"Patient has hypotonus">
+				>
+				["at0117"] = <
+					text = <"Opisthotonus">
+					description = <"Patient has opisthotonus">
+				>
+				["at0118"] = <
+					text = <"Establishes eye contact">
+					description = <"The patient establishes eye contact">
+				>
+				["at0119"] = <
+					text = <"Responses to audible stimuli (calms down)">
+					description = <"The patient responses to audible stimuli (calms down)">
+				>
+				["at0120"] = <
+					text = <"Excessive reaction to stimuli">
+					description = <"The patient has excessive reaction to stimuli">
+				>
+				["at0121"] = <
+					text = <"Witness comment">
+					description = <"Additional comment by a witness to the spasm/seizure event.">
+				>
+				["at0122"] = <
+					text = <"Seizure event">
+					description = <"Details of a single seizure event.">
+				>
+				["at0126"] = <
+					text = <"Focal">
+					description = <"The spasm/seizure has focal character">
+				>
+				["at0127"] = <
+					text = <"General">
+					description = <"The spasm/seizure has general character">
+				>
+				["at0128"] = <
+					text = <"Unpredictable">
+					description = <"The spasm/seizure has unpredictable character">
+				>
+				["at0129"] = <
+					text = <"Status epilepticus">
+					description = <"The status epilepticus of  spasm/seizure ">
+				>
+				["at0130"] = <
+					text = <"Simple">
+					description = <"The spasm/seizure has simple focal character">
+				>
+				["at0131"] = <
+					text = <"Complex">
+					description = <"The spasm/seizure has complex focal character">
+				>
+				["at0132"] = <
+					text = <"Secondary generalised">
+					description = <"The spasm/seizure has secondary generalised  focal character">
+				>
+				["at0133"] = <
+					text = <"Myoclonic">
+					description = <"The spasm/seizure has myoclonic general character">
+				>
+				["at0134"] = <
+					text = <"Clonic">
+					description = <"The spasm/seizure has clonic general character">
+				>
+				["at0135"] = <
+					text = <"Tonic">
+					description = <"The spasm/seizure has tonic general character">
+				>
+				["at0136"] = <
+					text = <"Tonic-clonic">
+					description = <"The spasm/seizure has tonic-clonic general character">
+				>
+				["at0137"] = <
+					text = <"Atonic">
+					description = <"The spasm/seizure has atonic general character">
+				>
+				["at0138"] = <
+					text = <"Convulsive">
+					description = <"The status epilepticus of  spasm/seizure is convulsive">
+				>
+				["at0139"] = <
+					text = <"Non-convulsive">
+					description = <"The status epilepticus of  spasm/seizure is non-convulsive">
+				>
+				["at0140"] = <
+					text = <"Simple partial">
+					description = <"The status epilepticus of  spasm/seizure is simple partial">
+				>
+				["at0141"] = <
+					text = <"Hidden">
+					description = <"The status epilepticus of  spasm/seizure is hidden">
+				>
+				["at0142"] = <
+					text = <"Date and time when occured">
+					description = <"The date and time when spasm/seizure occured">
+				>
+				["at0143"] = <
+					text = <"To bite one's tongue ">
+					description = <"During the seizure patient bite one's tongue">
+				>
+				["at0144"] = <
+					text = <"Arm or leg">
+					description = <"The clonic movements of arm or leg in period of spasm/seizure">
+				>
+				["at0145"] = <
+					text = <"More limbs">
+					description = <"The clonic movements of more limbs in period of spasm/seizure">
+				>
+				["at0146"] = <
+					text = <"Affect attacs">
+					description = <"The affect attacks is preaviling movement of body at the time of spasm/seazure">
+				>
+				["at0147"] = <
+					text = <"Absence">
+					description = <"Absence of  spasm/seizure has myoclonic general character">
+				>
+				["at0148"] = <
+					text = <"Series">
+					description = <"Was the seizure event occured in series? ">
+				>
+				["at0149"] = <
+					text = <"Number of series">
+					description = <"How many series occured?">
+				>
+				["at0150"] = <
+					text = <"Interval of series">
+					description = <"Time interval of repetition of seris">
+				>
+				["at0151"] = <
+					text = <"Present">
+					description = <"Presence of observed seizure">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ocena ZN napadov in krčev">
+					description = <"Podatki o napadih, krčih in podobnih stanj pacienta">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"Opis posameznega napada">
+					description = <"Opis posameznega napada">
+				>
+				["at0006"] = <
+					text = <"Prisotnost člana negovalnega tima ob začetku napada">
+					description = <"Ali so bili prisotni člani negovalnega tima ob začetku napada?">
+				>
+				["at0009"] = <
+					text = <"Pacient je bil nameščen v stabilen bočni položaj">
+					description = <"Ali je pacient bil nameščen v  stabilen bočni položaj?">
+				>
+				["at0012"] = <
+					text = <"Možni sprožilni dejavniki">
+					description = <"Možni sprožilni dejavniki za napad ali krč">
+				>
+				["at0014"] = <
+					text = <"Lokacija dogodka">
+					description = <"Fizična lokacija dogodka (dom, trgovina, na poti,....)">
+				>
+				["at0017"] = <
+					text = <"Prisotne ponovitve">
+					description = <"Ali so napadi/krči bili ponavljajoči?">
+				>
+				["at0020"] = <
+					text = <"Število ponovitev">
+					description = <"Kolikokrat se je napad ali krč ponovil">
+				>
+				["at0021"] = <
+					text = <"Trajanje posamezne ponovitve">
+					description = <"Čas trajanja posamezne ponovitve">
+				>
+				["at0022"] = <
+					text = <"Kdaj je prišlo do napada">
+					description = <"Stanje pacienta v času, ko je prišlo do napada /krča">
+				>
+				["at0023"] = <
+					text = <"Med spanjem">
+					description = <"Do napada je prišlo med spanjem">
+				>
+				["at0024"] = <
+					text = <"Ob prebujanju">
+					description = <"Do napada je prišlo ob prebujanju">
+				>
+				["at0025"] = <
+					text = <"V budnosti">
+					description = <"Do napada je prišlo v budnosti">
+				>
+				["at0026"] = <
+					text = <"Med aktivnostjo">
+					description = <"Do napada je prišlo med aktivnostjo">
+				>
+				["at0028"] = <
+					text = <"Opis začetka in zaporedja kliničnih znakov med napadom">
+					description = <"Opis začetka in zaporedja kliničnih znakov med napadom">
+				>
+				["at0029"] = <
+					text = <"Stanje pacienta ob napadu">
+					description = <"Stanje pacienta med napadom">
+				>
+				["at0030"] = <
+					text = <"Po napadu">
+					description = <"Stanje pacienta po napadu">
+				>
+				["at0031"] = <
+					text = <"Bil nezavesten">
+					description = <"Med napadom je pacient bil brez zavesti">
+				>
+				["at0032"] = <
+					text = <"Se odzival na zvočne dražljaje">
+					description = <"Med napadom se pacient odziva na zvočne dražljaje">
+				>
+				["at0033"] = <
+					text = <"Smiselno odgovarjal na vprašanja">
+					description = <"Med napadom je pacient smiselno odgovarjal na vprašanja">
+				>
+				["at0034"] = <
+					text = <"Se je pomokril">
+					description = <"Med napadom se je pacient pomokril">
+				>
+				["at0035"] = <
+					text = <"Imel peno na ustih">
+					description = <"Med napadom se je pacient imel peno na ustih">
+				>
+				["at0036"] = <
+					text = <"Nekontrolirano opletal z jezikom">
+					description = <"Med napadom je pacient nekontrolirano mahal z jezikom">
+				>
+				["at0037"] = <
+					text = <"Poškodoval">
+					description = <"Med napadom se je pacient poškodoval">
+				>
+				["at0038"] = <
+					text = <"Odziven">
+					description = <"Po napadu je pacient bil odziven">
+				>
+				["at0039"] = <
+					text = <"Neodziven">
+					description = <"Po napadu je pacient bil neodziven">
+				>
+				["at0040"] = <
+					text = <"Neodziven ">
+					description = <"Koliko časa je pacient bil neodziven v minutah">
+				>
+				["at0041"] = <
+					text = <"Video">
+					description = <"Video posnetek poteka napada ali krča">
+				>
+				["at0043"] = <
+					text = <"Vzorec napada">
+					description = <"Opis vzorca posameznega napada">
+				>
+				["at0044"] = <
+					text = <"Prikriti">
+					description = <"Prikriti vzorec napada">
+				>
+				["at0045"] = <
+					text = <"Klonični">
+					description = <"Klonični vzorec napada">
+				>
+				["at0046"] = <
+					text = <"Tonični">
+					description = <"Tonični vzorec napada">
+				>
+				["at0047"] = <
+					text = <"Mioklonični">
+					description = <"Mioklonični vzorec napada">
+				>
+				["at0048"] = <
+					text = <"Dodatni komentar">
+					description = <"Dodatni komentar dogodka">
+				>
+				["at0049"] = <
+					text = <"Premikanje oči">
+					description = <"Nenormalno premikanje oči">
+				>
+				["at0050"] = <
+					text = <"Mežikanje">
+					description = <"Mežikanje">
+				>
+				["at0051"] = <
+					text = <"Nenadoma se zastrmi">
+					description = <"Nenadoma se zastrmi">
+				>
+				["at0052"] = <
+					text = <"Nenadna ohlapnost">
+					description = <"Nenadna ohlapnost">
+				>
+				["at0053"] = <
+					text = <"Nenadna otrdelost">
+					description = <"Nenadna otrdelost">
+				>
+				["at0054"] = <
+					text = <"Sesanje">
+					description = <"Sesanje">
+				>
+				["at0055"] = <
+					text = <"Ponavljajoči se gibi z ustnicam in jezikom">
+					description = <"Ponavljajoč ise gibi z ustnicam in jezikom">
+				>
+				["at0056"] = <
+					text = <"Iztekanje sline">
+					description = <"Iztekanje sline">
+				>
+				["at0057"] = <
+					text = <"Pediliranje">
+					description = <"Pediliranje">
+				>
+				["at0058"] = <
+					text = <"Kolesarjenje">
+					description = <"Kolesarjenje">
+				>
+				["at0059"] = <
+					text = <"Leva roka">
+					description = <"Leva roka">
+				>
+				["at0060"] = <
+					text = <"Leva noga">
+					description = <"Leva noga">
+				>
+				["at0061"] = <
+					text = <"Desna noga">
+					description = <"Desna noga">
+				>
+				["at0062"] = <
+					text = <"Desna roka">
+					description = <"Desna roka">
+				>
+				["at0063"] = <
+					text = <"Obe roki">
+					description = <"Obe roki">
+				>
+				["at0064"] = <
+					text = <"Obe nogi">
+					description = <"Obe nogi">
+				>
+				["at0065"] = <
+					text = <"Roka in noga">
+					description = <"Roka in noga">
+				>
+				["at0066"] = <
+					text = <"Obe roki in obe nogi">
+					description = <"*The clonic movements of both arms and both legs  in period of spasm/seizure(en)">
+				>
+				["at0067"] = <
+					text = <"Leva stran telesa">
+					description = <"Leva stran telesa">
+				>
+				["at0068"] = <
+					text = <"Desna stran telesa">
+					description = <"Desna stran telesa">
+				>
+				["at0069"] = <
+					text = <"Celotno telo">
+					description = <"Celotno telo">
+				>
+				["at0070"] = <
+					text = <"Trup ali/in vrat">
+					description = <"Trup ali/in vrat">
+				>
+				["at0071"] = <
+					text = <"Leva roka">
+					description = <"Leva roka">
+				>
+				["at0072"] = <
+					text = <"Desna roka">
+					description = <"Desna roka">
+				>
+				["at0073"] = <
+					text = <"Desna noga">
+					description = <"Desna noga">
+				>
+				["at0074"] = <
+					text = <"Leva noga">
+					description = <"Leva noga">
+				>
+				["at0075"] = <
+					text = <"Fleksija rok z ekstenzijo nog">
+					description = <"Tonična fleksija rok z ekstenzijo nog">
+				>
+				["at0076"] = <
+					text = <"Ekstenzija rok in nog">
+					description = <"Ekstenzija rok in nog">
+				>
+				["at0077"] = <
+					text = <"Horizontalni premik oči">
+					description = <"Horizontalni premik oči">
+				>
+				["at0078"] = <
+					text = <"Zgibki rok">
+					description = <"Zgibki rok">
+				>
+				["at0079"] = <
+					text = <"Trzljaji nog">
+					description = <"Trzljaji nog">
+				>
+				["at0080"] = <
+					text = <"Trzljaji različnih delov telesa">
+					description = <"Trzljaji različnih delov telesa">
+				>
+				["at0081"] = <
+					text = <"Spremembe obraznih mišic">
+					description = <"Spremembe obraznih mišic">
+				>
+				["at0082"] = <
+					text = <"Konvulzivni trzljaji udov">
+					description = <"Konvulzivni trzljaji udov">
+				>
+				["at0083"] = <
+					text = <"Negativni mioklonus">
+					description = <"Negativni mioklonus">
+				>
+				["at0084"] = <
+					text = <"Infantilni spazmi">
+					description = <"Infantilni spazmi">
+				>
+				["at0088"] = <
+					text = <"Napad ustavi">
+					description = <"Možni dejavniki, ki vplivajo na zaustavitev napad">
+				>
+				["at0089"] = <
+					text = <"Prevladujoči">
+					description = <"Prevladujoči vzorec napada">
+				>
+				["at0090"] = <
+					text = <"Tremor">
+					description = <"Tremor">
+				>
+				["at0091"] = <
+					text = <"Zgibki">
+					description = <"Zgibki">
+				>
+				["at0092"] = <
+					text = <"Spazem">
+					description = <"Spazem">
+				>
+				["at0097"] = <
+					text = <"Opažene značilnosti napada">
+					description = <"Opažene značilnosti napada v primeru, ko pacient ne more ali ne govori">
+				>
+				["at0098"] = <
+					text = <"Spanje">
+					description = <"Opis poteka spanja pacienta">
+				>
+				["at0099"] = <
+					text = <"Umirjanje">
+					description = <"Opis načina umirjanja pacienta">
+				>
+				["at0100"] = <
+					text = <"Hranjenje">
+					description = <"Opis stanja pacienta med hranjenjem ">
+				>
+				["at0101"] = <
+					text = <"Mišični tonus">
+					description = <"Opis mišičnega tonusa pacienta">
+				>
+				["at0102"] = <
+					text = <"Odziv">
+					description = <"Opis odziva pacienta">
+				>
+				["at0104"] = <
+					text = <"Občutki pacienta pred napadom">
+					description = <"Občutki pacienta pred napadom">
+				>
+				["at0105"] = <
+					text = <"Zaspan">
+					description = <"Zaspan">
+				>
+				["at0106"] = <
+					text = <"Daljša obdobja spanja">
+					description = <"Daljša obdobja spanja">
+				>
+				["at0107"] = <
+					text = <"Daljša obdobja joka">
+					description = <"Daljša obdobja joka">
+				>
+				["at0108"] = <
+					text = <"V naročju se pomiri">
+					description = <"V naročju se pomiri">
+				>
+				["at0109"] = <
+					text = <"Težko se pomiri">
+					description = <"Težko se pomiri">
+				>
+				["at0110"] = <
+					text = <"Sesa in požira">
+					description = <"Sesa in požira">
+				>
+				["at0111"] = <
+					text = <"Med hranjenjem poliva">
+					description = <"Med hranjenjem poliva">
+				>
+				["at0112"] = <
+					text = <"Med hranjenjem se utruja">
+					description = <"Med hranjenjem se utruja">
+				>
+				["at0113"] = <
+					text = <"Po hranjenju poliva">
+					description = <"Po hranjenju poliva">
+				>
+				["at0114"] = <
+					text = <"Povišan">
+					description = <"Povišan">
+				>
+				["at0115"] = <
+					text = <"Normalen">
+					description = <"Normalen">
+				>
+				["at0116"] = <
+					text = <"Ohlapen">
+					description = <"Ohlapen">
+				>
+				["at0117"] = <
+					text = <"Opistotonus">
+					description = <"Opistotonus">
+				>
+				["at0118"] = <
+					text = <"Vzpostavi očesni stik">
+					description = <"Vzpostavi očesni stik">
+				>
+				["at0119"] = <
+					text = <"Se odzove na glas in se pomiri">
+					description = <"Se odzove na glas in se pomiri">
+				>
+				["at0120"] = <
+					text = <"Pretirano reagira na dražljaje">
+					description = <"Pretirano reagira na dražljaje">
+				>
+				["at0121"] = <
+					text = <"Komentar opozaovalca">
+					description = <"Dodatni komentar opazovalca napada">
+				>
+				["at0122"] = <
+					text = <"Napad/krč">
+					description = <"Podatki o enem napadu lai krču pri pacientu">
+				>
+				["at0126"] = <
+					text = <"Fokalni">
+					description = <"Fokalni vzorec napada">
+				>
+				["at0127"] = <
+					text = <"Generalizirani">
+					description = <"Generalizirani vzorec napada">
+				>
+				["at0128"] = <
+					text = <"Nepredvidljivi">
+					description = <"Nepredvidljivi vzorec napada">
+				>
+				["at0129"] = <
+					text = <"Status epilepticus">
+					description = <"Status epilepticus napada">
+				>
+				["at0130"] = <
+					text = <"Preprosti">
+					description = <"Preprosti">
+				>
+				["at0131"] = <
+					text = <"Kompleksni">
+					description = <"Kompleksni">
+				>
+				["at0132"] = <
+					text = <"Sekundarno generalizirani">
+					description = <"Sekundarno generalizirani">
+				>
+				["at0133"] = <
+					text = <"Mioklonični">
+					description = <"Mioklonični">
+				>
+				["at0134"] = <
+					text = <"Klonični">
+					description = <"Klonični">
+				>
+				["at0135"] = <
+					text = <"Tonični">
+					description = <"Tonični">
+				>
+				["at0136"] = <
+					text = <"Tonično-klonični">
+					description = <"Tonično-klonični">
+				>
+				["at0137"] = <
+					text = <"Atonični">
+					description = <"Atonični">
+				>
+				["at0138"] = <
+					text = <"Konvulzivni">
+					description = <"Konvulzivni">
+				>
+				["at0139"] = <
+					text = <"Nekonvulzivni">
+					description = <"Nekonvulzivni">
+				>
+				["at0140"] = <
+					text = <"Preprosti parcialni ">
+					description = <"Preprosti parcialni (absence in kompleksni parcialni)">
+				>
+				["at0141"] = <
+					text = <"Prikriti">
+					description = <"Prikriti">
+				>
+				["at0142"] = <
+					text = <"Datum in čas dogodka">
+					description = <"Datum in čas dogodka, ko se je zgodil napad ali krč">
+				>
+				["at0143"] = <
+					text = <"Se je ugriznil v jezik">
+					description = <"Pacient se je med napadom ugriznil v jezik">
+				>
+				["at0144"] = <
+					text = <"Noga ali roka">
+					description = <"Noga ali roka">
+				>
+				["at0145"] = <
+					text = <"Več udov">
+					description = <"Več udov">
+				>
+				["at0146"] = <
+					text = <"Afektni napadi">
+					description = <"Afektni napadi">
+				>
+				["at0147"] = <
+					text = <"Absence">
+					description = <"Absence">
+				>
+				["at0148"] = <
+					text = <"Prisotne serije">
+					description = <"Ali so prisotne serije napadov?">
+				>
+				["at0149"] = <
+					text = <"Število serij">
+					description = <"Števileo serij">
+				>
+				["at0150"] = <
+					text = <"Interval serije">
+					description = <"Interval časa v katerem so se pjavljale serije">
+				>
+				["at0151"] = <
+					text = <"Prisotni">
+					description = <"Presence of observed seizure">
+				>
+			>
+		>
+	>

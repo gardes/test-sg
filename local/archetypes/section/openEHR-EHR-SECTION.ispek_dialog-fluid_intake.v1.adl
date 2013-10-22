@@ -1,0 +1,93 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.ispek_dialog-fluid_intake.v1
+specialise
+	openEHR-EHR-SECTION.ispek_dialog.v1
+
+concept
+	[at0000.1]	-- Fluid intake
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Ian">
+				["organisation"] = <"Ocean">
+				["email"] = <"ian.mcnicoll@ocenainformatics.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"ian.mcnicoll@oceaninformatics .com">
+		["date"] = <"08/06/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To act as a container for a set of archetype which represent a single date-capture screen.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Acts as a container for a set of archetype which represent a single data-capture screen.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"36A5DB70EA6961922E1A6E70A39BAB3E">
+	>
+
+definition
+	SECTION[at0000.1] matches {	-- *Fluid intake(en)
+		items cardinality matches {0..*; unordered} matches {
+			allow_archetype OBSERVATION[at0.1] occurrences matches {0..*} matches {	-- *Fluid intake(en)
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.1"] = <
+					text = <"Fluid intake">
+					description = <"One type of fluid intake.">
+				>
+				["at0000"] = <
+					text = <"Dialog">
+					description = <"Acts as a container for a set of archetype which represent a single date-capture screen.">
+				>
+				["at0000.1"] = <
+					text = <"Fluid intake">
+					description = <"Acts as a container for multiple Fluid intake entries">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.1"] = <
+					text = <"*Fluid intake(en)">
+					description = <"*One type of fluid intake.(en)">
+				>
+				["at0000"] = <
+					text = <"Dialog">
+					description = <"Acts as a container for a set of archetype which represent a single data-capture screen.">
+				>
+				["at0000.1"] = <
+					text = <"*Fluid intake(en)">
+					description = <"*Acts as a container for multiple Fluid intake entries(en)">
+				>
+			>
+		>
+	>

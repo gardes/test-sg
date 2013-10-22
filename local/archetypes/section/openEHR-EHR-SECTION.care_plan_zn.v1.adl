@@ -1,0 +1,153 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.care_plan_zn.v1
+
+concept
+	[at0000]	-- Care plan 
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2013-09-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To handle a Care plan structure where each problem/issue has a related goal.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"1508D77F0EAA660DF5D7F72483784E4D">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Plan nege
+		items cardinality matches {1..*; unordered} matches {
+			SECTION[at0009] occurrences matches {0..*} matches {	-- Plan
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype EVALUATION[at0002] occurrences matches {0..1} matches {	-- Problem/diagnoza
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype EVALUATION[at0003] occurrences matches {0..*} matches {	-- Cilj
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype EVALUATION[at0010] occurrences matches {0..*} matches {	-- Ocena cilja
+						include
+							archetype_id/value matches {/.*/}
+					}
+					SECTION[at0004] occurrences matches {0..*} matches {	-- Grupa za intervencije
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype INSTRUCTION[at0005] occurrences matches {0..*} matches {	-- Zahteva za intervencijo
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype ACTION[at0006] occurrences matches {0..*} matches {	-- Intervencija
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Care plan ">
+					description = <"To handle a Care plan structure where each problem/issue has a related goal.">
+				>
+				["at0002"] = <
+					text = <"Problem">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Goal">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Intervention group">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Intervention request">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Intervention">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Problem plan">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Goal assessment">
+					description = <"*">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Plan nege">
+					description = <"Za urejanje strukture plana nege v katerem je vsak problem/diagnoza povezan/a s svojim ciljem.">
+				>
+				["at0002"] = <
+					text = <"Problem/diagnoza">
+					description = <"Problema/diagnoze">
+				>
+				["at0003"] = <
+					text = <"Cilj">
+					description = <"Cilj">
+				>
+				["at0004"] = <
+					text = <"Grupa za intervencije">
+					description = <"Grupa za intervencije">
+				>
+				["at0005"] = <
+					text = <"Zahteva za intervencijo">
+					description = <"Zahteva za intervencijo">
+				>
+				["at0006"] = <
+					text = <"Intervencija">
+					description = <"Intervencija">
+				>
+				["at0009"] = <
+					text = <"Plan">
+					description = <"Plan">
+				>
+				["at0010"] = <
+					text = <"Ocena cilja">
+					description = <"Ocena cilja">
+				>
+			>
+		>
+	>

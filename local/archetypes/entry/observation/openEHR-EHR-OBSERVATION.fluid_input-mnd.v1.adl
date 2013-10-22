@@ -1,0 +1,522 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.fluid_input-mnd.v1
+specialise
+	openEHR-EHR-OBSERVATION.fluid_input.v1
+
+concept
+	[at0000.1]	-- Fluid input
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Klaudija Uglješić">
+				["organisation"] = <"Marand d.o.o">
+				["email"] = <"Klaudija.Ugljesic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"11/11/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record findings of, and measurements of actual or estimated fluid input.">
+			use = <"Use to record fluid input as part of routine nursing care.
+May be used for descriptive assessments of input or to record detailed amounts and totals over a period.
+
+">
+			keywords = <"fluid", "fluid balance", "input output", "io", "input">
+			misuse = <"Do not use as a primary record of the administration of fluids e.g intravascular, dialyisis. May be used alongside administration recrods ,normally an ACTION.">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"CB3A54C94B1BC1609D6787051163E962">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {	-- Vnesene tekocine
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- *List(en)
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0034.1] matches {	-- Način vnosa
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0.38, 	-- Trajna infuzija-IV tekočina
+													at0.37, 	-- Hrana - oralno
+													at0.40, 	-- Hrana - enteralno
+													at0.59, 	-- Pijača - oralno
+													at0.41, 	-- Hrana - parenteralno
+													at0.39, 	-- Zdravila - per os
+													at0.51, 	-- Zdravila - IV
+													at0.50, 	-- Transfuzija
+													at0.47, 	-- Transfuzija - koncentrirani eritrociti
+													at0.48, 	-- Transfuzija - krvotvorne matične celice
+													at0.49, 	-- Transfuzija - plazma
+													at0.52, 	-- Transfuzija-trombocitni koncentrat
+													at0.53, 	-- *Dialysis(en)
+													at0.55, 	-- *Continuous Veno-Venous Hemofiltration (CVVH) (en)
+													at0.56, 	-- *CVAH(en)
+													at0.54, 	-- *Plasmapheresis(en)
+													at0.57, 	-- *Continuous veno-venous haemodiafiltration (CVVHDF)(en)
+													at0.58]	-- *Peritoneal dialysis (PD)(en)
+												}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0033] occurrences matches {0..1} matches {	-- Tujek vnosa
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Opis
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {	-- Količina
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::129]>
+												list = <
+													["1"] = <
+														units = <"ml">
+													>
+													["2"] = <
+														units = <"l">
+														magnitude = <|>=0.0|>
+													>
+													["3"] = <
+														units = <"fl oz">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {	-- Opombe
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					INTERVAL_EVENT[at0006] occurrences matches {0..*} matches {	-- Skupno
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[openehr::148]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[*List(en)]
+						}
+					}
+					INTERVAL_EVENT[at0007] occurrences matches {0..*} matches {	-- Dejanski
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[openehr::640]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[*List(en)]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0008] matches {	-- *List(en)
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Natančnost meritve
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0018, 	-- Ocenjen
+									at0019, 	-- Izmerjen neposredno
+									at0020]	-- Potrjen
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0028] occurrences matches {0..1} matches {	-- Merilna naprava
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.37"] = <
+					text = <"Nutrition - Oral">
+					description = <"Nutrition - Food by mouth.">
+				>
+				["at0.38"] = <
+					text = <"Continuous IV infusion">
+					description = <"Continuous intravenous infusion">
+				>
+				["at0.39"] = <
+					text = <"Medication - Oral">
+					description = <"Oral medication">
+				>
+				["at0.40"] = <
+					text = <"Nutrition - Enteral">
+					description = <"Nutrition - Enteral">
+				>
+				["at0.41"] = <
+					text = <"Nutrition - Parenteral">
+					description = <"Nutrition - Parenteral.">
+				>
+				["at0.42"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0.43"] = <
+					text = <"Other">
+					description = <"**(en)">
+				>
+				["at0.44"] = <
+					text = <"Transfusion - concentrated red cells">
+					description = <"Transfusion of red cell concentrate.">
+				>
+				["at0.45"] = <
+					text = <"Transfusion - platelet concentrate">
+					description = <"Transfusion of platelet concentrate.">
+				>
+				["at0.46"] = <
+					text = <"Transfusion - plasma">
+					description = <"Transfusion of plasma.">
+				>
+				["at0.47"] = <
+					text = <"Transfusion - concentrated red cells">
+					description = <"Transfusion of concentrated red cells.">
+				>
+				["at0.48"] = <
+					text = <"Transfusion - platelet concentrate">
+					description = <"Transfusion of patelet concentrate.">
+				>
+				["at0.49"] = <
+					text = <"Transfusion - plasma">
+					description = <"Transfusion of plasma.">
+				>
+				["at0.50"] = <
+					text = <"Transfusion">
+					description = <"Transfusion.">
+				>
+				["at0.51"] = <
+					text = <"Medication - Parenteral">
+					description = <"Medication - Parenteral route, including IV, IM, SC.">
+				>
+				["at0.52"] = <
+					text = <"Transfusion - thromobcyte concentrate">
+					description = <"Transfusion of thromobcyte concentrate.">
+				>
+				["at0.53"] = <
+					text = <"Haemodialysis">
+					description = <"Fluid input via haemodialysis.">
+				>
+				["at0.54"] = <
+					text = <"Plasmapheresis">
+					description = <"Fluid intake via plasmapheresis.">
+				>
+				["at0.55"] = <
+					text = <"Continuous veno-venous haemofiltration (CVVH) ">
+					description = <"Fluid intake via CVVH.">
+				>
+				["at0.56"] = <
+					text = <"Continuous veno-venous haemodialysis (CVVHD)">
+					description = <"Fluid intake via Continuous veno-venous hemodialysis.">
+				>
+				["at0.57"] = <
+					text = <"Continuous veno-venous haemodiafiltration (CVVHDF)">
+					description = <"Fluid intake via Continuous veno-venous haemodiafiltration.">
+				>
+				["at0.58"] = <
+					text = <"Peritoneal dialysis (PD)">
+					description = <"Fluid intake via perioneal dialysis.">
+				>
+				["at0.59"] = <
+					text = <"Oral beverage">
+					description = <"Oral beverage.">
+				>
+				["at0000"] = <
+					text = <"Fluid input">
+					description = <"Recording of findings and measurement (or estimation) of fluid input.">
+				>
+				["at0000.1"] = <
+					text = <"Fluid input">
+					description = <"Recording of findings and measurement (or estimation) of fluid input with ThinkMed! terminology.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"The estimation of fluid output without specifying the period of time.">
+				>
+				["at0003"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Total">
+					description = <"For recording total fluid output over a period (may transcend a number of interval or point in time records).">
+				>
+				["at0007"] = <
+					text = <"Actual">
+					description = <"For recording the fluid output over a period of time when this will later be totalled.">
+				>
+				["at0008"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Estimated">
+					description = <"The fluid volume has been estimated.">
+				>
+				["at0019"] = <
+					text = <"Measured">
+					description = <"The fluid volume has been directly measured.">
+				>
+				["at0020"] = <
+					text = <"Stated">
+					description = <"The fluid output has been stated.">
+				>
+				["at0028"] = <
+					text = <"Measurement device ">
+					description = <"Details of device used to measure the fluid output.">
+				>
+				["at0031"] = <
+					text = <"Measurement precision">
+					description = <"Records the level of precision of the fluid output observation.">
+				>
+				["at0032"] = <
+					text = <"Comments">
+					description = <"Additional comments.">
+				>
+				["at0033"] = <
+					text = <"Source device">
+					description = <"The source device e.g jejunal catheter providing the input.">
+				>
+				["at0034"] = <
+					text = <"Route">
+					description = <"The delivery route of the fluid.">
+				>
+				["at0034.1"] = <
+					text = <"Route">
+					description = <"The delivery route of the fluid.">
+				>
+				["at0035"] = <
+					text = <"Volume">
+					description = <"The volume of fluid taken in.">
+				>
+				["at0036"] = <
+					text = <"Description">
+					description = <"A description of the fluid intake.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.37"] = <
+					text = <"Hrana - oralno">
+					description = <"*Nutrition - Oral food.(en)">
+				>
+				["at0.38"] = <
+					text = <"Trajna infuzija-IV tekočina">
+					description = <"**(en)">
+				>
+				["at0.39"] = <
+					text = <"Zdravila - per os">
+					description = <"**(en)">
+				>
+				["at0.40"] = <
+					text = <"Hrana - enteralno">
+					description = <"**(en)">
+				>
+				["at0.41"] = <
+					text = <"Hrana - parenteralno">
+					description = <"**(en)">
+				>
+				["at0.42"] = <
+					text = <"New element">
+					description = <"*">
+				>
+				["at0.43"] = <
+					text = <"Drugo">
+					description = <"*">
+				>
+				["at0.44"] = <
+					text = <"Transfuzija - koncentrirani eritrociti">
+					description = <"*Transfusion of red cell concentrate.(en)">
+				>
+				["at0.45"] = <
+					text = <"Transfuzija - krvotvorne matične celice">
+					description = <"*Transfusion of platelet concentrate.(en)">
+				>
+				["at0.46"] = <
+					text = <"Transfuzija - plazma">
+					description = <"*Transfusion of plasma.(en)">
+				>
+				["at0.47"] = <
+					text = <"Transfuzija - koncentrirani eritrociti">
+					description = <"*Transfusion of concentrated red cells.(en)">
+				>
+				["at0.48"] = <
+					text = <"Transfuzija - krvotvorne matične celice">
+					description = <"*Transfusion of patelet concentrate.(en)">
+				>
+				["at0.49"] = <
+					text = <"Transfuzija - plazma">
+					description = <"*Transfusion of plasma.(en)">
+				>
+				["at0.50"] = <
+					text = <"Transfuzija">
+					description = <"*Transfusion.(en)">
+				>
+				["at0.51"] = <
+					text = <"Zdravila - IV">
+					description = <"**(en)">
+				>
+				["at0.52"] = <
+					text = <"Transfuzija-trombocitni koncentrat">
+					description = <"*">
+				>
+				["at0.53"] = <
+					text = <"*Dialysis(en)">
+					description = <"*Fluid input via dialysis.(en)">
+				>
+				["at0.54"] = <
+					text = <"*Plasmapheresis(en)">
+					description = <"*Fluid intake via plasmapheresis.(en)">
+				>
+				["at0.55"] = <
+					text = <"*Continuous Veno-Venous Hemofiltration (CVVH) (en)">
+					description = <"*Fluid intake via CVVH.(en)">
+				>
+				["at0.56"] = <
+					text = <"*CVAH(en)">
+					description = <"*Fluid intake via CVAH.(en)">
+				>
+				["at0.57"] = <
+					text = <"*Continuous veno-venous haemodiafiltration (CVVHDF)(en)">
+					description = <"*Fluid intake via Continuous veno-venous haemodiafiltration.(en)">
+				>
+				["at0.58"] = <
+					text = <"*Peritoneal dialysis (PD)(en)">
+					description = <"*Fluid intake via perioneal dialysis.(en)">
+				>
+				["at0.59"] = <
+					text = <"Pijača - oralno">
+					description = <"*Oral beverage.(en)">
+				>
+				["at0000"] = <
+					text = <"Vnosi tekočine">
+					description = <"*Recording of findings and measurement (or estimation) of fluid input.(en)">
+				>
+				["at0000.1"] = <
+					text = <"Vnesene tekocine">
+					description = <"*Recording of findings and measurement (or estimation) of fluid input with ThinkMed! terminology(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*The estimation of fluid output without specifying the period of time.(en)">
+				>
+				["at0003"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0006"] = <
+					text = <"Skupno">
+					description = <"*For recording total fluid output over a period (may transcend a number of interval or point in time records).(en)">
+				>
+				["at0007"] = <
+					text = <"Dejanski">
+					description = <"*For recording the fluid output over a period of time when this will later be totalled.(en)">
+				>
+				["at0008"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0018"] = <
+					text = <"Ocenjen">
+					description = <"*The fluid volume has been estimated.(en)">
+				>
+				["at0019"] = <
+					text = <"Izmerjen neposredno">
+					description = <"*The fluid volume has been directly measured.(en)">
+				>
+				["at0020"] = <
+					text = <"Potrjen">
+					description = <"*The fluid output has been stated.(en)">
+				>
+				["at0028"] = <
+					text = <"Merilna naprava">
+					description = <"*Details of device used to measure the fluid output.(en)">
+				>
+				["at0031"] = <
+					text = <"Natančnost meritve">
+					description = <"*Records the level of precision of the fluid output observation.(en)">
+				>
+				["at0032"] = <
+					text = <"Opombe">
+					description = <"*Additional comments.(en)">
+				>
+				["at0033"] = <
+					text = <"Tujek vnosa">
+					description = <"*The source device e.g jejunal catheter providing the input.(en)">
+				>
+				["at0034"] = <
+					text = <"Način vnosa">
+					description = <"*The delivery route of the fluid.(en)">
+				>
+				["at0034.1"] = <
+					text = <"Način vnosa">
+					description = <"*The delivery route of the fluid.(en)">
+				>
+				["at0035"] = <
+					text = <"Količina">
+					description = <"*The volume of fluid taken in.(en)">
+				>
+				["at0036"] = <
+					text = <"Opis">
+					description = <"*A description of the fluid intake.(en)">
+				>
+			>
+		>
+	>

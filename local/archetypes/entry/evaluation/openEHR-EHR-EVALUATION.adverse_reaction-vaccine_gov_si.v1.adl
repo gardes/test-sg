@@ -1,0 +1,1050 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.adverse_reaction-vaccine_gov_si.v1
+specialise
+	openEHR-EHR-EVALUATION.adverse_reaction.v1
+
+concept
+	[at0000.1]	-- Adverse reaction to vaccine - Slovenia
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"NEHTA">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"8/11/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record health information that will inform a clinical assessment of the propensity of an individual for a future reaction to a substance, class of substance or agent.
+
+To record information about exposure events to a substance, building up a persisting and evolving summary over time.">
+			use = <"Use to record all information about adverse reactions that are required to support direct clinical care of an individual, safe exchange of information about adverse reactions and to enable computerised knowledge-based activities such as clinical decision support and alerts.
+
+Use to provide a single place within the health record to record a range of clinical statements about adverse reactions, including:  
+-  record cumulative information about each exposure to a known substance, class of substance or agent; and 
+-  record a clinician's opinion that administration of, or exposure to, a substance or agent is absolutely contraindicated.
+
+Use to record the information about an adverse reaction that might be exchanged with other systems, including as part of an adverse reaction report sent to statutory authorities. It is likely that a formal Adverse Reaction report will require additional information that will be captured in the health record using other archetypes, for example medication and problem/diagnosis etc .
+
+This archetype has been designed to allow recording of information about a more generic substance, class of substance or agent, and then allow more specific details to be recorded including identification of the specific substance on a per exposure basis, including links to other parts of the health record where further details may be located. Note:  it is possible on second or subsequent exposures to a previously identified substance for a reaction not to occur and this archetype allows for these events to be closely linked in a way that will assist in determining if the adverse reaction has been incorrectly identified.
+
+In addition, it is anticipated that in some very specific clinical situations, such as immunologist assessment or for use in clinical trials, more information about the adverse reaction may be required. Additional details can be added as cluster archetypes using the ‘Further Exposure Details’ and ‘Further Reaction Details’ slots. Similarly, additional details that are required only for reporting can be added using the ‘Reporting Details’ slot.
+
+The act of recording an adverse reaction in the health record implies there is a potential hazard for the individual if they are exposed to the same substance/agent in the future - a relative contraindication. If a clinician considers that it is not safe for the individual to be deliberately re-exposed to the substance/agent again, for example, following a manifestation of anaphylaxis, the 'Absolute contraindication' data flag should be recorded as ‘True’. Note: Conversely, a statement about ‘Severity’ of propensity (with possible values such as Mild, Moderate and Severe) has deliberately not been modelled explicitly. Prediction or estimating the grade of possible severity of a future reaction is not safe to record and persist in data, except where it is absolutely clear that the risk of deliberate re-exposure is unacceptable and highly likely to cause significant harm, such as a previous manifestation of anaphylaxis, and in this case the ‘Absolute contraindication’ data flag should be used. 
+
+Valuable first-level information that could be presented to the clinician when they need to assess propensity for future reactions are:
+- statements about previous clinical manifestations following exposure,
+- source of the information/reporter, and
+- a flag for absolute contra-indication. 
+Second-level information can be drawn from each exposure event and links to additional detailed information such as history, examination and diagnoses stored elsewhere in the record, if it is available.">
+			keywords = <"reaction", "allergy", "allergic", "adverse", "event", "effect", "sensitivity", "intolerance", "hypersensitivity", "side effect", "toxicity", "interaction", "drug", "food", "medication", "agent", "substance">
+			misuse = <"Not to be used for recording the absence (or negative presence) of a reaction to 'any substances' or to identified substances – use the EVALUATION.exclusion family of archetypes to express a positive statement of exclusion.
+
+Not to be used for recording that no information was able to be obtained about the Adverse Reaction status of a patient. Use the EVALUATION.absent_information family of archetypes to record a positive statement of absent information about Adverse Reactions was able to be obtained, for example, if a non-cooperative patient refuses to answer questions.
+
+Not to be used to record adverse events, including failures of clinical process, interventions or products. For example: abnormal use or mistakes/errors made in administration of an agent or substance; mislabelling; harm or injury caused by an intervention or procedure; overdose etc.
+
+Not to be use for recording alerts.">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <"John Bennett, NEHTA, Australia", "Rong Chen, Cambio Healthcare System, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Grahame Grieve, Australia", "Sam Heard, Ocean Informatics, Australia", "Andrew James, University of Toronto, Canada", "Julie James, Blue Wave Informatics LLP, United Kingdom", "Mary Kelaher, NEHTA, Australia", "diane kirkham, nehta, Australia", "Robert L'egan, NEHTA, Australia", "Jobst Landgrebe, ii4sm, Switzerland", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Sarah Mahoney, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Chris Mitchell, RACGP, Australia", "Jörg Niggemann, Compugroup, Germany", "General Practice Computing Group, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Cathy Richardson, NEHTA, Australia", "Peter Scott, Medical Objects, Australia", "Elena Shabanova, UMMSSOft, Russian Federation", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "John Taylor, NEHTA, Australia", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	other_details = <
+		["references"] = <"Adverse Reactions (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 Jun 29 [cited 2009 Jul 03]; Available at http://www.nehta.gov.au/DGL/Resources/Downloads/Adverse%20Reaction%20v1.0.pdf
+Drug hypersensitivity. Thien FC. Med J Aust. 2006 Sep 18;185(6):333-8. Review. [as at November 3, 2010]
+Adverse drug reactions: definitions, diagnosis, and management. Edwards IR, Aronson JK. Lancet. 2000 Oct 7;356(9237):1255-9.
+Adverse drug reactions: types and treatment options. Riedl MA, Casillas AM. Am Fam Physician. 2003 Nov 1;68(9):1781-90. Review.
+Design Guidance: Displaying Adverse Drug Reaction Risks. Microsoft. 2009 Jan 28.
+Royal Australian College of General Practitioners. Fact Sheet: Allergies & Adverse Reactions. 2010.
+Mosbys Pocket Dictionary of Medicine, Nursing7 Health Professionals, 6th edition, Moseby Elsevier, 2010.">
+		["MD5-CAM-1.0.1"] = <"1F68398A24249FA6D181851DE2478492">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Neželeni učinek cepljenja
+		data matches {
+			ITEM_TREE[at0001] matches {	-- *Tree(en)
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002.1] occurrences matches {0..1} matches {	-- Cepljenje
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0.3]}		-- *New constraint(en)
+							}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Absolutni kontraindikator
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0.57] occurrences matches {0..1} matches {	-- Datum prijave neželenega učinka
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0.48] occurrences matches {0..*} matches {	-- Ukrepi zdravnika
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0.68, 	-- 1 - opazovanje
+									at0.69, 	-- 2 - zdravljenje na primarni ravni
+									at0.70, 	-- 3 - zdravljenje na sekundarni ravni
+									at0.71, 	-- 4 - hospitalizacija
+									at0.72, 	-- 5 - drugo
+									at0.73]	-- 9 - neznano
+								}
+							}
+						}
+					}
+					ELEMENT[at0040] occurrences matches {0..1} matches {	-- Opis ukrepov zdravnika
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[local::]}
+							}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Posledica neželenega učinka
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0.58, 	-- 1 - brez posledic
+									at0.59, 	-- 2 - življenjska ogroženost
+									at0.60, 	-- 3 - trajna okvara
+									at0.61, 	-- 4 - prirojena anomalija
+									at0.74, 	-- 5 - drugo resno stanje
+									at0.75, 	-- 6 - smrt
+									at0.76]	-- 9 - neznano
+								}
+							}
+						}
+					}
+					CLUSTER[at0.53] occurrences matches {0..*} matches {	-- Spremljajoče bolezni
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0.54] occurrences matches {0..1} matches {	-- Akutna bolezen
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0.6]}		-- New constraint
+									}
+								}
+							}
+							ELEMENT[at0.55] occurrences matches {0..1} matches {	-- Kronična bolezen
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0.5]}		-- New constraint
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0.50] occurrences matches {0..*} matches {	-- Izpostavljenost sočasno uporabljenim zdravilom
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0.49] occurrences matches {0..1} matches {	-- Ime zdravila
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0.1]}		-- *any_medication(en)
+									}
+								}
+							}
+							ELEMENT[at0.83] occurrences matches {0..1} matches {	-- Obdobje izpostavljenosti
+								value matches {
+									DV_INTERVAL<DV_DATE_TIME> matches {
+										upper matches {
+											DV_DATE_TIME matches {*}
+										}
+										lower matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0009] occurrences matches {0..*} matches {	-- Povzetek neželenega učinka
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Substanca/sestavina cepiva
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0.4]}		-- New constraint
+									}
+								}
+							}
+							CLUSTER[at0013] occurrences matches {0..1} matches {	-- Čas izpostavljenosti
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0018] occurrences matches {0..1} matches {	-- Opis izpostavljenosti
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {	-- Prejšnje izpostavljenosti
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Trajanje izpostavljenosti reakciji
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Dodatni podatki o izpostavljenosti
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.medication_admin(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.timing(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..*} matches {	-- Manifestacija
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0016] occurrences matches {0..1} matches {	-- Tip reakcije
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[local::]}
+									}
+								}
+							}
+							ELEMENT[at0017] occurrences matches {0..1} matches {	-- Klinični vpliv
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0035, 	-- Nič
+											at0036, 	-- Majhen
+											at0037, 	-- Pomemben
+											at0038, 	-- Življensko nevaren
+											at0039]	-- Smrt
+										}
+									}
+								}
+							}
+							CLUSTER[at0026] occurrences matches {0..1} matches {	-- Podatki o reakciji
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0027] occurrences matches {0..1} matches {	-- Začetek reakcije
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Trajanje reakcije
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
+									ELEMENT[at0.85] occurrences matches {0..1} matches {	-- Količina reakcije
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::118]>
+											>
+										}
+									}
+									allow_archetype CLUSTER[at0029] occurrences matches {0..*} matches {	-- Dodatni podatki o reakciji
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+								}
+							}
+							ELEMENT[at0031] occurrences matches {0..*} matches {	-- Multimedia
+								value matches {
+									DV_MULTIMEDIA matches {
+										media_type matches {[openEHR::]}
+									}
+								}
+							}
+							allow_archetype CLUSTER[at0041] occurrences matches {0..*} matches {	-- Podrobnosti neželenega učinka
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0.84] occurrences matches {0..1} matches {	-- Opis reakcije
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0032] occurrences matches {0..1} matches {	-- Komentar
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0.56] occurrences matches {0..1} matches {	-- Resnost neželenega učinka
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Pričakovanost neželenega učinka
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Verjetnost povezave neželenega učinka
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0022, 	-- B - možna
+									at0023, 	-- A - verjetna
+									at0024, 	-- D - dokazana
+									at0.77, 	-- N - ni povezave
+									at0.78]	-- O - ocena ni možna
+								}
+							}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Komentar
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0042] matches {	-- *Tree(en)
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0044] occurrences matches {0..1} matches {	-- O neželenem učinku je poročano
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0045] occurrences matches {0..1} matches {	-- Povezava na poročilo o neželenem učinku
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0047] occurrences matches {0..1} matches {	-- Povezava na klinično vsebino
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"CBZ", "MKB">
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.48"] = <
+					text = <"Measure taken">
+					description = <"One or more measures taken to mitigate the effects of the reaction, preferably coded">
+				>
+				["at0.49"] = <
+					text = <"Medication Name">
+					description = <"The name of a concomitant medication">
+				>
+				["at0.50"] = <
+					text = <"Concomitant Medication">
+					description = <"Details of medication being taken at the same time as the reaction occurred.">
+				>
+				["at0.51"] = <
+					text = <"Medication period">
+					description = <"The start and end dates during which the medication was taken.">
+				>
+				["at0.52"] = <
+					text = <"Reaction anticipated?">
+					description = <"Was the reaction anticipated?">
+				>
+				["at0.53"] = <
+					text = <"Concomitant Disease">
+					description = <"Details of other conditions suffered by the patient at the time of the adverse reaction.">
+				>
+				["at0.54"] = <
+					text = <"Acute disease">
+					description = <"Any concomitant acute disease.">
+				>
+				["at0.55"] = <
+					text = <"Chronic disease">
+					description = <"Any concomitant chronic disease.">
+				>
+				["at0.56"] = <
+					text = <"Serious reaction?">
+					description = <"Was this a serious reaction?">
+				>
+				["at0.57"] = <
+					text = <"Date recorded">
+					description = <"The date at which the adverse reaction was recorded">
+				>
+				["at0.58"] = <
+					text = <"1 - without any reaction">
+					description = <"1 - without any reaction">
+				>
+				["at0.59"] = <
+					text = <"2 - lifethreated reaction">
+					description = <"2 - lifethreated reaction">
+				>
+				["at0.60"] = <
+					text = <"3 - permanent injury">
+					description = <"3 - permanent injury">
+				>
+				["at0.61"] = <
+					text = <"4 - innate anomaly">
+					description = <"4 - innate anomaly">
+				>
+				["at0.62"] = <
+					text = <"1 - observation">
+					description = <"1 - observation">
+				>
+				["at0.63"] = <
+					text = <"2 - treatment at the primary level ">
+					description = <"Medical exemination on primary health care clinic">
+				>
+				["at0.64"] = <
+					text = <"3 - treatment at the secondary level">
+					description = <"Specialist examination">
+				>
+				["at0.65"] = <
+					text = <"4 - hospitalisation">
+					description = <"4 - hospitalisation">
+				>
+				["at0.66"] = <
+					text = <"5 - other">
+					description = <"5 - other">
+				>
+				["at0.67"] = <
+					text = <"9 - unknown">
+					description = <"9 - unknown">
+				>
+				["at0.68"] = <
+					text = <"1 - observation">
+					description = <"1 - observation">
+				>
+				["at0.69"] = <
+					text = <"2 - treatment at the primary level ">
+					description = <"Medical exemination on primary health care clinic">
+				>
+				["at0.70"] = <
+					text = <"3 - treatment at the secondary level">
+					description = <"Specialist examination">
+				>
+				["at0.71"] = <
+					text = <"4 - hospitalisation">
+					description = <"4 - hospitalisation">
+				>
+				["at0.72"] = <
+					text = <"5 - other">
+					description = <"5 - other">
+				>
+				["at0.73"] = <
+					text = <"9 - unknown">
+					description = <"9 - unknown">
+				>
+				["at0.74"] = <
+					text = <"5 - other serious state">
+					description = <"5 - other serious state">
+				>
+				["at0.75"] = <
+					text = <"6 - death">
+					description = <"6 - death">
+				>
+				["at0.76"] = <
+					text = <"9 - unknown">
+					description = <"9 - unknown">
+				>
+				["at0.77"] = <
+					text = <"Not connected">
+					description = <"Not connected">
+				>
+				["at0.78"] = <
+					text = <"Estimation is not possible">
+					description = <"Estimation is not possible">
+				>
+				["at0.79"] = <
+					text = <"*Element(en)">
+					description = <"**(en)">
+				>
+				["at0.80"] = <
+					text = <"*New cluster(en)">
+					description = <"**(en)">
+				>
+				["at0.81"] = <
+					text = <"*Cluster(en)">
+					description = <"**(en)">
+				>
+				["at0.82"] = <
+					text = <"*Item(en)">
+					description = <"**(en)">
+				>
+				["at0.83"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0.84"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0.85"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0000"] = <
+					text = <"Adverse Reaction">
+					description = <"A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, insect stings or a medication at therapeutic doses. The range of Adverse Reactions includes both Immune mediated reactions Types I-IV (including allergies and hypersensitivities) and Non-immune mediated reactions (including pseudoallergic reactions, side effects, intolerances, drug toxicities (eg Gentamycin), drug-drug interactions, food-drug interactions, drug-disease interactions and idiosyncratic reactions).">
+				>
+				["at0000.1"] = <
+					text = <"Adverse reaction to vaccine - Slovenia">
+					description = <"An adverse reaction to a vaccination in accordance with Slovenian goverment requirements.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Substance/Agent">
+					description = <"Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction. Coding of the substance with a terminology is desirable, where possible.">
+				>
+				["at0002.1"] = <
+					text = <"Vaccine name">
+					description = <"Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction. Coding of the substance with a terminology is desirable, where possible.">
+				>
+				["at0004"] = <
+					text = <"Absolute contraindication?">
+					description = <"A statement about propensity for a serious reaction upon further exposure to the substance/agent identified above. Record as True if the clinician assesses that exposure to, or administration of, the substance is absolutely contraindicated.">
+				>
+				["at0006"] = <
+					text = <"Comment">
+					description = <"Record any additional comments about the adverse reaction, including instructions related to future exposure or administration of the substance/agent.">
+				>
+				["at0009"] = <
+					text = <"Reaction event summary">
+					description = <"Summary about each reaction event, on a per exposure basis.">
+				>
+				["at0010"] = <
+					text = <"Specific substance/agent">
+					description = <"More specific identification of the substance/agent or medication trade name that is considered to be responsible for this adverse reaction event. Coding of the specific substance with a terminology is desirable, where possible.">
+				>
+				["at0011"] = <
+					text = <"Manifestation">
+					description = <"Single word, phrase or brief description of the clinical manifestation of the adverse reaction. The values entered here can be displayed as part of the Adverse Reaction List. For example: nausea, rash. Coding with a terminology is desirable, where possible.">
+				>
+				["at0012"] = <
+					text = <"Reaction description">
+					description = <"Detailed, narrative description of the reaction, if not captured elsewhere in the patient record.">
+				>
+				["at0013"] = <
+					text = <"Exposure summary">
+					description = <"Details about the exposure to the substance/agent.">
+				>
+				["at0016"] = <
+					text = <"Reaction Type">
+					description = <"The type of reaction, as determined by the clinician. Coding of the reaction type is desirable, where possible. Examples: Immune mediated - Types I-IV (including allergy and hypersensitivity); Non-immune mediated - including pseudoallergic reaction, side effect, intolerance, drug toxicity, drug-drug interaction, food-drug interaction, drug-disease interaction and idiosyncratic reaction.">
+				>
+				["at0017"] = <
+					text = <"Clinical Impact">
+					description = <"Assessment of the clinical impact of the adverse reaction on the patient.">
+				>
+				["at0018"] = <
+					text = <"Description of exposure">
+					description = <"Narrative description about exposure to the substance/agent.">
+				>
+				["at0019"] = <
+					text = <"Further Exposure details">
+					description = <"Further details about exposure, including structured medication amount information.">
+				>
+				["at0020"] = <
+					text = <"Earliest exposure">
+					description = <"Record of the date and/or time of the earliest or initial exposure to the substance/agent.">
+				>
+				["at0021"] = <
+					text = <"Certainty">
+					description = <"Degree of certainty, as assessed by clinician, that the substance/agent was the cause of the reaction.">
+				>
+				["at0022"] = <
+					text = <"Suspected">
+					description = <"Possible to be the causative agent, but without evidence.">
+				>
+				["at0023"] = <
+					text = <"Probable">
+					description = <"Likely to be the causative agent, but without evidence.">
+				>
+				["at0024"] = <
+					text = <"Definite">
+					description = <"Confirmed as the causative agent, by testing or rechallenge.">
+				>
+				["at0025"] = <
+					text = <"Duration of exposure">
+					description = <"Length of duration of exposure.">
+				>
+				["at0026"] = <
+					text = <"Reaction detail">
+					description = <"Details about the reaction to the substance.">
+				>
+				["at0027"] = <
+					text = <"Onset of reaction">
+					description = <"Record of the date and/or time of the onset of the reaction.">
+				>
+				["at0028"] = <
+					text = <"Duration of reaction">
+					description = <"Length of duration of the reaction.">
+				>
+				["at0029"] = <
+					text = <"Further Reaction details">
+					description = <"Further details about the reaction, including anatomical location.">
+				>
+				["at0031"] = <
+					text = <"Multimedia">
+					description = <"Inclusion of any multimedia file to support the recording of the reaction event, for example, a photo of a rash or presentation with angioneurotic oedema.">
+				>
+				["at0032"] = <
+					text = <"Comment">
+					description = <"Further comment about the reaction event.">
+				>
+				["at0035"] = <
+					text = <"None">
+					description = <"No clinical effect observed.">
+				>
+				["at0036"] = <
+					text = <"Insignificant">
+					description = <"Little noticeable clinical effect observed.">
+				>
+				["at0037"] = <
+					text = <"Significant">
+					description = <"Obvious clinical effect observed.">
+				>
+				["at0038"] = <
+					text = <"Life-threatening">
+					description = <"Life-threatening effect observed.">
+				>
+				["at0039"] = <
+					text = <"Death">
+					description = <"Individual died.">
+				>
+				["at0040"] = <
+					text = <"Description of clinical management">
+					description = <"Narrative description about the clinical management provided.">
+				>
+				["at0041"] = <
+					text = <"Reporting details">
+					description = <"Further details required for reporting to regulatory bodies.">
+				>
+				["at0042"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"Reaction reported?">
+					description = <"Was the adverse reaction reported to a regulatory body?">
+				>
+				["at0045"] = <
+					text = <"Link to Adverse Reaction Report">
+					description = <"Link to the Adverse Reaction Report sent to the regulatory body.">
+				>
+				["at0047"] = <
+					text = <"Links to supporting clinical record information">
+					description = <"Link to further information about  about the presentation and findings that exist elsewhere in the health record, for example, presenting symptoms, examination findings, diagnosis etc.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.48"] = <
+					text = <"Ukrepi zdravnika">
+					description = <"Ukrepi zdravnika ob pojavu neželenega učinka">
+				>
+				["at0.49"] = <
+					text = <"Ime zdravila">
+					description = <"Sočasno uporabljena zdravila">
+				>
+				["at0.50"] = <
+					text = <"Izpostavljenost sočasno uporabljenim zdravilom">
+					description = <"Izpostavljenost sočasno uporabljenom zdravilu">
+				>
+				["at0.51"] = <
+					text = <"Obdobje izpostavljenosti">
+					description = <"Obdobje izpostavljenosti sočasno uporabljenim zdravilom">
+				>
+				["at0.52"] = <
+					text = <"Pričakovanost neželenega učinka">
+					description = <"Ali se je reakcija pričakovala?">
+				>
+				["at0.53"] = <
+					text = <"Spremljajoče bolezni">
+					description = <"Podatki o spremljajočih boleznih s katerimi je pacient zbolel">
+				>
+				["at0.54"] = <
+					text = <"Akutna bolezen">
+					description = <"Kakršnakoli akutna bolezen">
+				>
+				["at0.55"] = <
+					text = <"Kronična bolezen">
+					description = <"Kakršnakoli spremljajoča kronična bolezen">
+				>
+				["at0.56"] = <
+					text = <"Resnost neželenega učinka">
+					description = <"Ali je neželeni učinek resen ali ne?">
+				>
+				["at0.57"] = <
+					text = <"Datum prijave neželenega učinka">
+					description = <"Datum prijave neželenega učinka.">
+				>
+				["at0.58"] = <
+					text = <"1 - brez posledic">
+					description = <"1 - brez posledic">
+				>
+				["at0.59"] = <
+					text = <"2 - življenjska ogroženost">
+					description = <"2 - življenjska ogroženost">
+				>
+				["at0.60"] = <
+					text = <"3 - trajna okvara">
+					description = <"3 - trajna okvara">
+				>
+				["at0.61"] = <
+					text = <"4 - prirojena anomalija">
+					description = <"4 - prirojena anomalija">
+				>
+				["at0.62"] = <
+					text = <"*1 - observation(en)">
+					description = <"*1 - observation(en)">
+				>
+				["at0.63"] = <
+					text = <"*2 - treatment at the primary level (en)">
+					description = <"*Medical exemination on primary health care clinic(en)">
+				>
+				["at0.64"] = <
+					text = <"*3 - treatment at the secondary level(en)">
+					description = <"*Specialist examination(en)">
+				>
+				["at0.65"] = <
+					text = <"*4 - hospitalisation(en)">
+					description = <"*4 - hospitalisation(en)">
+				>
+				["at0.66"] = <
+					text = <"*5 - other(en)">
+					description = <"*5 - other(en)">
+				>
+				["at0.67"] = <
+					text = <"*9 - unknown(en)">
+					description = <"*9 - unknown(en)">
+				>
+				["at0.68"] = <
+					text = <"1 - opazovanje">
+					description = <"1 - opazovanje">
+				>
+				["at0.69"] = <
+					text = <"2 - zdravljenje na primarni ravni">
+					description = <"Pregled v ambulanti osnovnega zdravstvenega varstva">
+				>
+				["at0.70"] = <
+					text = <"3 - zdravljenje na sekundarni ravni">
+					description = <"Specialistični pregled">
+				>
+				["at0.71"] = <
+					text = <"4 - hospitalizacija">
+					description = <"4 - hospitalizacija">
+				>
+				["at0.72"] = <
+					text = <"5 - drugo">
+					description = <"5 - drugo">
+				>
+				["at0.73"] = <
+					text = <"9 - neznano">
+					description = <"9 - neznano">
+				>
+				["at0.74"] = <
+					text = <"5 - drugo resno stanje">
+					description = <"5 - drugo resno stanje">
+				>
+				["at0.75"] = <
+					text = <"6 - smrt">
+					description = <"6 - smrt">
+				>
+				["at0.76"] = <
+					text = <"9 - neznano">
+					description = <"9 - neznano">
+				>
+				["at0.77"] = <
+					text = <"N - ni povezave">
+					description = <"ni povezave">
+				>
+				["at0.78"] = <
+					text = <"O - ocena ni možna">
+					description = <"ocena ni možna">
+				>
+				["at0.79"] = <
+					text = <"Element">
+					description = <"*">
+				>
+				["at0.80"] = <
+					text = <"New cluster">
+					description = <"*">
+				>
+				["at0.81"] = <
+					text = <"Cluster">
+					description = <"*">
+				>
+				["at0.82"] = <
+					text = <"Item">
+					description = <"*">
+				>
+				["at0.83"] = <
+					text = <"Obdobje izpostavljenosti">
+					description = <"Obdobje izpostavljenosti sočasno uporabljenim zdravilom">
+				>
+				["at0.84"] = <
+					text = <"Opis reakcije">
+					description = <"Dodaten opis reakcije">
+				>
+				["at0.85"] = <
+					text = <"Količina reakcije">
+					description = <"Podrobnosti reakcije v številkah, npr. če gre za vročino, 38 stopinj, če gre za rdečino, velikost v mm itd.">
+				>
+				["at0000"] = <
+					text = <"Neželen učinek">
+					description = <"Škodljiv ali moteč učinek cepiva, ki ni bil predviden pri dajanju cepiva.">
+				>
+				["at0000.1"] = <
+					text = <"Neželeni učinek cepljenja">
+					description = <"Podatki, potrebni za beleženje neželenega učinka cepljenja">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Substanca/sestavina cepiva">
+					description = <"Podrobnejši opis substance ali sestavine cepiva, ali skupine sestavin, za katere se eumi, da so povzročile neželen učinek. Predvidena uporaba šifranta.">
+				>
+				["at0002.1"] = <
+					text = <"Cepljenje">
+					description = <"Ime cepiva za katerega se domneva, da je povzročilo neželeno reakcijo. Predvidena je uporaba standardnega  šifranta cepljen.">
+				>
+				["at0004"] = <
+					text = <"Absolutni kontraindikator">
+					description = <"Ali je to cepljenje absolutno kontraindicirano pri tem posamezniku?">
+				>
+				["at0006"] = <
+					text = <"Komentar">
+					description = <"Zapis kakršnega koli dodatnega komentarja glede neželenega učinka.">
+				>
+				["at0009"] = <
+					text = <"Povzetek neželenega učinka">
+					description = <"Povzetek neželenega učinka">
+				>
+				["at0010"] = <
+					text = <"Substanca/sestavina cepiva">
+					description = <"Podrobnejši opis substance ali sestavine cepiva, ali skupine sestavin, za katere se eumi, da so povzročile neželen učinek. Predvidena uporaba šifranta.">
+				>
+				["at0011"] = <
+					text = <"Manifestacija">
+					description = <"Klinična manifestacija neželenega učinka, izražena ">
+				>
+				["at0012"] = <
+					text = <"Posledica neželenega učinka">
+					description = <"Opis neželenega učinka cepiva">
+				>
+				["at0013"] = <
+					text = <"Čas izpostavljenosti">
+					description = <"Čas izpostavljenosti sestavinam cepiva, ki so povzročile neželeni učinek">
+				>
+				["at0016"] = <
+					text = <"Tip reakcije">
+					description = <"Tip reakcije, ki jo je opredelil zdravnik. strukturiran zapis je zaželen.">
+				>
+				["at0017"] = <
+					text = <"Klinični vpliv">
+					description = <"*Assessment of the clinical impact of the adverse reaction on the patient.">
+				>
+				["at0018"] = <
+					text = <"Opis izpostavljenosti">
+					description = <"Opis izpostavljenosti substanci, snovi , povzročitelju neželenega učinka.">
+				>
+				["at0019"] = <
+					text = <"Dodatni podatki o izpostavljenosti">
+					description = <"Dodatni podatki o izpostavljenosti, vključujoč strukturirane podatke o cepivu.">
+				>
+				["at0020"] = <
+					text = <"Prejšnje izpostavljenosti">
+					description = <"Podatki o kakršnikoli prejšnji izpostavljenosti subsatnci ali sestavini cepiva (datum, ura, časovni period).">
+				>
+				["at0021"] = <
+					text = <"Verjetnost povezave neželenega učinka">
+					description = <"stopnja verjetnosti neželenega učinka, kot jo je opredelil zdravnik glede na substanco ali sestavino/skupino sestavin danega cepiva.">
+				>
+				["at0022"] = <
+					text = <"B - možna">
+					description = <"Možna povezava neželenega učinka, vendar ni dokazana.">
+				>
+				["at0023"] = <
+					text = <"A - verjetna">
+					description = <"Verjetna povezava neželenega učinka, vendar ni dokazana.">
+				>
+				["at0024"] = <
+					text = <"D - dokazana">
+					description = <"Dokazana povezava neželenega učinka s preiskavo lab. testov. ">
+				>
+				["at0025"] = <
+					text = <"Trajanje izpostavljenosti reakciji">
+					description = <"Trajanje izposatavljenosti reakciji">
+				>
+				["at0026"] = <
+					text = <"Podatki o reakciji">
+					description = <"Podrobnosti o reakciji ">
+				>
+				["at0027"] = <
+					text = <"Začetek reakcije">
+					description = <"datum in čas začetka reakcije">
+				>
+				["at0028"] = <
+					text = <"Trajanje reakcije">
+					description = <"Dolžina trajanja reakcije">
+				>
+				["at0029"] = <
+					text = <"Dodatni podatki o reakciji">
+					description = <"Dodatni podatki o reakciji, vključujoč tudi anatomsko lokacije reakcije.">
+				>
+				["at0031"] = <
+					text = <"Multimedia">
+					description = <"Vključitev kakršnih koli podatkov iz multimedijskih nosilcev s katerimi j ebila zabeležena reakcija">
+				>
+				["at0032"] = <
+					text = <"Komentar">
+					description = <"Dodaten komentar o reakciji">
+				>
+				["at0035"] = <
+					text = <"Nič">
+					description = <"Ni posledic, ki bi bile klinično ugotovljene">
+				>
+				["at0036"] = <
+					text = <"Majhen">
+					description = <"Majhen">
+				>
+				["at0037"] = <
+					text = <"Pomemben">
+					description = <"Pomemben klinični vpliv">
+				>
+				["at0038"] = <
+					text = <"Življensko nevaren">
+					description = <"Življensko nevaren klinični vpliv">
+				>
+				["at0039"] = <
+					text = <"Smrt">
+					description = <"Neželeni učinek je povzročil smrt pacienta">
+				>
+				["at0040"] = <
+					text = <"Opis ukrepov zdravnika">
+					description = <"Opis ukrepov zdravnika">
+				>
+				["at0041"] = <
+					text = <"Podrobnosti neželenega učinka">
+					description = <"Podrobnosti neželenega učinka, ki se poročajo državnim odgovornim ustanovam">
+				>
+				["at0042"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0044"] = <
+					text = <"O neželenem učinku je poročano">
+					description = <"Ali se je o neželen učinku poročalo odgovorni inštituciji?">
+				>
+				["at0045"] = <
+					text = <"Povezava na poročilo o neželenem učinku">
+					description = <"Povezava na poročilo o neželenem učinku">
+				>
+				["at0047"] = <
+					text = <"Povezava na klinično vsebino">
+					description = <"Povezava na klinično vsebino glede poročanega neželenega učinka.">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0.1"] = <
+					text = <"any_medication">
+					description = <"*">
+				>
+				["ac0.2"] = <
+					text = <"New constraint">
+					description = <"*">
+				>
+				["ac0.3"] = <
+					text = <"any_vaccination">
+					description = <"*">
+				>
+				["ac0.4"] = <
+					text = <"*New constraint(sl)">
+					description = <"**(sl)">
+				>
+				["ac0.5"] = <
+					text = <"*New constraint(sl)">
+					description = <"**(sl)">
+				>
+				["ac0.6"] = <
+					text = <"*New constraint(sl)">
+					description = <"**(sl)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["ac0.1"] = <
+					text = <"*any_medication(en)">
+					description = <"**(en)">
+				>
+				["ac0.2"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+				["ac0.3"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+				["ac0.4"] = <
+					text = <"New constraint">
+					description = <"*">
+				>
+				["ac0.5"] = <
+					text = <"New constraint">
+					description = <"*">
+				>
+				["ac0.6"] = <
+					text = <"New constraint">
+					description = <"*">
+				>
+			>
+		>
+	>
+	constraint_bindings = <
+		["MKB"] = <
+			items = <
+				["ac0.5"] = <terminology:MKB/10?subset=bolezni>
+				["ac0.6"] = <terminology:MKB/10?subset=bolezni>
+			>
+		>
+		["CBZ"] = <
+			items = <
+				["ac0.1"] = <terminology:CBZ/2?subset=medications>
+				["ac0.3"] = <terminology:CBZ/2?subset=vaccinations>
+			>
+		>
+	>

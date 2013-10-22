@@ -1,0 +1,76 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.ispek_dialog-fluid_output.v1
+specialise
+	openEHR-EHR-SECTION.ispek_dialog.v1
+
+concept
+	[at0000.1]	-- Fluid output
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"ian.mcnicoll@oceaninformatics .com">
+		["date"] = <"08/06/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To act as a container to allow multiple templated fluid outputs.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Acts as a container for a set of archetype which represent a single data-capture screen.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"AC8540CF768FC4D219D12DD70727DB22">
+	>
+
+definition
+	SECTION[at0000.1] matches {*}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fluid output">
+					description = <"Acts as a container for a set of archetype which represent a single date-capture screen.">
+				>
+				["at0000.1"] = <
+					text = <"Fluid output">
+					description = <"Acts as a container to allow multiple templated fluid outputs.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Dialog">
+					description = <"Acts as a container for a set of archetype which represent a single data-capture screen.">
+				>
+				["at0000.1"] = <
+					text = <"*Fluid output!(en)">
+					description = <"*Acts as a container for a set of archetype which represent a single date-capture screen.!(en)">
+				>
+			>
+		>
+	>

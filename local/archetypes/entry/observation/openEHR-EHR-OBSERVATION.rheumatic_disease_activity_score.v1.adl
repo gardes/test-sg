@@ -1,0 +1,201 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.rheumatic_disease_activity_score.v1
+
+concept
+	[at0000]	-- Rheumatic disease activity score
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2012-11-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To records findings of a rheumatological assessment, loosley based on DAS-28 score.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"http://www.das-score.nl/das28/en/introduction-menu.html">
+		["MD5-CAM-1.0.1"] = <"66832DCD271C13590946C3A59C578BAC">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Rheumatic disease activity score
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Number of tender joints
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..44|}
+											}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Number of swollen joints
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..44|}
+											}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Patient-estimated disease activity
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"mm">
+														magnitude = <|0.0|>
+														precision = <|0|>
+													>
+												>
+												assumed_value = <
+													magnitude = <0.0>
+													units = <"mm">
+													precision = <0>
+												>
+											>
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Clinical interpretation
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0008] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Number of joints examined
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Rheumatic disease activity score">
+					description = <"Records findings of a rheumatological assessment, loosley based on DAS-28 score.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Number of tender joints">
+					description = <"The total number of tender joints.">
+				>
+				["at0005"] = <
+					text = <"Number of swollen joints">
+					description = <"The total number of swollen joints">
+				>
+				["at0006"] = <
+					text = <"Clinical interpretation">
+					description = <"Interperprative statements by the clinician.">
+				>
+				["at0007"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Number of joints examined">
+					description = <"The number of joints examined.">
+				>
+				["at0010"] = <
+					text = <"Patient-estimated disease activity">
+					description = <"Response on a visual scale 0-100 to the question \"How active was your arthritis during the past week?\"">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Rheumatic disease activity score(en)">
+					description = <"*Records findings of a rheumatological assessment, loosley based on DAS-28 score.(en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"*Number of tender joints(en)">
+					description = <"*The total number of tender joints.(en)">
+				>
+				["at0005"] = <
+					text = <"*Number of swollen joints(en)">
+					description = <"*The total number of swollen joints(en)">
+				>
+				["at0006"] = <
+					text = <"*Clinical interpretation(en)">
+					description = <"*Interperprative statements by the clinician.(en)">
+				>
+				["at0007"] = <
+					text = <"*Comment(en)">
+					description = <"**(en)">
+				>
+				["at0008"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0009"] = <
+					text = <"*Number of joints examined(en)">
+					description = <"*The number of joints examined.(en)">
+				>
+				["at0010"] = <
+					text = <"*Patient-estimated disease activity(en)">
+					description = <"*Response on a visual scale 0-100 to the question \"How active was your arthritis during the past week?\"(en)">
+				>
+			>
+		>
+	>
