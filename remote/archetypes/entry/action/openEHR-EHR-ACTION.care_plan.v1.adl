@@ -19,7 +19,7 @@ description
 			use = <"Use to record activity regarding the planning and carrying out of a single care plan as a whole.">
 			keywords = <"care plan", "activity">
 			misuse = <"Not to be used to record activity of individual components of a care plan - use the specific ACTION archetype appropriate for each activity.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"CommitteeDraft">
