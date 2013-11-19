@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Sfg2
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Manager">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -13,6 +21,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"w">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -58,6 +73,26 @@ ontology
 				["at0003"] = <
 					text = <"CHANGED again!">
 					description = <"dd*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Sfg2(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"öööö de">
+					description = <"**(en)">
+				>
+				["at0002"] = <
+					text = <"Geändert!">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"NOchaml geändert!">
+					description = <"*dd*(en)">
 				>
 			>
 		>
