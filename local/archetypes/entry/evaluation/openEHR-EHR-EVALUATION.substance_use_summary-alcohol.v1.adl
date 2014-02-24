@@ -17,19 +17,17 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This archetype is used to record an ongoing and persistent summary of the consumption of any and all types of alcohol.">
-			use = <"Used to record an ongoing and persistent summary of the use or consumption of alcohol.  ">
+			purpose = <"To build up and record an ongoing and persistent summary about the consumption of any and all types of alcohol by the individual.">
+			use = <"Use to record a summary of the pattern of consumption for any and all forms of alcohol and about multiple episodes of alcohol consumption over time.">
 			keywords = <"consumption", "substance", "use", "usage", "dependence", "alcohol">
-			misuse = <"Not to be used for recording actual details about the use of the substance and event-related data - this should be captured using the OBSERVATION.substance_use-alcohol archetype. 
-Not to be used for recording data about substances other than alcohol. ">
+			misuse = <"Not to be used to capture event-based information about alcohol consumption, such as an Alcohol consumption or Drinking diary - use the OBSERVATION.substance_use-alcohol archetype.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"0">
+	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"97C5C34A373038B9243AFEDE78BBDE97">
+		["MD5-CAM-1.0.1"] = <"F807E79ACD5CC187A929B0A0302A9179">
 	>
 
 definition
@@ -37,203 +35,174 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
+					ELEMENT[at0005.1] occurrences matches {0..1} matches {	-- Substance
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {[local::at0.17]}		-- Alcohol
-							}
+							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Usage Status
+					ELEMENT[at0002.1] occurrences matches {0..1} matches {	-- Usage Status
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0003, 	-- Current User
-									at0004, 	-- Former Regular User
-									at0006, 	-- Former Occasional User
-									at0016]	-- Never Used
+									at0003, 	-- Current alcohol drinker
+									at0004, 	-- Former regular alcohol drinker
+									at0006, 	-- Former occasional alcohol drinker
+									at0016]	-- Never drunk alcohol
 								}
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
-						items cardinality matches {0..*; unordered} matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
+					CLUSTER[at0007.1] occurrences matches {0..*} matches {	-- Consumption Summary
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0008.1] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0015.1] occurrences matches {0..1} matches {	-- Method of use
 								value matches {
 									DV_CODED_TEXT matches {
-										defining_code matches {
-											[local::
-											at0.18, 	-- All alcohol
-											at0.19, 	-- All beer
-											at0.20, 	-- All wine
-											at0.21, 	-- All spirits
-											at0.22, 	-- Full strength beer
-											at0.23, 	-- Light beer
-											at0.24, 	-- Red wine
-											at0.25, 	-- White wine
-											at0.26]	-- Fortified wine
-										}
+										defining_code matches {[local::at0.27]}		-- Ingested
 									}
 								}
 							}
-							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Method of use
+							ELEMENT[at0009.1] occurrences matches {0..1} matches {	-- Date commenced
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0010.1] occurrences matches {0..1} matches {	-- Age commenced
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0011.1] occurrences matches {0..1} matches {	-- Date ceased
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0012.1] occurrences matches {0..1} matches {	-- Age ceased
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0017.1] occurrences matches {0..1} matches {	-- Context of use
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Date commenced
-								value matches {
-									DV_DATE_TIME matches {*}
-								}
-							}
-							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Age commenced
-								value matches {
-									DV_DURATION matches {*}
-								}
-							}
-							ELEMENT[at0011] occurrences matches {0..1} matches {	-- Date ceased
-								value matches {
-									DV_DATE_TIME matches {*}
-								}
-							}
-							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Age ceased
-								value matches {
-									DV_DURATION matches {*}
-								}
-							}
-							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+							ELEMENT[at0013.1] occurrences matches {0..1} matches {	-- Comment
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Cessation attempts
+					allow_archetype CLUSTER[at0014.1] occurrences matches {0..*} matches {	-- Cessation attempts
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
+					}
+					ELEMENT[at0018.1] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
 					}
 				}
 			}
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
-				["at0.17"] = <
-					text = <"Alcohol">
-					description = <"Alcohol use">
-				>
-				["at0.18"] = <
-					text = <"All alcohol">
-					description = <"All alcohol consumed">
-				>
-				["at0.19"] = <
-					text = <"All beer">
-					description = <"All beer consumed">
-				>
-				["at0.20"] = <
-					text = <"All wine">
-					description = <"All wine consumed">
-				>
-				["at0.21"] = <
-					text = <"All spirits">
-					description = <"All spirits consumed">
-				>
-				["at0.22"] = <
-					text = <"Full strength beer">
-					description = <"Full strength beer consumed">
-				>
-				["at0.23"] = <
-					text = <"Light beer">
-					description = <"Light beer consumed">
-				>
-				["at0.24"] = <
-					text = <"Red wine">
-					description = <"Red wine consumed">
-				>
-				["at0.25"] = <
-					text = <"White wine">
-					description = <"White wine consumed">
-				>
-				["at0.26"] = <
-					text = <"Fortified wine">
-					description = <"Fortified wine consumed">
+				["at0.27"] = <
+					text = <"Ingested">
+					description = <"Absorbed through the gastrointestinal tract.">
 				>
 				["at0000"] = <
 					text = <"Substance Use Summary">
-					description = <"Generic archetype to record a persisting summary or overview of use or consumption of a defined substance over time. ">
+					description = <"Overview of use or consumption of a defined substance, including caffeine, alcohol, tobacco, volatile substances and illicit drugs.">
 				>
 				["at0000.1"] = <
 					text = <"Alcohol Use Summary">
-					description = <"Record a persisting summary or overview of use or consumption of alcohol over time.">
+					description = <"Summary of alcohol consumption by the individual.">
 				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
-				["at0002"] = <
+				["at0002.1"] = <
 					text = <"Usage Status">
-					description = <"Overview of usage of alcohol">
+					description = <"Overview of usage of alcohol.">
 				>
 				["at0003"] = <
-					text = <"Current User">
-					description = <"Person is a current user of alcohol">
+					text = <"Current alcohol drinker">
+					description = <"Individual is a current consumer of alcohol.">
 				>
 				["at0004"] = <
-					text = <"Former Regular User">
-					description = <"Person a former or ex-user of the substance on a regular basis">
+					text = <"Former regular alcohol drinker">
+					description = <"Individual is a former or ex-consumer of alcohol on a regular basis.">
 				>
-				["at0005"] = <
+				["at0005.1"] = <
 					text = <"Substance">
-					description = <"Identification of the substance ">
+					description = <"Identification of alcohol consumed. May be 'all alcohol' or a specific type of alcohol eg wine, beer, or spirit.">
 				>
 				["at0006"] = <
-					text = <"Former Occasional User">
-					description = <"Person a former or ex-user of alcohol on a regular basis">
+					text = <"Former occasional alcohol drinker">
+					description = <"Individual is a former or ex-consumer of alcohol on an occasional basis.">
 				>
-				["at0007"] = <
+				["at0007.1"] = <
 					text = <"Consumption Summary">
-					description = <"Summary of the pattern of use for any and all forms of alcohol, and for multiple episodes of use">
+					description = <"Summary of the pattern of use for any and all forms of alcohol, and for multiple episodes of use.">
 				>
-				["at0008"] = <
-					text = <"Form">
-					description = <"Identify the form of alcohol">
+				["at0008.1"] = <
+					text = <"Type">
+					description = <"Identify the specific type of alcohol consumed.">
+					fsn = <"Consumption Summary Type">
 				>
-				["at0009"] = <
+				["at0009.1"] = <
 					text = <"Date commenced">
-					description = <"Date that use of alcohol commenced (can be a partial date, such as a year)">
+					description = <"Date that consumption of alcohol commenced (can be a partial date, such as a year).">
 				>
-				["at0010"] = <
+				["at0010.1"] = <
 					text = <"Age commenced">
-					description = <"Age that use of alcohol commenced">
+					description = <"Age that consumption of alcohol commenced.">
 				>
-				["at0011"] = <
+				["at0011.1"] = <
 					text = <"Date ceased">
-					description = <"Date that use of alcohol ceased (can be a partial date, such as a year)">
+					description = <"Date that consumption of alcohol ceased (can be a partial date, such as a year).">
 				>
-				["at0012"] = <
+				["at0012.1"] = <
 					text = <"Age ceased">
-					description = <"Age that use of alcohol ceased">
+					description = <"Age that consumption of alcohol ceased.">
 				>
-				["at0013"] = <
+				["at0013.1"] = <
 					text = <"Comment">
-					description = <"Comment on the usage of alcohol">
+					description = <"Comment on this episode/type of alcohol consumption.">
+					fsn = <"Consumption Summary Comment">
 				>
-				["at0014"] = <
+				["at0014.1"] = <
 					text = <"Cessation attempts">
-					description = <"Details about attempts to cease use of alcohol">
+					description = <"Details about attempts to cease use of alcohol.">
 				>
-				["at0015"] = <
+				["at0015.1"] = <
 					text = <"Method of use">
-					description = <"Method of use or consumption of alcohol">
+					description = <"Method of consumption of alcohol.">
 				>
 				["at0016"] = <
-					text = <"Never Used">
-					description = <"Person has never consumed alcohol">
+					text = <"Never drunk alcohol">
+					description = <"Individual has never consumed alcohol.">
+				>
+				["at0017.1"] = <
+					text = <"Context of use">
+					description = <"Description about the social, cultural or psychological context that contributed to the alcohol consumption.">
+				>
+				["at0018.1"] = <
+					text = <"Comment">
+					description = <"Overall comment about the individual's consumption of alcohol.">
+					fsn = <"Substance Use Summary Alcohol Comment">
 				>
 			>
 		>

@@ -1,0 +1,72 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.physical_exercise.v1
+
+concept
+	[at0000]	-- Physical Activity Report
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ilias Lamprinos">
+		["organisation"] = <"Intracom Telecom">
+		["email"] = <"labil@intracom.com">
+		["date"] = <"2012-12-13">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A composition for recording information related to physical activity and associated information.">
+			use = <"This composition is only required for physical activity monitoring.">
+			keywords = <"mood", "stress", "physical activity">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <"Chrysa Papadaki, Intracom Telecom, chrpapa@intracom.gr", ...>
+	other_details = <
+		["current_contact"] = <"Ilias Lamprinos, Intracom Telecom, labil@intracom.com">
+		["MD5-CAM-1.0.1"] = <"DA3F94C4C2F18C14F1F213FC1AB5306D">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Physical Activity Report
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0002] matches {*}
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype SECTION[at0001] occurrences matches {1..*} matches {	-- Physical Activity Monitoring
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.physical_activity_monitoring(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Physical Activity Report">
+					description = <"The process of recording a physical activity report and related information.">
+				>
+				["at0001"] = <
+					text = <"Physical Activity Monitoring">
+					description = <"To monitor and record information related to physical activity.">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

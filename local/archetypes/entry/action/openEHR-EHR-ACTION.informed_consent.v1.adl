@@ -22,7 +22,7 @@ This archetype has been designed to be a framework that will be adequate for req
 
 The status of the informed consent is reflected by the pathway steps - requested, refused, provided, withdrawn etc.">
 			keywords = <"consent", "informed", "caveat">
-			misuse = <"">
+			misuse = <"Not to be used for recording consent for any other purpose, for example patient consent for access to their EHR.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -362,7 +362,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

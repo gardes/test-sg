@@ -1,0 +1,181 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.participation.v3
+
+concept
+	[at0000]	-- Participation
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"12-Jun-2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"NotSet">
+	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E6806C2A89C41450148EDE0144380835">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Participation
+		items cardinality matches {3..*; unordered} matches {
+			ELEMENT[at0001] matches {	-- Participation Type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] matches {	-- Role
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Participation Period
+				value matches {
+					DV_INTERVAL<DV_DATE_TIME> matches {
+						upper matches {
+							DV_DATE_TIME matches {*}
+						}
+						lower matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0005] occurrences matches {0..1} matches {	-- Location of Participation
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0006] matches {	-- Location of Participation Type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0007] occurrences matches {0..1} matches {	-- Location of Participation Address
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address\.v3/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+			allow_archetype CLUSTER[at0009] matches {	-- Participant
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.participant\.v3/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Participation">
+					description = <"Identifies and describes an entity and the role it plays while partaking in a healthcare event.">
+					comment = <"The primary purpose of a participation within a NEHTA specification is to provide sufficient information to enable a recipient of a document to identify the participant within their own systems and not to exchange information about that participant. Nonetheless, it is recognised that it is often necessary to send information about participants, in particular, contact details, and since much of this information is often also used in the identification of participants, this model is the natural place to include it.">
+					dc_id = <"10296">
+					detail_docref = <"data_groups/NEHTA-10296-Participation-Data_Group.xml">
+					spec_id = <"28">
+				>
+				["at0001"] = <
+					text = <"Participation Type">
+					description = <"The categorisation of the nature of the participant's involvement in the healthcare event described by this participation.">
+					comment = <"It is preferred that this item be coded from the Participation Type Values Value Domain.
+
+Examples: 
+  1. Author Originator
+  2. Authenticator
+  3. Physical Performer
+  4. Receiver
+  5. Responsible Party">
+					value_domain_dc_id = <"10299">
+					value_domain_name = <"Participation Type Values">
+					dc_id = <"10297">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-10297-Participation_Type-Data_Element.xml">
+				>
+				["at0002"] = <
+					text = <"Role">
+					description = <"The involvement or role of the participant in the related action from a healthcare perspective rather than the specific participation perspective.">
+					comment = <"It is preferred that this item be coded from the Role Values Value Domain.
+
+A participant is linked to an action by a participation instance, however the professional credentials of the participant may be quite different from the role the participant is playing. A common example is interns and residents performing anesthesia or surgeries under (more or less) supervision of attending specialists. In this case, this data element (Role) should have a value of Intern , say, and the would be used to specify the nature of the participation.
+
+Examples:  (In each of the following Role examples, the Participation Type could be \"Recipient\":)
+  1. Attending physician
+  2. Carer
+  3. Clinical nurse specialist
+  4. Dietician
+  5. General practitioner
+  6. Performing pathologist
+  7. Prescriber
+  8. Senior surgical registrar
+  9. Subject of care (patient)">
+					value_domain_dc_id = <"16269">
+					value_domain_name = <"Role Values">
+					dc_id = <"10342">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-10342-Role-Data_Element.xml">
+				>
+				["at0003"] = <
+					text = <"Participation Period">
+					description = <"The time interval during which the participation in the health care event occurred.">
+					comment = <"A participation period is needed when the participant's involvement in the healthcare event spans only part of the event's period. This means that the participation period indicates the time period during which certain common sub-activities occur that may not be worth recording explicitly, but which are implicitly modelled by the participation type. Although this data element is optional, in most contexts, it will be further constrained to either be disallowed or essential. For example, in a Discharge Summary: Some typical contexts where Participation Period is essential are: The period of time during which a doctor was responsible for a patient during a healthcare event. The end of the participation period of a Document Author participation is the time associated with the completion of editing the content of a document. Some typical contexts where participation period is disallowed are: For a Document Recipient participation. For a Facility participation. For a Nominated Primary Healthcare Provider participation.
+
+Examples:  (See:)">
+					dc_id = <"10300">
+					detail_docref = <"data_elements/NEHTA-10300-Participation_Period-Data_Element.xml">
+				>
+				["at0005"] = <
+					text = <"Location of Participation">
+					description = <"Specifies the geographic site (building, room, etc) where the participation of a healthcare event occurs.">
+					comment = <"LOCATION OF PARTICIPATION is not required where it is the same as the location at which the healthcare event has taken place. The location of participation may be distinctly different from the registered address/location of the Healthcare Provider Individual or Organisation. A healthcare event participation may occur in a single location (as in the cases of face-to-face healthcare consultation, ED encounter, inpatient event), or may occur over multiple locations (as in the case of telemedicine).">
+					dc_id = <"10343">
+					detail_docref = <"data_groups/NEHTA-10343-Location_of_Participation-Data_Group.xml">
+				>
+				["at0006"] = <
+					text = <"Location of Participation Type">
+					description = <"Specifies the type of location where the participation in the healthcare event occurred.">
+					comment = <"It is preferred that this item be coded from the Location of Participation Type Values Value Domain.
+
+Examples: 
+  1. Subject of care (patient) residence
+  2. Site of accident (e.g. in the event of a natural disaster, ambulance calls)
+  3. Healthcare facility responsible for treating the subject of care (patient)
+  4. Remote teleconsultation setting">
+					value_domain_dc_id = <"10344">
+					value_domain_name = <"Location of Participation Type Values">
+					dc_id = <"10344">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-10344-Location_of_Participation_Type-Data_Element.xml">
+				>
+				["at0007"] = <
+					text = <"Location of Participation Address">
+					description = <"The description of a location where the participation occurred which is different from where the healthcare event occurred.">
+					dc_id = <"20106.28.1">
+					spec_id = <"22">
+					detail_docref = <"data_groups/NEHTA-20106-Location_of_Participation_Address-Data_Group.xml">
+				>
+				["at0009"] = <
+					text = <"Participant">
+					description = <"Details pertinent to the identification of an individual or organisation or device that has participated in a healthcare event/encounter/clinical interaction.">
+					comment = <"This may be a , or that is capable of participating through a defined Participation Type in a specified business process. A participant in a healthcare event belongs to one of these categories: a person who is a healthcare provider; a person who is not a healthcare provider; an organisation (healthcare provider or otherwise); or a device that authors, sends or receives healthcare information.">
+					dc_id = <"10232.28.1">
+					detail_docref = <"data_groups/NEHTA-10232-Participant-Data_Group.xml">
+					spec_id = <"27">
+				>
+			>
+		>
+	>

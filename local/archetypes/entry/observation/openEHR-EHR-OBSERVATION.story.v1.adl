@@ -6,16 +6,16 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			author = <
-				["name"] = <"Guillermo Palli">
-			>
-		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
 			author = <
 				["name"] = <"Mona Saleh">
+			>
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Guillermo Palli">
 			>
 		>
 	>
@@ -87,7 +87,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

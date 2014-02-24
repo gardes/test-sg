@@ -25,41 +25,49 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Representation of an individual healthcare provider demographic data.">
-			use = <"Used in demographic service to collect a individual healthcare provider's data.">
+			purpose = <"Representation of an individual healthcare provider demographic data">
+			use = <"Used in demographic service to collect a individual healthcare provider's data">
 			keywords = <"demographic service", "individual healthcare provider">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
-			purpose = <"Representação de dados de uma pessoa exercendo o papel Profissional de Saúde.">
-			use = <"Usado em serviços demográficos para coletar dados sobre profissionais de saúde.">
+			purpose = <"Representação de dados de uma pessoa exercendo o papel Profissional de Saúde ">
+			use = <"Usado em serviços demográficos para coletar dados sobre profissionais de saúde">
 			keywords = <"serviço demográfico", "profissional de saúde">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Authordraft">
-	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
+	other_contributors = <>
 
 definition
     ROLE[at0000] matches {  -- Individual healthcare provider 
-        identities matches {
+        identities cardinality matches {1..*; ordered} matches {
             allow_archetype PARTY_IDENTITY[at0001] occurrences matches {1..1} matches {
                 include
                     archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
             }
         }
-        capabilities matches {
-  		allow_archetype CAPABILITY[at0002] occurrences matches {0..*} matches {
-                    include
-                        archetype_id/value matches {/(individual_credentials)[a-zA-Z0-9_-]*\.v1/}
+        capabilities cardinality matches {0..*; ordered} matches {
+            CAPABILITY[at0002] occurrences matches {0..*} matches {  -- Capabilites
+                credentials matches {
+                    ITEM_TREE[at0020] occurrences matches {0..1} matches {  -- Credentials
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype CLUSTER[at0021] occurrences matches {0..*} matches {
+                                include
+                                    archetype_id/value matches {/(individual_provider_credentials)[a-zA-Z0-9_-]*\.v1/}
+                            }
+                        }
+                    }
                 }
+            }
         }
-        contacts matches {
+        contacts cardinality matches {0..*; ordered} matches {
             CONTACT[at0003] occurrences matches {0..*} matches {  -- Contacts
-                addresses matches {
+                addresses cardinality matches {0..*; ordered} matches {
                     allow_archetype ADDRESS[at0030] occurrences matches {1..1} matches {
                         include
                             archetype_id/value matches {/(address)([a-zA-Z0-9_]+)*\.v1/}
@@ -68,7 +76,7 @@ definition
                 }
             }
         }
-        relationships matches {
+        relationships cardinality matches {0..*; ordered} matches {
             PARTY_RELATIONSHIP[at0004] occurrences matches {0..*} matches {  -- Relationship with a third-party payer
                 details matches {
                     ITEM_TREE[at0040] occurrences matches {0..1} matches {  -- Details
@@ -103,58 +111,65 @@ definition
 
 
 
-
 ontology
 	term_definitions = <
 		["pt-br"] = <
 			items = <
 				["at0000"] = <
 					text = <"Profissional de saúde">
-					description = <"Dados sobre uma pessoa que exerce o papel de um profissional de saúde.">
+					description = <"Dados sobre uma pessoa que exerce o papel de um profissional de saúde">
 				>
 				["at0001"] = <
 					text = <"Nome do profissional">
-					description = <"Nome do profissional de saúde.">
+					description = <"Nome do profissional de saúde">
 				>
 				["at0002"] = <
 					text = <"Capacitação">
-					description = <"Capacitação do Profissional.">
+					description = <"capacitação do Profissional">
 				>
 				["at0003"] = <
 					text = <"Contato">
-					description = <"Contato do profissional de saúde.">
+					description = <"Contato do profissional de saúde">
 				>
 				["at0004"] = <
 					text = <"Relacionamento com uma fonte pagadora">
-					description = <"Relacionamento entre um profissional de saúde e uma fonte pagadora.">
+					description = <"Relacionamento entre um profissional de saúde e uma fonte pagadora">
 				>
 				["at0005"] = <
 					text = <"Relacionamento empregador/empregado">
-					description = <"Relacionamento empregador/empregado entre um profissional de saúde e uma organização prestadora de assistência à saúde.">
+					description = <"Relacionamento empregador/empregado entre um profissional de saúde e uma organização prestadora de assistência à saúde">
+				>
+				["at0020"] = <
+					text = <"Credenciais">
+					description = <"Credenciais do professional de saúde">
+				>
+				["at0021"] = <
+					text = <"Detalhes da credencial">
+					description = <"Detalhes da credencial do profissional de saúde">
 				>
 				["at0030"] = <
 					text = <"Endereço">
-					description = <"Endereço onde o profissional pode ser contactado.">
+					description = <"Endereço onde o profissional pode ser contactado">
 				>
 				["at0040"] = <
 					text = <"Detalhes">
-					description = <"Detalhes do relacionamento profissional/fonte pagadora.">
+					description = <"Detalhes do relacionamento profissional/fonte pagadora">
 				>
 				["at0041"] = <
 					text = <"Documento de Identificação">
-					description = <"A identificação do profissional de saúde junto à fonte pagadora.">
+					description = <"A identificação do profissional de saúde junto à fonte pagadora">
 				>
 				["at0050"] = <
 					text = <"Detalhes">
-					description = <"Detalhes do relacionamento profissional de saúde/prestador de assistência.">
+					description = <"Detalhes do relacionamento profissional de saúde/prestador de assistência">
 				>
 				["at0051"] = <
 					text = <"Documento de Identificação">
-					description = <"Identificação do profissional de saúde junto à organização prestadora de assistência à saúde.">
+					description = <"Identificação do profissional de saúde junto à organização prestadora de assistência à saúde">
 				>
 				["at0052"] = <
 					text = <"Função">
-					description = <"A função do profissional de saúde junto à organização prestadora de assistência à saúde.">
+					description = <"A função do profissional de saúde junto à organização prestadora de assistência à saúde">
 				>
 			>
 		>
@@ -184,6 +199,14 @@ ontology
 					text = <"Employer/employee relationship">
 					description = <"Employer/employee relationship between an individual healthcare provider and a healthcare provider organisation.">
 				>
+				["at0020"] = <
+					text = <"Credentials">
+					description = <"Individual healthcare provider credentials.">
+				>
+				["at0021"] = <
+					text = <"Credentials details">
+					description = <"Individual healthcare provider credentials details.">
+				>
 				["at0030"] = <
 					text = <"Address">
 					description = <"Address where the individual provider can be contacted.">
@@ -205,7 +228,7 @@ ontology
 					description = <"The identifer of the individual healthcare provider at the healthcare provider organisation.">
 				>
 				["at0052"] = <
-					text = <"Employment role">
+					text = <"Employement role">
 					description = <"The role of the individual healthcare provider at the healthcare provider organisation.">
 				>
 			>
