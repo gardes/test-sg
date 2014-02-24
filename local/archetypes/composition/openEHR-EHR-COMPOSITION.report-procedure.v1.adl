@@ -23,7 +23,7 @@ The Context component contains an optional unnamed slot that can be used to:
 - add optional content during templating to support a use-case specific requirements;
 - add EHR model demographic archetypes representing participating parties. While this may not be desired at implementation, this can be useful to demonstrate how demographics may be represented in an implementation ie as a support to clinical content requirements gathering or template review.
 The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
-			keywords = <"report", ...>
+			keywords = <"report", "procedure", "operation">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -67,7 +67,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

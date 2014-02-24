@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>e0cd325b-9867-4116-8ab3-24f6426af612</id>
+  <name>Consumer Entered Note DCM</name>
+  <description>
+    <original_author>
+      <item>
+        <key>Organisation</key>
+        <value>Nehta</value>
+      </item>
+      <item>
+        <key>Authored date</key>
+        <value>2011-12-19</value>
+      </item>
+    </original_author>
+    <lifecycle_state>Final</lifecycle_state>
+    <details>
+      <purpose>A narrative about the subject of care's health and related matters as entered bythe subject of care or their authorised representative.</purpose>
+      <use>When used by a health care provider, clinical synopsis is used to describe additional information includingclinical interpretation of the condition/tests and subject of care understanding of the health care event,and other relevant clinical details not captured by other structured or unstructured information componentspertinent of that health care event.</use>
+      <misuse>Using when more specialised data components are available.</misuse>
+      <copyright>Copyright © 2011 National E-Health Transition Authority Ltd. (NEHTA)</copyright>
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:NEHTA</key>
+        <value>Data to support import and export to and from NEHTA's eXist repository.</value>
+      </item>
+      <item>
+        <key>Publication ID</key>
+        <value>78945</value>
+      </item>
+      <item>
+        <key>Publication Version</key>
+        <value>1.0</value>
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-EVALUATION.clinical_synopsis.v4]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <value>A section that captures healthcare narratives about a subject of care's health andrelated matters.</value>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <value>NEHTA</value>
+      </item>
+      <item>
+        <key>Nehta11179.Identifier</key>
+        <value>16684</value>
+      </item>
+      <item>
+        <key>CDA_IG.Mapping XML</key>
+        <entry xmlns="http://ns.electronichealth.net.au/ci/dc/mapping" id="cen_100_16681" conf-lvl="2" type="CDA">
+          <mapping-group>
+            <path>ClinicalDocument</path>
+          </mapping-group>
+          <current-context>ClinicalDocument/component/structuredBody</current-context>
+        </entry>
+      </item>
+      <item>
+        <key>CDA_IG.Template type</key>
+        <value>open</value>
+      </item>
+      <item>
+        <key>CDA_IG.Template category</key>
+        <value>Section</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-EVALUATION.clinical_synopsis.v4]/data[at0001]/items[at0004]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <value>The consumer note title/topic, written in free text.</value>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <value>NEHTA</value>
+      </item>
+      <item>
+        <key>Nehta11179.Notes</key>
+        <value>The title may be a free text intended to allow a summary title to the narrative.</value>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value>Text</value>
+      </item>
+      <item>
+        <key>Nehta11179.Examples</key>
+        <ol xmlns="http://www.w3.org/1999/xhtml">
+          <li>My Diabetes:</li>
+          <li>Diagnosis:</li>
+          <li>My Blood Pressure:</li>
+        </ol>
+      </item>
+      <item>
+        <key>Nehta11179.Identifier</key>
+        <value>16673</value>
+      </item>
+      <item>
+        <key>CDA_IG.Mapping XML</key>
+        <entry xmlns="http://ns.electronichealth.net.au/ci/dc/mapping" id="cen_103_16673" parent-context="cen_102_15513" conf-lvl="3" type="CDA">
+          <mapping-group>
+            <path>title</path>
+          </mapping-group>
+          <current-context>ClinicalDocument/component/structuredBody/component/section/title</current-context>
+        </entry>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-EVALUATION.clinical_synopsis.v4]/data[at0001]/items[at0002]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <value>The consumer entered healthcare narrative, written in free text.</value>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <value>NEHTA</value>
+      </item>
+      <item>
+        <key>Nehta11179.Notes</key>
+        <value>This free text data element is intended to allow the healthcare information to beentered in narrative form.</value>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value>Text</value>
+      </item>
+      <item>
+        <key>Nehta11179.Examples</key>
+        <variablelist xmlns="http://docbook.org/ns/docbook">
+          <varlistentry>
+            <term>My Diabetes</term>
+            <listitem>
+              <para>I saw my doctor today and he said my last test results were getting better, buthe was still not happy with my diet. I should go back to that nice dietician Kate again.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>My Blood Pressure</term>
+            <listitem>
+              <para>As treatment for low blood pressure, I was advised to stay hydrated and eatthroughout the day. My doctor is also keeping an eye on my thyroid in case acondition develops.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </item>
+      <item>
+        <key>Nehta11179.Identifier</key>
+        <value>15582</value>
+      </item>
+      <item>
+        <key>CDA_IG.Mapping XML</key>
+        <entry xmlns="http://ns.electronichealth.net.au/ci/dc/mapping" id="cen_103_15582" parent-context="cen_102_15513" conf-lvl="3" type="CDA">
+          <mapping-group>
+            <path>text</path>
+          </mapping-group>
+          <current-context>ClinicalDocument/component/structuredBody/component/section/text</current-context>
+        </entry>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v4" concept_name="Clinical Synopsis" max="1" min="1" name="Consumer Entered Note">
+    <Rule path="/data[at0001]/items[at0004]" min="1" name="Consumer Note Title" />
+    <Rule path="/data[at0001]/items[at0002]" name="Consumer Note Description" />
+    <Rule path="/data[at0001]/items[at0003]" max="0" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v4">
+    <digest id="MD5-CAM-1.0.1">189F15AAB10956236B0294644DC3D184</digest>
+  </integrity_checks>
+</template>

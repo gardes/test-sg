@@ -5,16 +5,6 @@ concept
 	[at0000]	-- Conclusion
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			author = <
-				["name"] = <"Art Latyp; Латыпов Артур Шамилевич">
-				["organisation"] = <"RusBITech РусБИТех, Москва">
-			>
-			accreditation = <"hmm">
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -28,14 +18,6 @@ description
 			purpose = <"Section to bring together all archetypes involved in recording the conclusion in an encounter with a patient">
 			use = <"">
 			keywords = <"diagnosis", "differential diagnosis">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Раздел для объединения всех архетипов, описывающих выводы (заключения) в результате встречи с пациентом ">
-			use = <"">
-			keywords = <"диагностика", "диагноз", "дифдиагноз", "дифференциальный", "заключение", "вывод">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -68,18 +50,6 @@ ontology
 				["at0001"] = <
 					text = <"Evaluation of a problem, diagnosis etc.">
 					description = <"*">
-				>
-			>
-		>
-		["ru"] = <
-			items = <
-				["at0000"] = <
-					text = <"Заключение">
-					description = <"Раздел для записи заключения (выводов) после встречи с пациентом (осмотра, консультации) ">
-				>
-				["at0001"] = <
-					text = <"Оценка проблемы, диагноз и т.д.">
-					description = <"Итоговое мнение врача после осмотра пациента, включая диагноз">
 				>
 			>
 		>

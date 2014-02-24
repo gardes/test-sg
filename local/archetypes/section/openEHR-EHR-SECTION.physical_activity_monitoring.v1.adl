@@ -1,0 +1,81 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.physical_activity_monitoring.v1
+
+concept
+	[at0000]	-- Physical activity monitoring
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ilias Lamprinos">
+		["organisation"] = <"Intracom Telecom">
+		["email"] = <"labil@intracom.gr">
+		["date"] = <"2012-12-13">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A section to demostrate observations considered important for the monitoring and evaluation of physical activity.">
+			use = <"An organisational heading for physical activity monitoring.">
+			keywords = <"mood", "stress", "physical activity">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <"Chrysa Papadaki, Intracom Telecom,  chrpapa@intracom.gr", ...>
+	other_details = <
+		["current_contact"] = <"Ilias Lamprinos, Intracom Telecom, labil@intracom.com">
+		["MD5-CAM-1.0.1"] = <"5E052456ACEE026D340807E82C1D5459">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Physical activity monitoring
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Physical Activity
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.physical_exercises(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {	-- Level of Mood
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.mood(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {	-- Level of Stress
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.stress(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"MTH", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Physical activity monitoring">
+					description = <"Provides a framework in which the Entry (Observation) class archetypes Physical Exercise, Mood, Stress are placed.">
+				>
+				["at0001"] = <
+					text = <"Physical Activity">
+					description = <"Physical activity archetype.">
+				>
+				["at0002"] = <
+					text = <"Level of Mood">
+					description = <"Level of Mood archetype.">
+				>
+				["at0003"] = <
+					text = <"Level of Stress">
+					description = <"Level of Stress archetype.">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["MTH"] = <
+			items = <
+				["at0002"] = <[MTH::C0424113]>
+				["at0003"] = <[MTH::C1319127]>
+			>
+		>
+	>

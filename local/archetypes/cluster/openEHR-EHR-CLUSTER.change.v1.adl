@@ -12,7 +12,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about a change. TEST ">
+			purpose = <"To record details about a change.">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -92,6 +92,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

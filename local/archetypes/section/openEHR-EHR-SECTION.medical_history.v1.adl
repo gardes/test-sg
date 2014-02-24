@@ -1,0 +1,120 @@
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.134.1.0)
+	openEHR-EHR-SECTION.medical_history.v1
+
+concept
+	[at0000]	-- Medical History
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"28-Apr-2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"
+To group together information relating to the past medical history of a patient.
+">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"CD6667C464F52095CB16437AAF6B915A">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Medical History
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[at0003] occurrences matches {0..*} matches {	-- Problem/Diagnosis
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-[a-zA-Z0-9_]+)*\.v5/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype EVALUATION[at0002] occurrences matches {0..*} matches {	-- Exclusion Statement - Problems and Diagnoses
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype ACTION[at0004] occurrences matches {0..*} matches {	-- Procedure
+				include
+					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype EVALUATION[at0005] occurrences matches {0..*} matches {	-- Exclusion Statement - Procedures
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-procedure(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype EVALUATION[at0006] occurrences matches {0..*} matches {	-- Medical History Item
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.medical_history_item(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medical History">
+					description = <"The current and past medical history of the subject of care, this includes problem/diagnosis and medical or surgical procedures performed.">
+					comment = <"Relevant information regarding clinical/health history, family history about a subject of care, and clinical interventions (procedures) previously performed on a subject of care as reported by the subject and/or identified by the healthcare provider. This includes health and family histories and performed clinical interventions which are assessed to be relevant/important for the ongoing management of a subject's current/active problems or diagnoses.">
+					dc_id = <"16117">
+					spec_id = <"134">
+					detail_docref = <"sections/NEHTA-16117-Medical_History-Section.xml">
+				>
+				["at0002"] = <
+					text = <"Exclusion Statement - Problems and Diagnoses">
+					description = <"Statements that positively assert that the patient does not have the problem or diagnosis.">
+					comment = <"To positively record the absence or exclusion of any problems or diagnoses within the health record.">
+					dc_id = <"16138.134.1">
+					spec_id = <"103">
+					detail_docref = <"data_groups/NEHTA-16138-Exclusion_Statement_Problems_and_Diagnoses-Data_Group.xml">
+				>
+				["at0003"] = <
+					text = <"Problem/Diagnosis">
+					description = <"The problems and/or diagnoses that form part of the past and current medical history of the subject of care.">
+					comment = <"An account of relevant identified health related problems as reported by a healthcare provider. This can include a disease, condition, injury, poisoning, sign, symptom, abnormal finding, complaint, or other factor influencing health status as assessed by a healthcare provider. This item is repeated for every instance of a problem/diagnosis.">
+					dc_id = <"15530.134.1">
+					spec_id = <"12">
+					detail_docref = <"data_groups/NEHTA-15530-Problem_Diagnosis-Data_Group.xml">
+				>
+				["at0004"] = <
+					text = <"Procedure">
+					description = <"A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.">
+					dc_id = <"15514.134.1">
+					detail_docref = <"data_groups/NEHTA-15514-Procedure-Data_Group.xml">
+					spec_id = <"45">
+				>
+				["at0005"] = <
+					text = <"Exclusion Statement - Procedures">
+					description = <"Statements to positively assert that a certain procedure has not been performed on the patient.">
+					comment = <"Assertions that procedures have NOT been performed.">
+					dc_id = <"16603.134.1">
+					spec_id = <"125">
+					detail_docref = <"data_groups/NEHTA-16603-Exclusion_Statement_Procedures-Data_Group.xml">
+				>
+				["at0006"] = <
+					text = <"Medical History Item">
+					description = <"A medical history entry which cannot be categorised into one of the categories such as Procedure and Problem/Diagnosis.">
+					dc_id = <"16627.134.1">
+					detail_docref = <"data_groups/NEHTA-16627-Medical_History_Item-Data_Group.xml">
+					spec_id = <"135">
+				>
+			>
+		>
+	>
