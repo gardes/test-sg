@@ -5,15 +5,6 @@ concept
 	[at0000]	-- Urine output
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-				["email"] = <"monasaleh01@live.com">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"unknown">
@@ -24,14 +15,6 @@ description
 			purpose = <"To record the measured or estimated urine output.">
 			use = <"Use the HISTORY class to record the period of time and totals if required.">
 			keywords = <"wee", "urine", "production", "output">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل قياس (أو تقدير) النتاج البولي">
-			use = <"استخدم فئة (التاريخ) لتسجيل الفترة الزمنية و إجمالي الكميات عند الحاجة">
-			keywords = <"البول", "الإنتاج", "النتاج">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -221,76 +204,6 @@ ontology
 				["at0016"] = <
 					text = <"Fluid cluster">
 					description = <"*">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"النتاج البولي">
-					description = <"لتسجيل قياس (أو تقدير) النتاج البولي">
-				>
-				["at0001"] = <
-					text = <"*Event Series(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"التوقيت">
-					description = <"تقدير للنتاج البولي دون تحديد الفترة الزمنية
-">
-				>
-				["at0003"] = <
-					text = <"*List(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0004"] = <
-					text = <"النتاج البولي">
-					description = <"النتاج البولي التقديري">
-				>
-				["at0006"] = <
-					text = <"الإجمالي ">
-					description = <"لتسجيل إجمالي النتاج البولي خلال فترة ما (قد تتجاوز عددا من الفترات الفاصلة أو سجل للحظة زمنية بعينها
-">
-				>
-				["at0007"] = <
-					text = <"الفعلي ">
-					description = <"تسجيل النتاج البولي عبر فترة زمنية حيث سيتم حساب مجموعه في مرحلة تالية">
-				>
-				["at0008"] = <
-					text = <"*List(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0009"] = <
-					text = <"طريقة الاستجماع ">
-					description = <"طريقة التقدير الكَمِّي للبول">
-				>
-				["at0010"] = <
-					text = <"قثطار و كيس'">
-					description = <"تم استجماع البول في كيس عن طريق قثطار مستقر">
-				>
-				["at0011"] = <
-					text = <"قارورة بول">
-					description = <"حاوية / إناء بول">
-				>
-				["at0012"] = <
-					text = <"لم يتم الاستجماع - تم التقدير ">
-					description = <"لم يتم تجميع البول و إنما تم فقط تقدير كميته">
-				>
-				["at0013"] = <
-					text = <"هل تم إمرار البول ">
-					description = <"تسجيل ما إذا كان المريض قام بإمرار / إخراج البول أم لا ">
-				>
-				["at0014"] = <
-					text = <"آخر مرة تبول ">
-					description = <"التوقيت الذي قام فيه الشخص بالتبول">
-				>
-				["at0015"] = <
-					text = <"الفترة منذ آخر مرة تبول">
-					description = <"**(en)">
-				>
-				["at0016"] = <
-					text = <"عنقود خاص بالسائل الذي تم تجميعه">
-					description = <"**(en)">
 				>
 			>
 		>

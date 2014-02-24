@@ -7,10 +7,7 @@ language
 	original_language = <[ISO_639-1::en]>
 description
 	original_author = <
-		["name"] = <"Dr Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, UK">
-		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"2012-09-18">
+		["name"] = <"unknown">
 	>
 	details = <
 		["en"] = <
@@ -24,7 +21,7 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"1351DFBF3BC922AE4F857D9D036FD8C0">
+		["references"] = <"">
 	>
 
 definition
@@ -48,20 +45,26 @@ definition
 				}
 			}
 			CLUSTER[at0005] occurrences matches {0..1} matches {	-- Due date
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Due by absolute date
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_DATE_TIME matches {
+								value matches {yyyy-??-??T??:??:??}
+							}
 						}
 					}
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Due within time interval
 						value matches {
 							DV_INTERVAL<DV_DATE_TIME> matches {
 								upper matches {
-									DV_DATE_TIME matches {*}
+									DV_DATE_TIME matches {
+										value matches {yyyy-??-??T??:??:??}
+									}
 								}
 								lower matches {
-									DV_DATE_TIME matches {*}
+									DV_DATE_TIME matches {
+										value matches {yyyy-??-??T??:??:??}
+									}
 								}
 							}
 						}

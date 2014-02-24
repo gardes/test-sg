@@ -13,12 +13,6 @@ language
 				["organisation"] = <"University of Heidelberg, Central Queensland University">
 			>
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			author = <
@@ -54,14 +48,6 @@ description
 			purpose = <"">
 			use = <"Reporting by blood transfusion laboratory.">
 			keywords = <"group", "transfusion">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"*">
-			use = <"يتم استخدامها كتقرير من معمل نقل الدم">
-			keywords = <"المجموعة", "نقل الدم">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -305,62 +291,6 @@ ontology
 				["at0012"] = <
 					text = <"Method">
 					description = <"The method of matching.">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"توافق الدم">
-					description = <"معلومات حول مجموعة الدم بما في ذلك مجموعات أ , ب , أ ب, و , و عامل ريسس و الأجسام المضادة, إلى آخره">
-				>
-				["at0001"] = <
-					text = <"*Event Series(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"إحدى الوقائع">
-					description = <"واقعة جنيسة - غير محدودة الملكية">
-				>
-				["at0003"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0004"] = <
-					text = <"المجموعات أ ب و">
-					description = <"معلومات حول مجموعة الدم أ ب أب و">
-				>
-				["at0005"] = <
-					text = <"عامل ريسس">
-					description = <"معلومات حول عامل ريسس">
-				>
-				["at0006"] = <
-					text = <"الجسم المضاد">
-					description = <"طبيعة الجسم المضاد">
-				>
-				["at0007"] = <
-					text = <"التفاصيل">
-					description = <"تفاصيل حول الجسم المضاد">
-				>
-				["at0008"] = <
-					text = <"الأجسام المضادة">
-					description = <"مجموعة من الموجودات المتعلقة بجسم مضاد واحد">
-				>
-				["at0009"] = <
-					text = <"الأجسام المضادة التي تم اكتشافها">
-					description = <"الأجسام المضادة التي تم اكتشافها">
-				>
-				["at0010"] = <
-					text = <"تعليق إجمالي">
-					description = <"تعليق إجمالي حول الموجودات">
-				>
-				["at0011"] = <
-					text = <"*List(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0012"] = <
-					text = <"الطريقة">
-					description = <"طريقة اختبار التوافق">
 				>
 			>
 		>

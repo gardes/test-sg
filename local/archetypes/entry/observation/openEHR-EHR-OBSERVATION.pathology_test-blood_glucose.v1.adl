@@ -7,14 +7,6 @@ concept
 	[at0000.1]	-- Blood Glucose Test Result
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
@@ -40,17 +32,6 @@ Will normally be reported back to the requesting clinician as one component with
 Not to be used to record urine glucose test results - use OBSERVATION.urinalysis.
 
 Not to be used to record CSF glucose test results - use the generic OBSERVATION.pathology_test with CSF noted as the biological sample.">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات. 
-و يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.">
-			use = <"قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات. 
-
-يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
-			keywords = <"المعمل - المختبر", "الباثولوجيا - المرضية", "الكيمياء الحيوية", "الدمويات", "الميكروبيولوجيا", "المناعيات - علم المناعة">
-			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -100,7 +81,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0075] occurrences matches {0..1} matches {	-- DateTime Result Issued
+									ELEMENT[at0099] occurrences matches {0..1} matches {	-- DateTime Result Issued
 										value matches {
 											DV_DATE_TIME matches {*}
 										}
@@ -380,8 +361,6 @@ definition
 		}
 	}
 
-
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -574,7 +553,7 @@ ontology
 					description = <"Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
 					comment = <"Coding with a terminology is preferred, where possible.">
 				>
-				["at0075"] = <
+				["at0099"] = <
 					text = <"DateTime Result Issued">
 					description = <"The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’.">
 				>
@@ -611,231 +590,6 @@ ontology
 				["at0110"] = <
 					text = <"Test Procedure">
 					description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0.10"] = <
-					text = <"*Testing Device">
-					description = <"The device used to test the specimen.">
-					comment = <"For example: home glucometer.">
-				>
-				["at0.11"] = <
-					text = <"*Duration of Fasting">
-					description = <"The duration of fasting completed by the test subject prior to the sample being taken.">
-				>
-				["at0.12"] = <
-					text = <"*Point of Care Device Used">
-					description = <"The test was performed using a point of care device or a home-based device.">
-				>
-				["at0.13"] = <
-					text = <"*Glucose Load">
-					description = <"The amount of glucose administered to the test subject.">
-				>
-				["at0.14"] = <
-					text = <"*Insulin Load">
-					description = <"The amount of insulin administered to the test subject.">
-				>
-				["at0.15"] = <
-					text = <"*Route of Administration">
-					description = <"Route that the glucose was administered.">
-				>
-				["at0.16"] = <
-					text = <"*Oral">
-					description = <"Glucose load was administered by mouth.">
-				>
-				["at0.17"] = <
-					text = <"*Intravenous">
-					description = <"Glucose load was administered intravenously.">
-				>
-				["at0.2"] = <
-					text = <"*Baseline Measurement">
-					description = <"Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared.">
-				>
-				["at0.3"] = <
-					text = <"*1 Hour Measurement">
-					description = <"Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge.">
-				>
-				["at0.5"] = <
-					text = <"*2 Hour Measurement">
-					description = <"Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge.">
-				>
-				["at0.6"] = <
-					text = <"*Pre-prandial Measurement">
-					description = <"Measurement taken before a meal.">
-				>
-				["at0.7"] = <
-					text = <"*Post-prandial Measurement">
-					description = <"Measurement taken after a meal.">
-				>
-				["at0.8"] = <
-					text = <"*Tree">
-					description = <"@ internal @">
-				>
-				["at0.9"] = <
-					text = <"*Fasting State">
-					description = <"A fasting specimen was used for the measurement.">
-				>
-				["at0000.1"] = <
-					text = <"*Blood Glucose Test Result">
-					description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
-				>
-				["at0000"] = <
-					text = <"الاختبار المعملي">
-					description = <"لتسجيل نتيجة الاختبار و التي قد تستخدم إما لتسجيل اختبار ذي قيمة واحدة كما أنه قد يتم تخصيصه أو وضعه في قالب لتمثيل الاختبارات متعددة القيمة أو رتل من الاختبارات.
-يستخدم هذا النموذج كوالد (أب) للتخصيصات المناسبة لاختبارات أكثر تحديدا مثل حالات الميكروبيولوجيا و الهيستوباثولوجيا.">
-				>
-				["at0001"] = <
-					text = <"*Event Series(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"إحدى الوقائع">
-					description = <"إحدى الوقائع">
-				>
-				["at0003"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0004"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0005"] = <
-					text = <"اسم الاختبار">
-					description = <"تعريف معين لهوية هذا الاختبار. مثل العد الدموي الشامل, الغلوكوز (سكر العنب) في الدم. قد يكون هو نفسه اسم النتيجة في الاختبارات ذات النتيجة المتكونة من قيمة وحيدة. عادة ما يكون مُصطَلحاً مُرمَزًا مثل لوينك و سنوميد-سي تي.">
-				>
-				["at0010"] = <
-					text = <"تمثيل الوسائط المتعددة">
-					description = <"تمثيلات الاختبار الكلي عن طريق الوسائط المتعددة مثل: الصورة, الصوت, و الفيديو">
-				>
-				["at0017"] = <
-					text = <"المعمل المستقبل لطلب الاختبار">
-					description = <"التفاصيل الديموغرافية عن المعمل المسئول عن الاختبار. قد يتضمن معلومات عن معامل أخرى ثانوية.">
-				>
-				["at0035"] = <
-					text = <"*Copied Provider (en)">
-					description = <"*Details of the clinician or organisation who will receive a copy of the pathology test result. (en)">
-				>
-				["at0037"] = <
-					text = <"مؤقت">
-					description = <"هذه هي النتيجة المبدئية أو المؤقتة - المزيد من التحديثات للنتيجة متوقَّعة أو منتظَرة">
-				>
-				["at0038"] = <
-					text = <"نهائية">
-					description = <"هذه هي النتيجة النهائية. لا يوجد المزيد من التعديلات المتوقَّعة">
-				>
-				["at0040"] = <
-					text = <"بعد التصحيح – معدَّلة">
-					description = <"هذا هو تصحيح لابد و أن يحل محلّ أي نتائج سابقة">
-				>
-				["at0057"] = <
-					text = <"التفسير الإجمالي">
-					description = <"تعليق تفسيري إجمالي حول هذا الاختبار">
-				>
-				["at0062"] = <
-					text = <"عنصر معرِّف فريد بواسطة طالب الاختبار">
-					description = <"العنصر التعريفي الفريد الذي يتم إعطاؤه للأمر بالاختبار بواسطة من يقوم بإجراء الأمر. مكافئ للعنصر التعريفي للأمر بواسطة من يقوم بطلب إجرائه.">
-				>
-				["at0063"] = <
-					text = <"عنصر معرِّف فريد بواسطة مستقبل الاختبار">
-					description = <"العنصر التعريفي الذي يتم إعطاؤه للأمر بالاختبار بواسطة منفذ الاختبار, عادةً النظام المعلومات الخاص بالمعمل. يكافئ رقم الإضافة الخاص بـ دايكوم, و معرِّف أمر الاختبار ">
-				>
-				["at0065"] = <
-					text = <"تفاصيل العيِّنة">
-					description = <"تفاصيل العينة حيث جميع النتائج مشتقة من نفس العينة">
-				>
-				["at0068"] = <
-					text = <"العنصر التعريفي الخاص بنتيجة الاختبار">
-					description = <"العنصر التعريفي الذي تم إعطاؤه لنتيجة اختبار معملي خاص بالباثولوجيا – المَرَضية">
-				>
-				["at0073"] = <
-					text = <"حالة الاختبار">
-					description = <"حالة الاختبار المعملي ككل">
-				>
-				["at0074"] = <
-					text = <"مُلغاة">
-					description = <"تم إلغاء الاختبار و لم يتم استكماله بعد ذلك.">
-				>
-				["at0075"] = <
-					text = <"تاريخ و وقت إصدار النتيجة">
-					description = <"التاريخ و / أو الوقت الذي تم فيه إصدار النتيجة لحالة الاختبار المسجَّلة.">
-					comment = <"التاريخ و الوقت المتعلق بحالة النتائج هو من النقاط المفيدة للتحكم في الروايات المتعددة و النتائج التراكمية الخاصة بالتقرير.">
-				>
-				["at0077"] = <
-					text = <"الخدمة التشخيصية">
-					description = <"نوع الخدمة التشخيصية - مستوى عالي من التشخيص - مثلا: الكيمياء الحيوية و الدمويات">
-				>
-				["at0078"] = <
-					text = <"النتيجة">
-					description = <"نتيجة الاختبار">
-				>
-				["at0078.1"] = <
-					text = <"*Glucose Result">
-					description = <"*Actual value of the glucose test result.">
-				>
-				["at0090"] = <
-					text = <"الطالب">
-					description = <"تفاصيل حول الطبيب السريري أو المؤسسة التي تطلب الاختبار المعملي.">
-				>
-				["at0094"] = <
-					text = <"*Test Request Details">
-					description = <"*Details concerning a single pathology test requested.">
-					comment = <"*Usually there is one test request (or \"order\") for each result, however in some circumstances multiple test requests may be represented using a single Pathology test result archetype.">
-				>
-				["at0095"] = <
-					text = <"*Result Group">
-					description = <"*A group of results.">
-					comment = <"*If a name or code is used, it is provided by run-time re-naming of the Results may be grouped by specimen, or by some other name or code to describe what binds all the results together. 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT.">
-				>
-				["at0096"] = <
-					text = <"*Result">
-					description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
-					comment = <"*Results include whatever specific data items pathology labs report as part of the clinical service; it is not confined to measurements. The result is identified by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT. Examples include: glucose, haemoglobin, phenotype, titre, or scatterplot image. If the test result is for a single analyte, then both the \"Test Result Name\" and the \"Result\" item will specify the same test.">
-				>
-				["at0097"] = <
-					text = <"*Specimen Detail">
-					description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
-				>
-				["at0098"] = <
-					text = <"*Pathological Diagnosis">
-					description = <"*Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
-					comment = <"*Coding with a terminology is preferred, where possible.">
-				>
-				["at0100"] = <
-					text = <"*Clinical Information Provided">
-					description = <"*Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
-				>
-				["at0101"] = <
-					text = <"*Test Comment">
-					description = <"*Additional narrative about the test not captured in other fields.">
-				>
-				["at0102"] = <
-					text = <"*Result Comment">
-					description = <"*Comment about the Result.">
-					comment = <"*May include statements about significant, unexpected or unreliable. values, or information about the source of the value where this may be relevant to the interpretation of the result.">
-				>
-				["at0103"] = <
-					text = <"*Reference Range Guidance">
-					description = <"*Additional advice on the applicability of the reference range.">
-				>
-				["at0106"] = <
-					text = <"*Test Requested Name">
-					description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed.">
-				>
-				["at0107"] = <
-					text = <"*Registered">
-					description = <"*No result yet available.">
-				>
-				["at0108"] = <
-					text = <"*Result Value Status">
-					description = <"*The status of the result value.">
-					comment = <"*Allows a single test result to contain multiple individual results each with their own status.">
-				>
-				["at0110"] = <
-					text = <"*Test Procedure">
-					description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 				>
 			>
 		>
