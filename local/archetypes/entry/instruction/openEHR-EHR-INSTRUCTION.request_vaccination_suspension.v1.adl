@@ -1,0 +1,337 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-INSTRUCTION.request_vaccination_suspension.v1
+
+concept
+	[at0000]	-- Request vaccination suspension
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Biljana Prinčič">
+				["organisation"] = <"marand, Ljubljana">
+				["email"] = <"biljana.princic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"8AAACE7A483D7DCFDC5383DFDB654B51">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {	-- Vloga za opustitev cepljenja
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- Trenutna aktivnost
+				description matches {
+					ITEM_TREE[at0002] matches {	-- *Tree(en)
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] occurrences matches {0..1} matches {	-- Datum vloge za opustitev cepljenja
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0004] occurrences matches {0..*} matches {	-- Opustitev cepljenja proti bolezni
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0003]}		-- *New constraint(en)
+									}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..*} matches {	-- Opustitev cepljenja z določenim cepivom
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0002]}		-- *New constraint(en)
+									}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Razlog predlagane opustitve cepljenja
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0030, 	-- 1 - alergija na sestavine cepiva
+											at0031, 	-- 2 - resen neželen učinek cepiva po prehodnem odmerku cepiva
+											at0032, 	-- 3 - bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem
+											at0033, 	-- 4 - drugo
+											at0034]	-- 9 - neznano
+										}
+									}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Opis zdravstvenega stanja pacienta
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Strokovna utemeljitev
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Mnenje zdravnika
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0014] occurrences matches {0..*} matches {	-- Predhodni cepilni status
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0015] occurrences matches {0..1} matches {	-- Cepivo
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0001]}		-- *New constraint(en)
+											}
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Status
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Datum statusa
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"MKB", "CBZ">
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Request vaccination suspension">
+					description = <"A request to suspend vaccination on a temporarz or permanent basis to the Slovenian national authority">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"Current Activity">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Date of application">
+					description = <"The date at which suspension of vaccination was requested.">
+				>
+				["at0004"] = <
+					text = <"Disease for which all vaccination declined">
+					description = <"The disease for which all vaccination has been declined.">
+				>
+				["at0005"] = <
+					text = <"Specific vaccine declined">
+					description = <"A specific vaccine which has been declined.">
+				>
+				["at0006"] = <
+					text = <"Reason vaccine declined">
+					description = <"The reason why a vaccine has been declined.">
+				>
+				["at0007"] = <
+					text = <"Health status">
+					description = <"The health status of the subject.">
+				>
+				["at0012"] = <
+					text = <"Expert opinion">
+					description = <"Opinion given by an expert on the request to decline vaccination.">
+				>
+				["at0013"] = <
+					text = <"Local clinician opinion">
+					description = <"The opinio of the local clinician on the request to decline a vaccination.">
+				>
+				["at0014"] = <
+					text = <"Vaccination history">
+					description = <"Details of previous vaccinations and refusals.">
+				>
+				["at0015"] = <
+					text = <"Vaccine name">
+					description = <"The name of the vaccone">
+				>
+				["at0016"] = <
+					text = <"Status">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Status date">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"1 - allergy to vaccine components">
+					description = <"1 - allergy to vaccine components">
+				>
+				["at0031"] = <
+					text = <"2- serious side effect of the vaccine after a previous dose of the vaccine">
+					description = <" 2- serious side effect of the vaccine after a previous dose of the vaccine">
+				>
+				["at0032"] = <
+					text = <"3 - disease or medical condition that is not compatible with vaccination">
+					description = <"3 - disease or medical condition that is not compatible with vaccination">
+				>
+				["at0033"] = <
+					text = <"4 - other">
+					description = <"4 - other">
+				>
+				["at0034"] = <
+					text = <"9 - unknown">
+					description = <"9 - unknown">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vloga za opustitev cepljenja">
+					description = <"Vloga za začasno ali trajno opustitev cepljenja">
+				>
+				["at0001"] = <
+					text = <"Trenutna aktivnost">
+					description = <"Trenutna aktivnost">
+				>
+				["at0002"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0003"] = <
+					text = <"Datum vloge za opustitev cepljenja">
+					description = <"Datum vloge za opustitev cepljenja">
+				>
+				["at0004"] = <
+					text = <"Opustitev cepljenja proti bolezni">
+					description = <"Bolezen za katero se želi opustiti cepljenje">
+				>
+				["at0005"] = <
+					text = <"Opustitev cepljenja z določenim cepivom">
+					description = <"Cepivo s katerim se želi opustiti cepljenje">
+				>
+				["at0006"] = <
+					text = <"Razlog predlagane opustitve cepljenja">
+					description = <"Razlog zaradi katerega se želi opustiti cepljenje">
+				>
+				["at0007"] = <
+					text = <"Opis zdravstvenega stanja pacienta">
+					description = <"Opis zdravstvenega stanja pacienta">
+				>
+				["at0012"] = <
+					text = <"Strokovna utemeljitev">
+					description = <"Strokovna utemeljitev za opustitev cepljenja">
+				>
+				["at0013"] = <
+					text = <"Mnenje zdravnika">
+					description = <"Mnenje zdravnika">
+				>
+				["at0014"] = <
+					text = <"Predhodni cepilni status">
+					description = <"Predhodni cepilni status pacienta">
+				>
+				["at0015"] = <
+					text = <"Cepivo">
+					description = <"Ime cepiva">
+				>
+				["at0016"] = <
+					text = <"Status">
+					description = <"Status">
+				>
+				["at0017"] = <
+					text = <"Datum statusa">
+					description = <"Datum statusa">
+				>
+				["at0030"] = <
+					text = <"1 - alergija na sestavine cepiva">
+					description = <"1 - alergija na sestavine cepiva">
+				>
+				["at0031"] = <
+					text = <"2 - resen neželen učinek cepiva po prehodnem odmerku cepiva">
+					description = <"2 - resen neželen učinek cepiva po prehodnem odmerku cepiva">
+				>
+				["at0032"] = <
+					text = <"3 - bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem">
+					description = <"3 - bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem">
+				>
+				["at0033"] = <
+					text = <"4 - drugo">
+					description = <"4 - drugo">
+				>
+				["at0034"] = <
+					text = <"9 - neznano">
+					description = <"9 - neznano">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"New constraint">
+					description = <"*">
+				>
+				["ac0002"] = <
+					text = <"any_vaccination">
+					description = <"*">
+				>
+				["ac0003"] = <
+					text = <"any_immunisable_disease">
+					description = <"Any disease for which a vaccine exists.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["ac0001"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+				["ac0002"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+				["ac0003"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>
+	constraint_bindings = <
+		["CBZ"] = <
+			items = <
+				["ac0001"] = <terminology:CBZ/2?subset=vaccinations>
+				["ac0002"] = <terminology:CBZ/2?subset=vaccinations>
+			>
+		>
+		["MKB"] = <
+			items = <
+				["ac0003"] = <terminology:MKB/10?subset=bolezni>
+			>
+		>
+	>

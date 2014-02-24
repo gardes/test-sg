@@ -1,0 +1,125 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.breast_post_op_conclusion_tmds.v1
+
+concept
+	[at0000]	-- Breast post op conclusion (TMDS)
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"05/08/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the conclusion of Breast cancer post-operative case conference for TMDS application. ">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To record the conclusion of Breast cancer post-operative case conference for TMDS application. (en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"425A258073EE417D4205171E15D3990C">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Breast post op conclusion (TMDS)
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Post operative conclusion
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- Assessment incomplete
+									at0004, 	-- Operative therapy complete - resume screeing
+									at0005]	-- Operative therapy complete - Cancer confirmed.
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Breast post op conclusion (TMDS)">
+					description = <"The conclusion of Breast cancer post-operative case conference for TMDS application. ">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Post operative conclusion">
+					description = <"The conclusion of a breast cancer post-operative assessment.">
+				>
+				["at0003"] = <
+					text = <"Assessment incomplete">
+					description = <"The assessment is incomplete.">
+				>
+				["at0004"] = <
+					text = <"Operative therapy complete - resume screeing">
+					description = <"Operative therapy has been completed, cancer has not been detected, resume screening.">
+				>
+				["at0005"] = <
+					text = <"Operative therapy complete - Cancer confirmed.">
+					description = <"Operative therapy is complete, breast cancer has been confrmed.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Breast post op conclusion (TMDS)(en)">
+					description = <"*The conclusion of Breast cancer post-operative case conference for TMDS application. (en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Post operative conclusion(en)">
+					description = <"*The conclusion of a breast cancer post-operative assessment.(en)">
+				>
+				["at0003"] = <
+					text = <"*Conference assessment  incomplete(en)">
+					description = <"*The conference has not concluded the assessment.(en)">
+				>
+				["at0004"] = <
+					text = <"*Operative therapy complete - resume screeing(en)">
+					description = <"*Operative therapy has been completed, cancer has not been detected, resume screening.(en)">
+				>
+				["at0005"] = <
+					text = <"*Operative therapy complete - Cancer confirmed.(en)">
+					description = <"*Operative therapy is complete, breast cancer has been confrmed.(en)">
+				>
+			>
+		>
+	>

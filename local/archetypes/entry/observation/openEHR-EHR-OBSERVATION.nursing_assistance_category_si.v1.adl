@@ -1,0 +1,372 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.nursing_assistance_category_si.v1
+
+concept
+	[at0000]	-- Nursing assistance category - Slovenia 
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Uros Rajkovic">
+		["organisation"] = <"University of Maribor, Slovenia">
+		["email"] = <"uros.rajkovic@fov.uni-mb.si">
+		["date"] = <"12/04/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of a Nursing dependency instrument adapted from 'San Joaquin' method for specific Slovenian purposes.">
+			use = <"">
+			keywords = <"nursing", "dependency", "instrument", "assessment">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To record the results of a Nursing dependency instrument adapted from 'San Joaquin' method for specific Slovenian purposes.(en)">
+			use = <"*(en)">
+			keywords = <"*nursing(en)", "*dependency(en)", "*instrument(en)", "*assessment(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"3808CFEECFC99622D4AB1C2CC0BBD983">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- *Nursing assistance category - Slovenia (en)
+		data matches {
+			HISTORY[at0001] matches {	-- *Event Series(en)
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- *Any event(en)
+						data matches {
+							ITEM_TREE[at0003] matches {	-- *Tree(en)
+								items cardinality matches {7..*; unordered} matches {
+									ELEMENT[at0004] matches {	-- Način kategoriziranja
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005, 	-- *Daily, 24 hour assessment(en)
+													at0006, 	-- *O: Assessed at discharge(en)
+													at0007, 	-- *B: No category(en)
+													at0008, 	-- *N: Healthy newborn with hospitalised mother(en)
+													at0009]	-- *S: On admission(en)
+												}
+											}
+										}
+									}
+									ELEMENT[at0062] occurrences matches {0..*} matches {	-- Kriteriji
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0063, 	-- *1. Independent(en)
+													at0064, 	-- *2. Bathing, partial assistance(en)
+													at0065, 	-- *3. Bathing, complete assistance(en)
+													at0066, 	-- *4. Posture, partial assistance(en)
+													at0067, 	-- *5. Posture, complete assistance(en)
+													at0068, 	-- *6. Feeding, partial assistance(en)
+													at0069, 	-- *7. Feeding, complete assistance(en)
+													at0070, 	-- *8. Monitoring, occasional(en)
+													at0071, 	-- *9. Application of therapy (en)
+													at0072, 	-- *10. Monitoring, frequent(en)
+													at0073]	-- *11. Monitoring, constant(en)
+												}
+											}
+										}
+									}
+									ELEMENT[at0035] matches {	-- Kategorija
+										value matches {
+											0|[local::at0058], 	-- *Not calculated(en)
+											1|[local::at0048], 	-- *I Minimum care or self-care(en)
+											2|[local::at0049], 	-- *II Routine nursing care(en)
+											3|[local::at0050], 	-- *III More than routine nursing care(en)
+											4|[local::at0051]  	-- *IV Intensive nursing care(en)
+										}
+									}
+									ELEMENT[at0074] occurrences matches {0..1} matches {	-- *Category calculated(en)
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0057] occurrences matches {0..1} matches {	-- *Comment(en)
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Nursing assistance category - Slovenia ">
+					description = <"Nursing dependency instrument adapted from 'San Joaquin' method for specific Slovenian purposes.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Assessment type">
+					description = <"The type of assessment performed.">
+					comment = <"Termlist: MZN-SIF-KAT-Način">
+				>
+				["at0005"] = <
+					text = <"Daily, 24 hour assessment">
+					description = <"Routine daily assessment covering the previous 24 hour period.">
+				>
+				["at0006"] = <
+					text = <"O: Assessed at discharge">
+					description = <"Assessment carried out at discharge.">
+				>
+				["at0007"] = <
+					text = <"B: No category">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"N: Healthy newborn with hospitalised mother">
+					description = <"Assessment carried out on a healthy newborn with a hospitalised mother.">
+				>
+				["at0009"] = <
+					text = <"S: On admission">
+					description = <"Assessment carried out within 8 hours of admission.">
+				>
+				["at0035"] = <
+					text = <"Overall nursing assistance category">
+					description = <"The overall calculated category of nursing assistance.">
+				>
+				["at0048"] = <
+					text = <"I Minimum care or self-care">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"II Routine nursing care">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"III More than routine nursing care">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"IV Intensive nursing care">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Comment">
+					description = <"General comment about the assessment.">
+				>
+				["at0058"] = <
+					text = <"Not calculated">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Assessment criterion">
+					description = <"Individual assessment criterion.">
+				>
+				["at0063"] = <
+					text = <"1. Independent">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"2. Bathing, partial assistance">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"3. Bathing, complete assistance">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"4. Posture, partial assistance">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"5. Posture, complete assistance">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"6. Feeding, partial assistance">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"7. Feeding, complete assistance">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"8. Monitoring, occasional">
+					description = <"At 4-6 hour intervals">
+				>
+				["at0071"] = <
+					text = <"9. Application of therapy ">
+					description = <"Frequent or longlasting">
+				>
+				["at0072"] = <
+					text = <"10. Monitoring, frequent">
+					description = <"At 2 to 3 hour intervals / indirect observation.">
+				>
+				["at0073"] = <
+					text = <"11. Monitoring, constant">
+					description = <"Continuous monitoring">
+				>
+				["at0074"] = <
+					text = <"Category calculated">
+					description = <"Indicates of the category has been calculated or entered directly.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Nursing assistance category - Slovenia (en)">
+					description = <"*Nursing dependency instrument adapted from 'San Joaquin' method for specific Slovenian purposes.(en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"Način kategoriziranja">
+					description = <"The type of assessment performed.">
+					comment = <"Termlist: MZN-SIF-KAT-Način">
+				>
+				["at0005"] = <
+					text = <"*Daily, 24 hour assessment(en)">
+					description = <"*Routine daily assessment covering the previous 24 hour period.(en)">
+				>
+				["at0006"] = <
+					text = <"*O: Assessed at discharge(en)">
+					description = <"*Assessment carried out at discharge.(en)">
+				>
+				["at0007"] = <
+					text = <"*B: No category(en)">
+					description = <"**(en)">
+				>
+				["at0008"] = <
+					text = <"*N: Healthy newborn with hospitalised mother(en)">
+					description = <"*Assessment carried out on a healthy newborn with a hospitalised mother.(en)">
+				>
+				["at0009"] = <
+					text = <"*S: On admission(en)">
+					description = <"*Assessment carried out within 8 hours of admission.(en)">
+				>
+				["at0035"] = <
+					text = <"Kategorija">
+					description = <"*The overall calculated category of nursing assistance.(en)">
+				>
+				["at0048"] = <
+					text = <"*I Minimum care or self-care(en)">
+					description = <"**(en)">
+				>
+				["at0049"] = <
+					text = <"*II Routine nursing care(en)">
+					description = <"**(en)">
+				>
+				["at0050"] = <
+					text = <"*III More than routine nursing care(en)">
+					description = <"**(en)">
+				>
+				["at0051"] = <
+					text = <"*IV Intensive nursing care(en)">
+					description = <"**(en)">
+				>
+				["at0057"] = <
+					text = <"*Comment(en)">
+					description = <"**(en)">
+				>
+				["at0058"] = <
+					text = <"*Not calculated(en)">
+					description = <"**(en)">
+				>
+				["at0062"] = <
+					text = <"Kriteriji">
+					description = <"Individual assessment criterion.">
+				>
+				["at0063"] = <
+					text = <"*1. Independent(en)">
+					description = <"**(en)">
+				>
+				["at0064"] = <
+					text = <"*2. Bathing, partial assistance(en)">
+					description = <"**(en)">
+				>
+				["at0065"] = <
+					text = <"*3. Bathing, complete assistance(en)">
+					description = <"**(en)">
+				>
+				["at0066"] = <
+					text = <"*4. Posture, partial assistance(en)">
+					description = <"**(en)">
+				>
+				["at0067"] = <
+					text = <"*5. Posture, complete assistance(en)">
+					description = <"**(en)">
+				>
+				["at0068"] = <
+					text = <"*6. Feeding, partial assistance(en)">
+					description = <"**(en)">
+				>
+				["at0069"] = <
+					text = <"*7. Feeding, complete assistance(en)">
+					description = <"**(en)">
+				>
+				["at0070"] = <
+					text = <"*8. Monitoring, occasional(en)">
+					description = <"*At 4-6 hour intervals(en)">
+				>
+				["at0071"] = <
+					text = <"*9. Application of therapy (en)">
+					description = <"*Frequent or longlasting(en)">
+				>
+				["at0072"] = <
+					text = <"*10. Monitoring, frequent(en)">
+					description = <"*At 2 to 3 hour intervals / indirect observation.(en)">
+				>
+				["at0073"] = <
+					text = <"*11. Monitoring, constant(en)">
+					description = <"*Continuous monitoring(en)">
+				>
+				["at0074"] = <
+					text = <"*Category calculated(en)">
+					description = <"*Indicates of the category has been calculated or entered directly.(en)">
+				>
+			>
+		>
+	>

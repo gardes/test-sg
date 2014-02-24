@@ -60,57 +60,57 @@ Not to be used to represent formal fetal heart rate monitoring eg using cardioto
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Bernadette Lack, Department of Health, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Chunlan Ma, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Rosalie Schultz, Central Australia Remote Health, Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
-		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Movement of the Fetus; [authored 2007 Mar 04, cited 2011 May 24]. Available from : http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.216_1.">
+		["references"] = <"NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. [Draft OBSERVATION archetype] Fetal Movement; [authored 2007 Mar 04, cited 2013 Jan 03]. Available from http://dcm.nehta.org.au/ckm/OKM.html#showArchetype_1013.1.1004_4.">
 		["MD5-CAM-1.0.1"] = <"CC19AA3EF7BDA9587B8E2EA6C055978F">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Fetal Movement
+	OBSERVATION[at0000] matches {	-- Movimiento del feto
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[at0001] matches {	-- *Serie de eventos (es)
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Cualquier evento
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[at0003] matches {	-- *Lista (es)
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Presence
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Presencia
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0007, 	-- Present
-													at0011]	-- Absent
+													at0007, 	-- Movimientos fetal sentidos
+													at0011]	-- Movimientos Fetal no sentidos
 												}
 											}
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Pattern
+									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Patrón
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0021, 	-- Increased
-													at0022, 	-- Normal
-													at0024]	-- Reduced
+													at0021, 	-- Aumentados
+													at0022, 	-- Normales
+													at0024]	-- Disminuidos
 												}
 											}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Movements
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Número de ocurrencias
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|>=0|}
 											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Time since last movement
+									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Tiempo pasado desde el último movimiento
 										value matches {
 											DV_DURATION matches {
 												value matches {PWDTH/|>=PT0H|}
 											}
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[at0028] occurrences matches {0..1} matches {	-- *Description(en)
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -119,20 +119,21 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[at0027] occurrences matches {0..1} matches {	-- Observation Interval
+					INTERVAL_EVENT[at0027] occurrences matches {0..1} matches {	-- Período de monitoreo de los movimientos
 						math_function matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {[openehr::148]}
 							}
 						}
 						data matches {
-							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[*Serie de eventos (es)]/events[Cualquier evento]/data[*Lista (es)]
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

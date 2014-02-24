@@ -5,12 +5,28 @@ concept
 	[at0000]	-- Imaging investigation
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Leonardo Der Jachadurian">
+				["organisation"] = <"Particular">
+			>
+			accreditation = <"Medical doctor, Internal Medicine specialist">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"17/04/2006">
+		["date"] = <"2006-04-17">
 	>
 	details = <
 		["en"] = <
@@ -21,14 +37,33 @@ description
 			misuse = <"Not used for recording the findings of the investigation; use openEHR-EHR-OBSERVATION.imaging for the findings.">
 			copyright = <"© openEHR Foundation">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل الأفعال الخاصة بالاستقصاءات التصويرية.">
+			use = <"">
+			keywords = <"الأشعة السينية", "الموجات فوق الصوتية", "التصوير بالرنين المغناطيسي", "الرنين المغناطيسي", "التصوير الطبقي المُحوسَب", "التفريسة", "التصوير المقطعي">
+			misuse = <"لا يستخدم لتسجيل الموجودات عند إجراء الاستقصاء, استخدم بدلا من ذلك نموذج الملاحظة.التصوير.">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Para registrar acciones en relación con evaluaciones de imágenes">
+			use = <"">
+			keywords = <"Radiografía", "Ecografía", "RNM", "Resonancia magnética nuclear", "TC", "Escaneo", "Tomografía">
+			misuse = <"No usado para registrar los hallazgos de la investigación; use openEHR-EHR-OBSERVATION.imaging para registrar los hallazgos.">
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"9D90363C64106C2ECBFA61F52066CB98">
+	>
 
 definition
 	ACTION[at0000] matches {	-- Imaging investigation
 		ism_transition matches {
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0001] matches {	-- Planned
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -40,7 +75,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0004] matches {	-- Requested
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -52,7 +87,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0002] matches {	-- Postponed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::527]}
@@ -64,7 +99,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0003] matches {	-- Cancelled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::528]}
@@ -76,7 +111,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0005] matches {	-- Appointment made
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -88,7 +123,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0006] matches {	-- Resheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -100,7 +135,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0007] matches {	-- Commenced
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -112,7 +147,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0008] matches {	-- Investigation complete
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -124,7 +159,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0009] matches {	-- Reported
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -136,7 +171,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0011] matches {	-- Report communicated
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -148,7 +183,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0012] matches {	-- Further imaging required
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -160,7 +195,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0013] matches {	-- Imaging suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::530]}
@@ -172,7 +207,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0014] matches {	-- Imaging aborted
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::531]}
@@ -184,7 +219,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0010] matches {	-- Completed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::532]}
@@ -198,7 +233,7 @@ definition
 			}
 		}
 		description matches {
-			allow_archetype ITEM_TREE occurrences matches {0..1} matches {
+			allow_archetype ITEM_TREE matches {
 				include
 					archetype_id/value matches {/openEHR-EHR-ITEM_TREE\.imaging\.v1/}
 				exclude
@@ -271,6 +306,134 @@ ontology
 				["at0014"] = <
 					text = <"Imaging aborted">
 					description = <"The imaging investigation was not and will not be completed.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"الاستقصاء التصويري">
+					description = <"فعل متعلق باستقصاء باستخدام تقنية تصويرية.">
+				>
+				["at0001"] = <
+					text = <"مخطَّط">
+					description = <"تم التخطيط للاستقصاء التصويري">
+				>
+				["at0002"] = <
+					text = <"تم التأجيل">
+					description = <"تم تأجيل الاستقصاء التصويري">
+				>
+				["at0003"] = <
+					text = <"تم الإلغاء">
+					description = <"تم إلغاء الاستقصاء التصويري">
+				>
+				["at0004"] = <
+					text = <"تم الطلب">
+					description = <"تم طلب الاستقصاء التصويري">
+				>
+				["at0005"] = <
+					text = <"تم تحديد الموعد">
+					description = <"تم تحديد موعد الاستقصاء التصويري بالتاريخ و التوقيت">
+				>
+				["at0006"] = <
+					text = <"تم إعادة تحديد الموعد">
+					description = <"تم تعديل موعد إجراء الاستقصاء التصويري">
+				>
+				["at0007"] = <
+					text = <"تم البدء">
+					description = <"تم البدء في الاستقصاء التصويري">
+				>
+				["at0008"] = <
+					text = <"تم اكتمال الاستقصاء">
+					description = <"تم استكمال الاستقصاء التصويري, في انتظار التقرير">
+				>
+				["at0009"] = <
+					text = <"تم كتابة التقرير">
+					description = <"تم كتابة تقرير الاستقصاء التصويري">
+				>
+				["at0010"] = <
+					text = <"اكتمل">
+					description = <"تم إكمال الاستقصاء التصويري و تم معالجة التقرير">
+				>
+				["at0011"] = <
+					text = <"تم توصيل التقرير">
+					description = <"تم كتابة التقرير الخاص بالاستقصاء التصويري و تم توصيل التقرير إلى من قام بالإحالة.">
+				>
+				["at0012"] = <
+					text = <"يوجد احتياج لمزيد من التصوير">
+					description = <"بعد القيام بالاستقصاء, تم تحديد أن هناك حاجة لمزيد من التصوير">
+				>
+				["at0013"] = <
+					text = <"تم تعليق التصوير">
+					description = <"لم يُتَمَكَّن من إكمال التصوير">
+				>
+				["at0014"] = <
+					text = <"تم إيقاف التصوير بشكل مفاجئ">
+					description = <"لم يتم استكمال الاستقصاء التصويري و لن يتم استكماله">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluación de imágenes">
+					description = <"Una acción relacionada con una evaluación por medio de una técnica de imágenes.">
+				>
+				["at0001"] = <
+					text = <"Planeada">
+					description = <"La evaluación de imágenes está planeada.">
+				>
+				["at0002"] = <
+					text = <"Pospuesta">
+					description = <"La evaluación de imágenes se pospone">
+				>
+				["at0003"] = <
+					text = <"Cancelada">
+					description = <"La evaluación de imágenes se cancela.">
+				>
+				["at0004"] = <
+					text = <"Solicitada">
+					description = <"La evaluación de imágenes ha sido solicitada">
+				>
+				["at0005"] = <
+					text = <"Reserva de turno realizada">
+					description = <"La evaluación de imágenes fue agendada para una fecha y hora específica.">
+				>
+				["at0006"] = <
+					text = <"Reprogramada">
+					description = <"El turno para la evaluación de imágenes fue reprogramada.">
+				>
+				["at0007"] = <
+					text = <"Comenzada">
+					description = <"La evaluación de imágenes ha comenzado.">
+				>
+				["at0008"] = <
+					text = <"Evaluación completa">
+					description = <"La evaluación de imágenes ha sido completada; en espera del reporte.">
+				>
+				["at0009"] = <
+					text = <"Reportada">
+					description = <"La evaluación de imágenes ha sido reportada.">
+				>
+				["at0010"] = <
+					text = <"Completada">
+					description = <"La evaluación de imágenes fue completada y ha sido reportada.">
+				>
+				["at0011"] = <
+					text = <"Reporte comunicado">
+					description = <"La evaluación de imágenes ha sido reportada y comunicada al solicitante.">
+				>
+				["at0012"] = <
+					text = <"Se requieren mas evaluaciones de imágenes">
+					description = <"El realizador de la evaluación de imágenes ha determinado que se requieren mas evaluaciones de imágenes.">
+				>
+				["at0013"] = <
+					text = <"Evaluación de imágenes suspendida">
+					description = <"No se pudo completar la evaluación de imágenes.">
+				>
+				["at0014"] = <
+					text = <"Evaluación de imágenes abortada">
+					description = <"La evaluación de imágenes no será completada.">
 				>
 			>
 		>
