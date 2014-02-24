@@ -21,12 +21,12 @@ description
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"2007-03-13">
+		["date"] = <"13/03/2007">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record clinical observations regarding responsiveness of a subject to stimuli as an objective assessment of the conscious state of a subject.">
+			purpose = <"To record clinical observations regarding responsiveness of a subject to stimuli as an objective assessment of the conscious state of a subject. ">
 			use = <"Use in any clinical situation to assess the level of consciousness of a subject, with the exception of infants and young children.
 The three response values are considered separately as well as their sum. The minimum possible Total score value is 3 and the maximum possible is 15.
 The Total score can be derived as the sum of the recorded scores for each of the eye, motor and verbal responses. 
@@ -55,13 +55,9 @@ As Clínica de apoio devem basear sua decisão em cada um dos registros específ
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Teasdale G, Jennett B. Assessment of coma and impaired consciousness. A practical scale. Lancet 1974,2:81-84.
-
-Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensive Care Medicine. 2000; 26: 153-154.
-
-Glasgow Coma Scale, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 13 Mar 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.137 (accessed 31 Jan 2013).">
-		["MD5-CAM-1.0.1"] = <"BB004E3D0A715738248A83C4B8B93828">
+Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensive Care Medicine. 2000; 26: 153-154.">
+		["MD5-CAM-1.0.1"] = <"BEC05942DDC81A3CCA708956DC2D6383">
 	>
 
 definition
@@ -162,6 +158,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -176,7 +173,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+					description = <"Any event">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -303,8 +300,8 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event(en)">
-					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+					text = <"Any event">
+					description = <"Any event">
 				>
 				["at0003"] = <
 					text = <"*Tree(en)">

@@ -1,0 +1,531 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.device-invasive-insulin_infusion_cathetre_mnd.v1
+specialise
+	openEHR-EHR-CLUSTER.device-invasive.v1
+
+concept
+	[at0000.1.1]	-- Insulin infusion set
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Biljana Prinčič, Uroš Rajkovič">
+				["organisation"] = <"Marand d.o.o.">
+				["email"] = <"biljana.princic@marand.si; uros.rajkovic@fov.uni-mb.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"29/06/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the details of an insulin infusion catheter.">
+			use = <"Use to record the details about any generic device that may be used either directly in a therapeutic or diagnostic manner or indirectly to support provision of healthcare. Use of the term device varies depending on context.  Within the Standards world, the term device tends to refer to mechanical or electronic devices that  support healthcare and require rigorous docuumentation regarding specifications, maintenance etc.  Within the terminology context the use of device is very broad, including any physical object that can be used in direct or indirect provision of clinical care.  Examples include ventilator circuits, peak flow meters, spirometers, eyeglasses and contact lenses, intravascular catheters, breast implants, prostheses, drain tubes and corn rings.
+This archetype is designed to provide the basis for a structured representation of any device, from a simple example of a brand of urinary dipstick with a current 'use by' date through to an implanted bionic ear that may require complex documentation re software, hardware, maintenance, calibration etc.
+For common use cases, it may be appropriate to specialise this archetype specifically eg intravascular catheter or urinary catheter.">
+			keywords = <"device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "physical", "object">
+			misuse = <"Not to be used to record products such as medications or vaccinations or similar, that are used for therapeutic or metabolic means. ">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za beleženje podrobnosti o fizičnem objektu, izdelku ali napravi, ki se uporablja za zagotavljanje medicinske oskrbe, vendar brez vpliva na terapijo.">
+			use = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe. Uporaba termina naprava je odvisna od vsebine oz. namena uporabe.
+
+">
+			keywords = <"naprava", "implant", "kateter", "proteza", "biomedicinski">
+			misuse = <"Se ne uporablja za evidentiranje podatkov o izdelkih kot so zdravila in cepiva ali podobnih, ki se uporabljajo v terapevtske ali metabolične namene.
+">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", "Sam Heard, Ocean Informatics, Australia", "Biljana Princic, Marand, Slovenia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"C6DF1E92F777FDC8E23D7EBCC1DB9ED1">
+	>
+
+definition
+	CLUSTER[at0000.1.1] matches {	--  Infuzijski set za dovajanje inzulina
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001.0.1] occurrences matches {0..1} matches {	-- Infuzijski set za dovajanje inzulina
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.35, 	-- Quick set Paradigm 
+							at0.0.37]	-- Accuchek Flexlink
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Opis
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Tip
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.33, 	-- 9 mm
+							at0.0.34]	-- 6 mm
+						}
+					}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..*} matches {	-- Velikost
+				value matches {
+					DV_COUNT matches {*}
+					C_DV_QUANTITY <
+					>
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::]}
+					}
+				}
+			}
+			ELEMENT[at0016.1] occurrences matches {0..1} matches {	-- Dolžina
+				value matches {
+					DV_COUNT matches {*}
+					C_DV_QUANTITY <
+					>
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.24] occurrences matches {0..1} matches {	-- Lumen
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0.0.36] occurrences matches {0..1} matches {	-- Length of insertion
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"cm">
+							>
+							["2"] = <
+								units = <"mm">
+							>
+							["3"] = <
+								units = <"in">
+								magnitude = <|0.0..2000.0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0.21] occurrences matches {0..1} matches {	-- Lokacija
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.29, 	-- Glutealno levo
+							at0.0.38, 	-- Glutealno desno
+							at0.0.30, 	-- Trebuh
+							at0.0.31, 	-- Leva roka zgoraj
+							at0.0.32]	-- Desna roka zgoraj
+						}
+					}
+				}
+			}
+			ELEMENT[at0.22] occurrences matches {0..1} matches {	-- Vhodna točka
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Dimenzija
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Proizvajalec
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.0.39] occurrences matches {0..1} matches {	-- Predviden čas menjave
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Datum proizvodnje
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Serijska številka
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Rok trajanja
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			CLUSTER[at0013] occurrences matches {0..*} matches {	-- Varnostna navodila
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Tip navodil
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Opis
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Opomba
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype ITEM[at0009] occurrences matches {0..*} matches {	-- Dodatne podrobnosti
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {	-- Sestavni deli
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.0.29"] = <
+					text = <"Buttocks left">
+					description = <"The sensor is located in the left side of buttocks.">
+				>
+				["at0.0.30"] = <
+					text = <"Abdomen">
+					description = <"The sensor is located in the abdomen.">
+				>
+				["at0.0.31"] = <
+					text = <"Upper left arm">
+					description = <"Location is on the upper part of left arm">
+				>
+				["at0.0.32"] = <
+					text = <"Upper right arm">
+					description = <"Location is on the upper part of right arm">
+				>
+				["at0.0.33"] = <
+					text = <"9 mm">
+					description = <"The 9 mm insuline infusion chatetre">
+				>
+				["at0.0.34"] = <
+					text = <"6 mm">
+					description = <"The 6 mm insuline infusion chatetre">
+				>
+				["at0.0.35"] = <
+					text = <"Quick set Paradigm ">
+					description = <"Quick set Paradigm ">
+				>
+				["at0.0.36"] = <
+					text = <"Length of insertion">
+					description = <"Length of insertion">
+				>
+				["at0.0.37"] = <
+					text = <"Accuchek Flexlink">
+					description = <"Accuchek Flexlink">
+				>
+				["at0.0.38"] = <
+					text = <"Buttocks right">
+					description = <"The sensor is located in the right side of buttocks.">
+				>
+				["at0.0.39"] = <
+					text = <"Expected time of change">
+					description = <"*">
+				>
+				["at0.21"] = <
+					text = <"Location">
+					description = <"The internal location of the device or tip of the device e.g  the tip of a catheter.">
+				>
+				["at0.22"] = <
+					text = <"Entry site">
+					description = <"The entry site of the device into the body e.g. of a catheter or pacing wire.">
+				>
+				["at0.23"] = <
+					text = <"Length">
+					description = <"The length of the device.">
+				>
+				["at0.24"] = <
+					text = <"Lumens">
+					description = <"Number of lumens of this device.">
+				>
+				["at0.25"] = <
+					text = <"Entry fixing/dressing">
+					description = <"*">
+				>
+				["at0.26"] = <
+					text = <"Material">
+					description = <"A dressing or fixing material used.">
+				>
+				["at0.27"] = <
+					text = <"Material details">
+					description = <"Details of the material involved.">
+				>
+				["at0.28"] = <
+					text = <"Quantity">
+					description = <"*">
+				>
+				["at0000"] = <
+					text = <"Device">
+					description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+				>
+				["at0000.1"] = <
+					text = <"Invasive device">
+					description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used inside the body, directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+				>
+				["at0000.1.1"] = <
+					text = <"Insulin infusion set">
+					description = <"Insulin infusion set">
+				>
+				["at0001"] = <
+					text = <"Device name">
+					description = <"Identification of the device.  This is very likely to be a coded field, including pre- or post-coordianted details.">
+				>
+				["at0001.0.1"] = <
+					text = <"Insulin infusion set">
+					description = <"The IDV is Insuline Infusion catheter for insuline supply">
+				>
+				["at0002"] = <
+					text = <"Description">
+					description = <"Description of the device.">
+				>
+				["at0003"] = <
+					text = <"Type">
+					description = <"Type of device.">
+				>
+				["at0004"] = <
+					text = <"Manufacturer">
+					description = <"The name of the device manufacturer.">
+				>
+				["at0005"] = <
+					text = <"Date of manufacture">
+					description = <"Date the device was manufactured.">
+				>
+				["at0006"] = <
+					text = <"Batch number">
+					description = <"Manufacturer's batch number.">
+				>
+				["at0007"] = <
+					text = <"Date of expiry">
+					description = <"Date that the device/product is no longer fit for use.">
+				>
+				["at0008"] = <
+					text = <"Comment">
+					description = <"Comment about the device.">
+				>
+				["at0009"] = <
+					text = <"Additional Details">
+					description = <"Additional details to be noted about the device.">
+				>
+				["at0013"] = <
+					text = <"Safety feature">
+					description = <"Details about safety feature(s) of the device.">
+				>
+				["at0014"] = <
+					text = <"Type of feature">
+					description = <"Type of safety feature of the device.">
+				>
+				["at0015"] = <
+					text = <"Description">
+					description = <"Description of the safety feature of the device.">
+				>
+				["at0016"] = <
+					text = <"Size">
+					description = <"Size of device - a choice of value types is offered - count, quantity or text.">
+				>
+				["at0016.1"] = <
+					text = <"Length">
+					description = <"Length of the device">
+				>
+				["at0017"] = <
+					text = <"Dimensions">
+					description = <"Specific dimensions of the device.">
+				>
+				["at0020"] = <
+					text = <"Components">
+					description = <"Information about the device sub-components.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.0.29"] = <
+					text = <"Glutealno levo">
+					description = <"Glutealno levo">
+				>
+				["at0.0.30"] = <
+					text = <"Trebuh">
+					description = <"Trebuh">
+				>
+				["at0.0.31"] = <
+					text = <"Leva roka zgoraj">
+					description = <"Leva roka zgoraj">
+				>
+				["at0.0.32"] = <
+					text = <"Desna roka zgoraj">
+					description = <"Desna roka zgoraj">
+				>
+				["at0.0.33"] = <
+					text = <"9 mm">
+					description = <"9 mm infuzijski kateter za dovajanje inzulina">
+				>
+				["at0.0.34"] = <
+					text = <"6 mm">
+					description = <"6 mm infuzijski kateter za dovajanje inzulina">
+				>
+				["at0.0.35"] = <
+					text = <"Quick set Paradigm ">
+					description = <"Quick set Paradigm">
+				>
+				["at0.0.36"] = <
+					text = <"Dolžina vstavitve">
+					description = <"Dolžina vstavitve">
+				>
+				["at0.0.37"] = <
+					text = <"Accuchek Flexlink">
+					description = <"Accuchek Flexlink">
+				>
+				["at0.0.38"] = <
+					text = <"Glutealno desno">
+					description = <"Glutealno desno">
+				>
+				["at0.0.39"] = <
+					text = <"Predviden čas menjave">
+					description = <"**(en)">
+				>
+				["at0.21"] = <
+					text = <"Lokacija">
+					description = <"Lokacija tuka">
+				>
+				["at0.22"] = <
+					text = <"Vhodna točka">
+					description = <"Vhodna točka tujka">
+				>
+				["at0.23"] = <
+					text = <"Dolžina ">
+					description = <"Dolžina tujka">
+				>
+				["at0.24"] = <
+					text = <"Lumen">
+					description = <"Število lumnov">
+				>
+				["at0.25"] = <
+					text = <"Pritrditev">
+					description = <"Ali je potrebna pritrditev tujka na vhodni točki v telo?">
+				>
+				["at0.26"] = <
+					text = <"Uporabljeni material">
+					description = <"Uporabljeni materil">
+				>
+				["at0.27"] = <
+					text = <"Podrobnosti">
+					description = <"Podrobnosti o uporabljenem materialu">
+				>
+				["at0.28"] = <
+					text = <"Količina">
+					description = <"Količina uporabljenega materiala">
+				>
+				["at0000"] = <
+					text = <"Tujek">
+					description = <"Fizični objekt, izdelek ali naprava, ki se uporablja za zagotavljanje medicinske oskrbe, vendar brez vpliva na terapijo.">
+				>
+				["at0000.1"] = <
+					text = <"Tujek">
+					description = <"Fizični objekt, izdelek ali naprava, ki se uporablja za zagotavljanje medicinske oskrbe, vendar brez vpliva na terapijo.
+">
+				>
+				["at0000.1.1"] = <
+					text = <" Infuzijski set za dovajanje inzulina">
+					description = <" Infuzijski set za dovajanje inzulina">
+				>
+				["at0001"] = <
+					text = <"ID">
+					description = <"ID tujka">
+				>
+				["at0001.0.1"] = <
+					text = <"Infuzijski set za dovajanje inzulina">
+					description = <"*The IDV is Insuline Infusion catheter for insuline supply(en)">
+				>
+				["at0002"] = <
+					text = <"Opis">
+					description = <"Opis tujka">
+				>
+				["at0003"] = <
+					text = <"Tip">
+					description = <"Tip tujka">
+				>
+				["at0004"] = <
+					text = <"Proizvajalec">
+					description = <"Proizvajalec tujka">
+				>
+				["at0005"] = <
+					text = <"Datum proizvodnje">
+					description = <"Datum proizvodnje">
+				>
+				["at0006"] = <
+					text = <"Serijska številka">
+					description = <"Serijska številka tujka">
+				>
+				["at0007"] = <
+					text = <"Rok trajanja">
+					description = <"Rok trajanja tujka / izdelka">
+				>
+				["at0008"] = <
+					text = <"Opomba">
+					description = <"Opombe glede tujka">
+				>
+				["at0009"] = <
+					text = <"Dodatne podrobnosti">
+					description = <"Dodatna pojasnila">
+				>
+				["at0013"] = <
+					text = <"Varnostna navodila">
+					description = <"Varnostna navodila ">
+				>
+				["at0014"] = <
+					text = <"Tip navodil">
+					description = <"Tip varnostnih navodil">
+				>
+				["at0015"] = <
+					text = <"Opis">
+					description = <"Opis varnostnih navodil">
+				>
+				["at0016"] = <
+					text = <"Velikost">
+					description = <"Velikost tujka">
+				>
+				["at0016.1"] = <
+					text = <"Dolžina">
+					description = <"Dolžina tujka">
+				>
+				["at0017"] = <
+					text = <"Dimenzija">
+					description = <"Podrobne dimenzije naprave">
+				>
+				["at0020"] = <
+					text = <"Sestavni deli">
+					description = <"Podatki o sestavnih delih">
+				>
+			>
+		>
+	>

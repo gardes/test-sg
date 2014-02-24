@@ -1,0 +1,257 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.evaluation_content-discharge_plan.v1
+specialise
+	openEHR-EHR-EVALUATION.evaluation_content.v1
+
+concept
+	[at0000.1]	-- Predlagatelji izvedenih aktivnosti pri načrtovanju odpusta
+language
+	original_language = <[ISO_639-1::sl]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*(sl)">
+			use = <"*(sl)">
+			misuse = <"*(sl)">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E95417B46FD320848FDEDFE40AB1F30D">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Predlagatelji izvedenih aktivnosti pri načrtovanju odpusta
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002.1] occurrences matches {0..*} matches {	-- Terminologija
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[local::]}
+							}
+						}
+					}
+					allow_archetype ITEM[at0003.1] occurrences matches {0..1} matches {	-- Items
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0.8] occurrences matches {0..*} matches {	-- Aktivnosti so bile izvedene na predlog
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0.14, 	-- Aktivnosti so bile izvedene na predlog pacienta
+									at0.15, 	-- Aktivnosti so bile izvedene na predlog svojcev, skrbnikov
+									at0.16, 	-- Aktivnosti so bile izvedene na predlog  lečečega zdravnika
+									at0.17]	-- Aktivnosti so bile izvedene na predlog drugih
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.10"] = <
+					text = <"Aktivnosti so bile izvedene na predlog pacienta(sl)">
+					description = <"Aktivnosti so bile izvedene na predlog pacienta(sl)">
+				>
+				["at0.11"] = <
+					text = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov(sl)">
+					description = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov(sl)">
+				>
+				["at0.12"] = <
+					text = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika(sl)">
+					description = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika(sl)">
+				>
+				["at0.13"] = <
+					text = <"Aktivnosti so bile izvedene na predlog drugih(sl)">
+					description = <"Aktivnosti so bile izvedene na predlog drugih(sl)">
+				>
+				["at0.14"] = <
+					text = <"Activities were carried out on the proposal - the patient">
+					description = <"Activities were carried out on the proposal - the patient">
+				>
+				["at0.15"] = <
+					text = <"Activities were carried out on the proposal - relatives, tutors">
+					description = <"Activities were carried out on the proposal - relatives, tutors">
+				>
+				["at0.16"] = <
+					text = <"Activities were carried out in the bill - prescribing physician">
+					description = <"Activities were carried out in the bill - prescribing physician">
+				>
+				["at0.17"] = <
+					text = <"Activities were carried out on the proposal - other">
+					description = <"Activities were carried out on the proposal - other">
+				>
+				["at0.4"] = <
+					text = <"*Aktivnosti so bile izvedene na predlog pacienta(sl)">
+					description = <"*Aktivnosti so bile izvedene na predlog pacienta(sl)">
+				>
+				["at0.5"] = <
+					text = <"*Aktivnosti so bile izvedene na predlog svojcev, skrbnikov(sl)">
+					description = <"*Aktivnosti so bile izvedene na predlog svojcev, skrbnikov(sl)">
+				>
+				["at0.6"] = <
+					text = <"*Aktivnosti so bile izvedene na predlog  lečečega zdravnika(sl)">
+					description = <"*Aktivnosti so bile izvedene na predlog  lečečega zdravnika(sl)">
+				>
+				["at0.7"] = <
+					text = <"*Aktivnosti so bile izvedene na predlog drugih(sl)">
+					description = <"*Aktivnosti so bile izvedene na predlog drugih(sl)">
+				>
+				["at0.8"] = <
+					text = <"Proposers of activities">
+					description = <"Who proposed activities of discharge plan? ">
+				>
+				["at0.9"] = <
+					text = <"*Aktivnosti pri načrtovanju odpusta so bile izvedene na predlog(sl)">
+					description = <"**(sl)">
+				>
+				["at0000"] = <
+					text = <"*Evaluation content(sl) ">
+					description = <"*unknown(sl)">
+				>
+				["at0000.1"] = <
+					text = <"Proposers of activities at discharge planning">
+					description = <"Proposers of activities at discharge planning">
+				>
+				["at0001"] = <
+					text = <"*Tree(sl)">
+					description = <"*@ internal @(sl)">
+				>
+				["at0002"] = <
+					text = <"*Terminology(sl)">
+					description = <"**(sl)">
+				>
+				["at0002.1"] = <
+					text = <"Terminology">
+					description = <"Terminology">
+				>
+				["at0003"] = <
+					text = <"*Items(sl)">
+					description = <"**(sl)">
+				>
+				["at0003.1"] = <
+					text = <"Items">
+					description = <"**(sl)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.10"] = <
+					text = <"Activities were carried out on the proposal - the patient">
+					description = <"Activities were carried out on the proposal - the patient">
+				>
+				["at0.11"] = <
+					text = <"Activities were carried out on the proposal - relatives, tutor">
+					description = <"Activities were carried out on the proposal - relatives, tutor">
+				>
+				["at0.12"] = <
+					text = <"Activities were carried out in the bill - prescribing physician">
+					description = <"Activities were carried out in the bill - prescribing physician">
+				>
+				["at0.13"] = <
+					text = <"Activities were carried out on the proposal - other">
+					description = <"Activities were carried out on the proposal - other">
+				>
+				["at0.14"] = <
+					text = <"Aktivnosti so bile izvedene na predlog pacienta">
+					description = <"Aktivnosti so bile izvedene na predlog pacienta">
+				>
+				["at0.15"] = <
+					text = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov">
+					description = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov">
+				>
+				["at0.16"] = <
+					text = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika">
+					description = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika">
+				>
+				["at0.17"] = <
+					text = <"Aktivnosti so bile izvedene na predlog drugih">
+					description = <"Aktivnosti so bile izvedene na predlog drugih">
+				>
+				["at0.4"] = <
+					text = <"Aktivnosti so bile izvedene na predlog pacienta">
+					description = <"Aktivnosti so bile izvedene na predlog pacienta">
+				>
+				["at0.5"] = <
+					text = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov">
+					description = <"Aktivnosti so bile izvedene na predlog svojcev, skrbnikov">
+				>
+				["at0.6"] = <
+					text = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika">
+					description = <"Aktivnosti so bile izvedene na predlog  lečečega zdravnika">
+				>
+				["at0.7"] = <
+					text = <"Aktivnosti so bile izvedene na predlog drugih">
+					description = <"Aktivnosti so bile izvedene na predlog drugih">
+				>
+				["at0.8"] = <
+					text = <"Aktivnosti so bile izvedene na predlog">
+					description = <"Kdo je predlagal izvedbo aktivnosti pri planiranju odpusta pacienta?">
+				>
+				["at0.9"] = <
+					text = <"Aktivnosti pri načrtovanju odpusta so bile izvedene na predlog">
+					description = <"*">
+				>
+				["at0000"] = <
+					text = <"Evaluation content">
+					description = <"unknown">
+				>
+				["at0000.1"] = <
+					text = <"Predlagatelji izvedenih aktivnosti pri načrtovanju odpusta">
+					description = <"Predlagatelji izvedenih aktivnosti pri načrtovanje odpusta pacienta">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Terminology">
+					description = <"*">
+				>
+				["at0002.1"] = <
+					text = <"Terminologija">
+					description = <"Terminologija">
+				>
+				["at0003"] = <
+					text = <"Items">
+					description = <"*">
+				>
+				["at0003.1"] = <
+					text = <"Items">
+					description = <"*">
+				>
+			>
+		>
+	>

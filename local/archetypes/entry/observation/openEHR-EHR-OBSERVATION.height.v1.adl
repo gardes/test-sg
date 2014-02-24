@@ -6,32 +6,18 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			author = <
-				["name"] = <"Jasmin Buck, Sebastian Garde">
-				["organisation"] = <"University of Heidelberg, Ocean Informatics">
-			>
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			author = <
-				["name"] = <"Dr. Leonardo Der Jachadurian">
-				["organisation"] = <"Bitios.com">
-			>
-			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
-		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
 			author = <
 				["name"] = <"Shahla Foozonkhah">
 				["organisation"] = <"Ocean Informatics">
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Ocean Informatics">
 			>
 		>
 		["nl"] = <
@@ -42,6 +28,14 @@ language
 				["email"] = <"m.buur-krom@mca.nl">
 			>
 		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Dr. Leonardo Der Jachadurian">
+				["organisation"] = <"Bitios.com">
+			>
+			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			author = <
@@ -50,6 +44,12 @@ language
 				["email"] = <"marco.borges@p2d.com.br">
 			>
 			accreditation = <"P2D Health Advisor Council">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
 		>
 	>
 description
@@ -269,6 +269,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

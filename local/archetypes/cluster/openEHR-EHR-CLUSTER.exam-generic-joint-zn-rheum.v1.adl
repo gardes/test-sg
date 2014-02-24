@@ -1,0 +1,1171 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.exam-generic-joint-zn-rheum.v1
+specialise
+	openEHR-EHR-CLUSTER.exam-generic-joint-zn.v1
+
+concept
+	[at0000.1.1.1.1]	-- Rheumatological examination of a named joint
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"mag. Biljana Prinčič">
+				["organisation"] = <"Marand d.o.o., Ljubljana, Slovenija">
+				["email"] = <"biljana.princic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"23/04/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A generic cluster for recording findings on physical examination of a joint.
+
+.">
+			use = <"">
+			keywords = <"examination", "physical", "joint">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Generični klaster za beleženje opazovanj na sklepih.
+
+">
+			use = <"Uporablja se za opazovanje sprememb na sklepih pacienta v okviru oizvajanja procesa zdravstvene nege">
+			keywords = <"sklepi", "ocena sklepov", "ocena ", "opazovanje">
+			misuse = <"Se ne uporablja skupaj z arhetipom za ugotovitev posameznega pregelda pacienta">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", "Biljana Prinčič, Marand d.o.o., Slovenia", "Uroš Rajkovič, Faculty of Organizational Sciences, University of Maribor, Slovenia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"A3C2623E714AD8AE7917E8478B011B6F">
+	>
+
+definition
+	CLUSTER[at0000.1.1.1.1] matches {	-- *Rheumatological examination of a named joint(en)
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0.9.1.0.1] occurrences matches {0..1} matches {	-- Sklep
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.0.0.71, 	-- Temporomandibularni sklep (TMS)
+							at0.0.0.0.72, 	-- Vratna hrbtenica
+							at0.0.0.0.73, 	-- Sternoklavikularni sklep
+							at0.0.0.0.74, 	-- Rama
+							at0.0.0.0.75, 	-- Komolec
+							at0.0.0.0.76, 	-- Zapestje
+							at0.0.0.0.77, 	-- Metakarpofalangealni sklep I (MCF I)
+							at0.0.0.0.78, 	-- Metakarpofalangealni sklep II (MCF II)
+							at0.0.0.0.79, 	-- Metakarpofalangealni sklep III (MCF III)
+							at0.0.0.0.80, 	-- Metakarpofalangealni sklep IV (MCF IV)
+							at0.0.0.0.81, 	-- Metakarpofalangealni sklep V (MCF V)
+							at0.0.0.0.82, 	-- Interfalangealni sklep palca (IF palec)
+							at0.0.0.0.83, 	-- Proksimalni interfalangealni sklep II (PIF II)
+							at0.0.0.0.84, 	-- Proksimalni interfalangealni sklep III (PIF III)
+							at0.0.0.0.85, 	-- Proksimalni interfalangealni sklep IV (PIF IV)
+							at0.0.0.0.86, 	-- Proksimalni interfalangealni sklep V (PIF V)
+							at0.0.0.0.87, 	-- Distalni interfalangealni sklep II (DIF II)
+							at0.0.0.0.88, 	-- Distalni interfalangealni sklep III (DIF III)
+							at0.0.0.0.89, 	-- Distalni interfalangealni sklep IV (DIF IV)
+							at0.0.0.0.90, 	-- Distalni interfalangealni sklep V (DIF V)
+							at0.0.0.0.91, 	-- Kolk
+							at0.0.0.0.92, 	-- Koleno
+							at0.0.0.0.93, 	-- Gleženj
+							at0.0.0.0.94, 	-- Subtalusni sklep
+							at0.0.0.0.95, 	-- Intertarzalni sklepi
+							at0.0.0.0.96, 	-- Metatarzofalangealni sklep I (MTF I)
+							at0.0.0.0.97, 	-- Metatarzofalangealni sklep II (MTF II)
+							at0.0.0.0.98, 	-- Metatarzofalangealni sklep III (MTF III)
+							at0.0.0.0.99, 	-- Metatarzofalangealni sklep IV (MTF IV)
+							at0.0.0.0.100, 	-- Metatarzofalangealni sklep V (MTF V)
+							at0.0.0.0.101, 	-- Interfalangealni sklep palca na nogi (IF palec na nogi)
+							at0.0.0.0.102, 	-- Interfalangealna sklepa prsta na nogi II (IF noga II)
+							at0.0.0.0.103, 	-- Interfalangealna sklepa prsta na nogi III (IF noga III)
+							at0.0.0.0.104, 	-- Interfalangealna sklepa prsta na nogi IV (IF noga IV)
+							at0.0.0.0.105, 	-- Interfalangealna sklepa prsta na nogi V (IF noga V)
+							at0.0.0.0.106]	-- Sakroiliakalni sklep
+						}
+					}
+				}
+			}
+			allow_archetype CLUSTER[at0.0.0.34] occurrences matches {0..*} matches {	-- Lokacija 
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-joint_zn(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			ELEMENT[at0.0.0.25] occurrences matches {0..1} matches {	-- Stran
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.0.26, 	-- Levo
+							at0.0.0.27, 	-- Desno
+							at0.0.0.28]	-- Obe strani
+						}
+					}
+				}
+			}
+			ELEMENT[at0.0.0.29] occurrences matches {0..1} matches {	-- Pogled
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.0.30, 	-- Spredaj
+							at0.0.0.31]	-- Zadaj
+						}
+					}
+				}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Opis opazovanja
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Opis
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Klinični opis
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0008.0.1] occurrences matches {0..1} matches {	-- Ugotovitve za posamezni sklep
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype CLUSTER[at0.0.2] occurrences matches {0..*} matches {	-- Detajli o sklepu
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-joint(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move-joint(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation-joint(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0.11] occurrences matches {0..1} matches {	-- Velikost
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {	-- Podrobnosti
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..*} matches {	-- Slika
+				value matches {
+					DV_MULTIMEDIA matches {
+						media_type matches {
+							[openEHR::
+							426, 
+							427, 
+							429]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.0.0.0.100"] = <
+					text = <"*Metatarzofalangealni sklep V (MTF V)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.101"] = <
+					text = <"*Interfalangealni sklep palca na nogi (IF palec na nogi)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.102"] = <
+					text = <"*Interfalangealna sklepa prsta na nogi II (IF noga II)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.103"] = <
+					text = <"*Interfalangealna sklepa prsta na nogi III (IF noga III)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.104"] = <
+					text = <"*Interfalangealna sklepa prsta na nogi IV (IF noga IV)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.105"] = <
+					text = <"*Interfalangealna sklepa prsta na nogi V (IF noga V)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.106"] = <
+					text = <"*Sakroiliakalni sklep(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.35"] = <
+					text = <"Temporomandibular joint (TMJ)">
+					description = <"*">
+				>
+				["at0.0.0.0.36"] = <
+					text = <"Cervical spine">
+					description = <"*">
+				>
+				["at0.0.0.0.37"] = <
+					text = <"Sterno-clavicular joint  (S-C)">
+					description = <"*">
+				>
+				["at0.0.0.0.38"] = <
+					text = <"Shoulder (gleno-humeral) Joint (GHJ)">
+					description = <"*">
+				>
+				["at0.0.0.0.39"] = <
+					text = <"Elbow joint">
+					description = <"*">
+				>
+				["at0.0.0.0.40"] = <
+					text = <"Wrist joint">
+					description = <"*">
+				>
+				["at0.0.0.0.41"] = <
+					text = <"1st Metacarpo-phalangeal joint (MCP 1)">
+					description = <"*">
+				>
+				["at0.0.0.0.42"] = <
+					text = <"2nd Metacarpo-phalangeal joint (MCP 2)">
+					description = <"*">
+				>
+				["at0.0.0.0.43"] = <
+					text = <"3rd Metacarpo-phalangeal joint  (MCP 3)">
+					description = <"*">
+				>
+				["at0.0.0.0.44"] = <
+					text = <"4th Metacarpo-phalangeal joint  (MCP 4)">
+					description = <"*">
+				>
+				["at0.0.0.0.45"] = <
+					text = <"5th Metacarpo-phalangeal joint (MCP 5)">
+					description = <"*">
+				>
+				["at0.0.0.0.46"] = <
+					text = <"Thumb interphalangeal joint (IP)">
+					description = <"*">
+				>
+				["at0.0.0.0.47"] = <
+					text = <"2nd Proximal interphalangeal joint  (PIP 2)">
+					description = <"*">
+				>
+				["at0.0.0.0.48"] = <
+					text = <"3rd Proximal interphalangeal joint (PIP 3)">
+					description = <"*">
+				>
+				["at0.0.0.0.49"] = <
+					text = <"4th Proximal interphalangeal joint (PIP 4)">
+					description = <"*">
+				>
+				["at0.0.0.0.50"] = <
+					text = <"5th Proximal interphalangeal joint (PIP 5)">
+					description = <"*">
+				>
+				["at0.0.0.0.51"] = <
+					text = <"2nd Distal interphalangeal joint (DIP 2">
+					description = <"*">
+				>
+				["at0.0.0.0.52"] = <
+					text = <"3rd Distal interphalangeal joint III (DIP 3)">
+					description = <"*">
+				>
+				["at0.0.0.0.53"] = <
+					text = <"4th Distal interphalangeal joint IV (DIP 4)">
+					description = <"*">
+				>
+				["at0.0.0.0.54"] = <
+					text = <"5th Distal interphalangeal joint V (DIP 5)">
+					description = <"*">
+				>
+				["at0.0.0.0.55"] = <
+					text = <"Hip joint">
+					description = <"*">
+				>
+				["at0.0.0.0.56"] = <
+					text = <"Knee joint">
+					description = <"*">
+				>
+				["at0.0.0.0.57"] = <
+					text = <"Ankle joint">
+					description = <"*">
+				>
+				["at0.0.0.0.58"] = <
+					text = <"Sub-tarsal joint">
+					description = <"*">
+				>
+				["at0.0.0.0.59"] = <
+					text = <"Inter-tarsal joint">
+					description = <"*">
+				>
+				["at0.0.0.0.60"] = <
+					text = <"1st Metatarso-pharangeal joint (MTP 1)">
+					description = <"*">
+				>
+				["at0.0.0.0.61"] = <
+					text = <"2nd Metatarso-pharangeal joint (MTP 2)">
+					description = <"*">
+				>
+				["at0.0.0.0.62"] = <
+					text = <"3rd Metatarso-pharangeal joint III (MTP 3)">
+					description = <"*">
+				>
+				["at0.0.0.0.63"] = <
+					text = <"4th Metatarso-pharangeal joint IV (MTP 4)">
+					description = <"*">
+				>
+				["at0.0.0.0.64"] = <
+					text = <"5th Metatarso-pharangeal joint (MTP 5)">
+					description = <"*">
+				>
+				["at0.0.0.0.65"] = <
+					text = <"Great toe interphalangeal joints  (IPT 1)">
+					description = <"*">
+				>
+				["at0.0.0.0.66"] = <
+					text = <"2nd toe Interphalangeal joints (IPT 2)">
+					description = <"*">
+				>
+				["at0.0.0.0.67"] = <
+					text = <"3rd toe Interphalangeal joints (IPT 3)">
+					description = <"*">
+				>
+				["at0.0.0.0.68"] = <
+					text = <"4th toe Interphalangeal joints (IPT 4)">
+					description = <"*">
+				>
+				["at0.0.0.0.69"] = <
+					text = <"5th toe Interphalangeal joints (IPT 5)">
+					description = <"*">
+				>
+				["at0.0.0.0.70"] = <
+					text = <"Sacroiliac joint">
+					description = <"*">
+				>
+				["at0.0.0.0.71"] = <
+					text = <"*Temporomandibularni sklep (TMS)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.72"] = <
+					text = <"*Vratna hrbtenica(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.73"] = <
+					text = <"*Sternoklavikularni sklep(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.74"] = <
+					text = <"*Rama(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.75"] = <
+					text = <"*Komolec(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.76"] = <
+					text = <"*Zapestje(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.77"] = <
+					text = <"*Metakarpofalangealni sklep I (MCF I)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.78"] = <
+					text = <"*Metakarpofalangealni sklep II (MCF II)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.79"] = <
+					text = <"*Metakarpofalangealni sklep III (MCF III)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.80"] = <
+					text = <"*Metakarpofalangealni sklep IV (MCF IV)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.81"] = <
+					text = <"*Metakarpofalangealni sklep V (MCF V)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.82"] = <
+					text = <"*Interfalangealni sklep palca (IF palec)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.83"] = <
+					text = <"*Proksimalni interfalangealni sklep II (PIF II)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.84"] = <
+					text = <"*Proksimalni interfalangealni sklep III (PIF III)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.85"] = <
+					text = <"*Proksimalni interfalangealni sklep IV (PIF IV)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.86"] = <
+					text = <"*Proksimalni interfalangealni sklep V (PIF V)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.87"] = <
+					text = <"*Distalni interfalangealni sklep II (DIF II)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.88"] = <
+					text = <"*Distalni interfalangealni sklep III (DIF III)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.89"] = <
+					text = <"*Distalni interfalangealni sklep IV (DIF IV)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.90"] = <
+					text = <"*Distalni interfalangealni sklep V (DIF V)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.91"] = <
+					text = <"*Kolk(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.92"] = <
+					text = <"*Koleno(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.93"] = <
+					text = <"*Gleženj(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.94"] = <
+					text = <"*Subtalusni sklep(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.95"] = <
+					text = <"*Intertarzalni sklepi(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.96"] = <
+					text = <"*Metatarzofalangealni sklep I (MTF I)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.97"] = <
+					text = <"*Metatarzofalangealni sklep II (MTF II)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.98"] = <
+					text = <"*Metatarzofalangealni sklep III (MTF III)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.99"] = <
+					text = <"*Metatarzofalangealni sklep IV (MTF IV)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.10"] = <
+					text = <"Hand / fingers">
+					description = <"Hand (including finger joints)
+">
+				>
+				["at0.0.0.11"] = <
+					text = <"Right hand (including finger joints)">
+					description = <"Right hand (including finger joints)
+">
+				>
+				["at0.0.0.12"] = <
+					text = <"Right knee">
+					description = <"Right knee
+">
+				>
+				["at0.0.0.13"] = <
+					text = <"Ankle">
+					description = <"Ankle joint.">
+				>
+				["at0.0.0.14"] = <
+					text = <"Right ankle">
+					description = <"Right ankle
+">
+				>
+				["at0.0.0.15"] = <
+					text = <"Foot / toes">
+					description = <"Foot (including toe joints)
+">
+				>
+				["at0.0.0.16"] = <
+					text = <"Right foot (including toe joints)">
+					description = <"Right foot (including toe joints)
+">
+				>
+				["at0.0.0.17"] = <
+					text = <"Cervical spine">
+					description = <"Neck / Cervical vertebrae joints
+">
+				>
+				["at0.0.0.18"] = <
+					text = <"Thoracic spine">
+					description = <"Mid-back / Thoracic vertebrae joints
+">
+				>
+				["at0.0.0.19"] = <
+					text = <"Lumbar spine">
+					description = <"Lower-back / Lumbar vertebrae joints
+">
+				>
+				["at0.0.0.20"] = <
+					text = <"Sacro-iliac spine">
+					description = <"Sacral vertebrae joints
+">
+				>
+				["at0.0.0.21"] = <
+					text = <"Knee">
+					description = <"Knee joint.">
+				>
+				["at0.0.0.22"] = <
+					text = <"Wrist">
+					description = <"Wrist joint.">
+				>
+				["at0.0.0.23"] = <
+					text = <"Right hip">
+					description = <"Right hip
+">
+				>
+				["at0.0.0.24"] = <
+					text = <"Hip">
+					description = <"Hip joint.
+">
+				>
+				["at0.0.0.25"] = <
+					text = <"Side">
+					description = <"Laterality of the joint.">
+				>
+				["at0.0.0.26"] = <
+					text = <"Left">
+					description = <"*">
+				>
+				["at0.0.0.27"] = <
+					text = <"Right">
+					description = <"*">
+				>
+				["at0.0.0.28"] = <
+					text = <"Bilateral">
+					description = <"*">
+				>
+				["at0.0.0.29"] = <
+					text = <"Aspect">
+					description = <"Anterior or posterior aspect of the joint.">
+				>
+				["at0.0.0.3"] = <
+					text = <"Jaw">
+					description = <"Mandibular joint
+">
+				>
+				["at0.0.0.30"] = <
+					text = <"Anterior">
+					description = <"Anterior aspect of the joint.">
+				>
+				["at0.0.0.31"] = <
+					text = <"Posterior">
+					description = <"Posterior aspect of the joint.">
+				>
+				["at0.0.0.32"] = <
+					text = <"Hand / all">
+					description = <"*">
+				>
+				["at0.0.0.33"] = <
+					text = <"Leg / all">
+					description = <"*">
+				>
+				["at0.0.0.34"] = <
+					text = <"Location">
+					description = <"*">
+				>
+				["at0.0.0.4"] = <
+					text = <"Right mandibular joint">
+					description = <"Right mandibular joint
+">
+				>
+				["at0.0.0.5"] = <
+					text = <"Shoulder">
+					description = <"Shoulder joint.
+">
+				>
+				["at0.0.0.6"] = <
+					text = <"Right shoulder">
+					description = <"Right shoulder
+">
+				>
+				["at0.0.0.7"] = <
+					text = <"Elbow">
+					description = <"Elbow joint.">
+				>
+				["at0.0.0.8"] = <
+					text = <"Right elbow">
+					description = <"Right elbow
+">
+				>
+				["at0.0.0.9"] = <
+					text = <"Right wrist">
+					description = <"Right wrist
+">
+				>
+				["at0.0.2"] = <
+					text = <"Joint detail">
+					description = <"Detail relating to the joint.">
+				>
+				["at0.11"] = <
+					text = <"Size">
+					description = <"Information about the size of the object for examination.">
+				>
+				["at0.9"] = <
+					text = <"Object">
+					description = <"The object of examination.">
+				>
+				["at0.9.1"] = <
+					text = <"Joint">
+					description = <"The joint examined.">
+				>
+				["at0.9.1.0.1"] = <
+					text = <"Joint">
+					description = <"The joint examined. The list of joints are those used for rhematological assessment.">
+				>
+				["at0000"] = <
+					text = <"Examination">
+					description = <"Generic examination cluster for describing a finding on physical examination.">
+				>
+				["at0000.1"] = <
+					text = <"Examination of a named body part">
+					description = <"Generic examination cluster for describing a finding on physical examination.">
+				>
+				["at0000.1.1"] = <
+					text = <"Examination of a named joint">
+					description = <"For describing a finding on physical examination of a named joint.">
+				>
+				["at0000.1.1.1"] = <
+					text = <"Examination of a named joint">
+					description = <"For describing a finding on physical examination of a named joint according to ZN documentation.">
+				>
+				["at0000.1.1.1.1"] = <
+					text = <"Rheumatological examination of a named joint">
+					description = <"For describing a finding on physical examination of a named joint  for rhematological assessment.">
+				>
+				["at0002"] = <
+					text = <"Clinical description">
+					description = <"Textural description of the part examined.">
+				>
+				["at0004"] = <
+					text = <"Normal statements">
+					description = <"A group of statements about the normality of the examination.">
+				>
+				["at0005"] = <
+					text = <"Normal statement">
+					description = <"A specific statement of normality.">
+				>
+				["at0006"] = <
+					text = <"Image">
+					description = <"Drawing or image of the area examined.">
+				>
+				["at0008"] = <
+					text = <"Findings">
+					description = <"Clinical findings.">
+				>
+				["at0008.0.1"] = <
+					text = <"Joint findings">
+					description = <"Clinical findings for a single joint.">
+				>
+				["at0009"] = <
+					text = <"Detail">
+					description = <"More focused examination findings.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0.0.0.0.100"] = <
+					text = <"Metatarzofalangealni sklep V (MTF V)">
+					description = <"*">
+				>
+				["at0.0.0.0.101"] = <
+					text = <"Interfalangealni sklep palca na nogi (IF palec na nogi)">
+					description = <"*">
+				>
+				["at0.0.0.0.102"] = <
+					text = <"Interfalangealna sklepa prsta na nogi II (IF noga II)">
+					description = <"*">
+				>
+				["at0.0.0.0.103"] = <
+					text = <"Interfalangealna sklepa prsta na nogi III (IF noga III)">
+					description = <"*">
+				>
+				["at0.0.0.0.104"] = <
+					text = <"Interfalangealna sklepa prsta na nogi IV (IF noga IV)">
+					description = <"*">
+				>
+				["at0.0.0.0.105"] = <
+					text = <"Interfalangealna sklepa prsta na nogi V (IF noga V)">
+					description = <"*">
+				>
+				["at0.0.0.0.106"] = <
+					text = <"Sakroiliakalni sklep">
+					description = <"*">
+				>
+				["at0.0.0.0.35"] = <
+					text = <"*Temporomandibular joint (TMJ)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.36"] = <
+					text = <"*Cervical spine(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.37"] = <
+					text = <"*Sterno-clavicular joint  (S-C)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.38"] = <
+					text = <"*Shoulder (gleno-humeral) Joint (GHJ)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.39"] = <
+					text = <"*Elbow joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.40"] = <
+					text = <"*Wrist joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.41"] = <
+					text = <"*1st Metacarpo-phalangeal joint (MCP 1)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.42"] = <
+					text = <"*2nd Metacarpo-phalangeal joint (MCP 2)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.43"] = <
+					text = <"*3rd Metacarpo-phalangeal joint  (MCP 3)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.44"] = <
+					text = <"*4th Metacarpo-phalangeal joint  (MCP 4)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.45"] = <
+					text = <"*5th Metacarpo-phalangeal joint (MCP 5)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.46"] = <
+					text = <"*Thumb interphalangeal joint (IP)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.47"] = <
+					text = <"*2nd Proximal interphalangeal joint  (PIP 2)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.48"] = <
+					text = <"*3rd Proximal interphalangeal joint (PIP 3)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.49"] = <
+					text = <"*4th Proximal interphalangeal joint (PIP 4)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.50"] = <
+					text = <"*5th Proximal interphalangeal joint (PIP 5)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.51"] = <
+					text = <"*2nd Distal interphalangeal joint (DIP 2(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.52"] = <
+					text = <"*3rd Distal interphalangeal joint III (DIP 3)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.53"] = <
+					text = <"*4th Distal interphalangeal joint IV (DIP 4)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.54"] = <
+					text = <"*5th Distal interphalangeal joint V (DIP 5)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.55"] = <
+					text = <"*Hip joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.56"] = <
+					text = <"*Knee joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.57"] = <
+					text = <"*Ankle joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.58"] = <
+					text = <"*Sub-tarsal joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.59"] = <
+					text = <"*Inter-tarsal joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.60"] = <
+					text = <"*1st Metatarso-pharangeal joint (MTP 1)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.61"] = <
+					text = <"*2nd Metatarso-pharangeal joint (MTP 2)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.62"] = <
+					text = <"*3rd Metatarso-pharangeal joint III (MTP 3)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.63"] = <
+					text = <"*4th Metatarso-pharangeal joint IV (MTP 4)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.64"] = <
+					text = <"*5th Metatarso-pharangeal joint (MTP 5)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.65"] = <
+					text = <"*Great toe interphalangeal joints  (IPT 1)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.66"] = <
+					text = <"*2nd toe Interphalangeal joints (IPT 2)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.67"] = <
+					text = <"*3rd toe Interphalangeal joints (IPT 3)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.68"] = <
+					text = <"*4th toe Interphalangeal joints (IPT 4)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.69"] = <
+					text = <"*5th toe Interphalangeal joints (IPT 5)(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.70"] = <
+					text = <"*Sacroiliac joint(en)">
+					description = <"**(en)">
+				>
+				["at0.0.0.0.71"] = <
+					text = <"Temporomandibularni sklep (TMS)">
+					description = <"*">
+				>
+				["at0.0.0.0.72"] = <
+					text = <"Vratna hrbtenica">
+					description = <"*">
+				>
+				["at0.0.0.0.73"] = <
+					text = <"Sternoklavikularni sklep">
+					description = <"*">
+				>
+				["at0.0.0.0.74"] = <
+					text = <"Rama">
+					description = <"*">
+				>
+				["at0.0.0.0.75"] = <
+					text = <"Komolec">
+					description = <"*">
+				>
+				["at0.0.0.0.76"] = <
+					text = <"Zapestje">
+					description = <"*">
+				>
+				["at0.0.0.0.77"] = <
+					text = <"Metakarpofalangealni sklep I (MCF I)">
+					description = <"*">
+				>
+				["at0.0.0.0.78"] = <
+					text = <"Metakarpofalangealni sklep II (MCF II)">
+					description = <"*">
+				>
+				["at0.0.0.0.79"] = <
+					text = <"Metakarpofalangealni sklep III (MCF III)">
+					description = <"*">
+				>
+				["at0.0.0.0.80"] = <
+					text = <"Metakarpofalangealni sklep IV (MCF IV)">
+					description = <"*">
+				>
+				["at0.0.0.0.81"] = <
+					text = <"Metakarpofalangealni sklep V (MCF V)">
+					description = <"*">
+				>
+				["at0.0.0.0.82"] = <
+					text = <"Interfalangealni sklep palca (IF palec)">
+					description = <"*">
+				>
+				["at0.0.0.0.83"] = <
+					text = <"Proksimalni interfalangealni sklep II (PIF II)">
+					description = <"*">
+				>
+				["at0.0.0.0.84"] = <
+					text = <"Proksimalni interfalangealni sklep III (PIF III)">
+					description = <"*">
+				>
+				["at0.0.0.0.85"] = <
+					text = <"Proksimalni interfalangealni sklep IV (PIF IV)">
+					description = <"*">
+				>
+				["at0.0.0.0.86"] = <
+					text = <"Proksimalni interfalangealni sklep V (PIF V)">
+					description = <"*">
+				>
+				["at0.0.0.0.87"] = <
+					text = <"Distalni interfalangealni sklep II (DIF II)">
+					description = <"*">
+				>
+				["at0.0.0.0.88"] = <
+					text = <"Distalni interfalangealni sklep III (DIF III)">
+					description = <"*">
+				>
+				["at0.0.0.0.89"] = <
+					text = <"Distalni interfalangealni sklep IV (DIF IV)">
+					description = <"*">
+				>
+				["at0.0.0.0.90"] = <
+					text = <"Distalni interfalangealni sklep V (DIF V)">
+					description = <"*">
+				>
+				["at0.0.0.0.91"] = <
+					text = <"Kolk">
+					description = <"*">
+				>
+				["at0.0.0.0.92"] = <
+					text = <"Koleno">
+					description = <"*">
+				>
+				["at0.0.0.0.93"] = <
+					text = <"Gleženj">
+					description = <"*">
+				>
+				["at0.0.0.0.94"] = <
+					text = <"Subtalusni sklep">
+					description = <"*">
+				>
+				["at0.0.0.0.95"] = <
+					text = <"Intertarzalni sklepi">
+					description = <"*">
+				>
+				["at0.0.0.0.96"] = <
+					text = <"Metatarzofalangealni sklep I (MTF I)">
+					description = <"*">
+				>
+				["at0.0.0.0.97"] = <
+					text = <"Metatarzofalangealni sklep II (MTF II)">
+					description = <"*">
+				>
+				["at0.0.0.0.98"] = <
+					text = <"Metatarzofalangealni sklep III (MTF III)">
+					description = <"*">
+				>
+				["at0.0.0.0.99"] = <
+					text = <"Metatarzofalangealni sklep IV (MTF IV)">
+					description = <"*">
+				>
+				["at0.0.0.10"] = <
+					text = <"Dlan vključno s prsti">
+					description = <"Dlan vključno s prsti">
+				>
+				["at0.0.0.11"] = <
+					text = <"Desna dlan vključno s prsti">
+					description = <"Desna dlan vključno s prsti">
+				>
+				["at0.0.0.12"] = <
+					text = <"Desno koleno">
+					description = <"Desno koleno">
+				>
+				["at0.0.0.13"] = <
+					text = <"Gleženj">
+					description = <"Gleženj.">
+				>
+				["at0.0.0.14"] = <
+					text = <"Desni gleženj">
+					description = <"Desni gleženj">
+				>
+				["at0.0.0.15"] = <
+					text = <"Stopalo (vključno s prsti)">
+					description = <"Stopalo (vključno s prsti)">
+				>
+				["at0.0.0.16"] = <
+					text = <"Desno stopalo (vključno s prsti)">
+					description = <"Desno stopalo (vključno s prsti)">
+				>
+				["at0.0.0.17"] = <
+					text = <"Vrat / Vratna vretenca">
+					description = <"Vrat / Vratna vretenca">
+				>
+				["at0.0.0.18"] = <
+					text = <"Srednji del hrbtenice /  Torakalni predel hrbtenice">
+					description = <"Srednji del hrbtenice /  Torakalni predel hrbtenice">
+				>
+				["at0.0.0.19"] = <
+					text = <"Spodnji del hrbtenice / Lumbalni predel hrbtenice(en)">
+					description = <"Spodnji del hrbtenice / Lumbalni predel hrbtenice(en)">
+				>
+				["at0.0.0.20"] = <
+					text = <"Križnica / Sakralni predel hrbtenice">
+					description = <"Križnica / Sakralni predel hrbtenice">
+				>
+				["at0.0.0.21"] = <
+					text = <"Koleno">
+					description = <"Koleno.">
+				>
+				["at0.0.0.22"] = <
+					text = <"Zapestje">
+					description = <"Zapestje.">
+				>
+				["at0.0.0.23"] = <
+					text = <"Desni kolk">
+					description = <"Desni kolk">
+				>
+				["at0.0.0.24"] = <
+					text = <"Kolk">
+					description = <"Kolk.">
+				>
+				["at0.0.0.25"] = <
+					text = <"Stran">
+					description = <"**(en)">
+				>
+				["at0.0.0.26"] = <
+					text = <"Levo">
+					description = <"**(en)">
+				>
+				["at0.0.0.27"] = <
+					text = <"Desno">
+					description = <"**(en)">
+				>
+				["at0.0.0.28"] = <
+					text = <"Obe strani">
+					description = <"**(en)">
+				>
+				["at0.0.0.29"] = <
+					text = <"Pogled">
+					description = <"**(en)">
+				>
+				["at0.0.0.3"] = <
+					text = <"Čeljustni sklep">
+					description = <"čeljustni sklep.">
+				>
+				["at0.0.0.30"] = <
+					text = <"Spredaj">
+					description = <"**(en)">
+				>
+				["at0.0.0.31"] = <
+					text = <"Zadaj">
+					description = <"**(en)">
+				>
+				["at0.0.0.32"] = <
+					text = <"Vsi sklepi roke">
+					description = <"*">
+				>
+				["at0.0.0.33"] = <
+					text = <"Vsi sklepi noge">
+					description = <"*">
+				>
+				["at0.0.0.34"] = <
+					text = <"Lokacija ">
+					description = <"**(en)">
+				>
+				["at0.0.0.4"] = <
+					text = <"Desni čeljustni sklep">
+					description = <"Desni čeljustni sklep">
+				>
+				["at0.0.0.5"] = <
+					text = <"Rama">
+					description = <"Rama.">
+				>
+				["at0.0.0.6"] = <
+					text = <"Desna rama">
+					description = <"Desna rama">
+				>
+				["at0.0.0.7"] = <
+					text = <"Komolec">
+					description = <"Komolec">
+				>
+				["at0.0.0.8"] = <
+					text = <"Desni komolec">
+					description = <"Desni komolec">
+				>
+				["at0.0.0.9"] = <
+					text = <"Desno zapestje">
+					description = <"Desno zapestje">
+				>
+				["at0.0.2"] = <
+					text = <"Detajli o sklepu">
+					description = <"Detajli o sklepu">
+				>
+				["at0.11"] = <
+					text = <"Velikost">
+					description = <"Velikost objekta opazovanja">
+				>
+				["at0.9"] = <
+					text = <"Objekt opazovanja">
+					description = <"Objekt opazovanja">
+				>
+				["at0.9.1"] = <
+					text = <"Sklep">
+					description = <"Sklep, ki se opazuje">
+				>
+				["at0.9.1.0.1"] = <
+					text = <"Sklep">
+					description = <"*The joint examined. The list of joints are those used for rhematological assessment.(en)">
+				>
+				["at0000"] = <
+					text = <"Opazovanje">
+					description = <"Opazovanje">
+				>
+				["at0000.1"] = <
+					text = <"Opazovanje imenovanega dela telesa">
+					description = <"Opazovanje imenovanega dela telesa">
+				>
+				["at0000.1.1"] = <
+					text = <"Opazovanje imenovanega sklepa">
+					description = <"Opazovanje imenovanega sklepa">
+				>
+				["at0000.1.1.1"] = <
+					text = <"Opazovanje  sklepa">
+					description = <"Opazovanje označenega sklepa">
+				>
+				["at0000.1.1.1.1"] = <
+					text = <"*Rheumatological examination of a named joint(en)">
+					description = <"*For describing a finding on physical examination of a named joint  for rhematological assessment.(en)">
+				>
+				["at0002"] = <
+					text = <"Klinični opis">
+					description = <"Klinični opis">
+				>
+				["at0004"] = <
+					text = <"Opis opazovanja">
+					description = <"Opis opazovanja">
+				>
+				["at0005"] = <
+					text = <"Opis">
+					description = <"Opis">
+				>
+				["at0006"] = <
+					text = <"Slika">
+					description = <"Slika">
+				>
+				["at0008"] = <
+					text = <"Ugotovitve">
+					description = <"Ugotovitve">
+				>
+				["at0008.0.1"] = <
+					text = <"Ugotovitve za posamezni sklep">
+					description = <"Ugotovitve za posamezni sklep">
+				>
+				["at0009"] = <
+					text = <"Podrobnosti">
+					description = <"Podrobnosti">
+				>
+			>
+		>
+	>

@@ -1,0 +1,139 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.cda-component.v1
+
+concept
+	[at0000]	-- CDA Component
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <" Bostjan Lah">
+		["organisation"] = <"Marand d.o.o.">
+		["email"] = <"bostjan.lah@marand.si">
+		["date"] = <"2013-03-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*(en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"D0C6C38BF3F0CDE690AE33596042EE53">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- CDA Component
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0031] occurrences matches {0..1} matches {	-- TemplateId
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0032] occurrences matches {0..1} matches {	-- Code
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0033] occurrences matches {0..1} matches {	-- Title
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0034] occurrences matches {0..1} matches {	-- Text
+						value matches {
+							DV_PARSABLE matches {
+								formalism matches {"text/html", "text/xml", "text/plain"}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"CDA Component">
+					description = <"CDA Component">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"TemplateId">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"Code">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"Title">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Text">
+					description = <"*">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"CDA komponenta">
+					description = <"*">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"Id Templata">
+					description = <"*">
+					comment = <"*(en)">
+				>
+				["at0032"] = <
+					text = <"Koda">
+					description = <"*">
+					comment = <"*(en)">
+				>
+				["at0033"] = <
+					text = <"Naslov">
+					description = <"*">
+					comment = <"*(en)">
+				>
+				["at0034"] = <
+					text = <"Besedilo">
+					description = <"*">
+					comment = <"*(en)">
+				>
+			>
+		>
+	>

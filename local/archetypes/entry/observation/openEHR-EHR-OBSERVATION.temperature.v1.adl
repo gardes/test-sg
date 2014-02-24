@@ -5,6 +5,23 @@ concept
 	[at0000]	-- Temperature
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["eu"] = <
+			language = <[ISO_639-1::eu]>
+			author = <
+				["name"] = <"Ander Iruetaguena">
+				["organisation"] = <"EHU">
+				["email"] = <"ander.iruetaguena@ehu.es">
+			>
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+				["email"] = <"monasaleh01@live.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -19,6 +36,21 @@ description
 			use = <"Used for recording the specific temperature of an identified object.">
 			keywords = <"temperature", ...>
 			misuse = <"This temperature is not to be used to record the body temperature, which is a surrogate for the whole body temperature of the subject - use OBSERVATION.body_temperature instead in this situation.">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل درجة الحرارة التي تم قياسها لشيئ بعينه">
+			use = <"يستخدم لتسجيل درجة الحرارة النوعية لشيئ معين">
+			keywords = <"درجة الحرارة", ...>
+			misuse = <"لا تستخدم درجة الحرارة هذه لتسجيل درجة حرارة الجسم, التي هي بديل عن درجة حرارة الجسم الكلية لشخص معين. استخدم نموذج ملاحظة. درجة حرارة الجسم, في تلك الحالة">
+			copyright = <"© openEHR Foundation">
+		>
+		["eu"] = <
+			language = <[ISO_639-1::eu]>
+			purpose = <"Identifikatutako objektuaren neurturiko tenperatura gordetzea.">
+			use = <"*Used for recording the specific temperature of an identified object.(en)">
+			misuse = <"*This temperature is not to be used to record the body temperature, which is a surrogate for the whole body temperature of the subject - use OBSERVATION.body_temperature instead in this situation.(en)">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -113,6 +145,78 @@ ontology
 				["at0009"] = <
 					text = <"Device">
 					description = <"Details of the device used to measure the temperature">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"درجة الحرارة">
+					description = <"قياس درجة حرارة شيئ معيَّن">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"إحدى الوقائع">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"*Single(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"درجة الحرارة">
+					description = <"درجة الحرارة التي تم قياسها للشيئ">
+				>
+				["at0006"] = <
+					text = <"الشيئ">
+					description = <"عرِّف الشيئ الذي يتم قياس درجة حرارته">
+				>
+				["at0007"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0009"] = <
+					text = <"الجهاز (الجهيزة) - عنقود">
+					description = <"تفاصيل عن الجهاز (الجهيزة) المستخدمة في قياس درجة الحرارة">
+				>
+			>
+		>
+		["eu"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tenperatura">
+					description = <"Objektu espezifiko baten tenperatura neurketa.">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Single(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"Tenperatura">
+					description = <"Objetuaren neurtutako tenperatura.">
+				>
+				["at0006"] = <
+					text = <"*Object(en)">
+					description = <"*Identify the object for which the temperature is being measured.(en)">
+				>
+				["at0007"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0009"] = <
+					text = <"Tresna">
+					description = <"Tenperatura neurketa egiteko erabili den tresnaren inguruko xehetasunak.">
 				>
 			>
 		>

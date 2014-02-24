@@ -1,0 +1,370 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-INSTRUCTION.written_order_vaccination_suspension.v1
+
+concept
+	[at0000]	-- Odločba za opustitev cepljenja
+language
+	original_language = <[ISO_639-1::sl]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*(sl)">
+			use = <"*(sl)">
+			misuse = <"*(sl)">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Zdravnik podatke o opustitvi cepljenja vpiše v Register cepljenih oseb in neželenih učinkov po cepljenju, po tem, ko prejme odločbo o opustitvi cepljenja z Ministrstva za zdravje RS. Podatke odločbe lahko vnese tudi komisija MZ.
+
+Vnaša se tako pozitivne odločbe kot negativno rešene vloge. Že vneseno odločbo je možno tudi ažurirati, saj je možna tudi sprememba statusa vloge – kadar proti zavrnjeni vlogi poteka postopek, se lahko spremeni status na 'v postopku tožbe'. Ta podatek je za cepitelja ali/in za inšpekcijo pomemben.
+
+Odločba je trenutno lahko samo v statusu »veljavno« in »v postopku tožbe«. Status veljavno se avtomatsko vpiše, ko zdravnik vnese podatke odločbe. Status »v postopku tožbe« pa lahko določi le Komisja MZ.
+">
+			use = <"Uporablja se za vpis podatkov o odločbi za opustitev cepljenja.">
+			keywords = <"odločba", "opustitev cepljenja", "cepljenje">
+			misuse = <"Se ne uporablja za vpisovanje podatkov vloge za opustitev cepljenja.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"8619DB08476406C77920244F97347B45">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {	-- Odločba za opustitev cepljenja
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0002] occurrences matches {0..1} matches {	-- Trenutna aktivnost
+				description matches {
+					ITEM_TREE[at0003] matches {	-- *Tree(sl)
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- Datum odločbe o opustitvi cepljenja
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Številka odločbe o opustitvi cepljenja
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0022] occurrences matches {0..1} matches {	-- Status odločbe o opustitvi cepljenja
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0025, 	-- veljavno
+											at0026]	-- v postopku tožbe
+										}
+									}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Razlog za opustitev cepljenja
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0007, 	-- alergija na sestavine cepiva
+											at0008, 	-- resen neželen učinek cepiva po prehodnem odmerku cepiva
+											at0009, 	-- bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem
+											at0010, 	-- drugo
+											at0011]	-- neznano
+										}
+									}
+								}
+							}
+							CLUSTER[at0033] occurrences matches {1..*} matches {	-- Opustitev cepljenja
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Tip opustitve cepljenja
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0017, 	-- začasno
+													at0018, 	-- trajno
+													at0019]	-- zavrnjeno
+												}
+											}
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Datum opustitve cepljenja
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Trajanje opustitve cepljenja 
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Opustitev cepljenja z določenim cepivom
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0002]}		-- *New constraint(en)
+											}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Opustitev cepljenja proti bolezni
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0001]}		-- *New constraint(en)
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"MKB", "CBZ">
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Odločba za opustitev cepljenja(sl)">
+					description = <"*Vnos podatkov o odločbi za opustitev cepljenja(sl)">
+				>
+				["at0002"] = <
+					text = <"*Trenutna aktivnost(sl)">
+					description = <"*Trenutna aktivnost(sl)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Datum  odločbe o opustitvi cepljenja(sl)">
+					description = <"*datum  odločbe o opustitvi cepljenja(sl)">
+				>
+				["at0005"] = <
+					text = <"*Številka odločbe o opustitvi cepljenja(sl)">
+					description = <"*številka odločbe o opustitvi cepljenja(sl)">
+				>
+				["at0006"] = <
+					text = <"*Razlog za opustitev cepljenja(sl)">
+					description = <"***(sl)(sl)">
+				>
+				["at0007"] = <
+					text = <"*1 - alergija na sestavine cepiva(sl)">
+					description = <"*1 - alergija na sestavine cepiva(sl)">
+				>
+				["at0008"] = <
+					text = <"*2 - resen neželen učinek cepiva po prehodnem odmerku cepiva(sl)">
+					description = <"*2 - resen neželen učinek cepiva po prehodnem odmerku cepiva(sl)">
+				>
+				["at0009"] = <
+					text = <"*3 - bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem(sl)">
+					description = <"*3 - bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem(sl)">
+				>
+				["at0010"] = <
+					text = <"*4 - drugo(sl)">
+					description = <"*4 - drugo(sl)">
+				>
+				["at0011"] = <
+					text = <"*9 - neznano(sl)">
+					description = <"*9 - neznano(sl)">
+				>
+				["at0012"] = <
+					text = <"*Opustitev cepljenja proti bolezni(sl)">
+					description = <"*Opustitev cepljenja proti bolezni(sl)">
+				>
+				["at0013"] = <
+					text = <"*Opustitev cepljenja z določenim cepivom(sl)">
+					description = <"*Opustitev cepljenja z določenim cepivom(sl)">
+				>
+				["at0014"] = <
+					text = <"*Trajanje opustitve cepljenja (sl)">
+					description = <"*Trajanje opustitve cepljenja (sl)">
+				>
+				["at0016"] = <
+					text = <"*Tip opustitve cepljenja(sl)">
+					description = <"*Tip opustitve cepljenja(sl)">
+				>
+				["at0017"] = <
+					text = <"*Začasno(sl)">
+					description = <"*Začasna opustitev cepljenja(sl)">
+				>
+				["at0018"] = <
+					text = <"*Stalna(sl)">
+					description = <"*Stalna opustitev cepljenja(sl)">
+				>
+				["at0019"] = <
+					text = <"*Zavrnjeno(sl)">
+					description = <"*Opustitev cepljenja je zavrnjena(sl)">
+				>
+				["at0022"] = <
+					text = <"*New element(sl)">
+					description = <"**(sl)">
+				>
+				["at0025"] = <
+					text = <"*1 - veljavno(sl)">
+					description = <"*veljavno(sl)">
+				>
+				["at0026"] = <
+					text = <"*2 - v postopku tožbe(sl)">
+					description = <"*v postopku tožbe(sl)">
+				>
+				["at0033"] = <
+					text = <"*New cluster(sl)">
+					description = <"**(sl)">
+				>
+				["at0036"] = <
+					text = <"*Datum opustitve cepljenja(sl)">
+					description = <"*Datum opustitve cepljenja s posameznim cepivom ali proti posamezni bolezni(sl)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Odločba za opustitev cepljenja">
+					description = <"Vnos podatkov o odločbi za opustitev cepljenja">
+				>
+				["at0002"] = <
+					text = <"Trenutna aktivnost">
+					description = <"Trenutna aktivnost">
+				>
+				["at0003"] = <
+					text = <"*Tree(sl)">
+					description = <"*@ internal @(sl)">
+				>
+				["at0004"] = <
+					text = <"Datum odločbe o opustitvi cepljenja">
+					description = <"Datum odločbe o opustitvi cepljenja">
+				>
+				["at0005"] = <
+					text = <"Številka odločbe o opustitvi cepljenja">
+					description = <"Številka odločbe o opustitvi cepljenja">
+				>
+				["at0006"] = <
+					text = <"Razlog za opustitev cepljenja">
+					description = <"**(sl)">
+				>
+				["at0007"] = <
+					text = <"alergija na sestavine cepiva">
+					description = <"alergija na sestavine cepiva">
+				>
+				["at0008"] = <
+					text = <"resen neželen učinek cepiva po prehodnem odmerku cepiva">
+					description = <"resen neželen učinek cepiva po prehodnem odmerku cepiva">
+				>
+				["at0009"] = <
+					text = <"bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem">
+					description = <"bolezen ali zdravstveno stanje, ki je nezdružljivo s cepljenjem">
+				>
+				["at0010"] = <
+					text = <"drugo">
+					description = <"drugo">
+				>
+				["at0011"] = <
+					text = <"neznano">
+					description = <"neznano">
+				>
+				["at0012"] = <
+					text = <"Opustitev cepljenja proti bolezni">
+					description = <"Opustitev cepljenja proti bolezni">
+				>
+				["at0013"] = <
+					text = <"Opustitev cepljenja z določenim cepivom">
+					description = <"Opustitev cepljenja z določenim cepivom">
+				>
+				["at0014"] = <
+					text = <"Trajanje opustitve cepljenja ">
+					description = <"Trajanje opustitve cepljenja ">
+				>
+				["at0016"] = <
+					text = <"Tip opustitve cepljenja">
+					description = <"Tip opustitve cepljenja">
+				>
+				["at0017"] = <
+					text = <"začasno">
+					description = <"začasna opustitev cepljenja">
+				>
+				["at0018"] = <
+					text = <"trajno">
+					description = <"trajna opustitev cepljenja">
+				>
+				["at0019"] = <
+					text = <"zavrnjeno">
+					description = <"opustitev cepljenja je zavrnjena">
+				>
+				["at0022"] = <
+					text = <"Status odločbe o opustitvi cepljenja">
+					description = <"Status odločbe o opustitvi cepljenja">
+				>
+				["at0025"] = <
+					text = <"veljavno">
+					description = <"veljavno">
+				>
+				["at0026"] = <
+					text = <"v postopku tožbe">
+					description = <"v postopku tožbe">
+				>
+				["at0033"] = <
+					text = <"Opustitev cepljenja">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"Datum opustitve cepljenja">
+					description = <"Datum opustitve cepljenja s posameznim cepivom ali proti posamezni bolezni">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"any_immunisable_disease">
+					description = <"Any disease for which a vaccine exists.">
+				>
+				["ac0002"] = <
+					text = <"any_vaccination">
+					description = <"*">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["ac0001"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+				["ac0002"] = <
+					text = <"*New constraint(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>
+	constraint_bindings = <
+		["CBZ"] = <
+			items = <
+				["ac0002"] = <terminology:CBZ/2?subset=vaccination>
+			>
+		>
+		["MKB"] = <
+			items = <
+				["ac0001"] = <terminology:MKB/10>
+			>
+		>
+	>

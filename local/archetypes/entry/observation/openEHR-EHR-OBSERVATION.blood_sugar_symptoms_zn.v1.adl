@@ -1,0 +1,501 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.blood_sugar_symptoms_zn.v1
+
+concept
+	[at0000]	-- Assessment of symptoms of high or low blood sugar 
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For nursing assessment of symptoms that may indicate hypoglycemia or hyperglycemia.">
+			use = <"For nursing assessment of symptoms that indicate to hypoglycemia or hyperglycemia. 
+Usually used together with nursing assessment of blood sugar lavel with testing strips.">
+			keywords = <"blood", "blood sugar", "sugar", "glucose", " hypoglycemia ", "hiperglycemia">
+			misuse = <"Do not use for laboratory assessment of symptoms for hypoglycemia or hyperglycemia. ">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*For nursing assessment of symptoms that may indicate hypoglycemia or hyperglycemia.(en)">
+			use = <"*For nursing assessment of symptoms that indicate to hypoglycemia or hyperglycemia. 
+Usually used together with nursing assessment of blood sugar lavel with testing strips.(en)">
+			keywords = <"*blood(en)", "*blood sugar(en)", "*sugar(en)", "*glucose(en)", "* hypoglycemia (en)", "*hiperglycemia(en)">
+			misuse = <"*Do not use for laboratory assessment of symptoms for hypoglycemia or hyperglycemia. (en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E8DDF84B5AD3411B828B6A3B2F0570A9">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Assessment of symptoms of high or low blood sugar 
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Symptoms of hypo or hyperglycemia
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Hunger
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Irritability
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Extreme thirst
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Stomach sickness
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Dizziness
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Headache
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Frequent urination
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Ear ringing
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Anxiety
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Weakness
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {	-- Dry skin
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Sweating
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Impaired vision
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {	-- Sleepiness
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Shaking
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {	-- Increased heart rate
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Nausea
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Additional comments
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {	-- Hipoglycemia
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..*} matches {	-- Date of hypoglycemia
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Hyperglycemia
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..*} matches {	-- Date of hyperglycemia
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {	-- Kidney problems
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..*} matches {	-- Date of kidny problem
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {	-- Eyes problem
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..*} matches {	-- Date of eyes problem
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Assessment of symptoms of high or low blood sugar ">
+					description = <"Assessment of symptoms of high or low blood sugar. ">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @ ">
+				>
+				["at0004"] = <
+					text = <"Symptoms of hypo or hyperglycemia">
+					description = <"Symptoms that indicates hypo or hyperglycemia at pacient">
+				>
+				["at0005"] = <
+					text = <"Hunger">
+					description = <"Patient feels a big hunger">
+				>
+				["at0006"] = <
+					text = <"Irritability">
+					description = <"Patient feels irritability">
+				>
+				["at0007"] = <
+					text = <"Extreme thirst">
+					description = <"Patient feels extreme thirst">
+				>
+				["at0008"] = <
+					text = <"Stomach sickness">
+					description = <"Patient feels stomach sickness">
+				>
+				["at0009"] = <
+					text = <"Dizziness">
+					description = <"Patient feels a dizziness">
+				>
+				["at0010"] = <
+					text = <"Headache">
+					description = <"Patient feels headache">
+				>
+				["at0011"] = <
+					text = <"Frequent urination">
+					description = <"Patient has frequent urination">
+				>
+				["at0012"] = <
+					text = <"Ear ringing">
+					description = <"Patient feels ear ringing">
+				>
+				["at0013"] = <
+					text = <"Anxiety">
+					description = <"Patient feels anxiety">
+				>
+				["at0014"] = <
+					text = <"Weakness">
+					description = <"Patient feels weakness">
+				>
+				["at0015"] = <
+					text = <"Dry skin">
+					description = <"Patient has dry skin">
+				>
+				["at0016"] = <
+					text = <"Sweating">
+					description = <"Patient sweats excessively
+">
+				>
+				["at0017"] = <
+					text = <"Impaired vision">
+					description = <"Patient has  impaired vision">
+				>
+				["at0018"] = <
+					text = <"Sleepiness">
+					description = <"Patient feels sleepiness">
+				>
+				["at0019"] = <
+					text = <"Shaking">
+					description = <"Patient shakes">
+				>
+				["at0020"] = <
+					text = <"Increased heart rate">
+					description = <"Patient has fast heartbeat">
+				>
+				["at0021"] = <
+					text = <"Nausea">
+					description = <"Patient feels nausea">
+				>
+				["at0022"] = <
+					text = <"Additional comments">
+					description = <"Additional comments of nurse regarding symptoms">
+				>
+				["at0023"] = <
+					text = <"Hipoglycemia">
+					description = <"If hypoglychemia accured">
+				>
+				["at0024"] = <
+					text = <"Date of hypoglycemia">
+					description = <"Date when hypoglychemia occured">
+				>
+				["at0025"] = <
+					text = <"Hyperglycemia">
+					description = <"If hyperglycemia accured?">
+				>
+				["at0026"] = <
+					text = <"Date of hyperglycemia">
+					description = <"Date when hyperglychemia occured">
+				>
+				["at0027"] = <
+					text = <"Kidney problems">
+					description = <"If kidney problems occured?">
+				>
+				["at0028"] = <
+					text = <"Date of kidny problem">
+					description = <"Date when kidny problems occured">
+				>
+				["at0029"] = <
+					text = <"Eyes problem">
+					description = <"If eyes problems occured?">
+				>
+				["at0030"] = <
+					text = <"Date of eyes problem">
+					description = <"Date when eyes problem occured">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Assessment of symptoms of high or low blood sugar (en)">
+					description = <"*Assessment of symptoms of high or low blood sugar. (en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @ (en)">
+				>
+				["at0004"] = <
+					text = <"*Symptoms of hypo or hyperglycemia(en)">
+					description = <"*Symptoms that indicates hypo or hyperglycemia at pacient(en)">
+				>
+				["at0005"] = <
+					text = <"*Hunger(en)">
+					description = <"*Patient feels a big hunger(en)">
+				>
+				["at0006"] = <
+					text = <"*Irritability(en)">
+					description = <"*Patient feels irritability(en)">
+				>
+				["at0007"] = <
+					text = <"*Extreme thirst(en)">
+					description = <"*Patient feels extreme thirst(en)">
+				>
+				["at0008"] = <
+					text = <"*Stomach sickness(en)">
+					description = <"*Patient feels stomach sickness(en)">
+				>
+				["at0009"] = <
+					text = <"*Dizziness(en)">
+					description = <"*Patient feels a dizziness(en)">
+				>
+				["at0010"] = <
+					text = <"*Headache(en)">
+					description = <"*Patient feels headache(en)">
+				>
+				["at0011"] = <
+					text = <"*Frequent urination(en)">
+					description = <"*Patient has frequent urination(en)">
+				>
+				["at0012"] = <
+					text = <"*Ear ringing(en)">
+					description = <"*Patient feels ear ringing(en)">
+				>
+				["at0013"] = <
+					text = <"*Anxiety(en)">
+					description = <"*Patient feels anxiety(en)">
+				>
+				["at0014"] = <
+					text = <"*Weakness(en)">
+					description = <"*Patient feels weakness(en)">
+				>
+				["at0015"] = <
+					text = <"*Dry skin(en)">
+					description = <"*Patient has dry skin(en)">
+				>
+				["at0016"] = <
+					text = <"*Sweating(en)">
+					description = <"*Patient sweats excessively
+(en)">
+				>
+				["at0017"] = <
+					text = <"*Impaired vision(en)">
+					description = <"*Patient has  impaired vision(en)">
+				>
+				["at0018"] = <
+					text = <"*Sleepiness(en)">
+					description = <"*Patient feels sleepiness(en)">
+				>
+				["at0019"] = <
+					text = <"*Shaking(en)">
+					description = <"*Patient shakes(en)">
+				>
+				["at0020"] = <
+					text = <"*Increased heart rate(en)">
+					description = <"*Patient has fast heartbeat(en)">
+				>
+				["at0021"] = <
+					text = <"*Nausea(en)">
+					description = <"*Patient feels nausea(en)">
+				>
+				["at0022"] = <
+					text = <"*Additional comments(en)">
+					description = <"*Additional comments of nurse regarding symptoms(en)">
+				>
+				["at0023"] = <
+					text = <"*Hipoglycemia(en)">
+					description = <"*If hypoglychemia accured(en)">
+				>
+				["at0024"] = <
+					text = <"*Date of hypoglycemia(en)">
+					description = <"*Date when hypoglychemia occured(en)">
+				>
+				["at0025"] = <
+					text = <"*Hyperglycemia(en)">
+					description = <"*If hyperglycemia accured?(en)">
+				>
+				["at0026"] = <
+					text = <"*Date of hyperglycemia(en)">
+					description = <"*Date when hyperglychemia occured(en)">
+				>
+				["at0027"] = <
+					text = <"*Kidney problems(en)">
+					description = <"*If kidney problems occured?(en)">
+				>
+				["at0028"] = <
+					text = <"*Date of kidny problem(en)">
+					description = <"*Date when kidny problems occured(en)">
+				>
+				["at0029"] = <
+					text = <"*Eyes problem(en)">
+					description = <"*If eyes problems occured?(en)">
+				>
+				["at0030"] = <
+					text = <"*Date of eyes problem(en)">
+					description = <"*Date when eyes problem occured(en)">
+				>
+			>
+		>
+	>

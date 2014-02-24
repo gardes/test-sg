@@ -1,0 +1,3993 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.pregnancy_md.v1
+
+concept
+	[at0000]	-- Maternal pregnancy
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["email"] = <"sam.heard@oceaninformatics.biz">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Eine Zusammenfassung der Schwangerschaft. Beinhaltet Zustandsattribute, die einer Software ermöglichen zu ermitteln, ob die Schwangerschaft noch aktuell ist, das Kind lebensfähig ist und gestillt wird.">
+			use = <"*">
+			keywords = <"stillen", "Wehen">
+			misuse = <"*">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A summary statement about a pregnancy. It includes a state attribute which allows software to test if the pregnancy is still active, viable or breast feeding is taking place.">
+			use = <"">
+			keywords = <"breast feeding", "labour">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"5591904E6484FFBB3C11F4A205C4628B">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Maternal pregnancy
+		subject matches {
+			PARTY_RELATED matches {
+				relationship matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::10]}
+					}
+				}
+			}
+		}
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0458] occurrences matches {0..1} matches {	-- Significant family history
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0459] occurrences matches {0..1} matches {	-- Family issue
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0478, 	-- No significant family history
+											at0461, 	-- Twins in the family
+											at0462, 	-- Congenital anomaly
+											at0463, 	-- Hypertension
+											at0464]	-- Diabetes mellitus
+										}
+									}
+								}
+							}
+							ELEMENT[at0460] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0465] occurrences matches {0..*} matches {	-- Gynaecological history
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0466] occurrences matches {0..1} matches {	-- Gynaecological issue
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0468, 	-- No significant history
+											at0469, 	-- Cone biopsy - classic technique
+											at0470, 	-- Cone biopsy - non-classic technique
+											at0471, 	-- Uterine anomaly
+											at0472, 	-- Uterine myomectomy
+											at0473, 	-- Uterine anomaly procedure  - Classic technique
+											at0474, 	-- Hysteroscopic septal resection
+											at0475, 	-- Adnexal surgery
+											at0476, 	-- Previous caesarian section
+											at0477]	-- Menstrual irregularity
+										}
+									}
+								}
+							}
+							ELEMENT[at0467] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0108] occurrences matches {0..1} matches {	-- Maternal age
+						value matches {
+							DV_DURATION matches {
+								value matches {PY/|>=P0Y|}
+							}
+						}
+					}
+					ELEMENT[at0033] occurrences matches {0..1} matches {	-- Number of previous pregnancies
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					CLUSTER[at0437] occurrences matches {0..*} matches {	-- Abortions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0032] occurrences matches {0..1} matches {	-- Number of abortions
+								value matches {
+									DV_COUNT matches {
+										magnitude matches {|>=0|}
+									}
+								}
+							}
+							ELEMENT[at0438] occurrences matches {0..1} matches {	-- Type of abortion
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0439, 	-- Spontaneous
+											at0440]	-- Artificial
+										}
+									}
+								}
+							}
+							ELEMENT[at0141] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0114] occurrences matches {0..*} matches {	-- Medication during pregnancy
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0116] occurrences matches {0..1} matches {	-- Medication name
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0352, 	-- None
+											at0353, 	-- Folic Acid
+											at0354, 	-- Vitamins
+											at0355, 	-- Iron
+											at0356, 	-- Antispasmodics
+											at0357, 	-- Antibiotics
+											at0358, 	-- Tocolytic - Magnesium Sulphate
+											at0359, 	-- Tocolytic - Beta-2-agonist
+											at0360, 	-- Nitroglycerin
+											at0361, 	-- Antihypertensives
+											at0362, 	-- Anticonvulsants
+											at0363, 	-- Gestogen
+											at0364, 	-- Dexamethasone
+											at0365, 	-- Thyroid replacement
+											at0366, 	-- Anti-thyroid medication
+											at0367, 	-- Anticoagulants
+											at0368, 	-- Insulin
+											at0369, 	-- Aspirin - 100mg
+											at0370, 	-- Vaginal
+											at0371, 	-- Diet
+											at0372, 	-- Alcohol
+											at0373, 	-- Drugs
+											at0374, 	-- Rh0(D) Immunoglobulin
+											at0489]	-- Other
+										}
+									}
+								}
+							}
+							ELEMENT[at0117] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0122] occurrences matches {0..1} matches {	-- Fetal movement
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0121] occurrences matches {0..1} matches {	-- Fetal movement felt
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0124] occurrences matches {0..1} matches {	-- Gestation at first movement
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0123] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0111] occurrences matches {0..*} matches {	-- Pre-natal screening
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0120] occurrences matches {0..1} matches {	-- Pre-natal test name
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0425, 	-- THT - Downs screening
+											at0426, 	-- Nuchal translucency
+											at0427]	-- Cervical length
+										}
+									}
+								}
+							}
+							ELEMENT[at0136] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0054] occurrences matches {0..*} matches {	-- Pre-partum issues
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0109] occurrences matches {0..1} matches {	-- Issue
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0479] occurrences matches {0..1} matches {	-- Perinatal investigations
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0480] occurrences matches {0..1} matches {	-- Investigations performed
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0481] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0211] occurrences matches {0..1} matches {	-- Pre-partum interventions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0212] occurrences matches {0..1} matches {	-- Intervention
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0343, 	-- No relevant interventions
+											at0344, 	-- Early amniocentesis
+											at0345, 	-- Late amniocentesis
+											at0346, 	-- Chorionic Biopsy
+											at0347, 	-- Placental centesis
+											at0348, 	-- Cordal centesis
+											at0349, 	-- Intrauterine Foetal Therapy
+											at0350, 	-- Foeticide
+											at0351]	-- Removal of products
+										}
+									}
+								}
+							}
+							ELEMENT[at0213] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0038] occurrences matches {0..*} matches {	-- Labour or delivery
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0042] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0073] occurrences matches {0..1} matches {	-- Duration of labour
+								value matches {
+									DV_DURATION matches {
+										value matches {PDTHM/|>=PT0H|}
+									}
+								}
+							}
+							CLUSTER[at0039] occurrences matches {0..1} matches {	-- Onset
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Mode
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0223, 	-- Spontaneous contractions
+													at0224, 	-- Spontaneous with ruptured membranes
+													at0225, 	-- Induction with PGE2- local
+													at0226, 	-- Induction with PGE2-V Infusion
+													at0227, 	-- Induction by amniotomy
+													at0228, 	-- Induced by amniotomy and oxytocin administration
+													at0229, 	-- Elective Caesarean section
+													at0230]	-- Bleeding
+												}
+											}
+										}
+									}
+									ELEMENT[at0125] occurrences matches {0..1} matches {	-- Reason for induction
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0041] occurrences matches {0..1} matches {	-- Time of onset
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0043] occurrences matches {0..1} matches {	-- Rupture of membranes
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0044] occurrences matches {0..1} matches {	-- Mode
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0045, 	-- Spontaneous
+													at0047, 	-- Amniotomy
+													at0428, 	-- Caesarian section
+													at0429]	-- Unknown
+												}
+											}
+										}
+									}
+									ELEMENT[at0139] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {	-- Time of rupture
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0072] occurrences matches {0..1} matches {	-- Duration of rupture
+										value matches {
+											DV_DURATION matches {
+												value matches {PDTHM}
+											}
+										}
+									}
+									ELEMENT[at0137] occurrences matches {0..*} matches {	-- Amniotic fluid features
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0319, 	-- Clear
+													at0320, 	-- Milky
+													at0321, 	-- Meconium
+													at0322, 	-- Polyhydramnios
+													at0323, 	-- Oligohydramnios
+													at0324]	-- Blood stained
+												}
+											}
+										}
+									}
+									ELEMENT[at0092] occurrences matches {0..1} matches {	-- Description of amniotic fluid
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0287] occurrences matches {0..*} matches {	-- Foetal monitoring
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0288] occurrences matches {0..1} matches {	-- Mode
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0483, 	-- No foetal monitoring
+													at0289, 	-- External CTG - normal
+													at0290, 	-- External CTG - abnormal
+													at0291, 	-- Electrode CTG - normal
+													at0292, 	-- Electrode CTG - abnormal
+													at0294, 	-- Ultrasound
+													at0293]	-- Scalp pH
+												}
+											}
+										}
+									}
+									ELEMENT[at0295] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0296] occurrences matches {0..*} matches {	-- Medication
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0297] occurrences matches {0..1} matches {	-- Medication type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0298, 	-- Oxytocin
+													at0299, 	-- Antihypertensive
+													at0300, 	-- Antibiotic
+													at0302, 	-- Tocolytic
+													at0301]	-- Blood transfusion
+												}
+											}
+										}
+									}
+									ELEMENT[at0303] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0262] occurrences matches {0..*} matches {	-- Analgesia
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0263] occurrences matches {0..1} matches {	-- Analgesic type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0486, 	-- None
+													at0265, 	-- Oral
+													at0267, 	-- Inhaled
+													at0266]	-- Epidural
+												}
+											}
+										}
+									}
+									ELEMENT[at0264] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0268] occurrences matches {0..*} matches {	-- Anaesthesia
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0269] occurrences matches {0..1} matches {	-- Anaesthetic type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0487, 	-- None
+													at0270, 	-- General
+													at0271, 	-- Epidural
+													at0272, 	-- Spinal
+													at0273]	-- Local
+												}
+											}
+										}
+									}
+									ELEMENT[at0274] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0128] occurrences matches {0..*} matches {	-- Intra-partum complications
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0126] occurrences matches {0..1} matches {	-- Intra-partum complication
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0484, 	-- No complications
+													at0430, 	-- Abnormal cervical dilatation
+													at0431, 	-- Abnormal presenting fetal part
+													at0432, 	-- Fetal distress
+													at0433, 	-- Maternal fever
+													at0434, 	-- Amnionitis
+													at0435, 	-- Uterine hypertonus
+													at0436]	-- Shoulder dystocia
+												}
+											}
+										}
+									}
+									ELEMENT[at0127] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0129] occurrences matches {0..*} matches {	-- Placenta
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0130] occurrences matches {0..1} matches {	-- Placental abnormality
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0242, 	-- None
+													at0243, 	-- Abruption
+													at0244, 	-- Placenta praevia
+													at0245, 	-- Adherent
+													at0246, 	-- Defective
+													at0247, 	-- Calcified
+													at0248, 	-- Infarcted
+													at0490]	-- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0131] occurrences matches {0..1} matches {	-- Clinical description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0011] occurrences matches {0..*} matches {	-- Offspring
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0080] occurrences matches {0..1} matches {	-- Outcome
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0081, 	-- Live birth
+													at0082, 	-- Neonatal death
+													at0083, 	-- Still birth
+													at0084, 	-- Miscarriage
+													at0085]	-- Termination
+												}
+											}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Name
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[local::]}
+											}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date of delivery
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {	-- Sex
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0028, 	-- Boy
+													at0029, 	-- Girl
+													at0030]	-- Indeterminant
+												}
+											}
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Mode of birth
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0283, 	-- Vaginal
+													at0284, 	-- Caesarian section - elective
+													at0285, 	-- Caesarian section - urgent
+													at0286]	-- Caesarian section - bleeding
+												}
+											}
+										}
+									}
+									ELEMENT[at0094] occurrences matches {0..1} matches {	-- Presenting part at birth
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0450, 	-- Vertex
+													at0451, 	-- Brow
+													at0452, 	-- Occipital
+													at0453, 	-- Facial
+													at0454, 	-- Frank breech
+													at0455, 	-- Complete breech
+													at0456, 	-- Footling breach
+													at0457]	-- Transverse
+												}
+											}
+										}
+									}
+									ELEMENT[at0057] occurrences matches {0..1} matches {	-- Description of birth
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0103] occurrences matches {0..*} matches {	-- Intervention
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0061] occurrences matches {0..1} matches {	-- Intervention name
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0441, 	-- Caesarean section
+															at0442, 	-- Forceps
+															at0443, 	-- Vacuum
+															at0444, 	-- Bracht-Covjanov
+															at0445, 	-- Veit-Smellie 
+															at0446, 	-- Other breech extraction
+															at0447, 	-- Arm rescue procedure
+															at0448, 	-- Head extraction
+															at0449]	-- Foetal extraction
+														}
+													}
+												}
+											}
+											ELEMENT[at0067] occurrences matches {0..1} matches {	-- Status
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0068, 	-- Emergency
+															at0069]	-- Elective
+														}
+													}
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0076] occurrences matches {0..1} matches {	-- Successful
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+											ELEMENT[at0066] occurrences matches {0..1} matches {	-- Indication
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0308, 	-- Irregularities of contractions
+															at0309, 	-- Delay in the cervix dilatation
+															at0310, 	-- Cephalo-pelvic disproportion
+															at0311, 	-- Acute foetal distress
+															at0312, 	-- Chronic foetal distress
+															at0313, 	-- Foetal irregularities
+															at0314, 	-- Uterine surgery
+															at0315, 	-- Abnormal presentation
+															at0316, 	-- Bleeding
+															at0317, 	-- Maternal medical/obstetric indication
+															at0318, 	-- Previous caeserian
+															at0485]	-- No indication
+														}
+													}
+												}
+											}
+											ELEMENT[at0077] occurrences matches {0..1} matches {	-- Description
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {	-- Estimated gestational age
+										value matches {
+											DV_DURATION matches {
+												value matches {PWD/|>=P0W|}
+											}
+										}
+									}
+									ELEMENT[at0086] occurrences matches {0..1} matches {	-- Details of the offspring
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0257] occurrences matches {0..1} matches {	-- Umbilical cord
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0260] occurrences matches {0..*} matches {	-- Cord issue
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0282, 	-- None
+															at0275, 	-- Nuchal cord
+															at0276, 	-- Abnormally short cord
+															at0277, 	-- Abnormally long cord
+															at0278, 	-- Prolapse
+															at0279, 	-- Rupture
+															at0280, 	-- Vascular anomaly
+															at0281]	-- Knot
+														}
+													}
+												}
+											}
+											ELEMENT[at0258] occurrences matches {0..1} matches {	-- Clinical description
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0087] occurrences matches {0..1} matches {	-- Fetal or neonatal complications
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0134] occurrences matches {0..1} matches {	-- Resuscitation required
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+											ELEMENT[at0135] occurrences matches {0..1} matches {	-- Duration of resuscitation
+												value matches {
+													DV_DURATION matches {
+														value matches {PTHMS}
+													}
+												}
+											}
+											ELEMENT[at0488] occurrences matches {0..1} matches {	-- Clinical description
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Maternal pregnancy(en)">
+					description = <"*Recordings related to a single human pregnancy which may include more than one fetus or offspring(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Nachkomme">
+					description = <"Informationen über das Baby oder den Fötus">
+				>
+				["at0012"] = <
+					text = <"Name">
+					description = <"Der Name des Kindes">
+				>
+				["at0014"] = <
+					text = <"Datum der Niederkunft">
+					description = <"Das Geburtsdatum dieses Babys oder dieses Fötus">
+				>
+				["at0016"] = <
+					text = <"Geburtsmodus">
+					description = <"Das bedeutet, wie das Baby geboren wurde">
+				>
+				["at0026"] = <
+					text = <"geschätztes Gestationsalter">
+					description = <"Das geschätzte Alter des Babys von der letzten Periode bis zur Geburt">
+				>
+				["at0027"] = <
+					text = <"*Sex(en)">
+					description = <"*The gender of the offspring(en)">
+				>
+				["at0028"] = <
+					text = <"Junge">
+					description = <"Das Baby ist ein Junge">
+				>
+				["at0029"] = <
+					text = <"Mädchen">
+					description = <"Das Baby ist ein Mädchen">
+				>
+				["at0030"] = <
+					text = <"Unbestimmt">
+					description = <"Das Geschlecht des Babys oder des Fötus kann zurzeit nicht bestimmt werden ">
+				>
+				["at0032"] = <
+					text = <"*Number of abortions(en)">
+					description = <"*The number of abortions of pregnancy prior to this pregnancy(en)">
+				>
+				["at0033"] = <
+					text = <"*Number of previous pregnancies(en)">
+					description = <"*The number of pregnancies prior to this pregnancy(en)">
+				>
+				["at0038"] = <
+					text = <"Wehen bei der Niederkunft">
+					description = <"Einzelheiten zu den Wehen (kann unter Umständen mehrfach vorkommen)">
+				>
+				["at0039"] = <
+					text = <"Beginn">
+					description = <"Einzelheiten zum Beginn">
+				>
+				["at0040"] = <
+					text = <"*Mode(en)">
+					description = <"*Mode of onset of labour.(en)">
+				>
+				["at0041"] = <
+					text = <"Zeitpunkt des Beginns">
+					description = <"Der Beginn der Vorwehen">
+				>
+				["at0042"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Any comments on the labour(en)">
+				>
+				["at0043"] = <
+					text = <"Blasensprung">
+					description = <"Informationen zum Blasensprung">
+				>
+				["at0044"] = <
+					text = <"*Mode(en)">
+					description = <"*The type of amniotic membrane rupture(en)">
+				>
+				["at0045"] = <
+					text = <"Spontan">
+					description = <"Beginn ohne Eingriff">
+				>
+				["at0047"] = <
+					text = <"Eihautschnitt">
+					description = <"Künstlich herbeigeführter Blasensprung">
+				>
+				["at0048"] = <
+					text = <"Zeitpunkt des Blasensprungs">
+					description = <"Der Zeitpunkt des Blasensprungs">
+				>
+				["at0054"] = <
+					text = <"*Pre-partum issues(en)">
+					description = <"*Details of pre-partum issues and complications.(en)">
+				>
+				["at0056"] = <
+					text = <"Klinische Beschreibung">
+					description = <"Klinische Beschreibung der Komplikation">
+				>
+				["at0057"] = <
+					text = <"Beschreibung der Geburt">
+					description = <"Einzelheiten zur Geburt">
+				>
+				["at0061"] = <
+					text = <"*Intervention name(en)">
+					description = <"*Type of intervention(en)">
+				>
+				["at0066"] = <
+					text = <"Anzeichen">
+					description = <"Die Anzeichen für einen Eingriff">
+				>
+				["at0067"] = <
+					text = <"Status">
+					description = <"Die Art des Eingriffs">
+				>
+				["at0068"] = <
+					text = <"Notfall">
+					description = <"Ungeplant und sich aus dem klinischen Ablauf ergebend">
+				>
+				["at0069"] = <
+					text = <"Wahlweise">
+					description = <"Im voraus geplant und vor dem Entstehen der Situation durchgeführt">
+				>
+				["at0072"] = <
+					text = <"*Duration of rupture(en)">
+					description = <"*The time between rupture of the membranes and birth(en)">
+				>
+				["at0073"] = <
+					text = <"*Duration of labour(en)">
+					description = <"*The duration of labour(en)">
+				>
+				["at0076"] = <
+					text = <"Erfolgreich">
+					description = <"Führte der Eingriff zur Geburt">
+				>
+				["at0077"] = <
+					text = <"Beschreibung">
+					description = <"Beschreibung des Eingriffs">
+				>
+				["at0080"] = <
+					text = <"Ausgang">
+					description = <"Der Ausgang der Schwangerschaft">
+				>
+				["at0081"] = <
+					text = <"Lebendgeburt">
+					description = <"Aus der Schwangerschaft ging ein lebendes Kind hervor">
+				>
+				["at0082"] = <
+					text = <"Neonataltod">
+					description = <"Das Baby wurde lebend geboren, starb aber nach weniger als 28 Tagen">
+				>
+				["at0083"] = <
+					text = <"Todgeburt">
+					description = <"Das Baby war bei der Geburt nicht am Leben">
+				>
+				["at0084"] = <
+					text = <"Fehlgeburt">
+					description = <"Der Fötus ist eine Fehlgeburt">
+				>
+				["at0085"] = <
+					text = <"Abbruch">
+					description = <"Die Schwangerschaft wurde abgebrochen">
+				>
+				["at0086"] = <
+					text = <"Einzelheiten des Nachkömmlings">
+					description = <"Informationen zum Nachkömmling">
+				>
+				["at0087"] = <
+					text = <"*Fetal or neonatal complications(en)">
+					description = <"*Grouping of neonatal complications if any(en)">
+				>
+				["at0092"] = <
+					text = <"*Description of amniotic fluid(en)">
+					description = <"*Description of the liquor during labour and delivery(en)">
+				>
+				["at0094"] = <
+					text = <"*Presenting part at birth(en)">
+					description = <"*Presenting part at birth.(en)">
+				>
+				["at0103"] = <
+					text = <"*Intervention(en)">
+					description = <"*Interventions made during birth(en)">
+				>
+				["at0108"] = <
+					text = <"*Maternal age(en)">
+					description = <"*The mother's age during pregnancy.(en)">
+				>
+				["at0109"] = <
+					text = <"*Issue(en)">
+					description = <"*Issues arising during pregnancy.(en)">
+				>
+				["at0111"] = <
+					text = <"*Pre-natal screening(en)">
+					description = <"*Details of pre-natal screeing investigations.(en)">
+				>
+				["at0114"] = <
+					text = <"*Medication during pregnancy(en)">
+					description = <"*Details of medication taken during pregnancy.(en)">
+				>
+				["at0116"] = <
+					text = <"*Medication name(en)">
+					description = <"**(en)">
+				>
+				["at0117"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of medication taken during pregnancy.(en)">
+				>
+				["at0120"] = <
+					text = <"*Pre-natal test name(en)">
+					description = <"*Pre-natal test name.(en)">
+				>
+				["at0121"] = <
+					text = <"*Fetal movement felt(en)">
+					description = <"**(en)">
+				>
+				["at0122"] = <
+					text = <"*Fetal movement(en)">
+					description = <"**(en)">
+				>
+				["at0123"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0124"] = <
+					text = <"*Gestation at first movement(en)">
+					description = <"**(en)">
+				>
+				["at0125"] = <
+					text = <"*Reason for induction(en)">
+					description = <"*The reason for inducing labour.(en)">
+				>
+				["at0126"] = <
+					text = <"*Intra-partum complication(en)">
+					description = <"*True if there were intra-partum complications.(en)">
+				>
+				["at0127"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0128"] = <
+					text = <"*Intra-partum complications(en)">
+					description = <"**(en)">
+				>
+				["at0129"] = <
+					text = <"*Placenta(en)">
+					description = <"*Details of placenta.(en)">
+				>
+				["at0130"] = <
+					text = <"*Placental abnormality(en)">
+					description = <"*Placental abnormalities identified.(en)">
+				>
+				["at0131"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of the placenta.(en)">
+				>
+				["at0134"] = <
+					text = <"*Resuscitation required(en)">
+					description = <"*Was resuscitation required?(en)">
+				>
+				["at0135"] = <
+					text = <"*Duration of resuscitation(en)">
+					description = <"*The duration of resuscitation required.(en)">
+				>
+				["at0136"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of any pre-natal screening tests performed.(en)">
+				>
+				["at0137"] = <
+					text = <"*Amniotic fluid features(en)">
+					description = <"*Features of liquor.(en)">
+				>
+				["at0139"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0141"] = <
+					text = <"*Comment(en)">
+					description = <"*Further comment on previous pregnancies.(en)">
+				>
+				["at0211"] = <
+					text = <"*Pre-partum interventions(en)">
+					description = <"*Details of pre-partum interventions.(en)">
+				>
+				["at0212"] = <
+					text = <"*Intervention(en)">
+					description = <"*Interventions performed during pregnancy.(en)">
+				>
+				["at0213"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0223"] = <
+					text = <"*Spontaneous contractions(en)">
+					description = <"*Spontaneous contractions
+(en)">
+				>
+				["at0224"] = <
+					text = <"*Spontaneous with ruptured membranes(en)">
+					description = <"*Spontaneous with ruptured membranes
+(en)">
+				>
+				["at0225"] = <
+					text = <"*Induction with PGE2- local(en)">
+					description = <"*Induction with PGE2- local
+(en)">
+				>
+				["at0226"] = <
+					text = <"*Induction with PGE2-V Infusion(en)">
+					description = <"*Induction with PGE2-V Infusion
+(en)">
+				>
+				["at0227"] = <
+					text = <"*Induction by amniotomy(en)">
+					description = <"*Induction by amniotomy.(en)">
+				>
+				["at0228"] = <
+					text = <"*Induced by amniotomy and oxytocin administration(en)">
+					description = <"*Induced by amniotomy and oxytocin administration
+(en)">
+				>
+				["at0229"] = <
+					text = <"*Elective Caesarean section(en)">
+					description = <"*Elective Caesarean section
+(en)">
+				>
+				["at0230"] = <
+					text = <"*Bleeding(en)">
+					description = <"*Bleeding
+(en)">
+				>
+				["at0242"] = <
+					text = <"*None(en)">
+					description = <"**(en)">
+				>
+				["at0243"] = <
+					text = <"*Abruption(en)">
+					description = <"**(en)">
+				>
+				["at0244"] = <
+					text = <"*Placenta praevia(en)">
+					description = <"**(en)">
+				>
+				["at0245"] = <
+					text = <"*Adherent(en)">
+					description = <"**(en)">
+				>
+				["at0246"] = <
+					text = <"*Defective(en)">
+					description = <"**(en)">
+				>
+				["at0247"] = <
+					text = <"*Calcified(en)">
+					description = <"**(en)">
+				>
+				["at0248"] = <
+					text = <"*Infarcted(en)">
+					description = <"**(en)">
+				>
+				["at0257"] = <
+					text = <"*Umbilical cord(en)">
+					description = <"**(en)">
+				>
+				["at0258"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0260"] = <
+					text = <"*Cord issue(en)">
+					description = <"*Umbilical cord issue.(en)">
+				>
+				["at0262"] = <
+					text = <"*Analgesia(en)">
+					description = <"*Details of maternal analagesia during labour.(en)">
+				>
+				["at0263"] = <
+					text = <"*Analgesic type(en)">
+					description = <"*Type of analgesia used.(en)">
+				>
+				["at0264"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0265"] = <
+					text = <"*Oral(en)">
+					description = <"**(en)">
+				>
+				["at0266"] = <
+					text = <"*Epidural(en)">
+					description = <"**(en)">
+				>
+				["at0267"] = <
+					text = <"*Inhaled(en)">
+					description = <"**(en)">
+				>
+				["at0268"] = <
+					text = <"*Anaesthesia(en)">
+					description = <"*Details of anaesthesia during labour.(en)">
+				>
+				["at0269"] = <
+					text = <"*Anaesthetic type(en)">
+					description = <"*Anaesthetic type.(en)">
+				>
+				["at0270"] = <
+					text = <"*General(en)">
+					description = <"**(en)">
+				>
+				["at0271"] = <
+					text = <"*Epidural(en)">
+					description = <"**(en)">
+				>
+				["at0272"] = <
+					text = <"*Spinal(en)">
+					description = <"**(en)">
+				>
+				["at0273"] = <
+					text = <"*Local(en)">
+					description = <"**(en)">
+				>
+				["at0274"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Details of anaesthesia.(en)">
+				>
+				["at0275"] = <
+					text = <"*Nuchal cord(en)">
+					description = <"*Nuchal cord
+ problem.(en)">
+				>
+				["at0276"] = <
+					text = <"*Abnormally short cord(en)">
+					description = <"*The umbilical cord is abnormally short.(en)">
+				>
+				["at0277"] = <
+					text = <"*Abnormally long cord(en)">
+					description = <"*The umbilical cord is abnormally long.(en)">
+				>
+				["at0278"] = <
+					text = <"*Prolapse(en)">
+					description = <"*Umbilical cord prolapse.(en)">
+				>
+				["at0279"] = <
+					text = <"*Rupture(en)">
+					description = <"*Umbilical cord rupture.(en)">
+				>
+				["at0280"] = <
+					text = <"*Vascular anomaly(en)">
+					description = <"*Vascular anomaly
+ of the umbilical cord.(en)">
+				>
+				["at0281"] = <
+					text = <"*Knot(en)">
+					description = <"*A knot in the umbilical cord.(en)">
+				>
+				["at0282"] = <
+					text = <"*None(en)">
+					description = <"*No umbilical cord abnormailities.(en)">
+				>
+				["at0283"] = <
+					text = <"*Vaginal(en)">
+					description = <"**(en)">
+				>
+				["at0284"] = <
+					text = <"*Caesarian section - elective(en)">
+					description = <"**(en)">
+				>
+				["at0285"] = <
+					text = <"*Caesarian section - urgent(en)">
+					description = <"**(en)">
+				>
+				["at0286"] = <
+					text = <"*Caesarian section - bleeding(en)">
+					description = <"**(en)">
+				>
+				["at0287"] = <
+					text = <"*Foetal monitoring(en)">
+					description = <"**(en)">
+				>
+				["at0288"] = <
+					text = <"*Mode(en)">
+					description = <"*Mode of foetal monitoring.(en)">
+				>
+				["at0289"] = <
+					text = <"*External CTG - normal(en)">
+					description = <"**(en)">
+				>
+				["at0290"] = <
+					text = <"*External CTG - abnormal(en)">
+					description = <"**(en)">
+				>
+				["at0291"] = <
+					text = <"*Electrode CTG - normal(en)">
+					description = <"**(en)">
+				>
+				["at0292"] = <
+					text = <"*Electrode CTG - abnormal(en)">
+					description = <"**(en)">
+				>
+				["at0293"] = <
+					text = <"*Scalp pH(en)">
+					description = <"**(en)">
+				>
+				["at0294"] = <
+					text = <"*Ultrasound(en)">
+					description = <"**(en)">
+				>
+				["at0295"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0296"] = <
+					text = <"*Medication(en)">
+					description = <"**(en)">
+				>
+				["at0297"] = <
+					text = <"*Medication type(en)">
+					description = <"*Type of medication given during labour.(en)">
+				>
+				["at0298"] = <
+					text = <"*Oxytocin(en)">
+					description = <"**(en)">
+				>
+				["at0299"] = <
+					text = <"*Antihypertensive(en)">
+					description = <"**(en)">
+				>
+				["at0300"] = <
+					text = <"*Antibiotic(en)">
+					description = <"**(en)">
+				>
+				["at0301"] = <
+					text = <"*Blood transfusion(en)">
+					description = <"**(en)">
+				>
+				["at0302"] = <
+					text = <"*Tocolytic(en)">
+					description = <"**(en)">
+				>
+				["at0303"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0308"] = <
+					text = <"*Irregularities of contractions(en)">
+					description = <"*Irregularities of contractions
+(en)">
+				>
+				["at0309"] = <
+					text = <"*Delay in the cervix dilatation(en)">
+					description = <"*Delay in the cervix dilatation
+(en)">
+				>
+				["at0310"] = <
+					text = <"*Cephalo-pelvic disproportion(en)">
+					description = <"*Cephalo-pelvic disproportion
+(en)">
+				>
+				["at0311"] = <
+					text = <"*Acute foetal distress(en)">
+					description = <"*Acute foetal distress
+(en)">
+				>
+				["at0312"] = <
+					text = <"*Chronic foetal distress(en)">
+					description = <"*Chronic foetal distress
+(en)">
+				>
+				["at0313"] = <
+					text = <"*Foetal irregularities(en)">
+					description = <"*Foetal irregularities
+(en)">
+				>
+				["at0314"] = <
+					text = <"*Uterine surgery(en)">
+					description = <"*Uterine surgery
+(en)">
+				>
+				["at0315"] = <
+					text = <"*Abnormal presentation(en)">
+					description = <"*Abnormal presentation
+(en)">
+				>
+				["at0316"] = <
+					text = <"*Bleeding(en)">
+					description = <"*Bleeding
+(en)">
+				>
+				["at0317"] = <
+					text = <"*Maternal medical/obstetric indication(en)">
+					description = <"*Maternal medical/obstetric indication
+(en)">
+				>
+				["at0318"] = <
+					text = <"*Previous caeserian(en)">
+					description = <"*Previous caeserian
+(en)">
+				>
+				["at0319"] = <
+					text = <"*Clear(en)">
+					description = <"**(en)">
+				>
+				["at0320"] = <
+					text = <"*Milky(en)">
+					description = <"**(en)">
+				>
+				["at0321"] = <
+					text = <"*Meconium(en)">
+					description = <"**(en)">
+				>
+				["at0322"] = <
+					text = <"*Polyhydramnios(en)">
+					description = <"**(en)">
+				>
+				["at0323"] = <
+					text = <"*Oligohydramnios(en)">
+					description = <"**(en)">
+				>
+				["at0324"] = <
+					text = <"*Blood stained(en)">
+					description = <"**(en)">
+				>
+				["at0343"] = <
+					text = <"*No relevant interventions(en)">
+					description = <"*No relevant interventions
+(en)">
+				>
+				["at0344"] = <
+					text = <"*Early amniocentesis(en)">
+					description = <"*Early amniocentesis
+(en)">
+				>
+				["at0345"] = <
+					text = <"*Late amniocentesis(en)">
+					description = <"*Late amniocentesis
+(en)">
+				>
+				["at0346"] = <
+					text = <"*Chorionic Biopsy(en)">
+					description = <"*Chorionic Biopsy
+(en)">
+				>
+				["at0347"] = <
+					text = <"*Placental centesis(en)">
+					description = <"*Placental centesis
+(en)">
+				>
+				["at0348"] = <
+					text = <"*Cordal centesis(en)">
+					description = <"*Cordal centesis
+(en)">
+				>
+				["at0349"] = <
+					text = <"*Intrauterine Foetal Therapy(en)">
+					description = <"*Intrauterine Foetal Therapy
+(en)">
+				>
+				["at0350"] = <
+					text = <"*Foeticide(en)">
+					description = <"*Foeticide
+(en)">
+				>
+				["at0351"] = <
+					text = <"*Removal of products(en)">
+					description = <"*Removal of products
+(en)">
+				>
+				["at0352"] = <
+					text = <"*None(en)">
+					description = <"*None
+(en)">
+				>
+				["at0353"] = <
+					text = <"*Folic Acid(en)">
+					description = <"*Folic Acid
+(en)">
+				>
+				["at0354"] = <
+					text = <"*Vitamins(en)">
+					description = <"*Vitamins
+(en)">
+				>
+				["at0355"] = <
+					text = <"*Iron(en)">
+					description = <"*Iron
+(en)">
+				>
+				["at0356"] = <
+					text = <"*Antispasmodics(en)">
+					description = <"*Antispasmodics
+(en)">
+				>
+				["at0357"] = <
+					text = <"*Antibiotics(en)">
+					description = <"*Antibiotics
+(en)">
+				>
+				["at0358"] = <
+					text = <"*Tocolytic - Magnesium Sulphate(en)">
+					description = <"*Tocolytic - Magnesium Sulphate
+(en)">
+				>
+				["at0359"] = <
+					text = <"*Tocolytic - Beta-2-agonist(en)">
+					description = <"*Tocolytic - Beta-2-agonist
+(en)">
+				>
+				["at0360"] = <
+					text = <"*Nitroglycerin(en)">
+					description = <"*Nitroglycerin
+(en)">
+				>
+				["at0361"] = <
+					text = <"*Antihypertensives(en)">
+					description = <"*Antihypertensives
+(en)">
+				>
+				["at0362"] = <
+					text = <"*Anticonvulsants(en)">
+					description = <"*Anticonvulsants
+(en)">
+				>
+				["at0363"] = <
+					text = <"*Gestogen(en)">
+					description = <"*Gestogen
+(en)">
+				>
+				["at0364"] = <
+					text = <"*Dexamethasone(en)">
+					description = <"*Dexamethasone
+(en)">
+				>
+				["at0365"] = <
+					text = <"*Thyroid replacement(en)">
+					description = <"*Thyroid replacement
+(en)">
+				>
+				["at0366"] = <
+					text = <"*Anti-thyroid medication(en)">
+					description = <"*Anti-thyroid medication
+(en)">
+				>
+				["at0367"] = <
+					text = <"*Anticoagulants(en)">
+					description = <"*Anticoagulants
+(en)">
+				>
+				["at0368"] = <
+					text = <"*Insulin(en)">
+					description = <"*Insulin
+(en)">
+				>
+				["at0369"] = <
+					text = <"*Aspirin - 100mg(en)">
+					description = <"*Aspirin - 100mg
+(en)">
+				>
+				["at0370"] = <
+					text = <"*Vaginal(en)">
+					description = <"*Vaginal
+(en)">
+				>
+				["at0371"] = <
+					text = <"*Diet(en)">
+					description = <"*Diet
+(en)">
+				>
+				["at0372"] = <
+					text = <"*Alcohol(en)">
+					description = <"*Alcohol
+(en)">
+				>
+				["at0373"] = <
+					text = <"*Drugs(en)">
+					description = <"*Drugs
+(en)">
+				>
+				["at0374"] = <
+					text = <"*Rh0(D) Immunoglobulin(en)">
+					description = <"*Rh0(D) Immunoglobulin
+(en)">
+				>
+				["at0425"] = <
+					text = <"*THT - Downs screening(en)">
+					description = <"**(en)">
+				>
+				["at0426"] = <
+					text = <"*Nuchal translucency(en)">
+					description = <"**(en)">
+				>
+				["at0427"] = <
+					text = <"*Cervical length(en)">
+					description = <"**(en)">
+				>
+				["at0428"] = <
+					text = <"*Caesarian section(en)">
+					description = <"**(en)">
+				>
+				["at0429"] = <
+					text = <"*Unknown(en)">
+					description = <"**(en)">
+				>
+				["at0430"] = <
+					text = <"*Abnormal cervical dilatation(en)">
+					description = <"*Abnormal cervical dilatation
+(en)">
+				>
+				["at0431"] = <
+					text = <"*Abnormal presenting fetal part(en)">
+					description = <"*Abnormal presenting fetal part
+(en)">
+				>
+				["at0432"] = <
+					text = <"*Fetal distress(en)">
+					description = <"*Fetal distress
+(en)">
+				>
+				["at0433"] = <
+					text = <"*Maternal fever(en)">
+					description = <"*Maternal fever
+(en)">
+				>
+				["at0434"] = <
+					text = <"*Amnionitis(en)">
+					description = <"*Amnionitis
+(en)">
+				>
+				["at0435"] = <
+					text = <"*Uterine hypertonus(en)">
+					description = <"*Uterine hypertonus
+(en)">
+				>
+				["at0436"] = <
+					text = <"*Shoulder dystocia(en)">
+					description = <"*Shoulder dystocia
+(en)">
+				>
+				["at0437"] = <
+					text = <"*Abortions(en)">
+					description = <"**(en)">
+				>
+				["at0438"] = <
+					text = <"*Type of abortion(en)">
+					description = <"*Type of abortion.(en)">
+				>
+				["at0439"] = <
+					text = <"*Spontaneous(en)">
+					description = <"**(en)">
+				>
+				["at0440"] = <
+					text = <"*Artificial(en)">
+					description = <"**(en)">
+				>
+				["at0441"] = <
+					text = <"*Caesarean section(en)">
+					description = <"*Caesarean section
+.(en)">
+				>
+				["at0442"] = <
+					text = <"*Forceps(en)">
+					description = <"*Forceps
+.(en)">
+				>
+				["at0443"] = <
+					text = <"*Vacuum(en)">
+					description = <"*Vacuum
+.(en)">
+				>
+				["at0444"] = <
+					text = <"*Bracht-Covjanov(en)">
+					description = <"*Bracht-Covjanov
+ procedure.(en)">
+				>
+				["at0445"] = <
+					text = <"*Veit-Smellie (en)">
+					description = <"*Veit-Smellie 
+procedure.(en)">
+				>
+				["at0446"] = <
+					text = <"*Other breech extraction(en)">
+					description = <"*Other breech extraction
+ procedure.(en)">
+				>
+				["at0447"] = <
+					text = <"*Arm rescue procedure(en)">
+					description = <"*REŠEVANJE ROČIC
+(en)">
+				>
+				["at0448"] = <
+					text = <"*Head extraction(en)">
+					description = <"*Head extraction(en)">
+				>
+				["at0449"] = <
+					text = <"*Foetal extraction(en)">
+					description = <"*Removal of products
+.(en)">
+				>
+				["at0450"] = <
+					text = <"*Vertex(en)">
+					description = <"*Vertex
+(en)">
+				>
+				["at0451"] = <
+					text = <"*Brow(en)">
+					description = <"*Brow
+(en)">
+				>
+				["at0452"] = <
+					text = <"*Occipital(en)">
+					description = <"*Occipital
+(en)">
+				>
+				["at0453"] = <
+					text = <"*Facial(en)">
+					description = <"*Facial
+(en)">
+				>
+				["at0454"] = <
+					text = <"*Frank breech(en)">
+					description = <"*Frank breech
+(en)">
+				>
+				["at0455"] = <
+					text = <"*Complete breech(en)">
+					description = <"*Complete breech
+(en)">
+				>
+				["at0456"] = <
+					text = <"*Footling breach(en)">
+					description = <"*Footling breach
+(en)">
+				>
+				["at0457"] = <
+					text = <"*Transverse(en)">
+					description = <"*Transverse(en)">
+				>
+				["at0458"] = <
+					text = <"*Significant family history(en)">
+					description = <"**(en)">
+				>
+				["at0459"] = <
+					text = <"*Family issue(en)">
+					description = <"*Issue in family history of obstetric significance.(en)">
+				>
+				["at0460"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0461"] = <
+					text = <"*Twins in the family(en)">
+					description = <"**(en)">
+				>
+				["at0462"] = <
+					text = <"*Congenital anomaly(en)">
+					description = <"**(en)">
+				>
+				["at0463"] = <
+					text = <"*Hypertension(en)">
+					description = <"**(en)">
+				>
+				["at0464"] = <
+					text = <"*Diabetes mellitus(en)">
+					description = <"**(en)">
+				>
+				["at0465"] = <
+					text = <"*Gynaecological history(en)">
+					description = <"**(en)">
+				>
+				["at0466"] = <
+					text = <"*Gynaecological issue(en)">
+					description = <"*A specific gynaecological issue or procedure.(en)">
+				>
+				["at0467"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of previous gyneacological problems and procedures.(en)">
+				>
+				["at0468"] = <
+					text = <"*No significant history(en)">
+					description = <"*
+(en)">
+				>
+				["at0469"] = <
+					text = <"*Cone biopsy - classic technique(en)">
+					description = <"**
+(en)">
+				>
+				["at0470"] = <
+					text = <"*Cone biopsy - non-classic technique(en)">
+					description = <"**
+(en)">
+				>
+				["at0471"] = <
+					text = <"*Uterine anomaly(en)">
+					description = <"*
+(en)">
+				>
+				["at0472"] = <
+					text = <"*Uterine myomectomy(en)">
+					description = <"*
+(en)">
+				>
+				["at0473"] = <
+					text = <"*Uterine anomaly procedure  - Classic technique(en)">
+					description = <"*
+(en)">
+				>
+				["at0474"] = <
+					text = <"*Hysteroscopic septal resection(en)">
+					description = <"**
+(en)">
+				>
+				["at0475"] = <
+					text = <"*Adnexal surgery(en)">
+					description = <"**
+(en)">
+				>
+				["at0476"] = <
+					text = <"*Previous caesarian section(en)">
+					description = <"**
+(en)">
+				>
+				["at0477"] = <
+					text = <"*Menstrual irregularity(en)">
+					description = <"*
+(en)">
+				>
+				["at0478"] = <
+					text = <"*No significant family history(en)">
+					description = <"**(en)">
+				>
+				["at0479"] = <
+					text = <"*Perinatal investigations(en)">
+					description = <"*Details of pre-partum investigations.(en)">
+				>
+				["at0480"] = <
+					text = <"*Investigations performed(en)">
+					description = <"*Have any significant perinatal investigations been performed.(en)">
+				>
+				["at0481"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Narrative description of significant pre-partum investigations.(en)">
+				>
+				["at0483"] = <
+					text = <"*No foetal monitoring(en)">
+					description = <"*No foetal monitoring.(en)">
+				>
+				["at0484"] = <
+					text = <"*No complications(en)">
+					description = <"*No complications.(en)">
+				>
+				["at0485"] = <
+					text = <"*No indication(en)">
+					description = <"*No indication.(en)">
+				>
+				["at0486"] = <
+					text = <"*None(en)">
+					description = <"**(en)">
+				>
+				["at0487"] = <
+					text = <"*None(en)">
+					description = <"**(en)">
+				>
+				["at0488"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of resuscitation required.(en)">
+				>
+				["at0489"] = <
+					text = <"*Drugo(en)">
+					description = <"**(en)">
+				>
+				["at0490"] = <
+					text = <"*Drugo(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Maternal pregnancy(en)">
+					description = <"*Recordings related to a single human pregnancy which may include more than one fetus or offspring(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0011"] = <
+					text = <"*Offspring(en)">
+					description = <"*Information about the baby or fetus(en)">
+				>
+				["at0012"] = <
+					text = <"Ime">
+					description = <"*The name of the child(en)">
+				>
+				["at0014"] = <
+					text = <"*Date of delivery(en)">
+					description = <"*The date of birth of this baby or fetus(en)">
+				>
+				["at0016"] = <
+					text = <"Vrsta poroda">
+					description = <"*The means by which the baby was born(en)">
+				>
+				["at0026"] = <
+					text = <"Gestacijska starost">
+					description = <"*The estimated age of the baby from LMP at the time of birth(en)">
+				>
+				["at0027"] = <
+					text = <"*Sex(en)">
+					description = <"*The gender of the offspring(en)">
+				>
+				["at0028"] = <
+					text = <"*Boy(en)">
+					description = <"*Baby is a boy(en)">
+				>
+				["at0029"] = <
+					text = <"*Girl(en)">
+					description = <"*Baby is a girl(en)">
+				>
+				["at0030"] = <
+					text = <"*Indeterminant(en)">
+					description = <"*The gender of the baby or fetus cannot be determined at this point(en)">
+				>
+				["at0032"] = <
+					text = <"Število splavov">
+					description = <"*The number of abortions of pregnancy prior to this pregnancy(en)">
+				>
+				["at0033"] = <
+					text = <"Nosečnosti (število vseh)">
+					description = <"*The number of pregnancies prior to this pregnancy(en)">
+				>
+				["at0038"] = <
+					text = <"*Labour or delivery(en)">
+					description = <"*Details of labour (can be mulitple in unusual circumstances)(en)">
+				>
+				["at0039"] = <
+					text = <"*Onset(en)">
+					description = <"*Details of onset(en)">
+				>
+				["at0040"] = <
+					text = <"Začetek poroda">
+					description = <"*Mode of onset of labour.(en)">
+				>
+				["at0041"] = <
+					text = <"Trajanje poroda">
+					description = <"*The beginning of stage 1 of labour(en)">
+				>
+				["at0042"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Any comments on the labour(en)">
+				>
+				["at0043"] = <
+					text = <"*Rupture of membranes(en)">
+					description = <"*Information about the rupture of membranes(en)">
+				>
+				["at0044"] = <
+					text = <"Razpok mehurja">
+					description = <"*The type of amniotic membrane rupture(en)">
+				>
+				["at0045"] = <
+					text = <"Spontan">
+					description = <"*Onset without intervention(en)">
+				>
+				["at0047"] = <
+					text = <"Umetno predrtje">
+					description = <"*Rupture of the membranes by procedure(en)">
+				>
+				["at0048"] = <
+					text = <"*Time of rupture(en)">
+					description = <"*The time of the rupture of the membranes(en)">
+				>
+				["at0054"] = <
+					text = <"*Pre-partum issues(en)">
+					description = <"*Details of pre-partum issues and complications.(en)">
+				>
+				["at0056"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Clinical description of the complication(en)">
+				>
+				["at0057"] = <
+					text = <"*Description of birth(en)">
+					description = <"*Details of the birth(en)">
+				>
+				["at0061"] = <
+					text = <"Operativno dokončanje poroda">
+					description = <"*Type of intervention(en)">
+				>
+				["at0066"] = <
+					text = <"Indikacije za operativno dokončanje poroda">
+					description = <"*The indication for the intervention(en)">
+				>
+				["at0067"] = <
+					text = <"*Status(en)">
+					description = <"*The nature of the intervention(en)">
+				>
+				["at0068"] = <
+					text = <"*Emergency(en)">
+					description = <"*Unplanned and arising as a result of clinical course(en)">
+				>
+				["at0069"] = <
+					text = <"*Elective(en)">
+					description = <"*Planned in advance and undertaken prior to situation arising(en)">
+				>
+				["at0072"] = <
+					text = <"Trajanje od razpoka mehurja">
+					description = <"*The time between rupture of the membranes and birth(en)">
+				>
+				["at0073"] = <
+					text = <"Trajanje poroda">
+					description = <"*The duration of labour(en)">
+				>
+				["at0076"] = <
+					text = <"*Successful(en)">
+					description = <"*Did the intervention lead to birth(en)">
+				>
+				["at0077"] = <
+					text = <"*Description(en)">
+					description = <"*Description of the intervention(en)">
+				>
+				["at0080"] = <
+					text = <"*Outcome(en)">
+					description = <"*The outcome of the pregnancy(en)">
+				>
+				["at0081"] = <
+					text = <"*Live birth(en)">
+					description = <"*Pregnancy resulted in a live baby(en)">
+				>
+				["at0082"] = <
+					text = <"*Neonatal death(en)">
+					description = <"*The baby was born alive but lived less than 28 days(en)">
+				>
+				["at0083"] = <
+					text = <"*Still birth(en)">
+					description = <"*The baby was not alive when born(en)">
+				>
+				["at0084"] = <
+					text = <"*Miscarriage(en)">
+					description = <"*The foetus miscarried(en)">
+				>
+				["at0085"] = <
+					text = <"*Termination(en)">
+					description = <"*The pregnancy was terminated(en)">
+				>
+				["at0086"] = <
+					text = <"*Details of the offspring(en)">
+					description = <"*Information about the offspring(en)">
+				>
+				["at0087"] = <
+					text = <"*Fetal or neonatal complications(en)">
+					description = <"*Grouping of neonatal complications if any(en)">
+				>
+				["at0092"] = <
+					text = <"*Description of amniotic fluid(en)">
+					description = <"*Description of the liquor during labour and delivery(en)">
+				>
+				["at0094"] = <
+					text = <"Vstava">
+					description = <"*Presenting part at birth.(en)">
+				>
+				["at0103"] = <
+					text = <"*Intervention(en)">
+					description = <"*Interventions made during birth(en)">
+				>
+				["at0108"] = <
+					text = <"Starost matere v času noseč.">
+					description = <"*The mother's age during pregnancy.(en)">
+				>
+				["at0109"] = <
+					text = <"Sedanja nosečnost">
+					description = <"*Issues arising during pregnancy.(en)">
+				>
+				["at0111"] = <
+					text = <"*Pre-natal screening(en)">
+					description = <"*Details of pre-natal screeing investigations.(en)">
+				>
+				["at0114"] = <
+					text = <"*Medication during pregnancy(en)">
+					description = <"*Details of medication taken during pregnancy.(en)">
+				>
+				["at0116"] = <
+					text = <"Zdravila v času nosečnosti">
+					description = <"**(en)">
+				>
+				["at0117"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of medication taken during pregnancy.(en)">
+				>
+				["at0120"] = <
+					text = <"Nosečnostna presejanja">
+					description = <"*Pre-natal test name.(en)">
+				>
+				["at0121"] = <
+					text = <"Mati čutila plodove gibe">
+					description = <"**(en)">
+				>
+				["at0122"] = <
+					text = <"*Fetal movement(en)">
+					description = <"**(en)">
+				>
+				["at0123"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0124"] = <
+					text = <"*Gestation at first movement(en)">
+					description = <"**(en)">
+				>
+				["at0125"] = <
+					text = <"*Reason for induction(en)">
+					description = <"*The reason for inducing labour.(en)">
+				>
+				["at0126"] = <
+					text = <"Nepravilnosti med porodom">
+					description = <"*True if there were intra-partum complications.(en)">
+				>
+				["at0127"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0128"] = <
+					text = <"*Intra-partum complications(en)">
+					description = <"**(en)">
+				>
+				["at0129"] = <
+					text = <"*Placenta(en)">
+					description = <"*Details of placenta.(en)">
+				>
+				["at0130"] = <
+					text = <"Nepravilnosti posteljice">
+					description = <"*Placental abnormalities identified.(en)">
+				>
+				["at0131"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of the placenta.(en)">
+				>
+				["at0134"] = <
+					text = <"Reanimacija">
+					description = <"*Was resuscitation required?(en)">
+				>
+				["at0135"] = <
+					text = <"*Duration of resuscitation(en)">
+					description = <"*The duration of resuscitation required.(en)">
+				>
+				["at0136"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of any pre-natal screening tests performed.(en)">
+				>
+				["at0137"] = <
+					text = <"Plodovnica">
+					description = <"*Features of liquor.(en)">
+				>
+				["at0139"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0141"] = <
+					text = <"Opomba">
+					description = <"*Further comment on previous pregnancies.(en)">
+				>
+				["at0211"] = <
+					text = <"*Pre-partum interventions(en)">
+					description = <"*Details of pre-partum interventions.(en)">
+				>
+				["at0212"] = <
+					text = <"Intrauterini posegi">
+					description = <"*Interventions performed during pregnancy.(en)">
+				>
+				["at0213"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0223"] = <
+					text = <"Spontan s popadki">
+					description = <"*Spontaneous contractions
+(en)">
+				>
+				["at0224"] = <
+					text = <"Spontan z razpokom mehurja">
+					description = <"*Spontaneous with ruptured membranes
+(en)">
+				>
+				["at0225"] = <
+					text = <"Indukcija s PGE2-lokalna">
+					description = <"*Induction with PGE2- local
+(en)">
+				>
+				["at0226"] = <
+					text = <"Indukcija s PGE2-v infuziji">
+					description = <"*Induction with PGE2-V Infusion
+(en)">
+				>
+				["at0227"] = <
+					text = <"Indukcija z UPM">
+					description = <"*Induction by amniotomy.(en)">
+				>
+				["at0228"] = <
+					text = <"Indukcija z UPM in oksitocinom">
+					description = <"*Induced by amniotomy and oxytocin administration
+(en)">
+				>
+				["at0229"] = <
+					text = <"Elektivni carski rez">
+					description = <"*Elective Caesarean section
+(en)">
+				>
+				["at0230"] = <
+					text = <"Krvavitev">
+					description = <"*Bleeding
+(en)">
+				>
+				["at0242"] = <
+					text = <"Brez posebnosti">
+					description = <"**(en)">
+				>
+				["at0243"] = <
+					text = <"Abrupcija">
+					description = <"**(en)">
+				>
+				["at0244"] = <
+					text = <"Placenta praevia">
+					description = <"**(en)">
+				>
+				["at0245"] = <
+					text = <"Adherentna">
+					description = <"**(en)">
+				>
+				["at0246"] = <
+					text = <"Defektna">
+					description = <"**(en)">
+				>
+				["at0247"] = <
+					text = <"Kalcinirana">
+					description = <"**(en)">
+				>
+				["at0248"] = <
+					text = <"Infarcirana">
+					description = <"**(en)">
+				>
+				["at0257"] = <
+					text = <"*Umbilical cord(en)">
+					description = <"**(en)">
+				>
+				["at0258"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0260"] = <
+					text = <"Popkovnica">
+					description = <"*Umbilical cord issue.(en)">
+				>
+				["at0262"] = <
+					text = <"*Analgesia(en)">
+					description = <"*Details of maternal analagesia during labour.(en)">
+				>
+				["at0263"] = <
+					text = <"Porodna analgezija">
+					description = <"*Type of analgesia used.(en)">
+				>
+				["at0264"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0265"] = <
+					text = <"Analgetiki">
+					description = <"**(en)">
+				>
+				["at0266"] = <
+					text = <"Epiduralna">
+					description = <"**(en)">
+				>
+				["at0267"] = <
+					text = <"Inhalacijska">
+					description = <"**(en)">
+				>
+				["at0268"] = <
+					text = <"*Anaesthesia(en)">
+					description = <"*Details of anaesthesia during labour.(en)">
+				>
+				["at0269"] = <
+					text = <"Anestezija">
+					description = <"*Anaesthetic type.(en)">
+				>
+				["at0270"] = <
+					text = <"Splošna">
+					description = <"**(en)">
+				>
+				["at0271"] = <
+					text = <"Epiduralna">
+					description = <"**(en)">
+				>
+				["at0272"] = <
+					text = <"Spinalna">
+					description = <"**(en)">
+				>
+				["at0273"] = <
+					text = <"Lokalna">
+					description = <"**(en)">
+				>
+				["at0274"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Details of anaesthesia.(en)">
+				>
+				["at0275"] = <
+					text = <"Ovita">
+					description = <"*Nuchal cord
+ problem.(en)">
+				>
+				["at0276"] = <
+					text = <"Prekratka">
+					description = <"*The umbilical cord is abnormally short.(en)">
+				>
+				["at0277"] = <
+					text = <"Predolga">
+					description = <"*The umbilical cord is abnormally long.(en)">
+				>
+				["at0278"] = <
+					text = <"Izpadla">
+					description = <"*Umbilical cord prolapse.(en)">
+				>
+				["at0279"] = <
+					text = <"Zdrknjena">
+					description = <"*Umbilical cord rupture.(en)">
+				>
+				["at0280"] = <
+					text = <"Žilne nepravilnosti">
+					description = <"*Vascular anomaly
+ of the umbilical cord.(en)">
+				>
+				["at0281"] = <
+					text = <"Vozel">
+					description = <"*A knot in the umbilical cord.(en)">
+				>
+				["at0282"] = <
+					text = <"Brez posebnosti">
+					description = <"*No umbilical cord abnormailities.(en)">
+				>
+				["at0283"] = <
+					text = <"Vaginalni">
+					description = <"**(en)">
+				>
+				["at0284"] = <
+					text = <"Carski rez-elektivni">
+					description = <"**(en)">
+				>
+				["at0285"] = <
+					text = <"Carski rez-urgentni">
+					description = <"**(en)">
+				>
+				["at0286"] = <
+					text = <"Carski rez-krvavitev">
+					description = <"**(en)">
+				>
+				["at0287"] = <
+					text = <"*Foetal monitoring(en)">
+					description = <"**(en)">
+				>
+				["at0288"] = <
+					text = <"Nadzor ploda med porodom">
+					description = <"*Mode of foetal monitoring.(en)">
+				>
+				["at0289"] = <
+					text = <"Zunanji CTG-normalen">
+					description = <"**(en)">
+				>
+				["at0290"] = <
+					text = <"Zunanji CTG-patološki">
+					description = <"**(en)">
+				>
+				["at0291"] = <
+					text = <"CTG z elektrodo-normalen">
+					description = <"**(en)">
+				>
+				["at0292"] = <
+					text = <"CTG z elektrodo-patološki">
+					description = <"**(en)">
+				>
+				["at0293"] = <
+					text = <"pH skalpa">
+					description = <"**(en)">
+				>
+				["at0294"] = <
+					text = <"UZ">
+					description = <"**(en)">
+				>
+				["at0295"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0296"] = <
+					text = <"*Medication(en)">
+					description = <"**(en)">
+				>
+				["at0297"] = <
+					text = <"Zdravila med porodom">
+					description = <"*Type of medication given during labour.(en)">
+				>
+				["at0298"] = <
+					text = <"Oksitocin">
+					description = <"**(en)">
+				>
+				["at0299"] = <
+					text = <"Antihipertenzivi">
+					description = <"**(en)">
+				>
+				["at0300"] = <
+					text = <"Antibiotiki">
+					description = <"**(en)">
+				>
+				["at0301"] = <
+					text = <"Transfuzija krvi">
+					description = <"**(en)">
+				>
+				["at0302"] = <
+					text = <"Akutna tokoliza">
+					description = <"**(en)">
+				>
+				["at0303"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0308"] = <
+					text = <"Nepravilnosti popadkov">
+					description = <"*Irregularities of contractions
+(en)">
+				>
+				["at0309"] = <
+					text = <"Zastoj v dilataciji cerviksa">
+					description = <"*Delay in the cervix dilatation
+(en)">
+				>
+				["at0310"] = <
+					text = <"Kefalo-pelvina disproporca">
+					description = <"*Cephalo-pelvic disproportion
+(en)">
+				>
+				["at0311"] = <
+					text = <"Akutno ogrožen plod">
+					description = <"*Acute foetal distress
+(en)">
+				>
+				["at0312"] = <
+					text = <"Kronično ogrožen plod">
+					description = <"*Chronic foetal distress
+(en)">
+				>
+				["at0313"] = <
+					text = <"Nepravilnost ploda">
+					description = <"*Foetal irregularities
+(en)">
+				>
+				["at0314"] = <
+					text = <"Operacije maternice">
+					description = <"*Uterine surgery
+(en)">
+				>
+				["at0315"] = <
+					text = <"Nepravilna vstava">
+					description = <"*Abnormal presentation
+(en)">
+				>
+				["at0316"] = <
+					text = <"Krvavitev">
+					description = <"*Bleeding
+(en)">
+				>
+				["at0317"] = <
+					text = <"Medicinska ali porodniška indikacija zaradi matere">
+					description = <"*Maternal medical/obstetric indication
+(en)">
+				>
+				["at0318"] = <
+					text = <"Stanje po carskem rezu">
+					description = <"*Previous caeserian
+(en)">
+				>
+				["at0319"] = <
+					text = <"Bistra">
+					description = <"**(en)">
+				>
+				["at0320"] = <
+					text = <"Mlečna">
+					description = <"**(en)">
+				>
+				["at0321"] = <
+					text = <"Mekonijska">
+					description = <"**(en)">
+				>
+				["at0322"] = <
+					text = <"Polihidramnij">
+					description = <"**(en)">
+				>
+				["at0323"] = <
+					text = <"Oligohidramnij">
+					description = <"**(en)">
+				>
+				["at0324"] = <
+					text = <"Krvava">
+					description = <"**(en)">
+				>
+				["at0343"] = <
+					text = <"Ne">
+					description = <"*No relevant interventions
+(en)">
+				>
+				["at0344"] = <
+					text = <"Zgodnja amniocenteza">
+					description = <"*Early amniocentesis
+(en)">
+				>
+				["at0345"] = <
+					text = <"Pozna amniocenteza">
+					description = <"*Late amniocentesis
+(en)">
+				>
+				["at0346"] = <
+					text = <"Horionska biopsija">
+					description = <"*Chorionic Biopsy
+(en)">
+				>
+				["at0347"] = <
+					text = <"Placentocenteza">
+					description = <"*Placental centesis
+(en)">
+				>
+				["at0348"] = <
+					text = <"Kordocenteza">
+					description = <"*Cordal centesis
+(en)">
+				>
+				["at0349"] = <
+					text = <"Intrauterina terapija ploda">
+					description = <"*Intrauterine Foetal Therapy
+(en)">
+				>
+				["at0350"] = <
+					text = <"Feticid">
+					description = <"*Foeticide
+(en)">
+				>
+				["at0351"] = <
+					text = <"Redukcija plodov">
+					description = <"*Removal of products
+(en)">
+				>
+				["at0352"] = <
+					text = <"Ne">
+					description = <"*None
+(en)">
+				>
+				["at0353"] = <
+					text = <"Folna kislina">
+					description = <"*Folic Acid
+(en)">
+				>
+				["at0354"] = <
+					text = <"Vitamini">
+					description = <"*Vitamins
+(en)">
+				>
+				["at0355"] = <
+					text = <"Železo">
+					description = <"*Iron
+(en)">
+				>
+				["at0356"] = <
+					text = <"Spazmolitiki">
+					description = <"*Antispasmodics
+(en)">
+				>
+				["at0357"] = <
+					text = <"Antibiotiki">
+					description = <"*Antibiotics
+(en)">
+				>
+				["at0358"] = <
+					text = <"Tokoliza-Mg SULFAT">
+					description = <"*Tocolytic - Magnesium Sulphate
+(en)">
+				>
+				["at0359"] = <
+					text = <"Tokoliza-BETAMIMETIKI">
+					description = <"*Tocolytic - Beta-2-agonist
+(en)">
+				>
+				["at0360"] = <
+					text = <"Tokoliza-NITROGLICERIN">
+					description = <"*Nitroglycerin
+(en)">
+				>
+				["at0361"] = <
+					text = <"Antihipertenzivi">
+					description = <"*Antihypertensives
+(en)">
+				>
+				["at0362"] = <
+					text = <"Antiepileptiki">
+					description = <"*Anticonvulsants
+(en)">
+				>
+				["at0363"] = <
+					text = <"Gestageni">
+					description = <"*Gestogen
+(en)">
+				>
+				["at0364"] = <
+					text = <"Deksametazon">
+					description = <"*Dexamethasone
+(en)">
+				>
+				["at0365"] = <
+					text = <"Tireotiki">
+					description = <"*Thyroid replacement
+(en)">
+				>
+				["at0366"] = <
+					text = <"Antitireotiki">
+					description = <"*Anti-thyroid medication
+(en)">
+				>
+				["at0367"] = <
+					text = <"Antikoagulanti">
+					description = <"*Anticoagulants
+(en)">
+				>
+				["at0368"] = <
+					text = <"Inzulin">
+					description = <"*Insulin
+(en)">
+				>
+				["at0369"] = <
+					text = <"Aspirin-100 mg">
+					description = <"*Aspirin - 100mg
+(en)">
+				>
+				["at0370"] = <
+					text = <"Vaginalete">
+					description = <"*Vaginal
+(en)">
+				>
+				["at0371"] = <
+					text = <"Dieta">
+					description = <"*Diet
+(en)">
+				>
+				["at0372"] = <
+					text = <"Alkohol">
+					description = <"*Alcohol
+(en)">
+				>
+				["at0373"] = <
+					text = <"Droge">
+					description = <"*Drugs
+(en)">
+				>
+				["at0374"] = <
+					text = <"Rhogam">
+					description = <"*Rh0(D) Immunoglobulin
+(en)">
+				>
+				["at0425"] = <
+					text = <"THT">
+					description = <"**(en)">
+				>
+				["at0426"] = <
+					text = <"Nuhalna svetlina">
+					description = <"**(en)">
+				>
+				["at0427"] = <
+					text = <"Merjenje dolžine cerviksa">
+					description = <"**(en)">
+				>
+				["at0428"] = <
+					text = <"Med carskim rezom">
+					description = <"**(en)">
+				>
+				["at0429"] = <
+					text = <"Neznano">
+					description = <"**(en)">
+				>
+				["at0430"] = <
+					text = <"Nepravilno odpiranje materničnega ustja">
+					description = <"*Abnormal cervical dilatation
+(en)">
+				>
+				["at0431"] = <
+					text = <"Nepravilno spuščanje vodilnega plodovega dela">
+					description = <"*Abnormal presenting fetal part
+(en)">
+				>
+				["at0432"] = <
+					text = <"Fetalni distres">
+					description = <"*Fetal distress
+(en)">
+				>
+				["at0433"] = <
+					text = <"Febrilna porodnica">
+					description = <"*Maternal fever
+(en)">
+				>
+				["at0434"] = <
+					text = <"Amnionitis">
+					description = <"*Amnionitis
+(en)">
+				>
+				["at0435"] = <
+					text = <"Hipertonus">
+					description = <"*Uterine hypertonus
+(en)">
+				>
+				["at0436"] = <
+					text = <"Zastoj pri ramenih">
+					description = <"*Shoulder dystocia
+(en)">
+				>
+				["at0437"] = <
+					text = <"*Abortions(en)">
+					description = <"**(en)">
+				>
+				["at0438"] = <
+					text = <"Vrsta splava">
+					description = <"*Type of abortion.(en)">
+				>
+				["at0439"] = <
+					text = <"Spontani">
+					description = <"**(en)">
+				>
+				["at0440"] = <
+					text = <"Umetni">
+					description = <"**(en)">
+				>
+				["at0441"] = <
+					text = <"Carski rez">
+					description = <"*Caesarean section
+.(en)">
+				>
+				["at0442"] = <
+					text = <"Forceps">
+					description = <"*Forceps
+.(en)">
+				>
+				["at0443"] = <
+					text = <"Vakuum">
+					description = <"*Vacuum
+.(en)">
+				>
+				["at0444"] = <
+					text = <"Bracht-Covjanov">
+					description = <"*Bracht-Covjanov
+ procedure.(en)">
+				>
+				["at0445"] = <
+					text = <"Veit-Smellie">
+					description = <"*Veit-Smellie 
+procedure.(en)">
+				>
+				["at0446"] = <
+					text = <"Druga pomoč pri medenični vstavi">
+					description = <"*Other breech extraction
+ procedure.(en)">
+				>
+				["at0447"] = <
+					text = <"Reševanje ročic">
+					description = <"*REŠEVANJE ROČIC
+(en)">
+				>
+				["at0448"] = <
+					text = <"Ekstrakcija glave">
+					description = <"*Head extraction(en)">
+				>
+				["at0449"] = <
+					text = <"Ekstrakcija ploda">
+					description = <"*Removal of products
+.(en)">
+				>
+				["at0450"] = <
+					text = <"Temenska">
+					description = <"*Vertex
+(en)">
+				>
+				["at0451"] = <
+					text = <"Čelna">
+					description = <"*Brow
+(en)">
+				>
+				["at0452"] = <
+					text = <"Zatilna">
+					description = <"*Occipital
+(en)">
+				>
+				["at0453"] = <
+					text = <"Obrazna">
+					description = <"*Facial
+(en)">
+				>
+				["at0454"] = <
+					text = <"Čista zadnjična">
+					description = <"*Frank breech
+(en)">
+				>
+				["at0455"] = <
+					text = <"Zadnjično nožna">
+					description = <"*Complete breech
+(en)">
+				>
+				["at0456"] = <
+					text = <"Nožna">
+					description = <"*Footling breach
+(en)">
+				>
+				["at0457"] = <
+					text = <"Prečna lega">
+					description = <"*Transverse(en)">
+				>
+				["at0458"] = <
+					text = <"*Significant family history(en)">
+					description = <"**(en)">
+				>
+				["at0459"] = <
+					text = <"Družinska anamneza">
+					description = <"*Issue in family history of obstetric significance.(en)">
+				>
+				["at0460"] = <
+					text = <"*Clinical description(en)">
+					description = <"**(en)">
+				>
+				["at0461"] = <
+					text = <"Dvojčki v družini">
+					description = <"**(en)">
+				>
+				["at0462"] = <
+					text = <"Prirojene anomalije">
+					description = <"**(en)">
+				>
+				["at0463"] = <
+					text = <"Hipertenzija v družini">
+					description = <"**(en)">
+				>
+				["at0464"] = <
+					text = <"Sladkorna bolezen v družini">
+					description = <"**(en)">
+				>
+				["at0465"] = <
+					text = <"*Gynaecological history(en)">
+					description = <"**(en)">
+				>
+				["at0466"] = <
+					text = <"Ginekološka anamneza">
+					description = <"*A specific gynaecological issue or procedure.(en)">
+				>
+				["at0467"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of previous gyneacological problems and procedures.(en)">
+				>
+				["at0468"] = <
+					text = <"Ni posebnosti">
+					description = <"*
+(en)">
+				>
+				["at0469"] = <
+					text = <"Konizacija-klasična">
+					description = <"**
+(en)">
+				>
+				["at0470"] = <
+					text = <"Konizacija-drugi načini">
+					description = <"**
+(en)">
+				>
+				["at0471"] = <
+					text = <"Anomalija uterusa">
+					description = <"*
+(en)">
+				>
+				["at0472"] = <
+					text = <"Operacija na uterusu-miomektomija">
+					description = <"*
+(en)">
+				>
+				["at0473"] = <
+					text = <"Operacija anomalije uterusa-klasična">
+					description = <"*
+(en)">
+				>
+				["at0474"] = <
+					text = <"Resekcija septuma-histeroskopsko">
+					description = <"**
+(en)">
+				>
+				["at0475"] = <
+					text = <"Operacija na adnesih">
+					description = <"**
+(en)">
+				>
+				["at0476"] = <
+					text = <"Predhodni carski rez">
+					description = <"**
+(en)">
+				>
+				["at0477"] = <
+					text = <"Motnje menstrualnega ciklusa">
+					description = <"*
+(en)">
+				>
+				["at0478"] = <
+					text = <"Ni posebnosti">
+					description = <"**(en)">
+				>
+				["at0479"] = <
+					text = <"*Perinatal investigations(en)">
+					description = <"*Details of pre-partum investigations.(en)">
+				>
+				["at0480"] = <
+					text = <"*Investigations performed(en)">
+					description = <"*Have any significant perinatal investigations been performed.(en)">
+				>
+				["at0481"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Narrative description of significant pre-partum investigations.(en)">
+				>
+				["at0483"] = <
+					text = <"Brez">
+					description = <"*No foetal monitoring.(en)">
+				>
+				["at0484"] = <
+					text = <"Brez komplikacij">
+					description = <"*No complications.(en)">
+				>
+				["at0485"] = <
+					text = <"Ni indikacije">
+					description = <"*No indication.(en)">
+				>
+				["at0486"] = <
+					text = <"Brez">
+					description = <"**(en)">
+				>
+				["at0487"] = <
+					text = <"Brez">
+					description = <"**(en)">
+				>
+				["at0488"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Description of resuscitation required.(en)">
+				>
+				["at0489"] = <
+					text = <"Drugo">
+					description = <"*">
+				>
+				["at0490"] = <
+					text = <"Drugo">
+					description = <"*">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Maternal pregnancy">
+					description = <"Recordings related to a single human pregnancy which may include more than one fetus or offspring">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Offspring">
+					description = <"Information about the baby or fetus">
+				>
+				["at0012"] = <
+					text = <"Name">
+					description = <"The name of the child">
+				>
+				["at0014"] = <
+					text = <"Date of delivery">
+					description = <"The date of birth of this baby or fetus">
+				>
+				["at0016"] = <
+					text = <"Mode of birth">
+					description = <"The means by which the baby was born">
+				>
+				["at0026"] = <
+					text = <"Estimated gestational age">
+					description = <"The estimated age of the baby from LMP at the time of birth">
+				>
+				["at0027"] = <
+					text = <"Sex">
+					description = <"The gender of the offspring">
+				>
+				["at0028"] = <
+					text = <"Boy">
+					description = <"Baby is a boy">
+				>
+				["at0029"] = <
+					text = <"Girl">
+					description = <"Baby is a girl">
+				>
+				["at0030"] = <
+					text = <"Indeterminant">
+					description = <"The gender of the baby or fetus cannot be determined at this point">
+				>
+				["at0032"] = <
+					text = <"Number of abortions">
+					description = <"The number of abortions of pregnancy prior to this pregnancy">
+				>
+				["at0033"] = <
+					text = <"Number of previous pregnancies">
+					description = <"The number of pregnancies prior to this pregnancy">
+				>
+				["at0038"] = <
+					text = <"Labour or delivery">
+					description = <"Details of labour (can be mulitple in unusual circumstances)">
+				>
+				["at0039"] = <
+					text = <"Onset">
+					description = <"Details of onset">
+				>
+				["at0040"] = <
+					text = <"Mode">
+					description = <"Mode of onset of labour.">
+				>
+				["at0041"] = <
+					text = <"Time of onset">
+					description = <"The beginning of stage 1 of labour">
+				>
+				["at0042"] = <
+					text = <"Clinical description">
+					description = <"Any comments on the labour">
+				>
+				["at0043"] = <
+					text = <"Rupture of membranes">
+					description = <"Information about the rupture of membranes">
+				>
+				["at0044"] = <
+					text = <"Mode">
+					description = <"The type of amniotic membrane rupture">
+				>
+				["at0045"] = <
+					text = <"Spontaneous">
+					description = <"Onset without intervention">
+				>
+				["at0047"] = <
+					text = <"Amniotomy">
+					description = <"Rupture of the membranes by procedure">
+				>
+				["at0048"] = <
+					text = <"Time of rupture">
+					description = <"The time of the rupture of the membranes">
+				>
+				["at0054"] = <
+					text = <"Pre-partum issues">
+					description = <"Details of pre-partum issues and complications.">
+				>
+				["at0056"] = <
+					text = <"Clinical description">
+					description = <"Clinical description of the complication">
+				>
+				["at0057"] = <
+					text = <"Description of birth">
+					description = <"Details of the birth">
+				>
+				["at0061"] = <
+					text = <"Intervention name">
+					description = <"Type of intervention">
+				>
+				["at0066"] = <
+					text = <"Indication">
+					description = <"The indication for the intervention">
+				>
+				["at0067"] = <
+					text = <"Status">
+					description = <"The nature of the intervention">
+				>
+				["at0068"] = <
+					text = <"Emergency">
+					description = <"Unplanned and arising as a result of clinical course">
+				>
+				["at0069"] = <
+					text = <"Elective">
+					description = <"Planned in advance and undertaken prior to situation arising">
+				>
+				["at0072"] = <
+					text = <"Duration of rupture">
+					description = <"The time between rupture of the membranes and birth">
+				>
+				["at0073"] = <
+					text = <"Duration of labour">
+					description = <"The duration of labour">
+				>
+				["at0076"] = <
+					text = <"Successful">
+					description = <"Did the intervention lead to birth">
+				>
+				["at0077"] = <
+					text = <"Description">
+					description = <"Description of the intervention">
+				>
+				["at0080"] = <
+					text = <"Outcome">
+					description = <"The outcome of the pregnancy">
+				>
+				["at0081"] = <
+					text = <"Live birth">
+					description = <"Pregnancy resulted in a live baby">
+				>
+				["at0082"] = <
+					text = <"Neonatal death">
+					description = <"The baby was born alive but lived less than 28 days">
+				>
+				["at0083"] = <
+					text = <"Still birth">
+					description = <"The baby was not alive when born">
+				>
+				["at0084"] = <
+					text = <"Miscarriage">
+					description = <"The foetus miscarried">
+				>
+				["at0085"] = <
+					text = <"Termination">
+					description = <"The pregnancy was terminated">
+				>
+				["at0086"] = <
+					text = <"Details of the offspring">
+					description = <"Information about the offspring">
+				>
+				["at0087"] = <
+					text = <"Fetal or neonatal complications">
+					description = <"Grouping of neonatal complications if any">
+				>
+				["at0092"] = <
+					text = <"Description of amniotic fluid">
+					description = <"Description of the liquor during labour and delivery">
+				>
+				["at0094"] = <
+					text = <"Presenting part at birth">
+					description = <"Presenting part at birth.">
+				>
+				["at0103"] = <
+					text = <"Intervention">
+					description = <"Interventions made during birth">
+				>
+				["at0108"] = <
+					text = <"Maternal age">
+					description = <"The mother's age during pregnancy.">
+				>
+				["at0109"] = <
+					text = <"Issue">
+					description = <"Issues arising during pregnancy.">
+				>
+				["at0111"] = <
+					text = <"Pre-natal screening">
+					description = <"Details of pre-natal screeing investigations.">
+				>
+				["at0114"] = <
+					text = <"Medication during pregnancy">
+					description = <"Details of medication taken during pregnancy.">
+				>
+				["at0116"] = <
+					text = <"Medication name">
+					description = <"*">
+				>
+				["at0117"] = <
+					text = <"Clinical description">
+					description = <"Description of medication taken during pregnancy.">
+				>
+				["at0120"] = <
+					text = <"Pre-natal test name">
+					description = <"Pre-natal test name.">
+				>
+				["at0121"] = <
+					text = <"Fetal movement felt">
+					description = <"*">
+				>
+				["at0122"] = <
+					text = <"Fetal movement">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0124"] = <
+					text = <"Gestation at first movement">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"Reason for induction">
+					description = <"The reason for inducing labour.">
+				>
+				["at0126"] = <
+					text = <"Intra-partum complication">
+					description = <"True if there were intra-partum complications.">
+				>
+				["at0127"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"Intra-partum complications">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"Placenta">
+					description = <"Details of placenta.">
+				>
+				["at0130"] = <
+					text = <"Placental abnormality">
+					description = <"Placental abnormalities identified.">
+				>
+				["at0131"] = <
+					text = <"Clinical description">
+					description = <"Description of the placenta.">
+				>
+				["at0134"] = <
+					text = <"Resuscitation required">
+					description = <"Was resuscitation required?">
+				>
+				["at0135"] = <
+					text = <"Duration of resuscitation">
+					description = <"The duration of resuscitation required.">
+				>
+				["at0136"] = <
+					text = <"Clinical description">
+					description = <"Description of any pre-natal screening tests performed.">
+				>
+				["at0137"] = <
+					text = <"Amniotic fluid features">
+					description = <"Features of liquor.">
+				>
+				["at0139"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0141"] = <
+					text = <"Comment">
+					description = <"Further comment on previous pregnancies.">
+				>
+				["at0211"] = <
+					text = <"Pre-partum interventions">
+					description = <"Details of pre-partum interventions.">
+				>
+				["at0212"] = <
+					text = <"Intervention">
+					description = <"Interventions performed during pregnancy.">
+				>
+				["at0213"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0223"] = <
+					text = <"Spontaneous contractions">
+					description = <"Spontaneous contractions
+">
+				>
+				["at0224"] = <
+					text = <"Spontaneous with ruptured membranes">
+					description = <"Spontaneous with ruptured membranes
+">
+				>
+				["at0225"] = <
+					text = <"Induction with PGE2- local">
+					description = <"Induction with PGE2- local
+">
+				>
+				["at0226"] = <
+					text = <"Induction with PGE2-V Infusion">
+					description = <"Induction with PGE2-V Infusion
+">
+				>
+				["at0227"] = <
+					text = <"Induction by amniotomy">
+					description = <"Induction by amniotomy.">
+				>
+				["at0228"] = <
+					text = <"Induced by amniotomy and oxytocin administration">
+					description = <"Induced by amniotomy and oxytocin administration
+">
+				>
+				["at0229"] = <
+					text = <"Elective Caesarean section">
+					description = <"Elective Caesarean section
+">
+				>
+				["at0230"] = <
+					text = <"Bleeding">
+					description = <"Bleeding
+">
+				>
+				["at0242"] = <
+					text = <"None">
+					description = <"*">
+				>
+				["at0243"] = <
+					text = <"Abruption">
+					description = <"*">
+				>
+				["at0244"] = <
+					text = <"Placenta praevia">
+					description = <"*">
+				>
+				["at0245"] = <
+					text = <"Adherent">
+					description = <"*">
+				>
+				["at0246"] = <
+					text = <"Defective">
+					description = <"*">
+				>
+				["at0247"] = <
+					text = <"Calcified">
+					description = <"*">
+				>
+				["at0248"] = <
+					text = <"Infarcted">
+					description = <"*">
+				>
+				["at0257"] = <
+					text = <"Umbilical cord">
+					description = <"*">
+				>
+				["at0258"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0260"] = <
+					text = <"Cord issue">
+					description = <"Umbilical cord issue.">
+				>
+				["at0262"] = <
+					text = <"Analgesia">
+					description = <"Details of maternal analagesia during labour.">
+				>
+				["at0263"] = <
+					text = <"Analgesic type">
+					description = <"Type of analgesia used.">
+				>
+				["at0264"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0265"] = <
+					text = <"Oral">
+					description = <"*">
+				>
+				["at0266"] = <
+					text = <"Epidural">
+					description = <"*">
+				>
+				["at0267"] = <
+					text = <"Inhaled">
+					description = <"*">
+				>
+				["at0268"] = <
+					text = <"Anaesthesia">
+					description = <"Details of anaesthesia during labour.">
+				>
+				["at0269"] = <
+					text = <"Anaesthetic type">
+					description = <"Anaesthetic type.">
+				>
+				["at0270"] = <
+					text = <"General">
+					description = <"*">
+				>
+				["at0271"] = <
+					text = <"Epidural">
+					description = <"*">
+				>
+				["at0272"] = <
+					text = <"Spinal">
+					description = <"*">
+				>
+				["at0273"] = <
+					text = <"Local">
+					description = <"*">
+				>
+				["at0274"] = <
+					text = <"Clinical description">
+					description = <"Details of anaesthesia.">
+				>
+				["at0275"] = <
+					text = <"Nuchal cord">
+					description = <"Nuchal cord
+ problem.">
+				>
+				["at0276"] = <
+					text = <"Abnormally short cord">
+					description = <"The umbilical cord is abnormally short.">
+				>
+				["at0277"] = <
+					text = <"Abnormally long cord">
+					description = <"The umbilical cord is abnormally long.">
+				>
+				["at0278"] = <
+					text = <"Prolapse">
+					description = <"Umbilical cord prolapse.">
+				>
+				["at0279"] = <
+					text = <"Rupture">
+					description = <"Umbilical cord rupture.">
+				>
+				["at0280"] = <
+					text = <"Vascular anomaly">
+					description = <"Vascular anomaly
+ of the umbilical cord.">
+				>
+				["at0281"] = <
+					text = <"Knot">
+					description = <"A knot in the umbilical cord.">
+				>
+				["at0282"] = <
+					text = <"None">
+					description = <"No umbilical cord abnormailities.">
+				>
+				["at0283"] = <
+					text = <"Vaginal">
+					description = <"*">
+				>
+				["at0284"] = <
+					text = <"Caesarian section - elective">
+					description = <"*">
+				>
+				["at0285"] = <
+					text = <"Caesarian section - urgent">
+					description = <"*">
+				>
+				["at0286"] = <
+					text = <"Caesarian section - bleeding">
+					description = <"*">
+				>
+				["at0287"] = <
+					text = <"Foetal monitoring">
+					description = <"*">
+				>
+				["at0288"] = <
+					text = <"Mode">
+					description = <"Mode of foetal monitoring.">
+				>
+				["at0289"] = <
+					text = <"External CTG - normal">
+					description = <"*">
+				>
+				["at0290"] = <
+					text = <"External CTG - abnormal">
+					description = <"*">
+				>
+				["at0291"] = <
+					text = <"Electrode CTG - normal">
+					description = <"*">
+				>
+				["at0292"] = <
+					text = <"Electrode CTG - abnormal">
+					description = <"*">
+				>
+				["at0293"] = <
+					text = <"Scalp pH">
+					description = <"*">
+				>
+				["at0294"] = <
+					text = <"Ultrasound">
+					description = <"*">
+				>
+				["at0295"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0296"] = <
+					text = <"Medication">
+					description = <"*">
+				>
+				["at0297"] = <
+					text = <"Medication type">
+					description = <"Type of medication given during labour.">
+				>
+				["at0298"] = <
+					text = <"Oxytocin">
+					description = <"*">
+				>
+				["at0299"] = <
+					text = <"Antihypertensive">
+					description = <"*">
+				>
+				["at0300"] = <
+					text = <"Antibiotic">
+					description = <"*">
+				>
+				["at0301"] = <
+					text = <"Blood transfusion">
+					description = <"*">
+				>
+				["at0302"] = <
+					text = <"Tocolytic">
+					description = <"*">
+				>
+				["at0303"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0308"] = <
+					text = <"Irregularities of contractions">
+					description = <"Irregularities of contractions
+">
+				>
+				["at0309"] = <
+					text = <"Delay in the cervix dilatation">
+					description = <"Delay in the cervix dilatation
+">
+				>
+				["at0310"] = <
+					text = <"Cephalo-pelvic disproportion">
+					description = <"Cephalo-pelvic disproportion
+">
+				>
+				["at0311"] = <
+					text = <"Acute foetal distress">
+					description = <"Acute foetal distress
+">
+				>
+				["at0312"] = <
+					text = <"Chronic foetal distress">
+					description = <"Chronic foetal distress
+">
+				>
+				["at0313"] = <
+					text = <"Foetal irregularities">
+					description = <"Foetal irregularities
+">
+				>
+				["at0314"] = <
+					text = <"Uterine surgery">
+					description = <"Uterine surgery
+">
+				>
+				["at0315"] = <
+					text = <"Abnormal presentation">
+					description = <"Abnormal presentation
+">
+				>
+				["at0316"] = <
+					text = <"Bleeding">
+					description = <"Bleeding
+">
+				>
+				["at0317"] = <
+					text = <"Maternal medical/obstetric indication">
+					description = <"Maternal medical/obstetric indication
+">
+				>
+				["at0318"] = <
+					text = <"Previous caeserian">
+					description = <"Previous caeserian
+">
+				>
+				["at0319"] = <
+					text = <"Clear">
+					description = <"*">
+				>
+				["at0320"] = <
+					text = <"Milky">
+					description = <"*">
+				>
+				["at0321"] = <
+					text = <"Meconium">
+					description = <"*">
+				>
+				["at0322"] = <
+					text = <"Polyhydramnios">
+					description = <"*">
+				>
+				["at0323"] = <
+					text = <"Oligohydramnios">
+					description = <"*">
+				>
+				["at0324"] = <
+					text = <"Blood stained">
+					description = <"*">
+				>
+				["at0343"] = <
+					text = <"No relevant interventions">
+					description = <"No relevant interventions
+">
+				>
+				["at0344"] = <
+					text = <"Early amniocentesis">
+					description = <"Early amniocentesis
+">
+				>
+				["at0345"] = <
+					text = <"Late amniocentesis">
+					description = <"Late amniocentesis
+">
+				>
+				["at0346"] = <
+					text = <"Chorionic Biopsy">
+					description = <"Chorionic Biopsy
+">
+				>
+				["at0347"] = <
+					text = <"Placental centesis">
+					description = <"Placental centesis
+">
+				>
+				["at0348"] = <
+					text = <"Cordal centesis">
+					description = <"Cordal centesis
+">
+				>
+				["at0349"] = <
+					text = <"Intrauterine Foetal Therapy">
+					description = <"Intrauterine Foetal Therapy
+">
+				>
+				["at0350"] = <
+					text = <"Foeticide">
+					description = <"Foeticide
+">
+				>
+				["at0351"] = <
+					text = <"Removal of products">
+					description = <"Removal of products
+">
+				>
+				["at0352"] = <
+					text = <"None">
+					description = <"None
+">
+				>
+				["at0353"] = <
+					text = <"Folic Acid">
+					description = <"Folic Acid
+">
+				>
+				["at0354"] = <
+					text = <"Vitamins">
+					description = <"Vitamins
+">
+				>
+				["at0355"] = <
+					text = <"Iron">
+					description = <"Iron
+">
+				>
+				["at0356"] = <
+					text = <"Antispasmodics">
+					description = <"Antispasmodics
+">
+				>
+				["at0357"] = <
+					text = <"Antibiotics">
+					description = <"Antibiotics
+">
+				>
+				["at0358"] = <
+					text = <"Tocolytic - Magnesium Sulphate">
+					description = <"Tocolytic - Magnesium Sulphate
+">
+				>
+				["at0359"] = <
+					text = <"Tocolytic - Beta-2-agonist">
+					description = <"Tocolytic - Beta-2-agonist
+">
+				>
+				["at0360"] = <
+					text = <"Nitroglycerin">
+					description = <"Nitroglycerin
+">
+				>
+				["at0361"] = <
+					text = <"Antihypertensives">
+					description = <"Antihypertensives
+">
+				>
+				["at0362"] = <
+					text = <"Anticonvulsants">
+					description = <"Anticonvulsants
+">
+				>
+				["at0363"] = <
+					text = <"Gestogen">
+					description = <"Gestogen
+">
+				>
+				["at0364"] = <
+					text = <"Dexamethasone">
+					description = <"Dexamethasone
+">
+				>
+				["at0365"] = <
+					text = <"Thyroid replacement">
+					description = <"Thyroid replacement
+">
+				>
+				["at0366"] = <
+					text = <"Anti-thyroid medication">
+					description = <"Anti-thyroid medication
+">
+				>
+				["at0367"] = <
+					text = <"Anticoagulants">
+					description = <"Anticoagulants
+">
+				>
+				["at0368"] = <
+					text = <"Insulin">
+					description = <"Insulin
+">
+				>
+				["at0369"] = <
+					text = <"Aspirin - 100mg">
+					description = <"Aspirin - 100mg
+">
+				>
+				["at0370"] = <
+					text = <"Vaginal">
+					description = <"Vaginal
+">
+				>
+				["at0371"] = <
+					text = <"Diet">
+					description = <"Diet
+">
+				>
+				["at0372"] = <
+					text = <"Alcohol">
+					description = <"Alcohol
+">
+				>
+				["at0373"] = <
+					text = <"Drugs">
+					description = <"Drugs
+">
+				>
+				["at0374"] = <
+					text = <"Rh0(D) Immunoglobulin">
+					description = <"Rh0(D) Immunoglobulin
+">
+				>
+				["at0425"] = <
+					text = <"THT - Downs screening">
+					description = <"*">
+				>
+				["at0426"] = <
+					text = <"Nuchal translucency">
+					description = <"*">
+				>
+				["at0427"] = <
+					text = <"Cervical length">
+					description = <"*">
+				>
+				["at0428"] = <
+					text = <"Caesarian section">
+					description = <"*">
+				>
+				["at0429"] = <
+					text = <"Unknown">
+					description = <"*">
+				>
+				["at0430"] = <
+					text = <"Abnormal cervical dilatation">
+					description = <"Abnormal cervical dilatation
+">
+				>
+				["at0431"] = <
+					text = <"Abnormal presenting fetal part">
+					description = <"Abnormal presenting fetal part
+">
+				>
+				["at0432"] = <
+					text = <"Fetal distress">
+					description = <"Fetal distress
+">
+				>
+				["at0433"] = <
+					text = <"Maternal fever">
+					description = <"Maternal fever
+">
+				>
+				["at0434"] = <
+					text = <"Amnionitis">
+					description = <"Amnionitis
+">
+				>
+				["at0435"] = <
+					text = <"Uterine hypertonus">
+					description = <"Uterine hypertonus
+">
+				>
+				["at0436"] = <
+					text = <"Shoulder dystocia">
+					description = <"Shoulder dystocia
+">
+				>
+				["at0437"] = <
+					text = <"Abortions">
+					description = <"*">
+				>
+				["at0438"] = <
+					text = <"Type of abortion">
+					description = <"Type of abortion.">
+				>
+				["at0439"] = <
+					text = <"Spontaneous">
+					description = <"*">
+				>
+				["at0440"] = <
+					text = <"Artificial">
+					description = <"*">
+				>
+				["at0441"] = <
+					text = <"Caesarean section">
+					description = <"Caesarean section
+.">
+				>
+				["at0442"] = <
+					text = <"Forceps">
+					description = <"Forceps
+.">
+				>
+				["at0443"] = <
+					text = <"Vacuum">
+					description = <"Vacuum
+.">
+				>
+				["at0444"] = <
+					text = <"Bracht-Covjanov">
+					description = <"Bracht-Covjanov
+ procedure.">
+				>
+				["at0445"] = <
+					text = <"Veit-Smellie ">
+					description = <"Veit-Smellie 
+procedure.">
+				>
+				["at0446"] = <
+					text = <"Other breech extraction">
+					description = <"Other breech extraction
+ procedure.">
+				>
+				["at0447"] = <
+					text = <"Arm rescue procedure">
+					description = <"REŠEVANJE ROČIC
+">
+				>
+				["at0448"] = <
+					text = <"Head extraction">
+					description = <"Head extraction">
+				>
+				["at0449"] = <
+					text = <"Foetal extraction">
+					description = <"Removal of products
+.">
+				>
+				["at0450"] = <
+					text = <"Vertex">
+					description = <"Vertex
+">
+				>
+				["at0451"] = <
+					text = <"Brow">
+					description = <"Brow
+">
+				>
+				["at0452"] = <
+					text = <"Occipital">
+					description = <"Occipital
+">
+				>
+				["at0453"] = <
+					text = <"Facial">
+					description = <"Facial
+">
+				>
+				["at0454"] = <
+					text = <"Frank breech">
+					description = <"Frank breech
+">
+				>
+				["at0455"] = <
+					text = <"Complete breech">
+					description = <"Complete breech
+">
+				>
+				["at0456"] = <
+					text = <"Footling breach">
+					description = <"Footling breach
+">
+				>
+				["at0457"] = <
+					text = <"Transverse">
+					description = <"Transverse">
+				>
+				["at0458"] = <
+					text = <"Significant family history">
+					description = <"*">
+				>
+				["at0459"] = <
+					text = <"Family issue">
+					description = <"Issue in family history of obstetric significance.">
+				>
+				["at0460"] = <
+					text = <"Clinical description">
+					description = <"*">
+				>
+				["at0461"] = <
+					text = <"Twins in the family">
+					description = <"*">
+				>
+				["at0462"] = <
+					text = <"Congenital anomaly">
+					description = <"*">
+				>
+				["at0463"] = <
+					text = <"Hypertension">
+					description = <"*">
+				>
+				["at0464"] = <
+					text = <"Diabetes mellitus">
+					description = <"*">
+				>
+				["at0465"] = <
+					text = <"Gynaecological history">
+					description = <"*">
+				>
+				["at0466"] = <
+					text = <"Gynaecological issue">
+					description = <"A specific gynaecological issue or procedure.">
+				>
+				["at0467"] = <
+					text = <"Clinical description">
+					description = <"Description of previous gyneacological problems and procedures.">
+				>
+				["at0468"] = <
+					text = <"No significant history">
+					description = <"
+">
+				>
+				["at0469"] = <
+					text = <"Cone biopsy - classic technique">
+					description = <"*
+">
+				>
+				["at0470"] = <
+					text = <"Cone biopsy - non-classic technique">
+					description = <"*
+">
+				>
+				["at0471"] = <
+					text = <"Uterine anomaly">
+					description = <"
+">
+				>
+				["at0472"] = <
+					text = <"Uterine myomectomy">
+					description = <"
+">
+				>
+				["at0473"] = <
+					text = <"Uterine anomaly procedure  - Classic technique">
+					description = <"
+">
+				>
+				["at0474"] = <
+					text = <"Hysteroscopic septal resection">
+					description = <"*
+">
+				>
+				["at0475"] = <
+					text = <"Adnexal surgery">
+					description = <"*
+">
+				>
+				["at0476"] = <
+					text = <"Previous caesarian section">
+					description = <"*
+">
+				>
+				["at0477"] = <
+					text = <"Menstrual irregularity">
+					description = <"
+">
+				>
+				["at0478"] = <
+					text = <"No significant family history">
+					description = <"*">
+				>
+				["at0479"] = <
+					text = <"Perinatal investigations">
+					description = <"Details of pre-partum investigations.">
+				>
+				["at0480"] = <
+					text = <"Investigations performed">
+					description = <"Have any significant perinatal investigations been performed.">
+				>
+				["at0481"] = <
+					text = <"Clinical description">
+					description = <"Narrative description of significant pre-partum investigations.">
+				>
+				["at0483"] = <
+					text = <"No foetal monitoring">
+					description = <"No foetal monitoring.">
+				>
+				["at0484"] = <
+					text = <"No complications">
+					description = <"No complications.">
+				>
+				["at0485"] = <
+					text = <"No indication">
+					description = <"No indication.">
+				>
+				["at0486"] = <
+					text = <"None">
+					description = <"*">
+				>
+				["at0487"] = <
+					text = <"None">
+					description = <"*">
+				>
+				["at0488"] = <
+					text = <"Clinical description">
+					description = <"Description of resuscitation required.">
+				>
+				["at0489"] = <
+					text = <"Other">
+					description = <"*">
+				>
+				["at0490"] = <
+					text = <"Other">
+					description = <"*">
+				>
+			>
+		>
+	>
