@@ -21,7 +21,7 @@ description
 	lifecycle_state = <"0">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"D9CD60FA738C8F2133FDE71BE81C8ABA">
+		["MD5-CAM-1.0.1"] = <"3D7B665B6E5F82E24868DABA42AE135C">
 	>
 
 definition
@@ -30,14 +30,14 @@ definition
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					DV_COUNT matches {
-						magnitude matches {|0|; 0}
+						magnitude matches {|<=0|}
 					}
 				}
 			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					DV_BOOLEAN matches {
-						value matches {True, False; False}
+						value matches {True; True}
 					}
 				}
 			}
@@ -48,14 +48,13 @@ definition
 							[openEHR::
 							415, 
 							416, 
-							417, 
 							418, 
 							419, 
-							420, 
 							421, 
 							422, 
-							423, 
-							424]
+							424, 
+							401, 
+							402]
 						}
 					}
 				}
@@ -63,15 +62,15 @@ definition
 			ELEMENT[at0005] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					DV_DURATION matches {
-						value matches {|P0W|; P0W}
+						value matches {PYMW; P0Y}
 					}
 				}
 			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					DV_PROPORTION matches {
-						numerator matches {|0.0|}
-						denominator matches {|<=0.0|; 0.0}
+						numerator matches {|<=0.0|; 0.0}
+						denominator matches {|>=0.0|; 0.0}
 					}
 				}
 			}
