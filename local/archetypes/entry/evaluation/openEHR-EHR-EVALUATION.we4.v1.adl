@@ -1,0 +1,71 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.we4.v1
+
+concept
+	[at0000]	-- We
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"388F0D3FF6EBD503A9A38A20623B4E59">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- We
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {*}
+							}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"We">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"New element">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"New element">
+					description = <"*">
+				>
+			>
+		>
+	>

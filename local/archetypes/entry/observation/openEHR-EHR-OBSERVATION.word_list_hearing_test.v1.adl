@@ -5,6 +5,15 @@ concept
 	[at0000]	-- Word List Hearing Test
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"?">
+				["email"] = <"monasaleh01@live.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"????">
@@ -15,6 +24,14 @@ description
 			purpose = <"To record  the results of either the AB Word or the Manchester Junior Short List tests">
 			use = <"">
 			keywords = <"Manchester", "word", "AB", "hearing">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل نتائج إختبار (AB Word) أو (Manchester Junior Short List)">
+			use = <"">
+			keywords = <"*Manchester(en)", "*word(en)", "*AB(en)", "*hearing(en)">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -208,6 +225,86 @@ ontology
 				["at0018"] = <
 					text = <"Comment">
 					description = <"Comment on test ">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"اختبار سماع قائمة الكلمات">
+					description = <"تسجيل نتائج إختبار (AB Word) أو (Manchester Junior Short List)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"إحدى الوقائع">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0005"] = <
+					text = <"إطباق">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"مُطبَقَة">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"غير مُطبَقَة">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"قراءة الشفاه">
+					description = <"هل يستخدم الشخص قراءة الشفاه عند إنجازه / إجرائه للاختبار">
+				>
+				["at0009"] = <
+					text = <"بقراءة الشفاه">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"بدون قراءة الشفاه">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"النتيجة">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"معدل النجاح">
+					description = <"النسبة المئوية لمعدل النجاح للاختبار الذي يتم إنجازه / إجراؤه">
+				>
+				["at0013"] = <
+					text = <"مستوى الصوت المسموع">
+					description = <"مستوى الصوت المسموع (ديسي بِل)">
+				>
+				["at0014"] = <
+					text = <"اختبار">
+					description = <"تعيين هوية (استعراف) الاختبار الذي يتم إنجازه / إجراؤه">
+				>
+				["at0015"] = <
+					text = <"*Manchester Junior Word List(en)">
+					description = <"**(en)">
+				>
+				["at0016"] = <
+					text = <"*AB Word List(en)">
+					description = <"**(en)">
+				>
+				["at0017"] = <
+					text = <"عنصر جديد">
+					description = <"صورة نتيجة الاختبار">
+				>
+				["at0018"] = <
+					text = <"تعليق">
+					description = <"تعليق على الاختبار">
 				>
 			>
 		>

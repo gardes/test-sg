@@ -1,0 +1,88 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.evaluation_content.v1
+
+concept
+	[at0000]	-- Evaluation content
+language
+	original_language = <[ISO_639-1::sl]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"442106B00C92D8D7FCF10C4ADE8D2B20">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Evaluation content
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Terminology
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype ITEM[at0003] occurrences matches {0..*} matches {	-- Items
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation content(sl)">
+					description = <"*unknown(sl)">
+				>
+				["at0001"] = <
+					text = <"*Tree(sl)">
+					description = <"*@ internal @(sl)">
+				>
+				["at0002"] = <
+					text = <"*Terminology(sl)">
+					description = <"**(sl)">
+				>
+				["at0003"] = <
+					text = <"*Items(sl)">
+					description = <"**(sl)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluation content">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Terminology">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Items">
+					description = <"*">
+				>
+			>
+		>
+	>

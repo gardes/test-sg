@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>e0cfb6d7-3d36-4bfd-b7d8-cfd34e8ffb4c</id>
+  <name>ISPEK - ZN - Vital signs Dialog</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.ispek_dialog.v1" concept_name="Dialog" max="1" name="Vital signs">
+    <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_temperature-zn.v1" concept_name="Telesna temperatura" path="/items">
+      <Rule path="/data[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0004]" name="Body temperature">
+        <constraint xsi:type="quantityConstraint">
+          <excludedUnits>°F</excludedUnits>
+          <unitMagnitude>
+            <unit>°C</unit>
+            <maxMagnitude>45</maxMagnitude>
+            <minMagnitude>0</minMagnitude>
+            <includesMaximum>true</includesMaximum>
+            <includesMinimum>true</includesMinimum>
+          </unitMagnitude>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]/items[at0030]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]/items[at0041]" max="0" />
+      <Rule path="/protocol[at0020]" hide_on_form="true" />
+      <Rule path="/protocol[at0020]/items[at0021.1]" name="Location of measurement" />
+      <Rule path="/protocol[at0020]/items[at0.62]" name="Other location of measurement" />
+    </Item>
+    <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.heart_rate-pulse-zn.v1" concept_name="Srčni utrip" path="/items">
+      <Rule path="/data[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1005.1]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0004]" name="Heart rate" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0.42]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0.11]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0.36]" name="Strength">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0.38</excludedValues>
+          <excludedValues>local::at0.40</excludedValues>
+          <excludedValues>local::at0.41</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0005]" name="Regularity">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0007</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0.24]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0012]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0012]/items[at0013]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0012]/items[at1018]" max="0" />
+      <Rule path="/protocol[at0010]" hide_on_form="true" />
+      <Rule path="/protocol[at0010]/items[at1019]" max="0" />
+      <Rule path="/protocol[at0010]/items[at1014]" max="0" />
+    </Item>
+    <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure-zn.v1" concept_name="Krvni tlak" path="/items">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0006]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0033]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at0008]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1052]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1043]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1005]" max="0" />
+      <Rule path="/data[at0001]/events[at1042]" max="0" />
+      <Rule path="/protocol[at0011]" hide_on_form="true" />
+      <Rule path="/protocol[at0011]/items[at0013]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0015</excludedValues>
+          <excludedValues>local::at0016</excludedValues>
+          <excludedValues>local::at0017</excludedValues>
+          <excludedValues>local::at1008</excludedValues>
+          <excludedValues>local::at1009</excludedValues>
+          <excludedValues>local::at1018</excludedValues>
+          <excludedValues>local::at1019</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/protocol[at0011]/items[at1033]" hide_on_form="true" />
+      <Rule path="/protocol[at0011]/items[at1033]/items[at1034]" annotation="ISPEK-OTS MZN-SIF-RR-Lokacija" />
+      <Rule path="/protocol[at0011]/items[at1035]" name="Method type">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at1036</excludedValues>
+          <excludedValues>local::at1037</excludedValues>
+          <excludedValues>local::at1039</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/protocol[at0011]/items[at1038]" max="0" />
+      <Rule path="/protocol[at0011]/items[at1010]" max="0" />
+      <Rule path="/protocol[at0011]/items[at0.1054]" max="0" />
+    </Item>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.ispek_dialog.v1">
+    <digest id="MD5-CAM-1.0.1">2090C400747F2DF2AEFD3D9583B6D1ED</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.body_temperature-zn.v1">
+    <digest id="MD5-CAM-1.0.1">4DEBB46EDE63E8786399FDEA90C7C9A5</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.heart_rate-pulse-zn.v1">
+    <digest id="MD5-CAM-1.0.1">A00691A190F37F6C80067152FA440C8D</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure-zn.v1">
+    <digest id="MD5-CAM-1.0.1">BE76B74D8FFC24105051D315FBB8D09E</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.anthropometry_zn.v1">
+    <digest id="MD5-CAM-1.0.1">719B2E15BC717D077F482E009F909397</digest>
+  </integrity_checks>
+</template>

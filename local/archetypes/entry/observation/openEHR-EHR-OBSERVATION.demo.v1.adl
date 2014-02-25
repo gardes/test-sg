@@ -5,6 +5,17 @@ concept
 	[at0000]	-- Demonstration
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Jussara Rötzsch">
+				["organisation"] = <"openEHR Foundation">
+				["email"] = <"jussara.macedo@gmail.com">
+			>
+			accreditation = <"MD. MSc., Pschyatrist, Clinical Modeller, Coordinator of  Standards and Semantic Interoperability of Brazil e-Health Initiative ">
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -19,6 +30,14 @@ description
 			use = <"To provide a visual overview of archetype data types and archetype components to potential and current clinical content reviewers in the openEHR Clinical Knowledge Manager.">
 			keywords = <"demonstration", "test", "prototype", "datatypes", "state", "protocol", "event", "data">
 			misuse = <"Not to carry any real clinical data.">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Para fornecer uma visão geral da exibição de cada um dos tipos de dados  disponíveis em um arquétipo openEHR, e dos modelos de Dados, Eventos e Protocolos dentro de um contexto de uma tela HTML e ADL associado.">
+			use = <"Para fornecer uma visualisação geral dos tipos de dados e componetes dos arquétipos para atuais e potenciais revisores de conteúdo clínico no Gestor de Conhecimento Clínico openEHR, o CKM.">
+			keywords = <"demonstração", "teste", "protótipo(s)", "tipo(s) de dado(s)", "estado", "protocolo(s)", "evento(s)", "dado(s)">
+			misuse = <"Não apropriado para carregar nenhum dado clínico real.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -368,6 +387,7 @@ definition
 		}
 	}
 
+
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
@@ -551,6 +571,186 @@ ontology
 				>
 			>
 		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demonstração">
+					description = <"Arquétipo de Demonstração com descrições e explicações. ">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Qualquer evento">
+					description = <"Todos os arquétipos da classe de OBSERVAÇÃO contêm um modelo de HISTÓRIA ou de EVENTO que contém informação sobre o período da observação com a duração  da informação-  seja um ponto no  tempo ou um intervalo temporal. O padrão predeterminado é ' Qualquer evento' e não é especificado, se é um Ponto no tempo ou um Intervalo.">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"Cabeçalho1">
+					description = <"Este é um símbolo para um 'cluster' que pode ter outros elementos 'aninhados' dentro dele.">
+				>
+				["at0005"] = <
+					text = <"Texto livre ou Codificado">
+					description = <"Tipo de dado Texto no qual se pode entrar ou  texto livre ou códigos podem ser incoprporados seja  no template ou no tempo de execução.">
+				>
+				["at0006"] = <
+					text = <"Texto Que Usa Códigos Internos">
+					description = <"Tipo de dados  Texto que pode usar um vocabulário interno. Cada um desses ' códigos internos' pode ser vnculado a um código de uma terminologia.">
+				>
+				["at0007"] = <
+					text = <"Deitado">
+					description = <"Paciente Deitado em posição supina ou decúbito dorsal.">
+				>
+				["at0008"] = <
+					text = <"Reclinado">
+					description = <"Paciente Reclinado, apoiado em um travesseiro médio.">
+				>
+				["at0009"] = <
+					text = <"Sentado">
+					description = <"Paciente está Sentado em uma cadeira.">
+				>
+				["at0010"] = <
+					text = <"Em pé">
+					description = <"Paciente está em Pé.">
+				>
+				["at0011"] = <
+					text = <"Texto Cuja Origem é uma Terminologia Externa ">
+					description = <"Tipo de dado Texto utilizando códigos originários de uma terminologia externa como, por exemplo, um subset do SNOMED CT, do LOINC ou da CID 10. ">
+				>
+				["at0012"] = <
+					text = <"Quantidade">
+					description = <"Um tipo de dado de Quantidade usado para registrar uma medida associada com suas uniddades apropriadas. Essas unidades são derivadas de norams ISO e o modelo de  Referência possibilita a conversão entre elas. O exemplo demonstrado aqui é o comprimento.">
+				>
+				["at0013"] = <
+					text = <"Contagem ">
+					description = <"Tipos de dados de Contagem são compostos de um número inteiro sem casas decimais (integer), por exemplo, para registar o número de filhos- nesse exemplo o mínimo é colocado como 0 e o máximo não é especificado.">
+				>
+				["at0014"] = <
+					text = <"Data/Horário">
+					description = <"Tipos de dado Data/Horário permite o registro de uma data e /ou um horário, incluindo  datas parciais como somente o mês ou o ano. Permite tudo como padrão de modo que todas as formas de data/horário são permitidas.">
+				>
+				["at0015"] = <
+					text = <"Ordinal">
+					description = <"Tipos de dados Ordinal pareiam um número e texto- deste modo  pode ser calculada uma pontuação pela  aplicação a progressão ser avaliada, como por exemplo se está se utilizando de uma escala de avaliação de dor.">
+				>
+				["at0016"] = <
+					text = <"Booleano">
+					description = <"Tipo de dado  Booleano que permite repostas do tipo falso ou verdadeiro.">
+				>
+				["at0017"] = <
+					text = <"Qualquer">
+					description = <"Este tipo de dado para esse elemento 'Qualquer' pode ser especificado ou 'restrito' num modelo ou no tempo de execução, mas não é especificamente modelado no arquétipo.">
+				>
+				["at0018"] = <
+					text = <"Cabelaçalho2">
+					description = <"Esse é o símbolo de um 'cluster' que pode ter outros elementos 'aninhados' dentro dele.">
+				>
+				["at0019"] = <
+					text = <"Slot Para Conter Outros Arquétipos Clusters">
+					description = <"Lista de arquétipos  CLUSTER permitidos de serem incluídos ou excluídos dentro deste arquétipo de  OBSERVAÇÃO.">
+				>
+				["at0020"] = <
+					text = <"Slot Para Conter Outroa Arququétipos de Elementos">
+					description = <"Lista de arquétipos de ELEMENTOS permitidos de serem incluíos ou excluídos dentro deste arquétipo de OBSERVAÇÃO.">
+				>
+				["at0021"] = <
+					text = <"Duração">
+					description = <"Tipo de dado Duração permite registrar a duração dos conceitos clínicos. O padrão predeterminado é 'Permitir  todas unidades de tempo', embora unidades específicas de tempo possam ser explicitamente modeladas.   Valores máximos e mínimos podem ser configurados para cada unidade de tempo.">
+				>
+				["at0022"] = <
+					text = <"Intervalo de Integer">
+					description = <"Tipo de dados de Intervalo de Integer permite o registro de uma faixa de contagem em intervalos, por exemplo, a cada 1 a 2 comprimidos prescritos. Os valores máximo e mínimo podem ser configurados para a contagem inferior ou para a superior.">
+				>
+				["at0023"] = <
+					text = <"Intervalo de Quantidade">
+					description = <"Tipos de dados de Intervalo de Quantidade permitem registrar uma gama de mediddas  associadas com unidades apropriadas, por exemplo, 1-2cm  (quantidade de creme prescrito para um uma erupção cutânea).">
+				>
+				["at0024"] = <
+					text = <"Intervalo de Data">
+					description = <"Tipo de dado de Intervalo de Integer permite o registro de uma faixa de datas como, por exemplo, entre 1 de Setembro de 2008 e 8 de Setembro de 2008.">
+				>
+				["at0025"] = <
+					text = <"Escolha">
+					description = <"Tipo de dado Escolha permite que um número de tipos de elementos sejam simultaneamente especificados, os quais podem ser restringidos num template ou no tempo de execução. Neste exemplo, um tipo de dado Texto é configurado para Texto livre ou Codificado e outro que é configurado restritamente para  registrar códigos de uma determinada terminologia para o mesmo elemento de dado.">
+				>
+				["at0026"] = <
+					text = <"Multimídia">
+					description = <"Tipos de dado Multimídia permitem o registro de vários tipos de arquivos multimídia. Todos os tipos disponíveis foram explicitamente selecionados neste exemplo.">
+				>
+				["at0027"] = <
+					text = <"URI - Identificador de Recursos ">
+					description = <"Tipos de dados URI permitem registrar os relacionamentos entre  estes dados e os dados registrados em outros lugares. Esses enlaces (links) podem estar  no mesmo RES ou serem externos, por exemplo, pertencer a  num endereço  na internet, uma URL.">
+				>
+				["at0028"] = <
+					text = <"Porporção">
+					description = <"Tipos de dados de Proporção permitem modelar taxas, porcentagens, frações e proporções.">
+				>
+				["at0030"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0031"] = <
+					text = <"Estado - Definição">
+					description = <"Todos os arquétipos da classe de OBSERVAÇÃO podem conter um modelo de ESTADO, que contém a informação sobre o sujeito a informação na hora que o dado foi colhido, e essa informação é requisito para uma interpretação segura das informações básicas. Um exemplo disso é a posição que o paciente se encontrava quando sua pressão arterial foi medida. Os tipos de dados são idênticos aos que foram explicados no modelo de DADOS acima.">
+				>
+				["at0032"] = <
+					text = <"Dados - Definição ">
+					description = <"Todos os arquétipos da classe de OBSERVAÇÃO contêm um modelo de DADOS que contém as informações básicas, por exemplo, as pressões sistólica e diastólica, quando está se medindo a pressão sanguínea.">
+				>
+				["at0033"] = <
+					text = <"Ponto no tempo Nomeado">
+					description = <"Um evento que é ao mesmo tempo nomeado (p. ex. Nascimento) e restrito como evento em um  Ponto no tempo, registra os elementos de dados relacionados a um ponto específico no tempo, como por exemplo, Peso no Nascimento.">
+				>
+				["at0034"] = <
+					text = <"Intervalo Nomeado">
+					description = <"Um evento que é ao mesmo tempo nomeado e restrito como um evento Intervalo, registra os mesmos elementos de dados relacionados ao período de tempo, por exemplo, Perda de peso durante o determinado período. O intervalo pode ser fixado, ou deixado inespecificado. Além disso,  pode-se especificar funções matemáticas para capturar conceitos como mudança, diminuição aumento, máximo, mínimo, média,etc.">
+				>
+				["at0035"] = <
+					text = <"Deslocamento do Ponto no tempo">
+					description = <"Deslocamento  do Ponto no Tempo registra o deslocamento fixo de 5 minutos de outro evento especificado, por exemplo, registrando a leitura de um escore de Apgar de 2 minutos aos 2 minutos após o parto.">
+				>
+				["at0036"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0037"] = <
+					text = <"Protocolo-Definição">
+					description = <"Todos os arquétipos da classe de OBSERVAÇÃO podem conter um modelo de PROTOCOLO, o qual registra informação sobre como a informação foi colhida ou medida e quaisquer outras informações que não sejam necessárias para a interpretação clínica  segura das informações básicas. Os tipos de dados são idênticos àqueles explicados no modelo e DADOS acima.">
+				>
+				["at0038"] = <
+					text = <"Sem dor">
+					description = <"Nenhuma dor.">
+				>
+				["at0039"] = <
+					text = <"Dor leve">
+					description = <"Dor classificada como nível 1 numa escala máxima de 10.">
+				>
+				["at0040"] = <
+					text = <"Dor branda">
+					description = <"Dor classificada como nível 2 numa escala máxima de 10.">
+				>
+				["at0041"] = <
+					text = <"Dor Moderada">
+					description = <"Dor classificada  como nível 5 numa escala máxima de 10.">
+				>
+				["at0042"] = <
+					text = <"Dor severa">
+					description = <"Dor classificada nível 9 numa escala de 10.">
+				>
+				["at0043"] = <
+					text = <"Pior dor possível">
+					description = <"Dor classificada como nível 10 numa escala de 10.">
+				>
+				["at0044"] = <
+					text = <"Identificador">
+					description = <"Tipos de dados Identificadores possibilitam registrar identificadores formais de dados.">
+				>
+			>
+		>
 	>
 	constraint_definitions = <
 		["en"] = <
@@ -562,6 +762,18 @@ ontology
 				["ac0003"] = <
 					text = <"SubsetB">
 					description = <"XYZ codes from Terminology 123">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["ac0001"] = <
+					text = <"SubconjuntoA">
+					description = <"Subconjunto de terminologia originário de XXX">
+				>
+				["ac0003"] = <
+					text = <"SubconjuntoB">
+					description = <"Códigos XYZ da Terminologia 123">
 				>
 			>
 		>

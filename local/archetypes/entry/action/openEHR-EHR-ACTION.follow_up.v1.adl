@@ -5,11 +5,44 @@ concept
 	[at0000]	-- Follow up action
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Leonardo Derjachadurian">
+				["organisation"] = <"Particular">
+			>
+			accreditation = <"Medical doctor, Internal Medicine specialist, Programmer Analist, Master in Data Mining">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
 description
 	original_author = <
-		["name"] = <"unknown">
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2012-08-06">
 	>
 	details = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفاصيل حول فعل تم تنفيذه كجزء من المتابعة.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Para registrar detalles acerca de una acción tomada como parte del seguimiento clínico.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about an action taken as part of a follow up.">
@@ -19,15 +52,15 @@ description
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"0B865193F1E6B2BD5FE6E91EC9380C2A">
 	>
 
 definition
 	ACTION[at0000] matches {	-- Follow up action
 		ism_transition matches {
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0001] matches {	-- Planned
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -39,7 +72,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0002] matches {	-- Postponed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::527]}
@@ -51,7 +84,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0007] matches {	-- Cancelled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::528]}
@@ -63,7 +96,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0003] matches {	-- Scheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -75,7 +108,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0004] matches {	-- Rescheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -87,7 +120,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0005] matches {	-- Attended
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -99,7 +132,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0008] matches {	-- Patient contacted
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -111,7 +144,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0009] matches {	-- Reviewed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -123,7 +156,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0012] matches {	-- Did not attend
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -135,7 +168,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0013] matches {	-- Rescheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -147,7 +180,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0006] matches {	-- Suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::530]}
@@ -159,7 +192,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0010] matches {	-- Ceased
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::531]}
@@ -171,7 +204,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0011] matches {	-- Completed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::532]}
@@ -185,7 +218,7 @@ definition
 			}
 		}
 		description matches {
-			allow_archetype ITEM_TREE occurrences matches {0..1} matches {
+			allow_archetype ITEM_TREE matches {
 				include
 					archetype_id/value matches {/openEHR-EHR-ITEM_TREE\.follow_up\.v1/}
 				exclude
@@ -197,63 +230,183 @@ definition
 
 ontology
 	term_definitions = <
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"فعل المتابعة">
+					description = <"فعل تم تنفيذه كجزء من المتابعة">
+				>
+				["at0001"] = <
+					text = <"مخطَّط">
+					description = <"تم التخطيط للمتابعة">
+				>
+				["at0002"] = <
+					text = <"تم التأجيل">
+					description = <"لا تزال المتابعة مطلوبة و لكنه يحتاج إلى تدخل/مداخلة">
+				>
+				["at0003"] = <
+					text = <"تم تحديد الموعد">
+					description = <"تم تحديد موعد المتابعة">
+				>
+				["at0004"] = <
+					text = <"تم إعادة تحديد الموعد">
+					description = <"تم إعادة تحديد الموعد">
+				>
+				["at0005"] = <
+					text = <"تم الحضور">
+					description = <"حدثت زيارة المتابعة بالفعل">
+				>
+				["at0006"] = <
+					text = <"تم التعليق/الإيقاف المؤقت">
+					description = <"لن يتم المزيد من المتابعة حتى يحدث التدخل/المداخلة">
+				>
+				["at0007"] = <
+					text = <"تم الإلغاء">
+					description = <"لم تبدأ المتابعة و لكنها لم تعد مطلوبة">
+				>
+				["at0008"] = <
+					text = <"تم تواصل المريض">
+					description = <"تم تواصل المريض فيما بتعلق بالمتابعة">
+				>
+				["at0009"] = <
+					text = <"تمت المراجعة">
+					description = <"تم مراجعة المتابعة">
+				>
+				["at0010"] = <
+					text = <"تم التوقف">
+					description = <"تم البدء بالمتابعة ثم تم إيقافها">
+				>
+				["at0011"] = <
+					text = <"اكتمل">
+					description = <"تم اكتمال عملية المتابعة">
+				>
+				["at0012"] = <
+					text = <"لم يتم الحضور">
+					description = <"لم يحضر المريض">
+				>
+				["at0013"] = <
+					text = <"تمت إعادة تحديد الموعد">
+					description = <"تمت إعادة تحديد الموعد خلال متابعة نشطة">
+				>
+			>
+		>
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"Follow up action">
-					description = <"An action taken as part of a follow up">
+					description = <"An action taken as part of a follow up.">
 				>
 				["at0001"] = <
 					text = <"Planned">
-					description = <"The follow up is planned">
+					description = <"The follow up is planned.">
 				>
 				["at0002"] = <
 					text = <"Postponed">
-					description = <"Follow up still required but requires intervention">
+					description = <"Follow up still required but requires intervention.">
 				>
 				["at0003"] = <
 					text = <"Scheduled">
-					description = <"The follow up is scheduled">
+					description = <"The follow up is scheduled.">
 				>
 				["at0004"] = <
 					text = <"Rescheduled">
-					description = <"The follow up has been rescheduled">
+					description = <"The follow up has been rescheduled.">
 				>
 				["at0005"] = <
 					text = <"Attended">
-					description = <"A follow up visit has occurred">
+					description = <"A follow up visit has occurred.">
 				>
 				["at0006"] = <
 					text = <"Suspended">
-					description = <"No further follow up until intervention">
+					description = <"No further follow up until intervention.">
 				>
 				["at0007"] = <
 					text = <"Cancelled">
-					description = <"Follow up has not begun and is no longer required">
+					description = <"Follow up has not begun and is no longer required.">
 				>
 				["at0008"] = <
 					text = <"Patient contacted">
-					description = <"Patient has been contacted regarding follow-up">
+					description = <"Patient has been contacted regarding follow-up.">
 				>
 				["at0009"] = <
 					text = <"Reviewed">
-					description = <"Follow up has been reviewed">
+					description = <"Follow up has been reviewed.">
 				>
 				["at0010"] = <
 					text = <"Ceased">
-					description = <"Follow up was commenced by has been ceased">
+					description = <"Follow up was commenced by has been ceased.">
 				>
 				["at0011"] = <
 					text = <"Completed">
-					description = <"Follow up process has been completed">
+					description = <"Follow up process has been completed.">
 				>
 				["at0012"] = <
 					text = <"Did not attend">
-					description = <"The patient did not attend">
+					description = <"The patient did not attend.">
 				>
 				["at0013"] = <
 					text = <"Rescheduled">
-					description = <"An appointment has been resceduled during active follow up">
+					description = <"An appointment has been resceduled during active follow up.">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"Acción de seguimiento clínico">
+					description = <"Una acción realizada como parte de un seguimiento clínico">
+				>
+				["at0001"] = <
+					text = <"Planeada">
+					description = <"El seguimiento clínico esta planeado">
+				>
+				["at0002"] = <
+					text = <"Pospuesto">
+					description = <"El seguimiento clínico aún es requerido pero requiere intervención">
+				>
+				["at0003"] = <
+					text = <"Programado">
+					description = <"El seguimiento clínico está programado">
+				>
+				["at0004"] = <
+					text = <"Reprogramado">
+					description = <"El seguimiento clínico ha sido reprogramado">
+				>
+				["at0005"] = <
+					text = <"Atendido">
+					description = <"Una visita de seguimiento clínico ha ocurrido">
+				>
+				["at0006"] = <
+					text = <"Suspendido">
+					description = <"No se realizarán mas el seguimiento clínico">
+				>
+				["at0007"] = <
+					text = <"Cancelado">
+					description = <"El seguimiento clínico no comenzó aún y ya no es requerido">
+				>
+				["at0008"] = <
+					text = <"Paciente contactado">
+					description = <"El paciente ha sido contactado en relación al seguimiento clínico ">
+				>
+				["at0009"] = <
+					text = <"Revisado">
+					description = <"El seguimiento clínico ha sido revisado">
+				>
+				["at0010"] = <
+					text = <"Interrumpido">
+					description = <"El seguimiento clínico ha sido interrumpido">
+				>
+				["at0011"] = <
+					text = <"Completado">
+					description = <"El seguimiento clínico ha sido completado">
+				>
+				["at0012"] = <
+					text = <"No asistió">
+					description = <"El paciente no asistió">
+				>
+				["at0013"] = <
+					text = <"Reprogramado">
+					description = <"Un turno ha sido reprogramado durante un seguimiento clínico activo">
 				>
 			>
 		>
