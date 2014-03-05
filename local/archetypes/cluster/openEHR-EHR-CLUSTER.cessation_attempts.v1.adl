@@ -10,7 +10,7 @@ description
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"22/06/2009">
+		["date"] = <"2009-06-22">
 	>
 	details = <
 		["en"] = <
@@ -25,7 +25,7 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
+		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Draft CLUSTER archetype: Cessation Attempts; [authored 2009 Jun 22, cited 2011 Aug 25]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.364_2.">
 		["MD5-CAM-1.0.1"] = <"0D3EB32A8DA29FFC98EE7ABEE6F7BE81">
 	>
 
@@ -86,7 +86,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

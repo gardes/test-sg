@@ -1,0 +1,768 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.provider.v1
+
+concept
+	[at0000]	-- Provider
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Koray Atalag">
+		["organisation"] = <"National Institute for Health Innovation">
+		["email"] = <"k.atalag@nihi.auckland.ac.nz">
+		["date"] = <"2013-08-14">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record provider details">
+			use = <"For HPI comliant provider information">
+			keywords = <"Provider", ...>
+			misuse = <"None">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"HISO 10005">
+		["MD5-CAM-1.0.1"] = <"78A60DF98326DE9E579434754E493AAB">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Provider
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..*} matches {	-- Provider Person
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Common Person Number (CPN)
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Person Confidentiality Flag
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					CLUSTER[at0004] occurrences matches {0..*} matches {	-- Person Identifier
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Source Person Identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Assigning Source
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Identifier Type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0008] occurrences matches {0..1} matches {	-- Person Name
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Person Name Type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Name Prefix
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {	-- Given Name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Second further given name(s) or initials thereof
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Surname Prefix
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0014] occurrences matches {0..1} matches {	-- Surname
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Suffix
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0016] occurrences matches {0..1} matches {	-- Service Type Details
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0017] occurrences matches {0..1} matches {	-- Job Role
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0018] occurrences matches {0..1} matches {	-- Job Title Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Practitioner Status
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0020] occurrences matches {0..1} matches {	-- Practitioner Status Start Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0021] occurrences matches {0..1} matches {	-- Practitioner Status Finish Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0022] occurrences matches {0..1} matches {	-- Health Worker Status
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0023] occurrences matches {0..1} matches {	-- Practitioner Initial Registration Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0024] occurrences matches {0..1} matches {	-- Practitioner Practising Certificate Start Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0025] occurrences matches {0..1} matches {	-- Practitioner Practising Certificate Finish Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0026] occurrences matches {0..1} matches {	-- Demographic Detail
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0027] occurrences matches {0..1} matches {	-- Sex
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0028] occurrences matches {0..6} matches {	-- Ethnicity
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0029] occurrences matches {0..1} matches {	-- Date of Birth
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0030] occurrences matches {0..*} matches {	-- Language
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0031] occurrences matches {0..1} matches {	-- Language
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0032] occurrences matches {0..1} matches {	-- Ability
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0033] occurrences matches {0..1} matches {	-- Proficiency
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0034] occurrences matches {0..*} matches {	-- Practitioner Qualification
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0035] occurrences matches {0..1} matches {	-- Qualification
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0036] occurrences matches {0..1} matches {	-- Granting Institution
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0037] occurrences matches {0..1} matches {	-- Granting Institution City
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0038] occurrences matches {0..1} matches {	-- Granting Institution Country
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0039] occurrences matches {0..1} matches {	-- Qualification Year
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0040] occurrences matches {0..1} matches {	-- Practitioner Scope of Practice
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0041] occurrences matches {0..1} matches {	-- Practitioner Scope of Practice
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0042] occurrences matches {0..1} matches {	-- Practitioner Scope of Practice Start Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0043] occurrences matches {0..1} matches {	-- Practitioner Scope of Practice Finish Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0044] occurrences matches {0..1} matches {	-- Conditions on Practice Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0045] occurrences matches {0..1} matches {	-- Conditions on Practice Description Start Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0046] occurrences matches {0..1} matches {	-- Conditions on Practice Description Finish Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0047] occurrences matches {0..1} matches {	-- Additional Authorisations
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0048] occurrences matches {0..1} matches {	-- Additional Authorisations Start Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0049] occurrences matches {0..1} matches {	-- Additional Authorisations Finish Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0071] occurrences matches {0..*} matches {	-- Address
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address-nz(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0072] occurrences matches {0..*} matches {	-- Communication
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.communication(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			CLUSTER[at0050] occurrences matches {0..*} matches {	-- Provider Organisation
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0051] occurrences matches {0..1} matches {	-- Organisation Identifier
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0052] occurrences matches {0..1} matches {	-- Organisation Identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0053] occurrences matches {0..1} matches {	-- Organisation Identifier Check Digit
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0054] occurrences matches {0..*} matches {	-- Organisation Name
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0055] occurrences matches {0..1} matches {	-- Organisation Name Type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..1} matches {	-- Organisation Name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0057] occurrences matches {0..*} matches {	-- Organisation Services
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0058] occurrences matches {0..*} matches {	-- Organisation Type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0059] occurrences matches {0..1} matches {	-- Organisation Establishment Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0060] occurrences matches {0..1} matches {	-- Organisation Disestablishment Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0073] occurrences matches {0..*} matches {	-- Address
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address-nz(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0074] occurrences matches {0..*} matches {	-- Communication
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.communication(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			CLUSTER[at0061] occurrences matches {0..*} matches {	-- Provider Facility
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0065] occurrences matches {0..*} matches {	-- Facility Name
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0067] occurrences matches {0..1} matches {	-- Facility Name Type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0066] occurrences matches {0..1} matches {	-- Facility Name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0062] occurrences matches {0..1} matches {	-- Facility Identifier
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0063] occurrences matches {0..1} matches {	-- Facility Identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+								}
+							}
+							ELEMENT[at0064] occurrences matches {0..1} matches {	-- Facility Identifier Check Digit
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0068] occurrences matches {0..*} matches {	-- Facility Service
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0069] occurrences matches {0..1} matches {	-- Facility Establishment Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0070] occurrences matches {0..1} matches {	-- Facility Disestablishment Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0075] occurrences matches {0..*} matches {	-- Address
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address-nz(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0076] occurrences matches {0..*} matches {	-- Communication
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.communication(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			CLUSTER[at0077] occurrences matches {0..*} matches {	-- Relationship
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0078] occurrences matches {0..1} matches {	-- Relationship Type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0079] occurrences matches {0..1} matches {	-- Relationship Entity One
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0080] occurrences matches {0..1} matches {	-- Relationship Entity Two
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0081] occurrences matches {0..1} matches {	-- Relationship Commencement Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0082] occurrences matches {0..1} matches {	-- Relationship Termination Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Provider">
+					description = <"Health provider as per NZ Health Practitioner Index (HPI) HISO 10005. Includes: provider person, organisation and facility">
+				>
+				["at0001"] = <
+					text = <"Provider Person">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Common Person Number (CPN)">
+					description = <"A unique lifetime identifier for an individual, which takes precedence over all other identifiers (Practitioner and Health Worker) across the HPI.">
+				>
+				["at0003"] = <
+					text = <"Person Confidentiality Flag">
+					description = <"Information about a person with this flag set to ‘Y’ (Yes) should not be accessible to the public or other users because of a risk of harm to the person, e.g. in accordance with the criteria and process described in sections 108 to 120 of the Domestic Violence Act 1995.">
+				>
+				["at0004"] = <
+					text = <"Person Identifier">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Source Person Identifier">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Assigning Source">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Identifier Type">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Person Name">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Person Name Type">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Name Prefix">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Given Name">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Second further given name(s) or initials thereof">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Surname Prefix">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Surname">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Suffix">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Service Type Details">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Job Role">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Job Title Description">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Practitioner Status">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Practitioner Status Start Date">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Practitioner Status Finish Date">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Health Worker Status">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Practitioner Initial Registration Date">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Practitioner Practising Certificate Start Date">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Practitioner Practising Certificate Finish Date">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Demographic Detail">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Sex">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"Ethnicity">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"Date of Birth">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"Language">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"Language">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"Ability">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"Proficiency">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Practitioner Qualification">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"Qualification">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"Granting Institution">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"Granting Institution City">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"Granting Institution Country">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"Qualification Year">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"Practitioner Scope of Practice">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Practitioner Scope of Practice">
+					description = <"*">
+				>
+				["at0042"] = <
+					text = <"Practitioner Scope of Practice Start Date">
+					description = <"*">
+				>
+				["at0043"] = <
+					text = <"Practitioner Scope of Practice Finish Date">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"Conditions on Practice Description">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"Conditions on Practice Description Start Date">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"Conditions on Practice Description Finish Date">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <"Additional Authorisations">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"Additional Authorisations Start Date">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"Additional Authorisations Finish Date">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"Provider Organisation">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Organisation Identifier">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"Organisation Identifier">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"Organisation Identifier Check Digit">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"Organisation Name">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"Organisation Name Type">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Organisation Name">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Organisation Services">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"Organisation Type">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Organisation Establishment Date">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"Organisation Disestablishment Date">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Provider Facility">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Facility Identifier">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Facility Identifier">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"Facility Identifier Check Digit">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"Facility Name">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Facility Name">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"Facility Name Type">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"Facility Service">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Facility Establishment Date">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Facility Disestablishment Date">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Address">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Communication">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Address">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Communication">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Address">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"Communication">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Relationship">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Relationship Type">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Relationship Entity One">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Relationship Entity Two">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Relationship Commencement Date">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Relationship Termination Date">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -6,13 +6,6 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
-			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-			>
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
@@ -20,12 +13,10 @@ language
 				["organisation"] = <"University of Heidelberg, Ocean Informatics">
 			>
 		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
 			author = <
-				["name"] = <"Marja Buur">
-				["organisation"] = <"Medisch Centrum Alkmaar">
-				["email"] = <"m.buur-krom@mca.nl">
+				["name"] = <"Mona Saleh">
 			>
 		>
 		["es-ar"] = <
@@ -36,6 +27,21 @@ language
 			>
 			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
 		>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
+			author = <
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+			>
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"Marja Buur">
+				["organisation"] = <"Medisch Centrum Alkmaar">
+				["email"] = <"m.buur-krom@mca.nl">
+			>
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			author = <
@@ -44,12 +50,6 @@ language
 				["email"] = <"marco.borges@p2d.com.br">
 			>
 			accreditation = <"P2D Health Advisor Council">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
 		>
 	>
 description
@@ -269,7 +269,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

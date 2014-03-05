@@ -1,0 +1,147 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.ear_stuff.v1
+
+concept
+	[at0000]	-- Ear stuff
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"01DBFAD25EEC1EEA7C3BE001A955E463">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Ear stuff
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TABLE[at0003] matches {	-- Table
+								rotated matches {True}
+								number_key_columns matches {|1|}
+								rows cardinality matches {0..1; unordered} matches {
+									CLUSTER[at0009] occurrences matches {0..1} matches {	-- row
+										items cardinality matches {5; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {	-- row_head
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0004, 	-- Left ear
+															at0006]	-- Right ear
+														}
+													}
+												}
+											}
+											ELEMENT[at0007] occurrences matches {0..1} matches {	-- description
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0008] occurrences matches {0..1} matches {	-- whatever
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::348]>
+														list = <
+															["1"] = <
+																units = <"g/cm2-s">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0010] occurrences matches {0..1} matches {	-- shoop
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|999..1001|}
+													}
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..1} matches {	-- New element
+												value matches {
+													DV_TEXT matches {*}
+													C_DV_ORDINAL <
+													>
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ear stuff">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Table">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Left ear">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"row_head">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Right ear">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"description">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"whatever">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"row">
+					description = <"@ internal @">
+				>
+				["at0010"] = <
+					text = <"shoop">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"New element">
+					description = <"*">
+				>
+			>
+		>
+	>

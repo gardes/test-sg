@@ -10,19 +10,23 @@ description
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"2008-11-10">
+		["date"] = <"10/11/2008">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about anatomical location.">
-			use = <"">
-			keywords = <"location", "site", "anatomical">
-			misuse = <"Not for specifiying unilateral/bilateral occurence - this is related to an evaluation which perhaps includes multiple locations.">
+			purpose = <"To record details about a single anatomical location, including the ability to record an approximate location relative to identified anatomical landmarks.">
+			use = <"Use within slots in ENTRY and CLUSTER archetypes to describe anatomical location in a consistent manner.
+
+Examples of use: 
+- Use within CLUSTER.specimen to record Anatomical Location details within the 'Collection Site' slot.
+- Use within EVALUATION.adverse_reaction to record Anatomical Location details within the 'Additional Reaction Detail' slot.">
+			keywords = <"location", "site", "anatomical", "structure", "area">
+			misuse = <"Not for specifiying unilateral/bilateral occurrence of a health condition or diagnosis - this is an evaluative statement.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"Use cases:
@@ -44,76 +48,77 @@ description
 - midline nose
 
 - medial aspect of R great toe nail.">
-		["MD5-CAM-1.0.1"] = <"A2DAED2760D934F3D07C4EC4C891C4B2">
+		["MD5-CAM-1.0.1"] = <"ABE2EBFBA88F794273B956613748E3E5">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Anatomical Location
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0005] occurrences matches {0..1} matches {	-- Specific location
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0001] occurrences matches {0..1} matches {	-- Name of location
-						value matches {
-							DV_TEXT matches {*}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Name
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..*} matches {	-- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Side
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003, 	-- Left
+							at0004, 	-- Right
+							at0051]	-- Bilateral
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Side
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0003, 	-- Left
-									at0004, 	-- Right
-									at0051]	-- Bilateral
-								}
-							}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {	-- Numerical identifier
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0029, 	-- First
+							at0030, 	-- Second
+							at0031, 	-- Third
+							at0032, 	-- Fourth
+							at0033, 	-- Fifth
+							at0034, 	-- Sixth
+							at0035, 	-- Seventh
+							at0036, 	-- Eighth
+							at0037, 	-- Ninth
+							at0038, 	-- Tenth
+							at0039, 	-- Eleventh
+							at0040, 	-- Twelfth
+							at0041, 	-- Thirteenth
+							at0042, 	-- Fourteenth
+							at0043, 	-- Fifteenth
+							at0044, 	-- Sixteenth
+							at0045, 	-- Seventeenth
+							at0046]	-- Eighteenth
 						}
 					}
-					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Numerical identifier
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0029, 	-- First
-									at0030, 	-- Second
-									at0031, 	-- Third
-									at0032, 	-- Fourth
-									at0033, 	-- Fifth
-									at0034, 	-- Sixth
-									at0035, 	-- Seventh
-									at0036, 	-- Eighth
-									at0037, 	-- Ninth
-									at0038, 	-- Tenth
-									at0039, 	-- Eleventh
-									at0040, 	-- Twelfth
-									at0041, 	-- Thirteenth
-									at0042, 	-- Fourteenth
-									at0043, 	-- Fifteenth
-									at0044, 	-- Sixteenth
-									at0045, 	-- Seventeenth
-									at0046]	-- Eighteenth
-								}
-							}
-						}
-					}
-					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Anatomical plane
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0011, 	-- Midline
-									at0025, 	-- Midclavicular line
-									at0026, 	-- Midaxillary line
-									at0027]	-- Midscapular line
-								}
-							}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {	-- Anatomical Plane
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0011, 	-- Midline
+							at0025, 	-- Midclavicular line
+							at0026, 	-- Midaxillary line
+							at0027]	-- Midscapular line
 						}
 					}
 				}
 			}
 			CLUSTER[at0020] occurrences matches {0..*} matches {	-- Relative location
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Identified landmark
+					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Identified Landmark
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -139,7 +144,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Distance from landmark
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Distance from Landmark
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::122]>
@@ -151,9 +156,6 @@ definition
 										units = <"in">
 									>
 									["3"] = <
-										units = <"ft">
-									>
-									["4"] = <
 										units = <"mm">
 									>
 								>
@@ -162,12 +164,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0023] occurrences matches {0..*} matches {	-- Description
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0053] occurrences matches {0..*} matches {	-- Visual markings/orientation
+			ELEMENT[at0053] occurrences matches {0..*} matches {	-- Visual Markings/Orientation
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -182,23 +179,23 @@ definition
 		}
 	}
 
-
 ontology
-	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"Anatomical Location">
-					description = <"Record details about an anatomical location.">
+					description = <"Identification of a single anatomical structure, or area, of the human body.">
 				>
 				["at0001"] = <
-					text = <"Name of location">
-					description = <"Named anatomical location - ideally would be coded where possible.">
+					text = <"Name">
+					description = <"Name of anatomical location, as specific as is possible.">
+					comment = <"Coding with a terminology is desirable, where possible.">
 				>
 				["at0002"] = <
 					text = <"Side">
-					description = <"Specify lateraility of the anatomical location.">
+					description = <"Specify laterality of the anatomical location.">
+					comment = <"Specified only if this is not clear from the 'Name of Location' data element.">
 				>
 				["at0003"] = <
 					text = <"Left">
@@ -208,13 +205,9 @@ ontology
 					text = <"Right">
 					description = <"Right laterality.">
 				>
-				["at0005"] = <
-					text = <"Specific location">
-					description = <"Specific and identified anatomical location.">
-				>
 				["at0006"] = <
 					text = <"Aspect">
-					description = <"Qualifier to identify which direction the anatomical location is in relation to the identified landmark.">
+					description = <"Qualifier to identify which direction the Anatomical Location is in relation to the Identified Landmark.">
 				>
 				["at0007"] = <
 					text = <"Medial to">
@@ -273,20 +266,21 @@ ontology
 					description = <"Qualifiers to identify non-specific location eg 5cm (distance) inferior (aspect) to the tibial tuberosity (landmark).  There may be more than one relative location required to provide a cross reference.">
 				>
 				["at0021"] = <
-					text = <"Identified landmark">
-					description = <"Identified anatomical landmark from which to specify relative anatomical location.">
+					text = <"Identified Landmark">
+					description = <"Identified Anatomical Landmark from which to specify Relative Anatomical Location.">
 				>
 				["at0022"] = <
-					text = <"Distance from landmark">
-					description = <"Distance of location from the identified landmark.">
+					text = <"Distance from Landmark">
+					description = <"Distance of Anatomical Location from the Identified Landmark.">
 				>
 				["at0023"] = <
 					text = <"Description">
 					description = <"Description of anatomical location.">
 				>
 				["at0024"] = <
-					text = <"Anatomical plane">
-					description = <"Line describing the position of a vertical anatomical plane in the body.">
+					text = <"Anatomical Plane">
+					description = <"Description of location in relation to a vertical anatomical plane in the body.">
+					comment = <"Specified only if this is not clear from the 'Name of Location' data element. For example: to support clinicians to express the apex of the heart as located at the \"5th left intercostal space in the midclavicular line\".">
 				>
 				["at0025"] = <
 					text = <"Midclavicular line">
@@ -302,7 +296,8 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Numerical identifier">
-					description = <"Identify the specific anatomical site out of multiple eg tenth rib; fourth vertebra; second toe.">
+					description = <"Identify the specific anatomical site where there are numerous possible sites.">
+					comment = <"Specified only if this is not clear from the 'Name of Location' data element. For example: tenth rib; fourth vertebra; or second toe.">
 				>
 				["at0029"] = <
 					text = <"First">
@@ -382,21 +377,12 @@ ontology
 				>
 				["at0052"] = <
 					text = <"Image">
-					description = <"Image or images used to identify a location.">
+					description = <"Image, drawing or video used to record the anatomical location.">
 				>
 				["at0053"] = <
-					text = <"Visual markings/orientation">
+					text = <"Visual Markings/Orientation">
 					description = <"Description of any visual markings used to orientate the viewer e.g external reference points, special sutures, ink markings.">
 				>
-			>
-		>
-	>
-	term_bindings = <
-		["SNOMED-CT"] = <
-			items = <
-				["at0002"] = <[SNOMED-CT::272741003]>
-				["at0003"] = <[SNOMED-CT::419161000]>
-				["at0004"] = <[SNOMED-CT::419465000]>
 			>
 		>
 	>

@@ -1,0 +1,8 @@
+<ots:query xmlns:ots="urn:xmlns:oceaninformatics.biz:schema:OTSQuerySchema" name="CKM TEST - Body position" language="en-GB" terminology="Snomed" parentQuery="" description="" baseQuery="" cacheMode="Permanent" pruneDeadHeads="true">
+   <childNodes>
+      <concept conceptId="10904000" operation="Select"></concept>
+      <concept conceptId="33586001" operation="Select"></concept>
+      <concept conceptId="102538003" operation="Select"></concept>
+      <concept conceptId="272580008" operation="Select"></concept>
+   </childNodes>
+</ots:query>
