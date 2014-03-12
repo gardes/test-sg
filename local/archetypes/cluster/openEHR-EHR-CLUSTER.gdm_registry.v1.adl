@@ -24,13 +24,13 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"GDM Registry development team", ...>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"850D082689E5112CE012B091627473F4">
+		["MD5-CAM-1.0.1"] = <"422F4A62C26F26F4448881C2E08BD9C5">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- GDM Registry Dataset
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Demographic
+			CLUSTER[at0001] occurrences matches {0..1} matches {	-- DEMOGRAPHIC
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- NHI
 						value matches {
@@ -85,7 +85,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0007] occurrences matches {0..1} matches {	-- Current contact information
+			CLUSTER[at0007] occurrences matches {0..1} matches {	-- CONTACT DETAILS
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0006] occurrences matches {0..*} matches {	-- Address
 						value matches {
@@ -111,9 +111,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0010] occurrences matches {0..*} matches {	-- Patient Contact
+			CLUSTER[at0010] occurrences matches {0..*} matches {	-- CONTACT PEOPLE
 				items cardinality matches {1..*; unordered} matches {
-					use_node ELEMENT occurrences matches {0..1} /items[at0001]/items[at0005]	-- /items[Demographic]/items[Name]
+					use_node ELEMENT occurrences matches {0..1} /items[at0001]/items[at0005]	-- /items[DEMOGRAPHIC]/items[Name]
 					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Relationship
 						value matches {
 							DV_CODED_TEXT matches {
@@ -133,12 +133,12 @@ definition
 							}
 						}
 					}
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0006]	-- /items[Current contact information]/items[Address]
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0008]	-- /items[Current contact information]/items[Telecom]
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[Current contact information]/items[Email]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0006]	-- /items[CONTACT DETAILS]/items[Address]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0008]	-- /items[CONTACT DETAILS]/items[Telecom]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[CONTACT DETAILS]/items[Email]
 				}
 			}
-			CLUSTER[at0013] occurrences matches {0..*} matches {	-- Provider
+			CLUSTER[at0013] occurrences matches {0..*} matches {	-- PROVIDER
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0014] occurrences matches {0..1} matches {	-- HPI
 						value matches {
@@ -155,25 +155,20 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0006]	-- /items[Current contact information]/items[Address]
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0008]	-- /items[Current contact information]/items[Telecom]
-					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[Current contact information]/items[Email]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0006]	-- /items[CONTACT DETAILS]/items[Address]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0008]	-- /items[CONTACT DETAILS]/items[Telecom]
+					use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[CONTACT DETAILS]/items[Email]
 				}
 			}
-			CLUSTER[at0017] occurrences matches {0..1} matches {	-- Clinical Data
+			CLUSTER[at0194] occurrences matches {0..1} matches {	-- PERSISTENT SUMMARY
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Gestation at diagnosis
+					ELEMENT[at0195] occurrences matches {0..1} matches {	-- Date of first Diabetes Clinic appointment
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Gravida/Parity
-						value matches {
-							C_DV_ORDINAL <
-							>
-						}
-					}
-					CLUSTER[at0170] occurrences matches {0..1} matches {	-- History of prior GDM
+					use_node ELEMENT occurrences matches {0..1} /items[at0193]/items[at0017]/items[at0019]	-- /items[PREGNANCY]/items[Clinical Information]/items[Gravida/Parity]
+					CLUSTER[at0170] occurrences matches {0..1} matches {	-- History of GDM
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0020] occurrences matches {0..1} matches {	-- History of prior GDM
 								value matches {
@@ -182,52 +177,16 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0171] occurrences matches {0..1} matches {	-- Date of GDM Diagnosis
+							ELEMENT[at0171] occurrences matches {0..1} matches {	-- Date of last GDM Diagnosis
 								value matches {
 									DV_DATE_TIME matches {*}
 								}
 							}
-							ELEMENT[at0172] occurrences matches {0..*} matches {	-- Treatment
-								value matches {
-									DV_CODED_TEXT matches {
-										defining_code matches {
-											[local::
-											at0173, 	-- Diet
-											at0174, 	-- Tablets
-											at0175]	-- Insulin
-										}
-									}
-								}
-							}
-							ELEMENT[at0187] occurrences matches {0..1} matches {	-- Insulin required?
-								value matches {
-									DV_CODED_TEXT matches {
-										defining_code matches {
-											[local::
-											at0188, 	-- Basal
-											at0189, 	-- Bolus
-											at0190]	-- Both (basal + bolus)
-										}
-									}
-								}
-							}
+							use_node ELEMENT occurrences matches {0..*} /items[at0193]/items[at0017]/items[at0198]/items[at0172]	-- /items[PREGNANCY]/items[Clinical Information]/items[Management]/items[Treatment of GDM]
+							use_node ELEMENT occurrences matches {0..1} /items[at0193]/items[at0017]/items[at0198]/items[at0187]	-- /items[PREGNANCY]/items[Clinical Information]/items[Management]/items[Insulin required?]
 						}
 					}
-					ELEMENT[at0021] occurrences matches {0..*} matches {	-- Comorbidities
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0022, 	-- Hypertension
-									at0023, 	-- COS
-									at0024, 	-- Dyslipidaemia
-									at0025, 	-- Microalbuminuria
-									at0026, 	-- Renal impairment
-									at0176]	-- Obstructive sleep apnoea
-								}
-							}
-						}
-					}
+					use_node ELEMENT occurrences matches {0..*} /items[at0193]/items[at0017]/items[at0021]	-- /items[PREGNANCY]/items[Clinical Information]/items[Comorbidities]
 					ELEMENT[at0027] occurrences matches {0..*} matches {	-- Family history of diabetes
 						value matches {
 							DV_CODED_TEXT matches {
@@ -240,48 +199,6 @@ definition
 									at0181]	-- Child
 								}
 							}
-						}
-					}
-					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Weight at presentation
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::124]>
-								list = <
-									["1"] = <
-										units = <"kg">
-									>
-									["2"] = <
-										units = <"g">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0029] occurrences matches {0..1} matches {	-- Height at presentation
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::122]>
-								list = <
-									["1"] = <
-										units = <"m">
-									>
-									["2"] = <
-										units = <"cm">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0030] occurrences matches {0..1} matches {	-- BMI at presentation
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::349]>
-								list = <
-									["1"] = <
-										units = <"kg/m2">
-									>
-								>
-							>
 						}
 					}
 					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Smoking status
@@ -301,239 +218,344 @@ definition
 							}
 						}
 					}
-				}
-			}
-			CLUSTER[at0034] occurrences matches {0..*} matches {	-- Laboratory Data
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0033] occurrences matches {0..1} matches {	-- OGTT result (fasting)
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"mmol/l">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {	-- OGTT result (2 hour)
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"mmol/l">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0184] occurrences matches {0..1} matches {	-- Polycose result
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"mmol/l">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0036] occurrences matches {0..1} matches {	-- HbA1c at diagnosis
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::384]>
-								list = <
-									["1"] = <
-										units = <"mmol/mol">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0037] occurrences matches {0..1} matches {	-- Urine microalbumin
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"mg/l">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0038] occurrences matches {0..1} matches {	-- Protein creatinine ratio
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::507]>
-							>
-						}
-					}
-					ELEMENT[at0039] occurrences matches {0..1} matches {	-- Serum creatinine
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"umol/l">
-									>
-									["2"] = <
-										units = <"mg/dl">
-									>
-								>
-							>
-						}
-					}
-				}
-			}
-			CLUSTER[at0040] occurrences matches {0..1} matches {	-- End of pregnancy data
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0041] occurrences matches {0..1} matches {	-- Gestation at delivery
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0042] occurrences matches {0..1} matches {	-- Delivery outcome
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0043, 	-- TOP
-									at0044, 	-- Miscarriage
-									at0045]	-- IUD
-								}
-							}
-						}
-					}
-					ELEMENT[at0046] occurrences matches {0..1} matches {	-- Pre-eclampsia
+					ELEMENT[at0192] occurrences matches {0..1} matches {	-- Attended group educational sessions?
 						value matches {
 							DV_BOOLEAN matches {
 								value matches {True, False}
 							}
 						}
 					}
-					ELEMENT[at0047] occurrences matches {0..1} matches {	-- Mode of delivery
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0048, 	-- NVD
-									at0049, 	-- C-Section
-									at0050]	-- Ventouse
+				}
+			}
+			CLUSTER[at0193] occurrences matches {0..1} matches {	-- PREGNANCY
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0017] occurrences matches {0..1} matches {	-- Clinical Information
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0196] occurrences matches {0..1} matches {	-- Date of GDM diagnosis
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0018] occurrences matches {0..1} matches {	-- Gestation at diagnosis
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Gravida/Parity
+								value matches {
+									C_DV_ORDINAL <
+									>
+								}
+							}
+							ELEMENT[at0021] occurrences matches {0..*} matches {	-- Comorbidities
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0022, 	-- Hypertension
+											at0023, 	-- COS
+											at0024, 	-- Dyslipidaemia
+											at0025, 	-- Microalbuminuria
+											at0026, 	-- Renal impairment
+											at0176]	-- Obstructive sleep apnoea
+										}
+									}
+								}
+							}
+							ELEMENT[at0028] occurrences matches {0..1} matches {	-- Weight at presentation
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::124]>
+										list = <
+											["1"] = <
+												units = <"kg">
+											>
+											["2"] = <
+												units = <"g">
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0029] occurrences matches {0..1} matches {	-- Height at presentation
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::122]>
+										list = <
+											["1"] = <
+												units = <"m">
+											>
+											["2"] = <
+												units = <"cm">
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0030] occurrences matches {0..1} matches {	-- BMI at presentation
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::349]>
+										list = <
+											["1"] = <
+												units = <"kg/m2">
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0063] occurrences matches {0..1} matches {	-- First antenatal blood date of request
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							CLUSTER[at0034] occurrences matches {0..*} matches {	-- Laboratory
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0033] occurrences matches {0..1} matches {	-- OGTT result (fasting)
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mmol/l">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {	-- OGTT result (2 hour)
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mmol/l">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0184] occurrences matches {0..1} matches {	-- Polycose result
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mmol/l">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- HbA1c at diagnosis
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::384]>
+												list = <
+													["1"] = <
+														units = <"mmol/mol">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0037] occurrences matches {0..1} matches {	-- Urine microalbumin
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mg/l">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0038] occurrences matches {0..1} matches {	-- Protein creatinine ratio
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+											>
+										}
+									}
+									ELEMENT[at0039] occurrences matches {0..1} matches {	-- Serum creatinine
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"umol/l">
+													>
+													["2"] = <
+														units = <"mg/dl">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+							CLUSTER[at0198] occurrences matches {0..1} matches {	-- Management
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0172] occurrences matches {0..*} matches {	-- Treatment of GDM
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0173, 	-- Diet
+													at0174, 	-- Tablets
+													at0175]	-- Insulin
+												}
+											}
+										}
+									}
+									ELEMENT[at0187] occurrences matches {0..1} matches {	-- Insulin required?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0188, 	-- Basal
+													at0189, 	-- Bolus
+													at0190]	-- Both (basal + bolus)
+												}
+											}
+										}
+									}
+									ELEMENT[at0197] occurrences matches {0..1} matches {	-- Description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0040] occurrences matches {0..1} matches {	-- End of pregnancy
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0041] occurrences matches {0..1} matches {	-- Gestation at delivery
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {	-- Delivery outcome
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0043, 	-- TOP
+													at0044, 	-- Miscarriage
+													at0045]	-- IUD
+												}
+											}
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {	-- Pre-eclampsia
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0047] occurrences matches {0..1} matches {	-- Mode of delivery
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0048, 	-- NVD
+													at0049, 	-- C-Section
+													at0050]	-- Ventouse
+												}
+											}
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {	-- Neonatal weight at delivery
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::124]>
+												list = <
+													["1"] = <
+														units = <"g">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0055] occurrences matches {0..1} matches {	-- 6 week OGTT result
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::119]>
+												list = <
+													["1"] = <
+														units = <"mmol/l">
+													>
+													["2"] = <
+														units = <"mg/dl">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0056] occurrences matches {0..1} matches {	-- HbA1c within 3 months of delivery
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::384]>
+												list = <
+													["1"] = <
+														units = <"mmol/mol">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+							CLUSTER[at0057] occurrences matches {0..*} matches {	-- Newborn(s)
+								items cardinality matches {1..*; unordered} matches {
+									use_node ELEMENT occurrences matches {0..1} /items[at0001]/items[at0002]	-- /items[DEMOGRAPHIC]/items[NHI]
+									ELEMENT[at0060] occurrences matches {0..1} matches {	-- Post-natal death
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0112] occurrences matches {0..1} matches {	-- Neonate ICU admission
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0093] occurrences matches {0..1} matches {	-- Death date
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0094] occurrences matches {0..1} matches {	-- Death reason
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0061] occurrences matches {0..*} matches {	-- Followup
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
 					}
-					ELEMENT[at0051] occurrences matches {0..1} matches {	-- Neonatal weight at delivery
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::124]>
-								list = <
-									["1"] = <
-										units = <"g">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0052] occurrences matches {0..1} matches {	-- Medication required during pregnancy
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0053, 	-- oral hypoglycaemic
-									at0054]	-- insulin
+					CLUSTER[at0058] occurrences matches {0..1} matches {	-- Administrative
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0059] occurrences matches {0..1} matches {	-- ICD Codes at discharge
+								value matches {
+									DV_TEXT matches {*}
 								}
 							}
-						}
-					}
-					ELEMENT[at0055] occurrences matches {0..1} matches {	-- 6 week OGTT result
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::119]>
-								list = <
-									["1"] = <
-										units = <"mmol/l">
-									>
-									["2"] = <
-										units = <"mg/dl">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0056] occurrences matches {0..1} matches {	-- HbA1c within 3 months of delivery
-						value matches {
-							C_DV_QUANTITY <
-								property = <[openehr::384]>
-								list = <
-									["1"] = <
-										units = <"mmol/mol">
-									>
-								>
-							>
-						}
-					}
-				}
-			}
-			CLUSTER[at0057] occurrences matches {0..*} matches {	-- Newborn(s)
-				items cardinality matches {1..*; unordered} matches {
-					use_node ELEMENT occurrences matches {0..1} /items[at0001]/items[at0002]	-- /items[Demographic]/items[NHI]
-					ELEMENT[at0060] occurrences matches {0..1} matches {	-- Post-natal death
-						value matches {
-							DV_BOOLEAN matches {
-								value matches {True, False}
-							}
-						}
-					}
-					ELEMENT[at0112] occurrences matches {0..1} matches {	-- Neonate ICU admission
-						value matches {
-							DV_BOOLEAN matches {
-								value matches {True, False}
-							}
-						}
-					}
-					ELEMENT[at0093] occurrences matches {0..1} matches {	-- Death date
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0094] occurrences matches {0..1} matches {	-- Death reason
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0061] occurrences matches {0..*} matches {	-- Followup
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-				}
-			}
-			CLUSTER[at0058] occurrences matches {0..1} matches {	-- Administrative
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0059] occurrences matches {0..1} matches {	-- ICD Codes at discharge
-						value matches {
-							DV_TEXT matches {*}
 						}
 					}
 				}
 			}
 			CLUSTER[at0062] occurrences matches {0..1} matches {	-- ONGOING
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0191] occurrences matches {0..1} matches {	-- Date of entry
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0063] occurrences matches {0..1} matches {	-- First antenatal blood date of request
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
 					ELEMENT[at0064] occurrences matches {0..*} matches {	-- Annual HbA1c result
 						value matches {
 							C_DV_QUANTITY <
@@ -546,18 +568,6 @@ definition
 							>
 						}
 					}
-					ELEMENT[at0065] occurrences matches {0..1} matches {	-- Subsequent pregnancy data
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0192] occurrences matches {0..1} matches {	-- Attended group educational sessions?
-						value matches {
-							DV_BOOLEAN matches {
-								value matches {True, False}
-							}
-						}
-					}
 				}
 			}
 			CLUSTER[at0095] occurrences matches {0..1} matches {	-- CASE MANAGEMENT
@@ -566,9 +576,9 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							CLUSTER[at0186] occurrences matches {0..1} matches {	-- Contact info used
 								items cardinality matches {1..*; unordered} matches {
-									use_node ELEMENT occurrences matches {0..*} /items[at0007]/items[at0006]	-- /items[Current contact information]/items[Address]
-									use_node ELEMENT occurrences matches {0..*} /items[at0007]/items[at0008]	-- /items[Current contact information]/items[Telecom]
-									use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[Current contact information]/items[Email]
+									use_node ELEMENT occurrences matches {0..*} /items[at0007]/items[at0006]	-- /items[CONTACT DETAILS]/items[Address]
+									use_node ELEMENT occurrences matches {0..*} /items[at0007]/items[at0008]	-- /items[CONTACT DETAILS]/items[Telecom]
+									use_node ELEMENT occurrences matches {0..1} /items[at0007]/items[at0009]	-- /items[CONTACT DETAILS]/items[Email]
 								}
 							}
 							ELEMENT[at0096] occurrences matches {0..1} matches {	-- Person contacted
@@ -642,6 +652,35 @@ definition
 							}
 						}
 					}
+					ELEMENT[at0199] occurrences matches {0..*} matches {	-- Follow-up notes
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0200] occurrences matches {0..1} matches {	-- INTERVENTION
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0201] occurrences matches {0..1} matches {	-- Date of intervention
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0202] occurrences matches {0..1} matches {	-- Type of intervention
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0204] occurrences matches {0..1} matches {	-- Mode of delivery
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0203] occurrences matches {0..1} matches {	-- Intervention details
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -657,7 +696,7 @@ ontology
 					description = <"Initial dataset for internal discussion">
 				>
 				["at0001"] = <
-					text = <"Demographic">
+					text = <"DEMOGRAPHIC">
 					description = <"Demographic details of the woman.">
 				>
 				["at0002"] = <
@@ -681,7 +720,7 @@ ontology
 					description = <"Address - can be multiple (e.g. physical, postal etc.)">
 				>
 				["at0007"] = <
-					text = <"Current contact information">
+					text = <"CONTACT DETAILS">
 					description = <"Contact info, should be the most recent one">
 				>
 				["at0008"] = <
@@ -693,7 +732,7 @@ ontology
 					description = <"Email(s)">
 				>
 				["at0010"] = <
-					text = <"Patient Contact">
+					text = <"CONTACT PEOPLE">
 					description = <"People who can be contacted - can be multiple">
 				>
 				["at0012"] = <
@@ -701,7 +740,7 @@ ontology
 					description = <"Relationship to woman">
 				>
 				["at0013"] = <
-					text = <"Provider">
+					text = <"PROVIDER">
 					description = <"Woman's healthcare provider (e.g. GP practice, DHB etc). Can be multiple">
 				>
 				["at0014"] = <
@@ -717,7 +756,7 @@ ontology
 					description = <"Woman's GP Practice">
 				>
 				["at0017"] = <
-					text = <"Clinical Data">
+					text = <"Clinical Information">
 					description = <"Clinical information">
 				>
 				["at0018"] = <
@@ -781,7 +820,7 @@ ontology
 					description = <"fasting OGTT result">
 				>
 				["at0034"] = <
-					text = <"Laboratory Data">
+					text = <"Laboratory">
 					description = <"Lab results">
 				>
 				["at0035"] = <
@@ -805,7 +844,7 @@ ontology
 					description = <"Routine once referred to clinic. 14682-9	LOINC">
 				>
 				["at0040"] = <
-					text = <"End of pregnancy data">
+					text = <"End of pregnancy">
 					description = <"End of pregnancy data">
 				>
 				["at0041"] = <
@@ -852,18 +891,6 @@ ontology
 					text = <"Neonatal weight at delivery">
 					description = <"Neonatal weight at delivery">
 				>
-				["at0052"] = <
-					text = <"Medication required during pregnancy">
-					description = <"Medication required during pregnancy">
-				>
-				["at0053"] = <
-					text = <"oral hypoglycaemic">
-					description = <"*">
-				>
-				["at0054"] = <
-					text = <"insulin">
-					description = <"*">
-				>
 				["at0055"] = <
 					text = <"6 week OGTT result">
 					description = <"6 week OGTT result">
@@ -903,10 +930,6 @@ ontology
 				["at0064"] = <
 					text = <"Annual HbA1c result">
 					description = <"Annual HbA1c result">
-				>
-				["at0065"] = <
-					text = <"Subsequent pregnancy data">
-					description = <"Subsequent pregnancy data">
 				>
 				["at0093"] = <
 					text = <"Death date">
@@ -1181,16 +1204,16 @@ ontology
 					description = <"Whether this is the preferred contact; e.g. others will be used if this fails">
 				>
 				["at0170"] = <
-					text = <"History of prior GDM">
-					description = <"Any known Hx of GDM">
+					text = <"History of GDM">
+					description = <"Any known Hx of GDM. This information will come from individual pregnancy based entries; collated from existing data.">
 				>
 				["at0171"] = <
-					text = <"Date of GDM Diagnosis">
+					text = <"Date of last GDM Diagnosis">
 					description = <"Date of GDM Diagnosis">
 				>
 				["at0172"] = <
-					text = <"Treatment">
-					description = <"*">
+					text = <"Treatment of GDM">
+					description = <"Tx of GDM episode">
 				>
 				["at0173"] = <
 					text = <"Diet">
@@ -1246,7 +1269,7 @@ ontology
 				>
 				["at0187"] = <
 					text = <"Insulin required?">
-					description = <"*">
+					description = <"Insulin required during  GDM episode">
 				>
 				["at0188"] = <
 					text = <"Basal">
@@ -1260,13 +1283,57 @@ ontology
 					text = <"Both (basal + bolus)">
 					description = <"Both (basal + bolus)">
 				>
-				["at0191"] = <
-					text = <"Date of entry">
-					description = <"*">
-				>
 				["at0192"] = <
 					text = <"Attended group educational sessions?">
 					description = <"Whether they attended group educational session that we run.">
+				>
+				["at0193"] = <
+					text = <"PREGNANCY">
+					description = <"*">
+				>
+				["at0194"] = <
+					text = <"PERSISTENT SUMMARY">
+					description = <"*">
+				>
+				["at0195"] = <
+					text = <"Date of first Diabetes Clinic appointment">
+					description = <"*">
+				>
+				["at0196"] = <
+					text = <"Date of GDM diagnosis">
+					description = <"Date of GDM Dx for a particular pregnancy">
+				>
+				["at0197"] = <
+					text = <"Description">
+					description = <"Description of management details of GDM episode">
+				>
+				["at0198"] = <
+					text = <"Management">
+					description = <"Management of GDM">
+				>
+				["at0199"] = <
+					text = <"Follow-up notes">
+					description = <"Free text notes - can be multiple">
+				>
+				["at0200"] = <
+					text = <"INTERVENTION">
+					description = <"Details of interventions and outcome">
+				>
+				["at0201"] = <
+					text = <"Date of intervention">
+					description = <"Date intervention was made">
+				>
+				["at0202"] = <
+					text = <"Type of intervention">
+					description = <"Type of intervention">
+				>
+				["at0203"] = <
+					text = <"Intervention details">
+					description = <"Free text details of intervention">
+				>
+				["at0204"] = <
+					text = <"Mode of delivery">
+					description = <"How intervention was delivered; e.g. TXT, mail etc.">
 				>
 			>
 		>
