@@ -18,7 +18,7 @@ description
 			purpose = <"For recording the findings on physical examination of the external auditory canal and tympanic membrane by a clinician.">
 			use = <"Use to record the findings on physical examination of the external auditory canal and tympanic membrane by a clinician., including details of any perforation.
 
-Designed to be used within the CLUSTER.exam-ears archetype, but may be used within any relevant archetype SLOT related to physical examination.
+Specifically designed to be used within the OBSERVATION.exam-ear archetype, but may be used within any clinically appropriate ENTRY or CLUSTER archetype.
 
 Please note: this archetype has been designed specifically to reflect current practice within the NT Hearing Health program. It is recognised that this is not currently reflecting a maximal dataset and may need to be extended in future revisions as more specific requirements are identified.">
 			keywords = <"inspection", "ear", "tympanic", "perforation", "drum", "canal", "otoscopic", "exam", "examination", "pneumatic", "otoscopy", "membrane">
@@ -27,7 +27,7 @@ Please note: this archetype has been designed specifically to reflect current pr
 		>
 	>
 	lifecycle_state = <"CommitteeDraft">
-	other_contributors = <"Stephen Chu, NEHTA, Australia", "Harvey Coates, UWA, Australia", "Marissa Cookson, Dept of Health, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Graeme Crossland, Northern Territory, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jacques de Haan, Alice Springs Hospital, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Amanda Leach, Menzies School of Health Research, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom", "Hemi Patel, Royal Darwin Hospital, Australia", "Mark Ramjan, NT Department of Health, Australia", "Fiona Wake, RAHC, Australia", "Christine Wigger, Menzies School of Health Research, Australia">
+	other_contributors = <"Anthony Leech, Hearing Health, Australia", "Stephen Chu, NEHTA, Australia", "Marissa Cookson, Dept of Health, Australia", "Graeme Crossland, Northern Territory, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jacques de Haan, Alice Springs Hospital, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Amanda Leach, Menzies School of Health Research, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom", "Hemi Patel, Royal Darwin Hospital, Australia", "Fiona Wake, RAHC, Australia", "Christine Wigger, Menzies School of Health Research, Australia">
 	other_details = <
 		["references"] = <"Communication with clinical domain experts associated with Australia's Northern Territory Hearing Health Program.
 
@@ -38,7 +38,7 @@ Northern Territory Government, Department of Health: Northern Territory Hearing 
 Northern Territory Government, Department of Health: Northern Territory Hearing Health Program Audiologist Consultation Form 2011 12 07.
 
 OATSIH:  The Recommendations for Clinical Care Guidelines on the Management of Otitis Media in Aboriginal and Torres Strait Islander Populations (2010). Available at: http://www.health.gov.au/internet/publications/publishing.nsf/Content/CA2578620005D57ACA25792800821BE8?OpenDocument.">
-		["MD5-CAM-1.0.1"] = <"5B0A363CB8BC292F7874FF5ADF7E0AB3">
+		["MD5-CAM-1.0.1"] = <"8F6D4152A87D3B1BC1640C989B5CC83C">
 	>
 
 definition
@@ -52,13 +52,6 @@ definition
 							at0098, 	-- Left
 							at0099]	-- Right
 						}
-					}
-				}
-			}
-			ELEMENT[at0189] occurrences matches {0..1} matches {	-- No Abnormality Detected
-				value matches {
-					DV_BOOLEAN matches {
-						value matches {True}
 					}
 				}
 			}
@@ -94,9 +87,9 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0003, 	-- Full View
-							at0004, 	-- Partial View
-							at0005]	-- Total Occlusion
+							at0003, 	-- Full view
+							at0004, 	-- Partial occlusion
+							at0005]	-- Total occlusion
 						}
 					}
 				}
@@ -197,49 +190,50 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0159] occurrences matches {0..1} matches {	-- Foreign Body
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0160, 	-- Present
-							at0161]	-- Absent
-						}
-					}
-				}
-			}
-			ELEMENT[at0163] occurrences matches {0..1} matches {	-- Location of Foreign Body
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0164, 	-- Outer Canal
-							at0165, 	-- Deep Canal
-							at0183]	-- Middle Ear
-						}
-					}
-				}
-			}
-			CLUSTER[at0064] occurrences matches {0..*} matches {	-- Specific Finding
+			CLUSTER[at0064] occurrences matches {0..1} matches {	-- Abnormal Features
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0112] matches {	-- Finding
+					ELEMENT[at0112] occurrences matches {0..1} matches {	-- Polyps
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0114, 	-- Polyp
-									at0185, 	-- Fungal Spores
-									at0186, 	-- Exostosis
-									at0187, 	-- Canal Stenosis
-									at0188]	-- Mastoid Bowl
+									at0113, 	-- Present
+									at0114]	-- Absent
 								}
 							}
-							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0147] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[at0147] occurrences matches {0..1} matches {	-- Fungal Spores
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0148, 	-- Present
+									at0149]	-- Absent
+								}
+							}
+						}
+					}
+					ELEMENT[at0159] occurrences matches {0..1} matches {	-- Foreign Body
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0160, 	-- Present
+									at0161]	-- Absent
+								}
+							}
+						}
+					}
+					ELEMENT[at0163] occurrences matches {0..1} matches {	-- Location of Foreign Body
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0164, 	-- Outer canal
+									at0165]	-- Deep canal
+								}
+							}
 						}
 					}
 				}
@@ -386,7 +380,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0052] occurrences matches {0..*} matches {	-- Mobility
+					ELEMENT[at0052] occurrences matches {0..1} matches {	-- Mobility
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -394,8 +388,7 @@ definition
 									at0053, 	-- Immobile
 									at0054, 	-- Hypomobile
 									at0055, 	-- Mobile
-									at0056, 	-- Hypermobile
-									at0184]	-- Indeterminate
+									at0056]	-- Hypermobile
 								}
 							}
 						}
@@ -419,7 +412,7 @@ definition
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
 							}
-							ELEMENT[at0074] occurrences matches {0..1} matches {	-- Pars Flaccida vs Pars Tensa?
+							ELEMENT[at0074] occurrences matches {0..1} matches {	-- Region
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
@@ -430,13 +423,13 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0071] occurrences matches {0..1} matches {	-- Marginal vs Central?
+							ELEMENT[at0071] occurrences matches {0..1} matches {	-- Marginal?
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
-											at0073, 	-- Marginal
-											at0072]	-- Central
+											at0072, 	-- Central
+											at0073]	-- Marginal
 										}
 									}
 								}
@@ -461,7 +454,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0172] occurrences matches {0..*} matches {	-- Multimedia Representation
+			ELEMENT[at0172] occurrences matches {0..*} matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA matches {
 						media_type matches {
@@ -487,13 +480,14 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0173] occurrences matches {0..*} matches {	-- Comment
+			ELEMENT[at0173] occurrences matches {0..1} matches {	-- Comments
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -507,22 +501,22 @@ ontology
 				["at0001"] = <
 					text = <"Clinical Description">
 					description = <"Narrative description of findings observed by a clinician during a physical examination of the external auditory canal and tympanic membrane.">
-					comment = <"Use this data element to provide additional, narrative description of any data elements related to the external auditory canal and tympanic membrane examination as a whole, that are not represented by structured values. For example, the relative size and surface of the auditory canal; or increased vascularity of the tympanic membrane.">
+					comment = <"Use this data element to provide additional, narrative description of any data elements related to the external auditory canal and tympanic membrane examination as a whole, that are not represented by structured values. For example, the relative size and surface of the auditory canal; increased vascularity of the tympanic membrane; presence of abnormalities not captured in specific structured data elements, such as presence of canal stenosis, exostoses, mastoid bowl/cavity or tumours.">
 				>
 				["at0002"] = <
 					text = <"View of Tympanic Membrane">
 					description = <"View of the tympanic membrane.">
 				>
 				["at0003"] = <
-					text = <"Full View">
+					text = <"Full view">
 					description = <"All of the tympanic membrane was visualised.">
 				>
 				["at0004"] = <
-					text = <"Partial View">
+					text = <"Partial occlusion">
 					description = <"Part of the tympanic membrane was not clearly visualised, but sufficient to permit a clinical opinion to be formed.">
 				>
 				["at0005"] = <
-					text = <"Total Occlusion">
+					text = <"Total occlusion">
 					description = <"None of the tympanic membrane visualised, such that a clinical opinion of the state of the tympanic membrane could not be formed.">
 				>
 				["at0006"] = <
@@ -664,7 +658,6 @@ ontology
 				["at0052"] = <
 					text = <"Mobility">
 					description = <"Description of mobility of the tympanic membrane, usually as determined by pneumatic otoscopy.">
-					comment = <"Occurrences has been set to 0..* to enable multiple methods of observing mobility to be recorded. For example: 'Mobiliy (Pneumatic Otoscopy'; or 'Mobility (Valsalva) with Mobile or Indeterminate as only appropriate value set.">
 				>
 				["at0053"] = <
 					text = <"Immobile">
@@ -695,8 +688,8 @@ ontology
 					description = <"Details about the tympanic membrane perforation.">
 				>
 				["at0064"] = <
-					text = <"Specific Finding">
-					description = <"Details about specific features noted during the examination of the external auditory canal.">
+					text = <"Abnormal Features">
+					description = <"Details about abnormal features noted during the examination of the external auditory canal.">
 				>
 				["at0065"] = <
 					text = <"Estimation of Size">
@@ -724,7 +717,7 @@ ontology
 					description = <"Direct measurement of the size of the tympanic membrane perforation, usually using a photograph as the source for direct measurement.">
 				>
 				["at0071"] = <
-					text = <"Marginal vs Central?">
+					text = <"Marginal?">
 					description = <"Location of the tympanic membrane perforation.">
 					comment = <"To document explicitly whether the perforation is located marginally, and therefore might be clinically unsafe. If 'Total' is selected in 'Estimation of Size' data element then this data element becomes redundant.">
 				>
@@ -737,14 +730,14 @@ ontology
 					description = <"The perforation involves the annulus of the tympanic membrane.">
 				>
 				["at0074"] = <
-					text = <"Pars Flaccida vs Pars Tensa?">
+					text = <"Region">
 					description = <"Description of the region of the tympanic membrane perforation.">
-					comment = <"To document explicitly whether the perforation is located in the Pars flaccida and may be potentially unsafe. If 'Total' or 'Subtotal' is selected in 'Estimation of Size' data element then this data element becomes redundant. Coding with a terminology is preferred, if possible.">
+					comment = <"To document if the perforation is in the Pars flaccida and may be potentially unsafe. If 'Total' or 'Subtotal' is selected in 'Estimation of Size' data element then this data element becomes redundant. Coding with a terminology is preferred, if possible.">
 				>
 				["at0076"] = <
 					text = <"Anterior?">
 					description = <"Is an anterior perforation present?">
-					comment = <"To document the presence of perforation in the anterior portions of the pars tensa, whcih can be more difficult to manage than perforations elsewhere. If 'Total' or 'Subtotal' is selected in 'Estimation of Size' data element then this data element becomes redundant.">
+					comment = <"To document the presence of perf in the anterior portions of the pars tensa can be more difficult to manage. If 'Total' or 'Subtotal' is selected in 'Estimation of Size' data element then this data element becomes redundant.">
 				>
 				["at0077"] = <
 					text = <"Present">
@@ -829,12 +822,16 @@ ontology
 					description = <"Ear wax is not tightly packed in the external auditory canal.">
 				>
 				["at0112"] = <
-					text = <"Finding">
-					description = <"Name of the identified finding. ; presence of abnormalities not captured in specific structured data elements, such as presence of canal stenosis, exostoses, mastoid bowl/cavity or tumours.">
+					text = <"Polyps">
+					description = <"Presence of polyp/polyps in the external auditory canal.">
+				>
+				["at0113"] = <
+					text = <"Present">
+					description = <"Polyps are observed in the external auditory canal.">
 				>
 				["at0114"] = <
-					text = <"Polyp">
-					description = <"A polyp is observed within the external auditory canal.">
+					text = <"Absent">
+					description = <"No polyps are observed in the external auditory canal.">
 				>
 				["at0124"] = <
 					text = <"Erythema of Canal">
@@ -885,8 +882,16 @@ ontology
 					description = <"An offensive odour is noted as originating from the external auditory canal.">
 				>
 				["at0147"] = <
-					text = <"Description">
-					description = <"Narrative description of the identified finding.">
+					text = <"Fungal Spores">
+					description = <"Presence of fungal spores in the external auditory canal.">
+				>
+				["at0148"] = <
+					text = <"Present">
+					description = <"Fungal spores are observed in the external auditory canal.">
+				>
+				["at0149"] = <
+					text = <"Absent">
+					description = <"No fungal spores are observed in the external auditory canal.">
 				>
 				["at0151"] = <
 					text = <"Discharge Amount">
@@ -933,11 +938,11 @@ ontology
 					description = <"Location of the foreign body within the external auditory canal.">
 				>
 				["at0164"] = <
-					text = <"Outer Canal">
+					text = <"Outer canal">
 					description = <"The foreign body is located in the outer part of the external auditory canal.">
 				>
 				["at0165"] = <
-					text = <"Deep Canal">
+					text = <"Deep canal">
 					description = <"The foreign body is located in the deep, inner part of the external auditory canal.">
 				>
 				["at0166"] = <
@@ -966,12 +971,11 @@ ontology
 					description = <"The position of the ventilation tube cannot be determined because the tympanic membrane is obscured and the ventilation tube is not observed within the external auditory canal.">
 				>
 				["at0172"] = <
-					text = <"Multimedia Representation">
-					description = <"Image or video taken during the physical examination of the external auditory canal and tympanic membrane.">
-					comment = <"Multiple occurrences allow for pre- and post-cleaning images to be recorded as part of the examination findings.">
+					text = <"Image">
+					description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane.">
 				>
 				["at0173"] = <
-					text = <"Comment">
+					text = <"Comments">
 					description = <"Additional narrative about the physical examination findings of the external auditory canal and tympanic membrane, not captured in other fields.">
 				>
 				["at0175"] = <
@@ -988,36 +992,7 @@ ontology
 				>
 				["at0182"] = <
 					text = <"Indeterminate">
-					description = <"It is not possible to determine if the tympanic membrane is intact or perforated.">
-				>
-				["at0183"] = <
-					text = <"Middle Ear">
-					description = <"The foreign body is located within the middle ear cavity.">
-				>
-				["at0184"] = <
-					text = <"Indeterminate">
-					description = <"It is not possible to determine the amount of movement of the tympanic membrane.">
-				>
-				["at0185"] = <
-					text = <"Fungal Spores">
-					description = <"Fungal Spores are observed within the external auditory canal.">
-				>
-				["at0186"] = <
-					text = <"Exostosis">
-					description = <"An exostosis is observed within the external auditory canal.">
-				>
-				["at0187"] = <
-					text = <"Canal Stenosis">
-					description = <"A narrowing of the auditory canal is observed.">
-				>
-				["at0188"] = <
-					text = <"Mastoid Bowl">
-					description = <"A mastoid bowl or cavity is observed within the auditory canal.">
-				>
-				["at0189"] = <
-					text = <"No Abnormality Detected">
-					description = <"Statement that no abnormality was detected (NAD) on examination of the external auditory canal and tympanic membrane.">
-					comment = <"Record as True if no abnormality was detected on examination. Specific statements can be included in the 'Clinical Interpretation' data element.">
+					description = <"It is not possible to tell if the tympanic membrane is intact or perforated.">
 				>
 			>
 		>

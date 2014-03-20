@@ -4,7 +4,7 @@ specialise
 	openEHR-EHR-INSTRUCTION.request.v1
 
 concept
-	[at0000.1]	-- Imaging examination request
+	[at0000.1]	-- Imaging Examination Request
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -12,7 +12,7 @@ description
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"08/12/2009">
+		["date"] = <"2009-12-08">
 	>
 	details = <
 		["en"] = <
@@ -29,11 +29,11 @@ If there are more details about the examination required, include this informati
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"B3E616EEBBA09F6B684DD126D494D690">
+		["MD5-CAM-1.0.1"] = <"2E517B75340791AD423C40BFA0A8C4BD">
 	>
 
 definition
-	INSTRUCTION[at0000.1] matches {	-- Imaging examination request
+	INSTRUCTION[at0000.1] matches {	-- Imaging Examination Request
 		activities cardinality matches {0..*; unordered} matches {
 			ACTIVITY[at0001] occurrences matches {1..*} matches {	-- Request
 				description matches {
@@ -123,7 +123,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Receiver identifier
+					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Receiver Identifier
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -150,6 +150,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -159,12 +160,12 @@ ontology
 					description = <"Request for a range of different healthcare services, for example, a referral, lab request, equipment request.">
 				>
 				["at0000.1"] = <
-					text = <"Imaging examination request">
+					text = <"Imaging Examination Request">
 					description = <"Generic request for an imaging examination request.">
 				>
 				["at0001"] = <
 					text = <"Request">
-					description = <"Current Activity.">
+					description = <"Current Activity">
 				>
 				["at0008"] = <
 					text = <"Tree">
@@ -179,7 +180,7 @@ ontology
 					description = <"The local ID assigned to the order by the healthcare provider or organisation requesting the service. This is also referred to as Placer Order Identifier.">
 				>
 				["at0011"] = <
-					text = <"Receiver identifier">
+					text = <"Receiver Identifier">
 					description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.">
 				>
 				["at0040"] = <

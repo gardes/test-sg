@@ -1,0 +1,70 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.wound_care.v1
+
+concept
+	[at0000]	-- Wound care
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"754A4ED0A9663BB269E28F57C73A7E84">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Wound care
+		items cardinality matches {0..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..*} matches {	-- Material used
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Material
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Quantity
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Wound care">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Material used">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Material">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Quantity">
+					description = <"*">
+				>
+			>
+		>
+	>

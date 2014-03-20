@@ -39,32 +39,32 @@ description
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"5C7D8F0F4F5DB13138ED25918D188F97">
+		["references"] = <"">
 	>
 
 definition
-	INSTRUCTION[at0000] matches {	-- Anweisungen für eine Transfusion
+	INSTRUCTION[at0000] matches {	-- Instructions for transfusion
 		activities cardinality matches {0..*; unordered} matches {
-			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- neue Handlung
-				action_archetype_id matches {/openEHR-EHR-ACTION\.transfusion\.v1draft/}
+			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- new activity
+				action_archetype_id matches {/transfusion\.v1draft/}
 				description matches {
-					ITEM_TREE[at0002] matches {	-- Baum
-						items cardinality matches {2..*; unordered} matches {
-							ELEMENT[at0003] matches {	-- Art der Bluteinheit
+					ITEM_TREE[at0002] matches {	-- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] matches {	-- Type of Blood unit
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							CLUSTER[at0010] matches {	-- Gesamtzahl
+							CLUSTER[at0010] matches {	-- Amount
 								items cardinality matches {1; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Anzahl der Einheiten
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Number of units
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|>=0|}
 											}
 										}
 									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Volumen
+									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Volume
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::129]>
@@ -80,25 +80,25 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Grund der Transfusion
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Reason for transfusion
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {[local::]}
 									}
 								}
 							}
-							CLUSTER[at0007] occurrences matches {0..1} matches {	-- Besondere Voraussetzungen
+							CLUSTER[at0007] occurrences matches {0..1} matches {	-- Special requirements
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0005] occurrences matches {0..*} matches {	-- besondere Voraussetzung
+									ELEMENT[at0005] occurrences matches {0..*} matches {	-- Special requirement
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
 								}
 							}
-							CLUSTER[at0008] occurrences matches {0..1} matches {	-- Transfusionsrate
+							CLUSTER[at0008] occurrences matches {0..1} matches {	-- Rate of transfusion
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Transfusionsdauer pro Einheit
+									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Transfusion duration per unit
 										value matches {
 											DV_DURATION matches {
 												value matches {PTHM}

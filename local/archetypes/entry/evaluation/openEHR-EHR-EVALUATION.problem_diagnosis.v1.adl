@@ -13,17 +13,17 @@ language
 				["organisation"] = <"University of Heidelberg, Central Queensland University">
 			>
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			author = <
 				["name"] = <"Alan March">
 				["organisation"] = <"Hospital Universitario Austral, Buenos Aires, Argentina">
-			>
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
 			>
 		>
 		["pt-br"] = <
@@ -280,6 +280,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

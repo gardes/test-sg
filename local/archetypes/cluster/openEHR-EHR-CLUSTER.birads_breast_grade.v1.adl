@@ -1,0 +1,261 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.birads_breast_grade.v1
+
+concept
+	[at0000]	-- BI-RADS grade
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"01/08/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a grading of the liklihood of breast malignancy based primarily on imaging findings as defined by American College of Radiology BI-RADS© system.">
+			use = <"May be used to grade the findings of any specific modality, or a final, integrated assessment based on all modalities and associated clinical findings.">
+			keywords = <"breast", "cancer", "imaging", "mammography", "radiology">
+			misuse = <"All ACR BI-RADS Atlas material is copyright American College of Radiology. Requests for permission to use copyrighted material may be e-mailed to the American College of Radiology at bi-rads@acr.org.
+
+">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"American College of Radiology, BI-RADS© Atlas Mammography 4th Edition http://www.acr.org/Quality-Safety/Resources/BIRADS/Mammography
+http://www.acr.org/~/media/ACR/Documents/PDF/QualitySafety/Resources/BIRADS/MammoAssessmentCategories.pdf
+">
+		["MD5-CAM-1.0.1"] = <"E484DEF7F8BF0A545D90C488138F349D">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- BI-RAD razredi
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0016] occurrences matches {0..1} matches {	-- *Modality(en)
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0017, 	-- *Mammography(en)
+							at0018, 	-- *MRI(en)
+							at0019, 	-- *Ultrasound(en)
+							at0020]	-- *Integrated(en)
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- BI-RAD razred
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0006, 	-- 0: Nepopolno
+							at0007, 	-- 1: Negativno
+							at0008, 	-- 2: Benigna ugotovitev
+							at0009, 	-- 3: Verjetnost benigne ugotovitve
+							at0010, 	-- 4: Sumljiva nepravilnost
+							at0011, 	-- 4a: Sumljiva nepravilnost - majhna skrb
+							at0012, 	-- 4b: Sumljiva nepravilnost - vmesna skrb
+							at0013, 	-- 4c: Sumljiva nepravilnost - zmerna skrb
+							at0014, 	-- 5: Visoka domneva malignosti
+							at0015]	-- 6: Ugotovljeno, z biopsijo dokazana malignost
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Opombe
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"BI-RADS grade">
+					description = <"Grading of liklihood of breast malignancy based primarily on imaging findings as defined by American College of Radiology BI-RADS grade.">
+				>
+				["at0004"] = <
+					text = <"Comments">
+					description = <"Additional comment.">
+				>
+				["at0005"] = <
+					text = <"BI-RADS grade">
+					description = <"The assessment of BI-RADS grade based primarily on findings from imaging studies.">
+				>
+				["at0006"] = <
+					text = <"0: Incomplete">
+					description = <"Need additional imaging evaluation and/or prior Mammograms for comparison.">
+				>
+				["at0007"] = <
+					text = <"1: Negative">
+					description = <"Negative : There is nothing to comment on.">
+				>
+				["at0008"] = <
+					text = <"2: Benign finding(s)">
+					description = <"Normal assessment but the interpreter chooses to describe a benign finding in the report.">
+				>
+				["at0009"] = <
+					text = <"3: Probably benign finding">
+					description = <"Probably benign finding - Initial short-interval follow-up suggested.">
+				>
+				["at0010"] = <
+					text = <"4: Suspicious abnormality">
+					description = <"Suspcious abnormaility - biopsy should be considered.">
+				>
+				["at0011"] = <
+					text = <"4a: Suspicious abnormality - low concern">
+					description = <"A finding with low suspicion of malignancy merits intervention.">
+				>
+				["at0012"] = <
+					text = <"4b: Suspicious abnormality - intermediate concern">
+					description = <"A finding with intermediate suspicion of malignancy merits intervention.">
+				>
+				["at0013"] = <
+					text = <"4c: Suspicious abnormality - moderate concern">
+					description = <"A finding with moderate suspicion of malignancy merits intervention.">
+				>
+				["at0014"] = <
+					text = <"5: Highly suggestive of malignancy">
+					description = <"Finding(s) which are highly suspicious of malgnancy - Appropriate action should be taken.">
+				>
+				["at0015"] = <
+					text = <"6: Known, biopsy-proven malignancy">
+					description = <"Identified lesions have already been proven malignant by biopsy.Action should be taken.">
+				>
+				["at0016"] = <
+					text = <"Modality">
+					description = <"The imaging modality against which the grade was assessed. ">
+				>
+				["at0017"] = <
+					text = <"Mammography">
+					description = <"The grade was assessed on mammography studies.">
+				>
+				["at0018"] = <
+					text = <"MRI">
+					description = <"The grade was assessed on the basis of MRI studies.">
+				>
+				["at0019"] = <
+					text = <"Ultrasound">
+					description = <"The grade was assessed on the basis of ultrasound studies.">
+				>
+				["at0020"] = <
+					text = <"Integrated">
+					description = <"The grade takes account of all prior imaging studies and clinical findings.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"BI-RAD razredi">
+					description = <"Razvrščanje verjetnosti maligne bolezni dojk, ki temelji predvsem na ugotovitve iz slik, opredeljujejo \"American College of Radiology\" BI-RAD razredi.">
+				>
+				["at0004"] = <
+					text = <"Opombe">
+					description = <"Dodatne opombe.">
+				>
+				["at0005"] = <
+					text = <"BI-RAD razred">
+					description = <"Ocene BI-RAD razredov temeljijo predvsem na ugotovitvah iz študije slik.">
+				>
+				["at0006"] = <
+					text = <"0: Nepopolno">
+					description = <"Potrebno je dodatno ocenjevanje slik  in/ali predhodne mamografije za primerjavo.">
+				>
+				["at0007"] = <
+					text = <"1: Negativno">
+					description = <"Negativno: Ničesar za komentirati.">
+				>
+				["at0008"] = <
+					text = <"2: Benigna ugotovitev">
+					description = <"Normalna ocena, vendar se tolmač odloči za opis benigne ugotovitve na izvidu.">
+				>
+				["at0009"] = <
+					text = <"3: Verjetnost benigne ugotovitve">
+					description = <"Verjetnost benigne ugotovitve - Začetni kratek interval, predlagano spremljanje.">
+				>
+				["at0010"] = <
+					text = <"4: Sumljiva nepravilnost">
+					description = <"Sumljiva nepravilnost - Razmišljati o biopsiji.">
+				>
+				["at0011"] = <
+					text = <"4a: Sumljiva nepravilnost - majhna skrb">
+					description = <"*A finding with low suspicion of malignancy merits intervention.(en)">
+				>
+				["at0012"] = <
+					text = <"4b: Sumljiva nepravilnost - vmesna skrb">
+					description = <"*A finding with intermediate suspicion of malignancy merits intervention.(en)">
+				>
+				["at0013"] = <
+					text = <"4c: Sumljiva nepravilnost - zmerna skrb">
+					description = <"*A finding with moderate suspicion of malignancy merits intervention.(en)">
+				>
+				["at0014"] = <
+					text = <"5: Visoka domneva malignosti">
+					description = <"Ugotovitve, ki nakazujejo visok sum malignosti - Potrebna je izvedba ustreznega ukrepa.">
+				>
+				["at0015"] = <
+					text = <"6: Ugotovljeno, z biopsijo dokazana malignost">
+					description = <"Ugotovljene lezije so že bile dokazano maligne na podlagi biopsije. Potreben je ukrep.">
+				>
+				["at0016"] = <
+					text = <"*Modality(en)">
+					description = <"*The imaging modality against which the grade was assessed. (en)">
+				>
+				["at0017"] = <
+					text = <"*Mammography(en)">
+					description = <"*The grade was assessed on mammography studies.(en)">
+				>
+				["at0018"] = <
+					text = <"*MRI(en)">
+					description = <"*The grade was assessed on the basis of MRI studies.(en)">
+				>
+				["at0019"] = <
+					text = <"*Ultrasound(en)">
+					description = <"*The grade was assessed on the basis of ultrasound studies.(en)">
+				>
+				["at0020"] = <
+					text = <"*Integrated(en)">
+					description = <"*The grade takes account of all prior imaging studies and clinical findings.(en)">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0006"] = <[SNOMED-CT::397144001]>
+				["at0007"] = <[SNOMED-CT::397140005]>
+				["at0008"] = <[SNOMED-CT::397141009]>
+				["at0009"] = <[SNOMED-CT::397143007]>
+				["at0010"] = <[SNOMED-CT::397144001]>
+				["at0014"] = <[SNOMED-CT::397145000]>
+			>
+		>
+	>

@@ -1,0 +1,2780 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.psychological_assessment_zn.v1
+
+concept
+	[at0000]	-- Psychological status
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Biljana Prinčič">
+				["organisation"] = <"Marand d.o.o., Ljubljana">
+				["email"] = <"biljana.princic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Uroš Rajkovič">
+		["organisation"] = <"Faculty of organizational sciences, University of Maribor, Slovenia">
+		["email"] = <"uros.rajkovic@fov.uni-mb.si">
+		["date"] = <"28.10.2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Psychological assessment of a patient as a part of nursing documentation.">
+			use = <"To record changes in patient's psychological status">
+			keywords = <"psychological", "nursing", "assessment", "mental">
+			misuse = <"To assess the following scales: ODD, ADDH, BVC">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Psihološka ocena pacienta kot del negovalne dokumentacije pacienta">
+			use = <"Za dokumentiranje sprememb v psihološkem stanju pacienta">
+			keywords = <"psihološka", "zdravstvena nega", "ocena stanja", "ocena psihološkega statusa">
+			misuse = <"Za oceno: ODD, ADDH, BVC">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Biljana Prinčič, biljana.princic@marand.si, Marand d.o.o., Slovenia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"0D018DAC202E5DDC7C4AD86D1F86247A">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Psihološki status
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series(en)
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event(en)
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree(en) 
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0097] occurrences matches {0..1} matches {	-- Orientiranost
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0007] occurrences matches {0..1} matches {	-- V času
+												value matches {
+													1|[local::at0008], 	-- Da
+													2|[local::at0009], 	-- Slaba
+													3|[local::at0010]  	-- Ne
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..1} matches {	-- V prostoru
+												value matches {
+													1|[local::at0012], 	-- Da
+													2|[local::at0013], 	-- Slaba
+													3|[local::at0014]  	-- Ne
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {	-- V situaciji
+												value matches {
+													1|[local::at0016], 	-- Da
+													2|[local::at0017], 	-- Slaba
+													3|[local::at0018]  	-- Ne
+												}
+											}
+											ELEMENT[at0019] occurrences matches {0..1} matches {	-- Opombe
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0203] occurrences matches {0..1} matches {	-- Splošen vtis
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0236] occurrences matches {0..1} matches {	-- Dodatni opis
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0232] occurrences matches {0..1} matches {	-- Vrtoglavost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0233, 	-- Da
+															at0234]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0208] occurrences matches {0..1} matches {	-- Brez težav
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0209, 	-- Da
+															at0210]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {	-- Zanemarjenost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0021, 	-- Da
+															at0022]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0041] occurrences matches {0..1} matches {	-- Zanemarjenost opis
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0023] occurrences matches {0..1} matches {	-- Neprijeten telesni vonj
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0024, 	-- Prisoten
+															at0025]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0042] occurrences matches {0..1} matches {	-- Telesni vonj
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0026] occurrences matches {0..1} matches {	-- Sveže zaceljene brazgotine, vsaj na enem mestu
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0027, 	-- Prisotne
+															at0028]	-- Niso prisotne
+														}
+													}
+												}
+											}
+											ELEMENT[at0029] occurrences matches {0..1} matches {	-- Pretirano naličen
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0030, 	-- Pretirano
+															at0031]	-- Primerno
+														}
+													}
+												}
+											}
+											ELEMENT[at0211] occurrences matches {0..1} matches {	-- Nosi pokrivalo na glavi
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0212, 	-- Da
+															at0213]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0032] occurrences matches {0..1} matches {	-- Izstopajoča, neskladna oblačila
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0033, 	-- Ni primerno
+															at0034]	-- Primerno
+														}
+													}
+												}
+											}
+											ELEMENT[at0035] occurrences matches {0..1} matches {	-- Nenavadna pričeska
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0036, 	-- Ne primerna
+															at0037]	-- Primerna
+														}
+													}
+												}
+											}
+											ELEMENT[at0038] occurrences matches {0..1} matches {	-- Sončna očala
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0039, 	-- Da
+															at0040]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0043] occurrences matches {0..1} matches {	-- Uhani
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0044, 	-- Veliko
+															at0045, 	-- Posamezni
+															at0046]	-- Niso prisotni
+														}
+													}
+												}
+											}
+											ELEMENT[at0047] occurrences matches {0..1} matches {	-- Uhani opis
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {	-- Tetovaže
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0050, 	-- Veliko
+															at0051, 	-- Posamezni
+															at0052]	-- Niso prisotni
+														}
+													}
+												}
+											}
+											ELEMENT[at0049] occurrences matches {0..1} matches {	-- Tetovaže opis
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0214] occurrences matches {0..1} matches {	-- Opombe
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0053] occurrences matches {0..1} matches {	-- Motorika
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0054] occurrences matches {0..1} matches {	-- Živahno artikulira
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0055, 	-- Da
+															at0056]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0057] occurrences matches {0..1} matches {	-- Sključena drža
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0058, 	-- Da
+															at0059]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0060] occurrences matches {0..1} matches {	-- Motorično upočasnjen
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0061, 	-- Da
+															at0062]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0063] occurrences matches {0..1} matches {	-- Prisotni tiki
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0064, 	-- Da
+															at0065]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0069] occurrences matches {0..1} matches {	-- Motorično napet
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0070, 	-- Da
+															at0071]	-- Ne
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0072] occurrences matches {0..1} matches {	-- Obraz, pogled
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0073] occurrences matches {0..1} matches {	-- Pretirano vesel
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0074, 	-- Da
+															at0075]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0076] occurrences matches {0..1} matches {	-- Izzivalen
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0077, 	-- Da
+															at0078]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0079] occurrences matches {0..1} matches {	-- Zapeljiv
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0080, 	-- Da
+															at0081]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0082] occurrences matches {0..1} matches {	-- Nezaupljiv
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0083, 	-- Da
+															at0084]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0085] occurrences matches {0..1} matches {	-- Sumničav
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0086, 	-- Da
+															at0087]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0088] occurrences matches {0..1} matches {	-- Žalosten
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0089, 	-- Da
+															at0090]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0091] occurrences matches {0..1} matches {	-- Zaskrbljen
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0092, 	-- Da
+															at0093]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0094] occurrences matches {0..1} matches {	-- Prestrašen
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0095, 	-- Da
+															at0096]	-- Ne
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0098] occurrences matches {0..1} matches {	-- Komunikacija
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0225] occurrences matches {0..1} matches {	-- Opombe
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0222] occurrences matches {0..1} matches {	-- Sodelovanje
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0229, 	-- Da
+															at0230]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0066] occurrences matches {0..1} matches {	-- Umikanje v kot
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0067, 	-- Da
+															at0068]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0099] occurrences matches {0..1} matches {	-- Zaupljiv
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0100, 	-- Da
+															at0101]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0102] occurrences matches {0..1} matches {	-- Odmaknjen, distanciran
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0103, 	-- Da
+															at0104]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0105] occurrences matches {0..1} matches {	-- Pretirano domač, nedistanciran
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0106, 	-- Da
+															at0107]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0108] occurrences matches {0..1} matches {	-- Izgublja stik med pogovorom
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0109, 	-- Da
+															at0110]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0111] occurrences matches {0..1} matches {	-- Očesni kontakt
+												value matches {
+													1|[local::at0112], 	-- Dober
+													2|[local::at0113], 	-- Slab
+													3|[local::at0114]  	-- Odsoten
+												}
+											}
+										}
+									}
+									CLUSTER[at0115] occurrences matches {0..1} matches {	-- Govor
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0241] occurrences matches {0..1} matches {	-- Ne more govoriti
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0240] occurrences matches {0..1} matches {	-- Nerazločen
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0239] occurrences matches {0..1} matches {	-- Razločen
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0235] occurrences matches {0..1} matches {	-- Opombe
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0226] occurrences matches {0..1} matches {	-- Jezik, ki govori
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0227, 	-- slovenski
+															at0228]	-- Drugo
+														}
+													}
+												}
+											}
+											ELEMENT[at0116] occurrences matches {0..1} matches {	-- Hitrost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0117, 	-- Ustrezno hitro
+															at0118, 	-- Z zamiki
+															at0204, 	-- Hitro
+															at0205]	-- Zelo hitro
+														}
+													}
+												}
+											}
+											ELEMENT[at0119] occurrences matches {0..1} matches {	-- Glasnost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0120, 	-- Zelo glasno
+															at0121, 	-- Normalno
+															at0122, 	-- Zelo tiho
+															at0206, 	-- Glasno
+															at0207]	-- Tiho
+														}
+													}
+												}
+											}
+											ELEMENT[at0123] occurrences matches {0..1} matches {	-- Govori nejasno
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0124, 	-- Razločno
+															at0125]	-- Ne razločno
+														}
+													}
+												}
+											}
+											ELEMENT[at0126] occurrences matches {0..1} matches {	-- Ne želi govoriti
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0127, 	-- Želi govoriti
+															at0128]	-- Ne želi govoriti
+														}
+													}
+												}
+											}
+											ELEMENT[at0129] occurrences matches {0..1} matches {	-- Izbira ustrezne besede
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0130, 	-- Da
+															at0131]	-- Ne
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0132] occurrences matches {0..1} matches {	-- Mišljenje in zaznavanje
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0231] occurrences matches {0..1} matches {	-- Opombe
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0237] occurrences matches {0..1} matches {	-- Spomin
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0219] occurrences matches {0..1} matches {	-- Dementnost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0220, 	-- Da
+															at0221]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0216] occurrences matches {0..1} matches {	-- Zmedenost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0217, 	-- Da
+															at0218]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0133] occurrences matches {0..1} matches {	-- Tok misli
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0134, 	-- Hiter
+															at0135, 	-- Upočasnjen
+															at0136]	-- Odsoten
+														}
+													}
+												}
+											}
+											ELEMENT[at0137] occurrences matches {0..1} matches {	-- Govori izčrpno
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0138, 	-- Da
+															at0139]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0140] occurrences matches {0..1} matches {	-- Misleni preskoki
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0141, 	-- Da
+															at0142]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0143] occurrences matches {0..1} matches {	-- Blodnjave
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0144, 	-- Da
+															at0145]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0146] occurrences matches {0..1} matches {	-- Prevelentne ideje
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0147, 	-- Da
+															at0148]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0149] occurrences matches {0..1} matches {	-- Misli preganjalno, nanašalno
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0150, 	-- Da
+															at0151]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0152] occurrences matches {0..1} matches {	-- Obsesivne misli
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0153, 	-- Da
+															at0154]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0155] occurrences matches {0..1} matches {	-- Halucinacije
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0156, 	-- Da
+															at0157]	-- Ne
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0158] occurrences matches {0..1} matches {	-- Razpoloženje
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0159] occurrences matches {0..1} matches {	-- Evforija
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0170, 	-- Da
+															at0171]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0160] occurrences matches {0..1} matches {	-- Jezavost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0172, 	-- Da
+															at0173]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0161] occurrences matches {0..1} matches {	-- Razdražljivost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0174, 	-- Da
+															at0175]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0162] occurrences matches {0..1} matches {	-- Apatija
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0176, 	-- Da
+															at0177]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0163] occurrences matches {0..1} matches {	-- Anksioznost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0178, 	-- Da
+															at0179]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0164] occurrences matches {0..1} matches {	-- Čustvena neustreznost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0180, 	-- Da
+															at0181]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0165] occurrences matches {0..1} matches {	-- Empatija
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0182, 	-- Da
+															at0183]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0166] occurrences matches {0..1} matches {	-- Vznemirjenost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0184, 	-- Da
+															at0185]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0167] occurrences matches {0..1} matches {	-- Obup
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0186, 	-- Da
+															at0187]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0168] occurrences matches {0..1} matches {	-- Strah
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0188, 	-- Da
+															at0189]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0169] occurrences matches {0..1} matches {	-- Žalost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0190, 	-- Da
+															at0191]	-- Ne
+														}
+													}
+												}
+											}
+											ELEMENT[at0192] occurrences matches {0..1} matches {	-- Pacientova ocena
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0193] occurrences matches {0..1} matches {	-- Pogled v prihodnost
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0194, 	-- Pozitiven
+															at0195]	-- Brezizhoden, brezupen
+														}
+													}
+												}
+											}
+											ELEMENT[at0196] occurrences matches {0..1} matches {	-- Suicidalnost
+												value matches {
+													1|[local::at0197], 	-- Grožnje
+													2|[local::at0198], 	-- Misli
+													3|[local::at0199]  	-- Težnje
+												}
+											}
+											ELEMENT[at0200] occurrences matches {0..1} matches {	-- Pretekli poskusi samomora
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0201, 	-- 1 ali več
+															at0202]	-- ni jih bilo
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0238] occurrences matches {0..1} matches {	-- Dodaten opis stanja
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Psychological status">
+					description = <"Psychological status of a patient as a part of nursing documentation">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"Orientation in time">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"good">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"bad">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Orientation in place">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"good">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"bad">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Orientation to person">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"good">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"bad">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Orientation description">
+					description = <"Comments regarding patient's orientation">
+				>
+				["at0020"] = <
+					text = <"Scruffiness">
+					description = <"Evidence of patient scruffiness.">
+				>
+				["at0021"] = <
+					text = <"present">
+					description = <"patient is scruffy">
+				>
+				["at0022"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Body odor">
+					description = <"Evidence of body odour.">
+				>
+				["at0024"] = <
+					text = <"present">
+					description = <"patient has distinct body odor, i.e. drunk, poor hygiene...">
+				>
+				["at0025"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Multiple body marks">
+					description = <"Fresh and/or healed - wounds and/or scars - multiple at least in one place">
+				>
+				["at0027"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"Make-up">
+					description = <"Is patient wearing excessive (unusual) make-up">
+				>
+				["at0030"] = <
+					text = <"inappropriate">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"appropriate">
+					description = <"usual for other people's measures according to the occasion">
+				>
+				["at0032"] = <
+					text = <"Clothes">
+					description = <"Is patient wearing incompatible clothes / gaudy / flashy">
+				>
+				["at0033"] = <
+					text = <"inappropriate">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"appropriate">
+					description = <"patient is appropriately dressed for occasion">
+				>
+				["at0035"] = <
+					text = <"Haircut">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"inappropriate">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"appropriate">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"Sunglasses">
+					description = <"Is patient wearing sunglasses inside the building">
+				>
+				["at0039"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Scruffiness description">
+					description = <"Description of patient being scruffy">
+				>
+				["at0042"] = <
+					text = <"Body odor description">
+					description = <"Description of patient's body odor">
+				>
+				["at0043"] = <
+					text = <"Piercings">
+					description = <"Presence of piercings">
+				>
+				["at0044"] = <
+					text = <"many">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"individual, some">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <"Piercings description">
+					description = <"Description of patient's piercings, i.e. unusual locations">
+				>
+				["at0048"] = <
+					text = <"Tatoos">
+					description = <"Presence of tatoos">
+				>
+				["at0049"] = <
+					text = <"Tatoos description">
+					description = <"Description of patient's tatoos, i.e. unusual images, locations">
+				>
+				["at0050"] = <
+					text = <"many">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"individual, some">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"Movement">
+					description = <"Findings related to movement.">
+				>
+				["at0054"] = <
+					text = <"Lively gesticulation">
+					description = <"Does the patient lively gesticulates">
+				>
+				["at0055"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Bent posture">
+					description = <"Stoop or bent posture">
+				>
+				["at0058"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"Motorically slow">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"yes">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"no">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Tics">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Retreats">
+					description = <"Does the patient retreat as to avoid touch/communication">
+				>
+				["at0067"] = <
+					text = <"yes">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"no">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Anxiety">
+					description = <"Is the patient anxious, tense?">
+				>
+				["at0070"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Facial appearance">
+					description = <"Aspects of facial appearance.">
+				>
+				["at0073"] = <
+					text = <"Happiness">
+					description = <"Is the patient excessively happy?">
+				>
+				["at0074"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"Provocativeness">
+					description = <"Is the patient provocative">
+				>
+				["at0077"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Seductiveness">
+					description = <"Is the patient seductive/flirtatious in behaviour?">
+				>
+				["at0080"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Distrustfulness">
+					description = <"Is the patient distrustful?">
+				>
+				["at0083"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"Suspiciousness">
+					description = <"Is the patient suspicious towards nursing staff?">
+				>
+				["at0086"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Sadness">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"Worriedness">
+					description = <"Is the patient worried?">
+				>
+				["at0092"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"Scariedness">
+					description = <"Is the patient scared?">
+				>
+				["at0095"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0097"] = <
+					text = <"Orientation">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"Interaction">
+					description = <"Patients contact towards nursing staff">
+				>
+				["at0099"] = <
+					text = <"Trustfulness">
+					description = <"Patient displays trust">
+				>
+				["at0100"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Distant attitude">
+					description = <"Does the patient show distant attitude?">
+				>
+				["at0103"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0104"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0105"] = <
+					text = <"Friendliness">
+					description = <"Is the patient showing excessive friendliness?">
+				>
+				["at0106"] = <
+					text = <"excessive">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"appropriate">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"Losing focus">
+					description = <"Does the patient keep losing focus during conversation?">
+				>
+				["at0109"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"Eye contact">
+					description = <"Eye contact assessment">
+				>
+				["at0112"] = <
+					text = <"good">
+					description = <"*">
+				>
+				["at0113"] = <
+					text = <"poor">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"absent">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"Speech">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"Speed">
+					description = <"Speed of speech">
+				>
+				["at0117"] = <
+					text = <"appropriate">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"delayed">
+					description = <"*">
+				>
+				["at0119"] = <
+					text = <"Loudness">
+					description = <"Volume of speech">
+				>
+				["at0120"] = <
+					text = <"very loud">
+					description = <"*">
+				>
+				["at0121"] = <
+					text = <"average">
+					description = <"*">
+				>
+				["at0122"] = <
+					text = <"very quiet">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"Clarity">
+					description = <"Clarity of speech">
+				>
+				["at0124"] = <
+					text = <"clear">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"unclear">
+					description = <"*">
+				>
+				["at0126"] = <
+					text = <"Willingness">
+					description = <"Willingness to speak">
+				>
+				["at0127"] = <
+					text = <"willing">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"not willing">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"Selectiveness">
+					description = <"Is patient selective in choosing approipriate words?">
+				>
+				["at0130"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0131"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0132"] = <
+					text = <"Thinking">
+					description = <"Assessment of patient's perceptions, how the patient thinks">
+				>
+				["at0133"] = <
+					text = <"Thought flow">
+					description = <"Flow of thoughts">
+				>
+				["at0134"] = <
+					text = <"fast">
+					description = <"*">
+				>
+				["at0135"] = <
+					text = <"slow">
+					description = <"*">
+				>
+				["at0136"] = <
+					text = <"distant">
+					description = <"*">
+				>
+				["at0137"] = <
+					text = <"Excessive talking">
+					description = <"*">
+				>
+				["at0138"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0139"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0140"] = <
+					text = <"Mental leaps">
+					description = <"Leaps in thinking, leaps of thoughts">
+				>
+				["at0141"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0142"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0143"] = <
+					text = <"Delusions">
+					description = <"*">
+				>
+				["at0144"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0145"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0146"] = <
+					text = <"Prevalent ideas">
+					description = <"*">
+				>
+				["at0147"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0148"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0149"] = <
+					text = <"Paranoid thoughts">
+					description = <"*">
+				>
+				["at0150"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0151"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0152"] = <
+					text = <"Obsessive thoughts">
+					description = <"*">
+				>
+				["at0153"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0154"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0155"] = <
+					text = <"Hallucinations">
+					description = <"*">
+				>
+				["at0156"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0157"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0158"] = <
+					text = <"Mood">
+					description = <"Assessment of patient's mood, emotions">
+				>
+				["at0159"] = <
+					text = <"Euphoria">
+					description = <"*">
+				>
+				["at0160"] = <
+					text = <"Anger">
+					description = <"*">
+				>
+				["at0161"] = <
+					text = <"Irritability">
+					description = <"*">
+				>
+				["at0162"] = <
+					text = <"Apathy">
+					description = <"*">
+				>
+				["at0163"] = <
+					text = <"Anxiety">
+					description = <"*">
+				>
+				["at0164"] = <
+					text = <"Emotional unavailability">
+					description = <"*">
+				>
+				["at0165"] = <
+					text = <"Empathy">
+					description = <"*">
+				>
+				["at0166"] = <
+					text = <"Excitement">
+					description = <"*">
+				>
+				["at0167"] = <
+					text = <"Despair">
+					description = <"*">
+				>
+				["at0168"] = <
+					text = <"Fear">
+					description = <"*">
+				>
+				["at0169"] = <
+					text = <"Saddness">
+					description = <"*">
+				>
+				["at0170"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0171"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0172"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0173"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0174"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0175"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0176"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0177"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0178"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0179"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0180"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0181"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0182"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0183"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0184"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0185"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0186"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0187"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0188"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0189"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0190"] = <
+					text = <"present">
+					description = <"*">
+				>
+				["at0191"] = <
+					text = <"not present">
+					description = <"*">
+				>
+				["at0192"] = <
+					text = <"Self-assessment">
+					description = <"Patient's self-assessment, how the patient feels (mood and emotions)">
+				>
+				["at0193"] = <
+					text = <"Attitude towards future">
+					description = <"*">
+				>
+				["at0194"] = <
+					text = <"positive">
+					description = <"*">
+				>
+				["at0195"] = <
+					text = <"hopelessness, despair">
+					description = <"*">
+				>
+				["at0196"] = <
+					text = <"Suicidal elements">
+					description = <"Presence of suicidal elements">
+				>
+				["at0197"] = <
+					text = <"threats">
+					description = <"*">
+				>
+				["at0198"] = <
+					text = <"thoughts">
+					description = <"*">
+				>
+				["at0199"] = <
+					text = <"tendency">
+					description = <"*">
+				>
+				["at0200"] = <
+					text = <"Suicidal attempts">
+					description = <"Were there any past suicidal attempts by the patient (documented or reported in interview with the patient, others)?">
+				>
+				["at0201"] = <
+					text = <"one or more">
+					description = <"*">
+				>
+				["at0202"] = <
+					text = <"none">
+					description = <"*">
+				>
+				["at0203"] = <
+					text = <"General appearance">
+					description = <"Aspects of the patient's general appearance.">
+				>
+				["at0204"] = <
+					text = <"fast">
+					description = <"speaks fast">
+				>
+				["at0205"] = <
+					text = <"very fast">
+					description = <"speaks very fast">
+				>
+				["at0206"] = <
+					text = <"loudly">
+					description = <"speaks loudly">
+				>
+				["at0207"] = <
+					text = <"quietly">
+					description = <"speak quietly">
+				>
+				["at0208"] = <
+					text = <"Without problems (BP)">
+					description = <"Patient does not have any problems with general apperance">
+				>
+				["at0209"] = <
+					text = <"present">
+					description = <"present">
+				>
+				["at0210"] = <
+					text = <"not present">
+					description = <"not present">
+				>
+				["at0211"] = <
+					text = <"Head-covering">
+					description = <"*">
+				>
+				["at0212"] = <
+					text = <"Present">
+					description = <"Head-covering is present">
+				>
+				["at0213"] = <
+					text = <"Absent">
+					description = <"Head-covering is not present">
+				>
+				["at0214"] = <
+					text = <"Additional description">
+					description = <"Additional description">
+				>
+				["at0216"] = <
+					text = <"Confusion">
+					description = <"Confusion">
+				>
+				["at0217"] = <
+					text = <"Yes">
+					description = <"Yes">
+				>
+				["at0218"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0219"] = <
+					text = <"Dementia">
+					description = <"Dementia">
+				>
+				["at0220"] = <
+					text = <"Yes">
+					description = <"Yes">
+				>
+				["at0221"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0222"] = <
+					text = <"Collaboration">
+					description = <"Collaboration">
+				>
+				["at0225"] = <
+					text = <"Interaction description">
+					description = <"Interaction description">
+				>
+				["at0226"] = <
+					text = <"Language">
+					description = <"Language">
+				>
+				["at0227"] = <
+					text = <"Slovene">
+					description = <"Slovene">
+				>
+				["at0228"] = <
+					text = <"Other">
+					description = <"Other">
+				>
+				["at0229"] = <
+					text = <"Yes">
+					description = <"yes">
+				>
+				["at0230"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0231"] = <
+					text = <"Thinkig description">
+					description = <"*">
+				>
+				["at0232"] = <
+					text = <"Dizzy">
+					description = <"Dizzy">
+				>
+				["at0233"] = <
+					text = <"Yes">
+					description = <"Yes">
+				>
+				["at0234"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0235"] = <
+					text = <"Speech description">
+					description = <"*">
+				>
+				["at0236"] = <
+					text = <"General apperance description">
+					description = <"*">
+				>
+				["at0237"] = <
+					text = <"Memory">
+					description = <"Memory">
+				>
+				["at0238"] = <
+					text = <"Psychologgical assessment other">
+					description = <"Psychologgical assessment other">
+				>
+				["at0239"] = <
+					text = <"Distinct">
+					description = <"Distinct">
+				>
+				["at0240"] = <
+					text = <"Indistinct">
+					description = <"Indistinct">
+				>
+				["at0241"] = <
+					text = <"Unable to speak">
+					description = <"Unable to speak">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Psihološki status">
+					description = <"Psihološki status pacienta kot del dokumentacije ZN">
+				>
+				["at0001"] = <
+					text = <"Event Series(en)">
+					description = <"@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree(en) ">
+					description = <"@ internal @(en)">
+				>
+				["at0007"] = <
+					text = <"V času">
+					description = <"Pacientova orientacija v času">
+				>
+				["at0008"] = <
+					text = <"Da">
+					description = <"Dobra">
+				>
+				["at0009"] = <
+					text = <"Slaba">
+					description = <"Slaba">
+				>
+				["at0010"] = <
+					text = <"Ne">
+					description = <"Ni prisotna">
+				>
+				["at0011"] = <
+					text = <"V prostoru">
+					description = <"Pacientova orientacija v prostoru">
+				>
+				["at0012"] = <
+					text = <"Da">
+					description = <"Dobra">
+				>
+				["at0013"] = <
+					text = <"Slaba">
+					description = <"Slaba">
+				>
+				["at0014"] = <
+					text = <"Ne">
+					description = <"Ni prisotna">
+				>
+				["at0015"] = <
+					text = <"V situaciji">
+					description = <"Pacientova orientacija v situaciji">
+				>
+				["at0016"] = <
+					text = <"Da">
+					description = <"adobra">
+				>
+				["at0017"] = <
+					text = <"Slaba">
+					description = <"Slaba">
+				>
+				["at0018"] = <
+					text = <"Ne">
+					description = <"Ni prisotna">
+				>
+				["at0019"] = <
+					text = <"Opombe">
+					description = <"Dodatni opis glede orientacije pacienta">
+				>
+				["at0020"] = <
+					text = <"Zanemarjenost">
+					description = <"Opomba glede zanemarjenosti pacienta">
+				>
+				["at0021"] = <
+					text = <"Da">
+					description = <"Pacient je zanemarjen">
+				>
+				["at0022"] = <
+					text = <"Ne">
+					description = <"Paceint ni zanemarjen">
+				>
+				["at0023"] = <
+					text = <"Neprijeten telesni vonj">
+					description = <"Opombe glede prisotnosti telesnega vonja pacienta">
+				>
+				["at0024"] = <
+					text = <"Prisoten">
+					description = <"Pacient ima izrazit telesni vonj npr. po alkoholu">
+				>
+				["at0025"] = <
+					text = <"Ne">
+					description = <"Pacient nima izrazitega telesnega vonja">
+				>
+				["at0026"] = <
+					text = <"Sveže zaceljene brazgotine, vsaj na enem mestu">
+					description = <"Sveže zaceljenje brazgotine">
+				>
+				["at0027"] = <
+					text = <"Prisotne">
+					description = <"Prisotne">
+				>
+				["at0028"] = <
+					text = <"Niso prisotne">
+					description = <"Niso prisotne">
+				>
+				["at0029"] = <
+					text = <"Pretirano naličen">
+					description = <"Ali je pacient pretirano naličen?">
+				>
+				["at0030"] = <
+					text = <"Pretirano">
+					description = <"Pretirano naličen pacient">
+				>
+				["at0031"] = <
+					text = <"Primerno">
+					description = <"Primerno naličen pacient">
+				>
+				["at0032"] = <
+					text = <"Izstopajoča, neskladna oblačila">
+					description = <"Ali je pacient nenavadno oblečen?">
+				>
+				["at0033"] = <
+					text = <"Ni primerno">
+					description = <"Pacient ni primerno oblečen">
+				>
+				["at0034"] = <
+					text = <"Primerno">
+					description = <"Pacient je primerno oblečen">
+				>
+				["at0035"] = <
+					text = <"Nenavadna pričeska">
+					description = <"Kakšna je pričeska pacienta?">
+				>
+				["at0036"] = <
+					text = <"Ne primerna">
+					description = <"Pričeska ni primerna">
+				>
+				["at0037"] = <
+					text = <"Primerna">
+					description = <"Pričeska je primerna">
+				>
+				["at0038"] = <
+					text = <"Sončna očala">
+					description = <"Ali pacient nosi sončna očala?">
+				>
+				["at0039"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0040"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0041"] = <
+					text = <"Zanemarjenost opis">
+					description = <"dodatne opombe glede zanemarjenosti pacienta">
+				>
+				["at0042"] = <
+					text = <"Telesni vonj">
+					description = <"Dodatene opombe glede telesnega vonja">
+				>
+				["at0043"] = <
+					text = <"Uhani">
+					description = <"Prisotnost uhanov">
+				>
+				["at0044"] = <
+					text = <"Veliko">
+					description = <"Pacient ima veliko uhanov">
+				>
+				["at0045"] = <
+					text = <"Posamezni">
+					description = <"Pacienet ima posamezne uhane">
+				>
+				["at0046"] = <
+					text = <"Niso prisotni">
+					description = <"Pacient nima uhanov">
+				>
+				["at0047"] = <
+					text = <"Uhani opis">
+					description = <"Opis kje pacient ima uhane">
+				>
+				["at0048"] = <
+					text = <"Tetovaže">
+					description = <"Prisotnost tetovaž">
+				>
+				["at0049"] = <
+					text = <"Tetovaže opis">
+					description = <"*Description of patient's tatoos, i.e. unusual images, locations(en)">
+				>
+				["at0050"] = <
+					text = <"Veliko">
+					description = <"Pacient ima veliko tetovaž">
+				>
+				["at0051"] = <
+					text = <"Posamezni">
+					description = <"Pacient ima nekaj posameznih tetovaž">
+				>
+				["at0052"] = <
+					text = <"Niso prisotni">
+					description = <"Pacient nima tetovaž">
+				>
+				["at0053"] = <
+					text = <"Motorika">
+					description = <"Opažanja glede gibanja pacienta">
+				>
+				["at0054"] = <
+					text = <"Živahno artikulira">
+					description = <"Ali pacient gestakulira živahno?">
+				>
+				["at0055"] = <
+					text = <"Da">
+					description = <"Pacient gestakulira živahno">
+				>
+				["at0056"] = <
+					text = <"Ne">
+					description = <"Pacient ne gestakulira živahno">
+				>
+				["at0057"] = <
+					text = <"Sključena drža">
+					description = <"Ali pacient ima sključeno držo?">
+				>
+				["at0058"] = <
+					text = <"Da">
+					description = <"Pacient ima sključeno držo">
+				>
+				["at0059"] = <
+					text = <"Ne">
+					description = <"Pacient nima sključene drže">
+				>
+				["at0060"] = <
+					text = <"Motorično upočasnjen">
+					description = <"Ali je pacient motorično upočasnjen?">
+				>
+				["at0061"] = <
+					text = <"Da">
+					description = <"Pacient je motorično upočasnjen">
+				>
+				["at0062"] = <
+					text = <"Ne">
+					description = <"Pacient ni motorično upočasnjen">
+				>
+				["at0063"] = <
+					text = <"Prisotni tiki">
+					description = <"Ali so prisotni tiki pri pacientu?">
+				>
+				["at0064"] = <
+					text = <"Da">
+					description = <"Pacient ima tike">
+				>
+				["at0065"] = <
+					text = <"Ne">
+					description = <"Pacient nima tikov">
+				>
+				["at0066"] = <
+					text = <"Umikanje v kot">
+					description = <"Ali se pacient umika v kot npr. pri komunikaciji?">
+				>
+				["at0067"] = <
+					text = <"Da">
+					description = <"Pacient se umika v kot">
+				>
+				["at0068"] = <
+					text = <"Ne">
+					description = <"Pacient se ne umika v kot">
+				>
+				["at0069"] = <
+					text = <"Motorično napet">
+					description = <"Ali je pacient napet (anksiozen)?">
+				>
+				["at0070"] = <
+					text = <"Da">
+					description = <"Pacient je napet">
+				>
+				["at0071"] = <
+					text = <"Ne">
+					description = <"Pacient ni napet">
+				>
+				["at0072"] = <
+					text = <"Obraz, pogled">
+					description = <"Opažanja obraza in pogleda pacienta">
+				>
+				["at0073"] = <
+					text = <"Pretirano vesel">
+					description = <"Ali je pacient pretirano vesel?">
+				>
+				["at0074"] = <
+					text = <"Da">
+					description = <"Pacient je pretirano vesel">
+				>
+				["at0075"] = <
+					text = <"Ne">
+					description = <"Pacient ni pretirano vesel">
+				>
+				["at0076"] = <
+					text = <"Izzivalen">
+					description = <"Ali je pacient izzivalen?">
+				>
+				["at0077"] = <
+					text = <"Da">
+					description = <"Pacient je izzivalen">
+				>
+				["at0078"] = <
+					text = <"Ne">
+					description = <"Pacient ni izzivalen">
+				>
+				["at0079"] = <
+					text = <"Zapeljiv">
+					description = <"Ali sepacient vede zapeljivo?">
+				>
+				["at0080"] = <
+					text = <"Da">
+					description = <"PAcient se vede zapeljivo">
+				>
+				["at0081"] = <
+					text = <"Ne">
+					description = <"Pacient se ne vede zapeljivo">
+				>
+				["at0082"] = <
+					text = <"Nezaupljiv">
+					description = <"Ali je pacient nezaupljiv?">
+				>
+				["at0083"] = <
+					text = <"Da">
+					description = <"Pacient je nezaupljiv">
+				>
+				["at0084"] = <
+					text = <"Ne">
+					description = <"Pacient je zaupljiv">
+				>
+				["at0085"] = <
+					text = <"Sumničav">
+					description = <"Ali je pacient sumničav?">
+				>
+				["at0086"] = <
+					text = <"Da">
+					description = <"Pacient je sumničav">
+				>
+				["at0087"] = <
+					text = <"Ne">
+					description = <"Pacient ni sumničav">
+				>
+				["at0088"] = <
+					text = <"Žalosten">
+					description = <"Ali je pacient žalosten?">
+				>
+				["at0089"] = <
+					text = <"Da">
+					description = <"Pacient je žalosten">
+				>
+				["at0090"] = <
+					text = <"Ne">
+					description = <"Pacient ni žalosten">
+				>
+				["at0091"] = <
+					text = <"Zaskrbljen">
+					description = <"Ali je pacient zaskrbljen?">
+				>
+				["at0092"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0093"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0094"] = <
+					text = <"Prestrašen">
+					description = <"Ali je pacient prestaršen?">
+				>
+				["at0095"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0096"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0097"] = <
+					text = <"Orientiranost">
+					description = <"Opažanja glede orientacije pacienta">
+				>
+				["at0098"] = <
+					text = <"Komunikacija">
+					description = <"Komunikacija pacienta z negovalnim osebjem">
+				>
+				["at0099"] = <
+					text = <"Zaupljiv">
+					description = <"Ali pacient zaupa?">
+				>
+				["at0100"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0101"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0102"] = <
+					text = <"Odmaknjen, distanciran">
+					description = <"Ali pacient ima distanciran odnos?">
+				>
+				["at0103"] = <
+					text = <"Da">
+					description = <"Pacient ima distanciran odnos">
+				>
+				["at0104"] = <
+					text = <"Ne">
+					description = <"Pacient nima distanciran odnos">
+				>
+				["at0105"] = <
+					text = <"Pretirano domač, nedistanciran">
+					description = <"Ali pacient ima pretirano domač odnos.">
+				>
+				["at0106"] = <
+					text = <"Da">
+					description = <"Pacient ima pretirano domač odnos">
+				>
+				["at0107"] = <
+					text = <"Ne">
+					description = <"Pacient nima pretirano domačega odnosa">
+				>
+				["at0108"] = <
+					text = <"Izgublja stik med pogovorom">
+					description = <"Ali pacient izgublja nit med pogovorom">
+				>
+				["at0109"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0110"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0111"] = <
+					text = <"Očesni kontakt">
+					description = <"Ocena očesnega kontakta">
+				>
+				["at0112"] = <
+					text = <"Dober">
+					description = <"**(en)">
+				>
+				["at0113"] = <
+					text = <"Slab">
+					description = <"**(en)">
+				>
+				["at0114"] = <
+					text = <"Odsoten">
+					description = <"**(en)">
+				>
+				["at0115"] = <
+					text = <"Govor">
+					description = <"**(en)">
+				>
+				["at0116"] = <
+					text = <"Hitrost">
+					description = <"Hitrost govora">
+				>
+				["at0117"] = <
+					text = <"Ustrezno hitro">
+					description = <"**(en)">
+				>
+				["at0118"] = <
+					text = <"Z zamiki">
+					description = <"**(en)">
+				>
+				["at0119"] = <
+					text = <"Glasnost">
+					description = <"Glasnost govora">
+				>
+				["at0120"] = <
+					text = <"Zelo glasno">
+					description = <"**(en)">
+				>
+				["at0121"] = <
+					text = <"Normalno">
+					description = <"**(en)">
+				>
+				["at0122"] = <
+					text = <"Zelo tiho">
+					description = <"**(en)">
+				>
+				["at0123"] = <
+					text = <"Govori nejasno">
+					description = <"Jasnost govora">
+				>
+				["at0124"] = <
+					text = <"Razločno">
+					description = <"**(en)">
+				>
+				["at0125"] = <
+					text = <"Ne razločno">
+					description = <"**(en)">
+				>
+				["at0126"] = <
+					text = <"Ne želi govoriti">
+					description = <"Pripravljenost govoriti">
+				>
+				["at0127"] = <
+					text = <"Želi govoriti">
+					description = <"**(en)">
+				>
+				["at0128"] = <
+					text = <"Ne želi govoriti">
+					description = <"**(en)">
+				>
+				["at0129"] = <
+					text = <"Izbira ustrezne besede">
+					description = <"Občutljivost pacienta pri izbiri primernih besed">
+				>
+				["at0130"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0131"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0132"] = <
+					text = <"Mišljenje in zaznavanje">
+					description = <"*Assessment of patient's perceptions, how the patient thinks(en)">
+				>
+				["at0133"] = <
+					text = <"Tok misli">
+					description = <"Tok misli">
+				>
+				["at0134"] = <
+					text = <"Hiter">
+					description = <"**(en)">
+				>
+				["at0135"] = <
+					text = <"Upočasnjen">
+					description = <"**(en)">
+				>
+				["at0136"] = <
+					text = <"Odsoten">
+					description = <"**(en)">
+				>
+				["at0137"] = <
+					text = <"Govori izčrpno">
+					description = <"**(en)">
+				>
+				["at0138"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0139"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0140"] = <
+					text = <"Misleni preskoki">
+					description = <"*Leaps in thinking, leaps of thoughts(en)">
+				>
+				["at0141"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0142"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0143"] = <
+					text = <"Blodnjave">
+					description = <"**(en)">
+				>
+				["at0144"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0145"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0146"] = <
+					text = <"Prevelentne ideje">
+					description = <"**(en)">
+				>
+				["at0147"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0148"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0149"] = <
+					text = <"Misli preganjalno, nanašalno">
+					description = <"**(en)">
+				>
+				["at0150"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0151"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0152"] = <
+					text = <"Obsesivne misli">
+					description = <"**(en)">
+				>
+				["at0153"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0154"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0155"] = <
+					text = <"Halucinacije">
+					description = <"**(en)">
+				>
+				["at0156"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0157"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0158"] = <
+					text = <"Razpoloženje">
+					description = <"*Assessment of patient's mood, emotions(en)">
+				>
+				["at0159"] = <
+					text = <"Evforija">
+					description = <"**(en)">
+				>
+				["at0160"] = <
+					text = <"Jezavost">
+					description = <"**(en)">
+				>
+				["at0161"] = <
+					text = <"Razdražljivost">
+					description = <"**(en)">
+				>
+				["at0162"] = <
+					text = <"Apatija">
+					description = <"**(en)">
+				>
+				["at0163"] = <
+					text = <"Anksioznost">
+					description = <"**(en)">
+				>
+				["at0164"] = <
+					text = <"Čustvena neustreznost">
+					description = <"**(en)">
+				>
+				["at0165"] = <
+					text = <"Empatija">
+					description = <"**(en)">
+				>
+				["at0166"] = <
+					text = <"Vznemirjenost">
+					description = <"**(en)">
+				>
+				["at0167"] = <
+					text = <"Obup">
+					description = <"**(en)">
+				>
+				["at0168"] = <
+					text = <"Strah">
+					description = <"**(en)">
+				>
+				["at0169"] = <
+					text = <"Žalost">
+					description = <"**(en)">
+				>
+				["at0170"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0171"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0172"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0173"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0174"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0175"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0176"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0177"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0178"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0179"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0180"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0181"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0182"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0183"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0184"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0185"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0186"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0187"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0188"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0189"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0190"] = <
+					text = <"Da">
+					description = <"**(en)">
+				>
+				["at0191"] = <
+					text = <"Ne">
+					description = <"**(en)">
+				>
+				["at0192"] = <
+					text = <"Pacientova ocena">
+					description = <"Pacientova samoocena o svojem počutju">
+				>
+				["at0193"] = <
+					text = <"Pogled v prihodnost">
+					description = <"**(en)">
+				>
+				["at0194"] = <
+					text = <"Pozitiven">
+					description = <"**(en)">
+				>
+				["at0195"] = <
+					text = <"Brezizhoden, brezupen">
+					description = <"**(en)">
+				>
+				["at0196"] = <
+					text = <"Suicidalnost">
+					description = <"Prisotnost suicidalnih elementov">
+				>
+				["at0197"] = <
+					text = <"Grožnje">
+					description = <"**(en)">
+				>
+				["at0198"] = <
+					text = <"Misli">
+					description = <"**(en)">
+				>
+				["at0199"] = <
+					text = <"Težnje">
+					description = <"**(en)">
+				>
+				["at0200"] = <
+					text = <"Pretekli poskusi samomora">
+					description = <"*Were there any past suicidal attempts by the patient (documented or reported in interview with the patient, others)?(en)">
+				>
+				["at0201"] = <
+					text = <"1 ali več">
+					description = <"**(en)">
+				>
+				["at0202"] = <
+					text = <"ni jih bilo">
+					description = <"**(en)">
+				>
+				["at0203"] = <
+					text = <"Splošen vtis">
+					description = <"*Aspects of the patient's general appearance.(en)">
+				>
+				["at0204"] = <
+					text = <"Hitro">
+					description = <"Govori hitro">
+				>
+				["at0205"] = <
+					text = <"Zelo hitro">
+					description = <"Govori zelo hitro">
+				>
+				["at0206"] = <
+					text = <"Glasno">
+					description = <"Govori glasno">
+				>
+				["at0207"] = <
+					text = <"Tiho">
+					description = <"Govori tiho">
+				>
+				["at0208"] = <
+					text = <"Brez težav">
+					description = <"Brez vidnih težav s splošnim izgledom">
+				>
+				["at0209"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0210"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0211"] = <
+					text = <"Nosi pokrivalo na glavi">
+					description = <"**(en)">
+				>
+				["at0212"] = <
+					text = <"Da">
+					description = <"Nosi pokrivalo na glavi">
+				>
+				["at0213"] = <
+					text = <"Ne">
+					description = <"Ne nosi pokrivalo na glavi">
+				>
+				["at0214"] = <
+					text = <"Opombe">
+					description = <"Dodatne opombe glede splošnega vtisa o pacientu">
+				>
+				["at0216"] = <
+					text = <"Zmedenost">
+					description = <"Zmedenost">
+				>
+				["at0217"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0218"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0219"] = <
+					text = <"Dementnost">
+					description = <"Dementnost">
+				>
+				["at0220"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0221"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0222"] = <
+					text = <"Sodelovanje">
+					description = <"Sodelovanje">
+				>
+				["at0225"] = <
+					text = <"Opombe">
+					description = <"Dodaten opis sodelovanja">
+				>
+				["at0226"] = <
+					text = <"Jezik, ki govori">
+					description = <"Jezik, ki govori">
+				>
+				["at0227"] = <
+					text = <"slovenski">
+					description = <"slovenski">
+				>
+				["at0228"] = <
+					text = <"Drugo">
+					description = <"*Other(en)">
+				>
+				["at0229"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0230"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0231"] = <
+					text = <"Opombe">
+					description = <"Dodaten opis mišljenja">
+				>
+				["at0232"] = <
+					text = <"Vrtoglavost">
+					description = <"Vrtoglavost">
+				>
+				["at0233"] = <
+					text = <"Da">
+					description = <"Da">
+				>
+				["at0234"] = <
+					text = <"Ne">
+					description = <"Ne">
+				>
+				["at0235"] = <
+					text = <"Opombe">
+					description = <"Dodaten opis govora">
+				>
+				["at0236"] = <
+					text = <"Dodatni opis">
+					description = <"Dodatni opis ">
+				>
+				["at0237"] = <
+					text = <"Spomin">
+					description = <"Spomin">
+				>
+				["at0238"] = <
+					text = <"Dodaten opis stanja">
+					description = <"Dodaten opis psihološkega stanja pacienta">
+				>
+				["at0239"] = <
+					text = <"Razločen">
+					description = <"Razločen">
+				>
+				["at0240"] = <
+					text = <"Nerazločen">
+					description = <"Nerazločen">
+				>
+				["at0241"] = <
+					text = <"Ne more govoriti">
+					description = <"Ne more govoriti">
+				>
+			>
+		>
+	>

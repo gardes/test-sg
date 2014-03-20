@@ -1,0 +1,145 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.xds-generic-content.v1
+
+concept
+	[at0000]	-- XDS Generic Content
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <" Bostjan Lah">
+		["organisation"] = <"Marand d.o.o.">
+		["email"] = <"bostjan.lah@marand.si">
+		["date"] = <"2013-03-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*(en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"6CEB4D0B4DD64E22C24DB32C05181131">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- XDS Generic Content
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0035] occurrences matches {0..1} matches {	-- Document Content
+						value matches {
+							DV_MULTIMEDIA matches {
+								media_type matches {
+									[openEHR::
+									387, 
+									388, 
+									389, 
+									390, 
+									391, 
+									392, 
+									393, 
+									394, 
+									395, 
+									396, 
+									397, 
+									398, 
+									399, 
+									400, 
+									409, 
+									410, 
+									411, 
+									412, 
+									413, 
+									425, 
+									426, 
+									427, 
+									428, 
+									429, 
+									415, 
+									416, 
+									417, 
+									418, 
+									419, 
+									420, 
+									421, 
+									422, 
+									423, 
+									424, 
+									401, 
+									402, 
+									404, 
+									405, 
+									406, 
+									407, 
+									414, 
+									517, 
+									518, 
+									519, 
+									637, 
+									682, 
+									683]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Generic Content">
+					description = <"XDS Generic Content">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0035"] = <
+					text = <"Document Content">
+					description = <"*">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"CDA komponenta">
+					description = <"*">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>

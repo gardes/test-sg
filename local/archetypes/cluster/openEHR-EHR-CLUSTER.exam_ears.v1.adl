@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.exam_ears.v1
 
 concept
-	[at0000]	-- Examination - Ears
+	[at0000]	-- Examination Findings - Ears
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -34,11 +34,11 @@ Not to be used to record stand-alone clinical observations or measurements - use
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"2CA18AC1FC17902D29DA5A73EE641834">
+		["MD5-CAM-1.0.1"] = <"FEDB468EB9F5EE04B228A3E8F2B7749A">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Examination - Ears
+	CLUSTER[at0000] matches {	-- Examination Findings - Ears
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Clinical Description
 				value matches {
@@ -79,12 +79,13 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Examination - Ears">
+					text = <"Examination Findings - Ears">
 					description = <"Findings observed during the physical examination of the ears.">
 				>
 				["at0001"] = <
