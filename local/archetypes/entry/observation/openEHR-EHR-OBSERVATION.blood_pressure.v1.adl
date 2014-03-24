@@ -31,12 +31,10 @@ language
 			>
 			accreditation = <"MD, DEAA. specialist in anaesthesia and tropical medicine.">
 		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
 			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
+				["name"] = <"Mona Saleh">
 			>
 		>
 		["es-ar"] = <
@@ -48,10 +46,12 @@ language
 			>
 			accreditation = <"Universidad de Morón">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
 			author = <
-				["name"] = <"Mona Saleh">
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
 			>
 		>
 		["ru"] = <
@@ -61,20 +61,20 @@ language
 				["email"] = <"i.lizunov@infinnity.ru">
 			>
 		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			author = <
-				["name"] = <"Marja Buur">
-				["organisation"] = <"M.C.A.">
-				["email"] = <"m.buur-krom@mca.nl">
-			>
-		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
 			author = <
 				["name"] = <"Shinji Kobayashi">
 				["organisation"] = <"Kyoto University">
 				["email"] = <"skoba@moss.gr.jp">
+			>
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"Marja Buur">
+				["organisation"] = <"M.C.A.">
+				["email"] = <"m.buur-krom@mca.nl">
 			>
 		>
 		["pt-br"] = <
@@ -283,7 +283,7 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Published">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Knut Bernstein, MEDIQ, Denmark", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Beatriz de Faria Leão, Zilics, Brazil", "Paul Donaldson, Nursing Informatics Australia, Australia", "Jose Florez Arango, Universidad de Antioquia, Colombia", "Gerard Freriks, ERC, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Omer Hotomaroglu, Turkey", "Evelyn Hovenga, EJSH Consulting, Australia", "Derek Hoy, United Kingdom", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller-Oest, CompuGROUP Software, Germany", "Melvin Reynolds, United Kingdom", "Tony Shannon, NHS, United Kingdom", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "Stef Verlinden, Vivici, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
 		["references"] = <"O'Brien E, Asmar R, Beilin L, et al. European Society of Hypertension recommendations for conventional, ambulatory and home blood pressure measurement. Journal of Hypertension [Internet]. 2003 [cited 2009 Jul 30] ; 21(5):821-848. Available from http://www.bhsoc.org/bp_monitors/ESH_BP_rec.pdf
