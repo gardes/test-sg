@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.level_of_exertion.v1
 
 concept
-	[at0000]	-- Level of exertion
+	[at0000]	-- Level of Exertion
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -10,7 +10,7 @@ description
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"27/10/2008">
+		["date"] = <"2008-10-27">
 	>
 	details = <
 		["en"] = <
@@ -25,12 +25,13 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"77CDB9027ABB584C449C94F3B079703D">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Level of Exertion, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 27 Oct 2008. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.297 (accessed 21 Feb 3013).">
+		["MD5-CAM-1.0.1"] = <"362DEDF06B3E63F1CD7D4E24BCCEB2D9">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Level of exertion
+	CLUSTER[at0000] matches {	-- Level of Exertion
 		items cardinality matches {1..*; unordered} matches {
 			CLUSTER[at0010] occurrences matches {0..1} matches {	-- Exercise intensity
 				items cardinality matches {1..*; unordered} matches {
@@ -82,14 +83,13 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Level of exertion">
-					description = <"Record information about level of exertion.">
+					text = <"Level of Exertion">
+					description = <"Record information about level of exertion undertaken during an observation, such as blood pressure or pulse.">
 				>
 				["at0005"] = <
 					text = <"Measured">

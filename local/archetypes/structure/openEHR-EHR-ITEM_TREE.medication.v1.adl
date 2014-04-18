@@ -10,7 +10,7 @@ description
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"2006-12-03">
+		["date"] = <"12/03/2006">
 	>
 	details = <
 		["en"] = <
@@ -25,7 +25,8 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"7158BD342D95767F5B19660E3034F672">
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"1E7CCC3AEAD7C3A4D4E4F2162A42AB85">
 	>
 
 definition
@@ -46,7 +47,57 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {*}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Strength per dose unit
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::124]>
+						list = <
+							["1"] = <
+								units = <"pg">
+								magnitude = <|>=0.0|>
+							>
+							["2"] = <
+								units = <"µg">
+								magnitude = <|>=0.0|>
+							>
+							["3"] = <
+								units = <"mg">
+								magnitude = <|>=0.0|>
+							>
+							["4"] = <
+								units = <"gm">
+								magnitude = <|>=0.0|>
+							>
+						>
+					>
+					C_DV_QUANTITY <
+						property = <[openehr::385]>
+						list = <
+							["1"] = <
+								units = <"IU">
+								magnitude = <|>=0.0|>
+							>
+							["2"] = <
+								units = <"mIU">
+								magnitude = <|>=0.0|>
+							>
+						>
+					>
+					C_DV_QUANTITY <
+						property = <[openehr::445]>
+						list = <
+							["1"] = <
+								units = <"mU">
+								magnitude = <|>=0.0|>
+							>
+							["2"] = <
+								units = <"U">
+								magnitude = <|>=0.0|>
+							>
+						>
+					>
+				}
+			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Dose unit
 				value matches {
 					DV_CODED_TEXT matches {
@@ -280,6 +331,11 @@ definition
 										units = <"{QUALIFIED REAL/TIME}">
 										magnitude = <|>0.0|>
 									>
+								>
+								assumed_value = <
+									magnitude = <0.0>
+									units = <"{QUALIFIED REAL/TIME}">
+									precision = <-1>
 								>
 							>
 						}

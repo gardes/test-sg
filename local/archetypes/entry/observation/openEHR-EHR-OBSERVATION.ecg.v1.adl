@@ -21,6 +21,16 @@ description
 		["date"] = <"2007-07-18">
 	>
 	details = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفسير تخطيط كهربية القلب عن النشاط الكهربي للقلب باستخدام جهيزة مخطط كهربية القلب.">
+			use = <"يستخدم لتسجيل تفاصيل تخطيط كهربية القلب الذي يستخدم 12 اتجاه بما في ذلك المعايير و التفسير.
+يستخدم لتسجيل تفاصيل اختبارات تخطيط كهربية القلب الذي يتم إجراؤه في أثناء المجهود البدني و الاختبار عند وجود ضغط.">
+			keywords = <"مُخَطَّط كهربية القلب", "عملية تخطيط كهربية القلب", "12 اتجاه">
+			misuse = <"لا يستخدم لتسجيل الاتجهات غير العيارية لتخطيط كهربية القلب.
+لا يستخدم لتسجيل مِرقَب /مِنطَر هولتر.">
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the electrocardiographic interpretation of the electrical activity of the heart by an ECG device.">
@@ -32,22 +42,12 @@ Use to record details of ECGs performed during exercise conditions and stress te
 Not to be used for recording Holter monitor results.">
 			copyright = <"© openEHR Foundation">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل تفسير تخطيط كهربية القلب عن النشاط الكهربي للقلب باستخدام جهيزة مخطط كهربية القلب.">
-			use = <"يستخدم لتسجيل تفاصيل تخطيط كهربية القلب الذي يستخدم 12 اتجاه بما في ذلك المعايير و التفسير.
-يستخدم لتسجيل تفاصيل اختبارات تخطيط كهربية القلب الذي يتم إجراؤه في أثناء المجهود البدني و الاختبار عند وجود ضغط.">
-			keywords = <"مُخَطَّط كهربية القلب", "عملية تخطيط كهربية القلب", "12 اتجاه">
-			misuse = <"لا يستخدم لتسجيل الاتجهات غير العيارية لتخطيط كهربية القلب.
-لا يستخدم لتسجيل مِرقَب /مِنطَر هولتر.">
-			copyright = <"© openEHR Foundation">
-		>
 	>
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]">
-		["MD5-CAM-1.0.1"] = <"88A02C629D5AF490536F2F0065A85EAC">
+		["MD5-CAM-1.0.1"] = <"89BCC0D4C591B32A94D28BF7EBEFCC97">
 	>
 
 definition
@@ -592,7 +592,7 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0081] occurrences matches {0..1} matches {	-- Overall interpretation
+									ELEMENT[at0081] occurrences matches {0..*} matches {	-- Overall interpretation
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -652,299 +652,8 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
-		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"ECG recording">
-					description = <"An electrocardiograph (ECG or EKG) is an interpretation of the electrical activity of the heart over time, recorded non-invasively using external skin electrodes.">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Any event">
-					description = <"*">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0005"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0006"] = <
-					text = <"Global ECG Parameters">
-					description = <"Details about the entire ECG.">
-				>
-				["at0007"] = <
-					text = <"QT interval">
-					description = <"Interval from the onset of the QRS complex to the
-end of the T wave.">
-				>
-				["at0008"] = <
-					text = <"QTc interval">
-					description = <"Corrected QT interval.">
-				>
-				["at0009"] = <
-					text = <"Automatic interpretation">
-					description = <"Interpretative comment on this recording originating from the device.">
-				>
-				["at0010"] = <
-					text = <"ECG Recording">
-					description = <"Multimedia representation of the ECG.">
-				>
-				["at0012"] = <
-					text = <"PR interval">
-					description = <"Measured interval from onset of P wave to QRS.">
-				>
-				["at0013"] = <
-					text = <"RR Rate">
-					description = <"Frequency of electrical ventricular contractions (measured from R wave to R wave) and indicative of the mechanical heart rate.">
-				>
-				["at0014"] = <
-					text = <"QRS duration">
-					description = <"QRS complex duration, measured from its onset to
-the ST segment onset (J point).">
-				>
-				["at0020"] = <
-					text = <"P axis">
-					description = <"Average direction of electrical activity during atrial depolarization.">
-				>
-				["at0021"] = <
-					text = <"QRS axis">
-					description = <"Average direction of electrical activity during ventricular depolarization.">
-				>
-				["at0022"] = <
-					text = <"T axis">
-					description = <"Average direction of electrical activity during ventricular repolarization.">
-				>
-				["at0023"] = <
-					text = <"Axis">
-					description = <"Details about the heart's electrical axis i.e. the general direction of the heart's depolarization wavefront.">
-				>
-				["at0025"] = <
-					text = <"QTc calculation method">
-					description = <"Method used to correct QT interval.">
-				>
-				["at0027"] = <
-					text = <"Per-lead Parameters">
-					description = <"Details about measured parameters for each named lead (specified in the run-time name constraint).">
-				>
-				["at0028"] = <
-					text = <"P duration">
-					description = <"Duration of P wave.">
-				>
-				["at0029"] = <
-					text = <"Lead I">
-					description = <"Lead I is the voltage between the (positive) left arm (LA) electrode and right arm (RA) electrode.">
-				>
-				["at0030"] = <
-					text = <"Lead II">
-					description = <"Lead II is the voltage between the (positive) left leg (LL) electrode and the right arm (RA) electrode.">
-				>
-				["at0031"] = <
-					text = <"Lead III">
-					description = <"Lead III is the voltage between the (positive) left leg (LL) electrode and the left arm (LA) electrode.">
-				>
-				["at0032"] = <
-					text = <"Lead aVR">
-					description = <"Lead augmented vector right (aVR) has the positive electrode (white) on the right arm. The negative electrode is a combination of the left arm (black) electrode and the left leg (red) electrode, which \"augments\" the signal strength of the positive electrode on the right arm.">
-				>
-				["at0033"] = <
-					text = <"Lead aVL">
-					description = <"Lead augmented vector left (aVL) has the positive (black) electrode on the left arm. The negative electrode is a combination of the right arm (white) electrode and the left leg (red) electrode, which \"augments\" the signal strength of the positive electrode on the left arm.">
-				>
-				["at0034"] = <
-					text = <"Lead aVF">
-					description = <"Lead augmented vector foot (aVF) has the positive (red) electrode on the left leg. The negative electrode is a combination of the right arm (white) electrode and the left arm (black) electrode, which \"augments\" the signal of the positive electrode on the left leg.">
-				>
-				["at0035"] = <
-					text = <"Lead V1">
-					description = <"Lead V1 is a precordial lead, placed in the fourth intercostal space (between ribs 4 & 5) just to the right of the sternum (breastbone).">
-				>
-				["at0036"] = <
-					text = <"Lead V2">
-					description = <"Lead V2 is a precordial lead, placed in the fourth intercostal space (between ribs 4 & 5) just to the left of the sternum.">
-				>
-				["at0037"] = <
-					text = <"Lead V3">
-					description = <"Lead V3 is a precordial lead, placed in between leads V2 and V4.">
-				>
-				["at0038"] = <
-					text = <"Lead V4">
-					description = <"Lead V4 is a precordial lead, placed in the fifth intercostal space (between ribs 5 & 6) in the mid-clavicular line (the imaginary line that extends down from the midpoint of the clavicle (collarbone).">
-				>
-				["at0039"] = <
-					text = <"Lead V5">
-					description = <"Lead V5 is a precordial lead, placed horizontally even with V4, but in the anterior axillary line. (The anterior axillary line is the imaginary line that runs down from the point midway between the middle of the clavicle and the lateral end of the clavicle; the lateral end of the collarbone is the end closer to the arm.)">
-				>
-				["at0040"] = <
-					text = <"Lead V6">
-					description = <"Lead V6 is a precordial lead, placed horizontally even with V4 and V5 in the midaxillary line. (The midaxillary line is the imaginary line that extends down from the middle of the patient's armpit.)">
-				>
-				["at0041"] = <
-					text = <"P amplitude">
-					description = <"P wave amplitude.">
-				>
-				["at0042"] = <
-					text = <"P area">
-					description = <"P wave area for monophasic P waves or the area of the initial portion of a biphasic P wave.">
-				>
-				["at0043"] = <
-					text = <"P' amplitude">
-					description = <"Amplitude of P' wave.">
-				>
-				["at0044"] = <
-					text = <"P' duration">
-					description = <"Duration of P' wave.">
-				>
-				["at0046"] = <
-					text = <"P' area">
-					description = <"Area of the terminal portion of a biphasic P wave.">
-				>
-				["at0048"] = <
-					text = <"Q amplitude">
-					description = <"Q wave amplitude.">
-				>
-				["at0049"] = <
-					text = <"Q duration">
-					description = <"Q wave duration.">
-				>
-				["at0050"] = <
-					text = <"R amplitude">
-					description = <"R wave amplitude.">
-				>
-				["at0051"] = <
-					text = <"R duration">
-					description = <"R wave duration.">
-				>
-				["at0053"] = <
-					text = <"S amplitude">
-					description = <"S wave amplitude.">
-				>
-				["at0054"] = <
-					text = <"S duration">
-					description = <"S wave duration.">
-				>
-				["at0055"] = <
-					text = <"R' amplitude">
-					description = <"R' wave amplitude.">
-				>
-				["at0056"] = <
-					text = <"R' duration">
-					description = <"R' wave duration.">
-				>
-				["at0057"] = <
-					text = <"S' amplitude">
-					description = <"S' wave amplitude.">
-				>
-				["at0058"] = <
-					text = <"S' duration">
-					description = <"S' wave duration.">
-				>
-				["at0059"] = <
-					text = <"V.A.T.">
-					description = <"Ventricular Activation Time is the interval from the onset of the QRS complex to the latest positive peak in the complex, or the latest substantial notch on the latest peak (whichever is later).">
-				>
-				["at0060"] = <
-					text = <"QRS p-p">
-					description = <"Peak-to-peak QRS complex amplitude.">
-				>
-				["at0061"] = <
-					text = <"QRS duration">
-					description = <"QRS complex duration, measured from its onset to the ST segment onset (J point).">
-				>
-				["at0062"] = <
-					text = <"QRS area">
-					description = <"The area of the QRS complex.">
-				>
-				["at0063"] = <
-					text = <"ST onset">
-					description = <"Elevation or depression at the onset (J point) of the ST segment.">
-				>
-				["at0064"] = <
-					text = <"ST midpoint">
-					description = <"Elevation or depression at the midpoint of the ST segment.">
-				>
-				["at0065"] = <
-					text = <"ST 80ms">
-					description = <"Elevation or depression of the ST segment 80 ms after the end of the QRS complex (J point).">
-				>
-				["at0066"] = <
-					text = <"ST end">
-					description = <"Elevation or depression at the end of the ST segment.">
-				>
-				["at0067"] = <
-					text = <"ST duration">
-					description = <"ST segment duration.">
-				>
-				["at0068"] = <
-					text = <"ST slope">
-					description = <"ST segment slope. Slope is measured in degrees for 25 mm/sec, 1mV/cm scaling.">
-				>
-				["at0069"] = <
-					text = <"ST shape">
-					description = <"The ST segment shape.">
-				>
-				["at0070"] = <
-					text = <"Straight">
-					description = <"*">
-				>
-				["at0071"] = <
-					text = <"Concave upward">
-					description = <"*">
-				>
-				["at0072"] = <
-					text = <"Concave downward">
-					description = <"*">
-				>
-				["at0073"] = <
-					text = <"T amplitude">
-					description = <"T wave amplitude.">
-				>
-				["at0074"] = <
-					text = <"T duration">
-					description = <"T wave duration.">
-				>
-				["at0075"] = <
-					text = <"T area">
-					description = <"The area of T wave.">
-				>
-				["at0076"] = <
-					text = <"ECG Device ">
-					description = <"Details about the electrocardiograph device used to record the ECG.">
-				>
-				["at0077"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0078"] = <
-					text = <"Tilt">
-					description = <"The craniocaudal tilt of the surface on which the person is lying at the time of ECG recording.">
-				>
-				["at0079"] = <
-					text = <"Confounding factors">
-					description = <"Comment on and record other incidental factors that may be contributing to ECG recording.">
-				>
-				["at0080"] = <
-					text = <"Level of Exertion">
-					description = <"Details about physical activity undertaken at the time of ECG recording.">
-				>
-				["at0081"] = <
-					text = <"Overall interpretation">
-					description = <"An overall interpretative comment on this recording.">
-				>
-				["at0082"] = <
-					text = <"ECG Viewer">
-					description = <"Details of device used to view the ECG output.">
-				>
-			>
-		>
 		["ar-sy"] = <
 			items = <
 				["at0000"] = <
@@ -1290,6 +999,296 @@ T">
 				["at0082"] = <
 					text = <"عارض مخطط كهربية عضلة القلب">
 					description = <"تفاصيل حول الجهيزة المستخدمة لعرض ناتج تخطيط كهربية عضلة القلب.">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ECG recording">
+					description = <"An electrocardiograph (ECG or EKG) is an interpretation of the electrical activity of the heart over time, recorded non-invasively using external skin electrodes.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Global ECG Parameters">
+					description = <"Details about the entire ECG.">
+				>
+				["at0007"] = <
+					text = <"QT interval">
+					description = <"Interval from the onset of the QRS complex to the
+end of the T wave.">
+				>
+				["at0008"] = <
+					text = <"QTc interval">
+					description = <"Corrected QT interval.">
+				>
+				["at0009"] = <
+					text = <"Automatic interpretation">
+					description = <"Interpretative comment on this recording originating from the device.">
+				>
+				["at0010"] = <
+					text = <"ECG Recording">
+					description = <"Multimedia representation of the ECG.">
+				>
+				["at0012"] = <
+					text = <"PR interval">
+					description = <"Measured interval from onset of P wave to QRS.">
+				>
+				["at0013"] = <
+					text = <"RR Rate">
+					description = <"Frequency of electrical ventricular contractions (measured from R wave to R wave) and indicative of the mechanical heart rate.">
+				>
+				["at0014"] = <
+					text = <"QRS duration">
+					description = <"QRS complex duration, measured from its onset to
+the ST segment onset (J point).">
+				>
+				["at0020"] = <
+					text = <"P axis">
+					description = <"Average direction of electrical activity during atrial depolarization.">
+				>
+				["at0021"] = <
+					text = <"QRS axis">
+					description = <"Average direction of electrical activity during ventricular depolarization.">
+				>
+				["at0022"] = <
+					text = <"T axis">
+					description = <"Average direction of electrical activity during ventricular repolarization.">
+				>
+				["at0023"] = <
+					text = <"Axis">
+					description = <"Details about the heart's electrical axis i.e. the general direction of the heart's depolarization wavefront.">
+				>
+				["at0025"] = <
+					text = <"QTc calculation method">
+					description = <"Method used to correct QT interval.">
+				>
+				["at0027"] = <
+					text = <"Per-lead Parameters">
+					description = <"Details about measured parameters for each named lead (specified in the run-time name constraint).">
+				>
+				["at0028"] = <
+					text = <"P duration">
+					description = <"Duration of P wave.">
+				>
+				["at0029"] = <
+					text = <"Lead I">
+					description = <"Lead I is the voltage between the (positive) left arm (LA) electrode and right arm (RA) electrode.">
+				>
+				["at0030"] = <
+					text = <"Lead II">
+					description = <"Lead II is the voltage between the (positive) left leg (LL) electrode and the right arm (RA) electrode.">
+				>
+				["at0031"] = <
+					text = <"Lead III">
+					description = <"Lead III is the voltage between the (positive) left leg (LL) electrode and the left arm (LA) electrode.">
+				>
+				["at0032"] = <
+					text = <"Lead aVR">
+					description = <"Lead augmented vector right (aVR) has the positive electrode (white) on the right arm. The negative electrode is a combination of the left arm (black) electrode and the left leg (red) electrode, which \"augments\" the signal strength of the positive electrode on the right arm.">
+				>
+				["at0033"] = <
+					text = <"Lead aVL">
+					description = <"Lead augmented vector left (aVL) has the positive (black) electrode on the left arm. The negative electrode is a combination of the right arm (white) electrode and the left leg (red) electrode, which \"augments\" the signal strength of the positive electrode on the left arm.">
+				>
+				["at0034"] = <
+					text = <"Lead aVF">
+					description = <"Lead augmented vector foot (aVF) has the positive (red) electrode on the left leg. The negative electrode is a combination of the right arm (white) electrode and the left arm (black) electrode, which \"augments\" the signal of the positive electrode on the left leg.">
+				>
+				["at0035"] = <
+					text = <"Lead V1">
+					description = <"Lead V1 is a precordial lead, placed in the fourth intercostal space (between ribs 4 & 5) just to the right of the sternum (breastbone).">
+				>
+				["at0036"] = <
+					text = <"Lead V2">
+					description = <"Lead V2 is a precordial lead, placed in the fourth intercostal space (between ribs 4 & 5) just to the left of the sternum.">
+				>
+				["at0037"] = <
+					text = <"Lead V3">
+					description = <"Lead V3 is a precordial lead, placed in between leads V2 and V4.">
+				>
+				["at0038"] = <
+					text = <"Lead V4">
+					description = <"Lead V4 is a precordial lead, placed in the fifth intercostal space (between ribs 5 & 6) in the mid-clavicular line (the imaginary line that extends down from the midpoint of the clavicle (collarbone).">
+				>
+				["at0039"] = <
+					text = <"Lead V5">
+					description = <"Lead V5 is a precordial lead, placed horizontally even with V4, but in the anterior axillary line. (The anterior axillary line is the imaginary line that runs down from the point midway between the middle of the clavicle and the lateral end of the clavicle; the lateral end of the collarbone is the end closer to the arm.)">
+				>
+				["at0040"] = <
+					text = <"Lead V6">
+					description = <"Lead V6 is a precordial lead, placed horizontally even with V4 and V5 in the midaxillary line. (The midaxillary line is the imaginary line that extends down from the middle of the patient's armpit.)">
+				>
+				["at0041"] = <
+					text = <"P amplitude">
+					description = <"P wave amplitude.">
+				>
+				["at0042"] = <
+					text = <"P area">
+					description = <"P wave area for monophasic P waves or the area of the initial portion of a biphasic P wave.">
+				>
+				["at0043"] = <
+					text = <"P' amplitude">
+					description = <"Amplitude of P' wave.">
+				>
+				["at0044"] = <
+					text = <"P' duration">
+					description = <"Duration of P' wave.">
+				>
+				["at0046"] = <
+					text = <"P' area">
+					description = <"Area of the terminal portion of a biphasic P wave.">
+				>
+				["at0048"] = <
+					text = <"Q amplitude">
+					description = <"Q wave amplitude.">
+				>
+				["at0049"] = <
+					text = <"Q duration">
+					description = <"Q wave duration.">
+				>
+				["at0050"] = <
+					text = <"R amplitude">
+					description = <"R wave amplitude.">
+				>
+				["at0051"] = <
+					text = <"R duration">
+					description = <"R wave duration.">
+				>
+				["at0053"] = <
+					text = <"S amplitude">
+					description = <"S wave amplitude.">
+				>
+				["at0054"] = <
+					text = <"S duration">
+					description = <"S wave duration.">
+				>
+				["at0055"] = <
+					text = <"R' amplitude">
+					description = <"R' wave amplitude.">
+				>
+				["at0056"] = <
+					text = <"R' duration">
+					description = <"R' wave duration.">
+				>
+				["at0057"] = <
+					text = <"S' amplitude">
+					description = <"S' wave amplitude.">
+				>
+				["at0058"] = <
+					text = <"S' duration">
+					description = <"S' wave duration.">
+				>
+				["at0059"] = <
+					text = <"V.A.T.">
+					description = <"Ventricular Activation Time is the interval from the onset of the QRS complex to the latest positive peak in the complex, or the latest substantial notch on the latest peak (whichever is later).">
+				>
+				["at0060"] = <
+					text = <"QRS p-p">
+					description = <"Peak-to-peak QRS complex amplitude.">
+				>
+				["at0061"] = <
+					text = <"QRS duration">
+					description = <"QRS complex duration, measured from its onset to the ST segment onset (J point).">
+				>
+				["at0062"] = <
+					text = <"QRS area">
+					description = <"The area of the QRS complex.">
+				>
+				["at0063"] = <
+					text = <"ST onset">
+					description = <"Elevation or depression at the onset (J point) of the ST segment.">
+				>
+				["at0064"] = <
+					text = <"ST midpoint">
+					description = <"Elevation or depression at the midpoint of the ST segment.">
+				>
+				["at0065"] = <
+					text = <"ST 80ms">
+					description = <"Elevation or depression of the ST segment 80 ms after the end of the QRS complex (J point).">
+				>
+				["at0066"] = <
+					text = <"ST end">
+					description = <"Elevation or depression at the end of the ST segment.">
+				>
+				["at0067"] = <
+					text = <"ST duration">
+					description = <"ST segment duration.">
+				>
+				["at0068"] = <
+					text = <"ST slope">
+					description = <"ST segment slope. Slope is measured in degrees for 25 mm/sec, 1mV/cm scaling.">
+				>
+				["at0069"] = <
+					text = <"ST shape">
+					description = <"The ST segment shape.">
+				>
+				["at0070"] = <
+					text = <"Straight">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Concave upward">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Concave downward">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"T amplitude">
+					description = <"T wave amplitude.">
+				>
+				["at0074"] = <
+					text = <"T duration">
+					description = <"T wave duration.">
+				>
+				["at0075"] = <
+					text = <"T area">
+					description = <"The area of T wave.">
+				>
+				["at0076"] = <
+					text = <"ECG Device ">
+					description = <"Details about the electrocardiograph device used to record the ECG.">
+				>
+				["at0077"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0078"] = <
+					text = <"Tilt">
+					description = <"The craniocaudal tilt of the surface on which the person is lying at the time of ECG recording.">
+				>
+				["at0079"] = <
+					text = <"Confounding factors">
+					description = <"Comment on and record other incidental factors that may be contributing to ECG recording.">
+				>
+				["at0080"] = <
+					text = <"Level of Exertion">
+					description = <"Details about physical activity undertaken at the time of ECG recording.">
+				>
+				["at0081"] = <
+					text = <"Overall interpretation">
+					description = <"An overall interpretative comment on this recording.">
+				>
+				["at0082"] = <
+					text = <"ECG Viewer">
+					description = <"Details of device used to view the ECG output.">
 				>
 			>
 		>

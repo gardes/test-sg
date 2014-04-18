@@ -5,14 +5,6 @@ concept
 	[at0000]	-- Warble Tones Hearing Test
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"?">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -25,14 +17,6 @@ description
 			purpose = <"A structure to record the results of testing the hearing thresholds of patients with developmental age between seven months and 18 months of age">
 			use = <"To assess hearing thresholds of patients with developmental age between seven months and 18 months of age">
 			keywords = <"hearing", "warble", "tones">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"هي بِنية لتسجيل نتائج اختبار عَتَبات السمع لدى المرضى الذين تتراوح أعمارهم النمائية ما بين سبعة أشهر و ثمانية عشرة شهرا">
-			use = <"لتقييم العتبات السمعية للمرضى الذين تترواح أعمارهم ما بين سبعة أشهر و ثمانية عشرا شهرا">
-			keywords = <"السماع", "اللُّحمَوية", "النغمات">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -229,90 +213,6 @@ ontology
 				>
 				["at0029"] = <
 					text = <"0,5kHz">
-					description = <"*">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"اختبار النغمات اللُّحمَوية السمعي">
-					description = <"اختبار سلوكي متعلق بطب الأطفال, من أجل تقييم عَتَبَات السمع لدى المرضى الذين تتراوح أعمارهم النَّمائية ما بين سبعة أشهر و ثمانية عشر شهرا ">
-				>
-				["at0001"] = <
-					text = <"سلسلة الوقائع">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"إحدى الوقائع">
-					description = <"*">
-				>
-				["at0003"] = <
-					text = <"شجرة">
-					description = <"*@ internal @(en)">
-				>
-				["at0004"] = <
-					text = <"الجانب">
-					description = <"الجانب الذي يتم اختباره">
-				>
-				["at0005"] = <
-					text = <"الأيسر">
-					description = <"*">
-				>
-				["at0006"] = <
-					text = <"الأيمن">
-					description = <"*">
-				>
-				["at0017"] = <
-					text = <"التكرار/ التردد">
-					description = <"تسجيل تكرار/تردد مُنَبِّه النغمات اللُّحموية التي يتم تقديمها">
-				>
-				["at0018"] = <
-					text = <"التفاصيل">
-					description = <"*">
-				>
-				["at0019"] = <
-					text = <"الاستجابة">
-					description = <"الاستجابة المُتَّسِقة من الطفل للمُنبِّه">
-				>
-				["at0020"] = <
-					text = <"عتبة السمع">
-					description = <"تسجيل عتبة السمع بالديسي بِل">
-				>
-				["at0021"] = <
-					text = <"إيجابي">
-					description = <"*">
-				>
-				["at0022"] = <
-					text = <"سلبي">
-					description = <"*">
-				>
-				["at0023"] = <
-					text = <"التعليق">
-					description = <"تعليق على الاختبار">
-				>
-				["at0024"] = <
-					text = <"الصورة">
-					description = <"صورة نتيجة الاختبار">
-				>
-				["at0025"] = <
-					text = <"المُعَوَّلية">
-					description = <"تقدير مُعَوَّلية نتيجة الاختبار - الذي تتم الإشارة إليه بسلوك الطفل, مثلا تعاونيّ, إلى آخره ">
-				>
-				["at0026"] = <
-					text = <"4 كيلو هرتز">
-					description = <"*">
-				>
-				["at0027"] = <
-					text = <"2 كيلو هرتز">
-					description = <"*">
-				>
-				["at0028"] = <
-					text = <"1 كيلو هرتز">
-					description = <"*">
-				>
-				["at0029"] = <
-					text = <"0.5 كيلو هرتز">
 					description = <"*">
 				>
 			>

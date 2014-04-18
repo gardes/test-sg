@@ -15,7 +15,7 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Record of encounter as a progress note.">
-			use = <"">
+			use = <"For use to record when a person and clinician interact.">
 			keywords = <"progress", "note", "encounter">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -24,8 +24,7 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"EDEB60AEFE411C22B796CBE227E44095">
+		["MD5-CAM-1.0.1"] = <"9D8A461C75C5B7C4EFCFF7D424261387">
 	>
 
 definition
@@ -35,8 +34,14 @@ definition
 				defining_code matches {[openehr::433]}
 			}
 		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {*}
+				}
+			}
+		}
 	}
-
 
 ontology
 	term_definitions = <
@@ -44,7 +49,11 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Encounter">
-					description = <"Generic encounter or progress note composition">
+					description = <"Generic encounter or progress note composition.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
 				>
 			>
 		>

@@ -16,10 +16,7 @@ language
 	>
 description
 	original_author = <
-		["name"] = <"Dr Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, UK">
-		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"2012-09-18">
+		["name"] = <"unknown">
 	>
 	details = <
 		["de"] = <
@@ -40,43 +37,57 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"112FBC941E04AB8FA7705B45628F958E">
+		["references"] = <"">
 	>
 
 definition
-	ITEM_TREE[at0000] occurrences matches {0..*} matches {	-- Intravenous fluids
+	ITEM_TREE[at0000] occurrences matches {0..*} matches {	-- intravenöse Flüssigkeit
 		items cardinality matches {0..*; unordered} matches {
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Fluid type
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Flüssigkeitsart
 				value matches {
 					DV_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Route
-				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0013, 	-- Needle and syringe
-							at0014, 	-- Peripheral intravenous line
-							at0015, 	-- Central venous line
-							at0016, 	-- Peripherally inserted central catheter
-							at0017]	-- Implanted subcutaneous port
+							at0003, 	-- 0.9% NaCl
+							at0004, 	-- 0.9% NaCl mit 5% Glukose
+							at0005, 	-- 0.45% NaCl mit 5% Glukose
+							at0006, 	-- Hartmann'sche Lösung
+							at0007, 	-- 0.18% NaCl und 4% Dextrose
+							at0008, 	-- 10% Dextrose
+							at0009, 	-- 20% Dextrose
+							at0010, 	-- 25% Dextrose
+							at0011]	-- 50% Dextrose
 						}
 					}
 				}
 			}
-			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Form of therapy
+			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Weg
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0019, 	-- Continuous IV drip
-							at0020]	-- Intermittent infusion
+							at0013, 	-- Nadel und Spritze
+							at0014, 	-- Periphärer intravenöser Katheter
+							at0015, 	-- Zentraler Venenkatheter
+							at0016, 	-- Periphär gelegter zentraler Katheter
+							at0017]	-- Implantierter subkutaner Zugang
 						}
 					}
 				}
 			}
-			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Volume
+			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Therapieform
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0019, 	-- Kontinuierlicher intravenöser Tropf
+							at0020]	-- Unterbrochene Infusion
+						}
+					}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Volumen
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::129]>
@@ -97,7 +108,7 @@ definition
 					>
 				}
 			}
-			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Rate of flow
+			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Durchfluss
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::126]>
@@ -116,34 +127,46 @@ definition
 							>
 						>
 					>
+					C_DV_QUANTITY <
+						property = <[openehr::338]>
+						list = <
+							["1"] = <
+								units = <"mm/h">
+							>
+						>
+					>
 				}
 			}
-			CLUSTER[at0027] occurrences matches {0..1} matches {	-- Commencement of administration
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0026] occurrences matches {0..1} matches {	-- Time of commencement
+			CLUSTER[at0027] occurrences matches {0..1} matches {	-- Beginn der Verabreichung
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0026] occurrences matches {0..1} matches {	-- Beginnzeitpunkt
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_DATE_TIME matches {
+								value matches {yyyy-??-??T??:??:??}
+							}
 						}
 					}
-					ELEMENT[at0028] occurrences matches {0..*} matches {	-- Commencement instruction
+					ELEMENT[at0028] occurrences matches {0..*} matches {	-- Startanweisung
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
 				}
 			}
-			CLUSTER[at0023] occurrences matches {0..1} matches {	-- Administration check
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Batch number
+			CLUSTER[at0023] occurrences matches {0..1} matches {	-- Verabreichungskontrolle
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Chargennummer
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {[local::]}
 							}
 						}
 					}
-					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Use by date
+					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Haltbarkeitsdatum
 						value matches {
-							DV_DATE matches {*}
+							DV_DATE matches {
+								value matches {yyyy-??-??}
+							}
 						}
 					}
 				}
@@ -163,6 +186,42 @@ ontology
 				["at0002"] = <
 					text = <"Flüssigkeitsart">
 					description = <"Art der Flüssigkeit">
+				>
+				["at0003"] = <
+					text = <"0.9% NaCl">
+					description = <"normale Kochsalzlösung">
+				>
+				["at0004"] = <
+					text = <"0.9% NaCl mit 5% Glukose">
+					description = <"normale Kochsalzlösung mit Glukose">
+				>
+				["at0005"] = <
+					text = <"0.45% NaCl mit 5% Glukose">
+					description = <"1/2 normale Kochsalzlösung mit Glukose">
+				>
+				["at0006"] = <
+					text = <"Hartmann'sche Lösung">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"0.18% NaCl und 4% Dextrose">
+					description = <"4% und 1/5 normale Kochsalzlösung">
+				>
+				["at0008"] = <
+					text = <"10% Dextrose">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"20% Dextrose">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"25% Dextrose">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"50% Dextrose">
+					description = <"*">
 				>
 				["at0012"] = <
 					text = <"Weg">
@@ -243,6 +302,42 @@ ontology
 				["at0002"] = <
 					text = <"Fluid type">
 					description = <"Type of fluid">
+				>
+				["at0003"] = <
+					text = <"0.9% NaCl">
+					description = <"Normal saline">
+				>
+				["at0004"] = <
+					text = <"0.9% NaCl with 5% Glucose">
+					description = <"Normal saline with glucose">
+				>
+				["at0005"] = <
+					text = <"0.45% NaCl with 5% Glucose">
+					description = <"1/2 Normal Saline with glucose">
+				>
+				["at0006"] = <
+					text = <"Hartmann's solution">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"0.18% NaCl and 4% Dextrose">
+					description = <"4% and 1/5th Normal saline">
+				>
+				["at0008"] = <
+					text = <"10% Dextrose">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"20% Dextrose">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"25% Dextrose">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"50% Dextrose">
+					description = <"*">
 				>
 				["at0012"] = <
 					text = <"Route">

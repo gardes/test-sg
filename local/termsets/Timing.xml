@@ -1,0 +1,25 @@
+<ots:query xmlns:ots="urn:xmlns:oceaninformatics.biz:schema:OTSQuerySchema" name="Timing" language="en-GB" terminology="Snomed" parentQuery="" description="" baseQuery="" cacheMode="Permanent" pruneDeadHeads="true">
+   <childNodes>
+      <placeHolder text="Other">
+         <childNodes>
+            <concept conceptId="422114001" operation="Select">
+               <childNodes></childNodes>
+            </concept>
+            <concept conceptId="421832002" operation="Select"></concept>
+            <tree conceptId="307430002" maxDepth="0" rootOperation="Passthrough" treeOperation="Select" treeRelationship="116680003" reverseTreeRelationship="true">
+               <treeNodes></treeNodes>
+            </tree>
+            <tree conceptId="307485003" maxDepth="0" rootOperation="Navigate" treeOperation="Select" treeRelationship="116680003" reverseTreeRelationship="true"></tree>
+         </childNodes>
+      </placeHolder>
+      <concept conceptId="229799001" operation="Select"></concept>
+      <concept conceptId="69620002" operation="Select"></concept>
+      <concept conceptId="307473006" operation="Select"></concept>
+      <concept conceptId="307472001" operation="Select"></concept>
+      <concept conceptId="229798009" operation="Select"></concept>
+      <concept conceptId="307439001" operation="Select"></concept>
+      <concept conceptId="225750008" operation="Select"></concept>
+      <concept conceptId="225753005" operation="Select"></concept>
+      <concept conceptId="225756002" operation="Select"></concept>
+   </childNodes>
+</ots:query>

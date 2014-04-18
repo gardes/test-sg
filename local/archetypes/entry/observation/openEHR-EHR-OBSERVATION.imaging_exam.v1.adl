@@ -41,7 +41,7 @@ RSNA.org: Radiology Reporting [Internet]. [date unknown];[cited 2011 Jan 2 ] Ava
 Radiology Written Report Guidelin Project (Draft Consultation); December 2010.
 
 Diagnostic Imaging data specifications; NEHTA, version 1.0, 2007 Jun 29.">
-		["MD5-CAM-1.0.1"] = <"6C7EA495BE3E156E602D39E92C7304D3">
+		["MD5-CAM-1.0.1"] = <"E115450A8DA092A0431A3D9777634573">
 	>
 
 definition
@@ -98,7 +98,7 @@ definition
 									}
 									CLUSTER[at0015] occurrences matches {0..1} matches {	-- Result group
 										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0016] occurrences matches {0..1} matches {	-- Result
+											CLUSTER[at0016] occurrences matches {0..*} matches {	-- Result
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0017] occurrences matches {0..1} matches {*}
 													ELEMENT[at0018] occurrences matches {0..*} matches {	-- Result comment
@@ -109,10 +109,6 @@ definition
 												}
 											}
 											allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Anatomical site
-												include
-													archetype_id/value matches {/.*/}
-											}
-											allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {	-- Result details
 												include
 													archetype_id/value matches {/.*/}
 											}
@@ -438,10 +434,6 @@ values, or information about the source of the value where this may be relevant 
 				["at0042"] = <
 					text = <"Compared image details">
 					description = <"Details of previous images used for comparison.">
-				>
-				["at0043"] = <
-					text = <"Result details">
-					description = <"Details relating to the specific examination done.">
 				>
 			>
 		>
