@@ -87,13 +87,13 @@
     <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0033]" max="0" />
     <Rule path="/data[at0001]/events[at0006]/state[at0007]" hide_on_form="true" />
     <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at0008]" max="0" />
-    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1005]" max="0" />
     <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1052]" max="0" />
     <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1043]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1005]" max="0" />
     <Rule path="/data[at0001]/events[at1042]" max="0" />
     <Rule path="/protocol[at0011]" hide_on_form="true" />
     <Rule path="/protocol[at0011]/items[at0013]" max="0" />
-    <Rule path="/protocol[at0011]/items[at0014]">
+    <Rule path="/protocol[at0011]/items[at1033]/items[at0014]">
       <constraint xsi:type="textConstraint">
         <excludedValues>local::at0027</excludedValues>
         <excludedValues>local::at0028</excludedValues>
@@ -103,12 +103,11 @@
         <excludedValues>local::at1031</excludedValues>
         <excludedValues>local::at1032</excludedValues>
         <excludedValues>local::at1051</excludedValues>
+        <excludedValues>local::at1053</excludedValues>
       </constraint>
     </Rule>
     <Rule path="/protocol[at0011]/items[at1035]" max="0" />
     <Rule path="/protocol[at0011]/items[at1038]" max="0" />
-    <Rule path="/protocol[at0011]/items[at1054]" max="0" />
-    <Rule path="/protocol[at0011]/items[at1055]" max="0" />
     <Rule path="/protocol[at0011]/items[at1010]" max="0" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1">
