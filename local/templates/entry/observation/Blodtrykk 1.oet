@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>2640316d-4e25-46e2-ad8e-3430f2b3585f</id>
+  <name>Blodtrykk 1</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-OBSERVATION.enkel_numerisk_registrering.v1 and name/value='Index 1']/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+    <items>
+      <item>
+        <key>Notes.Comment</key>
+        <value>ABI høyre side</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-OBSERVATION.enkel_numerisk_registrering.v1 and name/value='Index 2']/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+    <items>
+      <item>
+        <key>Notes.Comment</key>
+        <value>ABI venstre side</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1" concept_name="Blood Pressure" max="1" name="Blodtrykk 1" hide_on_form="true">
+    <Rule path="/data[at0001]" hide_on_form="true" />
+    <Rule path="/data[at0001]/events[at0006]" hide_on_form="true" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]" hide_on_form="true" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0004]" name="Arm" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0005]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at1006]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at1007]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0033]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]" hide_on_form="true" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at0008]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1005]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1052]" max="0" />
+    <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1043]" max="0" />
+    <Rule path="/data[at0001]/events[at1042]" max="0" />
+    <Rule path="/protocol[at0011]" hide_on_form="true" />
+    <Rule path="/protocol[at0011]/items[at0013]" max="0" />
+    <Rule path="/protocol[at0011]/items[at0014]">
+      <constraint xsi:type="textConstraint">
+        <excludedValues>local::at0027</excludedValues>
+        <excludedValues>local::at0028</excludedValues>
+        <excludedValues>local::at1020</excludedValues>
+        <excludedValues>local::at1021</excludedValues>
+        <excludedValues>local::at1026</excludedValues>
+        <excludedValues>local::at1031</excludedValues>
+        <excludedValues>local::at1032</excludedValues>
+        <excludedValues>local::at1051</excludedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/protocol[at0011]/items[at1035]" max="0" />
+    <Rule path="/protocol[at0011]/items[at1038]" max="0" />
+    <Rule path="/protocol[at0011]/items[at1054]" max="0" />
+    <Rule path="/protocol[at0011]/items[at1055]" max="0" />
+    <Rule path="/protocol[at0011]/items[at1010]" max="0" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1">
+    <digest id="MD5-CAM-1.0.1">ECB15524E65241BBA1CC7DBA9CB22C19</digest>
+  </integrity_checks>
+</template>
