@@ -16,7 +16,6 @@ description
 			use = <"">
 			keywords = <"Manchester", "word", "AB", "hearing">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

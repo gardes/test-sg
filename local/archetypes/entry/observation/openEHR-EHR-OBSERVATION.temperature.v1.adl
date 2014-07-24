@@ -19,7 +19,7 @@ description
 			use = <"Used for recording the specific temperature of an identified object.">
 			keywords = <"temperature", ...>
 			misuse = <"This temperature is not to be used to record the body temperature, which is a surrogate for the whole body temperature of the subject - use OBSERVATION.body_temperature instead in this situation.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

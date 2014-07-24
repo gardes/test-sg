@@ -19,7 +19,7 @@ description
 			use = <"">
 			keywords = <"triage", "evaluation", "assessment">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2008 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

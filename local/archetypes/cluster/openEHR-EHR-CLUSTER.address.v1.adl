@@ -28,7 +28,7 @@ description
 			use = <"">
 			keywords = <"address", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -36,7 +36,7 @@ description
 			use = <"">
 			keywords = <"Adresse", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

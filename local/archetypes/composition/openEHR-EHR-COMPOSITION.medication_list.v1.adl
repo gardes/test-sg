@@ -19,7 +19,7 @@ description
 			use = <"For ongoing medications">
 			keywords = <"medication list", "Ongoing medications">
 			misuse = <"Not for current medications">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2008 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

@@ -31,7 +31,7 @@ description
 			misuse = <"Не использовать для записи фактического веса человека, или прибавки / потери массы - использовать для этого архетип OBSERVATION.body_weight.
 Не использовать для записи первого вес ребенка вскоре после рождения - использовать для этого архетип OBSERVATION.body_weight.
 Не использовать для записи веса предмета или части тела(ru)">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -41,7 +41,7 @@ description
 			misuse = <"Not to be used to record the actual weight of an individual, or weight gain/loss - use OBSERVATION.body_weight.
 Not to be used to record the first weight of an infant soon after birth - use the specialisation of this archetype OBSERVATION.body_weight-birth.
 Not to be used to record the weight of an object or body part.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

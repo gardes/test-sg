@@ -19,7 +19,7 @@ description
 			use = <"">
 			keywords = <"percussion", "resonant">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"OrganisationDraft">

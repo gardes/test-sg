@@ -37,7 +37,7 @@ description
 			use = <"Zur Dokumentation eines ehemaligen oder aktuellen Problems - also zur Dokumentation ehemaliger Entwicklungen, sowie derzeitiger Probleme.  Mit wechselndem 'Subjekt der Daten' zur Dokumentation von Problemen Verwandter, und somit für die Familienanamnese.">
 			keywords = <"Sachverhalt", "Zustand">
 			misuse = <"Spezialisierungen 'openEHR-EHR-EVALUATION.problem-diagnosis' für medizinische Diagnosen und 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' für histologische Diagnosen benutzen.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -52,7 +52,7 @@ Alguns exemplos:
 - Problemas de relacionamento com membro familiar">
 			keywords = <"caso", "circunstância", "problema", "obstáculo">
 			misuse = <"Não deve ser usado para registro de diagnósticos formais - usar a especialização deste arquétipo, EVALUATION.problem-diagnosis.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -68,7 +68,7 @@ Some examples:
 ">
 			keywords = <"issue", "condition", "problem", "obstacle">
 			misuse = <"Not to be used for recording formal Diagnoses - use the specialisation of this archetype, EVALUATION.problem-diagnosis. ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

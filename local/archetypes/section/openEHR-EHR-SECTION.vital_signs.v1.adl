@@ -29,7 +29,7 @@ description
 			use = <"An organisational heading for vital signs">
 			keywords = <"blood pressure", "temperature", "pulse", "oxygen saturation", "respirations", "observations", "vital", "signs">
 			misuse = <"Does not need to be used to record these entries separately">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -39,7 +39,7 @@ description
 			misuse = <"Muss nicht benutzt werden, um die verschiedenen Messungen getrennt voneinander aufzuzeichenen.
 
 ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

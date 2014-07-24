@@ -19,7 +19,7 @@ description
 			use = <"For active and inactive problems (inactive have a resolution date set to true)">
 			keywords = <"problem list", ...>
 			misuse = <"Not for short term problems.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

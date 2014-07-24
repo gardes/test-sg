@@ -30,7 +30,7 @@ description
 			use = <"Zur Dokumentation von gesammelten Informationen zur Medikation">
 			keywords = <"Kontrolle", "Liste", "Medikation">
 			misuse = <"Nicht zur Dokumentation von Verordnungen oder Verabreichungen">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -38,7 +38,7 @@ description
 			use = <"Use for recording information gathering about medication">
 			keywords = <"check", "list", "medication">
 			misuse = <"Not for recording medication orders or administration records">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

@@ -18,7 +18,6 @@ description
 			use = <"">
 			keywords = <"hearing", "test", "electro-acoustic">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

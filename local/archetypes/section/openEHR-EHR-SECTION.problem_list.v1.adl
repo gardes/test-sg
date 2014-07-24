@@ -27,7 +27,7 @@ It is possible to represent both positive statements about identified problems/d
 While EVALUATION.problem and it's specialisations, including EVALUATION.problem-diagnosis, and EVALUATION.exclusion-problem_diagnosis have been explicitly included in the slot constraints, other archetypes have not been explicitly excluded. This means that any other archetypes can also be included here, if needed - for example, where structured data is not available or there is a need to provide a synopis, the EVALUATION.clinical_synopsis can be inserted and used.">
 			keywords = <"problem", "diagnosis", "exclusion", "absence", "known", "list">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"0">

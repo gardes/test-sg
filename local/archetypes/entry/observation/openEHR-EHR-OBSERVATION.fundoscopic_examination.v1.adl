@@ -28,14 +28,14 @@ description
 			purpose = <"To record details about clinical findings on fundoscopy of eyes.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para registrar detalhes sobre o resultados clínicos do exame fundoscopia dos olhos.">
 			use = <"*">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

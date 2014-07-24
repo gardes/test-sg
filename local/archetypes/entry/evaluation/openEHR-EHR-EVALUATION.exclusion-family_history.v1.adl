@@ -22,7 +22,7 @@ description
 This archetype is only to be used to record 'point in time' information. It is not to be used for a persistent storage of information as the patient should always be questioned about the occurrence of problems or diagnoses in family members during history taking and prior to initiation of any treatment or management plan.">
 			keywords = <"exclusion", "no", "nil", "significant", "relevant", "family", "diagnosis", "problem">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"0">

@@ -25,7 +25,7 @@ May be used to assess the quality of a measurement, as using a pulse plesmythogr
 May also be used as part of a direct patient assessment, e.g. using a pulse plesmythography waveform for cardiac output estimation.">
 			keywords = <"oximeter", "plesmythography", "plesmythogram", "pulse", "oximetry">
 			misuse = <"Should not normally be used other than within an OBSERVATION archetype.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

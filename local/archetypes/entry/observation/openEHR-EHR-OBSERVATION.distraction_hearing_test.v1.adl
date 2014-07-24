@@ -18,7 +18,6 @@ description
 			use = <"To assess hearing thresholds of patients with developmental age between seven months and 18 months of age">
 			keywords = <"hearing", "test", "distraction">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

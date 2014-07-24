@@ -31,7 +31,7 @@ description
 			use = <"Used in demographic services to register data about a healthcare provider postal address.">
 			keywords = <"demographic service", "healthcare provider address">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -39,7 +39,7 @@ description
 			use = <"Usado em serviços demográficos para registrar os detalhes de um endereço postal de um prestador de assistência à saúde">
 			keywords = <"serviço demográfico", "endereço de um prestador de assistência à saúde">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

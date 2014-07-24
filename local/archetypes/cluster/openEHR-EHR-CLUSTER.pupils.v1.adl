@@ -15,7 +15,7 @@ description
 			purpose = <"Record details from an examination of pupils.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

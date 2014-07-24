@@ -24,14 +24,14 @@ description
 			purpose = <"Dient der Dokumentation von Einzelheiten über eine verschriebene und verabreichte intravenöse Flüssigkeit.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about intravenous fluids ordered and administered">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

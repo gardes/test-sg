@@ -16,7 +16,7 @@ description
 			use = <"Use the HISTORY class to record the period of time and totals if required.">
 			keywords = <"wee", "urine", "production", "output">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

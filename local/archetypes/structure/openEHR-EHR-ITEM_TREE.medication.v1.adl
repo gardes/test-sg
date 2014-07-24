@@ -19,7 +19,7 @@ description
 			use = <"For use with INSTRUCTION.medication and ACTION.medication to describe the medication">
 			keywords = <"medication", "description">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

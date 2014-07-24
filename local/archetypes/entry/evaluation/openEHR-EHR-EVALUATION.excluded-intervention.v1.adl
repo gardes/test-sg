@@ -21,7 +21,7 @@ description
 			use = <"This is for recording negative statements about issues in the record.">
 			keywords = <"no", "significant", "family", "history", "surgery", "hospitalisations", "relevant", "allergies", "negation">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

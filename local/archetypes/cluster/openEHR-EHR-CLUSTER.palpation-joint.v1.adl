@@ -21,7 +21,7 @@ description
 			use = <"To be embedded in the openEHR-EHR-OBSERVATION.exam cluster to express findings determined by palpation.">
 			keywords = <"palpate", "joint">
 			misuse = <"Not for use in any other context at present.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

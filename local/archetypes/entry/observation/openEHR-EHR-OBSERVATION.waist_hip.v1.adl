@@ -18,7 +18,7 @@ description
 			use = <"">
 			keywords = <"waist", "hip">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

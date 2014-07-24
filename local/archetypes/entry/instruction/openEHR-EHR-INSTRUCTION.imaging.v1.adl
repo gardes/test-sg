@@ -19,7 +19,7 @@ description
 			use = <"For clinicians to order diagnostic imaging services for a person and record this request in the EHR.">
 			keywords = <"Xray", "ultrasound", "scan", "MRI", "CT", "CAT", "nuclear">
 			misuse = <"Not for recording findings - Use openEHR-EHR-OBSERVATION.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

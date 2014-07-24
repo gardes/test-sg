@@ -25,7 +25,7 @@ Specimen slots are available in a number of positions to reflect the variation i
 			keywords = <"lab", "pathology", "laboratory", "histopathology", "anatomic pathology", "surgical pathology">
 			misuse = <"Do not use for standard itemised value-driven lab tests such as haematology and biochemistry- use OBSERVATION.lab_test.
 Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

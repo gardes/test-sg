@@ -39,7 +39,7 @@ description
 			use = <"Zur Dokumentation beliebiger früherer oder aktueller Diagnosen - also zur Dokumentation des früheren Verlaufs oder der aktuellen Diagnosen. Kann zur Dokumentation der Diagnosen wechselnder Patienten genutzt werden, also zur Familienanamnese.">
 			keywords = <"früher", "Verlauf", "Familie", "Historie", "Zustand">
 			misuse = <"Für histologische Diagnosen  'openEHR-EHR-EVALUATION.problem-diagnosis-histological' benutzen.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -49,7 +49,7 @@ Requer entrada codificada do diagnóstico.">
 Usado com mudou 'Assunto de cuidado' para gravação de diagnósticos em parentes e assim para a histórico famíliar.">
 			keywords = <"*past(en)", "*history(en)", "*family(en)", "*history(en)", "*condition(en)">
 			misuse = <"Use 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' para diagnosticos histológicos.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -57,7 +57,7 @@ Usado com mudou 'Assunto de cuidado' para gravação de diagnósticos em parente
 			use = <"Used for recording any diagnosis, present or past - so is used for recording past history as well as current diagnoses. Used with changed 'Subject of care' for recording diagnoses in relatives and so for family history.">
 			keywords = <"past", "history", "family", "history", "condition">
 			misuse = <"Use 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' for histological diagnoses.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

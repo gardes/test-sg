@@ -18,7 +18,6 @@ description
 			use = <"To record details of a Tympanic Ventilation tube as part of an inspection of the tympanic membrane.">
 			keywords = <"ENT", "tympanic", "ventilation", "tube", "grommet", "hearing">
 			misuse = <"Not currently suitable for recording the insertion of a tube as part of an operative procedure.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

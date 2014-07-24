@@ -28,7 +28,7 @@ description
 			use = <"*">
 			keywords = <"Sauerstoff", "Behandlung mit Sauerstoff", "Pulsoxymeter", "Pulsoxymetrie">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -46,7 +46,7 @@ Waveforms should be recorded here when used to document quality of the blood gas
 			misuse = <"Any blood gas measurement that involves direct contact with blood, and measuring PaO2, PaCO2 should not be recorded using this archetype - Use OBSERVATION.lab_test-blood_gases archetype. New direct blood gas measurements should be added to OBSERVATION.lab_test-blood_gases.v1.
 
 NOT to be used to record direct blood gas measurement e.g arterial (SaO2), venous (SvO2) oxygen saturation or Oxygen content (CaOC) usually determined by invasive methods e.g. lab blood gases or vascular catheter devices. These should be recorded within the OBSERVATION.lab_test-blood_gases archetype.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"Published">

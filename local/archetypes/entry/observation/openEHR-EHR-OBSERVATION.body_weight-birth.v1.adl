@@ -43,7 +43,7 @@ description
 			use = <"Messung des Gewichts zum Zeitpunkt der Geburt ohne Kleidung">
 			keywords = <"Neugeborenes", "Geburt">
 			misuse = <"Nur für das Geburtsgewicht - für alle anderen Messungen ist OBSERVATION.weight zu benutzen ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -55,7 +55,7 @@ description
 
 
 ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -63,7 +63,7 @@ description
 			use = <"Naked birth weight measurement.">
 			keywords = <"neonate", "birth", "weight">
 			misuse = <"Only for weight at birth - use OBSERVATION.weight for all other measurements.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -72,7 +72,7 @@ description
 			use = <"Измерение БЕЗ одежды, пеленок и памперсов.">
 			keywords = <"новорожденный", "рождение">
 			misuse = <"Только для веса при рождении. Для других измерений использовать observation.body_weight.v1">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

@@ -36,7 +36,7 @@ description
 			use = <"">
 			keywords = <"Atmung", "Respiration">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -50,7 +50,7 @@ Respirations should be measured before feeds in neonates and young infants.">
 			misuse = <"Not to be used to try to record other aspects of the broader respiratory examination or assessment.  Other specific archetypes will be used to record characteristics such as respiratory effort, auscultatory findings etc.
 
 Not to be used to record details  when the subject is undergoing assisted ventilation.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -65,7 +65,7 @@ De ademhaling moet bij neonaten en jonge kinderen gemeten worden voor de voeding
 
 Niet te gebruiken voor de registratie van details, als de persoon beademing ondergaat.
 ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

@@ -28,7 +28,6 @@ description
 			use = <"*">
 			keywords = <"Einatmen", "Ausatmen", "Brustumfang", "Ausmaß">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,7 +35,6 @@ description
 			use = <"">
 			keywords = <"inspiration", "expiration", "chest expansion", "expansion">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

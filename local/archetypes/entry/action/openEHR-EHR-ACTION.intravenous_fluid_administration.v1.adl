@@ -27,7 +27,7 @@ description
 			use = <"">
 			keywords = <"intravenös", "Flüssigkeit", "Verabreichung">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,7 +35,7 @@ description
 			use = <"">
 			keywords = <"intravenous", "fluid", "administration">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

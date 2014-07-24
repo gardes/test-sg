@@ -28,7 +28,7 @@ description
 			use = <"">
 			keywords = <"Neugeborenes", "Entbindung", "Plazenta">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,7 +36,7 @@ description
 			use = <"">
 			keywords = <"infant", "delivery", "placenta">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

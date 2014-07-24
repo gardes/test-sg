@@ -19,7 +19,7 @@ description
 			use = <"">
 			keywords = <"Xray", "ultrasound", "MRI", "magnetic resonance", "CT", "scan", "tomography">
 			misuse = <"Not used for recording the findings of the investigation; use openEHR-EHR-OBSERVATION.imaging for the findings.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

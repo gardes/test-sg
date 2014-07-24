@@ -30,7 +30,7 @@ description
 			use = <"Zur Dokumentation der mechanischen Herzfrequenz ermittelt durch Abtasten oder ein geeignetes Gerät.">
 			keywords = <"Frequenz", "Rhythmus", "Charakteristik", "Puls">
 			misuse = <"Nicht zur Dokumentation des periphären Pulses.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -38,7 +38,7 @@ description
 			use = <"For recording mechanical rate of the heart as determined by palpation or suitable device.">
 			keywords = <"rate", "rhythm", "character", "pulse">
 			misuse = <"Not for recording peripheral pulses.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"Initial">

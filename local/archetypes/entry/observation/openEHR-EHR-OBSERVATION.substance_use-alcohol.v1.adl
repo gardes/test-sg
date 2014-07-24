@@ -22,7 +22,7 @@ description
 			keywords = <"substance", "addiction", "consumption", "use">
 			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary archetype.  
 Not to be used for recording use or consumption histories for substances other than alcohol.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"0">
