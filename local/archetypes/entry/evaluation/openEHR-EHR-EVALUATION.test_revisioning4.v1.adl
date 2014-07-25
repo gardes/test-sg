@@ -18,18 +18,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"deprecated">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["revision"] = <"1.1.2+u">
+		["revision"] = <"1.1.3">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"A7B0C7BCC9F6ECE1AC9FFF80EEC92D35">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"07f783da-a5fd-4f6d-9ebf-7f978ac7b435">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"bd71c8f4-09c6-40a1-be6e-f0b61dd62807">
+		["instance_id"] = <"5aa567ac-100b-4b74-80f6-90886f27fd16">
 	>
 
 definition
