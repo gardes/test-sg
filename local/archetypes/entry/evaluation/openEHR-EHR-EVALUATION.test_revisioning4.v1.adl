@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=d4107ab9-fbd3-4b2a-914c-75d8b585b4b7)
-	openEHR-EHR-EVALUATION.test_revisioning4.v0
+	openEHR-EHR-EVALUATION.test_revisioning4.v1
 
 concept
 	[at0000]	-- Test revisioning 4
@@ -18,18 +18,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"1.0.0">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"3709BB64DF53B69BB09F96F1B3B2195E">
+		["MD5-CAM-1.0.1"] = <"B778B7EBB83CC7DD2EC88085E5C93C5A">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"07f783da-a5fd-4f6d-9ebf-7f978ac7b435">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"3c4e6fa8-dd17-416f-bb3c-d8ef98305973">
+		["instance_id"] = <"37710526-8658-4e15-befb-b7a8b8d67a0a">
 	>
 
 definition
