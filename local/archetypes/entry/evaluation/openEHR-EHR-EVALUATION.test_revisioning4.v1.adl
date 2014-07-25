@@ -15,16 +15,21 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundationzzz">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"deprecated">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"1.0.2+u">
-		["MD5-CAM-1.0.1"] = <"A7B0C7BCC9F6ECE1AC9FFF80EEC92D35">
+		["revision"] = <"1.0.3">
+		["licence"] = <"CC SA BY">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B778B7EBB83CC7DD2EC88085E5C93C5A">
+		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"07f783da-a5fd-4f6d-9ebf-7f978ac7b435">
-		["instance_id"] = <"1eefe420-559b-47a5-968f-cadc56c4e855">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"2c06d2c7-82dd-439e-9987-39132448d703">
 	>
 
 definition
@@ -93,7 +98,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"New element2BLA2 TEST REASSESS">
+					text = <"New element2BLA2">
 					description = <"*">
 				>
 				["at0003"] = <
