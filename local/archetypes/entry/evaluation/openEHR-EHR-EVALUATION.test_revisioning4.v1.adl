@@ -1,0 +1,126 @@
+﻿archetype (adl_version=1.4; uid=d4107ab9-fbd3-4b2a-914c-75d8b585b4b7)
+	openEHR-EHR-EVALUATION.test_revisioning4.v1
+
+concept
+	[at0000]	-- Test revisioning 4
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"1.0.2">
+		["licence"] = <"CC SA BY">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B778B7EBB83CC7DD2EC88085E5C93C5A">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["provenance_id"] = <"07f783da-a5fd-4f6d-9ebf-7f978ac7b435">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"e7386ae6-32bc-4242-8869-86c3f349ec34">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Ewewewew22222
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::335]>
+								list = <
+									["1"] = <
+										units = <"% body">
+									>
+									["2"] = <
+										units = <"% trunk">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							DV_DURATION matches {
+								value matches {|PT0S..PT10S|}
+							}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::381]>
+								list = <
+									["1"] = <
+										units = <"Eq">
+										magnitude = <|<=10.0|>
+										precision = <|2..3|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- New element
+						value matches {
+							1|[local::at0006], 	-- 1
+							2|[local::at0007]  	-- 2
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test revisioning 4">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"New element2BLA2">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"New elementsasabss">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"New elemen6zr7t7uut">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"New element">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"1">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"2">
+					description = <"*">
+				>
+			>
+		>
+	>
