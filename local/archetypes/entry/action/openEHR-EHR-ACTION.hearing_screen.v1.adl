@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=2a79082c-dd65-4a91-8270-6706b38bdafb)
-	openEHR-EHR-ACTION.hearing_screen.v0
+	openEHR-EHR-ACTION.hearing_screen.v1
 
 concept
 	[at0000]	-- Hearing Screening Action - ?generic screening testing?
@@ -21,19 +21,19 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"rejected">
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"0.0.2">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"08C3525D1E3E636AEEE33BDA4B94CCF8">
+		["MD5-CAM-1.0.1"] = <"96AF695503766EA8A973454B626B521A">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"27a274db-3262-4686-92ce-58e7b4d9488f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"64de3b10-cd44-4c90-88ab-82708fea1b42">
+		["instance_id"] = <"d5533334-1c10-434e-827e-d59db416e475">
 	>
 
 definition
