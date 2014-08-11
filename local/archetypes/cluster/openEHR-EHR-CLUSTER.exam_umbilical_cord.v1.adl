@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=c9a9faba-505f-44be-a69f-2cd5f3fa15f4)
-	openEHR-EHR-CLUSTER.exam_umbilical_cord.v0
+	openEHR-EHR-CLUSTER.exam_umbilical_cord.v1
 
 concept
 	[at0000]	-- Examination of Umbilical Cord
@@ -22,19 +22,19 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"rejected">
 	other_contributors = <"Ricardo Cruz-Correia", "Zilma Silveira Nogueira Reis">
 	other_details = <
 		["current_contact"] = <", , ">
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"0.0.2">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"359E70B3DA21BB1054932149CB685405">
+		["MD5-CAM-1.0.1"] = <"CEB7C9844A49B0ABA84A08DA4493A7FD">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"3b7cb93c-cba8-4e18-b990-692490c64403">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"c56d6124-2fd3-4ef5-b61c-b0cb12273cfb">
+		["instance_id"] = <"47b16b4b-abe8-47ff-a4cd-d5da2f9e75e6">
 	>
 
 definition
