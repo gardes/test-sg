@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=e955320c-7b98-4bad-8e3b-4c17f646a963)
 	openEHR-EHR-OBSERVATION.anthropometry_zn.v1
 
 concept
@@ -10,7 +10,7 @@ language
 			language = <[ISO_639-1::sl]>
 			author = <
 				["name"] = <"mag. Biljana Prinčič">
-				["organisation"] = <"Marand d.o.o., Ljubljana, Slovenija">
+				["organisation"] = <"Marand d.o.o., Ljubljana, Slovenija678">
 				["email"] = <"biljana.princic@marand.si">
 			>
 		>
@@ -45,10 +45,18 @@ Use OBSERVATION.height-sitting.v1 to record sitting height.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"development">
 	other_contributors = <"Uroš Rajkovič, Faculty of Organizational Sciences, University of Maribor, Slovenia", "Biljana Prinčič, Marand d.o.o., Slovenia">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"719B2E15BC717D077F482E009F909397">
+		["licence"] = <"CC SA BY">
+		["revision"] = <"1.0.0-u">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"302A1BADADD8CCA9C6E5374E0349B3ED">
+		["provenance_id"] = <"0c1d7bad-5b84-46ba-86c8-d6af152731c8">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"24784886-87be-4fe8-bb7c-35aacb6e5ec6">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
