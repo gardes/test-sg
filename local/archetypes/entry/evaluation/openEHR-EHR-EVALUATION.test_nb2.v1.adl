@@ -33,10 +33,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"1.0.0+u">
+		["revision"] = <"1.0.1">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
@@ -44,7 +44,7 @@ description
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"74d4e634-8d73-4132-99f4-3f6d5476274f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"40f77a4e-04ed-479a-a3db-484a2c8c9af6">
+		["instance_id"] = <"213f8fc5-e684-4fc4-89af-f77db7f48a4f">
 	>
 
 definition
