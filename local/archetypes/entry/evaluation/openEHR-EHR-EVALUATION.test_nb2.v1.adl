@@ -33,18 +33,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"1.0.0">
+		["revision"] = <"1.0.0+u">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"ADA03C43AB93A63AF11A3AF88AE43A12">
+		["MD5-CAM-1.0.1"] = <"1D0C7482055EAA88479B9F5DF60A28AE">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"74d4e634-8d73-4132-99f4-3f6d5476274f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"818c16a6-5d77-4796-9acf-12c53ef09b62">
+		["instance_id"] = <"4ac7f244-0a7d-4fe9-8bb6-d8e0f61df53a">
 	>
 
 definition
@@ -54,7 +54,7 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element in NB
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_COUNT matches {*}
 						}
 					}
 				}
