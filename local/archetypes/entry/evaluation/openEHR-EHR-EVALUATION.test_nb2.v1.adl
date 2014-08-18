@@ -40,11 +40,11 @@ description
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"1D0C7482055EAA88479B9F5DF60A28AE">
+		["MD5-CAM-1.0.1"] = <"ADA03C43AB93A63AF11A3AF88AE43A12">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"74d4e634-8d73-4132-99f4-3f6d5476274f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"8fdde1ef-a33d-4941-9753-4d4bd7077e68">
+		["instance_id"] = <"40f77a4e-04ed-479a-a3db-484a2c8c9af6">
 	>
 
 definition
@@ -54,7 +54,7 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element in NB
 						value matches {
-							DV_COUNT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
