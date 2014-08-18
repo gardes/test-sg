@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=9815f00b-9169-4b4f-826e-924e8261b9b3)
-	openEHR-EHR-EVALUATION.test_nb2.v0
+	openEHR-EHR-EVALUATION.test_nb2.v1
 
 concept
 	[at0000]	-- Test nb two
@@ -33,18 +33,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"1.0.0">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"288652187CDA8A6648ACC2ED48411936">
+		["MD5-CAM-1.0.1"] = <"ADA03C43AB93A63AF11A3AF88AE43A12">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"74d4e634-8d73-4132-99f4-3f6d5476274f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"79b43870-1a33-4aaf-8353-22482c3b7db3">
+		["instance_id"] = <"818c16a6-5d77-4796-9acf-12c53ef09b62">
 	>
 
 definition
