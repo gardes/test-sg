@@ -20,7 +20,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"test NB">
+			purpose = <"test NB teeesr">
 			use = <"test NB">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -40,11 +40,11 @@ description
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"25A50D25749D08DB9057CC871A87B09A">
+		["MD5-CAM-1.0.1"] = <"288652187CDA8A6648ACC2ED48411936">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"74d4e634-8d73-4132-99f4-3f6d5476274f">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"674e52c7-1a14-4e96-811f-9d470880d7fa">
+		["instance_id"] = <"79b43870-1a33-4aaf-8353-22482c3b7db3">
 	>
 
 definition
@@ -54,13 +54,14 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element in NB
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 
 
@@ -77,7 +78,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"New element in EN">
+					text = <"New element in EN new">
 					description = <"*">
 				>
 			>
