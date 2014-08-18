@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=3a649684-02fa-4596-9970-8ad30df7b011)
 	openEHR-EHR-EVALUATION.alert.v1
 
 concept
@@ -22,10 +22,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Published">
+	lifecycle_state = <"published">
 	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'Egan", "Don Stewart", "Stephen Royce">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"E401AF6DF07813EDADC6E6E3B8FCC396">
+		["licence"] = <"CC SA BY">
+		["revision"] = <"1.0.0">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"0135B0518CD9EE4E47184E8956853D9E">
+		["provenance_id"] = <"7123075b-4779-4962-837d-ce5834353a54">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"831332e7-5687-4778-b6ff-29e4c8400e00">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
