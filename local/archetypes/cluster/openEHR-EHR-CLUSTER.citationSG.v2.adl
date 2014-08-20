@@ -20,7 +20,7 @@ description
 This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.">
 			keywords = <"citation", "reference">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"development">
@@ -28,15 +28,10 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK <ian.mcnicoll@oceaninformatics.com>">
 		["revision"] = <"2.0.0-u">
-		["licence"] = <"CC SA BY">
 		["references"] = <"">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"38C78094B3B6EDC2E261C5B20625D547">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"6effaf30-d959-4d31-ad6b-2d2e8f378ab3">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"fd87ec7f-1ad0-4cb6-908c-1a4596baf536">
+		["instance_id"] = <"b288767a-4b4b-421f-acd8-acbc57e22b20">
 	>
 
 definition
