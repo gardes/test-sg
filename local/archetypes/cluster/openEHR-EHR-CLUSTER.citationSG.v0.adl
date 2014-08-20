@@ -9,7 +9,7 @@ description
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
-		["email"] = <"Sam Heard <sam.heard@oceaninformatics.com>">
+		["email"] = <"Sam Heard">
 		["date"] = <"18/06/2010">
 	>
 	details = <
@@ -20,18 +20,23 @@ description
 This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.">
 			keywords = <"citation", "reference">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK <ian.mcnicoll@oceaninformatics.com>">
+		["licence"] = <"CC SA BY">
 		["revision"] = <"0.0.1+u">
 		["references"] = <"">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"70D01F2311D12E8EBAFACADDC560083B">
+		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"dca51c45-8c6f-48c7-a64c-23902392ed11">
-		["instance_id"] = <"87e2b220-d203-4aa3-a198-e08e794ff9b2">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"ed671a28-0ad7-4815-8c8b-5a778d109bd2">
 	>
 
 definition
