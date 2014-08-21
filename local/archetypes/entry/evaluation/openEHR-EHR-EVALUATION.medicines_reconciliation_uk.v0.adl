@@ -8,15 +8,15 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics UK">
-		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"freshEHR Clinial Informatics">
+		["email"] = <"ian@freshehr.com">
 		["date"] = <"2014-03-15">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the result of a medicines reconciliation process for a single medication Entry.">
-			use = <"">
+			use = <"Use to record ddtional data captured during the process of medicines reconciliation.">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -28,11 +28,11 @@ description
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"66DA1EE5B08E80503C3C1BAD877A2702">
+		["MD5-CAM-1.0.1"] = <"AFD8AF4DCBA0C0294CCAE62D055948B6">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"7c778164-0564-404f-87b9-42c0d425ded3">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"b0eb43f0-36bb-4098-955d-5a3eb0af549e">
+		["instance_id"] = <"7c1d7703-fcbd-45c1-b4f4-70efcac3bb39">
 	>
 
 definition
@@ -137,13 +137,14 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"Medicine reconciliation">
-					description = <"The results of reconciliation of a single medication entry. ">
+					description = <"The results of reconciliation of a single medication entry.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -175,43 +176,43 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Withhold until">
-					description = <"The duration of suspension of the medication, as a specific period of time or as an expressed condition such as \"Suspend until 3 days post-op.\"">
+					description = <"The duration of suspension of the medication, as a specific period of time or as an expressed condition such as \"Suspend until 3 days post-op.\".">
 				>
 				["at0014"] = <
 					text = <"Disrcepancy intentional?">
-					description = <"*">
+					description = <"Is the discrepancy was a result of a deliberate decision.">
 				>
 				["at0016"] = <
 					text = <"Intentional">
-					description = <"*">
+					description = <"The discrepancy was the result of a deliberate decision.">
 				>
 				["at0017"] = <
 					text = <"Unintentional">
-					description = <"*">
+					description = <"The discrepancy was not result of a deliberate decision.">
 				>
 				["at0019"] = <
 					text = <"Change medication">
-					description = <"*">
+					description = <"The medication was changed, generally a dose change.">
 				>
 				["at0020"] = <
 					text = <"Stop medication">
-					description = <"*">
+					description = <"The medication was stopped.">
 				>
 				["at0021"] = <
 					text = <"Withhold medication">
-					description = <"*">
+					description = <"The medication has been temprarily withheld.">
 				>
 				["at0023"] = <
 					text = <"Add medication">
-					description = <"*">
+					description = <"A new medication has been added.">
 				>
 				["at0024"] = <
 					text = <"Discrepancy identified">
-					description = <"*">
+					description = <"A discrepancy has been identified between the recorded medication and the reconciled medication.">
 				>
 				["at0025"] = <
 					text = <"Reconciliation detail">
-					description = <"*">
+					description = <"Details of the reconciliation process.">
 				>
 				["at0026"] = <
 					text = <"Source of information">
@@ -223,15 +224,15 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Target medication record updated?">
-					description = <"*">
+					description = <"The target medication has neen updated.">
 				>
 				["at0029"] = <
 					text = <"Link to target medication entry">
-					description = <"*">
+					description = <"A link to the traget medication.">
 				>
 				["at0030"] = <
 					text = <"Discrepancy identified">
-					description = <"*">
+					description = <"A diseprancy has been identified.">
 				>
 			>
 		>
