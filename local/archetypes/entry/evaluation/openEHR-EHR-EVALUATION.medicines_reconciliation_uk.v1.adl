@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=6213dce5-6884-4f15-918b-2e3daaf8fcb1)
-	openEHR-EHR-EVALUATION.medicines_reconciliation_uk.v0
+﻿archetype (adl_version=1.4; uid=91d62bbf-643e-4c42-a7fd-836e3120b6ee)
+	openEHR-EHR-EVALUATION.medicines_reconciliation_uk.v1
 
 concept
 	[at0000]	-- Medicine reconciliation
@@ -21,18 +21,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"1.0.0">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AFD8AF4DCBA0C0294CCAE62D055948B6">
+		["MD5-CAM-1.0.1"] = <"E26FF08E4D7A0F80640DABEEE1B686EE">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"7c778164-0564-404f-87b9-42c0d425ded3">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"7c1d7703-fcbd-45c1-b4f4-70efcac3bb39">
+		["instance_id"] = <"9ce7b1a6-9054-4aef-8c35-db2f4243c561">
 	>
 
 definition
