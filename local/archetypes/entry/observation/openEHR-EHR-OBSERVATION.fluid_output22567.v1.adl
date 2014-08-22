@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=0379a5e7-d1e3-452a-94ca-ee4908151d39)
-	openEHR-EHR-OBSERVATION.fluid_output2256.v1
+﻿archetype (adl_version=1.4; uid=3214d86b-00f9-4479-81ef-880ecdf5c2a9)
+	openEHR-EHR-OBSERVATION.fluid_output22567.v1
 
 concept
 	[at0000]	-- Fluid Output
@@ -56,11 +56,11 @@ May also be used to record descriptive assessments of input.
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AD7E7FD833C648730F39E5B2C1CE605A">
+		["MD5-CAM-1.0.1"] = <"F59962E7A75A889B81916F208804936A">
 		["provenance_id"] = <"141a4f45-c9ff-46d2-8c91-5bcbac98b6db">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"1ada028f-9939-46bd-8b30-fcd81159ed78">
+		["instance_id"] = <"1e941af5-53a5-45b8-a811-bca37c210fdd">
 	>
 
 definition
