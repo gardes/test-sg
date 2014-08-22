@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=cd61de4e-cb92-4fb6-8c91-4be6ea052f02)
-	openEHR-EHR-OBSERVATION.imaging2.v1
+﻿archetype (adl_version=1.4; uid=1a68b671-0995-4330-b0ad-cb4b71fd2bea)
+	openEHR-EHR-OBSERVATION.imaging222.v1
 
 concept
 	[at0000]	-- Imaging test
@@ -25,16 +25,16 @@ description
 	lifecycle_state = <"development">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
-		["licence"] = <"CC SA BY">
 		["revision"] = <"1.0.0-u">
+		["licence"] = <"CC SA BY">
 		["references"] = <"">
-		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"97282C0DD95F82F8B72CCED625DB438F">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"8E1E184ADB9C5E26AF42AE4374DA2CC1">
 		["provenance_id"] = <"a18e55df-0df4-444c-b6a5-4496a21d6ab3">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["instance_id"] = <"97924e38-af2e-43ac-adad-56ecbe5c4503">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"78b45c85-d400-4062-a073-891c246f4051">
 	>
 
 definition
@@ -88,7 +88,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
