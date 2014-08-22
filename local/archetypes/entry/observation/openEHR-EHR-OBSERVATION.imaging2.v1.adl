@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.imaging.v1
+﻿archetype (adl_version=1.4; uid=cd61de4e-cb92-4fb6-8c91-4be6ea052f02)
+	openEHR-EHR-OBSERVATION.imaging2.v1
 
 concept
 	[at0000]	-- Imaging test
@@ -19,14 +19,22 @@ description
 			use = <"">
 			keywords = <"Xray", "X-ray", "radiology", "scan", "ultrasound", "MRI", "CT", "CAT", "nuclear">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"development">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["revision"] = <"1.0.0-u">
 		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"A849E59155FED3EC7586362A2F1641D9">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"97282C0DD95F82F8B72CCED625DB438F">
+		["provenance_id"] = <"a18e55df-0df4-444c-b6a5-4496a21d6ab3">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"97924e38-af2e-43ac-adad-56ecbe5c4503">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
