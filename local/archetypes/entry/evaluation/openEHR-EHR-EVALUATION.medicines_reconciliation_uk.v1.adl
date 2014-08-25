@@ -21,18 +21,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"deprecated">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"1.0.0+u">
+		["revision"] = <"1.0.1">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"01D249539FDE34AD4A6B868877EB9998">
+		["MD5-CAM-1.0.1"] = <"E26FF08E4D7A0F80640DABEEE1B686EE">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["provenance_id"] = <"7c778164-0564-404f-87b9-42c0d425ded3">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"220077bd-01a4-4af1-a000-a95e37ad3712">
+		["instance_id"] = <"e6bbfd6d-66ae-434b-8402-6687a646ce65">
 	>
 
 definition
@@ -138,7 +138,6 @@ definition
 
 
 
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -217,7 +216,7 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Source of information">
-					description = <"information about the reconciled medication. Coded terms preferred.">
+					description = <"The source of information about the reconciled medication. Coded terms preferred.">
 				>
 				["at0027"] = <
 					text = <"Source contact details">
