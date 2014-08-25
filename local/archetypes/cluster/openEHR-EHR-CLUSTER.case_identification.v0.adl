@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.case_identification.v1
+﻿archetype (adl_version=1.4; uid=132f4c67-670a-46f3-8185-02f9b544573b)
+	openEHR-EHR-CLUSTER.case_identification.v0
 
 concept
 	[at0000]	-- Case Identification
@@ -18,16 +18,24 @@ description
 			purpose = <"To record details about the identification of a case.">
 			use = <"">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1+u">
 		["references"] = <"IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Available from: http://www.ihe.net/Technical_Framework/upload/ihe_lab_TF_rel2_1-Vol-3_FT_2008-08-08.pdf
 
 ">
-		["MD5-CAM-1.0.1"] = <"2FEB0E4952D5ADF9B30101F47D213876">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"8517CB03E31C784E057C08DBF8D32302">
+		["provenance_id"] = <"553e3855-c55f-4b9b-92a2-57da176b86eb">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"e12200d9-7be9-4509-af12-53dc188f0f81">
 	>
 
 definition
