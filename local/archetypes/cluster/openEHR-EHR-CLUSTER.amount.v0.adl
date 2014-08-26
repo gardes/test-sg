@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.amount.v1
+﻿archetype (adl_version=1.4; uid=8d3e67fa-0cc9-4bec-a2be-1c024b88d13f)
+	openEHR-EHR-CLUSTER.amount.v0
 
 concept
 	[at0000]	-- Amount of medication
@@ -22,10 +22,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"development">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"EA313FF140CFA79737DE9754048D9D9C">
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1+u">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"5D18439E202F45A847B548B9A23F1FE3">
+		["provenance_id"] = <"9277fe14-61f9-4b65-8d6a-02f6fb91fa49">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"3b73d422-e894-443c-b591-be6d458f0245">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
