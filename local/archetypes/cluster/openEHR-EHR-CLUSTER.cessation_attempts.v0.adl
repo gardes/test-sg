@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.cessation_attempts.v1
+﻿archetype (adl_version=1.4; uid=72c72065-b2d7-4e32-bd20-89c05483b510)
+	openEHR-EHR-CLUSTER.cessation_attempts.v0
 
 concept
 	[at0000]	-- Cessation attempts
@@ -22,11 +22,19 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1+u">
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Draft CLUSTER archetype: Cessation Attempts; [authored 2009 Jun 22, cited 2011 Aug 25]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.364_2.">
-		["MD5-CAM-1.0.1"] = <"0D3EB32A8DA29FFC98EE7ABEE6F7BE81">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"9A87A5C1BAECD452779D7900C85EAAEF">
+		["provenance_id"] = <"e796e0c7-a1fc-4102-9962-2c4dbefda951">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"cebc7e1d-d954-4472-9621-2b26453d888d">
 	>
 
 definition
