@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.amountssss.v1
+﻿archetype (adl_version=1.4; uid=e1854e90-5f73-4425-b800-b346aba537b9)
+	openEHR-EHR-CLUSTER.amountssss.v0
 
 concept
 	[at0000]	-- Amount of Medication
@@ -28,10 +28,18 @@ For a range of amount use the specialised class amount-range.
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"ApprovedCandidate">
+	lifecycle_state = <"development">
 	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Sam Heard, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"46CA78A0010453FFD9D537FFEE789344">
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1+u">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"778813CBF95B6FDFCCFFFEA34078ED6B">
+		["provenance_id"] = <"b59e616e-095f-49b5-8805-7aa173e8fefc">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"ca1a2ca6-440e-4f64-8965-2747c5b1fb97">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
@@ -57,6 +65,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
