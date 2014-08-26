@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.specimen.v1
+﻿archetype (adl_version=1.4; uid=d0db3c39-03a3-4507-87a6-a60d4854b9cb)
+	openEHR-EHR-CLUSTER.specimen.v0
 
 concept
 	[at0000]	-- Specimen
@@ -33,13 +33,21 @@ The specimen archetype does not cover the laboratory processes for handling and 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Candidate">
+	lifecycle_state = <"development">
 	other_contributors = <"Koray Atalag, University of Auckland, NZ", "Stephen Chu, NEHTA, Australia (Editor)", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1+u">
 		["references"] = <"Specimen, draft archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 27/01/2009. http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.331_8(accessed Jun 27, 2011).
 
 ANSI/HL7 2.6-2007: Chapter 7, HL7 v2.6 specifications - Final Standard. Health Level 7, Ann Arbour, Missouri.">
-		["MD5-CAM-1.0.1"] = <"67B1CE92FA4D592ABE080B661439C484">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"2E1F831D2EC1ACC533D8FCB0EAEB67EC">
+		["provenance_id"] = <"ed2e7bce-0436-4104-83ac-27b530230447">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["instance_id"] = <"e1417e03-52de-45c2-866d-2b688fd1948a">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
