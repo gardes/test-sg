@@ -11,16 +11,12 @@
     </details>
     <other_details>
       <item>
-        <key>MetaDataSet:NEHTA</key>
-        <value>Data to support import and export to and from NEHTA's eXist repository.</value>
+        <key>MetaDataSet:MetadataSet</key>
+        <value>Metadata set</value>
       </item>
       <item>
-        <key>Publication ID</key>
-        <value />
-      </item>
-      <item>
-        <key>Publication Version</key>
-        <value />
+        <key>Narrative</key>
+        <value>Useful additional narrative about this template</value>
       </item>
     </other_details>
   </description>
