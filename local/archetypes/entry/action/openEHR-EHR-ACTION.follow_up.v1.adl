@@ -22,9 +22,9 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["revision"] = <"1.0.0">
+		["revision"] = <"1.0.1">
 		["references"] = <"">
-		["build_id"] = <"509870f3-a53e-4eaf-bcc7-7ab48e46f554">
+		["build_id"] = <"8b4bdb73-6664-42c8-88db-9290f97fde7a">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"B5753CB6FB7C796B41A96E15815CB4C1">
@@ -202,7 +202,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
