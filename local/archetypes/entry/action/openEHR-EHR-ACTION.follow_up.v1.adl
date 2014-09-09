@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=92657168-ef54-42d9-bfd1-25c27d469422)
-	openEHR-EHR-ACTION.follow_up.v0
+﻿archetype (adl_version=1.4; uid=440e8ec9-01da-434b-9742-d32f7bc19487)
+	openEHR-EHR-ACTION.follow_up.v1
 
 concept
 	[at0000]	-- Follow up action
@@ -18,16 +18,16 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["revision"] = <"0.0.1-unstable">
+		["revision"] = <"1.0.0">
 		["references"] = <"">
-		["build_id"] = <"143733c1-4327-4998-a3e8-d9191b4bb358">
+		["build_id"] = <"509870f3-a53e-4eaf-bcc7-7ab48e46f554">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"D9AC8EA57CE370337A65AEE89194E1C1">
+		["MD5-CAM-1.0.1"] = <"B5753CB6FB7C796B41A96E15815CB4C1">
 		["provenance_id"] = <"6040b7fb-ba8b-43c5-8600-9448cfb16661">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
