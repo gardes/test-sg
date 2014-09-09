@@ -12,7 +12,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about an action taken as part of a follow up.">
+			purpose = <"To record details about an action taken as part of a follow up.eeeee">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -24,7 +24,7 @@ description
 		["licence"] = <"CC SA BY">
 		["revision"] = <"1.1.1-unstable">
 		["references"] = <"">
-		["build_id"] = <"47b2ab5f-c329-41e6-8c5b-e0c678f5bcfb">
+		["build_id"] = <"81c50a01-829d-412f-968e-c02a74acddc8">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"B5753CB6FB7C796B41A96E15815CB4C1">
