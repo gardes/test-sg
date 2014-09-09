@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=aae11cff-4f6b-44a2-8b42-4cb99004df8f)
-	openEHR-EHR-CLUSTER.symptoma.v2
+﻿archetype (adl_version=1.4; uid=83193341-b24e-43dc-aa05-6c32ec561a55)
+	openEHR-EHR-CLUSTER.symptoma.v1
 
 concept
 	[at0000]	-- Symptom
@@ -30,15 +30,15 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 	other_contributors = <"Sam Heard, Ocean Informatics", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["revision"] = <"2.0.0-u">
+		["revision"] = <"1.0.0-u">
 		["licence"] = <"CC SA BY">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DA3F52CDAB95BFBCE96304854499ABF8">
-		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"ED8900FE4C90D0419009FDB0630FE64E">
 		["provenance_id"] = <"2d00b26a-2fc2-45a9-a95e-c13d831e8cbc">
+		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"d306ef4c-72a4-4b0c-8a0e-53b77f746349">
+		["instance_id"] = <"f302d386-eb88-4228-acf5-ba2942e1845e">
 	>
 
 definition
