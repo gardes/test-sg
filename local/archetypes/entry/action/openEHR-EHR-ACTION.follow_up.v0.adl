@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-ACTION.follow_up.v1
+﻿archetype (adl_version=1.4; uid=92657168-ef54-42d9-bfd1-25c27d469422)
+	openEHR-EHR-ACTION.follow_up.v0
 
 concept
 	[at0000]	-- Follow up action
@@ -15,13 +15,22 @@ description
 			purpose = <"To record details about an action taken as part of a follow up.">
 			use = <"">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unstable">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["revision"] = <"0.0.1-unstable">
 		["references"] = <"">
+		["build_id"] = <"143733c1-4327-4998-a3e8-d9191b4bb358">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"D9AC8EA57CE370337A65AEE89194E1C1">
+		["provenance_id"] = <"6040b7fb-ba8b-43c5-8600-9448cfb16661">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
