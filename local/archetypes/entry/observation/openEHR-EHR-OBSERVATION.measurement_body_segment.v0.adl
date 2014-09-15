@@ -1,0 +1,158 @@
+﻿archetype (adl_version=1.4; uid=e82201b8-bac7-407a-bb06-ccf804ce2263)
+	openEHR-EHR-OBSERVATION.measurement_body_segment.v0
+
+concept
+	[at0000]	-- Measurement of Body Segment
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"development">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"0.0.1+u">
+		["licence"] = <"CC SA BY">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F5253195B7A2FEA8A4E47FDFDE7BB3D5">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["provenance_id"] = <"7b78b348-21e0-41ad-a907-2f37bb8d74ab">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"8460fa57-e0b3-42d7-9335-b77012328bdd">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Measurement of Body Segment
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Specified Segment
+										name matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005, 	-- a
+													at0006, 	-- b
+													at0007, 	-- c
+													at0008, 	-- d
+													at0009]	-- e
+												}
+											}
+										}
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+														magnitude = <|>=0.0|>
+														precision = <|1|>
+													>
+													["2"] = <
+														units = <"mm">
+														magnitude = <|>=0.0|>
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Unspecified Segment
+										name matches {
+											DV_TEXT matches {*}
+										}
+										value matches {
+											C_DV_QUANTITY <
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+					INTERVAL_EVENT[at0011] occurrences matches {0..1} matches {	-- Any event
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[openehr::146]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Measurement of Body Segment">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Specified Segment">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"a">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"b">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"c">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"d">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"e">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Unspecified Segment">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+			>
+		>
+	>
