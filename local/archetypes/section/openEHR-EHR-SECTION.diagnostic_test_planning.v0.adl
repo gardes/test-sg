@@ -1,0 +1,106 @@
+﻿archetype (adl_version=1.4; uid=1751b522-cd9a-4509-b34d-e0415f8ce811)
+	openEHR-EHR-SECTION.diagnostic_test_planning.v0
+
+concept
+	[at0000]	-- Diagnostic test planning
+language
+	original_language = <[ISO_639-1::es]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Aitor Eguzkitza">
+		["organisation"] = <"Universidad Pública de Navarra - Complejo Hospitalario de Navarra">
+		["email"] = <"aitor.eguzkiza@unavarra.es">
+		["date"] = <"2014-05-26">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Gestionar el proceso de programación y preparación de las pruabas diagnósticas necesarias para determinar al diagnóstico de una enfermedad específica.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manage the process of scheduling and preparing diagnostic tests necessary to determine a diagnose for a specific disease.">
+			use = <"*(es)">
+			keywords = <"diagnostic tests", "instruction", "planning">
+			misuse = <"*(es)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"0.0.1-unstable">
+		["licence"] = <"CC SA BY">
+		["build_id"] = <"62c5e891-8bf9-493c-896b-468608ca8a13">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"4620B40E4230A66FC7C887F1E66F6184">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["provenance_id"] = <"f3e609fc-d660-4def-8cb4-a37d1bfa02aa">
+		["custodian_organisation"] = <"Ocean Informatics">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Diagnostic test planning
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype INSTRUCTION[at0001] occurrences matches {0..*} matches {	-- Solicitud de volante
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request-referral(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype INSTRUCTION[at0002] occurrences matches {0..*} matches {	-- Solicitud de examen imagenológico
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request-imaging_exam(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Diagnostic test planning">
+					description = <"Programa citas para cada paciente en las pruebas diagósticas necesarias para evaluar una enfermedad específica.">
+				>
+				["at0001"] = <
+					text = <"Solicitud de volante">
+					description = <"Solicitud para la prestación de un servicio especificado por otro proveedor de salud u organización.">
+				>
+				["at0002"] = <
+					text = <"Solicitud de examen imagenológico">
+					description = <"Solicitud genérica para programar un examen imagenológico.">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Diagnostic test planning">
+					description = <"Schedules each patient to perform the diagnostic tests necessary to assess a specific disease.">
+				>
+				["at0001"] = <
+					text = <"Referral request">
+					description = <"Request for provision of a specified service by another healthcare provider or organisation.">
+				>
+				["at0002"] = <
+					text = <"Imaging examination request">
+					description = <"Generic request for an imaging examination request.">
+				>
+			>
+		>
+	>
