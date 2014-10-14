@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>864872ae-2c3c-4d35-b011-0327d8e993bd</id>
+  <name>ODL Report Physical and Mental</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>collection of physical exercising activities, sleep logs, mood and stress levels</purpose>
+      <use>Report ODLs that are self-monitored by a patient</use>
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.odl.v1" concept_name="Odl">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.physical_exercises.v1" concept_name="Physical Activity" path="/content">
+      <Rule path="/data[at0001]/events[at0002]" name="Point-in-time event" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sleep.v1" concept_name="Sleep" path="/content">
+      <Rule path="/data[at0001]/events[at0002]" name="Point-in-time event" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.stress.v1" concept_name="Level of Stress" path="/content">
+      <Rule path="/data[at0001]/events[at0002]" name="Point-in-time event" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.mood.v1" concept_name="Level of Mood" path="/content">
+      <Rule path="/data[at0001]/events[at0002]" name="Point-in-time event" />
+    </Content>
+	<Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.odl.v1">
+    <digest id="MD5-CAM-1.0.1">4B76C79D5A6D951A1419A3D35186B6CD</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.physical_exercises.v1">
+    <digest id="MD5-CAM-1.0.1">0032BFED732A3689FB736AF9D6652604</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.stress.v1">
+    <digest id="MD5-CAM-1.0.1">0FAEB0CE08388CE3392D9E755A6CCA68</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.mood.v1">
+    <digest id="MD5-CAM-1.0.1">EE9D7C0DC8500B0659B465FBBCBA3042</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.sleep.v1">
+    <digest id="MD5-CAM-1.0.1">0DB33C173FF180BBC2797E454FEBDE09</digest>
+  </integrity_checks>
+</template>
