@@ -54,25 +54,25 @@ ontology
 				["at0000"] = <
 					text = <"Immunisations">
 					description = <"A section that groups together information about the immunisation history of the subject of care.">
-					detail_docref = <"sections/NEHTA-16638-Immunisations-Section.xml">
 					dc_id = <"16638">
+					detail_docref = <"sections/NEHTA-16638-Immunisations-Section.xml">
 					spec_id = <"137">
 				>
 				["at0001"] = <
 					text = <"Immunisation">
 					description = <"The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity and/or to counter the effects of an infectious organism or insult.">
 					comment = <"It is specifically used for the vaccine administration record and is intended to enable recording of the vaccine administered to the subject of care.">
-					detail_docref = <"data_groups/NEHTA-16210-Immunisation-Data_Group.xml">
 					dc_id = <"16210.137.1">
 					spec_id = <"97">
+					detail_docref = <"data_groups/NEHTA-16210-Immunisation-Data_Group.xml">
 				>
 				["at0002"] = <
 					text = <"Exclusion Statement - Immunisation">
 					description = <"Statements that positively assert that the patient has not received immunisations.">
 					comment = <"To make a positive assertion that the patient is not given certain vaccines.">
-					detail_docref = <"data_groups/NEHTA-16136-Exclusion_Statement_Immunisation-Data_Group.xml">
 					dc_id = <"16136.137.1">
 					spec_id = <"105">
+					detail_docref = <"data_groups/NEHTA-16136-Exclusion_Statement_Immunisation-Data_Group.xml">
 				>
 			>
 		>

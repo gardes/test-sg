@@ -73,9 +73,9 @@ ontology
 					text = <"Body Weight">
 					description = <"Details pertinent to the physical measurement of the weight (mass) of a subject of care's body.">
 					comment = <"The weight of a subject of care is a key observation used for dosage calculation for paediatric and chemotherapy prescriptions.">
-					detail_docref = <"data_groups/NEHTA-16124-Body_Weight-Data_Group.xml">
 					dc_id = <"16124">
 					spec_id = <"77">
+					detail_docref = <"data_groups/NEHTA-16124-Body_Weight-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -95,8 +95,8 @@ ontology
 					comment = <"Examples: 
   1. 73 kg
   2. 0.89 kg">
-					detail_docref = <"data_elements/NEHTA-16125-Body_Weight_Value-Data_Element.xml">
 					dc_id = <"16125">
+					detail_docref = <"data_elements/NEHTA-16125-Body_Weight_Value-Data_Element.xml">
 				>
 				["at0005"] = <
 					text = <"State of the Subject of Care">
@@ -107,18 +107,18 @@ Examples:
   1. Fully clothed.
   2. Subject of care agitated and restless.
   3. Standing without footwear.">
-					detail_docref = <"data_elements/NEHTA-16051-State_of_the_Subject_of_Care-Data_Element.xml">
-					dc_id = <"16051">
-					coding_preferred = <"true">
-					value_domain_name = <"State of the Subject of Care Values">
 					value_domain_dc_id = <"16051">
+					value_domain_name = <"State of the Subject of Care Values">
+					coding_preferred = <"true">
+					dc_id = <"16051">
+					detail_docref = <"data_elements/NEHTA-16051-State_of_the_Subject_of_Care-Data_Element.xml">
 				>
 				["at0006"] = <
 					text = <"Observation Note">
 					description = <"Additional comments relevant to the observation in question.">
 					comment = <"Used to provide additional information not included in or catered for by the Observation Result data elements.">
-					detail_docref = <"data_elements/NEHTA-15600-Observation_Note-Data_Element.xml">
 					dc_id = <"15600">
+					detail_docref = <"data_elements/NEHTA-15600-Observation_Note-Data_Element.xml">
 				>
 			>
 		>
