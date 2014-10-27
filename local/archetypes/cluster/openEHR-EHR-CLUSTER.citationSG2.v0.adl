@@ -1,0 +1,97 @@
+﻿archetype (adl_version=1.4; uid=9010b41c-471a-4bea-a0f9-6593f2f85bef)
+	openEHR-EHR-CLUSTER.citationSG2.v0
+
+concept
+	[at0000]	-- Citation SG2
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"Sam Heard">
+		["date"] = <"18/06/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.">
+			use = <"Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
+This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.">
+			keywords = <"citation", "reference">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"development">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
+	other_details = <
+		["licence"] = <"CC SA BY">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["instance_id"] = <"a6275511-509c-4cbb-a5dc-76c65dd4eeb5">
+		["references"] = <"">
+		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK <ian.mcnicoll@oceaninformatics.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"1A5837ACE3109B9345F7D1F4410027A6">
+		["provenance_id"] = <"dca51c45-8c6f-48c7-a64c-23902392ed11">
+		["revision"] = <"0.0.1+u">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Citation
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Citation
+				value matches {
+					DV_PARSABLE matches {*}
+					DV_MULTIMEDIA matches {
+						media_type matches {[openEHR::]}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- URI to original data
+				value matches {
+					DV_URI matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Citation SG2">
+					description = <"Reference to information held elsewhere, in the same EHR or external to the EHR.">
+				>
+				["at0001"] = <
+					text = <"Citation">
+					description = <"Representation of the citation.">
+				>
+				["at0002"] = <
+					text = <"URI to original data">
+					description = <"Link to the original data.">
+				>
+				["at0003"] = <
+					text = <"Comment">
+					description = <"Comment about the citation.">
+				>
+				["at0004"] = <
+					text = <"Description">
+					description = <"Description about the citation.">
+				>
+			>
+		>
+	>

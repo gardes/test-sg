@@ -1,0 +1,59 @@
+﻿archetype (adl_version=1.4; uid=46d6731d-1a74-440e-9c1c-e207c7c95aa0)
+	openEHR-EHR-CLUSTER.testslot.v0
+
+concept
+	[at0000]	-- Testslot
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"bbb">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"CC SA BY">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["build_id"] = <"fb5b6f8b-9a89-42f3-b5ae-3077aa3e2fc7">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"6BE8C08D70BE468B7FF7C95B06160AF2">
+		["provenance_id"] = <"803cdb6e-9313-4d5f-ba53-8a2a8cdfd0df">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Testslot
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype CLUSTER[at0001] occurrences matches {0..1} matches {	-- Cluster
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Testslot">
+					description = <"gh">
+				>
+				["at0001"] = <
+					text = <"Cluster">
+					description = <"*">
+				>
+			>
+		>
+	>
