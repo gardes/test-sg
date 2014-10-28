@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=ac50ddad-91f0-4d4d-a129-3acc9224e1ab)
+﻿archetype (adl_version=1.4; uid=64b1d53e-9a58-4bfc-b85b-fe0d53809dd3)
 	openEHR-EHR-EVALUATION.revisioning_example.v0
 
 concept
@@ -22,14 +22,14 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["revision"] = <"0.0.1-alpha">
-		["build_id"] = <"6b8a543d-1e5f-42d3-a3c6-c1668a9d49b8">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["build_id"] = <"28436f45-aaab-470f-9e25-9e8dab5e6c5b">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"08DF5729E85E6BA0C13469389099DFD5">
 		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"818CC7E0BAE9F53344A793627C8EA32F">
 		["provenance_id"] = <"2096cc95-defa-49a6-b213-16653611c100">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -83,7 +83,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
