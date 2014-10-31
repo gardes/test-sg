@@ -22,11 +22,11 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["build_id"] = <"70d5ed00-a0b1-4952-b7c3-662468349f27">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"openehr">
+		["build_id"] = <"12395921-a878-418b-afdf-21dd20cab114">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openehr">
+		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"71574E8AC12B1294361CC201D5629549">
 		["provenance_id"] = <"2096cc95-defa-49a6-b213-16653611c100">
 		["revision"] = <"0.0.1-alpha">
