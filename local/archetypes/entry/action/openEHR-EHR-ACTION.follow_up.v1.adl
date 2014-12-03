@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=440e8ec9-01da-434b-9742-d32f7bc19487)
 	openEHR-EHR-ACTION.follow_up.v1
 
 concept
@@ -12,16 +12,25 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record details about an action taken as part of a follow up.">
+			purpose = <"To record details about an action taken as part of a follow up.eeeee BLA">
 			use = <"">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unstable">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"CC SA BY">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"">
+		["build_id"] = <"ed4543ad-a94f-4287-8b4b-b99f3ae90e47">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B5753CB6FB7C796B41A96E15815CB4C1">
+		["provenance_id"] = <"6040b7fb-ba8b-43c5-8600-9448cfb16661">
+		["revision"] = <"1.1.3-unstable">
 	>
 
 definition
@@ -193,7 +202,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
