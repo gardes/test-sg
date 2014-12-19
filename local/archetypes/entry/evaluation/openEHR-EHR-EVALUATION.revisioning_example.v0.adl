@@ -12,7 +12,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To test revisioning.">
+			purpose = <"To test revisioning. minor change">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -24,6 +24,7 @@ description
 		["licence"] = <"CC SA BY">
 		["revision"] = <"0.0.1-alpha">
 		["build_id"] = <"6b8a543d-1e5f-42d3-a3c6-c1668a9d49b8">
+		["build_uid"] = <"da0bd0be-4e93-4f9f-9262-2a9ad71eda48">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"08DF5729E85E6BA0C13469389099DFD5">
@@ -83,6 +84,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
