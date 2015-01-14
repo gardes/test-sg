@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=cc16edcd-5eca-4738-8081-550cd6e9e44a)
 	openEHR-EHR-OBSERVATION.audiology_speech_test_result.v1
 
 concept
@@ -27,10 +27,11 @@ Not to be used to record audiology speech tests where the presentaton level is n
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["licence"] = <"CC SA BY">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Taylor B. Predicting Real World Hearing Aid Benefit with Speech Audiometry: An Evidence-Based Review; 2007 May 07 [cited 2013 Feb 08]. Available from: http://www.audiologyonline.com/articles/predicting-real-world-hearing-aid-946.
 
 Madel J, Flexer C. Pediatric Audiology: Diagnosis, Technology, and Management. Thieme Medical Publishers; 2008. Chapter 10, Evaluation of Speech Perception in Infants and Children, p89-105.
@@ -38,7 +39,14 @@ Madel J, Flexer C. Pediatric Audiology: Diagnosis, Technology, and Management. T
 Gordon-Salant S. Age-related differences in speech recognition performance as a function of test format and paradigm. Ear Hear. 1987 Oct;8(5):277-82. PubMed PMID: 3678641. 
 
 Nilsson M, Soli S D, Sullivan, J A. Development of the Hearing In Noise Test for the measurement of speech reception thresholds in quiet and in noise. Acoust. Soc. Am. 95, 1085 (1994), DOI:10.1121/1.408469.">
-		["MD5-CAM-1.0.1"] = <"80633422585899EAFE69AFFD7CD64515">
+		["build_id"] = <"ec6ab959-036e-4e38-87af-0041953d359d">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"EFF7B32F322622B1BE8A919DD35E32B1">
+		["provenance_id"] = <"37afd6ed-5bf7-4931-bd9d-1908bbe52972">
+		["revision"] = <"1.0.0">
 	>
 
 definition
