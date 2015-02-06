@@ -1,0 +1,259 @@
+﻿archetype (adl_version=1.4; uid=36f43437-04dc-46a1-9e12-54e53ce47def)
+	openEHR-EHR-EVALUATION.notification_uk.v0
+
+concept
+	[at0000]	-- Notification
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["cy-gb"] = <
+			language = <[ISO_639-1::cy-gb]>
+			author = <
+				["name"] = <"Gareth Morlais">
+				["email"] = <"melynmelyn@gmail.com">
+			>
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Pablo">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"HANDIHealth,UK">
+		["email"] = <"ian@handihealth.org">
+		["date"] = <"2015-01-24">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["cy-gb"] = <
+			language = <[ISO_639-1::cy-gb]>
+			purpose = <"*(en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*(en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"7E28CD2422E11860FBB02E2D3C39A8AB">
+		["build_uid"] = <"67ddccca-1284-41c8-b112-4888b1e8866f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Notification
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Patient name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- NHS number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Notification
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007, 	-- Attended
+									at0008, 	-- Contacted
+									at0009]	-- Lab result reported
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Notification sender
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Note
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Event Link
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Notification">
+					description = <"Generic notification event.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Notification">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"NHS number">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Note">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Patient name">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Event Link">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Attended">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Contacted">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Lab result reported">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Notification sender">
+					description = <"*">
+				>
+			>
+		>
+		["cy-gb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Neges">
+					description = <"*Generic notification event.(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Neges">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"Cyfeirnod Iechyd">
+					description = <"**(en)">
+				>
+				["at0004"] = <
+					text = <"Sylw">
+					description = <"ddddd">
+				>
+				["at0005"] = <
+					text = <"Enw'r claf">
+					description = <"**(en)">
+				>
+				["at0006"] = <
+					text = <"Dolen at ddigwyddiad">
+					description = <"**(en)">
+				>
+				["at0007"] = <
+					text = <"Wedi mynychu">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Wedi cysylltu">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Canlyniad labordy ar gael">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Canolfan gwybodaeth">
+					description = <"**(en)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Notification(en)">
+					description = <"*Generic notification event.(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Notification(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*NHS number(en)">
+					description = <"**(en)">
+				>
+				["at0004"] = <
+					text = <"*Note(en)">
+					description = <"**(en)">
+				>
+				["at0005"] = <
+					text = <"*Patient name(en)">
+					description = <"**(en)">
+				>
+				["at0006"] = <
+					text = <"*Event Link(en)">
+					description = <"**(en)">
+				>
+				["at0007"] = <
+					text = <"*Attended(en)">
+					description = <"**(en)">
+				>
+				["at0008"] = <
+					text = <"*Contacted(en)">
+					description = <"**(en)">
+				>
+				["at0009"] = <
+					text = <"*Lab result reported(en)">
+					description = <"**(en)">
+				>
+				["at0010"] = <
+					text = <"*Notification sender(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>
