@@ -112,8 +112,8 @@ ontology
 					text = <"Body Mass Index">
 					description = <"Details pertinent to the physical measurement of the Body Mass Index (BMI) of a person.">
 					comment = <"The height, together with the weight, of a subject of care enables derivation of Body Mass Index (BMI) which is a key observation that may be used for dosage calculation for certain medication prescription protocols, such as chemotherapy.">
-					spec_id = <"191">
 					detail_docref = <"data_groups/NEHTA-16856-Body_Mass_Index-Data_Group.xml">
+					spec_id = <"191">
 				>
 				["at0001"] = <
 					text = <"history">
@@ -130,8 +130,8 @@ ontology
 				["at0004"] = <
 					text = <"Body Mass Index">
 					description = <"Index describing ratio of weight to height.">
-					ref_range = <"true">
 					detail_docref = <"data_elements/NEHTA-16857-Body_Mass_Index-Data_Element.xml">
+					ref_range = <"true">
 				>
 				["at0005"] = <
 					text = <"Tree">
@@ -140,10 +140,10 @@ ontology
 				["at0006"] = <
 					text = <"Method">
 					description = <"The method of entering the Body Mass Index.">
-					value_domain_dc_id = <"16858">
-					value_domain_name = <"BMI Entry Method Values">
-					fsn = <"BMI Entry Method">
 					detail_docref = <"data_elements/NEHTA-16859-BMI_Entry_Method-Data_Element.xml">
+					fsn = <"BMI Entry Method">
+					value_domain_name = <"BMI Entry Method Values">
+					value_domain_dc_id = <"16858">
 				>
 				["at0007"] = <
 					text = <"Automatic entry">
@@ -158,14 +158,14 @@ ontology
 					description = <"The formula used to calculate the Body Mass Index.">
 					comment = <"Examples: 
   1. Body Mass Index is commonly calculated as weight (kg) / [height (m) squared].">
-					fsn = <"BMI Calculation Formula">
 					detail_docref = <"data_elements/NEHTA-16860-BMI_Calculation_Formula-Data_Element.xml">
+					fsn = <"BMI Calculation Formula">
 				>
 				["at0011"] = <
 					text = <"Comment">
 					description = <"Additional comments relevant to the observation.">
-					fsn = <"BMI Observation Note">
 					detail_docref = <"data_elements/NEHTA-15600-BMI_Observation_Note-Data_Element.xml">
+					fsn = <"BMI Observation Note">
 				>
 			>
 		>

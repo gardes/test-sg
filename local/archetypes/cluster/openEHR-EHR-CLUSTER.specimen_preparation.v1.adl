@@ -105,67 +105,67 @@ ontology
 				["at0000"] = <
 					text = <"Specimen Preparation">
 					description = <"To record details of laboratory specimen processing">
-					status = <"Draft">
+					detail_docref = <"data_groups/NEHTA-16174-Specimen_Preparation-Data_Group.xml">
 					dc_id = <"16174">
 					spec_id = <"106">
-					detail_docref = <"data_groups/NEHTA-16174-Specimen_Preparation-Data_Group.xml">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0071"] = <
 					text = <"Processing Step Type">
 					description = <"A DICOM compatible code describing a single processing step.">
-					status = <"Draft">
-					dc_id = <"16317">
 					detail_docref = <"data_elements/NEHTA-16317-Processing_Step_Type-Data_Element.xml">
+					dc_id = <"16317">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0072"] = <
 					text = <"DateTime of Processing Step">
 					description = <"The data and time that the processing step occured.">
-					status = <"Draft">
-					dc_id = <"16315">
 					detail_docref = <"data_elements/NEHTA-16315-DateTime_of_Processing_Step-Data_Element.xml">
+					dc_id = <"16315">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0073"] = <
 					text = <"Sampling Method">
 					description = <"The sampling method used. e.g dissection, block sampling">
-					status = <"Draft">
-					dc_id = <"16321">
 					detail_docref = <"data_elements/NEHTA-16321-Sampling_Method-Data_Element.xml">
+					dc_id = <"16321">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0074"] = <
 					text = <"Specimen Processing Type">
 					description = <"A physical process applied to the specimen e.g. block embedding">
-					status = <"Draft">
-					dc_id = <"16318">
 					detail_docref = <"data_elements/NEHTA-16318-Specimen_Processing_Type-Data_Element.xml">
+					dc_id = <"16318">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0075"] = <
 					text = <"Embedding Medium">
 					description = <"The medium within which the specimen is embedded e.g paraffin">
-					status = <"Draft">
-					dc_id = <"16323">
 					detail_docref = <"data_elements/NEHTA-16323-Embedding_Medium-Data_Element.xml">
+					dc_id = <"16323">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0076"] = <
 					text = <"Fixative">
 					description = <"The fixative used">
-					status = <"Draft">
-					dc_id = <"16324">
 					detail_docref = <"data_elements/NEHTA-16324-Fixative-Data_Element.xml">
+					dc_id = <"16324">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0077"] = <
 					text = <"Processing Step">
 					description = <"Used to support DICOM Supp 122 compatible specimen processing steps. Describes the single immediate processing step to go from parent to current specimen">
-					status = <"Draft">
-					dc_id = <"16314">
 					detail_docref = <"data_groups/NEHTA-16314-Processing_Step-Data_Group.xml">
+					dc_id = <"16314">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0078"] = <
 					text = <"Specimen collection">
@@ -194,34 +194,34 @@ ontology
 				["at0084"] = <
 					text = <"Staining Method">
 					description = <"Stain used for a microscopy slide.">
-					status = <"Draft">
-					dc_id = <"16322">
 					detail_docref = <"data_elements/NEHTA-16322-Staining_Method-Data_Element.xml">
+					dc_id = <"16322">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0085"] = <
 					text = <"Parent Specimen Identifier">
 					description = <"Unique identifier of the parent specimen, where the specimen is split into sub-samples.">
-					status = <"Draft">
-					dc_id = <"16187">
 					detail_docref = <"data_elements/NEHTA-16187-Parent_Specimen_Identifier-Data_Element.xml">
+					dc_id = <"16187">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0086"] = <
 					text = <"Specific Preparation">
 					description = <"Details of the specific preparation carried out during a single processing step.">
-					status = <"Draft">
-					dc_id = <"16320">
 					detail_docref = <"data_groups/NEHTA-16320-Specific_Preparation-Data_Group.xml">
+					dc_id = <"16320">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0087"] = <
 					text = <"Description">
 					description = <"A general description of the specimen prepartion.">
-					status = <"Draft">
-					dc_id = <"16319">
 					detail_docref = <"data_elements/NEHTA-16319-Description-Data_Element.xml">
+					dc_id = <"16319">
 					version = <"1.0">
+					status = <"Draft">
 				>
 			>
 		>
