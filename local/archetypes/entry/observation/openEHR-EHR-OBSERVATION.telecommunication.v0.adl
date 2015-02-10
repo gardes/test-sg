@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.telecommunication.v1
+﻿archetype (adl_version=1.4; uid=54feca53-6a7d-4184-a3ca-40c70c42ee9f)
+	openEHR-EHR-OBSERVATION.telecommunication.v0
 
 concept
 	[at0000]	-- Telecommunication Record
@@ -24,11 +24,17 @@ The record of interaction may take place over a specified interval of time.">
 			copyright = <"© National E-Health Transition Authority">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Fabian Schwarz, NT Health, Australia", "Gary Sinclair, NT DoH, Australia">
 	other_details = <
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"734C3E7875AD042679AA171B1AB01631">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"58DD8CE95A00F6EC0F914430F5FCDA8F">
+		["build_uid"] = <"68574867-437e-4895-98fc-16ef274482f4">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
