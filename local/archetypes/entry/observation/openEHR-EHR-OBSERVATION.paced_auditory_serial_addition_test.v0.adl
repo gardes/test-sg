@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1
+﻿archetype (adl_version=1.4; uid=cf2fa8b6-6d68-422c-b5de-8b01338dd9a3)
+	openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v0
 
 concept
 	[at0000]	-- Paced Auditory Serial Addition Test
@@ -44,13 +44,19 @@ Use the MSFC Manual for detailed administration instructions. Prior to the recor
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sebastian Bischoff, gfnmediber GmbH, Germany", "Martin Boeker, University Medical Center Freiburg, Germany", "Michael Braun, University Medical Center Freiburg, Germany (Editor)", "Sebastian Garde, Ocean Informatics, Germany", "Heather Leslie, Ocean Informatics, Australia", "Sebastian Mansow-Model, gfnmediber GmbH, Germany", "Catalina Martínez-Costa, Medical University of Graz, Austria", "Vyacheslav Mavrin, JSC Comsoft, Russia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Alexander U. Brandt, gfnmediber GmbH, Germany", "Susanne Walter, University Medical Center Freiburg, Germany">
 	other_details = <
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["references"] = <"Fischer JS, Jak AJ, Kniker JE, Rudick RA, Cutter G. Multiple Sclerosis Functional Composite (MSFC), Administration and Scoring Manual: National Multiple Sclerosis Society; 2001.
 Tombaugh TN. A comprehensive review of the Paced Auditory Serial Addition Test (PASAT). Arch Clin Neuropsychol 2006;21(1):53–76.">
 		["current_contact"] = <"Michael Braun, University Medical Center Freiburg, Germany, braun@imbi.uni-freiburg.de">
-		["MD5-CAM-1.0.1"] = <"4A376958A6434A49CA40592071FC7E2D">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"04DF305CE9517A8765B260FA1ACB8D1C">
+		["build_uid"] = <"1cf35334-e4c3-4af1-ba4c-bcef853fd045">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
