@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.waterlow_score.v1
+﻿archetype (adl_version=1.4; uid=dc7f4cc4-51c8-4f5c-9628-201157b52fa2)
+	openEHR-EHR-OBSERVATION.waterlow_score.v0
 
 concept
 	[at0000]	-- Waterlow score
@@ -26,14 +26,20 @@ Some centres expect only a total to be recorded for a whole category in which ca
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["references"] = <"The Waterlow Score [Internet];[cited 2011 Aug 1] Available from: http://www.judy-waterlow.co.uk/waterlow_score.htm
 The Waterlow Score Card [Internet];[cited 2011 Aug 1] Available from: http://www.judy-waterlow.co.uk/downloads/Waterlow%20Score%20Card-front.pdf
 Ferguson ML, Bauer J, Gallagher B,Capra S, Christie DRH, Mason BR. Validation of a malnutrition screening tool for patients receiving radiotherapy. Australasian Radiology. 1999;43:325–327">
 		["current_contact"] = <"Dr Ian McNicoll, Ocean Informatics, United Kingdom, ian.mcnicoll@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"5648B8340272B1AC66E333AEFDA11A94">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A4B7FECB7814A3BD7D6D66C0528A0689">
+		["build_uid"] = <"3d605ffd-0087-422a-98a0-a96afb7d560a">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
