@@ -145,131 +145,131 @@ ontology
 				["at0000"] = <
 					text = <"Requested Service">
 					description = <"Describes the types of service requested for, or provided to, the subject of care.">
-					status = <"ReleaseForComment">
+					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
 					dc_id = <"20158">
 					spec_id = <"37">
-					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0001"] = <
 					text = <"Reason for Service">
 					description = <"Describes a clinical reason for a service being requested or received.">
-					status = <"ReleaseForComment">
-					dc_id = <"20172">
 					detail_docref = <"data_elements/NEHTA-20172-Reason_for_Service-Data_Element.xml">
+					dc_id = <"20172">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0002"] = <
 					text = <"Requested Service Description">
 					description = <"Describes the service arranged for, or provided to the patient.">
-					status = <"ReleaseForComment">
-					dc_id = <"20117">
 					detail_docref = <"data_elements/NEHTA-20117-Requested_Service_Description-Data_Element.xml">
+					dc_id = <"20117">
 					version = <"2.0">
+					status = <"ReleaseForComment">
 				>
 				["at0003"] = <
 					text = <"Intent of Request">
 					description = <"*">
-					status = <"ReleaseForComment">
-					dc_id = <"16126">
 					detail_docref = <"data_elements/NEHTA-16126-Intent_of_Request-Data_Element.xml">
+					dc_id = <"16126">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0004"] = <
 					text = <"Request Urgency">
 					description = <"*">
-					status = <"ReleaseForComment">
-					dc_id = <"16128">
 					detail_docref = <"data_elements/NEHTA-16128-Request_Urgency-Data_Element.xml">
+					dc_id = <"16128">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0005"] = <
 					text = <"DateTime Service Scheduled">
 					description = <"The datetime at which the arranged service is scheduled to be provided to the subject of care (patient).">
-					status = <"ReleaseForComment">
-					dc_id = <"16054">
 					detail_docref = <"data_elements/NEHTA-16054-DateTime_Service_Scheduled-Data_Element.xml">
+					dc_id = <"16054">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0006"] = <
 					text = <"Service Commencement Window">
 					description = <"The datetime or date range at/during which the arranged service is scheduled to be provided to the subject of care (patient).">
-					status = <"ReleaseForComment">
-					dc_id = <"20173">
 					detail_docref = <"data_elements/NEHTA-20173-Service_Commencement_Window-Data_Element.xml">
+					dc_id = <"20173">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0007"] = <
 					text = <"Service Booking Status">
 					description = <"An indication of the booking status of the arranged service.">
-					status = <"ReleaseForComment">
-					dc_id = <"16056">
 					detail_docref = <"data_elements/NEHTA-16056-Service_Booking_Status-Data_Element.xml">
+					dc_id = <"16056">
 					version = <"2.1">
+					status = <"ReleaseForComment">
 				>
 				["at0008"] = <
 					text = <"Supplementary Information to Follow">
 					description = <"An flag indicating whether or not there will be any further information sent in support of this request.  True indicates that additional information has been identified and will be forwarded when available eg incomplete pathology test results.">
-					status = <"ReleaseForComment">
-					dc_id = <"16129">
 					detail_docref = <"data_elements/NEHTA-16129-Supplementary_Information_to_Follow-Data_Element.xml">
+					dc_id = <"16129">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0009"] = <
 					text = <"Supplementary Information Expected">
 					description = <"Details of the nature of supplementary information that is to follow e.g name of laboratory results.">
-					status = <"ReleaseForComment">
-					dc_id = <"16130">
 					detail_docref = <"data_elements/NEHTA-16130-Supplementary_Information_Expected-Data_Element.xml">
+					dc_id = <"16130">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0010"] = <
 					text = <"Subject of Care Instruction Description">
 					description = <"Describes the instructions/advice and information that have been given to the subject of care from a healthcare provider in relation to the requested service.">
-					status = <"ReleaseForComment">
-					dc_id = <"10146">
 					detail_docref = <"data_elements/NEHTA-10146-Subject_of_Care_Instruction_Description-Data_Element.xml">
+					dc_id = <"10146">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0011"] = <
 					text = <"Protocol">
 					description = <"Information that is not critical to but may add value to the interpretation of a measurement.">
-					status = <"ReleaseForComment">
-					dc_id = <"16131">
 					detail_docref = <"data_groups/NEHTA-16131-Protocol-Data_Group.xml">
+					dc_id = <"16131">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0012"] = <
 					text = <"Distribution List">
 					description = <"The requester (individual or organisation) that has arranged the provision of the service.">
-					status = <"ReleaseForComment">
-					dc_id = <"10296.37.1">
 					detail_docref = <"data_groups/NEHTA-10296-Distribution_List-Data_Group.xml">
+					dc_id = <"10296.37.1">
 					version = <"2.0">
+					status = <"ReleaseForComment">
 				>
 				["at0013"] = <
 					text = <"Service Requester">
 					description = <"The provider (individual or organisation) that has been arranged to provide the service.">
-					status = <"ReleaseForComment">
-					dc_id = <"10296.37.2">
 					detail_docref = <"data_groups/NEHTA-10296-Service_Requester-Data_Group.xml">
+					dc_id = <"10296.37.2">
 					version = <"2.0">
+					status = <"ReleaseForComment">
 				>
 				["at0016"] = <
 					text = <"Service Provider">
 					description = <"The provider (individual or organisation) that has been arranged to provide the service.">
-					status = <"ReleaseForComment">
-					dc_id = <"10296.37.3">
 					detail_docref = <"data_groups/NEHTA-10296-Service_Provider-Data_Group.xml">
+					dc_id = <"10296.37.3">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["at0019"] = <
 					text = <"Request Validity Period">
 					description = <"The period over which the request is valid.  This may be open-ended and, if missing, the default is 12 months from the DateTime Service Scheduled.  (***** SR: This default is a guess; it needs to be verified.  *****)">
-					status = <"ReleaseForComment">
-					dc_id = <"16132">
 					detail_docref = <"data_elements/NEHTA-16132-Request_Validity_Period-Data_Element.xml">
+					dc_id = <"16132">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 			>
 		>
@@ -280,34 +280,34 @@ ontology
 				["ac0001"] = <
 					text = <"Reason for Service Values">
 					description = <"The set of values for the clinical reason for a service being requested or received.">
-					status = <"ReleaseForComment">
-					dc_id = <"16010">
 					detail_docref = <"value_domains/NEHTA-16010-Reason_for_Service_Values-Value_Domain.xml">
+					dc_id = <"16010">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["ac0002"] = <
 					text = <"Requested Service Description Values">
 					description = <"The set of values for the service arranged for, or provided to the patient.">
-					status = <"ReleaseForComment">
-					dc_id = <"20117">
 					detail_docref = <"value_domains/NEHTA-20117-Requested_Service_Description_Values-Value_Domain.xml">
+					dc_id = <"20117">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["ac0003"] = <
 					text = <"Request Urgency Values">
 					description = <"The set of values to describe the various states of urgency of a request.">
-					status = <"ReleaseForComment">
-					dc_id = <"16127">
 					detail_docref = <"value_domains/NEHTA-16127-Request_Urgency_Values-Value_Domain.xml">
+					dc_id = <"16127">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 				["ac0004"] = <
 					text = <"Service Booking Status Values">
 					description = <"The set of values for an indication of the booking status of the arranged service.">
-					status = <"ReleaseForComment">
-					dc_id = <"16055">
 					detail_docref = <"value_domains/NEHTA-16055-Service_Booking_Status_Values-Value_Domain.xml">
+					dc_id = <"16055">
 					version = <"1.0">
+					status = <"ReleaseForComment">
 				>
 			>
 		>

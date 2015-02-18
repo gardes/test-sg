@@ -52,27 +52,27 @@ ontology
 				["at0000"] = <
 					text = <"Prescription Observations">
 					description = <"Observations of the subject of care of a prescription.">
-					status = <"Published">
+					detail_docref = <"sections/NEHTA-16280-Prescription_Observations-Section.xml">
 					dc_id = <"16280">
 					spec_id = <"100">
-					detail_docref = <"sections/NEHTA-16280-Prescription_Observations-Section.xml">
 					version = <"1.0">
+					status = <"Published">
 				>
 				["at0001"] = <
 					text = <"Body Weight">
 					description = <"Details pertinent to the physical measurement of the weight (mass) of a Subject of Care’s body.">
-					status = <"Published">
-					dc_id = <"16124.100.1">
 					detail_docref = <"data_groups/NEHTA-16124-Body_Weight-Data_Group.xml">
+					dc_id = <"16124.100.1">
 					version = <"1.0">
+					status = <"Published">
 				>
 				["at0002"] = <
 					text = <"Body Height">
 					description = <"Details pertinent to the physical measurement of the height OR length of a Subject of Care’s body.">
-					status = <"Published">
-					dc_id = <"16123.100.1">
 					detail_docref = <"data_groups/NEHTA-16123-Body_Height-Data_Group.xml">
+					dc_id = <"16123.100.1">
 					version = <"1.0">
+					status = <"Published">
 				>
 			>
 		>

@@ -102,81 +102,81 @@ ontology
 				["at0000"] = <
 					text = <"Physical properties of an Object (N)">
 					description = <"To record the phycial properties of an object such as a body part, specimen or lesion.">
-					dc_id = <"16325">
 					detail_docref = <"data_groups/NEHTA-16325-Physical_Properties_of_An_Object-Data_Group.xml">
+					dc_id = <"16325">
 					spec_id = <"107">
 				>
 				["at0020"] = <
 					text = <"Weight">
 					description = <"Weight of the object.">
-					dc_id = <"16327">
 					detail_docref = <"data_elements/NEHTA-16327-Weight-Data_Element.xml">
+					dc_id = <"16327">
 				>
 				["at0023"] = <
 					text = <"Description">
 					description = <"A text description of other physical characteristics of the object.  Do not use to record characteristics that might affect the quality of a test interpretation - use 'Specimen received issues' in the Specimen archetype for this purpose.">
-					dc_id = <"16319">
 					detail_docref = <"data_elements/NEHTA-16319-Description-Data_Element.xml">
+					dc_id = <"16319">
 				>
 				["at0029"] = <
 					text = <"Length">
 					description = <"Length of the object.">
-					dc_id = <"16331">
 					detail_docref = <"data_elements/NEHTA-16331-Length-Data_Element.xml">
+					dc_id = <"16331">
 				>
 				["at0030"] = <
 					text = <"Depth">
 					description = <"Depth of the object.">
-					dc_id = <"16333">
 					detail_docref = <"data_elements/NEHTA-16333-Depth-Data_Element.xml">
+					dc_id = <"16333">
 				>
 				["at0031"] = <
 					text = <"Breadth">
 					description = <"Breadth of the object.">
-					dc_id = <"16332">
 					detail_docref = <"data_elements/NEHTA-16332-Breadth-Data_Element.xml">
+					dc_id = <"16332">
 				>
 				["at0032"] = <
 					text = <"Circumference">
 					description = <"Circumference of the object.">
-					dc_id = <"16330">
 					detail_docref = <"data_elements/NEHTA-16330-Circumference-Data_Element.xml">
+					dc_id = <"16330">
 				>
 				["at0033"] = <
 					text = <"Volume">
 					description = <"Volume of the object.">
-					dc_id = <"16335">
 					detail_docref = <"data_elements/NEHTA-16335-Volume-Data_Element.xml">
+					dc_id = <"16335">
 				>
 				["at0034"] = <
 					text = <"Diameter">
 					description = <"Diameter of the object.">
-					dc_id = <"16329">
 					detail_docref = <"data_elements/NEHTA-16329-Diameter-Data_Element.xml">
+					dc_id = <"16329">
 				>
 				["at0035"] = <
 					text = <"Area">
 					description = <"Area of the object.">
-					dc_id = <"16334">
 					detail_docref = <"data_elements/NEHTA-16334-Area-Data_Element.xml">
+					dc_id = <"16334">
 				>
 				["at0036"] = <
 					text = <"Physical Object Name">
 					description = <"The object concerned.  May be a body part, device or specimen.">
-					dc_id = <"16326">
 					detail_docref = <"data_elements/NEHTA-16326-Physical_Object_Name-Data_Element.xml">
+					dc_id = <"16326">
 				>
 				["at0037"] = <
 					text = <"Dimensions">
 					description = <"The dimensions of the object.">
-					dc_id = <"16328">
 					detail_docref = <"data_groups/NEHTA-16328-Dimensions-Data_Group.xml">
+					dc_id = <"16328">
 				>
 				["at0038"] = <
 					text = <"Image">
 					description = <"*">
-					dc_id = <"16199">
 					detail_docref = <"data_elements/NEHTA-16199-Image-Data_Element.xml">
+					dc_id = <"16199">
 				>
 			>
 		>
