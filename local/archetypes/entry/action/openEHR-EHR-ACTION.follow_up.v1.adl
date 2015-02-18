@@ -34,28 +34,33 @@ description
 			purpose = <"لتسجيل تفاصيل حول فعل تم تنفيذه كجزء من المتابعة.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© Nasjonal IKT HF">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"Para registrar detalles acerca de una acción tomada como parte del seguimiento clínico.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© Nasjonal IKT HF">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about an action taken as part of a follow up.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© Nasjonal IKT HF">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
+	other_contributors = <"Silje Ljosland Bakke, Helse Bergen HF, Norway (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"C820C30A9222C9C497956A7585CBB80C">
-		["build_uid"] = <"866f5b07-6b03-4773-a3d5-375d62260f47">
+		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"022171E087C190F37575E2163749EB51">
+		["build_uid"] = <"6ebd271d-320d-41f3-a102-55df3ce6d620">
 		["revision"] = <"1.1.0">
 	>
 
@@ -220,11 +225,13 @@ definition
 			}
 		}
 		description matches {
-			allow_archetype ITEM_TREE matches {
-				include
-					archetype_id/value matches {/openEHR-EHR-ITEM_TREE\.follow_up\.v1/}
-				exclude
-					archetype_id/value matches {/.*/}
+			ITEM_TREE[at0014] matches {	-- Tree
+				items cardinality matches {1; unordered} matches {
+					allow_archetype CLUSTER occurrences matches {0..*} matches {
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.follow_up(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
 			}
 		}
 	}
@@ -289,6 +296,10 @@ ontology
 					text = <"تمت إعادة تحديد الموعد">
 					description = <"تمت إعادة تحديد الموعد خلال متابعة نشطة">
 				>
+				["at0014"] = <
+					text = <"*Single(en)">
+					description = <"*@ internal @(en)">
+				>
 			>
 		>
 		["en"] = <
@@ -349,6 +360,10 @@ ontology
 					text = <"Rescheduled">
 					description = <"An appointment has been resceduled during active follow up.">
 				>
+				["at0014"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -408,6 +423,10 @@ ontology
 				["at0013"] = <
 					text = <"Reprogramado">
 					description = <"Un turno ha sido reprogramado durante un seguimiento clínico activo">
+				>
+				["at0014"] = <
+					text = <"*Single(en)">
+					description = <"*@ internal @(en)">
 				>
 			>
 		>
