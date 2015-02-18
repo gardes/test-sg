@@ -447,7 +447,7 @@
     </constraints>
     <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/composer">
       <items id="VisibleInView">
-        <value>composer</value>
+        <value>Clinical author</value>
       </items>
     </constraints>
   </view>
