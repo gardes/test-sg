@@ -43,8 +43,8 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Fiona Wake, RAHC, Australia", "Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Lisa Dawson, NT Hearing Services, Australia">
 	other_details = <
-		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["MD5-CAM-1.0.1"] = <"FD8EE8563850DEC7497FE23AC0411E8B">
 	>
 

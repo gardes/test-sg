@@ -35,8 +35,8 @@ So, in a persistent list within a clinical system and if there is no information
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"Absence of Information, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1427_1 (accessed 14 Mar 2013).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Absence of Information, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1427_1 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"2DB9C32B9F12D4143EB4E279BA6BBEE4">
 	>
 

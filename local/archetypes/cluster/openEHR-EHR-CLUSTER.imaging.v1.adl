@@ -91,67 +91,67 @@ ontology
 				["at0000"] = <
 					text = <"Imaging Details">
 					description = <"Details of imaging, used in requests for imaging, records of imaging procedures and imaging reports.">
-					detail_docref = <"data_groups/NEHTA-16189-Imaging_Details-Data_Group.xml">
+					status = <"Candidate">
 					dc_id = <"16189">
 					spec_id = <"94">
+					detail_docref = <"data_groups/NEHTA-16189-Imaging_Details-Data_Group.xml">
 					version = <"1.0">
-					status = <"Candidate">
 				>
 				["at0001"] = <
 					text = <"Imaging Category">
 					description = <"The type of imaging.">
-					detail_docref = <"data_elements/NEHTA-16190-Imaging_Category-Data_Element.xml">
-					dc_id = <"16190">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16190">
+					detail_docref = <"data_elements/NEHTA-16190-Imaging_Category-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0002"] = <
 					text = <"Imaging Test Name">
 					description = <"The imaging test requested / performed">
-					detail_docref = <"data_elements/NEHTA-16192-Imaging_Test_Name-Data_Element.xml">
-					dc_id = <"16192">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16192">
+					detail_docref = <"data_elements/NEHTA-16192-Imaging_Test_Name-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0003"] = <
 					text = <"Image Anatomical Site">
 					description = <"The anatomical location involved in the imaging.">
-					detail_docref = <"data_elements/NEHTA-16201-Image_Anatomical_Site-Data_Element.xml">
-					dc_id = <"16201">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16201">
+					detail_docref = <"data_elements/NEHTA-16201-Image_Anatomical_Site-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0004"] = <
 					text = <"View">
 					description = <"Details about a particular view.">
-					detail_docref = <"data_groups/NEHTA-16195-View-Data_Group.xml">
-					dc_id = <"16195">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16195">
+					detail_docref = <"data_groups/NEHTA-16195-View-Data_Group.xml">
+					version = <"1.0">
 				>
 				["at0005"] = <
 					text = <"Per-View Findings">
 					description = <"The findings related to the specific view.">
-					detail_docref = <"data_elements/NEHTA-16197-Per_View_Findings-Data_Element.xml">
-					dc_id = <"16197">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16197">
+					detail_docref = <"data_elements/NEHTA-16197-Per_View_Findings-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0006"] = <
 					text = <"View Name">
 					description = <"The description of the view taken.">
-					detail_docref = <"data_elements/NEHTA-16198-View_Name-Data_Element.xml">
-					dc_id = <"16198">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16198">
+					detail_docref = <"data_elements/NEHTA-16198-View_Name-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0007"] = <
 					text = <"Image">
 					description = <"The data that makes up the image.">
-					detail_docref = <"data_elements/NEHTA-16199-Image-Data_Element.xml">
-					dc_id = <"16199">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16199">
+					detail_docref = <"data_elements/NEHTA-16199-Image-Data_Element.xml">
+					version = <"1.0">
 				>
 			>
 		>
@@ -162,42 +162,42 @@ ontology
 				["ac0001"] = <
 					text = <"Imaging Category Values">
 					description = <"The set of values for the type of imaging.">
-					detail_docref = <"value_domains/NEHTA-16190-Imaging_Category_Values-Value_Domain.xml">
-					dc_id = <"16190">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16190">
+					detail_docref = <"value_domains/NEHTA-16190-Imaging_Category_Values-Value_Domain.xml">
+					version = <"1.0">
 				>
 				["ac0002"] = <
 					text = <"Imaging Test Name Values">
 					description = <"The set of values for the imaging test requested / performed">
-					detail_docref = <"value_domains/NEHTA-16191-Imaging_Test_Name_Values-Value_Domain.xml">
-					dc_id = <"16191">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16191">
+					detail_docref = <"value_domains/NEHTA-16191-Imaging_Test_Name_Values-Value_Domain.xml">
+					version = <"1.0">
 				>
 				["ac0003"] = <
 					text = <"Image Anatomical Site Values">
 					description = <"The set of values for the anatomical location involved in the imaging.">
-					detail_docref = <"value_domains/NEHTA-16200-Image_Anatomical_Site_Values-Value_Domain.xml">
-					dc_id = <"16200">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16200">
+					detail_docref = <"value_domains/NEHTA-16200-Image_Anatomical_Site_Values-Value_Domain.xml">
+					version = <"1.0">
 				>
 				["ac0004"] = <
 					text = <"Per-View Findings Values">
 					description = <"The set of values for the findings related to the specific view.">
-					detail_docref = <"value_domains/NEHTA-16197-Per_View_Findings_Values-Value_Domain.xml">
-					dc_id = <"16197">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16197">
+					detail_docref = <"value_domains/NEHTA-16197-Per_View_Findings_Values-Value_Domain.xml">
+					version = <"1.0">
 				>
 				["ac0005"] = <
 					text = <"View Name Values">
 					description = <"The set of values for the description of the view taken.">
-					detail_docref = <"value_domains/NEHTA-16198-View_Name_Values-Value_Domain.xml">
-					dc_id = <"16198">
-					version = <"1.0">
 					status = <"Candidate">
+					dc_id = <"16198">
+					detail_docref = <"value_domains/NEHTA-16198-View_Name_Values-Value_Domain.xml">
+					version = <"1.0">
 				>
 			>
 		>
