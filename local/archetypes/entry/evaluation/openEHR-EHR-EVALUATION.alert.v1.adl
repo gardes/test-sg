@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=3a649684-02fa-4596-9970-8ad30df7b011)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.alert.v1
 
 concept
@@ -8,7 +8,7 @@ language
 description
 	original_author = <
 		["name"] = <"">
-		["organisation"] = <"NEHTA BLA">
+		["organisation"] = <"NEHTA">
 		["email"] = <"clinicalinfo@nehta.gov.au">
 		["date"] = <"29-Sep-2008">
 	>
@@ -16,24 +16,16 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Information pertaining to a subject of care that may: Need special consideration by a healthcare provider before making a decision about his/her actions in order to avert an unfavourable healthcare event; Need consideration and/or action by a healthcare provider or facility in relation to the care and safety of the subject of care, staff and/or other individuals; or Notify the healthcare provider of special circumstances that may be relevant in delivering care and/or interacting with the subject of care.">
-			use = <"This data group is repeated for every instance of an alert. BLA">
+			use = <"This data group is repeated for every instance of an alert.">
 			keywords = <"Warning.", ...>
 			misuse = <"Recording adverse reactions.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"Published">
 	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'Egan", "Don Stewart", "Stephen Royce">
 	other_details = <
-		["licence"] = <"CC SA BY">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["instance_id"] = <"62868ca0-ca5c-4134-8397-1377de37148d">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0135B0518CD9EE4E47184E8956853D9E">
-		["provenance_id"] = <"7123075b-4779-4962-837d-ce5834353a54">
-		["revision"] = <"1.0.0+u">
+		["MD5-CAM-1.0.1"] = <"E401AF6DF07813EDADC6E6E3B8FCC396">
 	>
 
 definition

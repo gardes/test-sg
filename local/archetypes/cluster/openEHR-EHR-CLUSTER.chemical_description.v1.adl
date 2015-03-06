@@ -118,8 +118,8 @@ ontology
 				["at0000"] = <
 					text = <"Chemical Description of Medication">
 					description = <"The actual ingredients with strength and overall form of a chemical or medication.">
-					detail_docref = <"data_groups/NEHTA-16408-Chemical_Description_of_Medication-Data_Group.xml">
 					spec_id = <"112">
+					detail_docref = <"data_groups/NEHTA-16408-Chemical_Description_of_Medication-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Active Ingredient">
@@ -131,20 +131,20 @@ ontology
 					text = <"Name">
 					description = <"The name of the chemical or medication.">
 					comment = <"The identifying name of the active ingredient in the formulated medication.">
-					detail_docref = <"data_elements/NEHTA-10195-Active_Ingredient_Name-Data_Element.xml">
 					fsn = <"Active Ingredient Name">
+					detail_docref = <"data_elements/NEHTA-10195-Active_Ingredient_Name-Data_Element.xml">
 				>
 				["at0003"] = <
 					text = <"Compound">
 					description = <"The detailed chemical name of the compound that is an active ingredient.">
-					detail_docref = <"data_elements/NEHTA-16409-Active_Ingredient_Compound-Data_Element.xml">
 					fsn = <"Active Ingredient Compound">
+					detail_docref = <"data_elements/NEHTA-16409-Active_Ingredient_Compound-Data_Element.xml">
 				>
 				["at0004"] = <
 					text = <"Strength">
 					description = <"The amount or concentration of this ingredient.">
-					detail_docref = <"data_elements/NEHTA-16410-Active_Ingredient_Strength-Data_Element.xml">
 					fsn = <"Active Ingredient Strength">
+					detail_docref = <"data_elements/NEHTA-16410-Active_Ingredient_Strength-Data_Element.xml">
 				>
 				["at0005"] = <
 					text = <"Role">
@@ -153,10 +153,10 @@ ontology
   1. \"Therapeutic\". The chemical has a known and desired effect which is positive.
   2. \"Toxic\". This chemical is toxic and has no therapeutic effect.
   3. \"Adjuvant\". The chemical is active but aids the therapeutic effect of another ingredient.">
-					detail_docref = <"data_elements/NEHTA-16412-Active_Ingredient_Role-Data_Element.xml">
-					fsn = <"Active Ingredient Role">
-					value_domain_name = <"Active Ingredient Role Values">
 					value_domain_dc_id = <"16411">
+					value_domain_name = <"Active Ingredient Role Values">
+					fsn = <"Active Ingredient Role">
+					detail_docref = <"data_elements/NEHTA-16412-Active_Ingredient_Role-Data_Element.xml">
 				>
 				["at0006"] = <
 					text = <"Therapeutic">
@@ -184,10 +184,10 @@ Examples:
   2. Capsule.
   3. Oral Drops.
   4. Effervescent powder.">
-					detail_docref = <"data_elements/NEHTA-10186-Form-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Medication Form Reference Set">
 					value_domain_dc_id = <"16618">
+					value_domain_name = <"Medication Form Reference Set">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-10186-Form-Data_Element.xml">
 				>
 				["at0011"] = <
 					text = <"Inactive Ingredient">
@@ -197,20 +197,20 @@ Examples:
 				["at0012"] = <
 					text = <"Name">
 					description = <"The name of the inactive substance.">
-					detail_docref = <"data_elements/NEHTA-16415-Inactive_Ingredient_Name-Data_Element.xml">
 					fsn = <"Inactive Ingredient Name">
+					detail_docref = <"data_elements/NEHTA-16415-Inactive_Ingredient_Name-Data_Element.xml">
 				>
 				["at0013"] = <
 					text = <"Compound">
 					description = <"The detailed chemical name of the compound which is an inactive ingredient.">
-					detail_docref = <"data_elements/NEHTA-16416-Inactive_Ingredient_Compound-Data_Element.xml">
 					fsn = <"Inactive Ingredient Compound">
+					detail_docref = <"data_elements/NEHTA-16416-Inactive_Ingredient_Compound-Data_Element.xml">
 				>
 				["at0014"] = <
 					text = <"Strength">
 					description = <"The amount or concentration of this ingredient.">
-					detail_docref = <"data_elements/NEHTA-16417-Inactive_Ingredient_Strength-Data_Element.xml">
 					fsn = <"Inactive Ingredient Strength">
+					detail_docref = <"data_elements/NEHTA-16417-Inactive_Ingredient_Strength-Data_Element.xml">
 				>
 				["at0015"] = <
 					text = <"Role">
@@ -221,10 +221,10 @@ Examples:
   3. \"Propellent\". Inert propellent.
   4. \"Preservative\". The ingredient is present to prolong the life of the substance.
   5. \"Colouring\". The ingredient is used to colour the substance.">
-					detail_docref = <"data_elements/NEHTA-16419-Inactive_Ingredient_Role-Data_Element.xml">
-					fsn = <"Inactive Ingredient Role">
-					value_domain_name = <"Inactive Ingredient Role Values">
 					value_domain_dc_id = <"16418">
+					value_domain_name = <"Inactive Ingredient Role Values">
+					fsn = <"Inactive Ingredient Role">
+					detail_docref = <"data_elements/NEHTA-16419-Inactive_Ingredient_Role-Data_Element.xml">
 				>
 				["at0016"] = <
 					text = <"Additive">
@@ -255,14 +255,14 @@ Examples:
 				["ac0001"] = <
 					text = <"Active Ingredient Name Values">
 					description = <"The name of the chemical substance which is an active ingredient. Set of allowable values for the identifying name of the active ingredient in the formulated medication.">
-					detail_docref = <"value_domains/NEHTA-10195-Active_Ingredient_Name_Values-Value_Domain.xml">
 					dc_id = <"10195">
+					detail_docref = <"value_domains/NEHTA-10195-Active_Ingredient_Name_Values-Value_Domain.xml">
 				>
 				["ac0002"] = <
 					text = <"Inactive Ingredient Name Values">
 					description = <"The name of the chemical substance which is an inactive ingredient.">
-					detail_docref = <"value_domains/NEHTA-16414-Inactive_Ingredient_Name_Values-Value_Domain.xml">
 					dc_id = <"16414">
+					detail_docref = <"value_domains/NEHTA-16414-Inactive_Ingredient_Name_Values-Value_Domain.xml">
 				>
 			>
 		>
