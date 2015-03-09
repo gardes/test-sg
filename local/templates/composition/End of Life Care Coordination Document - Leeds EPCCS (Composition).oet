@@ -60,30 +60,6 @@
       </item>
     </other_details>
   </description>
-  <annotations path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]">
-    <items>
-      <item>
-        <key>Notes.Authors Note</key>
-        <value>Authors other note</value>
-      </item>
-      <item>
-        <key>GUI Directives.Widget Type</key>
-        <value>Text Box</value>
-      </item>
-      <item>
-        <key>GUI Directives.Show Description</key>
-        <value>true</value>
-      </item>
-    </items>
-  </annotations>
-  <annotations path="[openEHR-EHR-COMPOSITION.care_plan.v1]/context/other_context[at0001]">
-    <items>
-      <item>
-        <key>Notes.Question</key>
-        <value>Some sort of question</value>
-      </item>
-    </items>
-  </annotations>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.care_plan.v1" concept_name="Care plan" name="End of Life Care Coordination Document (LEPCCS)">
     <Content xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.end_of_life_register_uk.v1" concept_name="End of life care register" path="/content[at0002]">
       <Rule path="/data[at0001]" hide_on_form="true" />
@@ -414,43 +390,6 @@
       <hide_on_form>true</hide_on_form>
     </Context>
   </definition>
-  <view>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/guideline_id">
-      <items id="VisibleInView">
-        <value>guideline_id</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/other_participations">
-      <items id="VisibleInView">
-        <value>other_participations</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/workflow_id">
-      <items id="VisibleInView">
-        <value>workflow_id</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/expiry_time">
-      <items id="VisibleInView">
-        <value>expiry_time</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/narrative">
-      <items id="VisibleInView">
-        <value>narrative</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/content[at0005][openEHR-EHR-SECTION.rcp_medication_heading.v1]/items[at0001]/items[openEHR-EHR-INSTRUCTION.medication_order_uk.v1]/wf_definition">
-      <items id="VisibleInView">
-        <value>wf_definition</value>
-      </items>
-    </constraints>
-    <constraints path="[openEHR-EHR-COMPOSITION.care_plan.v1]/composer">
-      <items id="VisibleInView">
-        <value>Clinical author</value>
-      </items>
-    </constraints>
-  </view>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.care_plan.v1">
     <digest id="MD5-CAM-1.0.1">ED759BB72D12CAEA1D8438AA09A1A4B3</digest>
   </integrity_checks>

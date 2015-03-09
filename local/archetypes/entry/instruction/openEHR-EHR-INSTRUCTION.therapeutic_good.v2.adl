@@ -67,11 +67,11 @@ ontology
 				["at0000"] = <
 					text = <"Therapeutic Good">
 					description = <"Details of a therapeutic good with its use by a subject of care, and related information.">
-					status = <"Draft">
+					detail_docref = <"data_groups/NEHTA-16211-Therapeutic_Good-Data_Group.xml">
 					dc_id = <"16211">
 					spec_id = <"96">
-					detail_docref = <"data_groups/NEHTA-16211-Therapeutic_Good-Data_Group.xml">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0001"] = <
 					text = <"Current Activity">
@@ -84,18 +84,18 @@ ontology
 				["at0003"] = <
 					text = <"DateTime Prescription Expires">
 					description = <"The date (and optionally time) after which the prescription can no longer be dispensed against.">
-					status = <"Draft">
-					dc_id = <"10104">
 					detail_docref = <"data_elements/NEHTA-10104-DateTime_Prescription_Expires-Data_Element.xml">
+					dc_id = <"10104">
 					version = <"1.0">
+					status = <"Draft">
 				>
 				["at0004"] = <
 					text = <"DateTime Prescription Written">
 					description = <"The date (and optionally time) of the completion of the writing of the prescription.">
-					status = <"Draft">
-					dc_id = <"16091">
 					detail_docref = <"data_elements/NEHTA-16091-DateTime_Prescription_Written-Data_Element.xml">
+					dc_id = <"16091">
 					version = <"2.0">
+					status = <"Draft">
 				>
 			>
 		>

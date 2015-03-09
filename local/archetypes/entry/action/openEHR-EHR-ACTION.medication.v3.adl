@@ -177,11 +177,11 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
   6. 315236011000036113, bandage compression 10 cm x 3.5 m bandage: high stretch, 1 bandage
   7. 186324011000036116, Eloflex (2480) (bandage compression 10 cm x 3.5 m) bandage: high stretch, 1 bandage
   8. 73875011000036101, Je-Vax (Japanese encephalitis virus inactivated vaccine) injection: powder for, vial">
-					value_domain_dc_id = <"16115">
-					value_domain_name = <"Medicines Terminology">
 					fsn = <"Therapeutic Good Identification">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Medicines Terminology">
+					value_domain_dc_id = <"16115">
 				>
 				["at0021"] = <
 					text = <"Reason">
@@ -189,11 +189,11 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
 					comment = <"It is preferred that this item be coded from the Reason for Action Values Value Domain.
 
 This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication.">
-					value_domain_dc_id = <"16492">
-					value_domain_name = <"Reason for Action Values">
 					fsn = <"Reason for Action">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16492-Reason_for_Action-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Reason for Action Values">
+					value_domain_dc_id = <"16492">
 				>
 				["at0022"] = <
 					text = <"Quantity of Medication">
@@ -243,10 +243,10 @@ This is not the reason for the medication instruction, rather the specific reaso
 					comment = <"It is preferred that this item be coded from the Administrative Item Code Values Value Domain.
 
 This element is to be used to assist with claims processing.">
-					value_domain_dc_id = <"16645">
-					value_domain_name = <"Administrative Item Code Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16646-Administrative_Item_Code-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Administrative Item Code Values">
+					value_domain_dc_id = <"16645">
 				>
 				["at0030"] = <
 					text = <"Tree">
@@ -258,10 +258,10 @@ This element is to be used to assist with claims processing.">
 					comment = <"It is preferred that this item be coded from the Administrative Manufacturer Code Values Value Domain.
 
 This element is to be used to assist with claims processing.">
-					value_domain_dc_id = <"16647">
-					value_domain_name = <"Administrative Manufacturer Code Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16648-Administrative_Manufacturer_Code-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Administrative Manufacturer Code Values">
+					value_domain_dc_id = <"16647">
 				>
 				["at0032"] = <
 					text = <"Remaining Repeats">
@@ -303,10 +303,10 @@ Examples:
   1. General PBS benefit
   2. Safety Net Concession benefit
   3. Safety Net Entitlement Card benefit">
-					value_domain_dc_id = <"16060">
-					value_domain_name = <"Therapeutic Good Claim Category Reference Set">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16060-Claim_Category-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Therapeutic Good Claim Category Reference Set">
+					value_domain_dc_id = <"16060">
 				>
 				["at0040"] = <
 					text = <"Date of Expiry">
