@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=442d85d9-83cf-4485-a4e0-c7b874b4ade9)
-	openEHR-EHR-ACTION.exercise.v0
+﻿archetype (adl_version=1.4; uid=deb30d3e-993a-4542-9f99-d77d304bc526)
+	openEHR-EHR-ACTION.exercise.v1
 
 concept
 	[at0000]	-- Exercise
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
@@ -27,9 +27,10 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F97963A4FE43E66DC7A6EABE76E7E2EF">
+		["MD5-CAM-1.0.1"] = <"BE08532D4BB7A2CD08129B4AB0572BA9">
+		["build_uid"] = <"99ce2557-0f92-44fe-8167-1350fb588625">
 		["provenance_id"] = <"7b35156a-4ca6-4bca-a39a-b83835efb321">
-		["revision"] = <"0.0.1+u">
+		["revision"] = <"1.0.0">
 	>
 
 definition
