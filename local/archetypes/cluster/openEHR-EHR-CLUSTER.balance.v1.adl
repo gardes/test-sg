@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=84bb3cba-db6e-487b-b514-e212fe788b9d)
 	openEHR-EHR-CLUSTER.balance.v1
 
 concept
@@ -22,11 +22,18 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"7D22566365A1850EC68965022EBA2D09">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"5CD16190FC934809EC67EA31FA913AE5">
+		["build_uid"] = <"5aa8bec0-f017-4126-8428-448cf6352761">
+		["revision"] = <"1.0.0">
 	>
 
 definition
