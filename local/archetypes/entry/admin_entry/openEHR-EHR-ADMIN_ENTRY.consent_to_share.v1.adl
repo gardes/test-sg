@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=e871aafa-1aec-44bf-819e-c99d9b2daf50)
 	openEHR-EHR-ADMIN_ENTRY.consent_to_share.v1
 
 concept
@@ -22,10 +22,17 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"4191D7CA09686400E3A296338E64460C">
+		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
+		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F4FF5EC0B6E0B5C6250A4BC5B2BDC802">
+		["build_uid"] = <"1eb196c8-916b-476e-8a87-f65c02f9daef">
+		["revision"] = <"1.0.0">
 	>
 
 definition
