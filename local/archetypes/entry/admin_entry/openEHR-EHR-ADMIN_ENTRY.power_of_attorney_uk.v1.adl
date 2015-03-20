@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=53438053-05e3-431d-b69d-a6b286c62d54)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-ADMIN_ENTRY.power_of_attorney_uk.v1
 
 concept
@@ -21,22 +21,15 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
-		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["references"] = <"Information Standards Board ISB Data Dictionary Available at http://www.datadictionary.nhs.uk/
 
 End of Life Care Co-ordination: Core Content Standard Specification Available at http://www.isb.nhs.uk/documents/isb-1580/amd-29-2012/index_html
 
 NHS Scotland Key Information Summary">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"D70B09FD2C5558CA0FB2E0741AFBDBA0">
-		["build_uid"] = <"a3908b30-6a7b-43b8-8bae-d35508108b4b">
-		["revision"] = <"1.0.4">
+		["MD5-CAM-1.0.1"] = <"9DF5B23BF01246240BF2B91579FEE02D">
 	>
 
 definition

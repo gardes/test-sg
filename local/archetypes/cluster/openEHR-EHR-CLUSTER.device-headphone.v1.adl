@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=6b85ed56-5a9d-4374-8e9e-807b3f0615e8)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-CLUSTER.device-headphone.v1
 specialise
 	openEHR-EHR-CLUSTER.device.v1
@@ -24,18 +24,11 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Kathy Currie, Northern Territory Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 	other_details = <
-		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
-		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2E317A09592A43ED9E6B7EA40D176C30">
-		["build_uid"] = <"3b2958c5-5463-4370-b758-ab865a597610">
-		["revision"] = <"0.0.3-alpha">
+		["MD5-CAM-1.0.1"] = <"CE0A87810B8C050C3CD510B7A438C46A">
 	>
 
 definition

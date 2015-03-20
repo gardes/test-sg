@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.4)
-	openEHR-EHR-ELEMENT.menstrual_cycle_day.v1
+	openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1
 
 concept
-	[at0000]	-- Current Day of Menstrual cycle
+	[at0000]	-- Last Normal Menstrual Period
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -15,24 +15,24 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the number of day's since the Last Normal Menstrual Period">
+			purpose = <"To record the date of the Last Normal Menstrual Period (LNMP)">
 			use = <"To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation">
-			keywords = <"menstrual", "cycle", "menstruation", "day", "woman", "female">
+			keywords = <"menstruation", "woman", "female", "menstrual", "period", "date">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Published">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"">
 	>
 
 definition
-	ELEMENT[at0000] matches {	-- Current Day of Menstrual cycle
+	ELEMENT[at0000] matches {	-- Last Normal Menstrual Period
 		value matches {
-			DV_COUNT matches {
-				magnitude matches {|>=1|}
+			DV_DATE_TIME matches {
+				value matches {yyyy-??-??T??:??:??}
 			}
 		}
 	}
@@ -43,8 +43,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Current Day of Menstrual cycle">
-					description = <"Number of days since onset of last normal menstrual period">
+					text = <"Last Normal Menstrual Period">
+					description = <"Record of the date of 1st day of last normal menstrual period">
 				>
 			>
 		>
