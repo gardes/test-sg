@@ -12,11 +12,25 @@ language
 				["name"] = <"me">
 				["organisation"] = <"orga2">
 				["email"] = <"me@me">
-				["other_trans_author_item"] = <"other trans author item value">
+				["other_translator_item"] = <"my other translator item DE2">
 			>
 			accreditation = <"acc">
 			other_details = <
-				["translation_de_other_detail_item"] = <"BLAA">
+				["other_detail_translation_de"] = <"German other detail for translation details2">
+			>
+		>
+		["af"] = <
+			language = <[ISO_639-1::af]>
+			author = <
+				["name"] = <"Manager">
+				["organisation"] = <"bla">
+			>
+			accreditation = <"ac">
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"Manager">
 			>
 		>
 	>
@@ -32,15 +46,36 @@ description
 			use = <"w2">
 			misuse = <"22">
 			copyright = <"© openEHR Foundation">
+			other_details = <
+				["DETAILS_de_other_detail_item"] = <"ENGLISH EQUIVALENT BLAA_DETAILS FOR DE">
+			>
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"*w(en)">
-			use = <"*w2(en)">
+			purpose = <"bla Purpose">
+			use = <"use">
 			misuse = <"*22(en)">
 			copyright = <"© openEHR Foundation">
 			other_details = <
-				["DETAILS_de_other_detail_item"] = <"BLAA_DETAILS FOR DE">
+				["DETAILS_de_other_detail_item"] = <"BLAA_DETAILS FOR DE (MO2)">
+			>
+		>
+		["af"] = <
+			language = <[ISO_639-1::af]>
+			purpose = <"*w(en)">
+			use = <"*w2(en)">
+			misuse = <"*22(en)">
+			other_details = <
+				["DETAILS_de_other_detail_item"] = <"TEST Added">
+			>
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*w(en)">
+			use = <"*w2(en)">
+			misuse = <"*22(en)">
+			other_details = <
+				["DETAILS_de_other_detail_item"] = <"BLA in Albanian or so">
 			>
 		>
 	>
@@ -52,8 +87,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"ADBC41871C99EC471BB52476A4A826CA">
-		["build_uid"] = <"39d08ed2-cdce-4650-898f-c30e1af8b84d">
+		["MD5-CAM-1.0.1"] = <"AAFAF6616CDB9B6CADEEEC954F3A5A3E">
+		["build_uid"] = <"b1e8a51b-4f72-434e-9238-b35a9ece5a86">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -91,6 +126,30 @@ ontology
 				["at0001"] = <
 					text = <"*New element(en)">
 					description = <"**(en)">
+				>
+			>
+		>
+		["af"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Testother(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Testother(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
 				>
 			>
 		>
