@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=0e81459f-0616-4922-be82-2aaac6f78eb2)
+﻿archetype (adl_version=1.4; uid=750d69d9-1461-4886-aaf5-ee300070ce76)
 	openEHR-EHR-EVALUATION.revisioning_example4.v0
 
 concept
@@ -21,20 +21,18 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
-		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 International License">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"bla bla <https://creativecommons.org/licenses/by-sa/3.0/> 
 		
 		https://creativecommons.org/licenses/by-sa/3.0/
 		">
-		["build_id"] = <"4032807a-d9d7-4ec8-9694-1ad43350eddf">
+		["build_uid"] = <"0043896f-d388-437e-ad46-472cb74ec56b">
 		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"D5C7A064A7345211256376F748D97B6B">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A7FE78C0B22D5E804309377E6D96610E">
-		["build_uid"] = <"458ca771-13de-4b87-a854-ab0017a7e806">
-		["provenance_id"] = <"d0c74389-1be5-44b9-bdd6-ec59ae1c61cb">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
@@ -88,6 +86,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
