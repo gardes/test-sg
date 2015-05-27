@@ -72,7 +72,7 @@
     <items>
       <item>
         <key>Notes.Comment</key>
-        <value>Whether the adverse reaction is of drugfood or other can be specified here.</value>
+        <value>Comment	Whether the adverse reaction is of drugfood or other can be specified here.</value>
       </item>
     </items>
   </annotations>
