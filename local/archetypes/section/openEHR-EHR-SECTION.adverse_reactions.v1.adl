@@ -54,23 +54,23 @@ ontology
 				["at0000"] = <
 					text = <"Adverse Reactions">
 					description = <"A section that groups together adverse reaction information about the subject of care that is known to the provider/provider facility during a healthcare visit/encountered.">
-					detail_docref = <"sections/NEHTA-20113-Adverse_Reactions-Section.xml">
 					dc_id = <"20113">
+					detail_docref = <"sections/NEHTA-20113-Adverse_Reactions-Section.xml">
 					spec_id = <"88">
 				>
 				["at0001"] = <
 					text = <"Exclusion Statement - Adverse Reactions">
 					description = <"Statements about Adverse Reactions that need to be positively recorded as absent or excluded.">
 					comment = <"To positively record the absence or exclusion of any adverse reactions within the health record.">
-					detail_docref = <"data_groups/NEHTA-16137-Exclusion_Statement_Adverse_Reactions-Data_Group.xml">
 					dc_id = <"16137.88.1">
 					spec_id = <"104">
+					detail_docref = <"data_groups/NEHTA-16137-Exclusion_Statement_Adverse_Reactions-Data_Group.xml">
 				>
 				["at0002"] = <
 					text = <"Adverse Reaction">
 					description = <"A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, venom from animal stings or a medication at therapeutic or sub-therapeutic doses.">
-					detail_docref = <"data_groups/NEHTA-15517-Adverse_Reaction-Data_Group.xml">
 					dc_id = <"15517.88.1">
+					detail_docref = <"data_groups/NEHTA-15517-Adverse_Reaction-Data_Group.xml">
 					spec_id = <"9">
 				>
 			>
