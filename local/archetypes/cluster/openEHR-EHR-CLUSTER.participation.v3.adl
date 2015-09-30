@@ -85,8 +85,8 @@ ontology
 					text = <"Participation">
 					description = <"Identifies and describes an entity and the role it plays while partaking in a healthcare event.">
 					comment = <"The primary purpose of a participation within a NEHTA specification is to provide sufficient information to enable a recipient of a document to identify the participant within their own systems and not to exchange information about that participant. Nonetheless, it is recognised that it is often necessary to send information about participants, in particular, contact details, and since much of this information is often also used in the identification of participants, this model is the natural place to include it.">
-					detail_docref = <"data_groups/NEHTA-10296-Participation-Data_Group.xml">
 					dc_id = <"10296">
+					detail_docref = <"data_groups/NEHTA-10296-Participation-Data_Group.xml">
 					spec_id = <"28">
 				>
 				["at0001"] = <
@@ -100,11 +100,11 @@ Examples:
   3. Physical Performer
   4. Receiver
   5. Responsible Party">
-					detail_docref = <"data_elements/NEHTA-10297-Participation_Type-Data_Element.xml">
+					value_domain_dc_id = <"10299">
+					value_domain_name = <"Participation Type Values">
 					dc_id = <"10297">
 					coding_preferred = <"true">
-					value_domain_name = <"Participation Type Values">
-					value_domain_dc_id = <"10299">
+					detail_docref = <"data_elements/NEHTA-10297-Participation_Type-Data_Element.xml">
 				>
 				["at0002"] = <
 					text = <"Role">
@@ -123,11 +123,11 @@ Examples:  (In each of the following Role examples, the Participation Type could
   7. Prescriber
   8. Senior surgical registrar
   9. Subject of care (patient)">
-					detail_docref = <"data_elements/NEHTA-10342-Role-Data_Element.xml">
+					value_domain_dc_id = <"16269">
+					value_domain_name = <"Role Values">
 					dc_id = <"10342">
 					coding_preferred = <"true">
-					value_domain_name = <"Role Values">
-					value_domain_dc_id = <"16269">
+					detail_docref = <"data_elements/NEHTA-10342-Role-Data_Element.xml">
 				>
 				["at0003"] = <
 					text = <"Participation Period">
@@ -135,15 +135,15 @@ Examples:  (In each of the following Role examples, the Participation Type could
 					comment = <"A participation period is needed when the participant's involvement in the healthcare event spans only part of the event's period. This means that the participation period indicates the time period during which certain common sub-activities occur that may not be worth recording explicitly, but which are implicitly modelled by the participation type. Although this data element is optional, in most contexts, it will be further constrained to either be disallowed or essential. For example, in a Discharge Summary: Some typical contexts where Participation Period is essential are: The period of time during which a doctor was responsible for a patient during a healthcare event. The end of the participation period of a Document Author participation is the time associated with the completion of editing the content of a document. Some typical contexts where participation period is disallowed are: For a Document Recipient participation. For a Facility participation. For a Nominated Primary Healthcare Provider participation.
 
 Examples:  (See:)">
-					detail_docref = <"data_elements/NEHTA-10300-Participation_Period-Data_Element.xml">
 					dc_id = <"10300">
+					detail_docref = <"data_elements/NEHTA-10300-Participation_Period-Data_Element.xml">
 				>
 				["at0005"] = <
 					text = <"Location of Participation">
 					description = <"Specifies the geographic site (building, room, etc) where the participation of a healthcare event occurs.">
 					comment = <"LOCATION OF PARTICIPATION is not required where it is the same as the location at which the healthcare event has taken place. The location of participation may be distinctly different from the registered address/location of the Healthcare Provider Individual or Organisation. A healthcare event participation may occur in a single location (as in the cases of face-to-face healthcare consultation, ED encounter, inpatient event), or may occur over multiple locations (as in the case of telemedicine).">
-					detail_docref = <"data_groups/NEHTA-10343-Location_of_Participation-Data_Group.xml">
 					dc_id = <"10343">
+					detail_docref = <"data_groups/NEHTA-10343-Location_of_Participation-Data_Group.xml">
 				>
 				["at0006"] = <
 					text = <"Location of Participation Type">
@@ -155,25 +155,25 @@ Examples:
   2. Site of accident (e.g. in the event of a natural disaster, ambulance calls)
   3. Healthcare facility responsible for treating the subject of care (patient)
   4. Remote teleconsultation setting">
-					detail_docref = <"data_elements/NEHTA-10344-Location_of_Participation_Type-Data_Element.xml">
+					value_domain_dc_id = <"10344">
+					value_domain_name = <"Location of Participation Type Values">
 					dc_id = <"10344">
 					coding_preferred = <"true">
-					value_domain_name = <"Location of Participation Type Values">
-					value_domain_dc_id = <"10344">
+					detail_docref = <"data_elements/NEHTA-10344-Location_of_Participation_Type-Data_Element.xml">
 				>
 				["at0007"] = <
 					text = <"Location of Participation Address">
 					description = <"The description of a location where the participation occurred which is different from where the healthcare event occurred.">
-					detail_docref = <"data_groups/NEHTA-20106-Location_of_Participation_Address-Data_Group.xml">
 					dc_id = <"20106.28.1">
 					spec_id = <"22">
+					detail_docref = <"data_groups/NEHTA-20106-Location_of_Participation_Address-Data_Group.xml">
 				>
 				["at0009"] = <
 					text = <"Participant">
 					description = <"Details pertinent to the identification of an individual or organisation or device that has participated in a healthcare event/encounter/clinical interaction.">
 					comment = <"This may be a , or that is capable of participating through a defined Participation Type in a specified business process. A participant in a healthcare event belongs to one of these categories: a person who is a healthcare provider; a person who is not a healthcare provider; an organisation (healthcare provider or otherwise); or a device that authors, sends or receives healthcare information.">
-					detail_docref = <"data_groups/NEHTA-10232-Participant-Data_Group.xml">
 					dc_id = <"10232.28.1">
+					detail_docref = <"data_groups/NEHTA-10232-Participant-Data_Group.xml">
 					spec_id = <"27">
 				>
 			>

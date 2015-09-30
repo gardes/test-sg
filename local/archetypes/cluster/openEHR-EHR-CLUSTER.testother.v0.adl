@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=170c49df-d139-4a15-ac7e-d4f1d3f1150d)
+﻿archetype (adl_version=1.4; uid=1dc689b5-afab-4c6f-92cb-8e7e2289abd1)
 	openEHR-EHR-CLUSTER.testother.v0
 
 concept
@@ -12,25 +12,11 @@ language
 				["name"] = <"me">
 				["organisation"] = <"orga2">
 				["email"] = <"me@me">
-				["other_translator_item"] = <"my other translator item DE2">
+				["other_trans_author_item"] = <"other trans author item value">
 			>
 			accreditation = <"acc">
 			other_details = <
-				["other_detail_translation_de"] = <"German other detail for translation details2">
-			>
-		>
-		["af"] = <
-			language = <[ISO_639-1::af]>
-			author = <
-				["name"] = <"Manager">
-				["organisation"] = <"bla">
-			>
-			accreditation = <"ac">
-		>
-		["sq"] = <
-			language = <[ISO_639-1::sq]>
-			author = <
-				["name"] = <"Manager">
+				["translation_de_other_detail_item"] = <"BLAA">
 			>
 		>
 	>
@@ -46,36 +32,15 @@ description
 			use = <"w2">
 			misuse = <"22">
 			copyright = <"© openEHR Foundation">
-			other_details = <
-				["DETAILS_de_other_detail_item"] = <"ENGLISH EQUIVALENT BLAA_DETAILS FOR DE">
-			>
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"bla Purpose">
-			use = <"use">
+			purpose = <"*w(en)">
+			use = <"*w2(en)">
 			misuse = <"*22(en)">
 			copyright = <"© openEHR Foundation">
 			other_details = <
-				["DETAILS_de_other_detail_item"] = <"BLAA_DETAILS FOR DE (MO2)">
-			>
-		>
-		["af"] = <
-			language = <[ISO_639-1::af]>
-			purpose = <"*w(en)">
-			use = <"*w2(en)">
-			misuse = <"*22(en)">
-			other_details = <
-				["DETAILS_de_other_detail_item"] = <"TEST Added">
-			>
-		>
-		["sq"] = <
-			language = <[ISO_639-1::sq]>
-			purpose = <"*w(en)">
-			use = <"*w2(en)">
-			misuse = <"*22(en)">
-			other_details = <
-				["DETAILS_de_other_detail_item"] = <"BLA in Albanian or so">
+				["DETAILS_de_other_detail_item"] = <"BLAA_DETAILS FOR DE">
 			>
 		>
 	>
@@ -83,13 +48,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
-		["custodian_organisation"] = <"Ocean Informatics <http://oceaninformatics.com>">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics <http://oceaninformatics.com>">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AAFAF6616CDB9B6CADEEEC954F3A5A3E">
-		["build_uid"] = <"b1e8a51b-4f72-434e-9238-b35a9ece5a86">
 		["revision"] = <"0.0.1-alpha">
+		["build_uid"] = <"170802b8-ec32-4bef-8b81-5d25fc781cb7">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"7791C63E8C235377B3F15E64A041E11A">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
@@ -102,6 +67,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -126,30 +92,6 @@ ontology
 				["at0001"] = <
 					text = <"*New element(en)">
 					description = <"**(en)">
-				>
-			>
-		>
-		["af"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Testother(en)">
-					description = <"*unknown(en)">
-				>
-				["at0001"] = <
-					text = <"*New element(en)">
-					description = <"*">
-				>
-			>
-		>
-		["sq"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Testother(en)">
-					description = <"*unknown(en)">
-				>
-				["at0001"] = <
-					text = <"*New element(en)">
-					description = <"*">
 				>
 			>
 		>
