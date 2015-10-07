@@ -30,10 +30,10 @@ description
 	other_details = <
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"886b2b18-0d93-4cc8-b715-a2aebdc81468">
+		["build_uid"] = <"d12f7b86-7cbb-470a-aac2-f49d78c493ec">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8693A0B419CE8D53608CDA6CCB076376">
+		["MD5-CAM-1.0.1"] = <"5D84CAD3C5904EB26C5FC053852394C7">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
 	>
@@ -136,7 +136,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Status">
-					description = <"*">
+					description = <"Current aided status.">
 				>
 				["at0003"] = <
 					text = <"Never aided">
@@ -164,7 +164,7 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Cessation date">
-					description = <"*">
+					description = <"Date that use of the device ceased.">
 				>
 				["at0010"] = <
 					text = <"Configuration detail">
