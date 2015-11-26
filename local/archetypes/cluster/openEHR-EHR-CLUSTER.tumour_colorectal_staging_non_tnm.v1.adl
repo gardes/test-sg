@@ -19,7 +19,7 @@ description
 			use = <"Use in conjunction with a suite of histo-pathology related archetypes or with a Diagnosis archetype.">
 			keywords = <"staging", "cancer", "tumour", "histo-pathology", "malignancy">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -28,13 +28,17 @@ description
 		["references"] = <"Davis N, Newland R. The reporting of colorectal cancer: The Australian clinico-pathological staging system. ANZ Journal of Surgery. 1982 ;52(4):395-397.
 
 Royal College of Pathologists. Dataset for colorectal cancer (2nd edition) [Internet]. 2007 Dec 4;[cited 2009 Jul 29 ]
-Available from: http://www.rcpath.org/index.asp?PageID=1153">
-		["MD5-CAM-1.0.1"] = <"A8D41AAC7774FDF705A4D87F3E357A0D">
+Available from: http://www.rcpath.org/index.asp?PageID=1153
+
+
+
+">
+		["MD5-CAM-1.0.1"] = <"7B91C01ED83E6504C8AFC02B1BFDD236">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Tumour - Colorectal staging (non-TNM)
-		items cardinality matches {1..*; unordered} matches {
+		items cardinality matches {0..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Dukes Score
 				value matches {
 					DV_CODED_TEXT matches {
@@ -82,6 +86,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

@@ -7,6 +7,17 @@ concept
 	[at0000.1]	-- Blood gas assessment
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Dr. Leonardo Der Jachadurian">
+				["organisation"] = <"Bitios.com">
+				["email"] = <"leoderja@hotmail.com">
+			>
+			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Sam Heard">
@@ -21,7 +32,15 @@ description
 			use = <"">
 			keywords = <"lab", "laboratory", "oxygen", "pH", "carbon dioxide">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Para registrar los gases y estado ácido-base en sangre arterial o venosa.">
+			use = <"">
+			keywords = <"determinación", "laboratorio", "oxígeno", "pH", "HCO3", "pCO2", "pO2", "anhídrido carbónico", "bicarbonato", "estado ácido-base", "gases en sangre (arteriales / venosos)">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -455,6 +474,167 @@ ontology
 				["at0090"] = <
 					text = <"Requestor">
 					description = <"Details of the clinician or organisation requesting the laboratory test.">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0.91"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0.92"] = <
+					text = <"Oxígeno ambiental">
+					description = <"El nivel de oxígeno ambiental o administrado al paciente, cuando fue extraída la muestra.">
+				>
+				["at0.93"] = <
+					text = <"Factores confundidores">
+					description = <"Otros factores del paciente que pueden afectar la interpretación de los resultados de análisis de gases en sangre.">
+				>
+				["at0000.1"] = <
+					text = <"Análisis de gases en sangre">
+					description = <"Análisis de concentración de gases y balance de ácido-base en sangre.">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Cualquier evento">
+					description = <"Cualquier evento.">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0005"] = <
+					text = <"Nombre del análisis">
+					description = <"Identificador específico para este análisis de laboratorio. Ej. hemograma, glucemia, urocultivo, etc. Puede equipararse al nombre de resultado para un resultado de valor simple. Comúnmente un término codificado. Ej. LOINC o SNOMED-CT.">
+				>
+				["at0010"] = <
+					text = <"Representación multimedial">
+					description = <"Representaciones multimediales del test completo. Ej. imagen, audio, video, etc.">
+				>
+				["at0017"] = <
+					text = <"Laboratorio receptor">
+					description = <"Detalles demográficos del laboratorio responsable del análisis. Los detalles de los laboratorios secundarios también pueden ser incluidos.">
+				>
+				["at0037"] = <
+					text = <"Provisorio">
+					description = <"Este es un resultado inicial o provisorio. Se anticipan actualizaciones adicionales.">
+				>
+				["at0038"] = <
+					text = <"Final">
+					description = <"Este es el resultado final. No habrá modificaciones posteriores del mismo.">
+				>
+				["at0039"] = <
+					text = <"Suplementario">
+					description = <"Este es un resultado suplementario el cual debería ser anexado a un resultado previo.">
+				>
+				["at0040"] = <
+					text = <"Corregido (modificado)">
+					description = <"Esta es una corrección, la cual debería remplazar completamente a cualquier resultado previo.">
+				>
+				["at0057"] = <
+					text = <"Interpretación global">
+					description = <"Un comentario de interpretación global acerca de este análisis.">
+				>
+				["at0062"] = <
+					text = <"Identificador de la orden dado por el solicitante">
+					description = <"El ID local asignado a la orden por el solicitante. Equivalente al \"Placer Order Identifier\".">
+				>
+				["at0063"] = <
+					text = <"Identificador de la orden dado por el laboratorio receptor">
+					description = <"El ID local asignado a la orden de análisis por el laboratorio que realiza el análisis, usualmente el (LIS) Sistema de Información de Laboratorio. Equivalente al número de acceso de DICOM y el \"Filler Order Identifier\".">
+				>
+				["at0065"] = <
+					text = <"Detalle del espécimen o muestra">
+					description = <"Detalles del espécimen/muestra siendo reportada, donde todos los resultados individuales son derivados a partir de la misma muestra.">
+				>
+				["at0068"] = <
+					text = <"Identificador del resultado de análisis de laboratorio">
+					description = <"El identificador dado al resultado del análisis de laboratorio de una muestra de patología.">
+				>
+				["at0073"] = <
+					text = <"Estado del análisis">
+					description = <"El estado del análisis de laboratorio como un todo.">
+				>
+				["at0074"] = <
+					text = <"Abortado">
+					description = <"El análisis fue abortado y nunca completado.">
+				>
+				["at0075"] = <
+					text = <"Fecha/hora de envío del resultado">
+					description = <"La fecha/hora que el resultado fue enviado para el estado del análisis registrado.">
+					comment = <"La fecha/hora relacionada con el estado de los resultados es útil para el control de versiones y resultados acumulados para el informe.">
+				>
+				["at0077"] = <
+					text = <"Servicio diagnóstico">
+					description = <"El tipo de servicio diagnóstico de alto nivel. Ej. bioquímica, hematología, etc.">
+				>
+				["at0078"] = <
+					text = <"Resultado">
+					description = <"El resultado del análisis.">
+				>
+				["at0078.10"] = <
+					text = <"pH arterial">
+					description = <"El logaritmo negativo de la concentración de hidrogeniones en sangre arterial.">
+				>
+				["at0078.11"] = <
+					text = <"PaO2">
+					description = <"La presión de oxígeno en la sangre arterial.">
+				>
+				["at0078.12"] = <
+					text = <"PaCO2">
+					description = <"La presión de anhídrido carbónico en la sangre arterial. ">
+				>
+				["at0078.2"] = <
+					text = <"pH capilar">
+					description = <"El logaritmo negativo de la concentración de hidrogeniones en sangre capilar.">
+				>
+				["at0078.3"] = <
+					text = <"pH venoso">
+					description = <"El logaritmo negativo de la concentración de hidrogeniones en sangre venosa.">
+				>
+				["at0078.4"] = <
+					text = <"PvCO2">
+					description = <"La presión de anhídrido carbónico en la sangre venosa.">
+				>
+				["at0078.5"] = <
+					text = <"PvO2">
+					description = <"La presión de oxígeno en la sangre venosa.">
+				>
+				["at0078.6"] = <
+					text = <"CaO2">
+					description = <"El contenido de oxígeno de la sangre arterial.">
+				>
+				["at0078.7"] = <
+					text = <"SaO2">
+					description = <"La saturación de oxígeno de la sangre.">
+				>
+				["at0078.8"] = <
+					text = <"Diferencia alveolo-arterial de pO2">
+					description = <"La diferencia de presión de oxígeno entre el alvéolo y en la arteria.">
+				>
+				["at0078.9"] = <
+					text = <"Exceso de base">
+					description = <"El exceso de base relativo.">
+				>
+				["at0079"] = <
+					text = <"No realizado nunca">
+					description = <"El análisis no fue realizado nunca.">
+				>
+				["at0089"] = <
+					text = <"Anotación por resultado">
+					description = <"Espacio para permitir agregar una anotación a un resultado particular del análisis en tiempo de ejecución.">
+				>
+				["at0090"] = <
+					text = <"Solicitante">
+					description = <"Detalles del médico u organización solicitante del análisis de laboratorio.">
 				>
 			>
 		>
