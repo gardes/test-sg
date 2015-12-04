@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.ambient_oxygen.v1
+﻿archetype (adl_version=1.4; uid=9135677e-1a47-4a97-963f-3702a15d7b02)
+	openEHR-EHR-CLUSTER.ambient_oxygen.v0
 
 concept
 	[at0000]	-- Ambient oxygen
@@ -65,10 +65,17 @@ Where not specifically recorded, values of 21% O2, Fi02 of 0.21 and Oxygen flow 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Andrew James, University of Toronto, Canada", "Sundarasan Jaganathan NHS Scotland, United Kingdom", "Omer Hotomargolu,, Turkey", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Gregory Caulton PatientOS Inc., USA", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"BF3DE3D0860724F8F671DD7860468AB4">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"F0EB18990D68462433024A24909A046A">
+		["build_uid"] = <"37385557-2b4a-40ea-ae9b-6906be690142">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
