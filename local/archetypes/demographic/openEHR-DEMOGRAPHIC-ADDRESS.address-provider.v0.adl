@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-DEMOGRAPHIC-ADDRESS.address-provider.v1
+﻿archetype (adl_version=1.4; uid=2a012973-e12b-4463-a812-3157515381f5)
+	openEHR-DEMOGRAPHIC-ADDRESS.address-provider.v0
 specialise
 	openEHR-DEMOGRAPHIC-ADDRESS.address.v1
 
@@ -14,6 +14,12 @@ language
 				["name"] = <"Sergio Miranda Freire">
 				["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
 				["email"] = <"sergio@lampada.uerj.br">
+			>
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
 			>
 		>
 	>
@@ -31,7 +37,7 @@ description
 			use = <"Used in demographic services to register data about a healthcare provider address.">
 			keywords = <"demographic service", "healthcare provider address", "geographic location">
 			misuse = <"This archetype can not used for email address, IP address, computer address, telephone, fax and pager. For these items use the electronic_communication archetype.">
-			copyright = <"© 2011 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -39,13 +45,28 @@ description
 			use = <"Usado em serviços demográficos para registrar os detalhes de um endereço de um prestador de assistência à saúde.">
 			keywords = <"serviço demográfico", "endereço de um prestador de assistência à saúde", "localização geográfica.">
 			misuse = <"Este arquétipo não deve ser usado para endereços de correio eletrônico, endereços IP, endereços de computador, telefone, fax e pager. Para estes itens, use o arquétipo electronic_communication.">
-			copyright = <"© 2011 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"*Representação dos detalhes do endereço de um prestador de assistência à saúde. Este endereço representa uma localização geográfica que pode ser utilizada para diversos fins: consultório, endereço postal, etc.(pt-br)">
+			use = <"*Usado em serviços demográficos para registrar os detalhes de um endereço de um prestador de assistência à saúde.(pt-br)">
+			misuse = <"*Este arquétipo não deve ser usado para endereços de correio eletrônico, endereços IP, endereços de computador, telefone, fax e pager. Para estes itens, use o arquétipo electronic_communication.(pt-br)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0E8AD7C0A8009476E0E2C5E3ECE8F12E">
+		["build_uid"] = <"5a12f863-c69e-4e28-b8f3-ebff6250079b">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -471,6 +492,138 @@ ontology
 				>
 			>
 		>
+		["ar-sy"] = <
+			items = <
+				["at0.2"] = <
+					text = <"*Indicador de privacidade(pt-br)">
+					description = <"*Indica quando um mecanismo de comunicação não é para ser exibido abertamente, exceto para organizações específicas.(pt-br)">
+				>
+				["at0.3"] = <
+					text = <"*Identificador do prestador(pt-br)">
+					description = <"*Identificador de um prestador que pode acessar este meio de comunicação.(pt-br)">
+				>
+				["at0000"] = <
+					text = <"*Endereço(pt-br)">
+					description = <"*Endereço.(pt-br)">
+				>
+				["at0000.1"] = <
+					text = <"*Endereço de um Prestador de Assistência à Saúde(pt-br)">
+					description = <"*Endereço Postal de um Prestador de Assistência à Saúde.(pt-br)">
+				>
+				["at0001"] = <
+					text = <"*Itens do endereço(pt-br)">
+					description = <"*Itens do endereço.(pt-br)">
+				>
+				["at0002"] = <
+					text = <"*Linhas de endereço(pt-br)">
+					description = <"*Uma composição de um ou mais componentes padrões do endereço que fornece uma descrição geográfica/física de uma localização e que, usada em conjunto com outros componentes de nível mais alto do endereço, isto é, 'Subúrbio/cidade/nome da localidade', 'Código Postal', 'Estado/território/província', e 'País', formam um endereço geográfico/físico completo.(pt-br)">
+				>
+				["at0003"] = <
+					text = <"*Bairro(pt-br)">
+					description = <"*Bairro do Logradouro.(pt-br)">
+				>
+				["at0004"] = <
+					text = <"*Setor censitário(pt-br)">
+					description = <"*Código do setor censitário.(pt-br)">
+				>
+				["at0005"] = <
+					text = <"*Caixa Postal(pt-br)">
+					description = <"*Um número único atribuído a um endereço postal conforme designado pelo serviço postal.(pt-br)">
+				>
+				["at0006"] = <
+					text = <"*CEP(pt-br)">
+					description = <"*O código para uma área de entrega postal, alinhada com a localidade, subúrbio ou local para o endereço, conforme definido pelo serviço postal.(pt-br)">
+				>
+				["at0007"] = <
+					text = <"*Município(pt-br)">
+					description = <"*O nome completo da localidade que contém o endereço específico de uma pessoa/organização.(pt-br)">
+				>
+				["at0008"] = <
+					text = <"*Estado(pt-br)">
+					description = <"*Um identificador da Província, Estado ou Território que contém o endereço.(pt-br)">
+				>
+				["at0009"] = <
+					text = <"*País(pt-br)">
+					description = <"*Um código que representa o país componente de um endereço.(pt-br)">
+				>
+				["at0010"] = <
+					text = <"*Indicador de acurácia da data de início de validade do endereço(pt-br)">
+					description = <"*Uma indicação da acurácia da data de início de validade do endereço. Ela é expressa por meio de uma sequência de três caracteres com os valores possíveis A (acurada), E (estimada) ou U (desconhecida) cada um. Os caracteres representam a acurácia para o ano, mês e ano respectivamente. Este elemento foi introduzido para permitir a representação da acurácia de acordo com a norma ISO 22220, mas o modelo de referência do openEHR representa a acurácia da data de modo diferente (veja a especificação dos tipos de dados).(pt-br)">
+				>
+				["at0011"] = <
+					text = <"*Indicador de acurácia da data final de validade do endereço(pt-br)">
+					description = <"*Uma indicação da acurácia da data final de validade do endereço. Ela é expressa por meio de uma sequência de três caracteres com os valores possíveis A (acurada), E (estimada) ou U (desconhecida) cada um. Os caracteres representam a acurácia para o ano, mês e ano respectivamente. Este elemento foi introduzido para permitir a representação da acurácia de acordo com a norma ISO 22220, mas o modelo de referência do openEHR representa a acurácia da data de modo diferente (veja a especificação dos tipos de dados).(pt-br)">
+				>
+				["at0021"] = <
+					text = <"*Abreviação do tipo de sub-unidade(pt-br)">
+					description = <"*A especificação do tipo de uma parte identificada separadamente em um edifício/complexo, marina, etc, para distinguí-la de outras.(pt-br)">
+				>
+				["at0022"] = <
+					text = <"*Número da sub-unidade(pt-br)">
+					description = <"*A especificação do número do identificador de um edifício/complexo, marina, etc, para distinguí-lo de outros.(pt-br)">
+				>
+				["at0023"] = <
+					text = <"*Nome do edifício/propriedade(pt-br)">
+					description = <"*O nome completo usado para identificar a propriedade física ou o edifício como parte de sua localização.(pt-br)">
+				>
+				["at0024"] = <
+					text = <"*Número do andar/nível(pt-br)">
+					description = <"*Descritor usado para identificar o andar ou nível de um complexo/edifício de múltiplos andares.(pt-br)">
+				>
+				["at0025"] = <
+					text = <"*Tipo do andar/nível(pt-br)">
+					description = <"*Descritor usado para classificar o tipo de andar ou nível de um complexo/edifício de múltiplos andares.(pt-br)">
+				>
+				["at0026"] = <
+					text = <"*Número do lote(pt-br)">
+					description = <"*Seção, Número no Loteamento.(pt-br)">
+				>
+				["at0027"] = <
+					text = <"*Tipo do Logradouro(pt-br)">
+					description = <"*Um código que identifica o tipo de logradouro público.(pt-br)">
+				>
+				["at0028"] = <
+					text = <"*Logradouro(pt-br)">
+					description = <"*O nome que identifica um logradouro público e o diferencia de outros no mesmo subúrbio/cidade/localidade.(pt-br)">
+				>
+				["at0029"] = <
+					text = <"*Número(pt-br)">
+					description = <"*O número de referência (numérico ou string) da residência ou propriedade que é único em um nome de logradouro, subúrbio.(pt-br)">
+				>
+				["at0030"] = <
+					text = <"*Sufixo do logradouro(pt-br)">
+					description = <"*Termo usado para qualificar um nome de logradouro adequado para uma referência direcional.(pt-br)">
+				>
+				["at0031"] = <
+					text = <"*Visualização da linha de endereço(pt-br)">
+					description = <"*Como a linha de endereço é visualizada pelo usuário.(pt-br)">
+				>
+				["at0461"] = <
+					text = <"*Comercial(pt-br)">
+					description = <"*Usado para indicar um endereço que é a localização física de um escritório ou de um negócio no qual uma entidade pode ser contactada.(pt-br)">
+				>
+				["at0462"] = <
+					text = <"*Correio ou postal(pt-br)">
+					description = <"*Usado para indicar um endereço que é somente para correspondência e/ou cobrança.(pt-br)">
+				>
+				["at0463"] = <
+					text = <"*Acomodação temporária(pt-br)">
+					description = <"*Acomodação temporária (tal como um endereço de uma pessoa que usualmente reside no exterior ou onde o fornecedor do endereço está em uma acomodação temporária devido a renovação ou tratamento).(pt-br)">
+				>
+				["at0464"] = <
+					text = <"*Residencial(pt-br)">
+					description = <"*Usado para indicar onde a pessoa está morando. Observe que este código não é válido para organizações.(pt-br)">
+				>
+				["at0465"] = <
+					text = <"*Sem endereço fixo(pt-br)">
+					description = <"*Usado onde a pessoa não possui endereço fixo.(pt-br)">
+				>
+				["at0466"] = <
+					text = <"*Desconhecido/Não declarado/Descrito inadequadamente(pt-br)">
+					description = <"*'Desconhecido/Não declarado/Descrito inadequadamente' pode também ser usado onde a pessoa não possui endereço fixo ou não deseja ter o seu endereço residencial ou para correspondência registrado.(pt-br)">
+				>
+			>
+		>
 	>
 	constraint_definitions = <
 		["en"] = <
@@ -518,6 +671,30 @@ ontology
 				["ac0004"] = <
 					text = <"Códigos de países">
 					description = <"Códigos válidos para países.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["ac0000"] = <
+					text = <"*Códigos de tipos de edifício(pt-br)">
+					description = <"*Códigos válidos para tipo de edifício.(pt-br)">
+				>
+				["ac0001"] = <
+					text = <"*Códigos de logradouros(pt-br)">
+					description = <"*Códigos válidos para tipo de logradouro.(pt-br)">
+				>
+				["ac0002"] = <
+					text = <"*Códigos de sufixos de logradouro(pt-br)">
+					description = <"*Códigos válidos para sufixos de logradouro.(pt-br)">
+				>
+				["ac0003"] = <
+					text = <"*Códigos de estados(pt-br)">
+					description = <"*Códigos válidos para estados.(pt-br)">
+				>
+				["ac0004"] = <
+					text = <"*Códigos de países(pt-br)">
+					description = <"*Códigos válidos para países.(pt-br)">
 				>
 			>
 		>
