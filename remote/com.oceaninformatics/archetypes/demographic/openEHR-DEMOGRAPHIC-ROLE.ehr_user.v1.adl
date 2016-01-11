@@ -1,0 +1,218 @@
+﻿archetype (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-ROLE.ehr_user.v1
+
+concept
+	[at0000]	-- Nutzer
+language
+	original_language = <[ISO_639-1::de]>
+description
+	original_author = <
+		["name"] = <"Jasmin Buck">
+		["organisation"] = <"Universität Heidelberg">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Charakterisierung einers EGA Nutzers.">
+			use = <"Wird benutzt, um die Sicht auf den Nutzer abzustimmen.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+
+definition
+	ROLE[at0000] matches {
+		details matches {
+			ITEM_TREE[at0002] occurrences matches {0..1} matches {	-- User
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0003] occurrences matches {0..1} matches {	-- Einschränkung
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- motorisch
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- optisch
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- kognitiv
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..1} matches {	-- medizinische Kompetenz
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Experte
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Laie
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Bereichsbezogen
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0011] occurrences matches {0..1} matches {	-- Technikaffinität
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0012] occurrences matches {0..1} matches {	-- hoch
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {	-- gering
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0014] occurrences matches {0..1} matches {	-- Zeit
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0015] occurrences matches {0..1} matches {	-- ausreichend
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0016] occurrences matches {0..1} matches {	-- knapp
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0017] occurrences matches {0..1} matches {	-- extrem knapp
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Rolle
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Vorlieben
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Nutzer">
+					description = <"Nutzer einer EGA.">
+				>
+				["at0002"] = <
+					text = <"User">
+					description = <"Charakteristiken eines Nutzers.">
+				>
+				["at0003"] = <
+					text = <"Einschränkung">
+					description = <"Vorhandene Einschränkungen des Nutzers.">
+				>
+				["at0004"] = <
+					text = <"Motorisch">
+					description = <"Einschränkungen der Motorik.">
+				>
+				["at0005"] = <
+					text = <"Optisch">
+					description = <"Einschränkungen der Sehfähigkeit.">
+				>
+				["at0006"] = <
+					text = <"Kognitiv">
+					description = <"Einschränkungen der Kognition.">
+				>
+				["at0007"] = <
+					text = <"Medizinische Kompetenz">
+					description = <"Nutzer hat medizinsiche Kompetenzen.">
+				>
+				["at0008"] = <
+					text = <"Experte">
+					description = <"Nutzer ist ein Experte.">
+				>
+				["at0009"] = <
+					text = <"Laie">
+					description = <"Nutzer ist ein Laie.">
+				>
+				["at0010"] = <
+					text = <"Bereichsbezogen">
+					description = <"Nutzer hat in bestimmten Bereichen medizinische Kenntnisse.">
+				>
+				["at0011"] = <
+					text = <"Technikaffinität">
+					description = <"Technikaffinität des Nutzers.">
+				>
+				["at0012"] = <
+					text = <"Hoch">
+					description = <"Nutzer ist sehr technikaffin.">
+				>
+				["at0013"] = <
+					text = <"Gering">
+					description = <"Nutzer ist wenig technikaffin.">
+				>
+				["at0014"] = <
+					text = <"Zeit">
+					description = <"Zeit, die der Nutzer zum Beantworten seiner Auswertungsfragen aufbringen kann.">
+				>
+				["at0015"] = <
+					text = <"Ausreichend">
+					description = <"Zeit ist ausreichend vorhanden.">
+				>
+				["at0016"] = <
+					text = <"Knapp">
+					description = <"Zeit ist knapp.">
+				>
+				["at0017"] = <
+					text = <"Extrem knapp">
+					description = <"Zeit ist extrem knapp, z.B. in einem Notfall.">
+				>
+				["at0018"] = <
+					text = <"Rolle">
+					description = <"Rolle des Nutzers.">
+				>
+				["at0019"] = <
+					text = <"Vorlieben">
+					description = <"Vorlieben des Nutzers im Bezug auf Inhalt und Design.">
+				>
+			>
+		>
+	>

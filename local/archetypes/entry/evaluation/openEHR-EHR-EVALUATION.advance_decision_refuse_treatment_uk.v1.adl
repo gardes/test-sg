@@ -21,7 +21,7 @@ advance by a person who has capacity to do so.">
 advance by a person who has capacity to do so.">
 			keywords = <"DNACPR", "resuscitation", "EoL", "directive", "preference">
 			misuse = <"This archetype should not be used to convey the results of other advanced directives, patient preferences or resusciation activity *e.g. suction) which falls short of full cardio-pulminary resuscitation.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© Clinical Models UK">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
