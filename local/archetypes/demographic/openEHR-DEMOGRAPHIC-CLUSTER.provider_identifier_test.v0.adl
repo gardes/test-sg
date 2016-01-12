@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=91561d91-1f84-4927-97fb-ae2a353e1830)
-	openEHR-DEMOGRAPHIC-CLUSTER.provider_identifier.v0
+﻿archetype (adl_version=1.4; uid=0303e74a-075f-4e2a-ae9b-aa546f9336f6)
+	openEHR-DEMOGRAPHIC-CLUSTER.provider_identifier_test.v0
 
 concept
 	[at0000]	-- Identificador de um prestador de assistência à saúde
@@ -46,10 +46,10 @@ description
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["revision"] = <"0.0.1-alpha">
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
-		["build_uid"] = <"94837ed7-e028-4cd8-af87-de0df564e7d7">
+		["build_uid"] = <"9c7abc8e-e5c1-4fa1-8132-8efb2c75c649">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"8AA12F10C96731BC3578A2CC489879D0">
+		["MD5-CAM-1.0.1"] = <"AF62DCC24E9B61F89981311232B26A2E">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
 	>
