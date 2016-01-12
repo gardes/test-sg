@@ -16,24 +16,18 @@ language
 		["zh-cn"] = <
 			language = <[ISO_639-1::zh-cn]>
 			author = <
-				["name"] = <"Chunlan Ma; Lin Zhang">
-				["organisation"] = <"Ocean Informatics; BIPH">
-				["email"] = <"chunlan.ma@oceaninformatics.com; linforest@163.com">
+				["name"] = <"Chunlan Ma, Lin Zhang">
+				["organisation"] = <"Ocean Informatics, BIPH">
+				["email"] = <", linforest@163.com">
 			>
+			accreditation = <"What goes here?">
 		>
-		["ko"] = <
-			language = <[ISO_639-1::ko]>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
 			author = <
-				["name"] = <"Seung-Jong Yu">
-				["organisation"] = <"NOUSCO Co.,Ltd.">
-				["email"] = <"seungjong.yu@gmail.com">
-			>
-			accreditation = <"Certified Board of Family Medicine in South Korea">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
 			>
 		>
 		["es-ar"] = <
@@ -45,12 +39,10 @@ language
 			>
 			accreditation = <"Universidad de Morón">
 		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
 			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
+				["name"] = <"Mona Saleh">
 			>
 		>
 		["ru"] = <
@@ -60,13 +52,13 @@ language
 				["email"] = <"i.lizunov@infinnity.ru">
 			>
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
 			author = <
-				["name"] = <"Pablo Pazos">
-				["organisation"] = <"CaboLabs">
+				["name"] = <"Marja Buur">
+				["organisation"] = <"M.C.A.">
+				["email"] = <"m.buur-krom@mca.nl">
 			>
-			accreditation = <"Computer Engineer">
 		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
@@ -74,14 +66,6 @@ language
 				["name"] = <"Shinji Kobayashi">
 				["organisation"] = <"Kyoto University">
 				["email"] = <"skoba@moss.gr.jp">
-			>
-		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			author = <
-				["name"] = <"Marja Buur">
-				["organisation"] = <"M.C.A.">
-				["email"] = <"m.buur-krom@mca.nl">
 			>
 		>
 		["pt-br"] = <
@@ -102,6 +86,18 @@ description
 		["date"] = <"2006-03-22">
 	>
 	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the systemic arterial blood pressure of an individual.">
+			use = <"Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. The archetype is intended to capture blood pressure measurements in all clinical scenarios - for example, self-measurement with a home blood pressure machine; an emergency assessment of systolic using palpation and a sphygmomanometer; measurements taken in clinical consultations or during exercise stress testing; and a series of measurements made by a machine in Intensive Care.   
+There is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. 
+Named events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).">
+			keywords = <"observations", "measurement", "bp", "vital signs", "mean arterial pressure", "pulse pressure", "systolic", "diastolic", "RR", "NIBP">
+			misuse = <"Not to be used for intravenous pressure.
+Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
+Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
+			copyright = <"© openEHR Foundation">
+		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
 			purpose = <"個人の全身動脈血圧を記録するためのもの。">
@@ -223,46 +219,6 @@ Não deve ser usada para medida da pressão arterial que NÃO é um substituto d
 Em ambas situações use OBSERVATION.intravascular_pressure e especializações relacionadas.">
 			copyright = <"© openEHR Foundation">
 		>
-		["ko"] = <
-			language = <[ISO_639-1::ko]>
-			purpose = <"개인의 체동맥혈압 기록">
-			use = <"전신 동맥혈압측정의 모든 표현들을 저장하는데 사용, 어떤 방법 또는 신체부위와 관계없이 기록하는데 사용된다. 이 archetype은 모든 임상 시나리오에서 동맥혈압을 획득하기 위한 것이다 - 예를 들어, 가정 혈압기기를 이용한 자가 측정; 타진과 혈압계를 이용한 수축기의 응급평가; 임상 의뢰 또는 운동부하검사에서의 측정; 그리고 중환자실에서 기계에 의한 일련의 측정.
-
-여기에는 환자 자세, 운동, 혼란 변수 그리고 연구에서 틸트테이블의 각도를 통한 측정의 해석을 지원하는 풍부한 상태 모델(state model)이 있음.
-
-명명된 events는 24시간 동안의 평균에 제한되어 있지만 templates는 특정 시각 또는 기간(+/- 수학 함수)에 대한 혈압의 기록과 같은 혈압 측정을 위한 특정한 요구사항을 제공하기 위해서 default 'any event'에 추가적인 constrain을 할 수 있음.">
-			keywords = <"*관찰(ko)", "*측정(ko)", "*혈압(ko)", "*생체징후(ko)", "*평균 동맥 혈압(ko)", "*맥압(ko)", "*수축기의(ko)", "*이완기의(ko)", "*호흡수(ko)", "*비침습적 혈압(ko)">
-			misuse = <"정맥혈압 측정을 위해서 사용되지 않음.
-
-예를 들어 우폐동맥압과 같은 특별한 측정과 같이 체순환에서의 동맥압을 대신하지 않는 동맥혈압의 측정을 위해 사용되지 않음.
-
-위의 2가지 상황에서는 OBSERVATION.intravascular_pressure와 관련된 specialisations를 사용해야 함.">
-			copyright = <"© openEHR Foundation">
-		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the systemic arterial blood pressure of an individual.">
-			use = <"Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. The archetype is intended to capture blood pressure measurements in all clinical scenarios - for example, self-measurement with a home blood pressure machine; an emergency assessment of systolic using palpation and a sphygmomanometer; measurements taken in clinical consultations or during exercise stress testing; and a series of measurements made by a machine in Intensive Care.   
-There is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. 
-Named events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).">
-			keywords = <"observations", "measurement", "bp", "vital signs", "mean arterial pressure", "pulse pressure", "systolic", "diastolic", "RR", "NIBP">
-			misuse = <"Not to be used for intravenous pressure.
-Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
-Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
-			copyright = <"© openEHR Foundation">
-		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			purpose = <"Registro de la presión arterial de un paciente.">
-			use = <"Registro de la presión arterial independientemente del método y localización de la zona de la medida, para cualquier escenario clínico.">
-			keywords = <"observaciones", "medidas", "pa", "pas", "pad", "signos vitales", "presión arterial", "presión del pulso", "sistólica", "diastólica">
-			misuse = <"No se debe usar para presión intravenosa.
-
-No se debe usar para presión arterial que no sea sistémica, por ejemplo presión de la arteria pulmonar derecha.
-
-En estos casos utilizar el arquetipo OBSERVATION.intravascular_pressure.">
-			copyright = <"© openEHR Foundation">
-		>
 	>
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Knut Bernstein, MEDIQ, Denmark", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Beatriz de Faria Leão, Zilics, Brazil", "Paul Donaldson, Nursing Informatics Australia, Australia", "Jose Florez Arango, Universidad de Antioquia, Colombia", "Gerard Freriks, ERC, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Omer Hotomaroglu, Turkey", "Evelyn Hovenga, EJSH Consulting, Australia", "Derek Hoy, United Kingdom", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller-Oest, CompuGROUP Software, Germany", "Melvin Reynolds, United Kingdom", "Tony Shannon, NHS, United Kingdom", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "Stef Verlinden, Vivici, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
@@ -270,7 +226,7 @@ En estos casos utilizar el arquetipo OBSERVATION.intravascular_pressure.">
 		["references"] = <"O'Brien E, Asmar R, Beilin L, et al. European Society of Hypertension recommendations for conventional, ambulatory and home blood pressure measurement. Journal of Hypertension [Internet]. 2003 [cited 2009 Jul 30] ; 21(5):821-848. Available from http://www.bhsoc.org/bp_monitors/ESH_BP_rec.pdf
 
 Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Human blood pressure determination by sphygmomanometry. Circulation [Internet]. 1993 [cited 2009 Jul 29] 88 (5): 2460.  Available from: http://circ.ahajournals.org/cgi/reprint/88/5/2460">
-		["MD5-CAM-1.0.1"] = <"653044FE0EB159F0878054D17E0160F7">
+		["MD5-CAM-1.0.1"] = <"ECB15524E65241BBA1CC7DBA9CB22C19">
 	>
 
 definition
@@ -514,6 +470,7 @@ definition
 			}
 		}
 	}
+
 
 
 
@@ -1223,11 +1180,11 @@ ontology
 				>
 				["at0004"] = <
 					text = <"收缩压">
-					description = <"在心动周期的收缩期所测量到的体循环动脉血压峰值。">
+					description = <"在心动周期的收缩期所测量到的体循环动脉血压峰值。 ">
 				>
 				["at0005"] = <
 					text = <"舒张压">
-					description = <"在心动周期的舒张期所测量到的体循环动脉血压最低值（谷值，最小值）。">
+					description = <"在心动周期的舒张期所测量到的体循环动脉血压最低值（谷值，最小值）。 ">
 				>
 				["at0006"] = <
 					text = <"任何事件">
@@ -1308,7 +1265,7 @@ ontology
 				>
 				["at1006"] = <
 					text = <"平均动脉压">
-					description = <"又称为“平均动脉血压”，指的是在整个心脏收缩与舒张周期过程中出现的动脉压均值（平均动脉压）。">
+					description = <"又称为“平均动脉血压”，指的是在整个心脏收缩与舒张周期过程中出现的动脉压均值（平均动脉压）。 ">
 				>
 				["at1007"] = <
 					text = <"脉压">
@@ -1372,7 +1329,7 @@ ontology
 				>
 				["at1032"] = <
 					text = <"手指">
-					description = <"受检对象的手指。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录所测手指的标识信息。">
+					description = <"受检对象的手指。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录所测手指的标识信息。 ">
 				>
 				["at1033"] = <
 					text = <"位置">
@@ -1412,7 +1369,7 @@ ontology
 				>
 				["at1043"] = <
 					text = <"睡眠状态">
-					description = <"睡眠状态 - 旨在支持对于24小时流动式/门诊血压记录的解释。">
+					description = <"睡眠状态  - 旨在支持对于24小时流动式/门诊血压记录的解释。">
 				>
 				["at1044"] = <
 					text = <"警觉且清醒">
@@ -1424,7 +1381,7 @@ ontology
 				>
 				["at1051"] = <
 					text = <"脚趾">
-					description = <"受检对象的脚趾。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录所测脚趾的标识信息。">
+					description = <"受检对象的脚趾。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录所测脚趾的标识信息。 ">
 				>
 				["at1052"] = <
 					text = <"干扰因素">
@@ -1432,7 +1389,7 @@ ontology
 				>
 				["at1053"] = <
 					text = <"动脉内">
-					description = <"在动脉内借助于传感器接入线路进行的有创式测量。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录传感器的位置。">
+					description = <"在动脉内借助于传感器接入线路进行的有创式测量。如果需要的话，可在数据元“特殊位置”（Specific Location）之中记录传感器的位置。 ">
 				>
 			>
 		>
@@ -2812,469 +2769,6 @@ ontology
 				["at1053"] = <
 					text = <"Intra-arterial">
 					description = <"Medida invasiva da pressão em uma artéria acessada  por um cateter . Local do transductor pode ser registrado no elemento de dado  'Local Específico', se requerido.">
-				>
-			>
-		>
-		["ko"] = <
-			items = <
-				["at0000"] = <
-					text = <"혈압">
-					description = <"체순환에서 동맥압을 대신하는 동맥혈압의 국소 측정. 보통은 '혈압'이라는 용어의 사용은 상완에서 상완동맥의 측정을 의미함.">
-				>
-				["at0001"] = <
-					text = <"*history(en)">
-					description = <"*History Structural node.(en)">
-				>
-				["at0003"] = <
-					text = <"*blood pressure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0004"] = <
-					text = <"수축기">
-					description = <"최대 체동맥 혈압 - 심장 싸이클의 수축기에서 측정.">
-				>
-				["at0005"] = <
-					text = <"이완기">
-					description = <"최소 체동맥 혈압 - 심장 싸이클의 이완기에서 측정됨.">
-				>
-				["at0006"] = <
-					text = <"*any event(en)">
-					description = <"*Default event.(en)">
-				>
-				["at0007"] = <
-					text = <"*state structure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0008"] = <
-					text = <"자세">
-					description = <"측정 시에 대상의 자세">
-				>
-				["at0011"] = <
-					text = <"*Tree(en)">
-					description = <"*List structure.(en)">
-				>
-				["at0013"] = <
-					text = <"Cuff 크기">
-					description = <"혈압 측정을 위해 사용되는 cuff의 크기.">
-				>
-				["at0014"] = <
-					text = <"*측정 위치(ko)">
-					description = <"*혈압이 기록되는 일반적인 신체 위치(Common body sites).(ko)">
-				>
-				["at0015"] = <
-					text = <"성인 허벅지">
-					description = <"성인 허벅지을 위한 cuff - bladder가 약 20cm x 42cm.">
-				>
-				["at0016"] = <
-					text = <"*큰 성인(ko)">
-					description = <"*큰 팔을 가진 성인을 위한 cuff - bladder가 약 16cm x 38cm.(ko)">
-				>
-				["at0017"] = <
-					text = <"*성인(ko)">
-					description = <"*성인을 위한 표준인 cuff - bladder가 약 13cm x 30cm.(ko)">
-				>
-				["at0025"] = <
-					text = <"*우측 팔(ko)">
-					description = <"*사람의 우측 팔.(ko)">
-				>
-				["at0026"] = <
-					text = <"*좌측 팔(ko)">
-					description = <"*사람의 좌측 팔.(ko)">
-				>
-				["at0027"] = <
-					text = <"*우측 허벅지(ko)">
-					description = <"*사람의 우측 허벅지.(ko)">
-				>
-				["at0028"] = <
-					text = <"*좌측 허벅지(ko)">
-					description = <"*사람의 좌측 허벅지.(ko)">
-				>
-				["at0033"] = <
-					text = <"*코멘트(ko)">
-					description = <"*혈압 측정에 관한 코멘트.(ko)">
-				>
-				["at1000"] = <
-					text = <"선 자세">
-					description = <"혈압측정 시에 서있는 자세.">
-				>
-				["at1001"] = <
-					text = <"앉은 자세">
-					description = <"혈압 측정시에 앉은 자세(침대 또는 의자).">
-				>
-				["at1002"] = <
-					text = <"비스듬한 자세">
-					description = <"혈압 측정시에 비스듬한 자세(reclining).">
-				>
-				["at1003"] = <
-					text = <"누운 자세">
-					description = <"혈압 측정시에 바로 누운 자세.">
-				>
-				["at1005"] = <
-					text = <"기울림(Tilt)">
-					description = <"측정 시에 사람이 누워있는 면의 기울임 상태.">
-				>
-				["at1006"] = <
-					text = <"평균 동맥압">
-					description = <"심장의 수축과 이완 싸이클 전체과정 동안에 발생하는 평균 동맥압.">
-				>
-				["at1007"] = <
-					text = <"맥압">
-					description = <"수축기와 이완기 혈압 간의 차이.">
-				>
-				["at1008"] = <
-					text = <"*작은 성인(ko)">
-					description = <"*작은 성인을 위해 사용되는 cuff - bladder가 약 10cm x 24cm.(ko)">
-				>
-				["at1009"] = <
-					text = <"*소아/아동(ko)">
-					description = <"*아동이나 얋은 팔을 가진 성인에게 적합한 cuff - bladder가 약 8cm x 21cm.(ko)">
-				>
-				["at1010"] = <
-					text = <"*이완기 종점(ko)">
-					description = <"*청진법을 이용하여 이완기 압력을 결정하는데 사용되는 Korotkoff sound를 기록.(ko)">
-				>
-				["at1011"] = <
-					text = <"*Phase IV(en)">
-					description = <"*4번째 Korotkoff sound가 갑작스런 약해지는 소리로 확인된다.(ko)">
-				>
-				["at1012"] = <
-					text = <"*Phase V(en)">
-					description = <"*5번째 Korotkoff sound는 cuff 압력이 이완기 혈압 아래로 떨어져 소리가 없어짐으로써 확인된다.(ko)
-
-">
-				>
-				["at1014"] = <
-					text = <"왼쪽으로 누운 자세">
-					description = <"보통 왼쪽으로 기울린, 옆쪽으로 기울여 누운 자세. 보통 임신 3기에 동정맥압력을 완화하기위해 필요함.">
-				>
-				["at1018"] = <
-					text = <"*영아(ko)">
-					description = <"*영아을 위해 사용되는 cuff - bladder가 약 5cm x 15cm.(ko)">
-				>
-				["at1019"] = <
-					text = <"*신생아(ko)">
-					description = <"*신생아를 위해 사용되는 cuff, cuff는 신생아의 성숙도와 몸무게에 대한 적절한 크기가 가정됨.(ko)">
-				>
-				["at1020"] = <
-					text = <"*우측 손목(ko)">
-					description = <"*대상의 우측 손목.(ko)">
-				>
-				["at1021"] = <
-					text = <"*좌측 손목(ko)">
-					description = <"*대상의 좌측 손목.(ko)">
-				>
-				["at1025"] = <
-					text = <"*장비(ko)">
-					description = <"*혈압을 측정하는데 사용되는 혈압계 또는 기타 장비에 대한 상세내용.(ko)">
-				>
-				["at1026"] = <
-					text = <"*우측 발목(ko)">
-					description = <"*대상의 우측 발목.(ko)">
-				>
-				["at1030"] = <
-					text = <"노력">
-					description = <"혈압 측정시에 수행 중인 육체활동에 대한 상세내용.">
-				>
-				["at1031"] = <
-					text = <"*좌측 발목(ko)">
-					description = <"**대상의 좌측 발목.(ko)">
-				>
-				["at1032"] = <
-					text = <"*손가락(ko)">
-					description = <"*대상의 손가락. 필요하다면 손가락의 식별은 'Specific Location' data element에 기록될 수 있다.(ko)">
-				>
-				["at1033"] = <
-					text = <"*위치(ko)">
-					description = <"*혈압이 측정되는 신체 위치. Common site에서 선택된 'Location of measurement'를 사용. 특정한 상세내용 또는 common set에 없는 위치를 기록 혹은 외부 용어체계를 참조하기 위해서는 'Specific location'를 사용.(ko)
-
-
-
-">
-				>
-				["at1034"] = <
-					text = <"*특정 위치(Specific location)(ko)">
-					description = <"*혈압이 기록되는 신체 위치에 대한 특별한 상세내역.(ko)">
-				>
-				["at1035"] = <
-					text = <"*측정 방법(ko)">
-					description = <"*혈압 측정의 방법.(ko)">
-				>
-				["at1036"] = <
-					text = <"*청진(ko)">
-					description = <"*청진기와 Korotkoff sounds을 사용하여 외부에서 혈압을 측정하는 방법.(ko)">
-				>
-				["at1037"] = <
-					text = <"*타진(ko)">
-					description = <"*(보통 상완 또는 요골동맥의) 타진을 사용하여 외부에서 혈압을 측정하는 방법.(ko)">
-				>
-				["at1038"] = <
-					text = <"*평균 동맥압 공식(ko)">
-					description = <"*(데이터 내에 기록되어 있다면) MAP를 계산하는데 사용되는 공식.(ko)">
-				>
-				["at1039"] = <
-					text = <"*장비(ko)">
-					description = <"*혈압 측정 장비를 사용하여 외부에서 혈압을 측정하는 방법.(ko)">
-				>
-				["at1040"] = <
-					text = <"*침습적 방법(ko)">
-					description = <"*내부에서 즉 피부를 통과하여 혈관 내에서 혈압을 측정하는 방법.(ko)">
-				>
-				["at1042"] = <
-					text = <"24시간 평균">
-					description = <"24시간 동안의 평균 혈압의 추정.">
-				>
-				["at1043"] = <
-					text = <"수면 상태">
-					description = <"수면 상태 - 24시간 활동 혈압기록에 대한 해석 지원.">
-				>
-				["at1044"] = <
-					text = <"각성과 기상 상태">
-					description = <"대상은 완전한 의식이 있다.">
-				>
-				["at1045"] = <
-					text = <"수면 상태">
-					description = <"대상은 신체적으로 자연적인 휴식 상태에 있다.">
-				>
-				["at1051"] = <
-					text = <"*발가락(ko)">
-					description = <"*대상의 발가락. 필요하다면 발가락의 식별은 'Specific Location' data element에 기록될 수 있다.(ko)">
-				>
-				["at1052"] = <
-					text = <"혼란변수">
-					description = <"혈압측정에 영향을 줄 수 있는 기타 우연한 변수들에 대한 코멘트와 기록. 예를 들어, 불안 또는 '백의신드롬'의 레벨; 통증 또는 발열; 대기압의 변화 등.">
-				>
-				["at1053"] = <
-					text = <"*동맥 내(ko)">
-					description = <"*동맥 내에 탐촉자 접근 선(transducer access line)을 통한 침습적인 측정. 필요하다면 탐촉자의 위치는 'Specific Location' data element에 기록될 수 있다.(ko)">
-				>
-			>
-		>
-		["es"] = <
-			items = <
-				["at0000"] = <
-					text = <"Presión arterial">
-					description = <"Medida de la presión arterial">
-				>
-				["at0001"] = <
-					text = <"*history(en)">
-					description = <"*History Structural node.(en)">
-				>
-				["at0003"] = <
-					text = <"blood pressure">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Sistólica">
-					description = <"Presión arterial sistólica">
-				>
-				["at0005"] = <
-					text = <"Diastólica">
-					description = <"Presión arterial diastólica">
-				>
-				["at0006"] = <
-					text = <"*any event(en)">
-					description = <"*Default event.(en)">
-				>
-				["at0007"] = <
-					text = <"state structure">
-					description = <"@ internal @">
-				>
-				["at0008"] = <
-					text = <"Posición">
-					description = <"Posición del paciente en el momento de la medida">
-				>
-				["at0011"] = <
-					text = <"*Tree(en)">
-					description = <"*List structure.(en)">
-				>
-				["at0013"] = <
-					text = <"Tamaño del manguito">
-					description = <"Tamaño del manguito utilizado para medir la presión">
-					comment = <"*Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Human blood pressure determination by sphygmomanometry. Circulation 1993;88;2460-2470. (en)">
-				>
-				["at0014"] = <
-					text = <"Ubicación de la medida">
-					description = <"Sitios comunes del cuerpo dónde se realizan medidas de presión arterial">
-				>
-				["at0015"] = <
-					text = <"Muslo adulto">
-					description = <"El tamaño del manguito es para un muslo adulto 20cm x 42cm aprox">
-				>
-				["at0016"] = <
-					text = <"Adulto grande">
-					description = <"El tamaño del manguito es de un adulto grande 16cm x 38cm aprox">
-				>
-				["at0017"] = <
-					text = <"Adulto">
-					description = <"El tamaño del manguito es para un adulto promedio 13cm x 30cm aprox">
-				>
-				["at0025"] = <
-					text = <"Brazo derecho">
-					description = <"Brazo derecho del paciente">
-				>
-				["at0026"] = <
-					text = <"Brazo izquierdo">
-					description = <"Brazo izquierdo del paciente">
-				>
-				["at0027"] = <
-					text = <"Muslo derecho">
-					description = <"Muslo derecho del paciente">
-				>
-				["at0028"] = <
-					text = <"Muslo izquierdo">
-					description = <"Muslo izquierdo del paciente">
-				>
-				["at0033"] = <
-					text = <"Comentario">
-					description = <"Comentario sobre la medida de la presión arterial">
-				>
-				["at1000"] = <
-					text = <"Parado">
-					description = <"El paciente está parado en el momento de la medida">
-				>
-				["at1001"] = <
-					text = <"Sentado">
-					description = <"El paciente está sentado en el momento de la medida">
-				>
-				["at1002"] = <
-					text = <"Reclinado">
-					description = <"El paciente está reclinado en el momento de la medida">
-				>
-				["at1003"] = <
-					text = <"Acostado">
-					description = <"El paciente está acostado en el momento de la meidda">
-				>
-				["at1005"] = <
-					text = <"Inclinado">
-					description = <"El paciente se encuentra acostado sobre una superficie inclinada">
-				>
-				["at1006"] = <
-					text = <"Presión arterial media">
-					description = <"Promedio del a presión arterial que ocurre en el ciclo completo de contracción y relajación del corazón.">
-				>
-				["at1007"] = <
-					text = <"Presión del pulso">
-					description = <"Diferencia entre la presión sistólica y la diastólica.">
-				>
-				["at1008"] = <
-					text = <"Adulto pequeño">
-					description = <"Tamaño del manguito para un adulto pequeño 10cm x 24cm aprox">
-				>
-				["at1009"] = <
-					text = <"Pediátrico">
-					description = <"Tamaño del manguito pediátrico 8cm x 21cm aprox">
-				>
-				["at1010"] = <
-					text = <"Punto final diastólica">
-					description = <"Registra que sonido de Korotkoff se utiliza para determinar la presión arterial utilizando el método auscultativo">
-				>
-				["at1011"] = <
-					text = <"Fase IV">
-					description = <"El cuarto sonido de Korotkoff es identificado como amortiguación abrupta de sonidos">
-				>
-				["at1012"] = <
-					text = <"Fase V">
-					description = <"El quinto sonido de Korotkoff se identifica con la ausencia de sonidos a medida que la presión del manguito decrece por debajo de la presión diastólica">
-				>
-				["at1014"] = <
-					text = <"Acostado inclinado hacia la izquierda">
-					description = <"Acostado con inclinación lateral hacia la izquierda">
-				>
-				["at1018"] = <
-					text = <"Infante">
-					description = <"Tamaño del manguito para infantes 5cm x 15cm aprox">
-				>
-				["at1019"] = <
-					text = <"Neonato">
-					description = <"Tamaño del manguito para un neonato">
-				>
-				["at1020"] = <
-					text = <"Muñeca derecha">
-					description = <"Muñeca derecha del paciente">
-				>
-				["at1021"] = <
-					text = <"Muñeca izquierda">
-					description = <"Muñeca izquierda del paciente">
-				>
-				["at1025"] = <
-					text = <"Dispositivo">
-					description = <"Detalles del tensiómetro u otro dispositivo utilizado para medir la presión arterial">
-				>
-				["at1026"] = <
-					text = <"Tobillo derecho">
-					description = <"Tobillo derecho del paciente">
-				>
-				["at1030"] = <
-					text = <"Ejercicio">
-					description = <"Detalles sobre actividad física durante la medida de la presión arterial">
-				>
-				["at1031"] = <
-					text = <"Tobillo izquierdo">
-					description = <"Tobillo izquierdo del paciente">
-				>
-				["at1032"] = <
-					text = <"Dedo de la mano">
-					description = <"Dedo de la mano del paciente. El dedo específico puede ser registrado en la ubicación específica.">
-				>
-				["at1033"] = <
-					text = <"Ubicación">
-					description = <"Ubicación del cuerpo donde se realiza la medida.">
-				>
-				["at1034"] = <
-					text = <"Ubicación específica">
-					description = <"Ubicación específica del lugar del cuerpo donde se hizo la medida de la presión">
-				>
-				["at1035"] = <
-					text = <"Método">
-					description = <"Método de medida de la presión">
-				>
-				["at1036"] = <
-					text = <"Auscultación">
-					description = <"Método de medida externo, utilizando un estetoscopio y los sonidos de Korotkoff">
-				>
-				["at1037"] = <
-					text = <"Palpación">
-					description = <"Método de medida externo, utilizando palpación, en general de la arteria braquial o radial">
-				>
-				["at1038"] = <
-					text = <"Fórmula de la presión arterial media">
-					description = <"Fórmula utilizada para medir la presión arterial media">
-				>
-				["at1039"] = <
-					text = <"Dispositivo">
-					description = <"Método de medida externo mediante un dispositivo o máquina">
-				>
-				["at1040"] = <
-					text = <"Invasivo">
-					description = <"Método de medida interno, involucra penetración de la piel y medida dentro de los vasos sanguíneos">
-				>
-				["at1042"] = <
-					text = <"promedio en 24 horas">
-					description = <"Estimación de la presión arterial promedio dentro de las 24 horas">
-				>
-				["at1043"] = <
-					text = <"Estado de sueño">
-					description = <"Soporta la interpretación de los registros de presión arterial ambulatoria de 24 horas">
-				>
-				["at1044"] = <
-					text = <"alerta y despierto">
-					description = <"El paciente está totalmente conciente">
-				>
-				["at1045"] = <
-					text = <"Durmiendo">
-					description = <"El paciente está durmiendo">
-				>
-				["at1051"] = <
-					text = <"Dedo del pie">
-					description = <"Dedo del pie del paciente. El dedo específico puede ser registrado en la ubicación específica.">
-				>
-				["at1052"] = <
-					text = <"Factores de confusión">
-					description = <"Registro de factores que pueden afectar la medida">
-				>
-				["at1053"] = <
-					text = <"Intra-arterial">
-					description = <"Método invasivo de toma de la presión intra-arterial">
 				>
 			>
 		>

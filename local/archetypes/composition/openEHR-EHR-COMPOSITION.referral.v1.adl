@@ -19,14 +19,13 @@ description
 			use = <"">
 			keywords = <"referral", "request">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">
 	other_contributors = <"Heather Leslie", ...>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"6DB82589E80219EF8BA863CAFC2C8EC9">
+		["MD5-CAM-1.0.1"] = <"9D3293E9307FCE0486D7D435BFCE5475">
 	>
 
 definition
@@ -57,24 +56,13 @@ definition
 				other_context matches {
 					ITEM_TREE[at0001] matches {	-- Tree
 						items cardinality matches {3..*; unordered} matches {
-							ELEMENT[at0028] occurrences matches {0..1} matches {	-- Requestor Identifier
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							allow_archetype CLUSTER[at0038] occurrences matches {0..*} matches {	-- Patient
+							allow_archetype CLUSTER[at0042] occurrences matches {1..*} matches {	-- Health Event Context
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.individual_personal(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event_context\.v2/}
 							}
-							ELEMENT[at0039] occurrences matches {0..1} matches {	-- DateTime attested
-								value matches {
-									DV_DATE_TIME matches {*}
-								}
-							}
-							ELEMENT[at0040] occurrences matches {0..1} matches {	-- Document Status
-								value matches {
-									DV_TEXT matches {*}
-								}
+							allow_archetype CLUSTER[at0041] occurrences matches {1..*} matches {	-- Document Context
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_context\.v2/}
 							}
 						}
 					}
@@ -83,7 +71,6 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -91,14 +78,11 @@ ontology
 				["at0000"] = <
 					text = <"Referral document">
 					description = <"A document expressing all information required to make a request for provision of a specified service by another healthcare provider or organisation.">
+					spec_id = <"2">
 				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
-				>
-				["at0028"] = <
-					text = <"Requestor Identifier">
-					description = <"Copy of INSTRUCTION.request-referral's Requestor Identifier.">
 				>
 				["at0033"] = <
 					text = <"Clinician making Referral">
@@ -120,17 +104,13 @@ ontology
 					text = <"General Practitioner">
 					description = <"*">
 				>
-				["at0038"] = <
-					text = <"Patient">
-					description = <"Details about the patient to be explicitly expressed in the referral document.">
+				["at0041"] = <
+					text = <"Document Context">
+					description = <"The context of the document, including the document control information.">
 				>
-				["at0039"] = <
-					text = <"DateTime attested">
-					description = <"Date/Time that the referral has been authorised or approved.">
-				>
-				["at0040"] = <
-					text = <"Document Status">
-					description = <"*">
+				["at0042"] = <
+					text = <"Health Event Context">
+					description = <"The contextual elements of the event, including patient information.">
 				>
 			>
 		>

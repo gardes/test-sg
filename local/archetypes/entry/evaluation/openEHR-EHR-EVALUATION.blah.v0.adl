@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=ba2f44eb-f5ea-4d24-af00-467af86c64bf)
+	openEHR-EHR-EVALUATION.blah.v0
+
+concept
+	[at0000]	-- Blah
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"0.0.1-alpha">
+		["build_uid"] = <"8af5f9ea-f137-4088-aac7-6c6ca1f5340f">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A52D96478080883DAF7E4CD25158F7E1">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Blah
+		data matches {*}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Blah">
+					description = <"unknown">
+				>
+			>
+		>
+	>
