@@ -1,0 +1,85 @@
+﻿archetype (adl_version=1.4; uid=52b2bc29-17db-46a6-bb9e-ba268e0dcd00)
+	openEHR-EHR-CLUSTER.slottest.v0
+
+concept
+	[at0000]	-- Slottest
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Nauman Akbar">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing purpose.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Ocean Informatics, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["build_uid"] = <"033057d6-c436-49fa-a418-083f3ff59dfc">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"95D348D0F1C2EE1051AA138E0C5B890A">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Slottest
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype CLUSTER[at0001] occurrences matches {0..*} matches {	-- Child1
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.change(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Child2
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {	-- Child3
+				include
+					archetype_id/value matches {/.*/}
+				exclude
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.document_entry_metadata(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.household(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {	-- Child4
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Slottest">
+					description = <"">
+				>
+				["at0001"] = <
+					text = <"Child1">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Child2">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Child3">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Child4">
+					description = <"">
+				>
+			>
+		>
+	>
