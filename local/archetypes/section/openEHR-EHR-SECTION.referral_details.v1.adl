@@ -7,34 +7,39 @@ language
 	original_language = <[ISO_639-1::en]>
 description
 	original_author = <
-		["name"] = <"">
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"07/03/2010">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Section contain the instruction information related to the referral.  ">
+			purpose = <"To demonstrate a design pattern for representation of an Referral Request.">
 			use = <"Use within a COMPOSITION related to referral, such as COMPOSITION.referral.
 Supporting summary information can be added to the COMPOSITION slots - for example, SECTION.adverse_list, SECTION.problem_list, SECTION.medication_order_list.">
-			keywords = <"request", "referral">
+			keywords = <"referral", "request">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	lifecycle_state = <"0">
+	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"412EC68BEBA08464C6491C0F8AB1ECC4">
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"77FF1F18C4DC89FD43CAA1B5D5E03CE2">
 	>
 
 definition
 	SECTION[at0000] matches {	-- Referral Details
-		items cardinality matches {1..*; unordered} matches {
-			allow_archetype ENTRY[at0002] occurrences matches {0..*} matches {	-- Referral Details 
+		items cardinality matches {0..*; unordered} matches {
+			allow_archetype INSTRUCTION[at0001] occurrences matches {0..1} matches {	-- Referral Request
 				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.referral\.v1/}
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -42,10 +47,10 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Referral Details">
-					description = <"unknown">
+					description = <"To demonstrate a design pattern for representation Referral details within a Referral composition.">
 				>
-				["at0002"] = <
-					text = <"Referral Details ">
+				["at0001"] = <
+					text = <"Referral Request">
 					description = <"Slot constrained to specifically include archetypes representing referral requests.">
 				>
 			>
