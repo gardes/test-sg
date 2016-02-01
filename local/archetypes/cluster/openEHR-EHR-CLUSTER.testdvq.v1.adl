@@ -27,8 +27,8 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"92D750FA8B3B2E4E27B123A5E1A1B01E">
-		["build_uid"] = <"f0ece695-aa07-4d99-ae2e-e5fec17da35d">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"4e6af88e-00c9-4d10-bb01-40e79432c8f3">
+		["revision"] = <"1.1.0">
 	>
 
 definition
