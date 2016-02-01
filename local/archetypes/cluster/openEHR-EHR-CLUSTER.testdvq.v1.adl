@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=1aa8ab4f-d762-477e-83b1-ac10a9db0f28)
-	openEHR-EHR-CLUSTER.testdvq.v0
+﻿archetype (adl_version=1.4; uid=2e728db3-0a18-4b97-959c-ab74b41c2d5d)
+	openEHR-EHR-CLUSTER.testdvq.v1
 
 concept
 	[at0000]	-- Testdvq
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E10EDBA8A4EC9901DC075DDF01825D65">
-		["build_uid"] = <"8e7c07e1-90f3-4887-9a3c-b71559e6e119">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"92D750FA8B3B2E4E27B123A5E1A1B01E">
+		["build_uid"] = <"f0ece695-aa07-4d99-ae2e-e5fec17da35d">
+		["revision"] = <"1.0.0">
 	>
 
 definition
