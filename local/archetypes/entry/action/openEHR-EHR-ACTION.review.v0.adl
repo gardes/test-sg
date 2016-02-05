@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-ACTION.review.v1
+﻿archetype (adl_version=1.4; uid=48f7fd34-3593-4bd9-b990-25caf80470fa)
+	openEHR-EHR-ACTION.review.v0
 
 concept
 	[at0000]	-- Review
@@ -22,11 +22,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"D6E52ED907C796AABE429BFA416B894A">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"CD8A49B84AF9F304BAD85CBB1C7868FE">
+		["build_uid"] = <"c1d7717a-d270-43e3-acc4-58e5213e36d7">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
