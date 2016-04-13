@@ -22,10 +22,12 @@ language
 			>
 			accreditation = <"What goes here?">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
 			author = <
-				["name"] = <"Mona Saleh">
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
 			>
 		>
 		["es-ar"] = <
@@ -36,12 +38,10 @@ language
 			>
 			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
 		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
 			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
+				["name"] = <"Mona Saleh">
 			>
 		>
 		["pt-br"] = <

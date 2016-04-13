@@ -5,14 +5,6 @@ concept
 	[at0000]	-- Timing
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			author = <
-				["name"] = <"?">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Sam Heard">
@@ -27,14 +19,6 @@ description
 			use = <"For use with medication orders and other instructions where timing is complex and needs to be computable.">
 			keywords = <"timing", "administration", "dosing", "frequency">
 			misuse = <"Not to be used for specific timing but for scheduling of tasks that need repeating.">
-			copyright = <"© openEHR Foundation">
-		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*To provide structured information on timing that is suitable for computation and display for human interpretation.(en)">
-			use = <"*For use with medication orders and other instructions where timing is complex and needs to be computable.(en)">
-			keywords = <"*timing(en)", "*administration(en)", "*dosing(en)", "*frequency(en)">
-			misuse = <"*Not to be used for specific timing but for scheduling of tasks that need repeating.(en)">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -166,7 +150,6 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -264,92 +247,92 @@ ontology
 		["sl"] = <
 			items = <
 				["at0000"] = <
-					text = <"Podrobn časovna opredelitev">
-					description = <"Strukturirana informacija o časovni opredelitvi (planirani ali dejanski) nameravane ali izvedene aktivnosti (intervencije) ki je bila planirana za izvedbo (npr. administracija ali dodelitev terapije; neka druga klinična aktivnost...)">
+					text = <"*Timing(en)">
+					description = <"*Structured information about the timing (intended or actual) of administration or use of a medicine, other therapeutic good or other intervention that is given on a scheduled basis.(en)">
 				>
 				["at0001"] = <
-					text = <"Dnevni odmerek">
+					text = <"*Daily count(en)">
 					description = <"*This is the actual or maximum number of doses or other interventions that are to be administered in a 24 hour period.(en)">
 				>
 				["at0003"] = <
-					text = <"Pogostost">
+					text = <"*Frequency(en)">
 					description = <"*The frequency as number of times per time period that the intervention is to take place.(en)">
 				>
 				["at0004"] = <
-					text = <"Čas">
+					text = <"*Time(en)">
 					description = <"*Specific time(s) during the day when the intervention should be applied.(en)">
 				>
 				["at0005"] = <
-					text = <"Dan v mesecu">
+					text = <"*Day of month(en)">
 					description = <"*The specific and repeating day(s) of the month e.g. if it is required to give a dose on the 2nd day of each month then the value is 2.(en)">
 				>
 				["at0006"] = <
-					text = <"Dan v tednu">
+					text = <"*Day of week(en)">
 					description = <"*The specific and repeating day(s) of the week.(en)">
 				>
 				["at0007"] = <
-					text = <"Ponedeljek">
+					text = <"*Monday(en)">
 					description = <"*Monday.(en)">
 				>
 				["at0008"] = <
-					text = <"Torek">
+					text = <"*Tuesday(en)">
 					description = <"*Tuesday.(en)">
 				>
 				["at0009"] = <
-					text = <"Sreda">
+					text = <"*Wednesday(en)">
 					description = <"*Wednesday.(en)">
 				>
 				["at0010"] = <
-					text = <"Četrtek">
+					text = <"*Thursday(en)">
 					description = <"*Thursday.(en)">
 				>
 				["at0011"] = <
-					text = <"Petek">
+					text = <"*Friday(en)">
 					description = <"*Friday.(en)">
 				>
 				["at0012"] = <
-					text = <"Sobota">
+					text = <"*Saturday(en)">
 					description = <"*Saturday.(en)">
 				>
 				["at0013"] = <
-					text = <"Nedelja">
+					text = <"*Sunday(en)">
 					description = <"*Sunday.(en)">
 				>
 				["at0014"] = <
-					text = <"Interval">
+					text = <"*Interval(en)">
 					description = <"*The length of time between doses or interventions. 8 Hourly is PT8H, monthly is P1M, every hour and a half is PT1H30M.(en)">
 				>
 				["at0015"] = <
-					text = <"Spremenljiva pogostost">
+					text = <"*Variable frequency(en)">
 					description = <"*Details of variable upper and lower frequency e.g. 3-4 times a day.(en)">
 				>
 				["at0016"] = <
-					text = <"Višja">
+					text = <"*Upper(en)">
 					description = <"*The upper value of frequency.(en)">
 				>
 				["at0017"] = <
-					text = <"Nižja">
+					text = <"*Lower(en)">
 					description = <"*The lower value of frequency.(en)">
 				>
 				["at0018"] = <
-					text = <"Datum">
-					description = <"*A specific date when the intervention is to take place.(en)">
+					text = <"*Date(en)">
+					description = <"*Actual dates.(en)">
 				>
 				["at0019"] = <
-					text = <"Spremenljiv interval">
+					text = <"*Variable interval(en)">
 					description = <"*Details of variable upper and lower intervals e.g. every 2-3 hours.(en)">
 				>
 				["at0020"] = <
-					text = <"Višji">
+					text = <"*Upper(en)">
 					description = <"*The upper value of the interval.(en)">
 				>
 				["at0021"] = <
-					text = <"Nižji">
+					text = <"*Lower(en)">
 					description = <"*The lower value of the interval.(en)">
 				>
 				["at0022"] = <
-					text = <"*Parsable syntax(en)">
-					description = <"*Complex intervention timing recorded as a parsable syntax.(en)">
+					text = <"*New element(en)">
+					description = <"**(en)">
 				>
 			>
 		>

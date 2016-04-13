@@ -27,23 +27,25 @@ This archetype has been designed to capture screening assessment for hearing, us
 - Visual Reinforcement Orientation Audiometry.
 
 All of the data elements are recorded using a single method or protocol. If, during the test, any of the protocol parameters need to be modified, then the subsequent part of the test will need to be recorded within a separate instance of the test data, using the updated protocol parameters.">
-			keywords = <"hearing", "test", "audiogram", "audiometry", "acuity", "threshold", "decibels", "screen", "screening", "VROA", "VRA", "play", "AABR", "neonatal">
+			keywords = <"hearing", "test", "audiometry", "acuity", "decibels", "screen", "screening", "VROA", "VRA", "play", "AABR", "neonatal", "audiogram">
 			misuse = <"Not to be used for hearing threshold assessment - use the OBSERVATION.audiogram archetype.
 
 Not to be used to record other auditory assessments such as:
 - Behavioural Observation Audiometry (BOA);
-- Most Comfortable Listening Level (MCL) and Uncomfortable Listening Level (UCL); and
-- Auditory Brainstem Response (ABR) for diagnostic purposes.
+- Most Comfortable Listening Level (MCL) and Uncomfortable Listening Level (UCL);
+- Auditory Brainstem Response (ABR) for diagnostic purposes
+- Transient Evoked Otoacoustic Emission (TEOAE); and
+- Distortion Product Otoacoustic Emission (DPOAE).
 These assessments need to be recorded in specific archetypes for the purpose.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"CommitteeDraft">
-	other_contributors = <"Anthony Leech, Hearing Health, Australia", "Stephen Chu, NEHTA, Australia", "Kathy Currie, Program Leader,NT  Hearing Health Program, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mark Ramjan, NT Department of Health, Australia", "Fiona Wake, RAHC, Australia">
+	other_contributors = <"Stephen Chu, NEHTA, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Fiona Wake, RAHC, Australia", "Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Lisa Dawson, NT Hearing Services, Australia">
 	other_details = <
-		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"8E696D80A808927D000394528C8D1B3C">
+		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
+		["MD5-CAM-1.0.1"] = <"FD8EE8563850DEC7497FE23AC0411E8B">
 	>
 
 definition
@@ -83,19 +85,14 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"Hz">
-																		magnitude = <|125.0..16000.0|>
+																		magnitude = <|500.0..4000.0|>
 																		precision = <|0|>
 																	>
 																	["2"] = <
 																		units = <"kHz">
-																		magnitude = <|0.125..16.0|>
-																		precision = <|3|>
+																		magnitude = <|0.5..4.0|>
+																		precision = <|1|>
 																	>
-																>
-																assumed_value = <
-																	magnitude = <0.125>
-																	units = <"kHz">
-																	precision = <3>
 																>
 															>
 														}
@@ -107,7 +104,7 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"dB">
-																		magnitude = <|-10.0..120.0|>
+																		magnitude = <|0.0..50.0|>
 																		precision = <|0|>
 																	>
 																>
@@ -161,7 +158,49 @@ definition
 													426, 
 													427, 
 													428, 
-													429]
+													429, 
+													401, 
+													402, 
+													404, 
+													405, 
+													406, 
+													407, 
+													414, 
+													415, 
+													416, 
+													417, 
+													418, 
+													419, 
+													420, 
+													421, 
+													422, 
+													423, 
+													424, 
+													387, 
+													388, 
+													389, 
+													390, 
+													391, 
+													392, 
+													393, 
+													394, 
+													395, 
+													396, 
+													397, 
+													398, 
+													399, 
+													400, 
+													409, 
+													410, 
+													411, 
+													412, 
+													413, 
+													517, 
+													518, 
+													519, 
+													637, 
+													682, 
+													683]
 												}
 											}
 										}
@@ -209,10 +248,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0076, 	-- Audiometric booth
-									at0077, 	-- Minimal background noise
-									at0078, 	-- Moderate background noise
-									at0079]	-- High background noise
+									at0076, 	-- Audiometric Booth
+									at0077, 	-- Minimal Background Noise
+									at0078, 	-- Moderate Background Noise
+									at0079]	-- High Background Noise
 								}
 							}
 						}
@@ -222,9 +261,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0035, 	-- Tone burst
 									at0036, 	-- Click
-									at0080, 	-- Warble tone
+									at0035, 	-- Tone Burst
+									at0080, 	-- Warble Tone
+									at0141, 	-- Narrow Band Noise
 									at0081]	-- Pure Tone
 								}
 							}
@@ -232,11 +272,11 @@ definition
 					}
 					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {	-- Test Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-hearing_test(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-hearing_test_instrument(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[at0116] occurrences matches {0..*} matches {	-- Earphones
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-earphones(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-headphone(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[at0134] occurrences matches {0..2} matches {	-- Reliability
 						value matches {
@@ -292,11 +332,6 @@ definition
 												precision = <|0|>
 											>
 										>
-										assumed_value = <
-											magnitude = <0.0>
-											units = <"dB">
-											precision = <0>
-										>
 									>
 								}
 							}
@@ -311,7 +346,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
@@ -391,8 +425,8 @@ ontology
 					description = <"Identification of the frequency-specific stimulus used in screening.">
 				>
 				["at0035"] = <
-					text = <"Tone burst">
-					description = <"The test stimulus is a tone burst.">
+					text = <"Tone Burst">
+					description = <"The test stimulus is a tone burst centred on the specified frequency.">
 				>
 				["at0036"] = <
 					text = <"Click">
@@ -401,7 +435,7 @@ ontology
 				["at0037"] = <
 					text = <"Test Result Name">
 					description = <"Identification of the type of screening test performed.">
-					comment = <"Coding with an external terminology is preferred, where possible. Applicable tests include: Pure Tone Audiometry; Play Audiometry; Auditory Brainstem Response (for threshold determination); Automated Auditory Brainstem Response; and Visual Reinforcement Orientation Audiometry.">
+					comment = <"Coding with an external terminology is preferred, where possible. Applicable tests using a screening protocol include: Pure Tone Audiometry; Play Audiometry; Auditory Brainstem Response; Automated Auditory Brainstem Response; and Visual Reinforcement Orientation Audiometry.">
 				>
 				["at0047"] = <
 					text = <"Test Device">
@@ -435,28 +469,28 @@ ontology
 					comment = <"This data element is commonly used in industry hearing programs.">
 				>
 				["at0076"] = <
-					text = <"Audiometric booth">
+					text = <"Audiometric Booth">
 					description = <"Sound-treated room designed to attenuate nominal outside noise.">
 				>
 				["at0077"] = <
-					text = <"Minimal background noise">
+					text = <"Minimal Background Noise">
 					description = <"Non sound-treated room with minimal background noise.">
 				>
 				["at0078"] = <
-					text = <"Moderate background noise">
+					text = <"Moderate Background Noise">
 					description = <"Non sound-treated room with moderate background noise.">
 				>
 				["at0079"] = <
-					text = <"High background noise">
+					text = <"High Background Noise">
 					description = <"Non sound-treated room with high background noise.">
 				>
 				["at0080"] = <
-					text = <"Warble tone">
-					description = <"The test stimulus is a frequency modulated tone.">
+					text = <"Warble Tone">
+					description = <"The test stimulus is a frequency modulated tone centred on the specified frequency.">
 				>
 				["at0081"] = <
 					text = <"Pure Tone">
-					description = <"The test stimulus is a pure tone.">
+					description = <"The test stimulus is a pure tone centred on the specified frequency.">
 				>
 				["at0089"] = <
 					text = <"Calibration Reference dB">
@@ -485,6 +519,7 @@ ontology
 				["at0107"] = <
 					text = <"Screening Frequency">
 					description = <"Identification of the stimulus frequency used to determine a screening assessment pass.">
+					comment = <"This data element is not used if the Test Stimulus is specified as a Click.">
 				>
 				["at0116"] = <
 					text = <"Earphones">
@@ -503,7 +538,7 @@ ontology
 				["at0123"] = <
 					text = <"Reason for No Test Result">
 					description = <"Reason why no result is available for the test ear.">
-					comment = <"For example, patient was not cooperative; patient was not capable; ran out of time.">
+					comment = <"Coding with an external terminology is preferred, where possible. For example, patient was not cooperative; patient was not capable; ran out of time.">
 				>
 				["at0134"] = <
 					text = <"Reliability">
@@ -526,6 +561,10 @@ ontology
 					text = <"Confounding Factors">
 					description = <"Description of incidental factors that may be contributing to the screening result.">
 					comment = <"For example: The infant was crying at the time of testing.">
+				>
+				["at0141"] = <
+					text = <"Narrow Band Noise">
+					description = <"The test stimulus is a narrow band noise centred on the specified frequency.">
 				>
 			>
 		>
