@@ -5,9 +5,9 @@
             <tree conceptId="284009009" maxDepth="0" rootOperation="Passthrough" treeOperation="Select" treeRelationship="116680003" reverseTreeRelationship="true"></tree>
          </childNodes>
       </placeHolder>
-      <concept conceptId="78421000" operation="Select"></concept>
       <concept conceptId="26643006" operation="Select"></concept>
-      <concept conceptId="34206005" operation="Select"></concept>
+      <concept conceptId="78421000" operation="Select"></concept>
       <concept conceptId="47625008" operation="Select"></concept>
+      <concept conceptId="34206005" operation="Select"></concept>
    </childNodes>
 </ots:query>

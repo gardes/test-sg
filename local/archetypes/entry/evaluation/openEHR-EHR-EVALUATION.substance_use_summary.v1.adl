@@ -5,36 +5,70 @@ concept
 	[at0000]	-- Substance Use Summary
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Dr. Leonardo Der Jachadurian">
+				["organisation"] = <"Bitios.com">
+			>
+			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"21/06/2009">
+		["date"] = <"2009-06-21">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To build up and record an ongoing and persistent summary about the use of a substance by the individual. (with the exception of substances such alcohol and tobacco, for which a specialised version of this archetype has been created).">
-			use = <"Use to record a summary of the pattern of use for any and all forms of a substance, and about multiple episodes of use of the substance over time.">
+			purpose = <"This is a generic archetype used to record an ongoing and persistent summary of the use of any and all substances.">
+			use = <"This is a generic archetype used to record an ongoing and persistent summary of the use of any and all substances that have not had specific specialisation archetypes created. The typical use will be related to a summary of use or consumption of substances.">
 			keywords = <"consumption", "substance", "use", "usage", "dependence">
-			misuse = <"Not to be used to record summary information about alcohol or tobacco use - use the specialised archetypes OBSERVATION.substance_use_summary-alcohol and/or OBSERVATION.substance_use_summary-tobacco.
+			misuse = <"Do not use this archeytpe for recording actual details about the use of the substance and event-related data - this should be captured using the OBSERVATION.substance_use archetype.  Do not use this archetype for recording use or consumption histories for common substances such as tobacco smoking and alcohol.  As substances such as tobacco and alcohol are so commonly consumed, data should be recorded using detailed and specific specialisations of this archetype.">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"هذا نموضج جنيس (غير محدود الملكية) يستخدم لتسجيل ملخص مستمر عن استخدام أي نوع من أو جميع أنواع المواد">
+			use = <"هذا نموضج جنيس (غير محدود الملكية) يستخدم لتسجيل ملخص مستمر عن استخدام أي نوع من أو جميع أنواع المواد التي لا يوجد لها نموذج مخصص. 
+و الاستخدام النمطي له متعلق بملخص الاستخدام أو الاستهلاك للمواد.">
+			keywords = <"الاستهلاك", "المادة", "الاستخدام", "الاستعمال", "الاعتماد">
+			misuse = <"لا يستخدم هذا النموذج لتسجيل التفاصيل الحقيقية عن استخدام المادة أو البيانات المتعلقة بالوقائع - و ينبغي تسجيل ذلك باستخدام نموذج ملاحظة. استخدام المواد
 
-Not to be used to capture event-based information about substance use, such as a Diary of substance use - use the OBSERVATION.substance_use archetype and its specific specialisations.">
+لا تستخدم هذا النموذج لتسجيل تاريخ استخدام أو استهلاك التبغ أو الكحول. 
+و حيث إن المواد مثل التبغ أو الكحول هي من المواد المألوفة الاستعمال, فإنه ينبغي تسجيل البيانات الخاصة بها باستخدام تخصيصات تفصيلية و معينة مشتقة من هذا النموذج">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Este es un arquetipo genérico usado para registrar el sumario en curso y persistente del uso de cualquier tipo de sustancia.">
+			use = <"Este es un arquetipo genérico que se utiliza para registrar un resumen en curso y persistente de la utilización de cualquier sustancia, para la cual no se ha creado ningún arquetipo específico de especialización. El uso típico se relaciona con un resumen de su uso o consumo de sustancias.">
+			keywords = <"consumo", "sustancia", "uso", "dependencia">
+			misuse = <"No utilice este arquetipo para el registro de detalles actuales sobre el uso de la sustancia y los datos relacionados con eventos. Esto debe ser capturado usando el arquetipo OBSERVATION.substance_use. No utilice este arquetipo para registro de la historia de uso o consumo de las sustancias comunes como el tabaco y el alcohol. Como estas son tan comúnmente consumidas, estos datos deben ser registrados con los arquetipos específicos para ellas.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
-	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"6474EC15667F263B1A7885B3F005B014">
+		["MD5-CAM-1.0.1"] = <"3DE9486355CA4A3926F27A8B1E8C5CFB">
 	>
 
 definition
 	EVALUATION[at0000] matches {	-- Substance Use Summary
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
 						value matches {
 							DV_TEXT matches {*}
@@ -53,18 +87,16 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
+					CLUSTER[at0007] occurrences matches {1..*} matches {	-- Consumption Summary
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Type/Form
+							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
 							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Method of use
 								value matches {
-									DV_CODED_TEXT matches {
-										defining_code matches {[local::]}
-									}
+									DV_TEXT matches {*}
 								}
 							}
 							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Date commenced
@@ -87,11 +119,6 @@ definition
 									DV_DURATION matches {*}
 								}
 							}
-							ELEMENT[at0017] occurrences matches {0..1} matches {	-- Context of use
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
 							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
 								value matches {
 									DV_TEXT matches {*}
@@ -103,15 +130,11 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
 					}
-					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Comment
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -119,7 +142,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Substance Use Summary">
-					description = <"Overview of use or consumption of a defined substance, including caffeine, alcohol, tobacco, volatile substances and illicit drugs.">
+					description = <"Generic archetype to record a persisting summary or overview of use or consumption of a defined substance over time.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -131,11 +154,11 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Current User">
-					description = <"Individual is a current user of the substance.">
+					description = <"Person is a current user of the substance.">
 				>
 				["at0004"] = <
 					text = <"Former Regular User">
-					description = <"Individual is a former or ex-user of the substance on a regular basis.">
+					description = <"Person a former or ex-user of the substance on a regular basis.">
 				>
 				["at0005"] = <
 					text = <"Substance">
@@ -143,15 +166,15 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Former Occasional User">
-					description = <"Individual is a former or ex-user of the substance on an occasional basis.">
+					description = <"Person a former or ex-user of the substance on a regular basis.">
 				>
 				["at0007"] = <
 					text = <"Consumption Summary">
-					description = <"Summary of the pattern of use for any and all forms of the substance, and for multiple episodes of use over time.">
+					description = <"Summary of the pattern of use for any and all forms of the substance, and for multiple episodes of use.">
 				>
 				["at0008"] = <
-					text = <"Type/Form">
-					description = <"Identify the type or form of the substance used or consumed.">
+					text = <"Form">
+					description = <"Identify the form of the substance.">
 				>
 				["at0009"] = <
 					text = <"Date commenced">
@@ -171,8 +194,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Comment">
-					description = <"Comment on this episode of substance use or consumption.">
-					fsn = <"Consumption Summary Comment">
+					description = <"Comment on the usage of the substance.">
 				>
 				["at0014"] = <
 					text = <"Cessation attempts">
@@ -180,20 +202,155 @@ ontology
 				>
 				["at0015"] = <
 					text = <"Method of use">
-					description = <"Method of use or consumption of the substance. For example, smoked or intravenous injection.">
+					description = <"Method of use or consumption of the substance.">
 				>
 				["at0016"] = <
 					text = <"Never Used">
-					description = <"Individual has never used the substance.">
+					description = <"Person has never used the substance.">
 				>
-				["at0017"] = <
-					text = <"Context of use">
-					description = <"Description about the social, cultural or psychological context that contributed to the substance use.">
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"ملخص استخدام المادة">
+					description = <"نموذج جنيس (غير محدودو الملكية) لتسجل ملخص مستمر أو نظرة عامة عن استخدام أو استهلاك مادة معينة عبر الزمن.">
 				>
-				["at0018"] = <
-					text = <"Comment">
-					description = <"Overall comment about the individual's use of the substance.">
-					fsn = <"Substance Use Summary Comment">
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"حالة الاستعمال">
+					description = <"نظرة عامة حول استعمال المادة">
+				>
+				["at0003"] = <
+					text = <"مستخدم حالي">
+					description = <"الشخص يستخدم المادة حاليا">
+				>
+				["at0004"] = <
+					text = <"كان يستعمله بانتظام سابقا">
+					description = <"كان الشخص يستخدم المادة بانتظام في السابق">
+				>
+				["at0005"] = <
+					text = <"المادة">
+					description = <"تعريف المادة">
+				>
+				["at0006"] = <
+					text = <"كان يستعمله في مناسبات معينة سابقا">
+					description = <"كان الشخص يستعمل المادة في مناسبات معينة سابقا">
+				>
+				["at0007"] = <
+					text = <"ملخص الاستهلاك">
+					description = <"ملخص نمط الاستهلاك أي شكل من أو جميع أشكال المادة, و للنوبات المتعددة من الاستخدام">
+				>
+				["at0008"] = <
+					text = <"الشكل">
+					description = <"تعريف شكل المادة">
+				>
+				["at0009"] = <
+					text = <"تاريخ البداية">
+					description = <"التاريخ الذي تم عنده بداية استخدام المادة - من الممكن أن يكون تاريخا جزئيا, مثل العام الذي تم عنده البداية">
+				>
+				["at0010"] = <
+					text = <"العمر عند بداية الاستخدام">
+					description = <"العمر الذي بدأ الشخص عنده تناول المادة">
+				>
+				["at0011"] = <
+					text = <"تاريخ التوقف">
+					description = <"التاريخ الذي توقف عنده استخدام المادة - من الممكن أن يكون تاريخا جزئيا, مثل العام الذي توقف عنده الاستخدام">
+				>
+				["at0012"] = <
+					text = <"العمر عند التوقف">
+					description = <"التاريخ الذي توقف عنده استخدام المادة">
+				>
+				["at0013"] = <
+					text = <"تعليق">
+					description = <"تعليق حول استعمال المادة">
+				>
+				["at0014"] = <
+					text = <"محاولات التوقف">
+					description = <"تفاصيل حول محاولات التوقف عن استخدام المادة">
+				>
+				["at0015"] = <
+					text = <"طريقة الاستخدام">
+					description = <"طريقة استخدام أو استهلاك المادة">
+				>
+				["at0016"] = <
+					text = <"لم يستعمله أبدا">
+					description = <"الشخص لم يستخدم المادة أبداً">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sumario del uso de sustancias">
+					description = <"Arquetipo genérico para registrar un sumario persistente o visión general del uso o consumo de una sustancia definida, a lo largo del tiempo.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Estado de uso">
+					description = <"Visión general del uso de la sustancia.">
+				>
+				["at0003"] = <
+					text = <"Usuario actual">
+					description = <"La persona es un usuario actual de la sustancia.">
+				>
+				["at0004"] = <
+					text = <"Antiguo usuario regular">
+					description = <"Persona que anteriormente fue usuario regular de la sustancia, pero que no la usa actualmente.">
+				>
+				["at0005"] = <
+					text = <"Sustancia">
+					description = <"Identificación de la sustancia.">
+				>
+				["at0006"] = <
+					text = <"Antiguo usuario ocasional">
+					description = <"Persona que anteriormente fue usuario ocasional de la sustancia, pero que no la usa actualmente.">
+				>
+				["at0007"] = <
+					text = <"Sumario de consumo">
+					description = <"Sumario del patrón de uso de todas y cada una de las sustancias y para múltiples episodios de uso.">
+				>
+				["at0008"] = <
+					text = <"Forma">
+					description = <"Identificar la forma de la sustancia.">
+				>
+				["at0009"] = <
+					text = <"Fecha de comienzo">
+					description = <"Fecha en que comenzó el uso de la sustancia (puede ser una fecha parcial, como ser el año solamente).">
+				>
+				["at0010"] = <
+					text = <"Edad de comienzo">
+					description = <"Edad en que comenzó el uso de la sustancia.">
+				>
+				["at0011"] = <
+					text = <"Fecha de cesación">
+					description = <"Fecha que el uso de la sustancia cesó (puede ser una fecha parcial, tal como un año).">
+				>
+				["at0012"] = <
+					text = <"Edad de cesación">
+					description = <"Edad en la que el uso de la sustancia cesó.">
+				>
+				["at0013"] = <
+					text = <"Comentarios">
+					description = <"Comentarios en el uso de la sustancia.">
+				>
+				["at0014"] = <
+					text = <"Intentos de cesación">
+					description = <"Detalles acerca de intentos de cesación del uso de la sustancia.">
+				>
+				["at0015"] = <
+					text = <"Método de uso">
+					description = <"Método de uso o consumo de la sustancia.">
+				>
+				["at0016"] = <
+					text = <"Nunca fue usuario">
+					description = <"Persona que nunca usó la sustancia.">
 				>
 			>
 		>
