@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.exclusion-procedure.v1
+﻿archetype (adl_version=1.4; uid=b439bb18-283f-4ce2-9151-c9d36123dfff)
+	openEHR-EHR-EVALUATION.exclusion-procedure.v0
 specialise
 	openEHR-EHR-EVALUATION.exclusion.v1
 
@@ -7,6 +7,14 @@ concept
 	[at0000.1]	-- Exclusion of a Procedure
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Ian McNicoll">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -27,14 +35,32 @@ Exclusion statements can only be considered to be current and accurate at the ti
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, medications, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
 			copyright = <"© openEHR Foundation">
 		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To positively record statement/s about procedures that need to be clinically excluded from the health record at a specific point in time.(en)">
+			use = <"*Use to record positive statement/s about the absence or exclusion of procedures performed within the health record at a specific point in time. For example: to record that the patient has not had any operations or significant procedures; or that the patient has not had an appendicectomy, if presenting with abdominal pain.
+
+This archetype has specifically been designed to avoid the need to use flags or terminology to express negation about any procedures performed within the health record. 
+
+Exclusion statements can only be considered to be current and accurate at the time of recording. For example: exclusion of appendicectomy during a consultation or emergency room visit for abdominal pain is only relevant at the time of recording and is effectively obsolete if the subsequent diagnosis is appendicitis and an appendicectomy performed.(en)">
+			misuse = <"*Not to be used to record exclusion statements about adverse reactions, medications, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.(en)">
+			copyright = <"© openEHR Foundation">
+		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Exclusion of a Procedure, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 02 Mar 2010. Available at: 
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1312_2 (accessed 3 Sept 2013)">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"EC8697A3EB07A9B28FD861E7E4037215">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"31F20D7C1E72D4A967A1FC14B1E84A20">
+		["build_uid"] = <"f8a8f667-95b3-4aee-915b-aa3dc5259532">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -126,6 +152,50 @@ ontology
 				>
 			>
 		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Exclusion Statement(en)">
+					description = <"*Generic, positive statement/s that need to be recorded as clinically excluded from the health record at a specific point in time.(en)">
+				>
+				["at0000.1"] = <
+					text = <"*Exclusion of a Procedure(en)">
+					description = <"*Positive statement/s about procedures that need to be recorded as clinically excluded from the health record at a specific point in time.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Exclusion Statement(en)">
+					description = <"*The statement about an exclusion in the health record.(en)">
+				>
+				["at0002.1"] = <
+					text = <"*Exclusion Statement(en)">
+					description = <"*A statement about exclusion of procedures performed in the health record.(en)">
+				>
+				["at0003"] = <
+					text = <"*Specific Object(en)">
+					description = <"*Identification of the specific object/s to which the Exclusion Statement applies.(en)">
+				>
+				["at0003.1"] = <
+					text = <"*Procedure(en)">
+					description = <"*Identification of the procedures to which the Exclusion Statement applies.(en)">
+				>
+				["at0004"] = <
+					text = <"*Date Last Updated(en)">
+					description = <"*The date at which the exclusion was last clinically asserted, affirmed or confirmed.(en)">
+				>
+				["at0006"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the Exclusion not captured in other fields.(en)">
+				>
+			>
+		>
 	>
 	constraint_definitions = <
 		["en"] = <
@@ -133,6 +203,14 @@ ontology
 				["ac0.1"] = <
 					text = <"Procedures">
 					description = <"All procedures that can be performed.">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["ac0.1"] = <
+					text = <"*Procedures(en)">
+					description = <"*All procedures that can be performed.(en)">
 				>
 			>
 		>
