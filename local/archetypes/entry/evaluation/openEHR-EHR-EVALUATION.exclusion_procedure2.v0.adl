@@ -1,10 +1,8 @@
-﻿archetype (adl_version=1.4; uid=b439bb18-283f-4ce2-9151-c9d36123dfff)
-	openEHR-EHR-EVALUATION.exclusion-procedure.v0
-specialise
-	openEHR-EHR-EVALUATION.exclusion.v1
+﻿archetype (adl_version=1.4; uid=4d1d1021-2d35-484c-8aae-c40fefb56093)
+	openEHR-EHR-EVALUATION.exclusion_procedure2.v0
 
 concept
-	[at0000.1]	-- Exclusion of a Procedure
+	[at0000]	-- Exclusion of a Procedure
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -58,25 +56,25 @@ http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1312_2 (accessed 3 Sept 2013)"
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"31F20D7C1E72D4A967A1FC14B1E84A20">
-		["build_uid"] = <"f8a8f667-95b3-4aee-915b-aa3dc5259532">
+		["MD5-CAM-1.0.1"] = <"16EA59E8303E509DD02AEF8BCAB3CA69">
+		["build_uid"] = <"57f6e9d0-0583-4652-9239-56a946bc77af">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Exclusion of a Procedure
+	EVALUATION[at0000] matches {	-- Exclusion of a Procedure
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0002.1] occurrences matches {1..*} matches {	-- Exclusion Statement
+					ELEMENT[at0002] occurrences matches {1..*} matches {	-- Exclusion Statement
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0003.1] occurrences matches {0..*} matches {	-- Procedure
+					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Procedure
 						value matches {
 							DV_CODED_TEXT matches {
-								defining_code matches {[ac0.1]}		-- Procedures
+								defining_code matches {[ac0001]}		-- Procedures
 							}
 							DV_TEXT matches {*}
 						}
@@ -102,16 +100,11 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Exclusion Statement">
-					description = <"Generic, positive statement/s that need to be recorded as clinically excluded from the health record at a specific point in time.">
-				>
-				["at0000.1"] = <
 					text = <"Exclusion of a Procedure">
 					description = <"Positive statement/s about procedures that need to be recorded as clinically excluded from the health record at a specific point in time.">
 				>
@@ -121,19 +114,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Exclusion Statement">
-					description = <"The statement about an exclusion in the health record.">
-					comment = <"Use to capture any information that is needed to be positively recorded as being excluded within the record. The statement can support recording global statements or statements about a specified object. See specialisations for Medications, Adverse Reactions, Problem/Diagnosis and Procedures as common examples that have been explicitly modelled.">
-				>
-				["at0002.1"] = <
-					text = <"Exclusion Statement">
 					description = <"A statement about exclusion of procedures performed in the health record.">
 					comment = <"For example: \"No known operations or significant procedures\" or \"No previous\" (appendicectomy).">
 				>
 				["at0003"] = <
-					text = <"Specific Object">
-					description = <"Identification of the specific object/s to which the Exclusion Statement applies.">
-				>
-				["at0003.1"] = <
 					text = <"Procedure">
 					description = <"Identification of the procedures to which the Exclusion Statement applies.">
 					comment = <"Coding of the Procedure with a terminology is desirable, where possible.">
@@ -155,10 +139,6 @@ ontology
 		["sl"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Exclusion Statement(en)">
-					description = <"*Generic, positive statement/s that need to be recorded as clinically excluded from the health record at a specific point in time.(en)">
-				>
-				["at0000.1"] = <
 					text = <"*Exclusion of a Procedure(en)">
 					description = <"*Positive statement/s about procedures that need to be recorded as clinically excluded from the health record at a specific point in time.(en)">
 				>
@@ -168,17 +148,9 @@ ontology
 				>
 				["at0002"] = <
 					text = <"*Exclusion Statement(en)">
-					description = <"*The statement about an exclusion in the health record.(en)">
-				>
-				["at0002.1"] = <
-					text = <"*Exclusion Statement(en)">
 					description = <"*A statement about exclusion of procedures performed in the health record.(en)">
 				>
 				["at0003"] = <
-					text = <"*Specific Object(en)">
-					description = <"*Identification of the specific object/s to which the Exclusion Statement applies.(en)">
-				>
-				["at0003.1"] = <
 					text = <"*Procedure(en)">
 					description = <"*Identification of the procedures to which the Exclusion Statement applies.(en)">
 				>
@@ -200,7 +172,7 @@ ontology
 	constraint_definitions = <
 		["en"] = <
 			items = <
-				["ac0.1"] = <
+				["ac0001"] = <
 					text = <"Procedures">
 					description = <"All procedures that can be performed.">
 				>
@@ -208,7 +180,7 @@ ontology
 		>
 		["sl"] = <
 			items = <
-				["ac0.1"] = <
+				["ac0001"] = <
 					text = <"*Procedures(en)">
 					description = <"*All procedures that can be performed.(en)">
 				>
