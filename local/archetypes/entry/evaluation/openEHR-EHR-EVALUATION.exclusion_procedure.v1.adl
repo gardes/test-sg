@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=4d1d1021-2d35-484c-8aae-c40fefb56093)
-	openEHR-EHR-EVALUATION.exclusion_procedure2.v0
+﻿archetype (adl_version=1.4; uid=aa2459bd-4397-4bd1-8f9b-d0428afb909b)
+	openEHR-EHR-EVALUATION.exclusion_procedure.v1
 
 concept
 	[at0000]	-- Exclusion of a Procedure
@@ -56,9 +56,9 @@ http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1312_2 (accessed 3 Sept 2013)"
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"16EA59E8303E509DD02AEF8BCAB3CA69">
-		["build_uid"] = <"57f6e9d0-0583-4652-9239-56a946bc77af">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"AAD920562A11B2AD1FC06B46BBF90C97">
+		["build_uid"] = <"2a02fe7f-274c-4fc0-8ec9-4cd1d5141130">
+		["revision"] = <"1.0.0-alpha">
 	>
 
 definition
