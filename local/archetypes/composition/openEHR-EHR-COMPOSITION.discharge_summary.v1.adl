@@ -35,7 +35,7 @@ Not to be used to represent the contemporaneous details of clinical encounters, 
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"BBE8EA287AF8A2574F7B4E0DD6A57DCD">
-		["build_uid"] = <"965ce637-e7ae-4873-9d72-b83fbaad35da">
+		["build_uid"] = <"77e8409c-dfc5-471d-9b6a-8b8b14f70dfb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
