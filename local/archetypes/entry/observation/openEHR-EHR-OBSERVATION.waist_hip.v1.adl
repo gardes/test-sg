@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Waist and hip circumference
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -18,11 +26,19 @@ description
 			use = <"">
 			keywords = <"waist", "hip">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© 2011 openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل كِفاف الخصر (الحزام) و الورك و نسبة قياس الخصر إلى الورك">
+			use = <"">
+			keywords = <"الخصر", "الورك">
+			misuse = <"">
+			copyright = <"© 2011 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", ...>
 	other_details = <
 		["references"] = <"">
 	>
@@ -114,6 +130,38 @@ ontology
 				["at0006"] = <
 					text = <"Waist:hip ratio">
 					description = <"Ratio with unitary denominator">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"كفاف الوِرك و الخصر">
+					description = <"كفاف الخصر (الحزام) و الورك">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"إحدى الوقائع">
+					description = <"واقعة وقتية">
+				>
+				["at0003"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"كِفاف الخصر">
+					description = <"كِفاف الخصر, يتم قياسه عند أو أعلى من السُّرة">
+				>
+				["at0005"] = <
+					text = <"كِفاف الوِرك">
+					description = <"قياس كِفاف الجسم عند أعرض نقطة من الألية">
+				>
+				["at0006"] = <
+					text = <"نسبة الخصر إلى الوِرك">
+					description = <"*Ratio with unitary denominator(en)">
 				>
 			>
 		>

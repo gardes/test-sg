@@ -1,0 +1,61 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.PCHER_ORG_ID.v1
+
+concept
+	[at0000]	-- PCHER
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Renato Iannella">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Identity.">
+			use = <"For PCEHR Use.">
+			misuse = <"Please don't !">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"draft">
+	other_contributors = <>
+
+definition
+    ADMIN_ENTRY[at0000] matches {
+        data matches {
+            ITEM_SINGLE[at0001] matches {
+                item matches {
+                    ELEMENT[at0002] occurrences matches {1..1} matches {
+                        value matches {
+                            DV_CODED_TEXT matches {
+                                defining_code matches {
+                                    [local::]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"PCHER">
+					description = <"The Identity of Organisations that are Registered for the PCHER.">
+				>
+				["at0001"] = <
+					text = <"ITEM_SINGLE">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Org-ID">
+					description = <"Describe.">
+				>
+			>
+		>
+	>

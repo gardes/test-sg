@@ -16,7 +16,10 @@ language
 	>
 description
 	original_author = <
-		["name"] = <"unknown">
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"healther.leslie@oceaninformatics.com">
+		["date"] = <"2012-09-08">
 	>
 	details = <
 		["de"] = <
@@ -25,7 +28,7 @@ description
 			use = <"">
 			keywords = <"Transfusion", "Blut">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -33,20 +36,19 @@ description
 			use = <"">
 			keywords = <"transfusion", "blood">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
-	other_contributors = <>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"22313291F20D303861C7BF25D71B6BE0">
+		["MD5-CAM-1.0.1"] = <"A7ADFD7633266C627390888C90568F3B">
 	>
 
 definition
 	ACTION[at0000] matches {	-- Transfusion
 		ism_transition matches {
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0002] matches {	-- Planned
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -58,7 +60,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0004] matches {	-- Prepared (Matching)
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -70,7 +72,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0012] matches {	-- Consent obtained
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::524]}
@@ -82,7 +84,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0005] matches {	-- Postponed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::527]}
@@ -94,7 +96,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0006] matches {	-- Cancelled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::528]}
@@ -106,7 +108,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0003] matches {	-- Blood products ordered
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -118,7 +120,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0007] matches {	-- Blood and patient identification checked
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -130,7 +132,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0008] matches {	-- Transfusion unit commenced
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -142,7 +144,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0013] matches {	-- Transfusion unit completed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -154,7 +156,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0009] matches {	-- Transfusion suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::530]}
@@ -166,7 +168,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0010] matches {	-- Transfusion stopped
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::531]}
@@ -178,7 +180,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0011] matches {	-- Transfusion has been completed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::532]}
@@ -203,9 +205,7 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Sequence number
 								value matches {
-									DV_COUNT matches {
-										magnitude matches {*}
-									}
+									DV_COUNT matches {*}
 								}
 							}
 							ELEMENT[at0016] occurrences matches {0..1} matches {	-- Proportion administered
@@ -238,9 +238,7 @@ definition
 					}
 					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Country of origin of blood product
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {[local::]}
-							}
+							DV_TEXT matches {*}
 						}
 					}
 				}

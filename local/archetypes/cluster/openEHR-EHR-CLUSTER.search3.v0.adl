@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=49be4cdd-7ec7-4b9d-88b9-23d44fb05f73)
+﻿archetype (adl_version=1.4; uid=5a980250-a715-4a79-a7dc-0ed8e58a913d)
 	openEHR-EHR-CLUSTER.search3.v0
 
 concept
@@ -21,19 +21,18 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"40d5e55b-713b-4c78-95c3-65efb7b12a96">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"CA2BB04D1C4DA287E6EFAEB435BFE62F">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"A66CAD4007FEF5384A73D3C8FD48C74C">
+		["build_uid"] = <"9769ab21-51e2-4e83-8361-50265ec647ac">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] matches {*}
-
 
 ontology
 	term_definitions = <
