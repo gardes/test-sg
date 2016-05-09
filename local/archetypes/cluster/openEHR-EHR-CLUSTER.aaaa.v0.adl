@@ -1,0 +1,70 @@
+﻿archetype (adl_version=1.4; uid=1c2b54f2-3339-47aa-aa3c-719629134ab2)
+	openEHR-EHR-CLUSTER.aaaa.v0
+
+concept
+	[at0000]	-- Aaaa
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["build_uid"] = <"e5f61415-f669-4f14-986e-6da12b30fe82">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"FE1CBECA13117EF6189DA09570AA7156">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Aaaa
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element2
+				value matches {
+					C_DV_QUANTITY <
+					>
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Aaaa">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"New element">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"New element2">
+					description = <"*">
+				>
+			>
+		>
+	>
