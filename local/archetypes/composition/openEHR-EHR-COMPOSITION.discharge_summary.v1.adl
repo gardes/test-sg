@@ -28,9 +28,14 @@ Not to be used to represent the contemporaneous details of clinical encounters, 
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics<heather.leslie@oceaninformatics.com>">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"BBE8EA287AF8A2574F7B4E0DD6A57DCD">
-		["build_uid"] = <"dd8f5bf8-ef24-4d9e-bdda-999d46db64fb">
+		["build_uid"] = <"5ba723db-e69a-4a67-b6d7-86239363f981">
 		["revision"] = <"0.0.1-alpha">
 	>
 
