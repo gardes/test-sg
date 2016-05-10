@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.device.v1
+﻿archetype (adl_version=1.4; uid=19656a3a-3fe3-4369-b290-098c0ccf15a5)
+	openEHR-EHR-CLUSTER.device.v0
 
 concept
 	[at0000]	-- Device
@@ -67,10 +67,17 @@ Para los casos de uso habituales podría ser apropiada la especialización de es
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"38767B9045EDF303C0C56C0FF623BF00">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
+		["build_uid"] = <"1d25a9d4-885c-442b-87d9-7b74a81d90cf">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"2A6E3A01D9F07643010DCE2BF50C1D31">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
