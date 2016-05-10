@@ -1,0 +1,126 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.scar.v1
+
+concept
+	[at0000]	-- Examination of Scar
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"01-11-2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording the examination findings from the physical examination of a single scar in the skin.">
+			use = <"Use to record the examination findings from the physical examination of a single scar in the skin. 
+
+If multiple scars are observed during examination, these should be recorded separately.
+
+Designed to be used with SLOTs within clinically appropriate OBSERVATION or other CLUSTER archetypes as part of recording the findings on clinical examination.">
+			keywords = <"scar", "examination", "inspection", "skin", "wound", "healing", "keloid", "hypertrophic">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, Australia, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"3399AD3177E073705551527F043C0171">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Examination of Scar
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0009] matches {	-- Anatomical Location
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Presence of Scar?
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Clinical Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Healing
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005, 	-- Normal
+							at0007, 	-- Hypertrophic
+							at0006, 	-- Keloid
+							at0008]	-- Atrophic
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {	-- Clinical Interpretation
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Examination of Scar">
+					description = <"Physical examination of a single scar in the skin resulting from repair of a wound or injury.">
+				>
+				["at0001"] = <
+					text = <"Clinical Description">
+					description = <"Narrative description of the scar.">
+					comment = <"For example, the extent and possible cause of the scar.">
+				>
+				["at0002"] = <
+					text = <"Clinical Interpretation">
+					description = <"Single word, phrase or brief summary description of the scar.">
+					comment = <"For example, the ">
+				>
+				["at0003"] = <
+					text = <"Presence of Scar?">
+					description = <"Is a scar present in the anatomical location being examined?">
+				>
+				["at0004"] = <
+					text = <"Healing">
+					description = <"Description of the healing that has occurred.">
+				>
+				["at0005"] = <
+					text = <"Normal">
+					description = <"The scar appears to have healed normally.">
+				>
+				["at0006"] = <
+					text = <"Keloid">
+					description = <"The scar has healed with marked hypertrophy, with growth evident outside the original wound area.">
+				>
+				["at0007"] = <
+					text = <"Hypertrophic">
+					description = <"The scar is raised above the surrounding skin.">
+				>
+				["at0008"] = <
+					text = <"Atrophic">
+					description = <"The scar is depressed below the surrounding skin.">
+				>
+				["at0009"] = <
+					text = <"Anatomical Location">
+					description = <"Identification of an anatomical location under examination for a scar.">
+					comment = <"Coding with a terminology is desirable, where possible. For example, mid-sternum, or right iliac fossa.">
+				>
+			>
+		>
+	>

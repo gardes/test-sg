@@ -13,20 +13,6 @@ language
 				["organisation"] = <"University of Heidelberg, Central Queensland University">
 			>
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			author = <
-				["name"] = <"Dr. Leonardo Der Jachadurian">
-				["organisation"] = <"Bitios.com">
-			>
-			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
 	>
 description
 	original_author = <
@@ -42,31 +28,13 @@ description
 			use = <"*">
 			keywords = <"Einatmen", "Ausatmen", "Brustumfang", "Ausmaß">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording the measured dimensions of the chest - specialised to add the state of respiration during breathing.">
-			use = <"*">
+			use = <"">
 			keywords = <"inspiration", "expiration", "chest expansion", "expansion">
-			misuse = <"*">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل الأبعاد المقاسة للصدر - مخصصة لتضيف حالة التنفس خلال التنفس">
-			use = <"*">
-			keywords = <"الشهيق", "الزفير", "تمدد الصدر", "التمدد">
-			misuse = <"*">
-			copyright = <"© openEHR Foundation">
-		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"Para registrar las mediciones de las dimensiones del tórax, especializado para agregar el estado de la respiración durante el ciclo respiratorio.">
-			use = <"*">
-			keywords = <"inspiración", "espiración", "expansión torácica", "expansión">
-			misuse = <"*">
-			copyright = <"© openEHR Foundation">
+			misuse = <"">
 		>
 	>
 	lifecycle_state = <"Initial">
@@ -231,102 +199,6 @@ ontology
 				["at0011"] = <
 					text = <"Circumference">
 					description = <"The circumference of the chest">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"قياس الصدر و التمدد">
-					description = <"قياس محيط الصدر و التمدد">
-				>
-				["at0001"] = <
-					text = <"*history(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"إحدى الوقائع">
-					description = <"واقعة زمنية">
-				>
-				["at0003"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0005"] = <
-					text = <"*list(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0006"] = <
-					text = <"الطور التنفسي">
-					description = <"طور التنفس الذي يتم أخذ القياس في أثنائه">
-				>
-				["at0007"] = <
-					text = <"الشهيق">
-					description = <"طور الشهيق التنفسي">
-				>
-				["at0008"] = <
-					text = <"الزفير">
-					description = <"طور الزفير التنفسي">
-				>
-				["at0009"] = <
-					text = <"عشوائي">
-					description = <"لم يتم أخذ الطور التنفسي في الاعتبار">
-				>
-				["at0010"] = <
-					text = <"تمدد الصدر">
-					description = <"الفرق في محيط الصدر من الزفير الكلي إلى الشهيق الكلي">
-				>
-				["at0011"] = <
-					text = <"المحيط">
-					description = <"محيط الصدر">
-				>
-			>
-		>
-		["es-ar"] = <
-			items = <
-				["at0000"] = <
-					text = <"Medición del tórax y expansión">
-					description = <"Medición de la circunferencia del tórax y la expansión.">
-				>
-				["at0001"] = <
-					text = <"*history(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"Cualquier evento">
-					description = <"*">
-				>
-				["at0003"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0005"] = <
-					text = <"*list(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0006"] = <
-					text = <"Fase respiratoria">
-					description = <"La fase de la respiración durante la cual la medición fue realizada.">
-				>
-				["at0007"] = <
-					text = <"Inspiración">
-					description = <"La fase inspiratoria de la respiración.">
-				>
-				["at0008"] = <
-					text = <"Espiración">
-					description = <"La fase espiratoria o exhalatoria de la respiración.">
-				>
-				["at0009"] = <
-					text = <"Aleatorio">
-					description = <"No se toma en cuenta al momento del ciclo respiratorio.">
-				>
-				["at0010"] = <
-					text = <"Expansión torácica">
-					description = <"La diferencia en la circunferencia torácica desde la espiración completa hasta la máxima inspiración.">
-				>
-				["at0011"] = <
-					text = <"Circunferencia">
-					description = <"La circunferencia del tórax.">
 				>
 			>
 		>
