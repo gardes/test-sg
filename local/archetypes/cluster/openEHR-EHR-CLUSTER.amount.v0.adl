@@ -32,7 +32,7 @@ description
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"*To describe the amount of a substance for reuse in different ENTRY classes.(en)">
-			use = <"*In INSTRUCTION medication, ACTION medication for amount ordered, dispensed, administered.(en)">
+			use = <"*In INSTRUCTION medicadtion, ACTION medication for amount ordered, dispensed, administered.(en)">
 			misuse = <"test">
 			copyright = <"© openEHR Foundation">
 		>
@@ -42,7 +42,7 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"5c9a921b-d7bd-4292-95f1-f711ae2783b0">
+		["build_uid"] = <"d527ee8a-c898-4b5a-9c4e-8dec6d4c760f">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["MD5-CAM-1.0.1"] = <"6D997DB3115619EFE331D8E77C7E8BD7">
