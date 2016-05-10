@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Discharge Summary
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Sistine Bararetto-Daniels">
@@ -24,6 +32,15 @@ Primary recipients of this report are expected to be healthcare providers who su
 Not to be used to represent the contemporaneous details of clinical encounters, visits or single episodes of care with healthcare professionals in a non Accident and Emergency environment. Use COMPOSITION.encounter (and specialisations) for this purpose.">
 			copyright = <"© openEHR Foundation">
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"d">
+			use = <"*Use to create or exchange a summary report about about a care period provided within an organisation,  to support continuity of care as the patient returns to their community. This document will typically convey summary information about events that occurred during the period of care, diagnoses, investigation results, management at discharge and plans for follow-up.
+
+Primary recipients of this report are expected to be healthcare providers who supply care for the patient within their community: including the patient's usual primary health service, referring clinician, community pharmacy, residential aged care facility where the patient usually resides. and other health professionals who will need to be involved in the patient's post-discharge care.(en)">
+			misuse = <"*Not to be used to represent the summary report about a single episode of care provided within an Accident and Emergency organisation. Use COMPOSITION.emergency_encounter (and specialisations) for this purpose.
+Not to be used to represent the contemporaneous details of clinical encounters, visits or single episodes of care with healthcare professionals in a non Accident and Emergency environment. Use COMPOSITION.encounter (and specialisations) for this purpose.(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -34,8 +51,8 @@ Not to be used to represent the contemporaneous details of clinical encounters, 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BBE8EA287AF8A2574F7B4E0DD6A57DCD">
-		["build_uid"] = <"64ac1e4c-adf4-4242-99a3-f4d8cbbf7030">
+		["MD5-CAM-1.0.1"] = <"E5CF6471F17635E735A2067280515341">
+		["build_uid"] = <"955e4ec6-a84b-4ad0-84b9-15b7d66edd69">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -78,6 +95,22 @@ ontology
 					text = <"Extension">
 					description = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 					comment = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Discharge Summary(en)">
+					description = <"*Summary statement about the subject of care, usually sent to the primary healthcare providers upon release from hospital.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Extension(en)">
+					description = <"d">
 				>
 			>
 		>
