@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=6abfe420-9f73-4e28-945a-dd046be74687)
 	openEHR-EHR-OBSERVATION.alcohol_use.v1
 
 concept
@@ -32,11 +32,18 @@ Not to be used to record information about consumption of other substances other
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"published">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Tim Garden, NTG Department of Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"1.0.0">
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft OBSERVATION archetype] Alcohol Consumption; [authored 2009 May 06, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.146_3.">
-		["MD5-CAM-1.0.1"] = <"AD145687C651DAB032F60DA1DA062D19">
+		["build_uid"] = <"d6713e51-ff7c-44d5-abde-0317253a0ea7">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"121AA7866FBD4C84D77D9941E6BF951C">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
