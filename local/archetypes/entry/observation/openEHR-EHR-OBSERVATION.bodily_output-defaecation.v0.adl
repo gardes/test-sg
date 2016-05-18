@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.bodily_output-defaecation.v1
+﻿archetype (adl_version=1.4; uid=e9ac75aa-f55e-474d-ab5f-a7ec3ff3df27)
+	openEHR-EHR-OBSERVATION.bodily_output-defaecation.v0
 specialise
 	openEHR-EHR-OBSERVATION.bodily_output.v1
 
@@ -23,14 +23,21 @@ Use in combination with CLUSTER.fluid.v1
 Supercedes OBSERVATION.faeces.v1">
 			keywords = <"production", "output", "fluid", "fluid balance", "input output", "io", "stool", "faeces", "bowel">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"2518B85AC2439AC20297F5D89D940B2A">
+		["build_uid"] = <"ff523403-7dcd-47fc-a620-e89cc05206bf">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"BD4EB8018BB7436D185C92440D646720">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
