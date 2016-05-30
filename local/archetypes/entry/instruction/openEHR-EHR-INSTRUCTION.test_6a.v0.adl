@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Test 6
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			author = <
+				["name"] = <"Manager">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -17,16 +25,22 @@ description
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			purpose = <"*(en)">
+			use = <"">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"b0359c67-964e-4018-b4c5-251d12186f86">
+		["build_uid"] = <"e13e8c29-a3f1-44e8-a4e2-51aa56285fee">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2C041BA35A82473A2E61F4A76D4EF6A1">
+		["MD5-CAM-1.0.1"] = <"28F1FD027EDE01897946FDE29769CD60">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
 	>
@@ -89,6 +103,30 @@ ontology
 				["at0004"] = <
 					text = <"Interval of quantity">
 					description = <"*">
+				>
+			>
+		>
+		["aa"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Test 6(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*Current Activity(en)">
+					description = <"*Current Activity(en)">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"*Choices(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*Interval of quantity(en)">
+					description = <"d">
 				>
 			>
 		>
