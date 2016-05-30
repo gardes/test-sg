@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=b4c21cbf-a7fc-454b-9a41-430963060e97)
-	openEHR-EHR-INSTRUCTION.test_6a.v0
+﻿archetype (adl_version=1.4; uid=d45e5274-5bf0-48ea-84e0-26c0bb2a2c75)
+	openEHR-EHR-INSTRUCTION.test_6b.v0
 
 concept
 	[at0000]	-- Test 6
@@ -37,10 +37,10 @@ description
 	other_details = <
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"e13e8c29-a3f1-44e8-a4e2-51aa56285fee">
+		["build_uid"] = <"a84d5f7c-ab09-43b7-be3b-388639f880fd">
 		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"28F1FD027EDE01897946FDE29769CD60">
+		["MD5-CAM-1.0.1"] = <"C2919908CA7D58BF87646E3AC7085116">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
 	>
