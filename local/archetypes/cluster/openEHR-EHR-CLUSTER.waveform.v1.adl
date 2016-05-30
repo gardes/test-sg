@@ -5,39 +5,18 @@ concept
 	[at0000]	-- Waveform
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"2010-01-28">
+		["date"] = <"28/01/2010">
 	>
 	details = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل سلسلة من الملاحظات المفصولة بفترات زمنية متساوية و التي يمكن أن يتم تمثيلها على هيئة شكل موجي, مثلا: الحصول على شكل موجي plesmythography خاص بالنبض باستخدام مقياس التأكسج عند النبض.">
-			use = <"يستخدم كجزء من نموذج الملاحظة, مثل: ملاحظة.معدل القلب - النبض, أو ملاحظة. قياس التأكسج غير المباشر.
-
-و ينبغي حفظ/تخزين تفاصيل توقيت بداية و مدة/الفاصل الزمني بين الأشكال الموجية في ملاحظة كبيرة تحتويها.
-
-قد يستخدم لتقييم جودة قياس معين, مثل استخدام شكل موجي بتخطيط النبض لتقييم دقة قياس التشبع الكسجيني للدم الطرفي باستخدام قياس التأكسج عند النبض.
-
-قد يستخدم أيضا كجزء من التقييم المباشر للمريض, مثل استخدام شكل موجي بتخطيط النبض لتقدير الناتج القلبي.">
-			keywords = <"*plesmythography(en)", "*plesmythogram(en)", "مقياس التأكسج", "النبض", "قياس التأكسج">
-			misuse = <"لا يستخدم في مكان غير كونه جزءا من نموذج ملاحظة.">
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record a series of equidistant time-spaced observations that can be represented as a waveform e.g. a pulse plesmythography waveform from a pulse oximeter.">
+			purpose = <"To record a series of equidistant time-spaced observations that can be represented as a waveform e.g. a pulse plesmythography waveform from a pulse oximeter.
+">
 			use = <"Used within an OBSERVATION archetype e.g. OBSERVATION.heart_rate-pulse or OBSERVATION.indirect_oximetry.
 
 Details of the waveform start time and duration/interval should be stored in the parent OBSERVATION.
@@ -46,7 +25,7 @@ May be used to assess the quality of a measurement, as using a pulse plesmythogr
 May also be used as part of a direct patient assessment, e.g. using a pulse plesmythography waveform for cardiac output estimation.">
 			keywords = <"oximeter", "plesmythography", "plesmythogram", "pulse", "oximetry">
 			misuse = <"Should not normally be used other than within an OBSERVATION archetype.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -59,12 +38,12 @@ Jubran A. Pulse oximetry [Internet]. Critical Care 1999;3(2):R11-R17.[cited 2009
 Available from: http://ccforum.com
 
 HL7 International, Implementation Guide for CDA Release 2.0 Personal Healthcare Monitoring Report (PHMR) (International Realm) Draft Standard for Trial Use Release 1. 2008;[cited 2010 Feb 2 ]">
-		["MD5-CAM-1.0.1"] = <"7B07C0C45CE88B4912EA8C0CBCC35B54">
+		["MD5-CAM-1.0.1"] = <"A7326D84EBA5023C116B56686DECE598">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Waveform
-		items cardinality matches {1..*; unordered} matches {
+		items cardinality matches {0..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Waveform name
 				value matches {
 					DV_TEXT matches {*}
@@ -85,7 +64,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..*} matches {	-- Waveform observation
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Origin
 						value matches {
 							C_DV_QUANTITY <
@@ -125,7 +104,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Waveform image">
-					description = <"The waveform as an image or other multimedia/binary type.">
+					description = <"The waveform as an image or other multimedia/binary type. ">
 				>
 				["at0006"] = <
 					text = <"Waveform observation">
@@ -146,42 +125,6 @@ ontology
 				["at0010"] = <
 					text = <"Sample period">
 					description = <"The time between individual data points in the waveform.">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"الشكل الموجي">
-					description = <"شكل موجي لسلسلة من القياسات المتباعدة بفترات/فواصل زمنية متساوية, مثلا: من مقياس التأكسج عند النبض. ">
-				>
-				["at0001"] = <
-					text = <"اسم الشكل الموجي">
-					description = <"اسم الشكل الموجي, مثل: الـ plesmythograph عند النبض.">
-				>
-				["at0002"] = <
-					text = <"صورة الشكل الموجي">
-					description = <"الشكل الموجي على هيئة صورة أو نوع من الوسائط المتعددة أو نوع البيانات الثنائي.">
-				>
-				["at0006"] = <
-					text = <"ملاحظة الشكل الموجي">
-					description = <"ملاحظات متعددة للشكل الموجي.">
-				>
-				["at0007"] = <
-					text = <"الأصل">
-					description = <"أصل الشكل الموجي - الشكل المثالي له = 0.">
-				>
-				["at0008"] = <
-					text = <"سلسلة الأرقام">
-					description = <"نقاط البيانات المنفردة للشكل الموجي كما يتم تعريفها بواسطة هيكل الوثيقة السريرية - توثيق تحالف \"تواصل\" للسجل الطبي الصحي الشخصي.">
-				>
-				["at0009"] = <
-					text = <"عامل المقياس">
-					description = <"عامل المقياس الخاص بملاحظة الشكل الموجي.">
-				>
-				["at0010"] = <
-					text = <"مدة العينة">
-					description = <"الوقت بين نقاط البيانات المنفردة في الشكل الموجي.">
 				>
 			>
 		>
