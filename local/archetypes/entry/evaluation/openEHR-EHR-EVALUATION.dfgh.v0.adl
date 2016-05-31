@@ -15,19 +15,13 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"CD07C59C8F36B95C9B87726C552AAA6B">
-		["build_uid"] = <"69024bdf-9190-4014-a608-2d9f1f8c88bf">
+		["build_uid"] = <"bf01ec1e-bd8a-44fd-82ce-d27e7cac7a89">
 		["revision"] = <"0.0.1-alpha">
 	>
 
