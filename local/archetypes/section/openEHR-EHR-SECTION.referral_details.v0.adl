@@ -26,14 +26,14 @@ Supporting summary information can be added to the COMPOSITION slots - for examp
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"D1208623294E90DE4AFD7E3C07175A07">
-		["build_uid"] = <"48b46b5d-0c70-4bd9-87ca-a727d025fb47">
+		["build_uid"] = <"83c05ce4-be65-4b8a-bec2-9cb462992ce3">
 		["revision"] = <"0.0.1-alpha">
 	>
 

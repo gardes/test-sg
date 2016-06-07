@@ -25,14 +25,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Rosenbek JC, Robbins JA, Roecker EB, Coyle JL, Wood JL. A penetration-aspiration scale. Dysphagia. 1996 Spring;11(2):93-8. PubMed PMID: 8721066.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"BBA7550EC46F287E49C19DA1179D4988">
-		["build_uid"] = <"d2315cea-7b83-482d-873d-b855856a74b3">
+		["build_uid"] = <"5ef84e2c-8fe9-40fe-881f-cdf23f1b10c3">
 		["revision"] = <"0.0.1-alpha">
 	>
 

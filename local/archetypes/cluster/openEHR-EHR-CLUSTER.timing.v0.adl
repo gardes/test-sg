@@ -41,14 +41,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Sharmila Biswas, Dr Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Richard Townley-O'Neill, NEHTA, Australia (Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Timing, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. : NEHTA. Authored: 21 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.886_4 (accessed 15 May 2013).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"BF96B95B8C42463584B15FDFEFB1FEF1">
-		["build_uid"] = <"ad2fd322-bfd5-4d2e-8148-d6f6e4a7842e">
+		["build_uid"] = <"05ed1f22-0f7e-4134-a2e4-7b4e6277ce7f">
 		["revision"] = <"0.0.1-alpha">
 	>
 

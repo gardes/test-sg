@@ -76,7 +76,7 @@ This archetype is designed to be used in the 'Asset Management' SLOT within the 
 	lifecycle_state = <"in_development">
 	other_contributors = <"Ian McNicoll, freshEHR Consulting, United Kingdom", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Resource Device [Internet]. HL7 International, FHIR Specification first DSTU version (v 0.0.82). Available from: http://www.hl7.org/implement/standards/fhir/device.html [last accessed 25 Feb 2015].
 
@@ -88,7 +88,7 @@ Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Asso
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"0A743DED5D8561384833F1BBD1641734">
-		["build_uid"] = <"85565bc1-4ec5-4a10-8855-2492f1fc9057">
+		["build_uid"] = <"5ae8bec9-57dd-4386-b5af-d3af23748da8">
 		["revision"] = <"0.0.1-alpha">
 	>
 

@@ -27,7 +27,7 @@ This archetype has been designed to be a framework that will be adequate for ord
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"ASTM Standard E2369 - 05, \"Standard Specification for Continuity of Care Record (CCR)\", ASTM International, West Conshohocken, PA, 2003, DOI: 10.1520/E2369-05E02, www.astm.org.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -35,7 +35,7 @@ This archetype has been designed to be a framework that will be adequate for ord
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"4AE67AB458E81E888F3369311B72BC57">
-		["build_uid"] = <"19c4b1fd-dbed-403e-868d-4e84fce2ae9a">
+		["build_uid"] = <"ccf105f4-4688-423d-95d5-c3c58fd1d7a2">
 		["revision"] = <"0.0.1-alpha">
 	>
 

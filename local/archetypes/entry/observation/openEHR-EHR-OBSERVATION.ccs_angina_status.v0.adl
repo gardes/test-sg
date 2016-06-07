@@ -25,7 +25,7 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Canadian Cardiovascular Society grading of angina pectoris
 Available from: http://www.ccs.ca/download/position_statements/Grading%20of%20Angina.pdf
@@ -36,7 +36,7 @@ Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"AABF1F199C53965F87B9D6194285E7E9">
-		["build_uid"] = <"96f5646c-fe28-4387-b6bc-c42458a67cf0">
+		["build_uid"] = <"5b92762d-e6e8-4f68-b244-8c1a138e4f73">
 		["revision"] = <"0.0.1-alpha">
 	>
 

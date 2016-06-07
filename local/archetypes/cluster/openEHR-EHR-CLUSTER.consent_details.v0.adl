@@ -27,14 +27,14 @@ Use to optionally record additional details about the status of the request for 
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"73FB2F32DCC348C7C5F806839A64CA5D">
-		["build_uid"] = <"a1985922-77dd-40e3-ac13-d414eccad2ab">
+		["build_uid"] = <"1e558c86-ffee-4eb9-b967-baae1d437665">
 		["revision"] = <"0.0.1-alpha">
 	>
 

@@ -30,7 +30,7 @@ The ECOG Performance Status is in the public domain therefore available for publ
 	lifecycle_state = <"in_development">
 	other_contributors = <"Cailin Lowry, Lifehouse, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Oken, M.M., Creech, R.H., Tormey, D.C., Horton, J., Davis, T.E., McFadden, E.T., Carbone, P.P.: Toxicity And Response Criteria Of The Eastern Cooperative Oncology Group. Am J Clin Oncol 5:649-655, 1982.
 
@@ -41,7 +41,7 @@ http://en.wikipedia.org/wiki/Performance_status.">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"75DB3697C19DE550C82A820C28200B02">
-		["build_uid"] = <"15875582-a131-489e-8c4a-22cb2f7bccbc">
+		["build_uid"] = <"f54d9200-4c26-46aa-86c6-1fda61759ba8">
 		["revision"] = <"0.0.1-alpha">
 	>
 

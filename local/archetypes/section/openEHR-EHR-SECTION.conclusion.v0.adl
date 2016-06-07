@@ -43,14 +43,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"8A0DA76254CF14947EE15262C4514C88">
-		["build_uid"] = <"83bc033a-d0fa-440d-ac3b-bfc9e1b5d1f5">
+		["build_uid"] = <"eebaf5cb-a60e-4954-bb43-dacff7e4364c">
 		["revision"] = <"0.0.1-alpha">
 	>
 

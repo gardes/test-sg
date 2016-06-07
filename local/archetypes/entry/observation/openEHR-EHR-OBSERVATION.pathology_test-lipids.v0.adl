@@ -52,7 +52,7 @@ Will normally be reported back to the requesting clinician as one component with
 	lifecycle_state = <"in_development">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "David Rowed, VAMC Clinic, Australia (Editor)", "Mona Saleh (Translator)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.
 
@@ -63,7 +63,7 @@ Based on NEHTA 'Pathology Test' archetype. Available from: http://dcm.nehta.org.
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"85DE793E582CF820D4C8F2DB2A0E4CE8">
-		["build_uid"] = <"ab826260-b851-473a-9cf6-f22bbd5f201b">
+		["build_uid"] = <"716b97c2-df29-4218-aedc-c14aa498e16a">
 		["revision"] = <"0.0.1-alpha">
 	>
 

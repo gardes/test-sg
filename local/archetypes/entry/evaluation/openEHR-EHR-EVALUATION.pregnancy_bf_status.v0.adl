@@ -31,14 +31,14 @@ Not to be used to record details about a specific pregnancy - use EVALUATION.pre
 	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"A9082E2B94F8313036ACD18E6DC6DDD0">
-		["build_uid"] = <"4778abde-f584-4a34-8198-4873a0bb9aae">
+		["build_uid"] = <"4bbcb210-4e77-4538-aef9-e50bc51e7a29">
 		["revision"] = <"0.0.1-alpha">
 	>
 

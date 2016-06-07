@@ -27,14 +27,14 @@ This archetype is designed to be inserted into the 'Specific details' SLOT withi
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"9BF0450F35298FB77A08DBD75C332ED8">
-		["build_uid"] = <"db8ce688-fa9b-4527-8be5-b3d28188230d">
+		["build_uid"] = <"2a1b9108-d7ea-4209-82df-bad039968fd2">
 		["revision"] = <"0.0.1-alpha">
 	>
 

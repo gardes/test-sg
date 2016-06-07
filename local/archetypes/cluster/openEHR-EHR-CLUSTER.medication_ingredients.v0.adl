@@ -25,14 +25,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Chemical description of medication, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 12 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.885_2 (accessed 15 May 2013).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"C58947BD4659DC5AC56B27DE0797A1BB">
-		["build_uid"] = <"0f9ffe30-54c9-42db-a8fd-01faaac4418f">
+		["build_uid"] = <"c32c539a-b706-43f5-98ff-1b059a6b43ed">
 		["revision"] = <"0.0.1-alpha">
 	>
 

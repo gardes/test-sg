@@ -55,14 +55,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Shahla Foozonkhah, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"CCE3D9AAD9A5FEA2863B4DF58E79DB09">
-		["build_uid"] = <"957190de-37d5-414b-bd2d-312014e996c4">
+		["build_uid"] = <"9226e017-a370-4bf1-b241-b5355339ea6e">
 		["revision"] = <"0.0.1-alpha">
 	>
 

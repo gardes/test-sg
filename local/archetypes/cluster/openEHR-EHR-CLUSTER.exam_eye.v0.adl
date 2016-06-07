@@ -36,13 +36,13 @@ Not to be used to record stand-alone clinical observations or measurements or te
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "John Tore Valand, Haukeland Universitetssjukehus, Norway", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"E90258AAE4345722BCCCBACA10EB5F54">
-		["build_uid"] = <"c047d22e-d649-4a93-9d50-822e58ea3320">
+		["build_uid"] = <"3a67db23-b37b-4f1a-a55c-7138db5a4471">
 		["revision"] = <"0.0.1-alpha">
 	>
 

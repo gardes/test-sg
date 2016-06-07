@@ -6,10 +6,11 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
 			author = <
-				["name"] = <"?">
+				["name"] = <"Art Latyp Латыпов Артур Шамилевич">
+				["organisation"] = <"RusBITech РусБИТех, Москва">
 			>
 		>
 		["nb"] = <
@@ -27,11 +28,10 @@ language
 				["organisation"] = <"Hospital Universitario Austral, Buenos Aires, Argentina">
 			>
 		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
 			author = <
-				["name"] = <"Art Latyp Латыпов Артур Шамилевич">
-				["organisation"] = <"RusBITech РусБИТех, Москва">
+				["name"] = <"?">
 			>
 		>
 	>
@@ -82,20 +82,19 @@ description
 	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Bakke, Bergen Hospital Trust, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Ian McNicoll, freshEHR Clinical Informatics UK, ian@freshEHR.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"833221C23E2B25AD3CB9B0B78EE33740">
-		["build_uid"] = <"a4c3c27d-a88b-4702-89c2-c016faf8e0d8">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"4a77c5aa-54f9-4a40-8700-59b089f660fc">
+		["revision"] = <"1.0.1">
 	>
 
 definition
 	SECTION[at0000] matches {*}
-
 
 ontology
 	term_definitions = <

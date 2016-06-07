@@ -72,7 +72,7 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Rigoleta Dutra, Ministry of Defense, Brazil (Editor)", "Sergio Freire, State University of Rio de Janeiro, Brazil (Editor)", "Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Personal name of the person.  ENV 13606 - 4:2000 7.11.12
 
@@ -83,7 +83,7 @@ ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specificati
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"863B5225F0C8AE0C53C7BFBEAD317BBA">
-		["build_uid"] = <"86d9c0fd-0d10-47ee-83f5-8b756fb09236">
+		["build_uid"] = <"5764e67f-7fcb-4871-bd5e-d1eae372498d">
 		["revision"] = <"0.0.1-alpha">
 	>
 

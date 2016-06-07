@@ -45,14 +45,14 @@ Not to be used for recording Holter monitor results.">
 	lifecycle_state = <"in_development">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Tamsin Cockayne, Australia", "Marc Cotran, identity vision systems, Canada", "Sam Heard, Ocean Informatics, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Raymond Simkus, Brookswood Family Practice, Canada", "Tim Sturgill, United States">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"363B5F13EC59F5C0190AC12E5CE89474">
-		["build_uid"] = <"23fb3b4f-16e3-45d7-9df2-bd4da3a7af70">
+		["build_uid"] = <"5cd3b7a0-973f-4765-94c3-b74dc86acef2">
 		["revision"] = <"0.0.1-alpha">
 	>
 

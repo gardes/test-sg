@@ -41,7 +41,7 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"http://en.wikipedia.org/wiki/Bristol_stool_scale
 Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal transit time\". Scand. J. Gastroenterol. 32 (9): 920–4.">
@@ -49,7 +49,7 @@ Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal t
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"078DE87AA00C25524B94655A7AF551A2">
-		["build_uid"] = <"8a4d5a3e-c7b7-4c04-9db9-31f142969033">
+		["build_uid"] = <"c77679f9-1ae5-48ad-8575-ae2c260e682c">
 		["revision"] = <"0.0.1-alpha">
 	>
 

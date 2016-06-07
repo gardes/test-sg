@@ -38,15 +38,15 @@ This archetype is usually managed as a persistent list, however there are situat
 	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jussara Rotzsch, UNB, Brazil", "Micaela Thierley, Helse Bergen, Norway", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"4224E9C092FFCC5129C544B9F3DDB670">
-		["build_uid"] = <"f227ac48-27b1-4976-b161-184c04475c90">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"0f1f34f0-6708-463e-a898-b0369b884806">
+		["revision"] = <"1.0.1">
 	>
 
 definition

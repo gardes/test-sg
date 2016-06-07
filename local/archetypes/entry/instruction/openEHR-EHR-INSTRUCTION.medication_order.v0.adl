@@ -39,7 +39,7 @@ Not to be used to record ordering of blood products, implants or major devices s
 	lifecycle_state = <"in_development">
 	other_contributors = <"John Bennett, NEHTA, Australia", "Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia", "Ian McNicoll, Ocean Informatics. UK">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Medication instruction, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 12 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.838_15 (accessed 15 May 2013).
 Therapeutic Good Use Data Group, NEHTA  http://www.nehta.gov.au
@@ -49,7 +49,7 @@ Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"F64802B20BD4942509C4BD66ACB6402D">
-		["build_uid"] = <"a7dc45a9-fc6b-41b7-87da-45b6f7fb9229">
+		["build_uid"] = <"f7b4b85a-5bb9-4806-9947-ef5be60bbcc0">
 		["revision"] = <"0.0.1-alpha">
 	>
 

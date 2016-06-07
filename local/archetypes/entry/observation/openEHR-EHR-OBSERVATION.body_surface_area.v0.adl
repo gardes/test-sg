@@ -44,13 +44,13 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Christian Ghan, Lifehouse, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"339E28A1670047057CEDA33701AD99CC">
-		["build_uid"] = <"e2683eab-f2cf-41b7-a700-b6faa41fd32d">
+		["build_uid"] = <"8162ff08-da14-409e-82bf-88bc876ed938">
 		["revision"] = <"0.0.1-alpha">
 	>
 

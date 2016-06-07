@@ -57,7 +57,7 @@ Not to be used to record CSF glucose test results - use the generic OBSERVATION.
 	lifecycle_state = <"in_development">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.
 
@@ -66,7 +66,7 @@ Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA:
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"78F340610BCFA29FB160A2F5E8F2D90C">
-		["build_uid"] = <"98d7f373-23e5-49da-b99f-4d6c3a942698">
+		["build_uid"] = <"48fea4cb-02d7-4e54-a39b-fd290b715fcb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
