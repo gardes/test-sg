@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=584aa125-7783-4532-b518-a06f3ec7d9e7)
 	openEHR-EHR-OBSERVATION.respiration.v1
 
 concept
@@ -11,6 +11,21 @@ language
 			author = <
 				["name"] = <"Jasmin Buck, Sebastian Garde">
 				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Dr. Leonardo Der Jachadurian">
+				["organisation"] = <"Bitios.com">
+			>
+			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Carlos Porto Filho">
+				["organisation"] = <"USP">
 			>
 		>
 		["ar-sy"] = <
@@ -26,27 +41,12 @@ language
 				["organisation"] = <"Ocean Informatics">
 			>
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			author = <
-				["name"] = <"Dr. Leonardo Der Jachadurian">
-				["organisation"] = <"Bitios.com">
-			>
-			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
-		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			author = <
 				["name"] = <"Marja Buur">
 				["organisation"] = <"Medisch Centrum Alkmaar">
 				["email"] = <"m.buur-krom@mca.nl">
-			>
-		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			author = <
-				["name"] = <"Carlos Porto Filho">
-				["organisation"] = <"USP">
 			>
 		>
 	>
@@ -151,9 +151,11 @@ Niet te gebruiken voor de registratie van details, als de persoon beademing onde
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Gregory Caulton, PatientOS Inc., United States", "Stephen Chu, NeHTA, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Braun RB.  Respiratory Rate and Pattern. In: Walker HK, Hall WD, Hurst JW. Clinical methods: the history, physical, and laboratory examinations. [Internet] 3rd ed. Stoneham (MA): Butterworth Publishers; c1990 [cited 2009 Jul 21] 
 Available from: http://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=cm&part=A1308 [Accessed July 22, 2009].
 
@@ -168,7 +170,12 @@ Available from: http://en.wikipedia.org/wiki/Biot%27s_respiration
 
 Apneustic respirations - Wikipedia, the free encyclopedia [Internet]. [cited 2009 Jul 25 ] 
 Available from: http://en.wikipedia.org/wiki/Apneustic_respirations">
-		["MD5-CAM-1.0.1"] = <"F785361CE72E20207CD557387B49B703">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"E8905B6E226F8D405650817CD6FC1E39">
+		["build_uid"] = <"0f507af7-4d3b-401a-b19d-9604083a512d">
+		["revision"] = <"1.0.0">
 	>
 
 definition
@@ -267,7 +274,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

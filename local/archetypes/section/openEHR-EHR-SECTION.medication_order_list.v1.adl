@@ -65,15 +65,15 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 	lifecycle_state = <"published">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"15FEA92E92BAD5CC78C6CA4ACCE220A2">
-		["build_uid"] = <"6acbb55b-5b18-4c0b-9ee9-fa3f21e8fc6a">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"c022fdd2-8b8e-4093-9f51-0c393196da28">
+		["revision"] = <"1.0.1">
 	>
 
 definition
@@ -85,7 +85,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

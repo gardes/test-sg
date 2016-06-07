@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=353736da-8858-4926-8199-f87e70bd8301)
 	openEHR-EHR-OBSERVATION.glasgow_coma_scale.v1
 
 concept
@@ -6,12 +6,6 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			author = <
@@ -20,6 +14,12 @@ language
 				["email"] = <"marco.borges@p2d.com.br">
 			>
 			accreditation = <"P2D Health Advisor Council">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
 		>
 	>
 description
@@ -50,7 +50,7 @@ A recorded response for each of E, M and V is mandatory. If a response cannot be
 Clinical decision support should be based upon each of the specific records of eye, motor and verbal responses and the explicit statements that a response cannot be assessed, rather than the derived and composite EMV Score.(en)">
 			keywords = <"الاستجابة", "حركي", "لفظي", "العين", "المنبه", "غلاسغو", "غيبوبة", "سُلَّم", "عصبيّ", "مدى الاستجابة", "العين الحركة و اللفظ", "واعي">
 			misuse = <"لا يستخدم لتقييم الرضع و الأطفال صغار السن - استخدم لذلك نموذج ملاحظة. حرز غلاسغو - الغيبوبة - فيما يتعلق بطب الأطفال. للتأكد من أن الخيارات المتعلقة بردود فعل العين و الحركة و التلفظ مناسبة لعمر و قدرة الطفل.">
-			copyright = <"*© National E-Health Transition Authority(en)">
+			copyright = <"© *© National E-Health Transition Authority(en), openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -70,7 +70,7 @@ The minimum possible 'Total score' value is 3 (equivalent to E1 V1 M1) and the m
 In practical use, Glasgow coma scale is recorded as one component of clinical monitoring, using sequential and repeated point-in-time measurements. Date and time should be recorded for each measurement, as well as any factors that may influence interpretation of changes. Changes in 'Total score' or any E, V or M values may have as much clinical significance as the value recorded initially.">
 			keywords = <"response", "motor", "verbal", "eye", "stimulus", "glasgow", "coma", "scale", "neurological", "responsiveness", "EMV", "conscious", "GCS", "trauma", "central nervous system", "consciousness">
 			misuse = <"Not to be used for assessing infants and young children - an archetype for Paediatric Glasgow Coma Scale will be required to ensure that the eye, motor and verbal response choices are appropriate for the age and ability of the child.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© *© National E-Health Transition Authority(en), openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -94,12 +94,14 @@ Clinical decision support should be based upon each of the specific records of e
 ">
 			keywords = <"resposta", "motora", "verbal", "visual", "estímulo", "glasgow", "coma", "escala", "neurológicas", "responsividade", "ECG", "consciência">
 			misuse = <"Não deve ser utilizado para avaliar recém nascidos e e crianças de colo - para tal, utilizar OBSERVATION.glasgow_coma-paediatric.v1.adl para garantir respostas apropriados para a idade e capacidade da criança.">
-			copyright = <"© National E-Health Transition Authority">
+			copyright = <"© *© National E-Health Transition Authority(en), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Published">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Martin Boeker, Medical Center - University of Freiburg, Germany", "Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Margaret Campbell, Queensland Health, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Tamsin Cockayne, Australia", "Marc Cotran, identity vision systems, Canada", "Angela de Zwart, Orion Health, New Zealand", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "William Goossen, Results 4 Care, Netherlands", "Heather Grain, Llewelyn Grain Informatics, Australia", "Birger Haarbrandt, Hannover Medical School, Germany", "Sam Heard, Ocean Informatics, Australia", "Oliver Hosking, Remote Health NT, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Sergey Kovalenko, Chelyabinsk Regional Children Hospital, Russia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hallvard Lærum, Oslo University Hospital, Norway", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Andrej Orel, Marand d.o.o., Slovenia", "Michael Reynolds, Great Lakes Pediatric Associates, PLLC, United States", "Hossein Riazi, Iran", "Arturo Romero, SESCAM, Spain", "Jussara Rotzsch, UNB, Brazil", "Anoop Shah, University College London, United Kingdom", "Tony Shannon, NHS, United Kingdom", "Gary Sinclair, NT DoH, Australia", "Tim Sturgill, United States", "Soon Ghee Yap, Singapore General Hospital, Singapore">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Teasdale G. Glasgow Coma Scale: The Glasgow structured approach to Assessment of the Glasgow Coma Scale [Internet]. Sir Graham Teasdale; 2014 {cited 2015 Apr 20]. Available from: http://www.glasgowcomascale.org/ and http://www.glasgowcomascale.org/downloads/GCS-Assessment-Aid.pdf.
 
 Glasgow Coma Scale, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. Authored: 2007 Mar 13. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1160 (accessed 2015 Mar 05).
@@ -112,7 +114,12 @@ Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensi
 
 V3 DCModels R1 I1 2010 Sep - Glasgow Coma Scale v0.75 [Internet]. Health Level Seven International. Published Jan 2014. Available at: https://github.com/DetailedClinicalModels/Detailed-Clinical-Models/blob/master/Glasgow%20Coma%20Scale%20(GCS)/org.hl7.GlasgowComaScale(15pointversion)English-v0.75.pdf (accessed 22 Mar 2015)">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"A1A6700CE3FB57E2194DC229900F79BF">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8E79723A4EB292D18A8DC62CFA137D9B">
+		["build_uid"] = <"764ec265-d1f2-407a-b11d-7f1b508d2e39">
+		["revision"] = <"1.0.0">
 	>
 
 definition
@@ -212,7 +219,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

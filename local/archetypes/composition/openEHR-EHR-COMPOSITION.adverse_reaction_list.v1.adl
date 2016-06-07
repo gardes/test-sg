@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=71e408d4-3689-4c9f-8ca5-c73d3dd3739a)
 	openEHR-EHR-COMPOSITION.adverse_reaction_list.v1
 
 concept
@@ -35,11 +35,18 @@ This archetype is usually managed as a persistent list, however there are situat
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Published">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jussara Rotzsch, UNB, Brazil", "Micaela Thierley, Helse Bergen, Norway", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"E14F27E5E70306782D0A2769992A8472">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4224E9C092FFCC5129C544B9F3DDB670">
+		["build_uid"] = <"f227ac48-27b1-4976-b161-184c04475c90">
+		["revision"] = <"1.0.0">
 	>
 
 definition
@@ -57,7 +64,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

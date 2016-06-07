@@ -34,13 +34,13 @@ Not to be used to record stand-alone clinical observations or measurements or te
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "John Tore Valand, Haukeland Universitetssjukehus, Norway", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"019E93D7551F0B5CFCBA967EF3C8D611">
-		["build_uid"] = <"971f56d8-dacc-481e-94d0-3f5621e0ac76">
+		["build_uid"] = <"70132cbe-89d3-4dde-92fe-c1986d428547">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -118,7 +118,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
