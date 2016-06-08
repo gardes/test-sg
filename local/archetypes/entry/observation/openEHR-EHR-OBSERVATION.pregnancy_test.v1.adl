@@ -9,34 +9,30 @@ description
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
-		["email"] = <"Sam.Heard@OceanInformatics.com">
-		["date"] = <"2007-04-27">
+		["email"] = <"Sam.Heard@OceanInformatics.biz">
+		["date"] = <"20/04/2007">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the result of a near patient test for pregnancy.">
-			use = <"For use with a urinary pregnancy test or other test that provides a positive or negative result for early pregnancy. The test is not performed in a laboratory but by the person or provider.">
+			purpose = <"To record the result of a commercially produced pregnancy test">
+			use = <"For use with a commercial product">
 			keywords = <"pregnancy", "test", "confirmation">
-			misuse = <"Providing the interpretation of a B-HCG or other assessment of pregnancy. Use the Pregnancy Summary archetype to record pregnancy.">
-			copyright = <"© openEHR Foundation">
+			misuse = <"">
 		>
 	>
 	lifecycle_state = <"Initial">
 	other_contributors = <"Heather Leslie", ...>
-	other_details = <
-		["MD5-CAM-1.0.1"] = <"C4E088C7C80BA5EAB2D943E61011D6A7">
-	>
 
 definition
 	OBSERVATION[at0000] matches {	-- Pregnancy test
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {1..*} matches {	-- Time
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Time
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {1..*; unordered} matches {
+							ITEM_SINGLE[at0003] matches {	-- Single
+								item matches {
 									ELEMENT[at0004] matches {	-- Result
 										value matches {
 											DV_CODED_TEXT matches {
@@ -45,22 +41,7 @@ definition
 													at0005, 	-- Negative
 													at0006, 	-- Inconclusive
 													at0007, 	-- Weakly positive
-													at0008, 	-- Strongly positive
-													at0011]	-- Uncertain
-												}
-											}
-										}
-									}
-									ELEMENT[at0014] occurrences matches {0..*} matches {	-- Image
-										value matches {
-											DV_MULTIMEDIA matches {
-												media_type matches {
-													[openEHR::
-													425, 
-													426, 
-													427, 
-													428, 
-													429]
+													at0008]	-- Strongly positive
 												}
 											}
 										}
@@ -73,14 +54,9 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0009] matches {	-- Tree
+			ITEM_LIST[at0009] matches {	-- List
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Product
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -96,7 +72,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Pregnancy test">
-					description = <"Result of a near patient test for early pregnancy.">
+					description = <"Result of test using a commercial product to test for early pregnancy">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -104,51 +80,39 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Time">
-					description = <"Date and time of test.">
+					description = <"Time of test">
 				>
 				["at0003"] = <
-					text = <"Tree">
+					text = <"Single">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
 					text = <"Result">
-					description = <"The result of the pregnancy test.">
+					description = <"The result of the pregnancy test">
 				>
 				["at0005"] = <
 					text = <"Negative">
-					description = <"The result does not meet the product's criteria for confirmation of pregnancy.">
+					description = <"The result does not show any sign of pregnancy">
 				>
 				["at0006"] = <
 					text = <"Inconclusive">
-					description = <"The result is inconclusive.">
+					description = <"The result is inconclusive">
 				>
 				["at0007"] = <
 					text = <"Weakly positive">
-					description = <"The result is consistent with the product's criteria for pregnancy but only weakly.">
+					description = <"The result is positive but the change is not strong">
 				>
 				["at0008"] = <
 					text = <"Strongly positive">
-					description = <"The result is strongly consistent with the product's criteria for pregnancy.">
+					description = <"The resulting change is very obvious">
 				>
 				["at0009"] = <
-					text = <"Tree">
+					text = <"List">
 					description = <"@ internal @">
 				>
 				["at0010"] = <
 					text = <"Product">
-					description = <"The product used for the test.">
-				>
-				["at0011"] = <
-					text = <"Uncertain">
-					description = <"The person performing the test is unsure how to interpret the result.">
-				>
-				["at0012"] = <
-					text = <"Method">
-					description = <"Notes on the method used to perform the test.">
-				>
-				["at0014"] = <
-					text = <"Image">
-					description = <"An image of the test.">
+					description = <"The product used for the test">
 				>
 			>
 		>

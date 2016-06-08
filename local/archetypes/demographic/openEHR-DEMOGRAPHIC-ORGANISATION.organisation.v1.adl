@@ -25,23 +25,23 @@ description
 	details = <
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
-			purpose = <"Representação dos dados de uma Organização">
-			use = <"Usado em serviços de demografia para coletar dados demográficos sobre uma organização">
+			purpose = <"Representação dos dados de uma Organização.">
+			use = <"Usado em serviços de demografia para coletar dados demográficos sobre uma organização.">
 			keywords = <"serviço demográfico", "organização">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© 2011 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Representation of an organisation's demographic data">
-			use = <"Used in demographic service to collect demographic data about an organisation">
+			purpose = <"Representation of an organisation's demographic data.">
+			use = <"Used in demographic service to collect demographic data about an organisation.">
 			keywords = <"demographic service", "organisation's data">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© 2011 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK (Editor)">
 	other_details = <
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
 	>
@@ -64,9 +64,9 @@ definition
 					archetype_id/value matches {/(organisation_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
-		contacts cardinality matches {0..*; ordered} matches {
+		contacts matches {
 			CONTACT[at0003] matches {
-				addresses cardinality matches {1..*; ordered} matches {
+				addresses matches {
 					allow_archetype ADDRESS[at0030] matches {
 						include 
 							archetype_id/value  matches {/(address)[a-zA-Z0-9_-]*\.v1/}
@@ -75,14 +75,14 @@ definition
 				}
 			}
 		}
-		relationships cardinality matches {0..*; ordered} matches {
-			
+		relationships matches {
 			PARTY_RELATIONSHIP[at0004] matches { 
 				details matches {
 					ITEM_TREE[at0040] matches {
 						items cardinality matches {1..*; ordered} matches {
 							ELEMENT[at0041] occurrences matches {0..1} matches {	-- type of relationship
 								value matches {
+				    					DV_TEXT matches {*}
 				    					DV_CODED_TEXT matches {
 										defining_code matches {[ac0000]}
 				    					}
@@ -96,45 +96,46 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["pt-br"] = <
 			items = <
 				["at0000"] = <
 					text = <"Organização">
-					description = <"Organização">
+					description = <"Organização.">
 				>
 				["at0001"] = <
 					text = <"Documentos">
-					description = <"Documentos de Identificação da organização">
+					description = <"Documentos de Identificação da organização.">
 				>
 				["at0002"] = <
 					text = <"Nome">
-					description = <"Identificação da organização - os nomes pelos quais ela é conhecida">
+					description = <"Identificação da organização - os nomes pelos quais ela é conhecida.">
 				>
 				["at0003"] = <
 					text = <"Contatos">
-					description = <"Formas de contactar a organização">
+					description = <"Formas de contactar a organização.">
 				>
 				["at0004"] = <
 					text = <"Relacionamentos">
-					description = <"Relacionamentos entre uma organização com outra ou entre uma organização e uma de suas divisões/departamentos, etc">
+					description = <"Relacionamentos entre uma organização com outra ou entre uma organização e uma de suas divisões/departamentos, etc.">
 				>
 				["at0010"] = <
 					text = <"Documento">
-					description = <"Um documento da organização">
+					description = <"Um documento da organização.">
 				>
 				["at0030"] = <
 					text = <"Endereço">
-					description = <"Endereço de contato da organização">
+					description = <"Endereço de contato da organização.">
 				>
 				["at0040"] = <
 					text = <"Detalhes">
-					description = <"Detalhes do relacionamento">
+					description = <"Detalhes do relacionamento.">
 				>
 				["at0041"] = <
 					text = <"Type of relationship">
-					description = <"Tipo de relacionamento entre as duas organizações">
+					description = <"Tipo de relacionamento entre as duas organizações.">
 				>
 			>
 		>
@@ -142,39 +143,39 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Organisation">
-					description = <"Organisation demographic data">
+					description = <"Organisation demographic data.">
 				>
 				["at0001"] = <
 					text = <"Identifiers">
-					description = <"Organisation identifiers">
+					description = <"Organisation identifiers.">
 				>
 				["at0002"] = <
 					text = <"Name">
-					description = <"Identification - the names the organisation is known by">
+					description = <"Identification - the names the organisation is known by.">
 				>
 				["at0003"] = <
 					text = <"Contacts">
-					description = <"Organisation contacts">
+					description = <"Organisation contacts.">
 				>
 				["at0004"] = <
 					text = <"Relationship">
-					description = <"Relationship between two organisations or between an organization and one of its division/department, etc">
+					description = <"Relationship between two organisations or between an organization and one of its division/department, etc.">
 				>
 				["at0010"] = <
 					text = <"Identifier">
-					description = <"An organisation identifier">
+					description = <"An organisation identifier.">
 				>
 				["at0030"] = <
 					text = <"Address">
-					description = <"An organisation contact address">
+					description = <"An organisation contact address.">
 				>
 				["at0040"] = <
 					text = <"Details">
-					description = <"Relationship details">
+					description = <"Relationship details.">
 				>
 				["at0041"] = <
 					text = <"Type of relationship">
-					description = <"Type of relationship between two organisations">
+					description = <"Type of relationship between two organisations.">
 				>
 			>
 		>
@@ -184,7 +185,7 @@ ontology
 			items = <
 				["ac0000"] = <
 					text = <"Códigos do tipo de relacionamento">
-					description = <"códigos válidos para o tipo de relacionamento entre duas organizações">
+					description = <"códigos válidos para o tipo de relacionamento entre duas organizações.">
 				>
 			>
 		>
@@ -192,7 +193,7 @@ ontology
 			items = <
 				["ac0000"] = <
 					text = <"Codes for type of relationship">
-					description = <"valid codes for the type or relationship between two organisations">
+					description = <"valid codes for the type or relationship between two organisations.">
 				>
 			>
 		>

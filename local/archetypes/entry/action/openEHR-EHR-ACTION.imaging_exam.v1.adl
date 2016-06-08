@@ -10,7 +10,7 @@ description
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"17/04/2006">
+		["date"] = <"2006-04-10">
 	>
 	details = <
 		["en"] = <
@@ -25,13 +25,17 @@ description
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"B0B81B487EFAE113C50A83795C834E0D">
+		["references"] = <"Derived from Imaging Examination (action) , draft archetype, National eHealth Transition Authority [Internet]. NEHTA Clinical Knowledge Manager. Authored: 08 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.999 (accessed Jan 16, 2012).
+
+
+">
+		["MD5-CAM-1.0.1"] = <"D232231706137B7882AC0145E72C3751">
 	>
 
 definition
 	ACTION[at0000] matches {	-- Imaging examination
 		ism_transition matches {
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0002] matches {	-- Examination planned
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::526]}
@@ -43,7 +47,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0003] matches {	-- Examination requested
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::526]}
@@ -55,7 +59,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0009] matches {	-- Examination postponed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::527]}
@@ -67,7 +71,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0011] matches {	-- Examination cancelled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::528]}
@@ -79,7 +83,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0004] matches {	-- Appointment scheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -91,7 +95,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0005] matches {	-- Appointment rescheduled
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::529]}
@@ -103,7 +107,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0008] matches {	-- Examination performed
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -115,7 +119,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0014] matches {	-- Failed attempt
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::245]}
@@ -127,7 +131,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0010] matches {	-- Examination suspended
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::530]}
@@ -139,7 +143,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0012] matches {	-- Examination aborted
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::531]}
@@ -151,7 +155,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION matches {
+			ISM_TRANSITION[at0007] matches {	-- Examination complete
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[openehr::532]}
@@ -210,6 +214,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
