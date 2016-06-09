@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=a6bb4cba-6ae3-4343-a3d4-3119f2cf93d4)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.health_risk.v1
 
 concept
@@ -60,16 +60,9 @@ The intent of this archetype is to document potential risk at a point in time, a
 	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anca Heyd, DIPS ASA, Norway", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hallvard Lærum, Oslo University Hospital, Norway", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jussara Rotzsch, UNB, Brazil", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/. TEST">
-		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Health Risk, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. Authored: 2006 Apr 23. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1276 (accessed 2015 Mar 04). Archetype originated from the openEHR CKM.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"11EFD060A552B5E1868E02D0A4083E9A">
-		["build_uid"] = <"d88d1db6-c324-439e-a32a-b6d0816d67dd">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"E631B10CF6590DB844CC0ECA1F5CC682">
 	>
 
 definition
@@ -173,6 +166,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

@@ -6,6 +6,12 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			author = <
@@ -13,12 +19,6 @@ language
 				["organisation"] = <"Moscow DGP 99">
 			>
 			accreditation = <"Russian State University">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
 		>
 	>
 description
@@ -61,13 +61,13 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/. TEST">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"6E90916149B444AB6BAF8CDDE86CA1F6">
-		["build_uid"] = <"bba3646c-f4ae-43b8-abb6-8fe9258b9134">
+		["build_uid"] = <"69ac4fd2-b0c0-49e8-aafe-c0beca238594">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -114,6 +114,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <

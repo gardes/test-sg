@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=aa61af45-ba6c-46c7-a383-c7c3819711f7)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1
 
 concept
@@ -40,18 +40,11 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"Published">
 	other_contributors = <"Athanasios Anastasiou, UoP, United Kingdom", "Sebastian Bischoff, gfnmediber, Germany", "Martin Boeker, University Medical Center Freiburg, Germany", "Michael Braun, University Medical Center Freiburg, Germany (Editor)", "Sebastian Garde, Ocean Informatics, Germany", "Eugene Igras, IRIS Systems, Inc., Canada", "Heather Leslie, Ocean Informatics, Australia", "Sebastian Mansow-Model, gfnmediber GmbH, Germany", "Catalina Martínez-Costa, Medical University of Graz, Austria", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Alexander U. Brandt, gfnmediber GmbH, Germany">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/. TEST">
-		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Fischer JS, Jak AJ, Kniker JE, Rudick RA, Cutter G. Multiple Sclerosis Functional Composite (MSFC), Administration and Scoring Manual: National Multiple Sclerosis Society; 2001.">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"FFC2146E6B65D889B55420DFDB1D1709">
-		["build_uid"] = <"01b4c714-f666-4d8f-94b4-3082dd3a30d8">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"EBC56378345269E681B5B2FCDADCF273">
 	>
 
 definition
@@ -154,6 +147,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
