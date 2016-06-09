@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=c3990306-6895-4f53-a8b3-926803613eac)
 	openEHR-EHR-CLUSTER.clubbing.v1
 
 concept
@@ -19,14 +19,21 @@ description
 			use = <"Psudo-clubbing should be reported as not present and document in the clinical description.">
 			keywords = <"clubbing", "hypertrophic osteopathy", "drumstick", "spongy", "nail">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/. TEST">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"046FE5DB0717AD9C4B140CDCB1509DC3">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"87508799E70FF330106B4384C57B818F">
+		["build_uid"] = <"6128639c-161c-487b-be00-bce6e1e95ac9">
+		["revision"] = <"1.0.1">
 	>
 
 definition
@@ -69,7 +76,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
