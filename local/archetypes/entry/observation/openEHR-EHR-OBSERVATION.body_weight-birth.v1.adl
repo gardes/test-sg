@@ -21,18 +21,6 @@ language
 				["name"] = <"Sergio Carmona">
 			>
 		>
-		["hu"] = <
-			language = <[ISO_639-1::hu]>
-			author = <
-				["name"] = <"Gabor Szabo">
-			>
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			author = <
-				["name"] = <"Mona Saleh">
-			>
-		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			author = <
@@ -46,7 +34,7 @@ description
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"2006-03-26">
+		["date"] = <"22/03/2006">
 	>
 	details = <
 		["de"] = <
@@ -55,7 +43,7 @@ description
 			use = <"Messung des Gewichts zum Zeitpunkt der Geburt ohne Kleidung">
 			keywords = <"Neugeborenes", "Geburt">
 			misuse = <"Nur für das Geburtsgewicht - für alle anderen Messungen ist OBSERVATION.weight zu benutzen ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -67,7 +55,7 @@ description
 
 
 ">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -75,7 +63,7 @@ description
 			use = <"Naked birth weight measurement.">
 			keywords = <"neonate", "birth", "weight">
 			misuse = <"Only for weight at birth - use OBSERVATION.weight for all other measurements.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -84,29 +72,14 @@ description
 			use = <"Измерение БЕЗ одежды, пеленок и памперсов.">
 			keywords = <"новорожденный", "рождение">
 			misuse = <"Только для веса при рождении. Для других измерений использовать observation.body_weight.v1">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل وزن الشخص عند الوضع/ الولادة">
-			use = <"قياس الوزن عند الولادة في حالة أن الطفل لا يزال مُعَرَّى">
-			keywords = <"حديث الولادة", "الولادة/ الوضع", "الوزن">
-			misuse = <"يستخدم فقط لقياس الوزن عند الولادة - استخدم نموذج ملاحظة.الوزن لجميع القياسات الأخرى">
-			copyright = <"© openEHR Foundation">
-		>
-		["hu"] = <
-			language = <[ISO_639-1::hu]>
-			purpose = <"Egy személy születési súlyának lejegyzésére.">
-			use = <"Meztelen test születési súlyának mérésére.">
-			keywords = <"*újszülött", "*születés", "*súly">
-			misuse = <"Csak a születési súly feljegyzésére - használja az OBSERVATION.weight archetípust minden más méréshez.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
+	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"EC6662EA9DCEA40574E00E7F55C52876">
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"7C1E7FA545B62DE05F20FDA8CEEE6CBF">
 	>
 
 definition
@@ -122,7 +95,7 @@ definition
 						}
 						data matches {
 							ITEM_TREE[at0001] matches {	-- Simple
-								items cardinality matches {1..*; unordered} matches {
+								items cardinality matches {1; unordered} matches {
 									ELEMENT[at0004.1] occurrences matches {0..1} matches {	-- Birth weight
 										value matches {
 											C_DV_QUANTITY <
@@ -165,7 +138,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -493,158 +466,6 @@ ontology
 				["at0025"] = <
 					text = <"*Confounding Factors(en)">
 					description = <"*Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.(en)">
-				>
-			>
-		>
-		["ar-sy"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Body weight(en)">
-					description = <"*Measurement of the body weight of an individual.(en)">
-				>
-				["at0000.1"] = <
-					text = <"وزن الجسم عند الولادة / الوضع">
-					description = <"إجمالي وزن الجسم - بديل عن وزن الجسم المُعَّرى عند الولادة/ الوضع">
-				>
-				["at0001"] = <
-					text = <"*Simple(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"*history(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0003"] = <
-					text = <"*Any event(en)">
-					description = <"*Any event.(en)">
-				>
-				["at0003.1"] = <
-					text = <"الولادة/ الوضع">
-					description = <"واقعة الولادة/ الوضع">
-				>
-				["at0004"] = <
-					text = <"*Weight(en)">
-					description = <"*The weight of the individual.(en)">
-				>
-				["at0004.1"] = <
-					text = <"الوزن عند الولادة/ الوضع">
-					description = <"وزن الجسم الكلي عند الولادة/ الوضع">
-				>
-				["at0008"] = <
-					text = <"*state structure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0009"] = <
-					text = <"حالة الملبس">
-					description = <"وصف حالة ملبس الشخص في وقت قياس الوزن">
-				>
-				["at0010"] = <
-					text = <"يلبس بشكل كامل, بما في ذلك الأحذية">
-					description = <"درجة من الملبس قد تضيف إلى الوزن, بما في ذلك الأحذية">
-				>
-				["at0011"] = <
-					text = <"ملابس خفيفة/ملابس داخلية">
-					description = <"درجة من الملابس لا تزيد للوزن بشكل مؤثر">
-				>
-				["at0013"] = <
-					text = <"مُعَرَّى">
-					description = <"لا يرتدي أي ملابس">
-				>
-				["at0015"] = <
-					text = <"*protocol structure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0017"] = <
-					text = <"حفاظة">
-					description = <"يرتدي حفاظة فقط - قد تزيد الوزن بشكل مؤثر">
-				>
-				["at0020"] = <
-					text = <"الجهيزة">
-					description = <"تفاصيل حول جهيزة الوزن المستخدَم">
-				>
-				["at0024"] = <
-					text = <"التعليق">
-					description = <"تعليق حول قياس الوزن">
-				>
-				["at0025"] = <
-					text = <"العوامل المربكة">
-					description = <"لتسجيل أي عوامل أو قضايا قد تؤثر على قياس وزن الجسم, مثل الوقت من الدورة الشهرية, وقت آخر إفراغ للأمعاء أو ملاحظة وجود بتر بأحد الأعضاء">
-				>
-			>
-		>
-		["hu"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Body weight(en)">
-					description = <"*Measurement of the body weight of an individual.(en)">
-				>
-				["at0000.1"] = <
-					text = <"Születéskori testsúly">
-					description = <"Teljes súly - születéskori meztelen test súlya.">
-				>
-				["at0001"] = <
-					text = <"*Simple(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0002"] = <
-					text = <"*history(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0003"] = <
-					text = <"*Any event(en)">
-					description = <"*Any event.(en)">
-				>
-				["at0003.1"] = <
-					text = <"Születés">
-					description = <"A születés eseménye">
-				>
-				["at0004"] = <
-					text = <"*Weight(en)">
-					description = <"*The weight of the individual.(en)">
-				>
-				["at0004.1"] = <
-					text = <"Születési súly">
-					description = <"A teljes test súlya születéskor.">
-				>
-				["at0008"] = <
-					text = <"*state structure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0009"] = <
-					text = <"Ruházat állapota">
-					description = <"A mérés pillanatában a személy által viselt ruházat állapotának leírása.">
-				>
-				["at0010"] = <
-					text = <"Teljesen felöltözött, cipőket is beleértve">
-					description = <"Ruházat, ami jelentős súlytöbbletet adhat, cipőket is beleértve">
-				>
-				["at0011"] = <
-					text = <"Könnyen öltözött/alsónemű">
-					description = <"Ruházat, ami nem jelent jelentős súlytöbbletet.">
-				>
-				["at0013"] = <
-					text = <"Meztelen">
-					description = <"Ruhák nélkül.">
-				>
-				["at0015"] = <
-					text = <"*protocol structure(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0017"] = <
-					text = <"Pelenka">
-					description = <"Pelenka viselése jelentős súlytöbbletet jelenthet.">
-				>
-				["at0020"] = <
-					text = <"Eszköz">
-					description = <"A súly mérésére használt eszköz részletei.">
-				>
-				["at0024"] = <
-					text = <"Megjegyzés">
-					description = <"A súly mérésével kapcsolatos megjegyzés.">
-				>
-				["at0025"] = <
-					text = <"Zavaró tényezők">
-					description = <"Jegyezzen fel minden olyan tényezőt, melyek hatással lehetnek a testsúly mérésére, pl.: menstuációs ciklus ideje, utolsó széklet ideje.">
 				>
 			>
 		>

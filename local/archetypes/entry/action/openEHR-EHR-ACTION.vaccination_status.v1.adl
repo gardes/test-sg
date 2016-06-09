@@ -1,0 +1,327 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ACTION.vaccination_status.v1
+
+concept
+	[at0000]	-- Vaccination Status
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"FB755CE69B118F3BB82BC6BA21BBB686">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Vaccination Status
+		ism_transition matches {
+			ISM_TRANSITION[at0008] matches {	-- Primary Course Planned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::526]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0008]}		-- Primary Course Planned
+					}
+				}
+			}
+			ISM_TRANSITION[at0012] matches {	-- Booster Planned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::526]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0012]}		-- Booster Planned
+					}
+				}
+			}
+			ISM_TRANSITION[at0010] matches {	-- Primary Course Postponed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::527]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0010]}		-- Primary Course Postponed
+					}
+				}
+			}
+			ISM_TRANSITION[at0016] matches {	-- Booster Postponed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::527]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0016]}		-- Booster Postponed
+					}
+				}
+			}
+			ISM_TRANSITION[at0011] matches {	-- Primary Course Cancelled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::528]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0011]}		-- Primary Course Cancelled
+					}
+				}
+			}
+			ISM_TRANSITION[at0018] matches {	-- Booster Cancelled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::528]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0018]}		-- Booster Cancelled
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {	-- Primary Course Scheduled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::529]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0007]}		-- Primary Course Scheduled
+					}
+				}
+			}
+			ISM_TRANSITION[at0013] matches {	-- Booster Scheduled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::529]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0013]}		-- Booster Scheduled
+					}
+				}
+			}
+			ISM_TRANSITION[at0009] matches {	-- Primary Course Under Way/Incomplete
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0009]}		-- Primary Course Under Way/Incomplete
+					}
+				}
+			}
+			ISM_TRANSITION[at0014] matches {	-- Booster Administered
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0014]}		-- Booster Administered
+					}
+				}
+			}
+			ISM_TRANSITION[at0004] matches {	-- Primary Course Suspended
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::530]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0004]}		-- Primary Course Suspended
+					}
+				}
+			}
+			ISM_TRANSITION[at0017] matches {	-- Booster Suspended
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::530]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0017]}		-- Booster Suspended
+					}
+				}
+			}
+			ISM_TRANSITION[at0005] matches {	-- Primary Course Abandoned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::531]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0005]}		-- Primary Course Abandoned
+					}
+				}
+			}
+			ISM_TRANSITION[at0019] matches {	-- Booster Abandoned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::531]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0019]}		-- Booster Abandoned
+					}
+				}
+			}
+			ISM_TRANSITION[at0003] matches {	-- Primary Course Completed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::532]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0003]}		-- Primary Course Completed
+					}
+				}
+			}
+			ISM_TRANSITION[at0015] matches {	-- Booster Completed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::532]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0015]}		-- Booster Completed
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] matches {	-- Infectious Disease or Agent
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vaccination Status">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Infectious Disease or Agent">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Primary Course Completed">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Primary Course Suspended">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Primary Course Abandoned">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Reason">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Primary Course Scheduled">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Primary Course Planned">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Primary Course Under Way/Incomplete">
+					description = <"Course Incomplete">
+				>
+				["at0010"] = <
+					text = <"Primary Course Postponed">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Primary Course Cancelled">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Booster Planned">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Booster Scheduled">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Booster Administered">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Booster Completed">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Booster Postponed">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Booster Suspended">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Booster Cancelled">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Booster Abandoned">
+					description = <"*">
+				>
+			>
+		>
+	>

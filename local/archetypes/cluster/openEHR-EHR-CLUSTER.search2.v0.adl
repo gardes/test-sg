@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=401a9d04-e263-4d03-97a1-e953bcfe1c61)
+﻿archetype (adl_version=1.4; uid=693773bf-e4f7-447f-986d-74ba662d1e12)
 	openEHR-EHR-CLUSTER.search2.v0
 
 concept
@@ -21,18 +21,19 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B0FE3B758BA802B27D860E5ECD9ACFAB">
-		["build_uid"] = <"fb4f7eed-1bf5-4227-8a82-f7eeca72bc2e">
 		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["build_uid"] = <"6e7424ed-4221-4d9c-8a24-036f6d2cb842">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"CDDA4AA40F679B10B0F4F2F991AA6A52">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
 	CLUSTER[at0000] matches {*}
+
 
 ontology
 	term_definitions = <

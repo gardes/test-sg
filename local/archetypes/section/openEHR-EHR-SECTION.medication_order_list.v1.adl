@@ -1,21 +1,10 @@
-﻿archetype (adl_version=1.4; uid=cd646d00-6484-46b1-9438-a18a683a6989)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-SECTION.medication_order_list.v1
 
 concept
 	[at0000]	-- Medication Order List
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			author = <
-				["name"] = <"Art Latyp; Латыпов Артур Шамилевич">
-				["organisation"] = <"RusBITech; РусБИТех, Москва">
-				["email"] = <"alatypov@asteis.net">
-			>
-			accreditation = <"hmm">
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -40,40 +29,14 @@ While INSTRUCTION.medication and EVALUATION.exclusion-medication and their speci
 INSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. A Medication list comprising only ACTIONs will represent only those medication that have been prescribed/printed by the recording clinician.">
 			keywords = <"medication", "exclusion", "absence", "current", "list">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Показать дизайн листа лекарственных назначений">
-			use = <"Используется для представления списка назначенных медикаментов, а также для утверждений об отсутствии лекарственных назначений, как в общем, так и по конкретным наименованиям.
-
-Наличие назначений медикаментов может быть представлено в виде отдельных записей.
-
-Утверждения об отсутствии назначения медикаментов, как вообще, так и конкретно, могут указывать только на состояние в момент записи информации, то есть основаны на событии. Поэтому нерационально создавать постоянную запись об отсутствии назначений, поскольку любое последующее назначение лечащим врачом или консультантом, или самостоятельный прием лекарств пациентом, делает такую запись устаревшей. 
-
-Возможно указывать в шаблоне оба утверждения, как об определенных назначениях, так и о их отсутствии (например, пациент получает сальбутамол и глибенкламид, но  никогда не получал преднизолон). Тем не менее, в большинстве случаев используются либо утверждения о присутствии определенных назначений (скажем, пациент получает сальбутамол или глибенкламид), либо общее утверждение о отсутствии известных назначений (например, в настоящее время не получает никаких лекарств), но не оба вместе. 
-
-Хотя в ограничениях слота явно включены УКАЗАНИЕ.медикамент [INSTRUCTION.medication] и СУЖДЕНИЕ.исключение_медикамента [EVALUATION.exclusion-medication] со своими спецификациями,  другие архетипы явно не исключаются. Это означает, что при необходимости также могут  быть включены любые другие архетипы, например, если необходимы структурное данные или есть необходимость вставить краткое описание (эпикриз), можно включить и использовать архетип СУЖДЕНИЕ.эпикриз [EVALUATION.clinical_synopsis].
-
-В данном случае как наилучший вариант представления списка медикаментов предлагается  архетип УКАЗАНИЕ.медикамент [INSTRUCTION.medication], так как обычно он обеспечивает наилучшее представление локального текущего списка медикаментов. Клиницисты могут вводить лекарства, принимаемые больным самостоятельно,  или не учитываемые системой медикаменты в систему назначений как УКАЗАНИЯ, что в свою очередь позволяет указывать неблагоприятные реакции, сверяясь со всеми УКАЗАНИЯМИ, как назначенными врачом, так и нет. Поэтому текущие списки медикаментов могут эффективно отображать все лекарственные назначения, как назначенные лечащим врачом, так и другими клиницистами, и также самим пациентом. Список медикаментов, включающий только ДЕЙСТВИЯ, отображает только медикаменты, назначенные лечащим клиницистом.
-">
-			keywords = <"лекарство", "медикамент", "препарат", "текущий", "список", "лист", "назначений", "отмена">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"0">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/. TEST">
-		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"15FEA92E92BAD5CC78C6CA4ACCE220A2">
-		["build_uid"] = <"6c6b3c47-6707-491d-809d-bddd62762f70">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"82E4B8168F16BCAA49A33B9E10910F8A">
 	>
 
 definition
@@ -86,6 +49,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -97,18 +61,6 @@ ontology
 				["at0004"] = <
 					text = <"Medication inclusions/exclusions">
 					description = <"Slot constrained to specifically include archetypes representing known medication orders and exclusion or absence of medication orders.">
-				>
-			>
-		>
-		["ru"] = <
-			items = <
-				["at0000"] = <
-					text = <"Лист лекарственных назначений">
-					description = <"Дизайн для включения листа назначений в шаблон">
-				>
-				["at0004"] = <
-					text = <"Включения/исключения медикаментов">
-					description = <"Слот, ограничивающий включение архетипов, представляющих назначение известных медикаментов и исключение/отсутствие таких назначений">
 				>
 			>
 		>
