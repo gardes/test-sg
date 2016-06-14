@@ -1,0 +1,104 @@
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.91.1.2)
+	openEHR-EHR-SECTION.diagnostic_investigations.v1
+
+concept
+	[at0000]	-- Diagnostic Investigations
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"22-Apr-2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"65C1F0AE2782F8A026DBA53D4D98B59A">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Diagnostic Investigations
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Pathology Test Result
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.pathology_test(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {	-- Imaging Examination Result
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.imaging_exam(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype EVALUATION[at0003] occurrences matches {0..*} matches {	-- Diagnostic Investigation Synopsis
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis\.v4/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype ACTION[at0004] occurrences matches {0..*} matches {	-- Requested Service
+				include
+					archetype_id/value matches {/openEHR-EHR-ACTION\.requested_service(-[a-zA-Z0-9_]+)*\.v4/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Diagnostic Investigations">
+					description = <"Describes the diagnostic tests or procedures performed on or requested for the subject of care during the healthcare event, that are considered to be relevant to the subject of care’s ongoing care.">
+					dc_id = <"20117">
+					detail_docref = <"sections/NEHTA-20117-Diagnostic_Investigations-Section.xml">
+					spec_id = <"91">
+				>
+				["at0001"] = <
+					text = <"Pathology Test Result">
+					description = <"The result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.">
+					dc_id = <"16144.91.1">
+					detail_docref = <"data_groups/NEHTA-16144-Pathology_Test_Result-Data_Group.xml">
+					spec_id = <"92">
+				>
+				["at0002"] = <
+					text = <"Imaging Examination Result">
+					description = <"The result of an imaging examination which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.">
+					comment = <"This data group also acts as the parent for specialisations appropriate for more specific imaging laboratory tests, e.g. radiology, magnetic resonance imaging, ultrasound.">
+					dc_id = <"16145.91.1">
+					spec_id = <"95">
+					detail_docref = <"data_groups/NEHTA-16145-Imaging_Examination_Result-Data_Group.xml">
+				>
+				["at0003"] = <
+					text = <"Diagnostic Investigation Synopsis">
+					description = <"Detailed information or comments about a diagnostic investigation of a patient not available elsewhere as structured data. OR A clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).">
+					comment = <"Narrative information is captured or entered here by a healthcare provider from the focus of a healthcare provider, carer, subject of care and/or others unrelated to the subject of care.">
+					dc_id = <"15513.91.1">
+					spec_id = <"10">
+					detail_docref = <"data_groups/NEHTA-15513-Diagnostic_Investigation_Synopsis-Data_Group.xml">
+				>
+				["at0004"] = <
+					text = <"Requested Service">
+					description = <"A request for a diagnostic investigation of the subject of care.">
+					comment = <"This item does not include the results of diagnostic test orders. If the service provision has not been confirmed then, the service date and/or provider may not be recorded.">
+					dc_id = <"20158.91.1">
+					spec_id = <"51">
+					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
+				>
+			>
+		>
+	>

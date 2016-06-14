@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=40f97311-96b8-48bf-8cd9-039b25d0aeb8)
 	openEHR-EHR-OBSERVATION.ccs_angina_status.v1
 
 concept
@@ -22,15 +22,22 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"1.0.0">
 		["references"] = <"Canadian Cardiovascular Society grading of angina pectoris
 Available from: http://www.ccs.ca/download/position_statements/Grading%20of%20Angina.pdf
 
 CANADIAN CARDIOVASCULAR SOCIETY ANGINA GRADE 0 – A CLINICALLY USEFUL ADDITION
 Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
-		["MD5-CAM-1.0.1"] = <"14E7DD51D9D86C6E70246884717DB767">
+		["build_uid"] = <"79e87134-0cb0-4b70-aa7d-e603e783718d">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"BDF6C71F494D7955D2BA5C21DB941456">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition
@@ -59,7 +66,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	terminologies_available = <"Snomed", ...>
