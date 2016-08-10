@@ -1,0 +1,388 @@
+﻿archetype (adl_version=1.4; uid=12bb18ad-15e0-490d-99b7-ac51d5e6f4b1)
+	openEHR-EHR-EVALUATION.problem_diagnosis.v5
+
+concept
+	[at0000]	-- Problem/Diagnosis
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Stephen Chu">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"2006-04-23">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"
+To record details about a problem or diagnosis by a clinician.
+">
+			use = <"
+Use to record detailed information about problems or diagnoses recognised by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a Problem List or a Summary Statement, such as a Discharge Summary.
+
+Use to record all problems or diagnoses, including those with context-specific qualifiers such as past/present, primary/secondary, active/inactive etc. These qualifiers can be documented separately and included in the ‘Status’ data group, because their use varies in different settings.
+">
+			keywords = <"issue", "condition", "problem", "concern", "diagnosis", "criteria", "illness", "disease", "disorder">
+			misuse = <"
+Not to be used to record 'Differential Diagnoses' - use the Differential Diagnosis DCM.
+
+Not to be used to record 'Reason for Encounter' - use the Reason for Encounter DCM.
+
+Not to be used to record 'Presenting Complaint' - which is information captured early in the encounter, usually prior to full assessment and will be represented using a separate DCM.
+
+Not to be used to record procedures - use the Procedure DCM.
+
+Not to be used to record symptoms or signs - these should be recorded as part of a patient story or history. A problem such as 'Chest pain' may masquerade as a symptom, however in this context we are recording it as a problem the person has.
+">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Sam Heard, Ocean Informatics", "Koray Atalag, University of Auckland, New Zealand", "John Bennett, NEHTA, Australia", "Steve Bentley, NHS CfH, United Kingdom", "Ian Bull, ACT Health, Australia", "Sergio Carmona, Chile", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Ed Conley, Cardiff University, United Kingdom", "Matthew Cordell, NEHTA, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Peter Garcia-Webb, Australia", "Andrew Goodchild, NEHTA, Australia", "Anneke Goossen, Results4Care, Netherlands", "Heather Grain, Llewelyn Grain Consulting, Australia", "Trina Gregory, cpc, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems Inc, Canada", "Mary Kelaher, NEHTA, Australia", "Eizen Kimura, Ehime University, Japan", "Shinji Kobayashi, Ehime University, Japan", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia (Editor)", "Rohan Martin, Ambulance Victoria, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jörg Niggeman, Compugroup, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Thilo Schuler, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Donna Truran, ACCTI-UoW, Australia", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	other_details = <
+		["revision"] = <"5.0.0-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["references"] = <"NEHTA Clinical data groups - Problem/Diagnosis V2.0 http://www.nehta.gov.au/data-group-library/data-specifications/dgl-problem-diagnosis.
+
+Australian Standard AS 4700.6-2006 Implementation of Health Level Seven version 2.4 - Part 6: Referral, discharge and health record messaging.
+
+CEN/TC 251/WGII  prEN 13940-2:2009.3- Health informatics – System of concepts to support Continuity of care – Part 2: Health care process and workflow.
+
+BS_EN_13940-1_2007 - British Standard.  Health informatics - System of concepts to support continuity of care - Part 1: Basic concepts.
+
+Swedish National Process model.
+
+IHE Technical Framework Supplement – Patient Plan of Care (PPOC).
+
+Royal Australian College of General Practitioners - Fact Sheet: Medical History
+
+Mosby's Pocket Dictionary of Medicine, Nursing and Health Professional, 6th Edition, Mosby Elsevier, 2010">
+		["build_uid"] = <"233179b6-7139-4ccc-bbce-634f78f432a7">
+		["original_publisher"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"14BDC2083962408B228B799BB9CC2E5D">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Problem/Diagnosis
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] matches {	-- Problem/Diagnosis
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Clinical Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0082] occurrences matches {0..1} matches {	-- Severity
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Date of Onset
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0037] occurrences matches {0..1} matches {	-- Age at Onset
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {	-- Anatomical Location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Occurrence Summary
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0025] occurrences matches {0..1} matches {	-- Number
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Frequency
+								value matches {
+									C_DV_QUANTITY <
+									>
+								}
+							}
+							ELEMENT[at0020] occurrences matches {0..1} matches {	-- Latest Occurrence
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0072] occurrences matches {0..1} matches {	-- Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0073] occurrences matches {0..*} matches {	-- Link to Occurrence Details
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0026] occurrences matches {0..*} matches {	-- Related Items
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0028] matches {	-- Related Item
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..1} matches {	-- Relationship Type
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0080, 	-- Caused by
+											at0081]	-- Following
+										}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Date of Resolution/Remission
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Age at Resolution/Remission
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0054] occurrences matches {0..*} matches {	-- Diagnostic Criteria
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0055] occurrences matches {0..*} matches {	-- Clinical Stage/Grade
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0069] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0074] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0075] occurrences matches {0..1} matches {	-- Link to Supporting Clinical Evidence
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0076] occurrences matches {0..*} matches {	-- Status
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Problem/Diagnosis">
+					description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
+					comment = <"An account of relevant identified health related problems as reported by a healthcare provider. This can include a disease, condition, injury, poisoning, sign, symptom, abnormal finding, complaint, or other factor influencing health status as assessed by a healthcare provider.">
+					dc_id = <"15530">
+					detail_docref = <"data_groups/NEHTA-15530-Problem_Diagnosis-Data_Group.xml">
+					spec_id = <"12">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Problem/Diagnosis">
+					description = <"Identification of the problem or diagnosis.">
+					comment = <"It is preferred that this item be coded from the Problem/Diagnosis Reference Set Value Domain.
+
+This item denotes the name of the condition used by the healthcare provider, after assessment, to describe the health problem or diagnosis experienced by the subject of care.">
+					value_domain_dc_id = <"16617">
+					value_domain_name = <"Problem/Diagnosis Reference Set">
+					fsn = <"Problem/Diagnosis Identification">
+					coding_preferred = <"true">
+					dc_id = <"15514">
+					detail_docref = <"data_elements/NEHTA-15514-Problem_Diagnosis_Identification-Data_Element.xml">
+				>
+				["at0009"] = <
+					text = <"Clinical Description">
+					description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
+					comment = <"Used to provide additional narrative information in relation to a problem/diagnosis.">
+					dc_id = <"15597">
+					detail_docref = <"data_elements/NEHTA-15597-Clinical_Description-Data_Element.xml">
+				>
+				["at0010"] = <
+					text = <"Date of Onset">
+					description = <"Estimated or actual date the problem/diagnosis began, in the opinion of the clinician.">
+					dc_id = <"15507">
+					detail_docref = <"data_elements/NEHTA-15507-Date_of_Onset-Data_Element.xml">
+				>
+				["at0018"] = <
+					text = <"Occurrence Summary">
+					description = <"Summary information about occurrences or exacerbations.">
+					comment = <"Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
+					fsn = <"Problem/Diagnosis Occurrence Summary">
+					dc_id = <"16554">
+					detail_docref = <"data_groups/NEHTA-16554-Problem_Diagnosis_Occurrence_Summary-Data_Group.xml">
+				>
+				["at0019"] = <
+					text = <"Frequency">
+					description = <"The frequency or estimated frequency of occurrences or exacerbations of the problem/diagnosis.">
+					fsn = <"Problem/Diagnosis Occurrence Frequency">
+					dc_id = <"16556">
+					detail_docref = <"data_elements/NEHTA-16556-Problem_Diagnosis_Occurrence_Frequency-Data_Element.xml">
+				>
+				["at0020"] = <
+					text = <"Latest Occurrence">
+					description = <"The date of the last occurrence or exacerbation of the problem/diagnosis.">
+					fsn = <"Problem/Diagnosis Latest Occurrence">
+					dc_id = <"16557">
+					detail_docref = <"data_elements/NEHTA-16557-Problem_Diagnosis_Latest_Occurrence-Data_Element.xml">
+				>
+				["at0025"] = <
+					text = <"Number">
+					description = <"Cumulative number of occurrences or exacerbations of the problem/diagnosis.">
+					fsn = <"Problem/Diagnosis Occurrence Count">
+					dc_id = <"16555">
+					detail_docref = <"data_elements/NEHTA-16555-Problem_Diagnosis_Occurrence_Count-Data_Element.xml">
+				>
+				["at0026"] = <
+					text = <"Related Items">
+					description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
+					dc_id = <"16541">
+					detail_docref = <"data_groups/NEHTA-16541-Related_Items-Data_Group.xml">
+				>
+				["at0028"] = <
+					text = <"Related Item">
+					description = <"Identification of a related problem, diagnosis, procedure, or event as text, coded text or link within the health record.">
+					comment = <"It is preferred that this item be coded from the Related Item Values Value Domain.
+
+This item identifies the relevant health problem experienced by the subject of care, as assessed by the healthcare provider. This element provides a link to one or more established problem(s) or diagnoses.">
+					value_domain_dc_id = <"15562">
+					value_domain_name = <"Related Item Values">
+					dc_id = <"15562">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-15562-Related_Item-Data_Element.xml">
+				>
+				["at0030"] = <
+					text = <"Date of Resolution/Remission">
+					description = <"The date or estimated date that the problem/diagnosis resolved or went into remission, as indicated/identified by the clinician.">
+					dc_id = <"15510">
+					detail_docref = <"data_elements/NEHTA-15510-Date_of_Resolution_Remission-Data_Element.xml">
+				>
+				["at0031"] = <
+					text = <"Age at Resolution/Remission">
+					description = <"The age of the person at the time of resolution or remission of the problem/diagnosis.">
+					comment = <"May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+					dc_id = <"16544">
+					detail_docref = <"data_elements/NEHTA-16544-Age_at_Resolution_Remission-Data_Element.xml">
+				>
+				["at0037"] = <
+					text = <"Age at Onset">
+					description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began.">
+					comment = <"May be important in situations where approximations of age based on calculations are not accurate enough, e.g. in infants under one year. It may also be important for assessing clinical implications such as prognosis of condition, e.g. early onset Alzheimer, multiple sclerosis, certain cancers, etc.">
+					dc_id = <"16535">
+					detail_docref = <"data_elements/NEHTA-16535-Age_at_Onset-Data_Element.xml">
+				>
+				["at0044"] = <
+					text = <"Anatomical Location">
+					description = <"Slot to contain detailed and structured anatomical location details.">
+					dc_id = <"16150.12.1">
+					spec_id = <"108">
+					detail_docref = <"data_groups/NEHTA-16150-Anatomical_Location-Data_Group.xml">
+				>
+				["at0054"] = <
+					text = <"Diagnostic Criteria">
+					description = <"The criteria on which the problem/diagnosis is based.">
+					dc_id = <"16623">
+					detail_docref = <"choices/NEHTA-16623-Diagnostic_Criteria-Choice.xml">
+				>
+				["at0055"] = <
+					text = <"Clinical Stage/Grade">
+					description = <"Clinical stage or grade of a problem/diagnosis.">
+					dc_id = <"16624">
+					detail_docref = <"choices/NEHTA-16624-Clinical_Stage_Grade-Choice.xml">
+				>
+				["at0056"] = <
+					text = <"Relationship Type">
+					description = <"The type of relationship that this problem/diagnosis has to the related item.">
+					value_domain_dc_id = <"16559">
+					value_domain_name = <"Item Relationship Type Values">
+					fsn = <"Item Relationship Type">
+					dc_id = <"16560">
+					detail_docref = <"data_elements/NEHTA-16560-Item_Relationship_Type-Data_Element.xml">
+				>
+				["at0069"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+					fsn = <"Problem/Diagnosis Comment">
+					dc_id = <"16545">
+					detail_docref = <"data_elements/NEHTA-16545-Problem_Diagnosis_Comment-Data_Element.xml">
+				>
+				["at0072"] = <
+					text = <"Description">
+					description = <"A narrative description, including outcomes and other key details, about occurrences or exacerbations of the problem/diagnosis.">
+					fsn = <"Problem/Diagnosis Occurrence Description">
+					dc_id = <"16558">
+					detail_docref = <"data_elements/NEHTA-16558-Problem_Diagnosis_Occurrence_Description-Data_Element.xml">
+				>
+				["at0073"] = <
+					text = <"Link to Occurrence Details">
+					description = <"Link to further information about past occurrences or exacerbations of the problem/diagnosis that exist elsewhere in the health record.">
+					dc_id = <"10124">
+					detail_docref = <"data_elements/NEHTA-10124-Link_to_Occurrence_Details-Data_Element.xml">
+				>
+				["at0074"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0075"] = <
+					text = <"Link to Supporting Clinical Evidence">
+					description = <"Links to other relevant information, including pathology reports.">
+					dc_id = <"16546">
+					detail_docref = <"data_elements/NEHTA-16546-Link_to_Supporting_Clinical_Evidence-Data_Element.xml">
+				>
+				["at0076"] = <
+					text = <"Status">
+					description = <"Descriptor for context- or use-case specific label or workflow-related aspect of the diagnostic process which may not be safe to exchange between systems or use in a shared environment.">
+					dc_id = <"16625">
+					detail_docref = <"choices/NEHTA-16625-Status-Choice.xml">
+				>
+				["at0080"] = <
+					text = <"Caused by">
+					description = <"This concept identifies the direct cause or causative agent of a Problem/Diagnosis.  The concept includes the idea of ‘complications’, ‘causative agent’ and ‘due to’.  Note: Where no causality or sequence of events is known, this relationship type should be left blank.">
+				>
+				["at0081"] = <
+					text = <"Following">
+					description = <"This value identifies the sequence of events between the related items, but does not assert causality.  This can be used for sequelae or late effects.  Note: Where no causality or sequence of events is known, this relationship type should be left blank.">
+				>
+				["at0082"] = <
+					text = <"Severity">
+					description = <"A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician.">
+					dc_id = <"15531">
+					detail_docref = <"data_elements/NEHTA-15531-Severity-Data_Element.xml">
+				>
+			>
+		>
+	>
