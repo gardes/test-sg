@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>32dee8c0-03ad-4d9a-87a7-59074b2167c5</id>
+  <name>Shared Health Summary</name>
+  <description>
+    <original_author>
+      <item>
+        <key>Organisation</key>
+        <value>Nehta</value>
+      </item>
+    </original_author>
+    <other_contributors />
+    <lifecycle_state>Draft</lifecycle_state>
+    <details>
+      <purpose>This is a template representing Nehta's Shared Health Summary clinical document specification for the purposes of demonstrating the CKM document toolchain.</purpose>
+      <use>Record SHS</use>
+      <misuse>Actual clinical use</misuse>
+      <copyright>Copyright 2013 Nehta</copyright>
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:NEHTA</key>
+        <value>Data to support import and export to and from NEHTA's eXist repository.</value>
+      </item>
+      <item>
+        <key>Publication ID</key>
+        <value>123</value>
+      </item>
+      <item>
+        <key>Publication Version</key>
+        <value>1.0</value>
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <value>Definition for SHS</value>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <value>NEHTA</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <value>Section def</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]/items[openEHR-EHR-INSTRUCTION.medication.v3]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <html:span class="new" xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Details of a medicine, vaccine or other therapeutic good with instructions for use.</html:p>
+        </html:span>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Synonymous Names</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <ul xmlns="http://www.w3.org/1999/xhtml">
+            <li>Prescribed Item</li>
+          </ul>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Misuse</key>
+        <html:span xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Recording stock on hand of a therapeutic good.</html:p>
+          <html:p>Medication Instruction <html:em class="conformance">shall not</html:em> be used to record administration of a medication.</html:p>
+        </html:span>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]/items[openEHR-EHR-INSTRUCTION.medication.v3]/activities[at0001]/description[at0002]/items[at0003]">
+    <items>
+      <item>
+        <key>Nehta11179.Business Name</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Medicine</p>
+      </item>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml"> The medicine, vaccine or other therapeutic good being ordered, administered to or used by the subject of care.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Therapeutic Goods Administration</p>
+      </item>
+      <item>
+        <key>Nehta11179.Synonymous Names</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <ul xmlns="http://www.w3.org/1999/xhtml">
+            <li>Item Name</li>
+          </ul>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Context</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">This includes medications and medical devices. It includes drugs, appliances, dressings and reagents.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Context Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Notes</key>
+        <html:span xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Identifies a therapeutic good, which is broadly defined as a good which is represented in any way to be, or is likely to be taken to be, for therapeutic use (unless specifically excluded or included under Section 7 of the Therapeutic Goods Act 1989).</html:p>
+          <html:p>Therapeutic use means use in or in connection with:</html:p>
+          <html:ul>
+            <html:li>preventing, diagnosing, curing or alleviating a disease, ailment, defect or injury; or</html:li>
+            <html:li>influencing, inhibiting or modifying a physiological process; or</html:li>
+            <html:li>testing the susceptibility of persons to a disease or ailment; or</html:li>
+            <html:li>influencing, controlling or preventing conception; or</html:li>
+            <html:li>testing for pregnancy; or</html:li>
+            <html:li>replacement or modification of parts of the anatomy.</html:li>
+          </html:ul>
+          <html:p> From <d:xref xmlns:d="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#TGA1989a" />.</html:p>
+          <html:p>The formal definition of a therapeutic good (from the Therapeutic Goods Act 1989) can be found at: <d:xref xmlns:d="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#TGA1989a" />.</html:p>
+        </html:span>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <dl xmlns="http://www.w3.org/1999/xhtml">
+            <dt>CodeableText</dt>
+          </dl>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Value Domain</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Medicines Terminology</p>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use</key>
+        <html:span xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Where the therapeutic good can be identified by an AMT (Australian Medicines Terminology) concept, this <html:em class="conformance">shall</html:em> be the AMT ConceptID and Preferred Term. For details see <d:xref xmlns:d="http://docbook.org/ns/docbook" linkend="MI.openEHR-EHR-INSTRUCTION.medication.v3.medicines_terminology.0" />.</html:p>
+          <html:p>For items without an AMT code (including some extemporaneous preparations), a text description is suitable. For a medication this <html:em class="conformance">shall</html:em> include the name of the medication (brand name or generic name equivalent), strength and dose form, where appropriate.</html:p>
+        </html:span>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Examples</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <html:p xmlns:html="http://www.w3.org/1999/xhtml">Some examples of AMT ConceptID and their AMT Preferred Term are:</html:p>
+          <ol xmlns="http://www.w3.org/1999/xhtml">
+            <li>293049011000036110, paracetamol 500 mg + codeine phosphate 30 mg tablet</li>
+            <li>327004011000036118, paracetamol 500 mg + codeine phosphate 30 mg tablet, 20</li>
+            <li>234184011000036115, Panadeine Forte tablet: uncoated, 20 tablets</li>
+            <li>192727011000036112, Panadeine Forte (paracetamol 500 mg + codeine phosphate 30 mg) tablet: uncoated, 1 tablet</li>
+            <li>278453011000036118, Panadeine Forte tablet: uncoated, 20 tablets, blister pack</li>
+            <li>315236011000036113, bandage compression 10 cm x 3.5 m bandage: high stretch, 1 bandage</li>
+            <li>186324011000036116, Eloflex (2480) (bandage compression 10 cm x 3.5 m) bandage: high stretch, 1 bandage</li>
+            <li>73875011000036101, Je-Vax (Japanese encephalitis virus inactivated vaccine) injection: powder for, vial</li>
+          </ol>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Misuse</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">Detailing the formula of a compounded (extemporaneous) medication.</html:p>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]/items[openEHR-EHR-INSTRUCTION.medication.v3]/activities[at0001]/description[at0002]/items[at0009]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Notes</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">It is essential that when the 'Directions' data element is used together with structured information components such as 'Ingredients and Form' and 'Structured Dose' in clinical records or prescriptions, the contents of 'Direction' shall not contradict the contents of these structured information components.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <dl xmlns="http://www.w3.org/1999/xhtml">
+            <dt>Text</dt>
+          </dl>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">The contents of this data component <html:em class="conformance">shall not</html:em> contradict the contents of other data components within the entry.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]/items[openEHR-EHR-INSTRUCTION.medication.v3]/activities[at0001]/description[at0002]/items[at0018]">
+    <items>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <html:span class="new" xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>A reason for ordering the medicine, vaccine or other therapeutic good.</html:p>
+        </html:span>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Synonymous Names</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <ul xmlns="http://www.w3.org/1999/xhtml">
+            <li>Reason for prescribing</li>
+          </ul>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Context Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Notes</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">The clinical justification (e.g. specific therapeutic effect intended) for this subject of care’s use of the therapeutic good.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <dl xmlns="http://www.w3.org/1999/xhtml">
+            <dt>Text</dt>
+          </dl>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Value Domain</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Reason for Therapeutic Good Values</p>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">For inpatient discharge summaries, this should always be recorded.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Conditions of Use Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Examples</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <ol xmlns="http://www.w3.org/1999/xhtml">
+            <li>Long-term maintenance treatment of bronchospasm and dyspnoea.</li>
+          </ol>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Sender Type</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Either system or human.</p>
+      </item>
+      <item>
+        <key>Nehta11179.Sender Role(s)/Organisation(s)/Jurisdiction(s)</key>
+        <html:span xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Sender Role(s) can include: Healthcare provider.</html:p>
+          <html:p>Sender Organisation Role(s) can include: Healthcare institution.</html:p>
+        </html:span>
+      </item>
+      <item>
+        <key>Nehta11179.Recipient Type</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Either system or human.</p>
+      </item>
+      <item>
+        <key>Nehta11179.Recipient Role(s)/Organisation(s)/Jurisdiction(s)</key>
+        <html:span xmlns:html="http://www.w3.org/1999/xhtml">
+          <html:p>Sender Role(s) can include: Healthcare provider.</html:p>
+          <html:p>Sender Organisation Role(s) can include: Healthcare institution.</html:p>
+        </html:span>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medication_orders.v1]/items[openEHR-EHR-INSTRUCTION.medication.v3]/activities[at0001]/description[at0002]/items[at0035]">
+    <items>
+      <item>
+        <key>Nehta11179.Business Name</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">Comment</p>
+      </item>
+      <item>
+        <key>Nehta11179.Definition</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use.</html:p>
+      </item>
+      <item>
+        <key>Nehta11179.Definition Source</key>
+        <p xmlns="http://www.w3.org/1999/xhtml">NEHTA</p>
+      </item>
+      <item>
+        <key>Nehta11179.Data Type</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <dl xmlns="http://www.w3.org/1999/xhtml">
+            <dt>Text</dt>
+          </dl>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Examples</key>
+        <value xmlns="http://ns.electronichealth.net.au/ci/dc">
+          <ol xmlns="http://www.w3.org/1999/xhtml">
+            <li>Patient requires an administration aid.</li>
+            <li>Portable Pulse Oximeter measurement to be taken by clipping the sensor onto the tip of a finger.</li>
+            <li>Consulted prescriber concerning dose.</li>
+          </ol>
+        </value>
+      </item>
+      <item>
+        <key>Nehta11179.Misuse</key>
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">Use for information that could be recorded as structured data.</html:p>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.shared_health_summary.v1" concept_name="Shared Health Summary">
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adverse_reactions.v1" concept_name="Adverse Reactions" path="/content[at0004]">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-adverse.v1" concept_name="Exclusion statement - Adverse Reaction" path="/items[at0001]">
+        <Rule path="/data[at0001]/items[at0.7]" max="0" />
+        <Rule path="/data[at0001]/items[at0.8]" max="0" />
+        <Rule path="/data[at0001]/items[at0.9]" max="0" />
+        <Rule path="/data[at0001]/items[at0.10]" max="0" />
+      </Item>
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction.v5" concept_name="Adverse Reaction" path="/items[at0002]">
+        <Rule path="/data[at0001]/items[at0004]" max="0" />
+        <Rule path="/data[at0001]/items[at0006]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0010]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0016]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0021]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0012]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0027]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0028]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0018]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0020]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0025]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0040]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0031]" max="0" />
+        <Rule path="/data[at0001]/items[at0009]/items[at0032]" max="0" />
+      </Item>
+    </Content>
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.medication_orders.v1" concept_name="Medication Orders" path="/content[at0005]">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1" concept_name="Exclusion of a Medication" path="/items[at0001]">
+        <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+        <Rule path="/data[at0001]/items[at0007]" max="0" />
+        <Rule path="/protocol[at0006]/items[at0004]" max="0" />
+      </Item>
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.medication.v3" concept_name="Medication Instruction" path="/items[at0002]">
+        <Rule path="/activities[at0001]/description[at0002]/items[at0021]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0019]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0005]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0010]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0044]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0023]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0040]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0034]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0030]" max="0" />
+        <Rule path="/activities[at0001]/description[at0002]/items[at0033]" max="0" />
+        <Rule path="/protocol[at0031]/items[at0038]" max="0" />
+        <Rule path="/protocol[at0031]/items[at0032]" max="0" />
+        <Rule path="/protocol[at0031]/items[at0042]" max="0" />
+        <Rule path="/protocol[at0031]/items[at0022]" max="0" />
+        <Rule path="/protocol[at0031]/items[at0024]" max="0" />
+      </Item>
+    </Content>
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.medical_history.v1" concept_name="Medical History" path="/content[at0006]">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v5" concept_name="Problem/Diagnosis" path="/items[at0003]">
+        <Rule path="/data[at0001]/items[at0009]" max="0" />
+        <Rule path="/data[at0001]/items[at0082]" max="0" />
+        <Rule path="/data[at0001]/items[at0037]" max="0" />
+        <Rule path="/data[at0001]/items[at0018]" max="0" />
+        <Rule path="/data[at0001]/items[at0026]" max="0" />
+        <Rule path="/data[at0001]/items[at0031]" max="0" />
+        <Rule path="/protocol[at0074]/items[at0075]" max="0" />
+      </Item>
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-problem_diagnosis.v1" concept_name="Exclusion of a Problem/Diagnosis" path="/items[at0002]">
+        <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+        <Rule path="/data[at0001]/items[at0007]" max="0" />
+        <Rule path="/protocol[at0006]/items[at0004]" max="0" />
+      </Item>
+      <Item xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.procedure.v1" concept_name="Procedure undertaken" path="/items[at0004]">
+        <Rule path="/description[at0001]/items[at0014]" max="0" />
+        <Rule path="/description[at0001]/items[at0051]" max="0" />
+        <Rule path="/description[at0001]/items[at0049]" max="0" />
+        <Rule path="/description[at0001]/items[at0030]" max="0" />
+        <Rule path="/description[at0001]/items[at0048]" max="0" />
+        <Rule path="/description[at0001]/items[at0004]" max="0" />
+        <Rule path="/description[at0001]/items[at0018]" max="0" />
+        <Rule path="/description[at0001]/items[at0015]" max="0" />
+        <Rule path="/description[at0001]/items[at0006]" max="0" />
+        <Rule path="/description[at0001]/items[at0058]" max="0" />
+        <Rule path="/description[at0001]/items[at0013]" max="0" />
+        <Rule path="/protocol[at0053]/items[at0054]" max="0" />
+        <Rule path="/protocol[at0053]/items[at0056]" max="0" />
+      </Item>
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-procedure.v1" concept_name="Exclusion of a Procedure" path="/items[at0005]">
+        <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+        <Rule path="/data[at0001]/items[at0007]" max="0" />
+        <Rule path="/protocol[at0006]/items[at0004]" max="0" />
+      </Item>
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.medical_history_item.v1" concept_name="Medical History Item" path="/items[at0006]" />
+    </Content>
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.immunisations.v1" concept_name="Immunisations" path="/content[at0007]">
+      <Item xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication.v3" concept_name="Medication Action" path="/items[at0001]">
+        <Rule path="/description[at0017]/items[at0033]" max="0" />
+        <Rule path="/description[at0017]/items[at0021]" max="0" />
+        <Rule path="/description[at0017]/items[at0024]" max="0" />
+        <Rule path="/description[at0017]/items[at0036]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0026]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0040]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0037]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0032]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0038]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0029]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0031]" max="0" />
+      </Item>
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1" concept_name="Exclusion of a Medication" path="/items[at0002]">
+        <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+        <Rule path="/data[at0001]/items[at0007]" max="0" />
+        <Rule path="/protocol[at0006]/items[at0004]" max="0" />
+      </Item>
+    </Content>
+    <Context />
+  </definition>
+  <view>
+    <constraints path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.immunisations.v1]/items[openEHR-EHR-ACTION.medication.v3]/time">
+      <items id="VisibleInView">
+        <value>time</value>
+      </items>
+    </constraints>
+    <constraints path="[openEHR-EHR-COMPOSITION.shared_health_summary.v1]/content[openEHR-EHR-SECTION.medical_history.v1]/items[openEHR-EHR-ACTION.procedure.v1]/time">
+      <items id="VisibleInView">
+        <value>time</value>
+      </items>
+    </constraints>
+  </view>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.shared_health_summary.v1">
+    <digest id="MD5-CAM-1.0.1">035091DF72EFE533BBC026EDB66DF116</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adverse_reactions.v1">
+    <digest id="MD5-CAM-1.0.1">B75495CBFB1B61AD4629549CE79D7F0A</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-adverse.v1">
+    <digest id="MD5-CAM-1.0.1">D47FCE09EC12909957E6472903C70172</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction.v5">
+    <digest id="MD5-CAM-1.0.1">936BD1AD298989E23B73FAD069A36F53</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.medication_orders.v1">
+    <digest id="MD5-CAM-1.0.1">430219EFBDFD37D7BA7C4DD76662C738</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1">
+    <digest id="MD5-CAM-1.0.1">20AE44E213800D8CCFE164F6B7515D8F</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication.v3">
+    <digest id="MD5-CAM-1.0.1">A9488BF440BBB32A28E63777AC9546DA</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.medical_history.v1">
+    <digest id="MD5-CAM-1.0.1">CD6667C464F52095CB16437AAF6B915A</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v5">
+    <digest id="MD5-CAM-1.0.1">14BDC2083962408B228B799BB9CC2E5D</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-problem_diagnosis.v1">
+    <digest id="MD5-CAM-1.0.1">4C8CAFC70D510CF617DD5B580BFDA8F6</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.procedure.v1">
+    <digest id="MD5-CAM-1.0.1">3D7A4FCD75127BBE8C9873FF487C6C44</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-procedure.v1">
+    <digest id="MD5-CAM-1.0.1">EC8697A3EB07A9B28FD861E7E4037215</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.medical_history_item.v1">
+    <digest id="MD5-CAM-1.0.1">2EEB9BE471C74A227DC8B6826141F8E8</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.immunisations.v1">
+    <digest id="MD5-CAM-1.0.1">90EF88683030810354F77E3D10B9146D</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.medication.v3">
+    <digest id="MD5-CAM-1.0.1">A2D34B49212773AE360E472875C96A5E</digest>
+  </integrity_checks>
+</template>
