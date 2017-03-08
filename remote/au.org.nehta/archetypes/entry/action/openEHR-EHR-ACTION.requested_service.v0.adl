@@ -7,9 +7,8 @@ language
 	original_language = <[ISO_639-1::en]>
 description
 	original_author = <
-		["name"] = <"Rebecca Matthews">
+		["name"] = <"">
 		["organisation"] = <"National E-Health Transition Authority">
-		["email"] = <"clinicalinformation@nehta.gov.au">
 		["date"] = <"2010-01-22">
 	>
 	details = <
@@ -25,20 +24,23 @@ Use when the initiating provider defers to the expertise of the referred-to prov
 Use in relation to services that have already occurred where it can be recorded that an individual is having or has had a number of services. In this scenario, certain data elements may not be necessary, such as some of the details about the original referral that instigated the service (or services). For example, Request Urgency and Request Validity Period.">
 			keywords = <"Arranged Service", ...>
 			misuse = <"Not to be used to specify medication prescriptions.">
-			copyright = <"© National E-Health Transition Authority">
+			copyright = <"© Australian Digital Health Agency">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Ning Pan, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Stephen Royce, NEHTA">
+	other_contributors = <"Eric Browne, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "Eleanor Royle, NEHTA, Australia", "Ning Pan, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Don Stewart, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
+		["current_contact"] = <"help@digitalhealth.gov.au">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"21ef3b70-b19d-4c54-8258-efc8ee9e2aac">
+		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
 		["original_namespace"] = <"au.org.nehta">
-		["original_publisher"] = <"nehta, Australia">
-		["MD5-CAM-1.0.1"] = <"39AEF8485F5C0603C63A8044F844E6A2">
-		["custodian_namespace"] = <"au.org.nehta">
-		["custodian_organisation"] = <"nehta, Australia">
+		["original_publisher"] = <"NEHTA, Australia">
+		["source_model_name"] = <"Requested Service (Action)">
+		["MD5-CAM-1.0.1"] = <"D9F711C49737DDA85EE51B977D58D2D7">
+		["custodian_namespace"] = <"tbd">
+		["custodian_organisation"] = <"Australian Digital Health Agency">
+		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
 	>
 
 definition
@@ -178,6 +180,7 @@ definition
 
 
 
+
 ontology
 	terminologies_available = <"NCTIS-OID", ...>
 	term_definitions = <
@@ -195,10 +198,12 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Reason for Service">
-					description = <"Reason for the services being requested or received.">
+					description = <"Reason for the services being requested or provided.">
 					comment = <"It is preferred that this item be coded from the Reason for Service Values Value Domain.
 
-This data element captures information about reasons for requesting admission if the subject was referred to the organisation, or for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility. In a discharge summary, this data component captures information about reasons for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility.
+
+Used to communicate information about the reason for services; for example, reason for requesting admission if the subject was referred to the organisation, or for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility.
+In a discharge summary, this data component captures information about reasons for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility.
 
 Examples: 
   1. To rule out ischaemic heart disease.
@@ -210,10 +215,11 @@ Examples:
 				>
 				["at0003"] = <
 					text = <"Service Description">
-					description = <"Describes the services arranged for, or provided to, the subject.">
+					description = <"Description of the services requested or provided.">
 					comment = <"It is preferred that this item be coded from the Requested Service Description Values Value Domain.
 
 Used to identify clinical services (e.g. diagnostic procedures, clinical procedures and clinical management) and non-clinical services (e.g. community care services).
+In a service request where more than one instance of this data element is supplied, Service Category is also to be supplied.
 
 Examples: 
   1. Dialysis
@@ -228,7 +234,7 @@ Examples:
 				["at0004"] = <
 					text = <"Intent of Request">
 					description = <"The purpose for which the referrer made the request.">
-					comment = <"Description of what the service requester is hoping to achieve through this request, for example, referral to a specialist with the intent of full transfer of care of the subject, palliation vs curative management, etc.">
+					comment = <"Description of what the service requester is hoping to achieve through this request; for example, referral to a specialist with the intent of full transfer of care of the subject, palliation vs curative management, etc.">
 					detail_docref = <"data_elements/NEHTA-16126-Intent_of_Request-Data_Element.xml">
 				>
 				["at0005"] = <
@@ -241,10 +247,10 @@ Only include this data element to identify urgent requests. The absence of data 
 				>
 				["at0006"] = <
 					text = <"DateTime Service Scheduled">
-					description = <"The date and, optionally, time at which the arranged services are scheduled to be provided to the subject.">
-					comment = <"This data element is used to record the date and, optionally, time on which the service is actually performed or scheduled to be performed, depending on the value of Service Booking Status data element .
-
-For a request to supply a service, if the service provision has not been confirmed the service date may not be recorded. For supply of a service, this is the date and optionally, time of completion of supply, and will have the same value as Requested Service DateTime data element .">
+					description = <"Date, and optionally time, at which the arranged services are scheduled to be provided.">
+					comment = <"This data element is used to record the date, and optionally time, on which the service is actually performed or scheduled to be performed, depending on the value of Service Booking Status data element.
+For a request to supply a service, if the service provision has not been confirmed, the service date may be omitted.
+For supply of a service, this is the date, and optionally time, of completion of supply, and will have the same value as Requested Service DateTime data element.">
 					detail_docref = <"data_elements/NEHTA-16054-DateTime_Service_Scheduled-Data_Element.xml">
 				>
 				["at0007"] = <
@@ -255,15 +261,14 @@ For a request to supply a service, if the service provision has not been confirm
 				>
 				["at0008"] = <
 					text = <"Service Booking Status">
-					description = <"Indication of the status of the arranged service.">
-					comment = <"Provides the meaning for the date recorded in Requested Service DateTime data element , for example, whether it is the date that the service is first requested, the date on which the booking was made, or the date on which the service was supplied.
-
-For a service request (request for a service to be provided in the future), it is expected that a status value EVN would not be used for this data element .">
+					description = <"Indication of the status of the requested or provided services.">
+					comment = <"Provides the meaning for the date recorded in Requested Service DateTime data element; for example, whether it is the date that the service is first requested, the date that the booking was made, or the date that the service was supplied.
+For a service request (request for a service to be provided in the future), it is expected that a status value \"EVN\" would not be used for this data element.">
 					detail_docref = <"data_elements/NEHTA-16056-Service_Booking_Status-Data_Element.xml">
 				>
 				["at0009"] = <
 					text = <"Supplementary Information to Follow">
-					description = <"Whether or not there will be any further information sent in support of this request.">
+					description = <"Whether any further information will be sent in support of this request.">
 					comment = <"Used in service request scenario only.
 
 True indicates that additional information has been identified and will be forwarded when available e.g. incomplete pathology test results.">
@@ -278,7 +283,7 @@ True indicates that additional information has been identified and will be forwa
 				>
 				["at0011"] = <
 					text = <"Subject of Care Instruction Description">
-					description = <"Instructions, advice or information that has been given to the subject from a healthcare or human services provider in relation to the requested services.">
+					description = <"Instructions, advice or information that has been given to the subject from a care provider in relation to the requested services.">
 					comment = <"Used in service request scenario only. In the context of referral, the information includes instructions about clinical procedures requested for the subject.
 
 Examples: 
@@ -300,7 +305,8 @@ Examples:
 					description = <"The provider (individual or organisation) that has been arranged to provide the service.">
 					comment = <"A service request would normally be sent to an authorised healthcare provider, but could go directly to a carer or to a representative of an organisation to provide services, other than those normally deemed to be healthcare services, such as a Child Protection Agency, Police, etc.
 
-In the context of service request, this can the provider to whom the original request is initially made, or the provider that is booked to provide the service. In the context of service provision, this is the provider that supplied the service.">
+
+In the context of service request, this is the provider to whom the original request is initially made, or the provider that is booked to provide the service. In the context of service provision, this is the provider that supplied the service.">
 					spec_id = <"28">
 					detail_docref = <"data_groups/NEHTA-10296-Service_Provider-Data_Group.xml">
 				>
@@ -320,7 +326,7 @@ This may be open ended. In the context of referral this data element captures th
 				>
 				["at0019"] = <
 					text = <"Service Category">
-					description = <"Specialty of the services arranged for, or provided to, the subject.">
+					description = <"Specialty of the services requested or provided.">
 					comment = <"It is preferred that this item be coded from the Requested Service Category Values Value Domain.
 
 In the context of referral (GP to a specialist), this information is often inferred and does not to be explicitly stated.
@@ -338,8 +344,7 @@ Examples:
 				["at0021"] = <
 					text = <"Request Urgency Notes">
 					description = <"Narrative about the request urgency that is not captured in other fields.">
-					comment = <"This data element is used to explain the nature of reasons for an urgent request.
-
+					comment = <"This data element is used to explain the reason for an urgent request.
 Examples: 
   1. This is urgent because the patient has had sudden onset of severe headache, with minor neurological impairment and is at risk of quick deterioration.
   2. The patient’s full-time carer has suddenly fallen ill and is unable to provide needed assistance for activities of daily living.">
@@ -354,20 +359,20 @@ Examples:
 				>
 				["at0023"] = <
 					text = <"Reason for Service Description">
-					description = <"Narrative about the reason for service.">
-					comment = <"Used to communicate to the referee information about the reasons for the referral, which may include information about the problems or issues experienced by the subject of care as identified by the referrer, clinical presentation etc.
+					description = <"Narrative about the reason for the services being requested or provided.">
+					comment = <"Used to communicate to the referee information about the reasons for the referral, which may include information about the problems or issues experienced by the subject of care as identified by the referrer, clinical presentation, etc.
 
-This data element is used when there is no coded information available in Reason for Service , or to provide additional information that the code cannot provide. In the referral scenario, it complements the structured information contained in the referral specification. The content in this data element may vary from a single line in simple cases to many paragraphs for more complex circumstances.
+This data element is used when there is no coded information available in Reason for Service, or to provide additional information that the code cannot provide. In the referral scenario, it complements the structured information contained in the referral specification. The content in this data element may vary from a single line in simple cases to many paragraphs for more complex circumstances.
 
 Examples: 
   1. Thank you for seeing this 14-year-old schoolboy who fell whilst playing football at school yesterday. On examination he has a swollen painful R ankle and cannot weight bear on it today. I suspect he has a fracture of his right tibia and fibula.
   2. Thank you for seeing this 43-year-old lady who has had 2 episodes of cholecystitis in the last month. She is currently well. Ultrasound of her abdomen done at the Public Hospital Emergency Department shows she has gall stones. She has private cover and wishes to see you to consider cholecystectomy at the Private Hospital.
-  3. Thank you for seeing this 88 year old recently widowed woman. She was previously dependant upon her husband for help around the house for activities such as the heavy cleaning of the house and assistance with driving and shopping. Requesting that assistance be arranged for house cleaning and transportation to the local shops once a week.">
+  3. Thank you for seeing this 88 year old recently widowed woman. She was previously dependant upon her husband for help around the house for activities such as the heavy cleaning of the house and assistance with driving and shopping. Please arrange assistance for house cleaning and transportation to the local shops once a week.">
 					detail_docref = <"data_elements/NEHTA-17030-Reason_for_Service_Description-Data_Element.xml">
 				>
 				["at0024"] = <
 					text = <"Service Comment">
-					description = <"Additional narrative about the service not captured in other fields.">
+					description = <"Additional narrative about the services that is not captured in other fields.">
 					detail_docref = <"data_elements/NEHTA-17035-Service_Comment-Data_Element.xml">
 				>
 			>
@@ -378,7 +383,7 @@ Examples:
 			items = <
 				["ac0001"] = <
 					text = <"Service Booking Status Values">
-					description = <"Set of values that indicate the status of the arranged service.">
+					description = <"Set of values that indicate the status of the requested or provided services.">
 					dc_id = <"16055">
 					detail_docref = <"value_domains/NEHTA-16055-Service_Booking_Status_Values-Value_Domain.xml">
 				>
