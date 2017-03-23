@@ -60,7 +60,9 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.honos.v0" concept_name="HoNOS score" />
+  <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.honos.v0" concept_name="HoNOS score">
+    <Rule path="/data[at0001]/events[at0076]" max="0" />
+  </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.honos.v0">
     <digest id="MD5-CAM-1.0.1">7514D42035E56920C169D1E5A51A28EB</digest>
   </integrity_checks>
