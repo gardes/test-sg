@@ -48,15 +48,15 @@ ontology
 				["at0000"] = <
 					text = <"Event Overview">
 					description = <"Summary information concerning the event.">
-					dc_id = <"16672">
 					detail_docref = <"sections/NEHTA-16672-Event_Overview-Section.xml">
+					dc_id = <"16672">
 					spec_id = <"148">
 				>
 				["at0001"] = <
 					text = <"Event Details">
 					description = <"A clinical synopsis of the event and its reasons.">
-					dc_id = <"15513.148.1">
 					detail_docref = <"data_groups/NEHTA-15513-Event_Details-Data_Group.xml">
+					dc_id = <"15513.148.1">
 					spec_id = <"10">
 				>
 			>

@@ -55,25 +55,25 @@ ontology
 				["at0000"] = <
 					text = <"Medication Orders">
 					description = <"Suggested design pattern for including an Medication Order List in a template. Synonyms: medication, exclusion, absence, current, list">
-					dc_id = <"16146">
 					detail_docref = <"sections/NEHTA-16146-Medication_Orders-Section.xml">
+					dc_id = <"16146">
 					spec_id = <"86">
 				>
 				["at0001"] = <
 					text = <"Exclusion Statement - Medications">
 					description = <"Statement positively asserting that the patient has not been prescribed or is not taking any medication.">
 					comment = <"To positively record the absence or exclusion of any medication use within the health record.">
+					detail_docref = <"data_groups/NEHTA-16136-Exclusion_Statement_Medications-Data_Group.xml">
 					dc_id = <"16136.86.1">
 					spec_id = <"105">
-					detail_docref = <"data_groups/NEHTA-16136-Exclusion_Statement_Medications-Data_Group.xml">
 				>
 				["at0002"] = <
 					text = <"Medication">
 					description = <"Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human.">
 					comment = <"For use in the healthcare setting. Captures detailed information on the medication being used by or prescribed for the subject of care for their personal healthcare. This only includes legal substances. Such information covers not only aspects of the medication itself, but information relating to the ordering, dispensing, administration and review of medications. The specifications herein are presented grouped according to these process states. Recording legal substances such as over-the-counter medications, complementary and alternative medications, and prescribed medications.">
+					detail_docref = <"data_groups/NEHTA-16211-Medication-Data_Group.xml">
 					dc_id = <"16211.86.1">
 					spec_id = <"96">
-					detail_docref = <"data_groups/NEHTA-16211-Medication-Data_Group.xml">
 				>
 			>
 		>

@@ -67,8 +67,8 @@ ontology
 					text = <"Clinical Synopsis">
 					description = <"The clinical synopsis contains summary information or comments about the clinical management of the patient, and the prognosis of diagnoses/ problems identified during the healthcare encounter. It may also include health-related information pertinent to the patient, and a clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).">
 					comment = <"Narrative information is captured or entered here by a healthcare provider from the focus of a healthcare provider, carer, subject of care and/or others unrelated to the subject of care.">
-					spec_id = <"10">
 					detail_docref = <"data_groups/NEHTA-15513-Clinical_Synopsis-Data_Group.xml">
+					spec_id = <"10">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -84,8 +84,8 @@ The description may include a summary of the issues/problems, management strateg
 Examples: 
   1. Admitted for elective bronchoscopy for assessment of left lingular and bibasal pneumonia. No focal endobronchial pathology identified. No evidence of malignancy and no pathogens isolated on bronchial brushings and washings.
   2. 3/52 ago involved in a rear end motor vehicle accident, mid-velocity impact- complaining of neck pain, dizziness, nausea and difficulties concentrating. Disturbed sleep. No spinal cord signs.">
-					dc_id = <"15582">
 					detail_docref = <"data_elements/NEHTA-15582-Clinical_Synopsis_Description-Data_Element.xml">
+					dc_id = <"15582">
 				>
 				["at0003"] = <
 					text = <"DateTime Recorded">
@@ -103,8 +103,8 @@ Examples:
   1. My Diabetes:
   2. Diagnosis:
   3. My Blood Pressure:">
-					dc_id = <"16673">
 					detail_docref = <"data_elements/NEHTA-16673-Clinical_Synopsis_Topic-Data_Element.xml">
+					dc_id = <"16673">
 				>
 			>
 		>

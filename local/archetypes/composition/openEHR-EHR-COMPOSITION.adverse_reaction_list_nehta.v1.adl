@@ -34,8 +34,8 @@ In order for this list to be accurate and safe to use as the basis for decision 
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Adverse Reaction List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 14 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1425_1 (accessed 14 Mar 2013).">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"C6434ACC132CE90EF8EF8AEDDE969B85">
 	>
 

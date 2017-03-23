@@ -64,40 +64,40 @@ ontology
 				["at0000"] = <
 					text = <"Diagnostic Investigations">
 					description = <"Describes the diagnostic tests or procedures performed on or requested for the subject of care during the healthcare event, that are considered to be relevant to the subject of care’s ongoing care.">
-					dc_id = <"20117">
 					detail_docref = <"sections/NEHTA-20117-Diagnostic_Investigations-Section.xml">
+					dc_id = <"20117">
 					spec_id = <"91">
 				>
 				["at0001"] = <
 					text = <"Pathology Test Result">
 					description = <"The result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.">
-					dc_id = <"16144.91.1">
 					detail_docref = <"data_groups/NEHTA-16144-Pathology_Test_Result-Data_Group.xml">
+					dc_id = <"16144.91.1">
 					spec_id = <"92">
 				>
 				["at0002"] = <
 					text = <"Imaging Examination Result">
 					description = <"The result of an imaging examination which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.">
 					comment = <"This data group also acts as the parent for specialisations appropriate for more specific imaging laboratory tests, e.g. radiology, magnetic resonance imaging, ultrasound.">
+					detail_docref = <"data_groups/NEHTA-16145-Imaging_Examination_Result-Data_Group.xml">
 					dc_id = <"16145.91.1">
 					spec_id = <"95">
-					detail_docref = <"data_groups/NEHTA-16145-Imaging_Examination_Result-Data_Group.xml">
 				>
 				["at0003"] = <
 					text = <"Diagnostic Investigation Synopsis">
 					description = <"Detailed information or comments about a diagnostic investigation of a patient not available elsewhere as structured data. OR A clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).">
 					comment = <"Narrative information is captured or entered here by a healthcare provider from the focus of a healthcare provider, carer, subject of care and/or others unrelated to the subject of care.">
+					detail_docref = <"data_groups/NEHTA-15513-Diagnostic_Investigation_Synopsis-Data_Group.xml">
 					dc_id = <"15513.91.1">
 					spec_id = <"10">
-					detail_docref = <"data_groups/NEHTA-15513-Diagnostic_Investigation_Synopsis-Data_Group.xml">
 				>
 				["at0004"] = <
 					text = <"Requested Service">
 					description = <"A request for a diagnostic investigation of the subject of care.">
 					comment = <"This item does not include the results of diagnostic test orders. If the service provision has not been confirmed then, the service date and/or provider may not be recorded.">
+					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
 					dc_id = <"20158.91.1">
 					spec_id = <"51">
-					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
 				>
 			>
 		>

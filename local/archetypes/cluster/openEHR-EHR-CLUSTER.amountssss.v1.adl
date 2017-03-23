@@ -65,16 +65,16 @@ ontology
 				["at0000"] = <
 					text = <"Amount of Medication">
 					description = <"The amount of a medication or substance for medication orders, administrations, dispensing etc.">
-					dc_id = <"16423">
 					detail_docref = <"data_groups/NEHTA-16423-Amount_of_Medication-Data_Group.xml">
+					dc_id = <"16423">
 					spec_id = <"117">
 				>
 				["at0001"] = <
 					text = <"Quantity">
 					description = <"The quantity, number or proportion.">
 					comment = <"The number of doses and/or physical amount of the therapeutic good.">
-					dc_id = <"10145">
 					detail_docref = <"data_elements/NEHTA-10145-Quantity-Data_Element.xml">
+					dc_id = <"10145">
 				>
 				["at0002"] = <
 					text = <"Dose Unit">
@@ -85,14 +85,14 @@ ontology
   3. Sachets.
   4. Mg.
   5. mL.">
-					dc_id = <"16524">
 					detail_docref = <"data_elements/NEHTA-16524-Dose_Unit-Data_Element.xml">
+					dc_id = <"16524">
 				>
 				["at0003"] = <
 					text = <"Quantity Description">
 					description = <"Free text description of the amount which may consist of the quantity and dose unit.">
-					dc_id = <"16525">
 					detail_docref = <"data_elements/NEHTA-16525-Quantity_Description-Data_Element.xml">
+					dc_id = <"16525">
 				>
 			>
 		>
@@ -103,8 +103,8 @@ ontology
 				["ac0001"] = <
 					text = <"Dose Unit Reference Set">
 					description = <"The set of values for dose unit.">
-					something1 = <"Would this come through?">
 					something2 = <"Would this come through as well?">
+					something1 = <"Would this come through?">
 				>
 			>
 		>

@@ -22,17 +22,17 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 International License">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"bla bla <https://creativecommons.org/licenses/by-sa/3.0/> 
 		
 		https://creativecommons.org/licenses/by-sa/3.0/
 		">
-		["build_uid"] = <"0043896f-d388-437e-ad46-472cb74ec56b">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"D5C7A064A7345211256376F748D97B6B">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"D5C7A064A7345211256376F748D97B6B">
+		["build_uid"] = <"0043896f-d388-437e-ad46-472cb74ec56b">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

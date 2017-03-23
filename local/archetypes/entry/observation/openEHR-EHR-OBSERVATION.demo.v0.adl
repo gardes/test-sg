@@ -25,17 +25,17 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Individual A, Argentina", "Individual B, Belgium", "Individual C, Canada (Editor)">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"openEHR website:  http://www.openehr.org/home.html
 CKM:  http://www.openehr.org/knowledge/">
-		["build_uid"] = <"eeb54e20-1a91-4211-80ef-af408d2c7108">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"D518982F54BEC5FE849DD80DBC132C12">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"D518982F54BEC5FE849DD80DBC132C12">
+		["build_uid"] = <"eeb54e20-1a91-4211-80ef-af408d2c7108">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

@@ -72,9 +72,9 @@ ontology
 					text = <"Body Height">
 					description = <"Details pertinent to the physical measurement of the height OR length of a subject of care's body.">
 					comment = <"The height, together with the weight, of a subject of care enables derivation of Body Mass Index (BMI) which is a key observation that may be used for dosage calculation for certain medication prescription protocols, such as chemotherapy.">
+					detail_docref = <"data_groups/NEHTA-16123-Body_Height-Data_Group.xml">
 					dc_id = <"16123">
 					spec_id = <"76">
-					detail_docref = <"data_groups/NEHTA-16123-Body_Height-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -94,8 +94,8 @@ ontology
 					comment = <"Examples: 
   1. 54.3 cm
   2. 172 cm">
-					dc_id = <"16120">
 					detail_docref = <"data_elements/NEHTA-16120-Body_Height_Value-Data_Element.xml">
+					dc_id = <"16120">
 				>
 				["at0005"] = <
 					text = <"State of the Subject of Care">
@@ -106,18 +106,18 @@ Examples:
   1. Fully clothed.
   2. Subject of care agitated and restless.
   3. Standing without footwear.">
-					value_domain_dc_id = <"16051">
-					value_domain_name = <"State of the Subject of Care Values">
-					coding_preferred = <"true">
-					dc_id = <"16051">
 					detail_docref = <"data_elements/NEHTA-16051-State_of_the_Subject_of_Care-Data_Element.xml">
+					dc_id = <"16051">
+					coding_preferred = <"true">
+					value_domain_name = <"State of the Subject of Care Values">
+					value_domain_dc_id = <"16051">
 				>
 				["at0006"] = <
 					text = <"Observation Note">
 					description = <"Additional comments relevant to the observation in question.">
 					comment = <"Used to provide additional information not included in or catered for by the Observation Result data elements.">
-					dc_id = <"15600">
 					detail_docref = <"data_elements/NEHTA-15600-Observation_Note-Data_Element.xml">
+					dc_id = <"15600">
 				>
 			>
 		>

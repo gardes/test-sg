@@ -28,14 +28,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Kathy Currie, NT Hearing Health Program Leader, Australia", ...>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"d12f7b86-7cbb-470a-aac2-f49d78c493ec">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5D84CAD3C5904EB26C5FC053852394C7">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"5D84CAD3C5904EB26C5FC053852394C7">
+		["build_uid"] = <"d12f7b86-7cbb-470a-aac2-f49d78c493ec">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

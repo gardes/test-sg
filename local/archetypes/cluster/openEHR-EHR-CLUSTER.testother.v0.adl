@@ -48,13 +48,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA <https://creativecommons.org/licenses/by-sa/3.0/>">
-		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"170802b8-ec32-4bef-8b81-5d25fc781cb7">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"7791C63E8C235377B3F15E64A041E11A">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"7791C63E8C235377B3F15E64A041E11A">
+		["build_uid"] = <"170802b8-ec32-4bef-8b81-5d25fc781cb7">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

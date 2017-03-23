@@ -21,14 +21,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"6afe1888-1869-433e-8aa8-a2de05d52ded">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"50E1B99FB75CBFE5B60DBDD4E7B59D54">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"50E1B99FB75CBFE5B60DBDD4E7B59D54">
+		["build_uid"] = <"6afe1888-1869-433e-8aa8-a2de05d52ded">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

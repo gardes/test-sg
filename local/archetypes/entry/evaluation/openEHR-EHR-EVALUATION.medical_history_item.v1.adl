@@ -67,8 +67,8 @@ ontology
 				["at0000"] = <
 					text = <"Medical History Item">
 					description = <"A medical history entry which cannot be categorised into one of the categories such as Procedure and Problem/Diagnosis.">
-					spec_id = <"135">
 					detail_docref = <"data_groups/NEHTA-16627-Medical_History_Item-Data_Group.xml">
+					spec_id = <"135">
 				>
 				["at0001"] = <
 					text = <"Tree">

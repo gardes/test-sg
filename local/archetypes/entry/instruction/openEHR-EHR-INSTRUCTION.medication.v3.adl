@@ -39,14 +39,14 @@ Not to be used to record ordering of blood products, implants or major devices s
 	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "John Bennett, NEHTA, Australia", "Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
-		["revision"] = <"3.0.0-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["build_uid"] = <"0addefe0-5eb6-4057-9dfd-28ed67db3099">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A9488BF440BBB32A28E63777AC9546DA">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A9488BF440BBB32A28E63777AC9546DA">
+		["build_uid"] = <"0addefe0-5eb6-4057-9dfd-28ed67db3099">
+		["revision"] = <"3.0.0-alpha">
 	>
 
 definition
@@ -318,11 +318,11 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
   6. 315236011000036113, bandage compression 10 cm x 3.5 m bandage: high stretch, 1 bandage
   7. 186324011000036116, Eloflex (2480) (bandage compression 10 cm x 3.5 m) bandage: high stretch, 1 bandage
   8. 73875011000036101, Je-Vax (Japanese encephalitis virus inactivated vaccine) injection: powder for, vial">
-					value_domain_dc_id = <"16115">
-					value_domain_name = <"Medicines Terminology">
 					fsn = <"Therapeutic Good Identification">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Medicines Terminology">
+					value_domain_dc_id = <"16115">
 				>
 				["at0004"] = <
 					text = <"Ingredients and Form">
@@ -437,10 +437,10 @@ Examples:
 					comment = <"It is preferred that this item be coded from the Administrative Manufacturer Code Values Value Domain.
 
 This element is to be used to assist with claims processing.">
-					value_domain_dc_id = <"16647">
-					value_domain_name = <"Administrative Manufacturer Code Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16648-Administrative_Manufacturer_Code-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Administrative Manufacturer Code Values">
+					value_domain_dc_id = <"16647">
 				>
 				["at0025"] = <
 					text = <"Number of Repeats">
@@ -502,10 +502,10 @@ Examples:
 				["at0034"] = <
 					text = <"Change or Recommendation?">
 					description = <"Identifies whether the change has already been made or is a recommendation which has not been made.">
-					value_domain_dc_id = <"16626">
-					value_domain_name = <"Change Status Values">
 					fsn = <"Change Status">
 					detail_docref = <"data_elements/NEHTA-16595-Change_Status-Data_Element.xml">
+					value_domain_name = <"Change Status Values">
+					value_domain_dc_id = <"16626">
 				>
 				["at0035"] = <
 					text = <"Comment">
@@ -544,9 +544,9 @@ Examples:
   1. New prescription
   2. Change of previous
   3. Cancellation">
-					value_domain_dc_id = <"16592">
-					value_domain_name = <"Change Type Values">
 					detail_docref = <"data_elements/NEHTA-16593-Change_Type-Data_Element.xml">
+					value_domain_name = <"Change Type Values">
+					value_domain_dc_id = <"16592">
 				>
 				["at0041"] = <
 					text = <"Unchanged">
@@ -563,10 +563,10 @@ Examples:
   1. Eligible for PBS subsidy
   2. Eligible for Closing the Gap - PBS Co-Payment Measure subsidy
   3. Not eligible for a pharmaceutical subsidy">
-					value_domain_dc_id = <"16095">
-					value_domain_name = <"Therapeutic Good Benefit Category Reference Set">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16095-Concession_Benefit-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Therapeutic Good Benefit Category Reference Set">
+					value_domain_dc_id = <"16095">
 				>
 				["at0043"] = <
 					text = <"Administration Details">

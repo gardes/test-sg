@@ -28,8 +28,8 @@ Inspection of the skin is assumed to be done using direct visualisation. If a de
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Kerrie Lee", ...>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Direct communications with clinical domain experts.">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"B01EE71FA3E00BFDA06A04F994729EA9">
 	>
 

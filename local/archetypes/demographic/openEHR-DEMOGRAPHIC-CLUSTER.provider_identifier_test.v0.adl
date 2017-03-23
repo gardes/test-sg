@@ -44,14 +44,14 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
-		["build_uid"] = <"9c7abc8e-e5c1-4fa1-8132-8efb2c75c649">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"AF62DCC24E9B61F89981311232B26A2E">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"AF62DCC24E9B61F89981311232B26A2E">
+		["build_uid"] = <"9c7abc8e-e5c1-4fa1-8132-8efb2c75c649">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

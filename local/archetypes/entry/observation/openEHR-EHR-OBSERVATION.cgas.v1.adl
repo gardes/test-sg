@@ -42,19 +42,19 @@ description
 	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS ASA, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, National ICT Norway, Norway (openEHR Editor)", "B Christensen, HUS, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Cecilie Graver, Oslo universitetssykehus HF, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Siv Marie Lien, DIPS ASA, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Lars Morgan Karlsen, DIPS ASA, Norway", "Bjoern Naess, DIPS ASA, Norway", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Phuong Pedersen, DIPS, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Norwegian Review Summary, National ICT Norway, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	other_details = <
-		["revision"] = <"1.0.0">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Derived from: openEHR CKM
 Shaffer, D, M. Gould, J. Brasic, P. Ambrosini, P. Fisher, H. Bird, S. Aluwahlia: “A Children's Global Assessment Scale (CGAS)”. Psychopharmacology Bulletin 1985, 21,747-48. https://www.researchgate.net/profile/James_Brasic/publication/16557623_Children's_global_assessment_scale_(CGAS)/links/55b7e04e08aec0e5f43934b5.pdf
 Oversatt av I. H. Vandvik. http://www.kith.no/upload/3552/Akse%206%20CGAS%2020070803.pdf
 
 Hanssen-Bauer, K. (2008). \"Multiaksial klassifikasjon i psykisk helsevern for barn og unge\". Regionsenter for barn og unges psykiske helse, Helse Sør-Øst. https://helsedirektoratet.no/Documents/Medisinske%20koder%20og%20kodeverk/BUP/bup-klass.pdf">
-		["build_uid"] = <"7a1b5379-e620-4bd1-9a84-cb34dc862209">
-		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"03330F11DA53B45A1F5A766DC12D2646">
+		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"03330F11DA53B45A1F5A766DC12D2646">
+		["build_uid"] = <"7a1b5379-e620-4bd1-9a84-cb34dc862209">
+		["revision"] = <"1.0.0">
 	>
 
 definition

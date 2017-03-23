@@ -29,14 +29,14 @@ Used in combination with CLUSTER.fluid.v1 to describe the bodily substance invol
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"">
-		["build_uid"] = <"626065c4-3762-4d99-9194-3c779495e8c7">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"DD4763208988970978BC51E2B866C2BC">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"DD4763208988970978BC51E2B866C2BC">
+		["build_uid"] = <"626065c4-3762-4d99-9194-3c779495e8c7">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

@@ -30,14 +30,14 @@ Supercedes OBSERVATION.faeces.v1">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"">
-		["build_uid"] = <"ff523403-7dcd-47fc-a620-e89cc05206bf">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"BD4EB8018BB7436D185C92440D646720">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"BD4EB8018BB7436D185C92440D646720">
+		["build_uid"] = <"ff523403-7dcd-47fc-a620-e89cc05206bf">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

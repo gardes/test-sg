@@ -30,17 +30,17 @@ Use in relation to services that have already occurred where it can be recorded 
 	lifecycle_state = <"in_development">
 	other_contributors = <"Eric Browne, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "Eleanor Royle, NEHTA, Australia", "Ning Pan, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Don Stewart, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
-		["current_contact"] = <"help@digitalhealth.gov.au">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
+		["custodian_organisation"] = <"Australian Digital Health Agency">
+		["current_contact"] = <"help@digitalhealth.gov.au">
+		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
 		["original_namespace"] = <"au.org.nehta">
 		["original_publisher"] = <"NEHTA, Australia">
+		["custodian_namespace"] = <"tbd">
 		["source_model_name"] = <"Requested Service (Action)">
 		["MD5-CAM-1.0.1"] = <"D9F711C49737DDA85EE51B977D58D2D7">
-		["custodian_namespace"] = <"tbd">
-		["custodian_organisation"] = <"Australian Digital Health Agency">
-		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
+		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -189,8 +189,8 @@ ontology
 				["at0000"] = <
 					text = <"Requested Service">
 					description = <"Details of services requested for, or provided to, the subject.">
-					spec_id = <"51">
 					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
+					spec_id = <"51">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -208,10 +208,10 @@ In a discharge summary, this data component captures information about reasons f
 Examples: 
   1. To rule out ischaemic heart disease.
   2. To rule out organic brain lesions.">
-					value_domain_dc_id = <"16010">
-					value_domain_name = <"Reason for Service Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-20172-Reason_for_Service-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Reason for Service Values">
+					value_domain_dc_id = <"16010">
 				>
 				["at0003"] = <
 					text = <"Service Description">
@@ -226,10 +226,10 @@ Examples:
   2. Adjustment of heart failure/hypertensive medications
   3. Adjust INR to therapeutic range
   4. Elective orthopaedic surgery for TKR">
-					value_domain_dc_id = <"20117">
-					value_domain_name = <"Requested Service Description Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-20117-Service_Description-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Requested Service Description Values">
+					value_domain_dc_id = <"20117">
 				>
 				["at0004"] = <
 					text = <"Intent of Request">
@@ -297,8 +297,8 @@ Examples:
 				["at0014"] = <
 					text = <"Service Requester">
 					description = <"Party that arranges provision of a service.">
-					spec_id = <"28">
 					detail_docref = <"data_groups/NEHTA-10296-Service_Requester-Data_Group.xml">
+					spec_id = <"28">
 				>
 				["at0015"] = <
 					text = <"Service Provider">
@@ -307,8 +307,8 @@ Examples:
 
 
 In the context of service request, this is the provider to whom the original request is initially made, or the provider that is booked to provide the service. In the context of service provision, this is the provider that supplied the service.">
-					spec_id = <"28">
 					detail_docref = <"data_groups/NEHTA-10296-Service_Provider-Data_Group.xml">
+					spec_id = <"28">
 				>
 				["at0016"] = <
 					text = <"Request Validity Period">
@@ -336,10 +336,10 @@ Examples:
   2. Paediatric Cardiology
   3. Podiatry
   4. Disability supported accommodation">
-					value_domain_dc_id = <"17017">
-					value_domain_name = <"Requested Service Category Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-17021-Service_Category-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Requested Service Category Values">
+					value_domain_dc_id = <"17017">
 				>
 				["at0021"] = <
 					text = <"Request Urgency Notes">
@@ -354,8 +354,8 @@ Examples:
 					text = <"Reporter">
 					description = <"Party who reports the information in this service request.">
 					comment = <"Only used when the recorder needs to make it explicit. Otherwise, it is assumed to be the author of the enclosing structured document.">
-					spec_id = <"28">
 					detail_docref = <"data_groups/NEHTA-10296-Reporter-Data_Group.xml">
+					spec_id = <"28">
 				>
 				["at0023"] = <
 					text = <"Reason for Service Description">
@@ -384,14 +384,14 @@ Examples:
 				["ac0001"] = <
 					text = <"Service Booking Status Values">
 					description = <"Set of values that indicate the status of the requested or provided services.">
-					dc_id = <"16055">
 					detail_docref = <"value_domains/NEHTA-16055-Service_Booking_Status_Values-Value_Domain.xml">
+					dc_id = <"16055">
 				>
 				["ac0003"] = <
 					text = <"Request Urgency Values">
 					description = <"Set of values to describe the urgency of a request.">
-					dc_id = <"16127">
 					detail_docref = <"value_domains/NEHTA-16127-Request_Urgency_Values-Value_Domain.xml">
+					dc_id = <"16127">
 				>
 			>
 		>

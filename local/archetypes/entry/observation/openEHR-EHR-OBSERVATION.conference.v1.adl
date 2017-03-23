@@ -25,14 +25,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["build_uid"] = <"c552f2d5-2be5-4e9e-ac8b-1ff9a7eba003">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"9C37F22079351E20F53BEDBA1B737D93">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"9C37F22079351E20F53BEDBA1B737D93">
+		["build_uid"] = <"c552f2d5-2be5-4e9e-ac8b-1ff9a7eba003">
 	>
 
 definition

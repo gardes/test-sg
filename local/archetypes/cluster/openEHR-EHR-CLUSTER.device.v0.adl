@@ -71,13 +71,13 @@ Para los casos de uso habituales podría ser apropiada la especialización de es
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"1d25a9d4-885c-442b-87d9-7b74a81d90cf">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"2A6E3A01D9F07643010DCE2BF50C1D31">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"2A6E3A01D9F07643010DCE2BF50C1D31">
+		["build_uid"] = <"1d25a9d4-885c-442b-87d9-7b74a81d90cf">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

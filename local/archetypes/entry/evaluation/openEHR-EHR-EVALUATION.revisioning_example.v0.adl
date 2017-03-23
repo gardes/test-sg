@@ -22,15 +22,15 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"CC SA BY">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["build_id"] = <"6b8a543d-1e5f-42d3-a3c6-c1668a9d49b8">
-		["build_uid"] = <"da0bd0be-4e93-4f9f-9262-2a9ad71eda48">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["MD5-CAM-1.0.1"] = <"08DF5729E85E6BA0C13469389099DFD5">
 		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"08DF5729E85E6BA0C13469389099DFD5">
+		["build_uid"] = <"da0bd0be-4e93-4f9f-9262-2a9ad71eda48">
 		["provenance_id"] = <"2096cc95-defa-49a6-b213-16653611c100">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

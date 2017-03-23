@@ -24,16 +24,16 @@ description
 	lifecycle_state = <"unstable">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["revision"] = <"0.0.1-unstable">
 		["licence"] = <"CC SA BY">
-		["build_id"] = <"b60f2fdc-6c66-4ae4-acf4-2fd16e527f66">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"995EB6490A5FD6D2B670533E3D6DA359">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["provenance_id"] = <"6eaca5d7-e87a-4128-bd35-e0b5ec3ec14a">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["build_id"] = <"b60f2fdc-6c66-4ae4-acf4-2fd16e527f66">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"995EB6490A5FD6D2B670533E3D6DA359">
+		["provenance_id"] = <"6eaca5d7-e87a-4128-bd35-e0b5ec3ec14a">
+		["revision"] = <"0.0.1-unstable">
 	>
 
 definition

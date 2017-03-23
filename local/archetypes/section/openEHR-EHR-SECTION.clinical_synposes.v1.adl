@@ -51,15 +51,15 @@ ontology
 				["at0000"] = <
 					text = <"Clinical Synopses">
 					description = <"A section that captures one or more narratives about a subject of care health and related matters as entered by the subject of care or their authorised representative.">
-					dc_id = <"16684">
 					detail_docref = <"sections/NEHTA-16684-Clinical_Synopses-Section.xml">
+					dc_id = <"16684">
 					spec_id = <"152">
 				>
 				["at0001"] = <
 					text = <"Clinical Synopsis">
 					description = <"Information about problems/diagnoses and procedures that form part of the current and past medical history of the subject of care and are not available as structured data.">
-					dc_id = <"15513.152.1">
 					detail_docref = <"data_groups/NEHTA-15513-Clinical_Synopsis-Data_Group.xml">
+					dc_id = <"15513.152.1">
 					spec_id = <"10">
 				>
 				["at0002"] = <

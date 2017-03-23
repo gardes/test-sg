@@ -27,15 +27,15 @@ description
 	lifecycle_state = <"unstable">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-unstable">
 		["licence"] = <"CC SA BY">
-		["build_id"] = <"ea9b3d01-981f-4076-b2ef-ea6628178f82">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"36420C207A2BB25EE109D7C22714BCE2">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["provenance_id"] = <"b4f8f774-78df-49f0-aaa1-c510958eb49e">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["build_id"] = <"ea9b3d01-981f-4076-b2ef-ea6628178f82">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"36420C207A2BB25EE109D7C22714BCE2">
+		["provenance_id"] = <"b4f8f774-78df-49f0-aaa1-c510958eb49e">
+		["revision"] = <"0.0.1-unstable">
 	>
 
 definition

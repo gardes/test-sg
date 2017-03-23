@@ -81,8 +81,8 @@ ontology
 				["at0000"] = <
 					text = <"Consumer Entered Notes">
 					description = <"Narratives about the subject of care's healthcare information recorded by the subject of care or their authorised representative within the PCEHR system. This helps the subject of care or their authorised representative to keep track of the subject of care health information within the system. (PCEHR Concept of Operations document).">
-					dc_id = <"16681">
 					detail_docref = <"structured_documents/NEHTA-16681-Consumer_Entered_Notes-Structured_Document.xml">
+					dc_id = <"16681">
 					spec_id = <"151">
 				>
 				["at0001"] = <
@@ -92,8 +92,8 @@ ontology
 				["at0002"] = <
 					text = <"Notes">
 					description = <"A section that captures one or more healthcare narratives about a subject of care's health and related matters.">
-					dc_id = <"16684.151.1">
 					detail_docref = <"sections/NEHTA-16684-Notes-Section.xml">
+					dc_id = <"16684.151.1">
 					spec_id = <"152">
 				>
 				["at0006"] = <

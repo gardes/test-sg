@@ -51,8 +51,8 @@ ontology
 				["at0000"] = <
 					text = <"Exclusion Statement">
 					description = <"Statements that need to be positively asserted about the absence or exclusion of data values.">
-					spec_id = <"79">
 					detail_docref = <"data_groups/NEHTA-16134-Exclusion_Statement-Data_Group.xml">
+					spec_id = <"79">
 				>
 				["at0001"] = <
 					text = <"Tree">

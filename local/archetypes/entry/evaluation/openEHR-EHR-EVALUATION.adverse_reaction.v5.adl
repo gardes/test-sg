@@ -64,14 +64,14 @@ Second-level information can be drawn from each exposure event and links to addi
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, NEHTA", "John Bennett, NEHTA, Australia", "Rong Chen, Cambio Healthcare System, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Joanne Foster, School of Nursing & Midwifery, QLD University of Technology & Nursing Informatics Australia, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Sarah Gaunt, NEHTA, Australia", "Andrew Goodchild, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Trina Gregory, cpc, Australia", "Grahame Grieve, Australia", "Sam Heard, Ocean Informatics, Australia", "Andrew James, University of Toronto, Canada", "Julie James, Blue Wave Informatics LLP, United Kingdom", "Ivor Jones, Queensalnd Helath, Australia", "Mary Kelaher, NEHTA, Australia", "Diane Kirkham, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Jobst Landgrebe, ii4sm, Switzerland", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Sarah Mahoney, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jörg Niggemann, Compugroup, Germany", "Chris Pearce, Melbourne East GP Network, Australia", "General Practice Computing Group, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Thilo Schuler, Australia", "Peter Scott, Medical Objects, Australia", "Elena Shabanova, UMMSSOft, Russian Federation", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "John Taylor, NEHTA, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
-		["revision"] = <"5.0.0-alpha">
-		["references"] = <"Derived from: <Add reference to original resource here>">
-		["build_uid"] = <"ffb60c8e-4d77-42a8-abf8-5717360af3f0">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"936BD1AD298989E23B73FAD069A36F53">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"936BD1AD298989E23B73FAD069A36F53">
+		["build_uid"] = <"ffb60c8e-4d77-42a8-abf8-5717360af3f0">
+		["revision"] = <"5.0.0-alpha">
 	>
 
 definition
@@ -242,10 +242,10 @@ Examples:
   3. Bee venom
   4. Animal protein
   5. Latex">
-					value_domain_dc_id = <"15521">
-					value_domain_name = <"Substance/Agent Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-15521-Substance_Agent-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Substance/Agent Values">
+					value_domain_dc_id = <"15521">
 				>
 				["at0004"] = <
 					text = <"Absolute Contraindication">
@@ -270,10 +270,10 @@ Examples:
 					comment = <"It is preferred that this item be coded from the Substance/Agent Values Value Domain.
 
 This may include a medication trade name.">
-					value_domain_dc_id = <"15521">
-					value_domain_name = <"Substance/Agent Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-16349-Specific_Substance_Agent-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Substance/Agent Values">
+					value_domain_dc_id = <"15521">
 				>
 				["at0011"] = <
 					text = <"Manifestation">
@@ -288,10 +288,10 @@ Examples:
   3. Tinnitus.
   4. Nausea.
   5. Rash.">
-					value_domain_dc_id = <"15564">
-					value_domain_name = <"Clinical Manifestation Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-15564-Manifestation-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Clinical Manifestation Values">
+					value_domain_dc_id = <"15564">
 				>
 				["at0012"] = <
 					text = <"Reaction Description">
@@ -318,10 +318,10 @@ Examples:
   4. Intolerance / sensitivity.
   5. Pseudoallergy / anaphylactoid reaction.
   6. Side effects.">
-					value_domain_dc_id = <"15554">
-					value_domain_name = <"Adverse Substance Reaction Type Values">
-					coding_preferred = <"true">
 					detail_docref = <"data_elements/NEHTA-15554-Reaction_Type-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Adverse Substance Reaction Type Values">
+					value_domain_dc_id = <"15554">
 				>
 				["at0018"] = <
 					text = <"Exposure Description">
