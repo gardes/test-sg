@@ -18,7 +18,7 @@ description
 			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B95D47ED320478963767D54385954907">
-		["build_uid"] = <"05af75fa-6f0e-4782-a427-fd1252bbbd78">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"74682C1296C183149981F25FD9F7D135">
+		["build_uid"] = <"b2b2ff8b-8ff9-43bf-be5b-3c735b28be8a">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -57,11 +57,6 @@ definition
 									ELEMENT[at0015] occurrences matches {0..1} matches {	-- Total
 										value matches {
 											DV_COUNT matches {*}
-										}
-									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Additional Information
-										value matches {
-											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -141,10 +136,6 @@ ontology
 				["at0015"] = <
 					text = <"Total">
 					description = <"Total">
-				>
-				["at0016"] = <
-					text = <"Additional Information">
-					description = <"Additional narrative not captured in the scale.">
 				>
 			>
 		>
