@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=fb383d02-8c92-4146-bace-ade0ebb2bd33)
-	openEHR-EHR-OBSERVATION.borgscore.v0
+﻿archetype (adl_version=1.4; uid=56db4115-b93d-4441-b5ac-38dccd10c902)
+	openEHR-EHR-OBSERVATION.borgscore.v1
 
 concept
 	[at0000]	-- Modified Borg Score
@@ -18,7 +18,7 @@ description
 			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"FFF7960865652DB4EF4BD2519AAD487A">
-		["build_uid"] = <"3ea9a544-b58a-4515-b326-a6c9a749ae42">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"B95D47ED320478963767D54385954907">
+		["build_uid"] = <"05af75fa-6f0e-4782-a427-fd1252bbbd78">
+		["revision"] = <"1.0.0">
 	>
 
 definition
