@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"13EC8917877A397F3A8E77235FE11179">
-		["build_uid"] = <"eb5afeb7-cae4-4ecc-9d40-f6f5eee2f0c6">
+		["MD5-CAM-1.0.1"] = <"FFF7960865652DB4EF4BD2519AAD487A">
+		["build_uid"] = <"3ea9a544-b58a-4515-b326-a6c9a749ae42">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -59,6 +59,11 @@ definition
 											DV_COUNT matches {*}
 										}
 									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Additional Information
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -67,7 +72,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
@@ -137,6 +141,10 @@ ontology
 				["at0015"] = <
 					text = <"Total">
 					description = <"Total">
+				>
+				["at0016"] = <
+					text = <"Additional Information">
+					description = <"Additional narrative not captured in the scale.">
 				>
 			>
 		>
