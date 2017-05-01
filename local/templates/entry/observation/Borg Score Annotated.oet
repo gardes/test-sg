@@ -69,7 +69,8 @@
     </items>
   </annotations>
   <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.borgscore.v2" concept_name="Modified Borg Score">
-    <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0015]" max="0" />
+    <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" name="Modified Borg Scale Annotated" />
+    <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0015]" min="1" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.borgscore.v2">
     <digest id="MD5-CAM-1.0.1">2AA3A2698F2070634BE261A0D70BFDD9</digest>
