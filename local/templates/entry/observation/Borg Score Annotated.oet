@@ -68,7 +68,16 @@
       </item>
     </items>
   </annotations>
+  <annotations path="[openEHR-EHR-OBSERVATION.borgscore.v2]/data[at0001]/events[at0002]">
+    <items>
+      <item>
+        <key>Goals of Care.Clinical Decision Support</key>
+        <value>More Annotations</value>
+      </item>
+    </items>
+  </annotations>
   <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.borgscore.v2" concept_name="Modified Borg Score">
+    <Rule path="/data[at0001]/events[at0002]" name="Some event" />
     <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" name="Modified Borg Scale Annotated" />
     <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0015]" min="1" name="Total Score" />
   </definition>
