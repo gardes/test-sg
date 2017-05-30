@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Blah
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Manager">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -16,6 +24,12 @@ description
 			use = <"">
 			misuse = <"">
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"kein">
+			use = <"">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -24,8 +38,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A52D96478080883DAF7E4CD25158F7E1">
-		["build_uid"] = <"8af5f9ea-f137-4088-aac7-6c6ca1f5340f">
+		["MD5-CAM-1.0.1"] = <"651E160101212BD9BFE826A7F281EF5B">
+		["build_uid"] = <"b07c5842-29d8-47e3-b818-4f9025fc4d94">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -42,6 +56,14 @@ ontology
 				["at0000"] = <
 					text = <"Blah">
 					description = <"unknown">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Blabla">
+					description = <"*unknown(en)">
 				>
 			>
 		>
