@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>18346ee7-d996-489e-a64c-225b92073f49</id>
+  <name>Order Set Template</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>Demo only</purpose>
+      <use>To show a template within a template.</use>
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1" concept_name="Blood Pressure">
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0004]" min="1" />
+    <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0005]" min="1" />
+    <Rule path="/data[at0001]/events[at1042]" max="0" />
+    <Rule path="/protocol[at0011]/items[at1038]" max="0" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.level_of_exertion.v1" concept_name="Level of Exertion" path="/data[at0001]/events[at0006]/state[at0007]/items[at1030]">
+      <Rule path="/items[at0010]/items[at0016]" max="0" />
+    </Items>
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.device_details.v1" template_id="51ec3e49-eeb2-43b4-b8ff-73c0b7450017" concept_name="Test Order item template" path="/protocol[at0011]/items[at1025]" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1">
+    <digest id="MD5-CAM-1.0.1">ECB15524E65241BBA1CC7DBA9CB22C19</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.level_of_exertion.v1">
+    <digest id="MD5-CAM-1.0.1">362DEDF06B3E63F1CD7D4E24BCCEB2D9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.device_details.v1">
+    <digest id="MD5-CAM-1.0.1">ABFCDBD4FEB5A92D17BBB76F3E1099F9</digest>
+  </integrity_checks>
+</template>
