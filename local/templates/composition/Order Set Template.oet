@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>123456ee7-d996-489e-a64c-225b92073f49</id>
+  <name>Order Set Template</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>Demo only</purpose>
+      <use>To show a template within a template.</use>
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1" template_id="18346ee7-d996-489e-a64c-225b92073f49" concept_name="Order Set Template" path="/content" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.apgar.v1" concept_name="Apgar score" path="/content">
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0026]" max="0" />
+      <Rule path="/data[at0002]/events[at0027]" max="0" />
+      <Rule path="/data[at0002]/events[at0028]/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0031]/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0002]/events[at0037]" max="0" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report.v1">
+    <digest id="MD5-CAM-1.0.1">88F460F92F80BBC99C78E88B92CAF457</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v1">
+    <digest id="MD5-CAM-1.0.1">ECB15524E65241BBA1CC7DBA9CB22C19</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.level_of_exertion.v1">
+    <digest id="MD5-CAM-1.0.1">362DEDF06B3E63F1CD7D4E24BCCEB2D9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.device_details.v1">
+    <digest id="MD5-CAM-1.0.1">ABFCDBD4FEB5A92D17BBB76F3E1099F9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.apgar.v1">
+    <digest id="MD5-CAM-1.0.1">B5F002DA0EBFCE43780E1656946CE455</digest>
+  </integrity_checks>
+</template>
