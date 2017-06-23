@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
   <id>123456ee7-d996-489e-a64c-225b92073f00</id>
-  <name>Order Set Template</name>
+  <name>Knowledge Topic Template</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose>Demo only</purpose>
+      <purpose>Demo only 2</purpose>
       <use>To show a template within a template Change.</use>
       <misuse />
     </details>
