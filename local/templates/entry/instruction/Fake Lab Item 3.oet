@@ -62,7 +62,14 @@
   </description>
   <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" concept_name="Fake Lab Order" max="1" name="Fake Lab Item 3 (based off of archetype not template pattern)">
     <Rule path="/activities[at0001]/description[at0002]/items[at0003]" name="Fake Lab Item 3" />
-    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]">
+      <Rule path="/items[at0001]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>test1</includedValues>
+          <includedValues>test2</includedValues>
+        </constraint>
+      </Rule>
+    </Items>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
     <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
