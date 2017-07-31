@@ -64,6 +64,7 @@
     <Rule path="/activities[at0001]/description[at0002]/items[at0004]">
       <constraint xsi:type="textConstraint">
         <includedValues>tab</includedValues>
+        <includedValues>cap</includedValues>
       </constraint>
     </Rule>
     <Rule path="/activities[at0001]/description[at0002]/items[at0006]/items[at0007]">
@@ -89,6 +90,12 @@
         <includedValues>once</includedValues>
         <includedValues>daily</includedValues>
         <includedValues>bid</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0013]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>Fever</includedValues>
+        <includedValues>Pain</includedValues>
       </constraint>
     </Rule>
   </definition>
