@@ -112,11 +112,19 @@
     <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" path="/items" name="important info">
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" path="/items" name="information" />
     </Item>
-    <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" path="/items" />
+    <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" path="/items">
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" template_id="6cbadb30-ad87-48b2-a457-8d92179ae9a3" concept_name="Fake Lab Item 12" max="1" path="/items" name="Fake Lab Item 12" />
+    </Item>
     <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" path="/items" name="Fake ad hoc #1" />
     <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" path="/items" name="Fake ad hoc #2" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0">
     <digest id="MD5-CAM-1.0.1">AC221F52F8B7DD86D2DA6FCCFA25FED9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
+    <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0">
+    <digest id="MD5-CAM-1.0.1">E3B108517339C1DD01EED94A5427D5DB</digest>
   </integrity_checks>
 </template>
