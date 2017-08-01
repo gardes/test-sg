@@ -64,7 +64,7 @@
     <items>
       <item>
         <key>Order Set Notes.Order Decision Support</key>
-        <value>test</value>
+        <value>test2</value>
       </item>
     </items>
   </annotations>
@@ -85,7 +85,7 @@
     </Rule>
     <Rule path="/activities[at0001]/description[at0002]/items[at0007]">
       <constraint xsi:type="textConstraint">
-        <includedValues>new test</includedValues>
+        <includedValues>new new test</includedValues>
       </constraint>
     </Rule>
     <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]">
@@ -98,11 +98,15 @@
       </Rule>
     </Items>
     <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" max="1" path="/activities[at0001]/description[at0002]/items[at0009]" name="Test2 #1" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0" concept_name="Fakecluster" path="/activities[at0001]/description[at0002]/items[at0009]" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
     <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.test2.v0">
     <digest id="MD5-CAM-1.0.1">B09EB7520DEA69691F8695F4A6A7C569</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0">
+    <digest id="MD5-CAM-1.0.1">E3B108517339C1DD01EED94A5427D5DB</digest>
   </integrity_checks>
 </template>
