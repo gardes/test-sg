@@ -76,7 +76,15 @@
     <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0" concept_name="Fakecluster" max="1" path="/activities[at0001]/description[at0002]/items[at0009]" name="Cluster for Fake Lab Pattern 1">
       <Rule path="/items[at0003]" max="0" />
     </Items>
-    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]">
+      <Rule path="/items[at0001]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>test</includedValues>
+          <includedValues>test2</includedValues>
+          <includedValues>test3</includedValues>
+        </constraint>
+      </Rule>
+    </Items>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
     <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
