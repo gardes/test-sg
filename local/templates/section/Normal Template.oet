@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
-  <id>588cee69-99b6-4798-af9d-fcb1608a3bbb</id>
+  <id>48b2063e-fb2c-4fc6-b6fb-4dda97cca9a2</id>
   <name>Normal Template</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
