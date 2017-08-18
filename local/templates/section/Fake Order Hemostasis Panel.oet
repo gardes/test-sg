@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>5094fe34-c2c4-47c1-a7d2-196ecec914bd</id>
+  <name>Fake Order Hemostasis Panel</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>Use for testing</purpose>
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0" concept_name="Fake ad hoc heading" max="1" name="Fake Order Hemostasis Panel">
+    <Rule path="/items[at0001]" name="Fake Order Hemostasis Panel" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="39fcb146-1ca8-4bb2-ad11-5f3efe68ba10" concept_name="Fake Factor II Assay" max="1" path="/items[at0001]/items" name="Fake Factoor II Assay" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="c8c8c36f-cc53-49ec-9d99-a2e9d1defae1" concept_name="Fake D-Dimer" max="1" path="/items[at0001]/items" name="Fake D-Dimer" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="725d70b4-fb29-447b-9f08-c4097b3f58e2" concept_name="Fake Fibrinogen order" max="1" path="/items[at0001]/items" name="Fake Fibrinogen order" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="dc3b61f2-3603-4f86-bd20-b7d432a767e4" concept_name="Fake Platelet Aggregation" max="1" path="/items[at0001]/items" name="Fake Platelet Aggregation" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="7522de71-078d-4716-86a5-210003fa1496" concept_name="Fake von Willebrand Factor Antigen" max="1" path="/items[at0001]/items" name="Fake von Willebrand Factor Antigen" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="36ada9ff-f369-4fd1-9925-150866af428a" concept_name="Fake von Willebrand Factor Ristocetin Cofactor" max="1" path="/items[at0001]/items" name="Fake von Willebrand Factor Ristocetin Cofactor" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="6b09636b-9933-467a-a09b-e672606a1cea" concept_name="Fake International Normalized Ratio" max="1" path="/items[at0001]/items" name="Fake INR" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" template_id="e4d5f6bc-3c6f-4884-a61c-46c51854b4a4" concept_name="Fake Partial Thromboplastin Time" max="1" path="/items[at0001]/items" name="Fake Partial Thromboplastin Time" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0">
+    <digest id="MD5-CAM-1.0.1">3450F0361ADEAAA680E329006D0ECAB6</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0">
+    <digest id="MD5-CAM-1.0.1">B8E8176CD729886D87683AAEB1C93489</digest>
+  </integrity_checks>
+</template>
