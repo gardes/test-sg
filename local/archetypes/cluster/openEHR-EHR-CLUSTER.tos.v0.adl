@@ -23,21 +23,16 @@ Designed to be optionally nested within the CLUSTER.exam_tympanic_membrane arche
 This archetype extends the Tos Classification to allow recording of Tos Grade 5 which is described in some documentation but is not described in the original paper and appears not to be in common usage.">
 			keywords = <"retraction", "tympanic", "membrane", "pars flaccida", "attic", "drum">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Kerrie Lee, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Tos M, Poulsen G. Attic retractions following secretory otitis. Acta Otolaryngol. 1980 May-Jun;89(5-6):479-86. PubMed PMID: 7192477.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"6F0E45B7F70FF2F8ECB329066FADA01D">
-		["build_uid"] = <"50f1a81c-b9d5-4adb-8c9a-30f2a81addf6">
+		["MD5-CAM-1.0.1"] = <"86401754F18AF8665E301C745F7AA369">
+		["build_uid"] = <"85957b6d-b13e-446c-bb6a-bf3a3eb4c5f9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
