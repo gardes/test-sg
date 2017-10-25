@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=49f58c1f-a66f-4322-930f-d5e8c65e1dc2)
-	openEHR-EHR-COMPOSITION.report.v0
+﻿archetype (adl_version=1.4; uid=5e11db28-60c6-4a36-b908-f05b1232ead7)
+	openEHR-EHR-COMPOSITION.report.v1
 
 concept
 	[at0000]	-- Report
@@ -84,7 +84,7 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -93,9 +93,9 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A92739102C8C4039414F0C8F64E32C96">
-		["build_uid"] = <"e9cafbea-0679-418b-a1b9-f3d0de769ae0">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"0734E78AB873E63EA3F0DB968243A400">
+		["build_uid"] = <"fed4a29c-eae6-44b3-ab58-44b9448dca91">
+		["revision"] = <"1.0.0">
 	>
 
 definition
