@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=4132a5f0-7c80-4615-a5b8-b0de964b22d5)
-	openEHR-EHR-COMPOSITION.encounter.v0
+﻿archetype (adl_version=1.4; uid=11321756-7903-4550-aaab-0ae26920613e)
+	openEHR-EHR-COMPOSITION.encounter.v1
 
 concept
 	[at0000]	-- Encounter
@@ -152,7 +152,7 @@ No se debe usar para registrar resultados de laboratorio o imagenología.
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Koray Atalag, University of Auckland, New Zealand", "Silje Bakke, Bergen Hospital Trust, Norway", "Steve Bentley, NHS CfH, United Kingdom", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Pablo Pazos, CaboLabs.com Health Informatics, Uruguay">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -161,9 +161,9 @@ No se debe usar para registrar resultados de laboratorio o imagenología.
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"4DF6B3DE1A7F7899B4F88A97FED974E7">
-		["build_uid"] = <"73a96a2c-80d8-48d9-9686-65728baa4895">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"52DA06F88C835BFFE1677B151B2A867D">
+		["build_uid"] = <"db8b414a-3748-410b-ae33-cdf176aa017c">
+		["revision"] = <"1.0.0">
 	>
 
 definition
