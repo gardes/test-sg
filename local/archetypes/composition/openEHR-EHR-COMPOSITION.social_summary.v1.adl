@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=d4804e5b-5484-4c87-866e-fd0fa0d7f582)
-	openEHR-EHR-COMPOSITION.social_summary.v0
+﻿archetype (adl_version=1.4; uid=0170dc39-1057-4bbc-b916-cd4846b858e0)
+	openEHR-EHR-COMPOSITION.social_summary.v1
 
 concept
 	[at0000]	-- Social Summary
@@ -36,7 +36,7 @@ Initial design of this archetype was funded by the Hearing Health project, North
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -45,9 +45,9 @@ Initial design of this archetype was funded by the Hearing Health project, North
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7AED75B8F5E4C8FFE8881F343C581DD6">
-		["build_uid"] = <"6c32d822-2b95-4848-ae10-60968c4e2956">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"3AA5E44836E1A13A59699DC956472586">
+		["build_uid"] = <"787155eb-0860-49e0-8301-12db82f45dd8">
+		["revision"] = <"1.0.0">
 	>
 
 definition
