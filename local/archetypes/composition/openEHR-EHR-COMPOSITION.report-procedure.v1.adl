@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ed2e8634-1e70-4c38-8394-d8884bf58824)
-	openEHR-EHR-COMPOSITION.report-procedure.v0
+﻿archetype (adl_version=1.4; uid=b6ba3d86-c8b5-4d27-8859-26cad137dca3)
+	openEHR-EHR-COMPOSITION.report-procedure.v1
 specialise
 	openEHR-EHR-COMPOSITION.report.v1
 
@@ -41,7 +41,7 @@ Not to be used for procedures that are recorded as part of a nursing progress no
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Vebjoern Arntzen, Oslo university hospital, Norway", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Heath Frankel, Ocean Informatics, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Jussara Rotzsch, UNB, Brazil">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -50,9 +50,9 @@ Not to be used for procedures that are recorded as part of a nursing progress no
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DB2F1DD89E18B247BB5A55DEB3105531">
-		["build_uid"] = <"8226f31f-0cfe-45ef-b6cb-ea0d98103cea">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"F902F3A23ACE2E727DB3F24DD9D8D65A">
+		["build_uid"] = <"f5c8c9fc-1279-4fb8-91ed-109c176e4ee0">
+		["revision"] = <"1.0.0">
 	>
 
 definition
