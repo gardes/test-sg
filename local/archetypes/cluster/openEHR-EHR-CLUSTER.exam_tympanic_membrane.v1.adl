@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=bcf1afd1-3ecf-4f3a-9e02-27395f125207)
-	openEHR-EHR-CLUSTER.exam_tympanic_membrane.v0
+﻿archetype (adl_version=1.4; uid=53ab1c1c-7819-447f-8794-8a9c3ff75821)
+	openEHR-EHR-CLUSTER.exam_tympanic_membrane.v1
 
 concept
 	[at0000]	-- Examination of tympanic membrane
@@ -34,7 +34,7 @@ Not to be used to record stand-alone clinical observations or measurements or te
 			copyright = <"© Northern Territory Department of Health, Australia, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "John Tore Valand, Haukeland Universitetssjukehus, Norway", "Heather Leslie, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Harvey Coates, UWA, Australia", "Marissa Cookson, Dept of Health, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Graeme Crossland, Northern Territory, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jacques de Haan, Alice Springs Hospital, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Amanda Leach, Menzies School of Health Research, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom", "Hemi Patel, Royal Darwin Hospital, Australia", "Mark Ramjan, NT Department of Health, Australia", "Fiona Wake, RAHC, Australia", "Christine Wigger, Menzies School of Health Research, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -43,9 +43,9 @@ Not to be used to record stand-alone clinical observations or measurements or te
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8DFBED90FCB18594D67E716B5EB36C68">
-		["build_uid"] = <"f6a87972-d597-47b8-95a5-4473aec240cc">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"3D7F37D1F61B8E5C0D531C7137DB7F3D">
+		["build_uid"] = <"8be139aa-8f72-47bc-a098-498186318eca">
+		["revision"] = <"1.0.0">
 	>
 
 definition
