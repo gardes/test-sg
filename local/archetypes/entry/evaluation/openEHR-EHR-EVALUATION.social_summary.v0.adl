@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.social_summary.v1
+﻿archetype (adl_version=1.4; uid=8424e8ad-29f5-47f2-bd9f-e089a140df78)
+	openEHR-EHR-EVALUATION.social_summary.v0
 
 concept
 	[at0000]	-- Social Summary
@@ -26,13 +26,20 @@ The use of the term 'social summary' varies enormously in practice. This archety
 ">
 			keywords = <"social", "family", "education", "occupation", "environment", "housing", "finances">
 			misuse = <"Not to be used to record Lifestyle-related information - for example, use specific archetypes for alcohol, tobacco and other substance use; diet and nutrition; and physical activity.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Rosalie Schultz, Central Australia Remote Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"26339FEE3762D9D94C08ADC70F9ADA49">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"DC11E7B513F6B18BEF2C8BEA165C14F4">
+		["build_uid"] = <"8d9402d8-f793-4509-bcaf-fb8308b64a63">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -47,12 +54,24 @@ definition
 					}
 					allow_archetype ITEM[at0003] occurrences matches {0..*} matches {	-- Social Summary Detail
 						include
-							archetype_id/value matches {/.*/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.domestic_family_violence(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.education(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.household(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.housing(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Date Updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
 					}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -74,6 +93,14 @@ ontology
 				["at0003"] = <
 					text = <"Social Summary Detail">
 					description = <"Structured details about the social circumstances and experiences.">
+				>
+				["at0004"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Date Updated">
+					description = <"The date this social summary was last updated.">
 				>
 			>
 		>
