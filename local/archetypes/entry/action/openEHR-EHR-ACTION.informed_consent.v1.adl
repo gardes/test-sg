@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c6e90602-c605-4726-91a8-8ee72a4537a5)
-	openEHR-EHR-ACTION.informed_consent.v0
+﻿archetype (adl_version=1.4; uid=2b452f2a-3b40-400d-a00a-32a0b7ab3981)
+	openEHR-EHR-ACTION.informed_consent.v1
 
 concept
 	[at0000]	-- Informed Consent
@@ -26,7 +26,7 @@ The status of the informed consent is reflected by the pathway steps - requested
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -36,9 +36,9 @@ The status of the informed consent is reflected by the pathway steps - requested
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"946987A1D182E9C9FEE624EF6065E29D">
-		["build_uid"] = <"ba117f68-cf1c-4431-9df1-a5b087d6a147">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"891C98343B723EC63601C525D7E4CA53">
+		["build_uid"] = <"cf78b78d-52c7-4034-9e2b-59e1af044728">
+		["revision"] = <"1.0.0">
 	>
 
 definition
