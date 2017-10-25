@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ee4a60d9-c07d-44ee-bc8b-05d7e36d8169)
-	openEHR-EHR-OBSERVATION.audiometry_result.v0
+﻿archetype (adl_version=1.4; uid=19a85f62-b3df-4920-be24-353f7cedd39f)
+	openEHR-EHR-OBSERVATION.audiometry_result.v1
 
 concept
 	[at0000]	-- Audiogram result
@@ -38,7 +38,7 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 			copyright = <"© Northern Territory Department of Health, Australia, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Amarjit Anand, NT Department of Health/NT Hearing", "Judith Boswell, Adelaide Hearing Consultants, Australia", "Stephen Chu, NEHTA, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Kathy Currie, Northern Territory Health, Australia", "Lisa Dawson, NT Hearing, Northern Territory", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Kelly Simmons, Department of Health, Australia", "Prasha Sooful, Royal Darwin Hospital, Australia", "Fiona Wake, RAHC, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -48,9 +48,9 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"E46A495F693C1A9DCD2B7CDAE55876E1">
-		["build_uid"] = <"500ba9a6-4251-4c04-9eef-0647ad80fd8a">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"8E994EE8C7B5B420063CAE8C26CD99E4">
+		["build_uid"] = <"e1aa4cbf-e045-426d-9008-7e0570bb4154">
+		["revision"] = <"1.0.0">
 	>
 
 definition
