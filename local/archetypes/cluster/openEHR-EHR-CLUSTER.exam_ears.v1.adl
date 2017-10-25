@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=f881f07e-e1c0-41f2-aba9-4167f3d397aa)
-	openEHR-EHR-CLUSTER.exam_ears.v0
+﻿archetype (adl_version=1.4; uid=ad677864-e49a-40c2-b211-52fd1876beb6)
+	openEHR-EHR-CLUSTER.exam_ears.v1
 
 concept
 	[at0000]	-- Examination of Ears
@@ -32,7 +32,7 @@ Not to be used to record stand-alone clinical observations or measurements - use
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -41,9 +41,9 @@ Not to be used to record stand-alone clinical observations or measurements - use
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"C2F9E681EA917CC8E5BEF82F85AC7D92">
-		["build_uid"] = <"2d615069-43ea-4274-9768-6e0674b937a0">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"9025CA00AE92843DBC3EC8FC13859769">
+		["build_uid"] = <"df2c5b7a-32fd-4a02-bc12-840f81e1b4aa">
+		["revision"] = <"1.0.0">
 	>
 
 definition
