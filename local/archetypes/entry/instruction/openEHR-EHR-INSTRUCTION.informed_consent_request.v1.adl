@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ebbb4319-9d32-47cf-9114-ebca97718dca)
-	openEHR-EHR-INSTRUCTION.informed_consent_request.v0
+﻿archetype (adl_version=1.4; uid=14688987-592c-48c7-9b23-c474181de623)
+	openEHR-EHR-INSTRUCTION.informed_consent_request.v1
 
 concept
 	[at0000]	-- Informed Consent Request
@@ -24,7 +24,7 @@ This archetype has been designed to be a framework that will be adequate for ord
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -34,9 +34,9 @@ This archetype has been designed to be a framework that will be adequate for ord
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F44FB7B7ABAB3B8144F14F0FE807A26B">
-		["build_uid"] = <"8b1cc54f-e6b9-471b-b899-19601016aba0">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"246656E87252BB7962A0EB9626505424">
+		["build_uid"] = <"f1bb6d30-a934-40f1-8f95-6dbe95e21266">
+		["revision"] = <"1.0.0">
 	>
 
 definition
