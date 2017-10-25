@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c02e9c11-8750-4184-b4b4-ac9117c837a9)
-	openEHR-EHR-OBSERVATION.auditory_brainstem_response_result.v0
+﻿archetype (adl_version=1.4; uid=c37c2c03-e5e4-448d-aded-3b040d71473a)
+	openEHR-EHR-OBSERVATION.auditory_brainstem_response_result.v1
 
 concept
 	[at0000]	-- Auditory brainstem response (ABR) result
@@ -22,7 +22,7 @@ Details still need to be confirmed with clinicians, although the generic pattern
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -31,9 +31,9 @@ Details still need to be confirmed with clinicians, although the generic pattern
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"13F4372F9608B6D7A173462012B6C5D3">
-		["build_uid"] = <"31f80876-6039-45b5-aec4-a98275f60a3d">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"19EA9A056F9716165D9E4FD7378F7E9D">
+		["build_uid"] = <"8ec8dc87-9146-4e87-8a45-8c205f006e21">
+		["revision"] = <"1.0.0">
 	>
 
 definition
