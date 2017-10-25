@@ -115,14 +115,9 @@ Not to be used to record stand-alone clinical observations - use specific OBSERV
 	lifecycle_state = <"in_development">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Rita Apelt, Department of Health,NT, Australia", "Silje Bakke, Bergen Hospital Trust, Norway", "Margaret Campbell, Queensland Health, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Samo Drnovsek, Marand ltd, Slovenia", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Lars Karlsen, DIPS ASA, Norway", "Russell Leftwich, Russell B Leftwich MD, United States", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Anoop Shah, University College London, United Kingdom", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)", "Lin Zhang, BIPH, China">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"CD6C60A87BB9E7D75F030AC24CCC5F46">
-		["build_uid"] = <"3b96e093-bf18-4ed7-924c-528c64fbe296">
+		["MD5-CAM-1.0.1"] = <"084013A2BCC5B004C2AA9F9F94300559">
+		["build_uid"] = <"d503a129-cb2f-4a1a-8ce0-f43f141b7b25">
 		["revision"] = <"0.0.1-alpha">
 	>
 
