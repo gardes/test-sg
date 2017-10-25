@@ -66,7 +66,6 @@ El propósito de este arquetipo es la documentación de un riesgo potencial en u
 As risk factors may be gradually identified over time and the overall risk reassessed as a result, the 'Date identified' will record the date on which each risk factor has been identified and the 'Last updated' data element will record the last time that the whole assessment was updated.(en)">
 			keywords = <"evaluación", "riesgo", "adverso", "factor", "salud", "problema", "estimado", "manejo", "factor de riesgo", "estratificación de riesgo">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -86,15 +85,15 @@ As risk factors may be gradually identified over time and the overall risk reass
 	lifecycle_state = <"in_development">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anca Heyd, DIPS ASA, Norway", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hallvard Lærum, Oslo University Hospital, Norway", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Jussara Rotzsch, UNB, Brazil", "Norwegian Review Summary, Nasjonal IKT, Norway", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Health Risk, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. Authored: 2006 Apr 23. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1276 (accessed 2015 Mar 04). Archetype originated from the openEHR CKM.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"13DD914E58F3D1B92DA60AF7026605AE">
-		["build_uid"] = <"9cc0cc3a-0f90-4a71-97a4-8cb119b64546">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"42D6C70946A21333474B3351BFCA1EF4">
+		["build_uid"] = <"3504de22-d1df-4f66-b306-9a54fba1fa9a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
