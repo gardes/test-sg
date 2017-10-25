@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.tympanogram_226hz.v1
+﻿archetype (adl_version=1.4; uid=f3a0d17e-0835-400b-9c3c-8ce275d5c93a)
+	openEHR-EHR-OBSERVATION.tympanogram_226hz.v0
 
 concept
 	[at0000]	-- Tympanogram Result - 226Hz
@@ -28,7 +28,7 @@ description
 
 السمع">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -56,12 +56,14 @@ Similarly, if Type C subtypes describing the Tympanogram curve are to be used in
 Not to be used to record high frequency tympanometry. Use the OBSERVATION.tympanogram_hf archetype instead.
 
 Not to be used to record multifrequency tympanometry. Use the OBSERVATION.tympanogram_hf archetype instead.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
-	other_contributors = <"Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Judith Boswell, Adelaide Hearing Consultants, Australia", "Stephen Chu, NEHTA, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Mark Ramjan, NT Department of Health, Australia", "Kelly Simmons, Department of Health, Australia", "Prasha Sooful, Royal Darwin Hospital, Australia">
+	lifecycle_state = <"in_development">
+	other_contributors = <"Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Judith Boswell, Adelaide Hearing Consultants, Australia", "Stephen Chu, NEHTA, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Mark Ramjan, NT Department of Health, Australia", "Kelly Simmons, Department of Health, Australia", "Prasha Sooful, Royal Darwin Hospital, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Tympanogram; [updated 2008 Aug 01, cited 2012 Nov 20]. Available from: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.73_2.
 
 American Academy of Audiology. (1997) Identification of hearing loss & middle-ear dysfunction in preschool & school-age children. Audiol Today. 9, 21–23.
@@ -78,7 +80,12 @@ Margolis, R. H., Bass-Ringdahl, S., Hanks, W. D., Holte, K., & Zapala, D. A. (20
 
 Onusko, E. (2004). Tympanometry. American Family Physician, 70 (9), 1713 – 1720.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"25B04BC157B6F1916606D2304D964695">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F0C4F91B01356FD08F4CEE8D2D9A0416">
+		["build_uid"] = <"5b73935f-fd7a-4f1f-9459-5a133ee0547c">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -86,26 +93,26 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									CLUSTER[at0012] occurrences matches {0..2} matches {	-- Result Details
+									CLUSTER[at0012] occurrences matches {0..2} matches {	-- Result details
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0009] matches {	-- Test Ear
+											ELEMENT[at0009] matches {	-- Test ear
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
-															at0010, 	-- Left Ear
-															at0011]	-- Right Ear
+															at0011, 	-- Right ear
+															at0010]	-- Left ear
 														}
 													}
 												}
 											}
-											CLUSTER[at0027] occurrences matches {0..1} matches {	-- Measurement Details
+											CLUSTER[at0027] occurrences matches {0..1} matches {	-- Measurement details
 												items cardinality matches {2..*; unordered} matches {
-													CLUSTER[at0028] occurrences matches {0..*} matches {	-- Pressure vs Compliance Measurement
+													CLUSTER[at0028] occurrences matches {0..*} matches {	-- Pressure vs compliance measurement
 														items cardinality matches {1..2; unordered} matches {
 															ELEMENT[at0055] matches {	-- Pressure
 																value matches {
@@ -124,7 +131,7 @@ definition
 																	>
 																}
 															}
-															ELEMENT[at0069] occurrences matches {0..1} matches {	-- Compliance (Volume)
+															ELEMENT[at0069] occurrences matches {0..1} matches {	-- Compliance (volume)
 																value matches {
 																	C_DV_QUANTITY <
 																		property = <[openehr::129]>
@@ -143,7 +150,7 @@ definition
 																	>
 																}
 															}
-															ELEMENT[at0056] occurrences matches {0..1} matches {	-- Compliance (Conductance)
+															ELEMENT[at0056] occurrences matches {0..1} matches {	-- Compliance (conductance)
 																value matches {
 																	C_DV_QUANTITY <
 																		property = <[openehr::502]>
@@ -159,7 +166,7 @@ definition
 															}
 														}
 													}
-													ELEMENT[at0013] occurrences matches {0..1} matches {	-- Peak Pressure
+													ELEMENT[at0013] occurrences matches {0..1} matches {	-- Peak pressure
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::125]>
@@ -176,7 +183,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0074] occurrences matches {0..1} matches {	-- Static Compliance (Volume)
+													ELEMENT[at0074] occurrences matches {0..1} matches {	-- Static compliance (volume)
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::129]>
@@ -195,7 +202,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0014] occurrences matches {0..1} matches {	-- Static Compliance (Conductance)
+													ELEMENT[at0014] occurrences matches {0..1} matches {	-- Static compliance (conductance)
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::502]>
@@ -209,7 +216,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0018] occurrences matches {0..1} matches {	-- Ear Canal Volume
+													ELEMENT[at0018] occurrences matches {0..1} matches {	-- Ear canal volume
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::129]>
@@ -228,7 +235,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0029] occurrences matches {0..1} matches {	-- Tympanometric Width
+													ELEMENT[at0029] occurrences matches {0..1} matches {	-- Tympanometric width
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::125]>
@@ -242,7 +249,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0030] occurrences matches {0..1} matches {	-- Tympanometric Gradient
+													ELEMENT[at0030] occurrences matches {0..1} matches {	-- Tympanometric gradient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::502]>
@@ -261,47 +268,39 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0031] occurrences matches {0..1} matches {	-- No Test Result
+											ELEMENT[at0031] occurrences matches {0..1} matches {	-- No test result
 												value matches {
 													DV_BOOLEAN matches {
 														value matches {True}
 													}
 												}
 											}
-											ELEMENT[at0032] occurrences matches {0..1} matches {	-- Reason for No Test Result
+											ELEMENT[at0032] occurrences matches {0..1} matches {	-- Reason for no test result
 												value matches {
 													DV_TEXT matches {*}
 												}
 											}
-											ELEMENT[at0004] occurrences matches {0..1} matches {	-- Tympanogram Type
+											ELEMENT[at0004] occurrences matches {0..1} matches {	-- Tympanogram type
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
 															at0005, 	-- Type A
-															at0006, 	-- Type B
-															at0057, 	-- Type B with high ECV
-															at0007, 	-- Type C
-															at0070, 	-- Type D
 															at0008, 	-- Type As
 															at0034, 	-- Type Ad
+															at0006, 	-- Type B
+															at0057, 	-- Type B with high ECV
+															at0076, 	-- Type B with low ECV
+															at0007, 	-- Type C
+															at0077, 	-- Type Cs
+															at0078, 	-- Type Cd
+															at0070, 	-- Type D
 															at0035]	-- Indeterminate
 														}
 													}
 												}
 											}
-											ELEMENT[at0071] occurrences matches {0..1} matches {	-- Tympanogram Type B Subtype
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0072, 	-- Type B - high compliance
-															at0073]	-- Type B - low compliance
-														}
-													}
-												}
-											}
-											ELEMENT[at0058] occurrences matches {0..1} matches {	-- Tympanogram Type C Subtype
+											ELEMENT[at0058] occurrences matches {0..1} matches {	-- Tympanogram type C subtype
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -313,42 +312,25 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0066] occurrences matches {0..1} matches {	-- Screening Outcome
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0067, 	-- Pass
-															at0068]	-- Fail
-														}
-													}
-												}
-											}
-											ELEMENT[at0033] occurrences matches {0..1} matches {	-- Clinical Interpretation
+											ELEMENT[at0033] occurrences matches {0..1} matches {	-- Clinical interpretation
 												value matches {
 													DV_TEXT matches {*}
 												}
 											}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Overall Interpretation
+									allow_archetype CLUSTER[at0079] occurrences matches {0..*} matches {	-- Multimedia
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Overall interpretation
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0020] occurrences matches {0..*} matches {	-- Test Result Image
-										value matches {
-											DV_MULTIMEDIA matches {
-												media_type matches {
-													[openEHR::
-													425, 
-													426, 
-													427, 
-													428, 
-													429]
-												}
-											}
-										}
+									allow_archetype CLUSTER[at0075] occurrences matches {0..*} matches {	-- Test not done
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.exclusion_exam(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Comment
 										value matches {
@@ -364,12 +346,12 @@ definition
 							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
 						}
 					}
-					POINT_EVENT[at0038] occurrences matches {0..1} matches {	-- Post Valsalva
+					POINT_EVENT[at0038] occurrences matches {0..1} matches {	-- Post valsalva
 						data matches {
 							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
 						}
 					}
-					POINT_EVENT[at0039] occurrences matches {0..1} matches {	-- Post Toynbee
+					POINT_EVENT[at0039] occurrences matches {0..1} matches {	-- Post toynbee
 						data matches {
 							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
 						}
@@ -380,7 +362,11 @@ definition
 		protocol matches {
 			ITEM_TREE[at0040] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0043] occurrences matches {0..1} matches {	-- Direction of Pressure Change
+					allow_archetype CLUSTER[at0080] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0043] occurrences matches {0..1} matches {	-- Direction of pressure change
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -391,7 +377,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0046] occurrences matches {0..1} matches {	-- Rate of Pressure Change
+					ELEMENT[at0046] occurrences matches {0..1} matches {	-- Rate of pressure change
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::708]>
@@ -406,7 +392,7 @@ definition
 							>
 						}
 					}
-					ELEMENT[at0047] occurrences matches {0..1} matches {	-- Admittance Measurement
+					ELEMENT[at0047] occurrences matches {0..1} matches {	-- Admittance measurement
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -417,9 +403,9 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0050] occurrences matches {0..1} matches {	-- Pressure Range
+					CLUSTER[at0050] occurrences matches {0..1} matches {	-- Pressure range
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0051] occurrences matches {0..1} matches {	-- Start Pressure
+							ELEMENT[at0051] occurrences matches {0..1} matches {	-- Start pressure
 								value matches {
 									C_DV_QUANTITY <
 										property = <[openehr::125]>
@@ -434,7 +420,7 @@ definition
 									>
 								}
 							}
-							ELEMENT[at0052] occurrences matches {0..1} matches {	-- Stop Pressure
+							ELEMENT[at0052] occurrences matches {0..1} matches {	-- Stop pressure
 								value matches {
 									C_DV_QUANTITY <
 										property = <[openehr::125]>
@@ -455,7 +441,7 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0041] occurrences matches {0..*} matches {	-- Pre-test Calibration Cavity Size
+					ELEMENT[at0041] occurrences matches {0..*} matches {	-- Pre-test calibration cavity size
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::129]>
@@ -467,54 +453,11 @@ definition
 									>
 								>
 								assumed_value = <
-									magnitude = <0.5>
 									units = <"cc">
 									precision = <2>
+									magnitude = <0.5>
 								>
 							>
-						}
-					}
-					CLUSTER[at0063] occurrences matches {0..1} matches {	-- Screening Pass/Fail Criteria
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Criteria for Peak Pressure Pass
-								value matches {
-									C_DV_QUANTITY <
-										property = <[openehr::125]>
-										list = <
-											["1"] = <
-												units = <"daPa">
-											>
-										>
-									>
-								}
-							}
-							ELEMENT[at0064] occurrences matches {0..1} matches {	-- Criteria for Static Compliance Pass
-								value matches {
-									C_DV_QUANTITY <
-										property = <[openehr::502]>
-										list = <
-											["1"] = <
-												units = <"mmho">
-											>
-										>
-									>
-								}
-							}
-							ELEMENT[at0065] occurrences matches {0..1} matches {	-- Criteria for Ear Canal Volume Pass
-								value matches {
-									C_DV_QUANTITY <
-										property = <[openehr::129]>
-										list = <
-											["1"] = <
-												units = <"cc">
-											>
-											["2"] = <
-												units = <"ml">
-											>
-										>
-									>
-								}
-							}
 						}
 					}
 					ELEMENT[at0054] occurrences matches {0..1} matches {	-- Comment
@@ -527,13 +470,14 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["ar-sy"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Tympanogram Result(en)">
-					description = <"*Record of measurements of movement at the tympanic membrane in response to changes in air pressure in the ear canal and their clinical interpretation as an indication of middle ear function.(en)">
+					text = <"*Tympanogram Result - 226Hz(en)">
+					description = <"*Measurement of tympanic membrane movement in response to a 226Hz probe tone and changes in air pressure in the ear canal, and associated clinical interpretation.(en)">
 				>
 				["at0001"] = <
 					text = <"*Event Series(en)">
@@ -541,16 +485,17 @@ ontology
 				>
 				["at0002"] = <
 					text = <"*Any event(en)">
-					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+					description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time.(en)">
 				>
 				["at0003"] = <
 					text = <"*Tree(en)">
 					description = <"*@ internal @(en)">
 				>
 				["at0004"] = <
-					text = <"*Tympanogram Type(en)">
+					text = <"*Tympanogram type(en)">
 					description = <"*Description of the the shape of the tympanogram curve, based on the Jerger categories.(en)">
-					comment = <"*If Type C subtypes are to be used in an implementation, these should be substituted for the global Type C category here. Both Type C and Types C1-3 should not be used in the same implementation.(en)">
+					comment = <"*If Type B or C subtypes are to be used in an implementation, these should be substituted for the global 'Type B' or 'Type C' classification here. 
+Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should not be used in the same implementation. Similarly, both 'Type C' and Types C1-3 should not be used in the same implementation. (en)">
 				>
 				["at0005"] = <
 					text = <"*Type A(en)">
@@ -562,84 +507,80 @@ ontology
 				>
 				["at0007"] = <
 					text = <"*Type C(en)">
-					description = <"*Curve similar to Type A , but with the sharp peak at a negative pressure.(en)">
+					description = <"*Curve similar to Type A , but with the sharp peak at a negative pressure and normal compliance.(en)">
 				>
 				["at0008"] = <
 					text = <"*Type As(en)">
 					description = <"*A Type A curve but with reduced static compliance.(en)">
 				>
 				["at0009"] = <
-					text = <"*Test Ear(en)">
+					text = <"*Test ear(en)">
 					description = <"*Identification of the ear being tested.(en)">
 				>
 				["at0010"] = <
-					text = <"*Left Ear(en)">
+					text = <"*Left ear(en)">
 					description = <"*The probe tone was presented to the left ear.(en)">
 				>
 				["at0011"] = <
-					text = <"*Right Ear(en)">
+					text = <"*Right ear(en)">
 					description = <"*The probe tone was presented to the right ear.(en)">
 				>
 				["at0012"] = <
-					text = <"*Result Details(en)">
+					text = <"*Result details(en)">
 					description = <"*The tympanogram test result measurements and interpretations, recorded per ear.(en)">
 				>
 				["at0013"] = <
-					text = <"*Peak Pressure(en)">
+					text = <"*Peak pressure(en)">
 					description = <"*Peak pressure (also called tympanometric peak pressure or middle ear pressure or MEP) is the ear canal pressure at which the peak of the tympanogram occurs.(en)">
 					comment = <"*Also known as Middle Ear Pressure (MEP). It is plotted on the horizontal axis on a tympanogram.(en)">
 				>
 				["at0014"] = <
-					text = <"*Static Compliance (Conductance)(en)">
+					text = <"*Static compliance (conductance)(en)">
 					description = <"*Static compliance (SC) is the greatest amount of acoustic energy absorbed by the middle ear system (the vertical peak of the tympanogram curve).(en)">
 					comment = <"*Also known as 'Static Admittance'. It is plotted on the verical axis of a tympanogram.(en)">
 				>
 				["at0018"] = <
-					text = <"*Ear Canal Volume(en)">
+					text = <"*Ear canal volume(en)">
 					description = <"*An estimate of the volume of air between the probe tip and the tympanic membrane if the tympanic membrane is intact, or the volume of the ear canal and the middle ear space if the tympanic membrane is perforated. (Fowler & Shanks, 2002, p. 180).(en)">
-				>
-				["at0020"] = <
-					text = <"*Test Result Image(en)">
-					description = <"*Digital representation of the entire result.(en)">
 				>
 				["at0021"] = <
 					text = <"*Comment(en)">
 					description = <"*Additional narrative about the test results and intepretation not captured in other fields.(en)">
 				>
 				["at0027"] = <
-					text = <"*Measurement Details(en)">
+					text = <"*Measurement details(en)">
 					description = <"*Measurements of the tympanogram to infer middle ear function.(en)">
 					comment = <"*Static compliance has been represented in the archetype twice, each with different units. Static compliance will only be recorded in data using the unit that is captured by the tympanometer in use - either volume units OR conductance units, but not both.
  (en)">
 				>
 				["at0028"] = <
-					text = <"*Pressure vs Compliance Measurement(en)">
+					text = <"*Pressure vs compliance measurement(en)">
 					description = <"*The Pressure/Compliance measurement pair, captured from a tympanometer and used to define a continuous tympanogram curve.(en)">
 					comment = <"*Each measurement pair will comprise one pressure measurment with one corresponding compliance measurement. Compliance has been represented in the archetype twice, each with different units. Compliance will only be recorded in data using the unit that is captured by the tympanometer in use - either volume units OR conductance units, but not both.
  Multiple instances of this measurement pair will form the basis for the graphical display of the tympanogram. (en)">
 				>
 				["at0029"] = <
-					text = <"*Tympanometric Width(en)">
+					text = <"*Tympanometric width(en)">
 					description = <"*The pressure interval corresponding to a 50% reduction in the peak static admittance.(en)">
 					comment = <"*This value is typically derived from the Tympanogram curve. In some immittance machines, for example the Grason Stadler GSI 39, this data element is known as 'gradient'.(en)">
 				>
 				["at0030"] = <
-					text = <"*Tympanometric Gradient(en)">
+					text = <"*Tympanometric gradient(en)">
 					description = <"*The steepness of the slope of the tympanogram near the peak.(en)">
 					comment = <"*This value is typically derived from the Tympanogram curve.(en)">
 				>
 				["at0031"] = <
-					text = <"*No Test Result(en)">
+					text = <"*No test result(en)">
 					description = <"*No test result is available for the test ear.(en)">
 					comment = <"*Record as True if the clinician was unable to record a result for the test ear.(en)">
 				>
 				["at0032"] = <
-					text = <"*Reason for No Test Result(en)">
+					text = <"*Reason for no test result(en)">
 					description = <"*Reason why no result is available for the test ear.(en)">
 					comment = <"*Coding with a terminology is preferred, where possible. For example, patient was not co-operative; patient was not capable; ran out of time; no seal; presence of  tympanic membrane perforation, impacted wax or discharge.(en)">
 				>
 				["at0033"] = <
-					text = <"*Clinical Interpretation(en)">
+					text = <"*Clinical interpretation(en)">
 					description = <"*Clinical interpretation of all measurements for the test ear.(en)">
 					comment = <"*Coding with a terminology is preferred, where possible.(en)">
 				>
@@ -652,7 +593,7 @@ ontology
 					description = <"*It is not possible to determine the type of tympanogram Type.(en)">
 				>
 				["at0036"] = <
-					text = <"*Overall Interpretation(en)">
+					text = <"*Overall interpretation(en)">
 					description = <"*Overall clinical interpretation of the measurements and related findings using an tympanometer.(en)">
 					comment = <"*Coding with a terminology is preferred, where possible. This data element is effectively an tympanometric diagnosis.(en)">
 				>
@@ -661,11 +602,11 @@ ontology
 					description = <"*Measurement collection recorded as the basis for comparison with following measurement collections that may include other variables of time or patient state.(en)">
 				>
 				["at0038"] = <
-					text = <"*Post Valsalva(en)">
+					text = <"*Post valsalva(en)">
 					description = <"*Measurements are recorded after the patient has performed a valsalva manoeuvre.(en)">
 				>
 				["at0039"] = <
-					text = <"*Post Toynbee(en)">
+					text = <"*Post toynbee(en)">
 					description = <"*Measurements are recorded after the patient has performed a toynbee manoeuvre.(en)">
 				>
 				["at0040"] = <
@@ -673,12 +614,12 @@ ontology
 					description = <"*@ internal @(en)">
 				>
 				["at0041"] = <
-					text = <"*Pre-test Calibration Cavity Size(en)">
+					text = <"*Pre-test calibration cavity size(en)">
 					description = <"*A cavity with a known volume used to check the calibration of the tympanometer.(en)">
 					comment = <"*ANSI S3.39 requires that three calibration cavities (0.5, 2.0, and 5.0 cm3) be checked with each device.(en)">
 				>
 				["at0043"] = <
-					text = <"*Direction of Pressure Change(en)">
+					text = <"*Direction of pressure change(en)">
 					description = <"*The dirction of change of pressure administered via the ear canal.(en)">
 				>
 				["at0044"] = <
@@ -690,11 +631,11 @@ ontology
 					description = <"*The pressure changes from negative to positive.(en)">
 				>
 				["at0046"] = <
-					text = <"*Rate of Pressure Change(en)">
+					text = <"*Rate of pressure change(en)">
 					description = <"*The rate of change of pressure used in tympanometry.(en)">
 				>
 				["at0047"] = <
-					text = <"*Admittance Measurement(en)">
+					text = <"*Admittance measurement(en)">
 					description = <"*Method of acoustic admittance measurement used in the test.(en)">
 				>
 				["at0048"] = <
@@ -706,15 +647,15 @@ ontology
 					description = <"*Admittance was measured using the Ambient compensated static acoustic admittance.(en)">
 				>
 				["at0050"] = <
-					text = <"*Pressure Range(en)">
+					text = <"*Pressure range(en)">
 					description = <"*The range of air pressure used to determine the tympanogram.(en)">
 				>
 				["at0051"] = <
-					text = <"*Start Pressure(en)">
+					text = <"*Start pressure(en)">
 					description = <"*The pressure value in daPa at which the pressure sweep for tympanometry begins. It is a positive pressure if the direction of pressure change is descending and a negative pressure if the direction of pressure change is ascending.(en)">
 				>
 				["at0052"] = <
-					text = <"*Stop Pressure(en)">
+					text = <"*Stop pressure(en)">
 					description = <"*The pressure value in daPa at which the pressure sweep for tympanometry ends. It is a negative pressure if the direction of pressure change is descending and a positive pressure if the direction of pressure change is ascending.(en)">
 				>
 				["at0053"] = <
@@ -730,16 +671,16 @@ ontology
 					description = <"*The pressure measured in the ear canal.(en)">
 				>
 				["at0056"] = <
-					text = <"*Compliance (Conductance)(en)">
+					text = <"*Compliance (conductance)(en)">
 					description = <"*The amount of acoustic energy absorbed by the middle ear system at a specified pressure, measured in mmHo.(en)">
 					comment = <"*If the tympanometer records compliance in mmho, use this data element. If the tympanometer records compliance in cc or ml, use the 'Compliance (Volume) data element.(en)">
 				>
 				["at0057"] = <
 					text = <"*Type B with high ECV(en)">
-					description = <"*Rounded line/no measurable peak pressure; reduced static compliance; ear canal volume above the normal range.(en)">
+					description = <"*Flat or rounded curve with measurable peak pressure; reduced static compliance; ear canal volume above the normal range.(en)">
 				>
 				["at0058"] = <
-					text = <"*Tympanogram Type C Subtype(en)">
+					text = <"*Tympanogram type C subtype(en)">
 					description = <"*Subclassification of the tympanograms with negative peak pressure.(en)">
 					comment = <"*If the subtypes are to be used in an implementation, these should be substituted for the global Type C category in the 'Tympanogram Type' data element. Both Type C and Types C1-3 should not be used in the same implementation.(en)">
 				>
@@ -755,37 +696,8 @@ ontology
 					text = <"*Type C3(en)">
 					description = <"*A negative peak pressure and low-normal static compliance.(en)">
 				>
-				["at0062"] = <
-					text = <"*Criteria for Peak Pressure Pass(en)">
-					description = <"**(en)">
-				>
-				["at0063"] = <
-					text = <"*Screening Pass/Fail Criteria(en)">
-					description = <"**(en)">
-				>
-				["at0064"] = <
-					text = <"*Criteria for Static Compliance Pass(en)">
-					description = <"**(en)">
-				>
-				["at0065"] = <
-					text = <"*Criteria for Ear Canal Volume Pass(en)">
-					description = <"**(en)">
-				>
-				["at0066"] = <
-					text = <"*Screening Outcome(en)">
-					description = <"*Overall result of screening.(en)">
-					comment = <"*In some existing screening programs, the result has previously been recorded as one of three options: 'Pass', 'Re-test' or 'Refer'. This confounds the result with subsequent next actions. This data element is recording the outcome of the test alone - thus 'Pass' or 'Fail' are the only two options. Following a 'Fail' result, a clinical system can support the clinician to initiate appropriate a subsequent activity (eg based on other information such as previous screening test results) - either a rescheduling of the screening test (ie a 'Re-test') or initiation of a referral for further investigation (ie a 'Refer'). (en)">
-				>
-				["at0067"] = <
-					text = <"*Pass(en)">
-					description = <"*The test was passed, based on screening criteria.(en)">
-				>
-				["at0068"] = <
-					text = <"*Fail(en)">
-					description = <"*The test was failed, based on screening criteria.(en)">
-				>
 				["at0069"] = <
-					text = <"*Compliance (Volume)(en)">
+					text = <"*Compliance (volume)(en)">
 					description = <"*The amount of acoustic energy absorbed by the middle ear system at a specified pressure, measured in cc or ml.(en)">
 					comment = <"*If the tympanometer records compliance in cc or ml, use this data element. If the tympanometer records compliance in mmho, use the 'Compliance (Conductance) data element.(en)">
 				>
@@ -793,21 +705,34 @@ ontology
 					text = <"*Type D(en)">
 					description = <"*Double peak(en)">
 				>
-				["at0071"] = <
-					text = <"*New element(en)">
-					description = <"**(en)">
-				>
-				["at0072"] = <
-					text = <"*Type B - high compliance(en)">
-					description = <"**(en)">
-				>
-				["at0073"] = <
-					text = <"*Type B - low compliance(en)">
-					description = <"**(en)">
-				>
 				["at0074"] = <
-					text = <"*Static Compliance (Volume)(en)">
+					text = <"*Static compliance (volume)(en)">
 					description = <"*Static compliance (SC) is the greatest amount of acoustic energy absorbed by the middle ear system (the vertical peak of the tympanogram curve).(en)">
+				>
+				["at0075"] = <
+					text = <"*Test not done(en)">
+					description = <"*Details to explicitly record that this examination was not performed.(en)">
+				>
+				["at0076"] = <
+					text = <"*Type B with low ECV(en)">
+					description = <"*Flat or rounded curve with measurable peak pressure; reduced static compliance; ear canal volume below the normal range.(en)">
+				>
+				["at0077"] = <
+					text = <"*Type Cs(en)">
+					description = <"*Curve similar to Type A, but with the sharp peak at a negative pressure and reduced compliance..(en)">
+				>
+				["at0078"] = <
+					text = <"*Type Cd(en)">
+					description = <"*Curve similar to Type A, but with the sharp peak at a negative pressure and increased compliance.(en)">
+				>
+				["at0079"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Digital representation of the test results.(en)">
+				>
+				["at0080"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
 				>
 			>
 		>
@@ -815,7 +740,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Tympanogram Result - 226Hz">
-					description = <"Record of measurements of movement at the tympanic membrane in response to a 226Hz probe tone and changes in air pressure in the ear canal, and their clinical interpretation as an indication of middle ear function.">
+					description = <"Measurement of tympanic membrane movement in response to a 226Hz probe tone and changes in air pressure in the ear canal, and associated clinical interpretation.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -823,14 +748,14 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+					description = <"Default, unspecified point in time event which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Tympanogram Type">
+					text = <"Tympanogram type">
 					description = <"Description of the the shape of the tympanogram curve, based on the Jerger categories.">
 					comment = <"If Type B or C subtypes are to be used in an implementation, these should be substituted for the global 'Type B' or 'Type C' classification here. 
 Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should not be used in the same implementation. Similarly, both 'Type C' and Types C1-3 should not be used in the same implementation. ">
@@ -845,84 +770,80 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 				>
 				["at0007"] = <
 					text = <"Type C">
-					description = <"Curve similar to Type A , but with the sharp peak at a negative pressure.">
+					description = <"Curve similar to Type A , but with the sharp peak at a negative pressure and normal compliance.">
 				>
 				["at0008"] = <
 					text = <"Type As">
 					description = <"A Type A curve but with reduced static compliance.">
 				>
 				["at0009"] = <
-					text = <"Test Ear">
+					text = <"Test ear">
 					description = <"Identification of the ear being tested.">
 				>
 				["at0010"] = <
-					text = <"Left Ear">
+					text = <"Left ear">
 					description = <"The probe tone was presented to the left ear.">
 				>
 				["at0011"] = <
-					text = <"Right Ear">
+					text = <"Right ear">
 					description = <"The probe tone was presented to the right ear.">
 				>
 				["at0012"] = <
-					text = <"Result Details">
+					text = <"Result details">
 					description = <"The tympanogram test result measurements and interpretations, recorded per ear.">
 				>
 				["at0013"] = <
-					text = <"Peak Pressure">
+					text = <"Peak pressure">
 					description = <"Peak pressure (also called tympanometric peak pressure or middle ear pressure or MEP) is the ear canal pressure at which the peak of the tympanogram occurs.">
 					comment = <"Also known as Middle Ear Pressure (MEP). It is plotted on the horizontal axis on a tympanogram.">
 				>
 				["at0014"] = <
-					text = <"Static Compliance (Conductance)">
+					text = <"Static compliance (conductance)">
 					description = <"Static compliance (SC) is the greatest amount of acoustic energy absorbed by the middle ear system (the vertical peak of the tympanogram curve).">
 					comment = <"Also known as 'Static Admittance'. It is plotted on the verical axis of a tympanogram.">
 				>
 				["at0018"] = <
-					text = <"Ear Canal Volume">
+					text = <"Ear canal volume">
 					description = <"An estimate of the volume of air between the probe tip and the tympanic membrane if the tympanic membrane is intact, or the volume of the ear canal and the middle ear space if the tympanic membrane is perforated. (Fowler & Shanks, 2002, p. 180).">
-				>
-				["at0020"] = <
-					text = <"Test Result Image">
-					description = <"Digital representation of the entire result.">
 				>
 				["at0021"] = <
 					text = <"Comment">
 					description = <"Additional narrative about the test results and intepretation not captured in other fields.">
 				>
 				["at0027"] = <
-					text = <"Measurement Details">
+					text = <"Measurement details">
 					description = <"Measurements of the tympanogram to infer middle ear function.">
 					comment = <"Static compliance has been represented in the archetype twice, each with different units. Static compliance will only be recorded in data using the unit that is captured by the tympanometer in use - either volume units OR conductance units, but not both.
  ">
 				>
 				["at0028"] = <
-					text = <"Pressure vs Compliance Measurement">
+					text = <"Pressure vs compliance measurement">
 					description = <"The Pressure/Compliance measurement pair, captured from a tympanometer and used to define a continuous tympanogram curve.">
 					comment = <"Each measurement pair will comprise one pressure measurment with one corresponding compliance measurement. Compliance has been represented in the archetype twice, each with different units. Compliance will only be recorded in data using the unit that is captured by the tympanometer in use - either volume units OR conductance units, but not both.
  Multiple instances of this measurement pair will form the basis for the graphical display of the tympanogram. ">
 				>
 				["at0029"] = <
-					text = <"Tympanometric Width">
+					text = <"Tympanometric width">
 					description = <"The pressure interval corresponding to a 50% reduction in the peak static admittance.">
 					comment = <"This value is typically derived from the Tympanogram curve. In some immittance machines, for example the Grason Stadler GSI 39, this data element is known as 'gradient'.">
 				>
 				["at0030"] = <
-					text = <"Tympanometric Gradient">
+					text = <"Tympanometric gradient">
 					description = <"The steepness of the slope of the tympanogram near the peak.">
 					comment = <"This value is typically derived from the Tympanogram curve.">
 				>
 				["at0031"] = <
-					text = <"No Test Result">
+					text = <"No test result">
 					description = <"No test result is available for the test ear.">
 					comment = <"Record as True if the clinician was unable to record a result for the test ear.">
 				>
 				["at0032"] = <
-					text = <"Reason for No Test Result">
+					text = <"Reason for no test result">
 					description = <"Reason why no result is available for the test ear.">
 					comment = <"Coding with a terminology is preferred, where possible. For example, patient was not co-operative; patient was not capable; ran out of time; no seal; presence of  tympanic membrane perforation, impacted wax or discharge.">
 				>
 				["at0033"] = <
-					text = <"Clinical Interpretation">
+					text = <"Clinical interpretation">
 					description = <"Clinical interpretation of all measurements for the test ear.">
 					comment = <"Coding with a terminology is preferred, where possible.">
 				>
@@ -935,7 +856,7 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"It is not possible to determine the type of tympanogram Type.">
 				>
 				["at0036"] = <
-					text = <"Overall Interpretation">
+					text = <"Overall interpretation">
 					description = <"Overall clinical interpretation of the measurements and related findings using an tympanometer.">
 					comment = <"Coding with a terminology is preferred, where possible. This data element is effectively an tympanometric diagnosis.">
 				>
@@ -944,11 +865,11 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"Measurement collection recorded as the basis for comparison with following measurement collections that may include other variables of time or patient state.">
 				>
 				["at0038"] = <
-					text = <"Post Valsalva">
+					text = <"Post valsalva">
 					description = <"Measurements are recorded after the patient has performed a valsalva manoeuvre.">
 				>
 				["at0039"] = <
-					text = <"Post Toynbee">
+					text = <"Post toynbee">
 					description = <"Measurements are recorded after the patient has performed a toynbee manoeuvre.">
 				>
 				["at0040"] = <
@@ -956,12 +877,12 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"@ internal @">
 				>
 				["at0041"] = <
-					text = <"Pre-test Calibration Cavity Size">
+					text = <"Pre-test calibration cavity size">
 					description = <"A cavity with a known volume used to check the calibration of the tympanometer.">
 					comment = <"ANSI S3.39 requires that three calibration cavities (0.5, 2.0, and 5.0 cm3) be checked with each device.">
 				>
 				["at0043"] = <
-					text = <"Direction of Pressure Change">
+					text = <"Direction of pressure change">
 					description = <"The dirction of change of pressure administered via the ear canal.">
 				>
 				["at0044"] = <
@@ -973,11 +894,11 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"The pressure changes from negative to positive.">
 				>
 				["at0046"] = <
-					text = <"Rate of Pressure Change">
+					text = <"Rate of pressure change">
 					description = <"The rate of change of pressure used in tympanometry.">
 				>
 				["at0047"] = <
-					text = <"Admittance Measurement">
+					text = <"Admittance measurement">
 					description = <"Method of acoustic admittance measurement used in the test.">
 				>
 				["at0048"] = <
@@ -989,15 +910,15 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"Admittance was measured using the Ambient compensated static acoustic admittance.">
 				>
 				["at0050"] = <
-					text = <"Pressure Range">
+					text = <"Pressure range">
 					description = <"The range of air pressure used to determine the tympanogram.">
 				>
 				["at0051"] = <
-					text = <"Start Pressure">
+					text = <"Start pressure">
 					description = <"The pressure value in daPa at which the pressure sweep for tympanometry begins. It is a positive pressure if the direction of pressure change is descending and a negative pressure if the direction of pressure change is ascending.">
 				>
 				["at0052"] = <
-					text = <"Stop Pressure">
+					text = <"Stop pressure">
 					description = <"The pressure value in daPa at which the pressure sweep for tympanometry ends. It is a negative pressure if the direction of pressure change is descending and a positive pressure if the direction of pressure change is ascending.">
 				>
 				["at0053"] = <
@@ -1013,16 +934,16 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					description = <"The pressure measured in the ear canal.">
 				>
 				["at0056"] = <
-					text = <"Compliance (Conductance)">
+					text = <"Compliance (conductance)">
 					description = <"The amount of acoustic energy absorbed by the middle ear system at a specified pressure, measured in mmHo.">
 					comment = <"If the tympanometer records compliance in mmho, use this data element. If the tympanometer records compliance in cc or ml, use the 'Compliance (Volume) data element.">
 				>
 				["at0057"] = <
 					text = <"Type B with high ECV">
-					description = <"Rounded curve with measurable peak pressure; reduced static compliance; ear canal volume above the normal range.">
+					description = <"Flat or rounded curve with measurable peak pressure; reduced static compliance; ear canal volume above the normal range.">
 				>
 				["at0058"] = <
-					text = <"Tympanogram Type C Subtype">
+					text = <"Tympanogram type C subtype">
 					description = <"Subclassification of the tympanograms with negative peak pressure.">
 					comment = <"If the subtypes are to be used in an implementation, these should be substituted for the global Type C category in the 'Tympanogram Type' data element. Both Type C and Types C1-3 should not be used in the same implementation.">
 				>
@@ -1038,37 +959,8 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					text = <"Type C3">
 					description = <"A negative peak pressure and low-normal static compliance.">
 				>
-				["at0062"] = <
-					text = <"Criteria for Peak Pressure Pass">
-					description = <"The range of 'Peak Pressure' measurements which fall within the criteria for a 'Pass'.">
-				>
-				["at0063"] = <
-					text = <"Screening Pass/Fail Criteria">
-					description = <"The criteria by which a screening tympanogram is classified as 'Pass' or 'Fail'.">
-				>
-				["at0064"] = <
-					text = <"Criteria for Static Compliance Pass">
-					description = <"The range of 'Static Compliance' measurements which fulfil the criteria for a 'Pass'.">
-				>
-				["at0065"] = <
-					text = <"Criteria for Ear Canal Volume Pass">
-					description = <"The range of 'Ear Canal Volume' measurements which fulfil the criteria for a 'Pass'.">
-				>
-				["at0066"] = <
-					text = <"Screening Outcome">
-					description = <"Overall result of screening.">
-					comment = <"In some existing screening programs, the result has previously been recorded as one of three options: 'Pass', 'Re-test' or 'Refer'. This confounds the result with subsequent next actions. This data element is recording the outcome of the test alone - thus 'Pass' or 'Fail' are the only two options. Following a 'Fail' result, a clinical system can support the clinician to initiate appropriate a subsequent activity (eg based on other information such as previous screening test results) - either a rescheduling of the screening test (ie a 'Re-test') or initiation of a referral for further investigation (ie a 'Refer'). ">
-				>
-				["at0067"] = <
-					text = <"Pass">
-					description = <"The test was passed, based on screening criteria.">
-				>
-				["at0068"] = <
-					text = <"Fail">
-					description = <"The test was failed, based on screening criteria.">
-				>
 				["at0069"] = <
-					text = <"Compliance (Volume)">
+					text = <"Compliance (volume)">
 					description = <"The amount of acoustic energy absorbed by the middle ear system at a specified pressure, measured in cc or ml.">
 					comment = <"If the tympanometer records compliance in cc or ml, use this data element. If the tympanometer records compliance in mmho, use the 'Compliance (Conductance) data element.">
 				>
@@ -1076,22 +968,34 @@ Both 'Type B' and 'Type B - low compliance'/'Type B - high compliance' should no
 					text = <"Type D">
 					description = <"A curve with a double peak; normal or reduced static compliance; normal ear canal volume.">
 				>
-				["at0071"] = <
-					text = <"Tympanogram Type B Subtype">
-					description = <"Subclassification of the tympanograms with a flat curve.">
-					comment = <"If the subtypes are to be used in an implementation, these should be substituted for the global Type B category in the 'Tympanogram Type' data element. Both 'Type B' and 'Type B - low/high compliance' should not be used in the same implementation. 'Type B - low complicance' is equivalent to the unqualified 'Type B' in the 'Tympanogram Type' data element.">
-				>
-				["at0072"] = <
-					text = <"Type B - high compliance">
-					description = <"Rounded curve with no measurable peak pressure; static compliance on lower limits of normal range; ear canal volume within normal range.">
-				>
-				["at0073"] = <
-					text = <"Type B - low compliance">
-					description = <"Rounded curve with no measurable peak pressure, reduced static compliance; ear canal volume within normal range. Equivalent to the unqualified Type B classification.">
-				>
 				["at0074"] = <
-					text = <"Static Compliance (Volume)">
+					text = <"Static compliance (volume)">
 					description = <"Static compliance (SC) is the greatest amount of acoustic energy absorbed by the middle ear system (the vertical peak of the tympanogram curve).">
+				>
+				["at0075"] = <
+					text = <"Test not done">
+					description = <"Details to explicitly record that this examination was not performed.">
+				>
+				["at0076"] = <
+					text = <"Type B with low ECV">
+					description = <"Flat or rounded curve with measurable peak pressure; reduced static compliance; ear canal volume below the normal range.">
+				>
+				["at0077"] = <
+					text = <"Type Cs">
+					description = <"Curve similar to Type A, but with the sharp peak at a negative pressure and reduced compliance..">
+				>
+				["at0078"] = <
+					text = <"Type Cd">
+					description = <"Curve similar to Type A, but with the sharp peak at a negative pressure and increased compliance.">
+				>
+				["at0079"] = <
+					text = <"Multimedia">
+					description = <"Digital representation of the test results.">
+				>
+				["at0080"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
