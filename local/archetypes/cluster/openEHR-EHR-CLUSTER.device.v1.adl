@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=19656a3a-3fe3-4369-b290-098c0ccf15a5)
-	openEHR-EHR-CLUSTER.device.v0
+﻿archetype (adl_version=1.4; uid=e2c1b97f-4a6d-4289-b6ed-0a68f0ad1db7)
+	openEHR-EHR-CLUSTER.device.v1
 
 concept
 	[at0000]	-- Medical Device
@@ -86,7 +86,7 @@ The data field 'Software Version' allows for only a single version to be recorde
 To record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.(en)">
 			keywords = <"*device(en)", "*machine(en)", "*implant(en)", "*appliance(en)", "*catheter(en)", "*prosthesis(en)", "*aid(en)", "*biomedical(en)", "*instrument(en)", "*equipment(en)", "*meter(en)", "*monitor(en)", "*software(en)">
 			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic direct effect. For example: a medicine impregnated dressing should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.(en)">
-			copyright = <"*© openEHR Foundation(en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -115,16 +115,21 @@ This archetype has been designed for generic use within other archetypes that ne
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Mate Bestek, Ministry of Health of the Republic of Slovenia, Slovenia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Diego Bosca, IBIME group, Spain", "Margaret Campbell, Queensland Health, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Samo Drnovsek, Marand ltd, Slovenia", "Ivan Drvaric, NIJZ- National institute for public health of Slovenia, Slovenia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Grahame Grieve, Australia", "Sam Heard, Ocean Informatics, Australia", "Gorazd Kalan, University Medical Centre Ljubljana, Slovenia", "Lars Karlsen, DIPS ASA, Norway", "Daniel Karlsson, Linköping University, Sweden", "Russell Leftwich, Russell B Leftwich MD, United States", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Vesna Levasic, Orthopaedic Hospital Valdoltra, Slovenia", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Bjoern Naess, DIPS ASA, Norway", "Dave Nurse, Allocate Software, United Kingdom", "Živa Rant, National Instittute of Public Health, Slovenia", "Anoop Shah, University College London, United Kingdom", "Micaela Thierley, Helse Bergen, Norway">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Resource Device [Internet]. HL7 International, FHIR Specification first DSTU version (v 0.0.82) [cited: 2015-02-25]. Available from: http://www.hl7.org/implement/standards/fhir/device.html.
 
 Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Association [cited: 2015-02-25]. Available from: http://standards.ieee.org/regauth/oui/tutorials/EUI64.html.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"97BB54867EB88502A170A2071E3096A0">
-		["build_uid"] = <"eb1c0cca-2c7c-4c26-9ca5-9b8cc6131688">
-		["revision"] = <"0.0.1-alpha">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"047D9B6846E33852E914582DBB9F115B">
+		["build_uid"] = <"4a2161d8-c104-449a-b539-6a689ffd6e56">
+		["revision"] = <"1.0.0">
 	>
 
 definition
