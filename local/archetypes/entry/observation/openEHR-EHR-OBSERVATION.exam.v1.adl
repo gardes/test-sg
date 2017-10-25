@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=b748dcd3-e2f4-4e35-b6bd-355dc8daf277)
-	openEHR-EHR-OBSERVATION.exam.v0
+﻿archetype (adl_version=1.4; uid=8808bc17-0674-4b14-84f2-3d377aed8254)
+	openEHR-EHR-OBSERVATION.exam.v1
 
 concept
 	[at0000]	-- Physical examination findings
@@ -112,13 +112,18 @@ Not to be used to record stand-alone clinical observations - use specific OBSERV
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Rita Apelt, Department of Health,NT, Australia", "Silje Bakke, Bergen Hospital Trust, Norway", "Margaret Campbell, Queensland Health, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Samo Drnovsek, Marand ltd, Slovenia", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Lars Karlsen, DIPS ASA, Norway", "Russell Leftwich, Russell B Leftwich MD, United States", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Anoop Shah, University College London, United Kingdom", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)", "Lin Zhang, BIPH, China">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"084013A2BCC5B004C2AA9F9F94300559">
-		["build_uid"] = <"d503a129-cb2f-4a1a-8ce0-f43f141b7b25">
-		["revision"] = <"0.0.1-alpha">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"CA38F813160C7B970E1C4F6118F74BC7">
+		["build_uid"] = <"7f19f635-b13f-48cd-a6d3-2037b23f9550">
+		["revision"] = <"1.0.0">
 	>
 
 definition
