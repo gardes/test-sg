@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=6aa9a97d-6cbd-4e2b-9087-354096e4a0a2)
-	openEHR-EHR-EVALUATION.exposure.v0
+	openEHR-EHR-EVALUATION.exposure.v1
 
 concept
 	[at0000]	-- Exposure
@@ -24,7 +24,7 @@ This archetype has been designed primarily to capture a simple amount of details
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -33,9 +33,9 @@ This archetype has been designed primarily to capture a simple amount of details
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9190C0FFE76B793638E198F87A8D02BC">
-		["build_uid"] = <"2ede3c3b-7d34-4417-87d2-8b97620d7a0e">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"66286CF9D8E475ED191695A22A2EFB20">
+		["build_uid"] = <"f9a6c0cc-336e-4d68-8315-146a192eb0b8">
+		["revision"] = <"1.0.0">
 	>
 
 definition
