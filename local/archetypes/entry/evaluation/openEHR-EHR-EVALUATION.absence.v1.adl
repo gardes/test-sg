@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ffd5b400-f3dc-4a20-b387-cdc4bca8cbf7)
-	openEHR-EHR-EVALUATION.absence.v0
+﻿archetype (adl_version=1.4; uid=5109b5a3-eca5-4926-b3ef-59a563090d44)
+	openEHR-EHR-EVALUATION.absence.v1
 
 concept
 	[at0000]	-- Absence of Information
@@ -35,7 +35,7 @@ Not to be used to record the exclusion of adverse reactions, medication use, pro
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Editor)", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -44,9 +44,9 @@ Not to be used to record the exclusion of adverse reactions, medication use, pro
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"608F256B2279433C062DFA7CAA847D41">
-		["build_uid"] = <"b08aa879-6811-4224-8192-890e69ccc033">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"25550CCC485BFBFBBDBD47251C9D08A5">
+		["build_uid"] = <"89abfbe1-5c30-4c5e-af5b-2685e619750e">
+		["revision"] = <"1.0.0">
 	>
 
 definition
