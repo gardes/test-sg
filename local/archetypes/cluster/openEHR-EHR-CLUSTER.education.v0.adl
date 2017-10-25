@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.education.v1
+﻿archetype (adl_version=1.4; uid=a7026b57-2ef5-41a4-82fa-ba511abc1bf0)
+	openEHR-EHR-CLUSTER.education.v0
 
 concept
 	[at0000]	-- Education and Training
@@ -21,15 +21,22 @@ description
 Specifically designed to be used within the EVALUATION.social_summary archetype, but may be used within any clinically appropriate ENTRY or CLUSTER archetype related to recording social context.">
 			keywords = <"education", "school", "university", "secondary", "tertiary", "college", "apprenticeship", "training", "needs", "primary">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"John Bennett, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "Matthew Cordell, NEHTA, Australia", "David Evans, Queensland Health, Australia", "Andrew Goodchild, NEHTA, Australia", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Stewart Morrison, NEHTA, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "John Taylor, NEHTA, Australia", "Gordon Tomes, National Disability Insurance Scheme Agency, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Person—school enrolment and attendance status. Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/401809 (accessed 2013 Mar 01).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"DD2F9356CFB310E92105EEFA75D325CA">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B04C6F65C4FCC89F76172CF51FFB4BCE">
+		["build_uid"] = <"00b269ae-38ec-4190-ac4b-c482e5f5b89f">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -47,23 +54,21 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Current School Attendance
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Category
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0012, 	-- Enrolled; Attending
-							at0013, 	-- Enrolled; Not Always Attending
-							at0014, 	-- Enrolled; Not Attending
-							at0015, 	-- Enrolled; Waiting to Commence
-							at0016, 	-- Home Schooled
-							at0017, 	-- Not Enrolled; Not Home Schooled
+							at0022, 	-- Childcare
+							at0023, 	-- Pre-school
+							at0024, 	-- Primary School
+							at0025, 	-- Secondary School
 							at0021]	-- Not Applicable
 						}
 					}
 				}
 			}
-			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Current Early Childhood Education Attendance
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Attendance
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -72,7 +77,8 @@ definition
 							at0013, 	-- Enrolled; Not Always Attending
 							at0014, 	-- Enrolled; Not Attending
 							at0015, 	-- Enrolled; Waiting to Commence
-							at0021]	-- Not Applicable
+							at0016, 	-- Home Education
+							at0017]	-- Not Enrolled; Not Home Education
 						}
 					}
 				}
@@ -109,6 +115,9 @@ definition
 		}
 	}
 
+
+
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -143,8 +152,8 @@ ontology
 					description = <"Overall comment about the individual's education.">
 				>
 				["at0011"] = <
-					text = <"Current School Attendance">
-					description = <"Description of attendance at primary or secondary school.">
+					text = <"Attendance">
+					description = <"Description of attendance at educational facility/location.">
 					comment = <"Only applicable for primary and secondary age children. Reference: METeOR - http://meteor.aihw.gov.au/content/index.phtml/itemId/401809">
 				>
 				["at0012"] = <
@@ -164,12 +173,12 @@ ontology
 					description = <"The subject is currently enrolled but is waiting to commence.">
 				>
 				["at0016"] = <
-					text = <"Home Schooled">
-					description = <"The subject is currently home schooled.">
+					text = <"Home Education">
+					description = <"The subject is currently educated at home.">
 				>
 				["at0017"] = <
-					text = <"Not Enrolled; Not Home Schooled">
-					description = <"The subject is currently not enrolled and is not home schooled.">
+					text = <"Not Enrolled; Not Home Education">
+					description = <"The subject is currently not enrolled and is not educated at home.">
 				>
 				["at0018"] = <
 					text = <"Description">
@@ -180,12 +189,28 @@ ontology
 					description = <"Facility or institution at which milestone was achieved.">
 				>
 				["at0020"] = <
-					text = <"Current Early Childhood Education Attendance">
-					description = <"Description of attendance at early childhood education centre.">
+					text = <"Category">
+					description = <"Category of education that is appropriate for a child subject to attend, based on age and ability.">
 				>
 				["at0021"] = <
 					text = <"Not Applicable">
 					description = <"It is not appropriate for this subject to attend.">
+				>
+				["at0022"] = <
+					text = <"Childcare">
+					description = <"The subject is of the appropriate age and ability to attend a Childcare facility.">
+				>
+				["at0023"] = <
+					text = <"Pre-school">
+					description = <"The subject is of the appropriate age and ability to attend a Pre-school facility.">
+				>
+				["at0024"] = <
+					text = <"Primary School">
+					description = <"The subject is of the appropriate age and ability to attend Primary School.">
+				>
+				["at0025"] = <
+					text = <"Secondary School">
+					description = <"The subject is of the appropriate age and ability to attend Secondary School.">
 				>
 			>
 		>
