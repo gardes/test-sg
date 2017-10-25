@@ -104,8 +104,8 @@ Not to be used for test or assessment results that are recorded as part of a con
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"FBD1709FCBDACC5A2D20E339DE4B13E7">
-		["build_uid"] = <"7d27d98e-b87c-4a53-9f10-a6470579ff65">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"efd6b527-5593-4867-9bb2-eefa59dcf0de">
+		["revision"] = <"1.0.1">
 	>
 
 definition
@@ -140,6 +140,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
