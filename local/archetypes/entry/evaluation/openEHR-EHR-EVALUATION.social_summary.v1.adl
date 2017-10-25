@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4; uid=8424e8ad-29f5-47f2-bd9f-e089a140df78)
-	openEHR-EHR-EVALUATION.social_summary.v0
+	openEHR-EHR-EVALUATION.social_summary.v1
 
 concept
 	[at0000]	-- Social Summary
@@ -29,7 +29,7 @@ The use of the term 'social summary' varies enormously in practice. This archety
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Rosalie Schultz, Central Australia Remote Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -37,9 +37,9 @@ The use of the term 'social summary' varies enormously in practice. This archety
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DC11E7B513F6B18BEF2C8BEA165C14F4">
-		["build_uid"] = <"8d9402d8-f793-4509-bcaf-fb8308b64a63">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"2A827766C6F61B021B80CF776CCD17E6">
+		["build_uid"] = <"57bb8c82-b156-49b1-95e4-477bd355bd58">
+		["revision"] = <"1.0.0">
 	>
 
 definition
