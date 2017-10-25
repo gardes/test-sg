@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-INSTRUCTION.request.v1
+﻿archetype (adl_version=1.4; uid=2403633b-baf3-4ec8-829b-18dd9de7c887)
+	openEHR-EHR-INSTRUCTION.request.v0
 
 concept
 	[at0000]	-- Healthcare service request
@@ -22,10 +22,17 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"B2C6812BCC7159150644F8604477C827">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"FC73BBEB8AF5DEB67E2E45ECEAC24AFB">
+		["build_uid"] = <"598433a4-9d6b-4eff-bd35-e0f6c5a74190">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
