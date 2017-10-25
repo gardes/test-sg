@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=f30866b8-559c-4189-84c4-b42a234c5e40)
-	openEHR-EHR-COMPOSITION.adverse_reaction_list.v0
+﻿archetype (adl_version=1.4; uid=56f0708b-f2d0-4925-a0e7-5518ffbe2044)
+	openEHR-EHR-COMPOSITION.adverse_reaction_list.v1
 
 concept
 	[at0000]	-- Adverse reaction list
@@ -95,7 +95,7 @@ Este arquétipo normalmente é gerenciado como uma lista permanente, entretanto 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Jussara Rotzsch, UNB, Brazil", "Micaela Thierley, Helse Bergen, Norway", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -104,9 +104,9 @@ Este arquétipo normalmente é gerenciado como uma lista permanente, entretanto 
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5005B793A4CFF55A16C45C9D0EC2064C">
-		["build_uid"] = <"938fe8d4-ae84-45b1-a1d2-2d95bf756672">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"4B6AA0418BCED8170DC960C7A179EF88">
+		["build_uid"] = <"38e5ef30-6af8-470c-ad9a-8f1b2bf608ff">
+		["revision"] = <"1.0.0">
 	>
 
 definition
