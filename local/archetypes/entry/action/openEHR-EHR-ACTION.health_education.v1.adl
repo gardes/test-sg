@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=d1f970c9-b7df-497c-a48e-bb6410f43832)
-	openEHR-EHR-ACTION.health_education.v0
+﻿archetype (adl_version=1.4; uid=e6c3aa43-b3b8-42dc-a982-0ddac31131b3)
+	openEHR-EHR-ACTION.health_education.v1
 
 concept
 	[at0000]	-- Health Education
@@ -22,7 +22,7 @@ description
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Chunlan Ma, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia", "Jo Wright, NT Dept of Health, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -31,9 +31,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8FB89F266B7879938AA37761725C46CF">
-		["build_uid"] = <"dd37aeeb-bba6-4b93-9767-6a42cbeaea53">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"769E7D8C861FFB26D16F3DCC3A0AD5BD">
+		["build_uid"] = <"6e3335a8-e8f6-4669-86e1-bec58d63c48b">
+		["revision"] = <"1.0.0">
 	>
 
 definition
