@@ -27,20 +27,14 @@ It is reasonable to assume that if the examination was partially performed, then
 			misuse = <"Not to be used to record positive statements about findings on physical examination.
 
 Not to be used to record the exclusion or absence of adverse reactions, family history, medication use, procedures, problems or diagnoses in the subject etc - use specific specialisations of this archetype for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7413F9B724C5B3FC149FA5D0EE9A6FAA">
-		["build_uid"] = <"d16f0ebf-81d3-4102-994d-daaace759a44">
+		["MD5-CAM-1.0.1"] = <"2F9B58F430CD1BD784D5E7E7B24B6116">
+		["build_uid"] = <"b7c3735e-9e71-4d90-8f96-3eda1943ff58">
 		["revision"] = <"0.0.1-alpha">
 	>
 
