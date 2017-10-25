@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=cd8e6527-6523-44e9-97ea-91522536b815)
-	openEHR-EHR-CLUSTER.exam_auditory_canal.v0
+﻿archetype (adl_version=1.4; uid=01d5c63a-781a-4612-8da7-14827608c1a5)
+	openEHR-EHR-CLUSTER.exam_auditory_canal.v1
 
 concept
 	[at0000]	-- Examination of external auditory canal
@@ -33,7 +33,7 @@ Not to be used to record stand-alone clinical observations or measurements or te
 			copyright = <"© Northern Territory Department of Health, Australia, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (nehta Editor)", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "John Tore Valand, Haukeland Universitetssjukehus, Norway", "Stephen Chu, NEHTA, Australia", "Harvey Coates, UWA, Australia", "Marissa Cookson, Dept of Health, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Graeme Crossland, Northern Territory, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jacques de Haan, Alice Springs Hospital, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Amanda Leach, Menzies School of Health Research, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom", "Hemi Patel, Royal Darwin Hospital, Australia", "Mark Ramjan, NT Department of Health, Australia", "Fiona Wake, RAHC, Australia", "Christine Wigger, Menzies School of Health Research, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -50,9 +50,9 @@ OATSIH:  The Recommendations for Clinical Care Guidelines on the Management of O
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"736D71B60E4A681B64FE0B8FF1DB0BBB">
-		["build_uid"] = <"f834d060-55f8-46bf-b303-6f192f5201df">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"FEB3117E30660226B39CA9E398EF25A7">
+		["build_uid"] = <"c62dd47f-cdfb-481f-9ae8-2cd66eabf43c">
+		["revision"] = <"1.0.0">
 	>
 
 definition
