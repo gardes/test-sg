@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=cd54a586-d9ab-4d2f-a96b-7cdd7ba9506e)
-	openEHR-EHR-EVALUATION.health_risk.v0
+﻿archetype (adl_version=1.4; uid=98023ecd-2e80-4274-8882-a88f80925a1f)
+	openEHR-EHR-EVALUATION.health_risk.v1
 
 concept
 	[at0000]	-- Health risk assessment
@@ -82,7 +82,7 @@ As risk factors may be gradually identified over time and the overall risk reass
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Nadim Anani, Karolinska Institutet, Sweden", "Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anca Heyd, DIPS ASA, Norway", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hallvard Lærum, Oslo University Hospital, Norway", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Jussara Rotzsch, UNB, Brazil", "Norwegian Review Summary, Nasjonal IKT, Norway", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -92,9 +92,9 @@ As risk factors may be gradually identified over time and the overall risk reass
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"42D6C70946A21333474B3351BFCA1EF4">
-		["build_uid"] = <"3504de22-d1df-4f66-b306-9a54fba1fa9a">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"33A8E5218F42CC4A9B41546EFC7D28E5">
+		["build_uid"] = <"b02e9f95-3172-49b5-9cc5-3162a77a6bc0">
+		["revision"] = <"1.0.0">
 	>
 
 definition
