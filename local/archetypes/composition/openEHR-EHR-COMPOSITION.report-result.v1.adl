@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=1443d756-c4c5-4896-acc2-51f27d96fa85)
-	openEHR-EHR-COMPOSITION.report-result.v0
+﻿archetype (adl_version=1.4; uid=25cb1a0f-410a-4166-9426-b38cbe832690)
+	openEHR-EHR-COMPOSITION.report-result.v1
 specialise
 	openEHR-EHR-COMPOSITION.report.v1
 
@@ -94,18 +94,18 @@ Not to be used for test or assessment results that are recorded as part of a con
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"23FF2768F232CCB420E23AC54738954C">
-		["build_uid"] = <"cb4f215e-d4c3-4fbb-873e-c236448627b8">
-		["revision"] = <"0.0.1-alpha">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"FBD1709FCBDACC5A2D20E339DE4B13E7">
+		["build_uid"] = <"7d27d98e-b87c-4a53-9f10-a6470579ff65">
+		["revision"] = <"1.0.0">
 	>
 
 definition
