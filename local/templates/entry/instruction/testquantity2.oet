@@ -60,7 +60,9 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.test2.v0" concept_name="Test2" />
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.test2.v0" concept_name="Test2">
+    <Rule path="/activities[at0001]/description[at0002]/items[at0003]" default="lower{0 1}upper{1 1}" />
+  </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.test2.v0">
     <digest id="MD5-CAM-1.0.1">2BF78BD0383D094450AEE68A54643A66</digest>
   </integrity_checks>
