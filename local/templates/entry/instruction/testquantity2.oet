@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
-  <id>10eab322-ec20-4feb-b2f3-043b4065fd38</id>
-  <name>testquantity</name>
+  <id>c97b9a26-54fd-447a-9e76-52c78a4f5039</id>
+  <name>testquantity2</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
@@ -60,10 +60,8 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.test.v0" concept_name="Test">
-    <Rule path="/activities[at0001]/description[at0002]/items[at0003]" default="lower{0 1}upper{1 1}" />
-  </definition>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.test.v0">
-    <digest id="MD5-CAM-1.0.1">8EB589D613AD523517AE152BCB0A9FEA</digest>
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.test2.v0" concept_name="Test2" />
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.test2.v0">
+    <digest id="MD5-CAM-1.0.1">2BF78BD0383D094450AEE68A54643A66</digest>
   </integrity_checks>
 </template>
