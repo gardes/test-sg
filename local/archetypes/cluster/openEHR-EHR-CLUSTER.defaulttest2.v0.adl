@@ -1,0 +1,232 @@
+﻿archetype (adl_version=1.4; uid=f849a25b-0ac3-4446-a240-2bb3457fb767)
+	openEHR-EHR-CLUSTER.defaulttest2.v0
+
+concept
+	[at0000]	-- Defaulttest 2 2 
+language
+	original_language = <[ISO_639-1::de]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F4A75C0662DEE2E62F3599D5E40AC45B">
+		["build_uid"] = <"742ddcbd-2c8e-424d-8129-2422c17cf602">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Defaulttest
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Free text
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Coded Text
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016, 	-- ABC
+							at0017, 	-- DEF
+							at0018]	-- GHI
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Quantity
+				value matches {
+					C_DV_QUANTITY <
+					>
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Count
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Date Time
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Duration
+				value matches {
+					DV_DURATION matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Boolean
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Interval of Count
+				value matches {
+					DV_INTERVAL<DV_COUNT> matches {
+						upper matches {
+							DV_COUNT matches {*}
+						}
+						lower matches {
+							DV_COUNT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Interval of Quantity
+				value matches {
+					DV_INTERVAL<DV_QUANTITY> matches {
+						upper matches {
+							C_DV_QUANTITY <
+							>
+						}
+						lower matches {
+							C_DV_QUANTITY <
+							>
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Interval of Date Time
+				value matches {
+					DV_INTERVAL<DV_DATE_TIME> matches {
+						upper matches {
+							DV_DATE_TIME matches {*}
+						}
+						lower matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Multimedia
+				value matches {
+					DV_MULTIMEDIA matches {
+						media_type matches {[openEHR::]}
+					}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {	-- URI
+				value matches {
+					DV_URI matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Proportion
+				value matches {
+					DV_PROPORTION matches {*}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Identifier
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Parsable
+				value matches {
+					DV_PARSABLE matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Defaulttest 2 2 ">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Free text">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Coded Text">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Quantity">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Count">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Date Time">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Duration">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Boolean">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Interval of Count">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Interval of Quantity">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Interval of Date Time">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Multimedia">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"URI">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Proportion">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Identifier">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Parsable">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"ABC">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"DEF">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"GHI">
+					description = <"*">
+				>
+			>
+		>
+	>
