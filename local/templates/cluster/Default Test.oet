@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>94da9ee2-62b6-4c6e-ab96-3f36b8c61148</id>
+  <name>Default Test</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.defaulttest.v0" concept_name="Defaulttest">
+    <Rule path="/items[at0001]" default="My Default Text" />
+    <Rule path="/items[at0002]" default="local::at0016::ABC" />
+    <Rule path="/items[at0003]" default="1 mg" />
+    <Rule path="/items[at0004]" default="40" />
+    <Rule path="/items[at0005]" default="2017-12-01T10:00:00" />
+    <Rule path="/items[at0006]" default="P1Y2M" />
+    <Rule path="/items[at0007]" default="true" />
+    <Rule path="/items[at0008]" default="lower{1}upper{6}" />
+    <Rule path="/items[at0009]" default="lower{1 kg}upper{6 kg}" />
+    <Rule path="/items[at0013]" default="40.75%" />
+    <Rule path="/items[at0014]" default="myissuer::myassigner::myid::mytype" />
+    <Rule path="/items[at0015]">
+      <constraint xsi:type="parsableConstraint" />
+    </Rule>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.defaulttest.v0">
+    <digest id="MD5-CAM-1.0.1">73BE93572D1E85A60BC8D958006514C9</digest>
+  </integrity_checks>
+</template>
