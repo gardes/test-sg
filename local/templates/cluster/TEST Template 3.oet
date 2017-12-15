@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <id>f4452c51-3132-4981-9d3e-8e5379e72d28</id>
-   <name>TEST Template 2</name>
+   <id>f4452c51-3132-4981-9d3e-4e5379e72e28</id>
+   <name>TEST Template 3</name>
    <description>
       <lifecycle_state>Initial</lifecycle_state>
       <details>
