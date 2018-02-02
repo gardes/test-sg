@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>2c590a89-a7f6-44bd-85e1-88882505b442</id>
+  <name>Drug 1</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.medication_test_order.v0" concept_name="Medication order" max="1" name="Drug 1">
+    <Rule path="/activities[at0001]/description[at0002]/items[at0070]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>Drug 1</includedValues>
+      </constraint>
+    </Rule>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_test_order.v0">
+    <digest id="MD5-CAM-1.0.1">0379CB32C3D3DED013425DF6793D2F2F</digest>
+  </integrity_checks>
+</template>
