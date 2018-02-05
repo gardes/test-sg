@@ -198,8 +198,8 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0379CB32C3D3DED013425DF6793D2F2F">
-		["build_uid"] = <"4fe16eb1-b236-4d59-a359-4eb44db131b5">
+		["MD5-CAM-1.0.1"] = <"9A09D65214F7F7A957804AEBBAA3B6FD">
+		["build_uid"] = <"4b036bed-df38-42de-ba89-f19b72067dde">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -221,7 +221,15 @@ definition
 							}
 							ELEMENT[at0091] occurrences matches {0..*} matches {	-- Route
 								value matches {
-									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0178, 	-- PO
+											at0179, 	-- IM
+											at0180, 	-- IV
+											at0181]	-- SC
+										}
+									}
 								}
 							}
 							ELEMENT[at0092] occurrences matches {0..1} matches {	-- Body site
@@ -773,6 +781,22 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"Structured dose and timing directions">
 					description = <"Details of structured dose and timing directions.">
 				>
+				["at0178"] = <
+					text = <"PO">
+					description = <".">
+				>
+				["at0179"] = <
+					text = <"IM">
+					description = <".">
+				>
+				["at0180"] = <
+					text = <"IV">
+					description = <".">
+				>
+				["at0181"] = <
+					text = <"SC">
+					description = <".">
+				>
 			>
 		>
 		["nb"] = <
@@ -1045,6 +1069,22 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 				["at0177"] = <
 					text = <"Strukturerte anvisninger om dose og timing">
 					description = <"Detaljerte og strukturerte anvisninger om dose og timing.">
+				>
+				["at0178"] = <
+					text = <"*PO(en)">
+					description = <"*.(en)">
+				>
+				["at0179"] = <
+					text = <"*IM(en)">
+					description = <"*.(en)">
+				>
+				["at0180"] = <
+					text = <"*IV(en)">
+					description = <"*.(en)">
+				>
+				["at0181"] = <
+					text = <"*SC(en)">
+					description = <"*.(en)">
 				>
 			>
 		>
@@ -1321,6 +1361,22 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 				["at0177"] = <
 					text = <"Orientações estuturadas de dose e duração">
 					description = <"Detalhes das orientações estuturadas de dose e duração.">
+				>
+				["at0178"] = <
+					text = <"*PO(en)">
+					description = <"*.(en)">
+				>
+				["at0179"] = <
+					text = <"*IM(en)">
+					description = <"*.(en)">
+				>
+				["at0180"] = <
+					text = <"*IV(en)">
+					description = <"*.(en)">
+				>
+				["at0181"] = <
+					text = <"*SC(en)">
+					description = <"*.(en)">
 				>
 			>
 		>
