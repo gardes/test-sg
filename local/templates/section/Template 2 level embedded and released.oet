@@ -77,6 +77,6 @@
     <digest id="MD5-CAM-1.0.1">082656BDD9B300A652D3950ABBBDB40D</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_test_order.v0">
-    <digest id="MD5-CAM-1.0.1">0379CB32C3D3DED013425DF6793D2F2F</digest>
+    <digest id="MD5-CAM-1.0.1">9A09D65214F7F7A957804AEBBAA3B6FD</digest>
   </integrity_checks>
 </template>
