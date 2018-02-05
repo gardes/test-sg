@@ -2,7 +2,7 @@
 	openEHR-EHR-INSTRUCTION.medication_test_order.v0
 
 concept
-	[at0000]	-- Medication order
+	[at0000]	-- Medication order KSP
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -198,13 +198,13 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9A09D65214F7F7A957804AEBBAA3B6FD">
-		["build_uid"] = <"4b036bed-df38-42de-ba89-f19b72067dde">
+		["MD5-CAM-1.0.1"] = <"E00E2BC779992A2976D2768E71D833E2">
+		["build_uid"] = <"4ffdc7d2-4246-47b8-b29f-fdf234cc882d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	INSTRUCTION[at0000] matches {	-- Medication order
+	INSTRUCTION[at0000] matches {	-- Medication order KSP
 		activities cardinality matches {0..*; unordered} matches {
 			ACTIVITY[at0001] occurrences matches {0..*} matches {	-- Order
 				description matches {
@@ -483,6 +483,12 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
+							ELEMENT[at0182] occurrences matches {0..1} matches {	-- TOTALLY NEW ELEMENT ADDED
+								value matches {
+									C_DV_QUANTITY <
+									>
+								}
+							}
 						}
 					}
 				}
@@ -511,7 +517,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Medication order">
+					text = <"Medication order KSP">
 					description = <"An order for a medication, vaccine, nutritional product or other therapeutic item for an identified individual.">
 				>
 				["at0001"] = <
@@ -797,13 +803,17 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"SC">
 					description = <".">
 				>
+				["at0182"] = <
+					text = <"TOTALLY NEW ELEMENT ADDED">
+					description = <"TOTALLY NEW ELEMENT ADDED">
+				>
 			>
 		>
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"Legemiddelordinering">
-					description = <"Ordinering av et legemiddel, en vaksine, parenteral væske, ernæringsprodukt eller medisinsk forbruksmateriell, for et spesifikt individ.">
+					text = <"*Medication order KSP(en)">
+					description = <"*An order for a medication, vaccine, nutritional product or other therapeutic item for an identified individual.(en)">
 				>
 				["at0001"] = <
 					text = <"Ordinering">
@@ -1086,13 +1096,17 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"*SC(en)">
 					description = <"*.(en)">
 				>
+				["at0182"] = <
+					text = <"*TOTALLY NEW ELEMENT ADDED(en)">
+					description = <"*TOTALLY NEW ELEMENT ADDED(en)">
+				>
 			>
 		>
 		["pt-br"] = <
 			items = <
 				["at0000"] = <
-					text = <"Prescrição de Medicamentos">
-					description = <"Prescrição de medicamentos, vacina, produtos nutricionais ou outro item de tratamento para um indivíduo identificado.">
+					text = <"*Medication order KSP(en)">
+					description = <"*An order for a medication, vaccine, nutritional product or other therapeutic item for an identified individual.(en)">
 				>
 				["at0001"] = <
 					text = <"Prescrição">
@@ -1377,6 +1391,10 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 				["at0181"] = <
 					text = <"*SC(en)">
 					description = <"*.(en)">
+				>
+				["at0182"] = <
+					text = <"*TOTALLY NEW ELEMENT ADDED(en)">
+					description = <"*TOTALLY NEW ELEMENT ADDED(en)">
 				>
 			>
 		>
