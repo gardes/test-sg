@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"32342F4AEA5D801A6E37EA9F25C47169">
-		["build_uid"] = <"fa2c5ef5-b6dc-4a77-8a86-fba60ee5ed88">
+		["MD5-CAM-1.0.1"] = <"6B02602EAD6F4FDA9D012F229462241C">
+		["build_uid"] = <"556523b1-287f-4b38-9d7b-b20dd1b0e61f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -44,6 +44,11 @@ definition
 								}
 							}
 							ELEMENT[at0004] occurrences matches {0..1} matches {	-- asdfasdfadsf
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- agaa
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -79,6 +84,10 @@ ontology
 				["at0004"] = <
 					text = <"asdfasdfadsf">
 					description = <"afdasdfasfdas">
+				>
+				["at0005"] = <
+					text = <"agaa">
+					description = <"aggagsga">
 				>
 			>
 		>
