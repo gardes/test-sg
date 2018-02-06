@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A142639C0920AFAC9968BEDFFADB7998">
-		["build_uid"] = <"3e2171d0-9669-43f1-b10d-7d231810b98c">
+		["MD5-CAM-1.0.1"] = <"32342F4AEA5D801A6E37EA9F25C47169">
+		["build_uid"] = <"fa2c5ef5-b6dc-4a77-8a86-fba60ee5ed88">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -39,6 +39,11 @@ definition
 					ITEM_TREE[at0002] matches {	-- Tree
 						items cardinality matches {0..*; unordered} matches {
 							ELEMENT[at0003] occurrences matches {0..1} matches {	-- Test
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- asdfasdfadsf
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -70,6 +75,10 @@ ontology
 				["at0003"] = <
 					text = <"Test">
 					description = <"Test">
+				>
+				["at0004"] = <
+					text = <"asdfasdfadsf">
+					description = <"afdasdfasfdas">
 				>
 			>
 		>
