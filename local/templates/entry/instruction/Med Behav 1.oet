@@ -73,6 +73,12 @@
         <excludedValues>local::at0181</excludedValues>
       </constraint>
     </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0044]">
+      <constraint xsi:type="textConstraint" limitToList="false">
+        <includedValues>Take with food</includedValues>
+        <includedValues>Take with milk</includedValues>
+      </constraint>
+    </Rule>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_test_order2.v0">
     <digest id="MD5-CAM-1.0.1">0978917C88602CFF2B4F2924F177D535</digest>
