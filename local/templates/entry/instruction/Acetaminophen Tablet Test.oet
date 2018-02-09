@@ -73,6 +73,12 @@
         <excludedValues>local::at0181</excludedValues>
       </constraint>
     </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0130]" default="325 1" />
+    <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0146]" default="mg">
+      <constraint xsi:type="textConstraint">
+        <includedValues>mg</includedValues>
+      </constraint>
+    </Rule>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_test_order.v1">
     <digest id="MD5-CAM-1.0.1">911A18CA21FF29AD181DF992A1F330E7</digest>
