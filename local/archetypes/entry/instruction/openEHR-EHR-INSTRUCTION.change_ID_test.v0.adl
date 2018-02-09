@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=63d7a4b7-e02c-47c0-aa1a-3c7f4f247bfd)
-	openEHR-EHR-INSTRUCTION.medication_test_order2.v0
+﻿archetype (adl_version=1.4; uid=fb598517-654f-4b1f-9002-19f7885d82ee)
+	openEHR-EHR-INSTRUCTION.change_ID_test.v0
 
 concept
 	[at0000]	-- Medication order 2 KSP
@@ -198,8 +198,8 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0978917C88602CFF2B4F2924F177D535">
-		["build_uid"] = <"7feabcf9-e5dd-43be-96d4-e68d2b9ed6f0">
+		["MD5-CAM-1.0.1"] = <"22749BAD4CC3936B0414935AACBD4ABA">
+		["build_uid"] = <"a623661a-1174-4de5-874a-c535c99465d2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
