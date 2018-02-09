@@ -64,6 +64,7 @@
     <Rule path="/activities[at0001]/description[at0002]/items[at0070]">
       <constraint xsi:type="textConstraint">
         <includedValues>Acetaminophen Tablet</includedValues>
+        <includedValues>Acetaminophen SL Tablet</includedValues>
       </constraint>
     </Rule>
     <Rule path="/activities[at0001]/description[at0002]/items[at0091]">
