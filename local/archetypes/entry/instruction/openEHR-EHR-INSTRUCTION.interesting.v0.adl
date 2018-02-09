@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=94805540-b94c-4566-baf3-36797672595d)
-	openEHR-EHR-INSTRUCTION.milestone_testing_1.v0
+﻿archetype (adl_version=1.4; uid=b431631b-24d3-4140-ac02-7f3d9c2b0970)
+	openEHR-EHR-INSTRUCTION.interesting.v0
 
 concept
 	[at0000]	-- Milestone testing 1
@@ -27,8 +27,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"964DF3DF4CD30E2CE7F20CC71832C689">
-		["build_uid"] = <"2cc0cbb4-589f-4c96-94b6-13436bc9ffbb">
+		["MD5-CAM-1.0.1"] = <"0BA9B5B148471439DAF785A25A0CA295">
+		["build_uid"] = <"d3684e34-d671-48fc-964e-f0668779328f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
