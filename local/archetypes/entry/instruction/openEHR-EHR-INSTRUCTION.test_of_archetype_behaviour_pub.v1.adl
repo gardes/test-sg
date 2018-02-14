@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=11e7b2a6-9306-42d7-9f4d-50d7210dcd9d)
-	openEHR-EHR-INSTRUCTION.test_of_archetype_behaviour_pub.v0
+﻿archetype (adl_version=1.4; uid=d9dd37f4-be6d-411d-bd19-e83274a441d9)
+	openEHR-EHR-INSTRUCTION.test_of_archetype_behaviour_pub.v1
 
 concept
 	[at0000]	-- Test of archetype behaviour pub
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"12583F3CF1A7EE7D93C3183649686228">
-		["build_uid"] = <"5f47541f-29bf-424b-86e6-1137f1dba5ed">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"5EC99661B0BB64006123918F041BC748">
+		["build_uid"] = <"f05de1c7-c9f9-4e30-943d-184e9c01e25b">
+		["revision"] = <"1.0.0">
 	>
 
 definition
