@@ -178,7 +178,7 @@ Not to be used to record the order for insertion of implants or medical devices 
 			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Tomas Alme, DIPS, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Marcus Baw, openGPSoC / BawMedical Ltd, United Kingdom", "John Bennett, NEHTA, Australia", "Kristian Berg, Universitetssykehuset Nord Norge, Norway (Nasjonal IKT redaktør)", "SumanBhusan Bhattacharyya, Sudisa Consultancy Services, India", "Sharmila Biswas, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Bjørn Christensen, Helse Bergen HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Inderjit Daphu, Helse Bergen, Norway", "Gail Easterbrook, Flinders Medical Centre, Australia", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Stig Erik Hegrestad, Helse Førde, Norway", "David Evans, Queensland Health, Australia", "Samuel Frade, Marand, Portugal", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Cecilie Graver, Oslo universitetssykehus HF, Norway", "Trina Gregory, cpc, Australia", "Bjørn Grøva, Diretoratet for e-helse, Norway", "Robert Hausam, Hausam Consulting LLC, United States", "Sam Heard, Ocean Informatics, Australia (Editor)", "Kristian Heldal, Telemark Hospital Trust, Norway", "Annette Hole Sjøborg, DIPS ASA, Norway", "Hilde Hollås, DIPS ASA, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Gunnar Jårvik, Nasjonal IKT HF, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Mary Kelaher, NEHTA, Australia", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Ole Kristian Losvik, Losol AS, Norway", "Robert L'egan, NEHTA, Australia", "Russell Leftwich, Russell B Leftwich MD, United States", "Fest Legemiddelverket, Statens Legemiddelverk, Norway", "Øygunn Leite Kallevik, Helse Bergen, Norway", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Colin Macfarlane, Elsevier, United Kingdom", "Alan March, Hospital Universitario Austral, Argentina", "Siv Marie Lien, DIPS ASA, Norway", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Martin Paulson, Sykehuset i Vestfold, Norway", "Chris Pearce, Melbourne East GP Network, Australia", "Kristian Pedersen, Nordlandssykehuset HF, Norway", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Tanja Riise, Nasjonal IKT HF, Norway", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Raymond Simkus, Brookswood Family Practice, Canada", "Iztok Stotl, UKCLJ, Slovenia", "John Taylor, NEHTA, Australia", "Nyree Taylor, Ocean Informatics, Australia", "Tesfay Teame, Folkehelseinstituttet, Norway", "Richard Townley-O'Neill, Australian Digital Health Agency, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ines Vaz, UFN, Portugal", "Nils Widnes, Helse-Bergen, Norway", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -198,9 +198,9 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"911A18CA21FF29AD181DF992A1F330E7">
-		["build_uid"] = <"02db1c36-b04b-430e-a1c0-967eb4369eb7">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"9312105DB3EA70B5B2184EBB833E14AF">
+		["build_uid"] = <"4b699273-5b28-4c74-a97f-4ad21a878869">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -355,31 +355,6 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0044] occurrences matches {0..*} matches {	-- Additional instruction
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0105] occurrences matches {0..*} matches {	-- Patient information
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0107] occurrences matches {0..*} matches {	-- Monitoring instruction
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0018] occurrences matches {0..*} matches {	-- Clinical indication
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0148] occurrences matches {0..*} matches {	-- Therapeutic intent
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
 							CLUSTER[at0113] occurrences matches {0..1} matches {	-- Order details
 								items cardinality matches {1..*; unordered} matches {
 									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Order start date/time
@@ -489,6 +464,18 @@ definition
 									>
 								}
 							}
+							ELEMENT[at0183] occurrences matches {0..1} matches {	-- ANOTHER NEW CHANGE
+								value matches {
+									DV_INTERVAL<DV_COUNT> matches {
+										upper matches {
+											DV_COUNT matches {*}
+										}
+										lower matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -565,16 +552,6 @@ ontology
 					description = <"A condition which, when met, requires the cessation of administration or use.">
 					comment = <"For example: 'Stop after symptoms disappear''.">
 				>
-				["at0018"] = <
-					text = <"Clinical indication">
-					description = <"The clinical reason for use of the ordered item.">
-					comment = <"For example: 'Angina'. Coding of the clinical indication with a terminology is preferred, where possible. This data element allows multiple occurrences. It is not intended to carry an indication for administrative authorisation purposes.">
-				>
-				["at0044"] = <
-					text = <"Additional instruction">
-					description = <"An additional instruction on how to use or store the ordered item.">
-					comment = <"For example: precautions as 'take with food', 'Avoid grapefruit', 'Dissolve in water', 'store in a cool, dry place'. This data element allows multiple occurrences and should be coded with a reference terminology, where possible.">
-				>
 				["at0047"] = <
 					text = <"Parsable directions">
 					description = <"A parsable, computable text representation of the directions.">
@@ -648,20 +625,10 @@ Coding of the route with a terminology is preferred, where possible. Multiple po
 					text = <"Delivery device details">
 					description = <"Details of the medical device used to assist delivery of the ordered item.">
 				>
-				["at0105"] = <
-					text = <"Patient information">
-					description = <"An additional instruction directed primarily at the individual/patient or carers.">
-					comment = <"For example: 'To reduce your blood pressure', 'To thin your blood'. This data element allows multiple occurrences and should be coded with a reference terminology, where possible. If required it is possible to use a LINK attribute to associate this element with, for example, the 'original diagnosis' in a separate Problem list composition but the indication should be explicitly recorded here, as the link target may change over time.">
-				>
 				["at0106"] = <
 					text = <"Dispense instruction">
 					description = <"An additional instruction directed primarily at the person dispensing the ordered item.">
 					comment = <"Example: Detailed instructions for phased dispensing of opiates.">
-				>
-				["at0107"] = <
-					text = <"Monitoring instruction">
-					description = <"An additional instruction which gives advice on recommended or required monitoring of the ordered item.">
-					comment = <"For example: 'Please check renal function in 2 weeks'. This data element allows multiple occurrences.">
 				>
 				["at0112"] = <
 					text = <"Order summary">
@@ -700,11 +667,6 @@ Coding of the route with a terminology is preferred, where possible. Multiple po
 					text = <"Maximum amount unit">
 					description = <"The unit for the maximum amount allowed.">
 					comment = <"For example: 'tablet','mg'. Coding of the dose unit with a terminology is preferred, where possible.">
-				>
-				["at0148"] = <
-					text = <"Therapeutic intent">
-					description = <"The overall therapeutic intent of the ordered item.">
-					comment = <"For example: 'pain relief'; 'palliative care'; 'low-dose prophylaxis'; 'rehydration'; 'nutritional infusion'.">
 				>
 				["at0150"] = <
 					text = <"Total daily effective dose">
@@ -807,6 +769,10 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"TOTALLY NEW ELEMENT ADDED">
 					description = <"TOTALLY NEW ELEMENT ADDED">
 				>
+				["at0183"] = <
+					text = <"ANOTHER NEW CHANGE">
+					description = <"CHANGE">
+				>
 			>
 		>
 		["nb"] = <
@@ -859,16 +825,6 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"Seponeringskriterium">
 					description = <"Et vilkår for at den ordinerte varen skal seponeres.">
 					comment = <"For eksempel \"Seponer når symptomer forsvinner\".">
-				>
-				["at0018"] = <
-					text = <"Klinisk indikasjon">
-					description = <"Den kliniske begrunnelsen for bruk av den ordinerte varen.">
-					comment = <"For eksempel \"Angina\". Koding av klinisk indikasjon med en terminologi foretrekkes, der det er mulig. Dette dataelementet kan repeteres. Elementet er ikke ment for administrativ autorisering.">
-				>
-				["at0044"] = <
-					text = <"Tilleggsinstruksjon">
-					description = <"Tilleggsinstruksjon for hvordan bruke eller lagre den ordinerte varen.">
-					comment = <"For eksempel forholdsregler som \"tas med mat\", \"unngå grapefrukt\", \"løses opp i vann\" eller \"oppbevares på et kjølig tørt sted\". Dette dataelementet kan repeteres, og bør dersom mulig kodes med en terminologi, f.eks. FEST.">
 				>
 				["at0047"] = <
 					text = <"Maskinlesbare anvisninger">
@@ -942,20 +898,10 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"Detaljer om administreringsutstyr">
 					description = <"Detaljer om det medisinske utstyret som brukes til å administrere den ordinerte varen.">
 				>
-				["at0105"] = <
-					text = <"Bruksområde">
-					description = <"Tilleggsinstruksjon primært rettet mot pasient og pårørende.">
-					comment = <"For eksempel \"Blodtrykksreduserende\", \"Blodfortynnende\". Dette dataelementet kan repeteres, og bør dersom mulig kodes med en terminologi, f.eks. FEST. Ved behov kan man bruke en lenke for å assosiere dette elementet med f.eks. den opprinnelige diagnosen i en Problemliste, men det bør likevel registreres tekst her for å sikre data for fremtiden, siden målet for lenken kan endre seg over tid.">
-				>
 				["at0106"] = <
 					text = <"Utdelingsinstruksjon">
 					description = <"Tilleggsinstruksjon primært rettet mot personen som deler ut den ordinerte varen.">
 					comment = <"Eksempel: Detaljerte instruksjoner for stegvis utdeling av opiater.">
-				>
-				["at0107"] = <
-					text = <"Overvåkningsinstruksjon">
-					description = <"Tilleggsinstruksjon som gir råd om anbefalt eller nødvendig overvåkning ved bruk av den ordinerte varen.">
-					comment = <"For eksempel \"kontroller nyrefunksjon om 2 uker\". Dette dataelementet kan repeteres.">
 				>
 				["at0112"] = <
 					text = <"Sammendrag av ordineringen">
@@ -994,11 +940,6 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"Enhet for maksimum legemiddelmengde">
 					description = <"Enheten for \"Maksimum legemiddelmengde\".">
 					comment = <"For eksempel \"tablett\", \"mg\". Koding av enheten med en terminologi, f.eks. FEST, foretrekkes der det er mulig.">
-				>
-				["at0148"] = <
-					text = <"Terapeutisk hensikt">
-					description = <"Overordnet terapeutisk hensikt med den ordinerte varen.">
-					comment = <"For eksempel \"smertelindring\", \"palliasjon\", \"lavdose profylakse\", \"rehydrering\" eller \"ernæringsinfusjon\".">
 				>
 				["at0150"] = <
 					text = <"Total daglig effektiv dose">
@@ -1100,6 +1041,10 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"*TOTALLY NEW ELEMENT ADDED(en)">
 					description = <"*TOTALLY NEW ELEMENT ADDED(en)">
 				>
+				["at0183"] = <
+					text = <"*ANOTHER NEW CHANGE(en)">
+					description = <"*CHANGE(en)">
+				>
 			>
 		>
 		["pt-br"] = <
@@ -1153,16 +1098,6 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"Critérios para interromper a prescrição">
 					description = <"Uma condição que se existente, exige a interrupção da administração ou uso.">
 					comment = <"Por exemplo: \"Interromper após o desaparecimento dos sintomas\".">
-				>
-				["at0018"] = <
-					text = <"Indicação Clínica">
-					description = <"A indicação clínica para o uso do item prescrito.">
-					comment = <"Por exemplo: \"Angina\". Sempre que possível, a codificação da indicação clínica com uma terminologia deve existir. Este elemento de dados permite múltiplas ocorrências. Não se destina a fornecer uma indicação para fins de autorização administrativa.">
-				>
-				["at0044"] = <
-					text = <"Instruções adicionais">
-					description = <"Instruções adicionais sobre como usar ou armazenar o ítem prescrito.">
-					comment = <"Por exemplo: alertas sobre \"tomar com alimentos\", \"evitar frutas\", \"dissolver em água\",\"guardar em geladeira, lugar seco\". Este elemento de dados permite múltiplas ocorrências e deve ser codificado com uma terminologia de referência, sempre que possível.">
 				>
 				["at0047"] = <
 					text = <"Orientação para parsear texto">
@@ -1238,20 +1173,10 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 					text = <"Detalhes do dispositivo">
 					description = <"Detalhes do dispositivo medicinal utilizado para suportar a administração do item prescrito.">
 				>
-				["at0105"] = <
-					text = <"Informações do paciente">
-					description = <"Informações adicionais direcionadas principalmente para o indivíduo/paciente ou cuidador.">
-					comment = <"Por exemplo: \"Para reduzir sua pressão sanguínea\". Este elemento de dados permite múltiplas ocorrências e deve ser codificado com uma terminologia de referência, sempre que possível. Se necessário, é possível usar um atributo LINK para associar esse elemento, por exemplo, ao \"diagnóstico original\" separado de uma lista de problemas, mas a indicação deve ser explicitamente registrada aqui, pois o objetivo do link pode mudar ao longo do tempo.">
-				>
 				["at0106"] = <
 					text = <"Instruções para a dispensação">
 					description = <"Instruções adicionais direcionadas primariamente para a pessoa responsável pela dispensação do ítem prescrito.">
 					comment = <"Exemplo: Instruções detalhadas da dispensão de opiáceos em etapas.">
-				>
-				["at0107"] = <
-					text = <"Monitoramento da instrução">
-					description = <"Instruções adicionais que advertem sobre o monitoramento dos itens prescritos.">
-					comment = <"Por exemplo: \"Por favor, verificar função renal em 2 semanas\". Este elemento de dados permite múltiplas ocorrências.">
 				>
 				["at0112"] = <
 					text = <"Sumário da prescrição">
@@ -1290,11 +1215,6 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 					text = <"Unidade da quantidade máxima">
 					description = <"A unidade da quantidade máxima permitida.">
 					comment = <"Por exemplo: \"comprimido\", \"mg\". Sempre que possível, é desejável que a unidade da dose seja codificada com uma terminologia.">
-				>
-				["at0148"] = <
-					text = <"Intenção terapêutica">
-					description = <"A intenção terapêutica sobre o item prescrito.">
-					comment = <"Por exemplo: \"Alívio da dor\", \"cuidado paliativo\"; \"baixa-dose profilática\", \"rehidratação\", \"infusão nutricional\".">
 				>
 				["at0150"] = <
 					text = <"Dose efetiva total diária">
@@ -1395,6 +1315,10 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 				["at0182"] = <
 					text = <"*TOTALLY NEW ELEMENT ADDED(en)">
 					description = <"*TOTALLY NEW ELEMENT ADDED(en)">
+				>
+				["at0183"] = <
+					text = <"*ANOTHER NEW CHANGE(en)">
+					description = <"*CHANGE(en)">
 				>
 			>
 		>
