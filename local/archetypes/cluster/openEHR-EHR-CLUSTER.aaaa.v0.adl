@@ -5,11 +5,27 @@ concept
 	[at0000]	-- Aaaa
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Test Test">
+				["organisation"] = <"Ocean">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"test">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -26,8 +42,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"FE1CBECA13117EF6189DA09570AA7156">
-		["build_uid"] = <"e5f61415-f669-4f14-986e-6da12b30fe82">
+		["MD5-CAM-1.0.1"] = <"6978CAAB12CA24CAE7829072056F3FEB">
+		["build_uid"] = <"3caa639d-18e3-4802-9697-29977034df9f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -63,6 +79,22 @@ ontology
 				>
 				["at0002"] = <
 					text = <"New element2">
+					description = <"*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*New element2(en)">
 					description = <"*">
 				>
 			>
