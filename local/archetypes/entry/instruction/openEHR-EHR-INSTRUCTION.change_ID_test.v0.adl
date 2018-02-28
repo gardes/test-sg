@@ -198,8 +198,8 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"22749BAD4CC3936B0414935AACBD4ABA">
-		["build_uid"] = <"a623661a-1174-4de5-874a-c535c99465d2">
+		["MD5-CAM-1.0.1"] = <"F4B5546B5185059F6BC502C201A8F4B1">
+		["build_uid"] = <"3bf6eb4b-ca56-4faa-8dd5-780ca7a5ea65">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -236,10 +236,6 @@ definition
 								value matches {
 									DV_TEXT matches {*}
 								}
-							}
-							allow_archetype CLUSTER[at0093] occurrences matches {0..1} matches {	-- Structured body site
-								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location_clock(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[at0094] occurrences matches {0..*} matches {	-- Delivery method
 								value matches {
@@ -489,6 +485,11 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
+							ELEMENT[at0189] occurrences matches {0..1} matches {	-- NEW ELEMENT
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
 						}
 					}
 				}
@@ -634,10 +635,6 @@ Coding of the route with a terminology is preferred, where possible. Multiple po
 					description = <"Name of the site of administration of the ordered item.">
 					comment = <"For example: 'left upper arm', 'intravenous catheter right hand'.
  Coding of the body site with a terminology is preferred, where possible.">
-				>
-				["at0093"] = <
-					text = <"Structured body site">
-					description = <"Structured description of the site of administration of the ordered item.">
 				>
 				["at0094"] = <
 					text = <"Delivery method">
@@ -811,6 +808,10 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"Palliative dosing">
 					description = <".">
 				>
+				["at0189"] = <
+					text = <"NEW ELEMENT">
+					description = <"new element.">
+				>
 			>
 		>
 		["nb"] = <
@@ -932,10 +933,6 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"Anatomisk lokalisering">
 					description = <"Navn på kroppsstedet der den ordinerte varen skal administreres.">
 					comment = <"For eksempel \"venstre overarm\", \"intravenøst kateter høyre hånd\". Det bør om mulig benyttes terminologi, f.eks. SNOMED CT eller EDQM standardtermer, for å angi kroppssted.">
-				>
-				["at0093"] = <
-					text = <"Strukturert anatomisk lokalisering">
-					description = <"Strukturert beskrivelse av administreringsstedet for den ordinerte varen.">
 				>
 				["at0094"] = <
 					text = <"Administreringsmetode">
@@ -1108,6 +1105,10 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					text = <"*Palliative dosing(en)">
 					description = <"*.(en)">
 				>
+				["at0189"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
 			>
 		>
 		["pt-br"] = <
@@ -1231,10 +1232,6 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 					description = <"Nome do local de administração do item prescrito.">
 					comment = <"Por exemplo: \"braço esquerdo\", \"catéter intravenoso da mão direita˜.
 Sempre que possível, é desejável que o local do corpo seja codificado com uma terminologia.">
-				>
-				["at0093"] = <
-					text = <"Local do corpo estruturado">
-					description = <"Descrição estruturada do local da administração do item prescrito.">
 				>
 				["at0094"] = <
 					text = <"Método da administração">
@@ -1407,6 +1404,10 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 				["at0188"] = <
 					text = <"*Palliative dosing(en)">
 					description = <"*.(en)">
+				>
+				["at0189"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
 				>
 			>
 		>
