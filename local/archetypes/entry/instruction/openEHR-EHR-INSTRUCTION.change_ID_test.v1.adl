@@ -198,8 +198,8 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"E1968FFBEBC1536E7996312DFAA7BD30">
-		["build_uid"] = <"94a41311-3518-47be-b262-5290e504b906">
+		["MD5-CAM-1.0.1"] = <"B26D8A96184DD62AB5ECACBAD8325CCF">
+		["build_uid"] = <"2242da1f-b7bc-46ea-b9d8-fdee0574a702">
 		["revision"] = <"1.1.1-alpha">
 	>
 
@@ -481,6 +481,11 @@ definition
 									archetype_id/value matches {/.*/}
 							}
 							ELEMENT[at0167] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0189] occurrences matches {0..1} matches {	-- Add new
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -803,6 +808,10 @@ The goal or target dose might be recorded here or more commonly as part of a lin
 					text = <"Palliative dosing">
 					description = <".">
 				>
+				["at0189"] = <
+					text = <"Add new">
+					description = <"add new.">
+				>
 			>
 		>
 		["nb"] = <
@@ -1095,6 +1104,10 @@ Det bør om mulig benyttes terminologi, f.eks. FEST, for å angi administrerings
 				["at0188"] = <
 					text = <"*Palliative dosing(en)">
 					description = <"*.(en)">
+				>
+				["at0189"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
 				>
 			>
 		>
@@ -1391,6 +1404,10 @@ Sempre que possível, é desejável que o local do corpo esteja codificado com u
 				["at0188"] = <
 					text = <"*Palliative dosing(en)">
 					description = <"*.(en)">
+				>
+				["at0189"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
 				>
 			>
 		>
