@@ -62,8 +62,8 @@ Derived from: Service request, Draft archetype [Internet]. openEHR Foundation, o
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9D756949E95F4E2BC5F4D2993D44DD90">
-		["build_uid"] = <"5b3ab053-ea63-433b-9abb-317556ebf46b">
+		["MD5-CAM-1.0.1"] = <"DB14B199FA1DD9F9E69234E734684523">
+		["build_uid"] = <"25a9740b-8a9b-4b41-a46e-9ae49efa8b58">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -142,13 +142,6 @@ definition
 							allow_archetype CLUSTER[at0149] occurrences matches {0..*} matches {	-- Attachment/multimedia
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia(-[a-zA-Z0-9_]+)*\.v1/}
-							}
-							ELEMENT[at0076] occurrences matches {0..1} matches {	-- Information to follow?
-								value matches {
-									DV_BOOLEAN matches {
-										value matches {True}
-									}
-								}
 							}
 							ELEMENT[at0078] occurrences matches {0..1} matches {	-- Information description
 								value matches {
@@ -256,11 +249,6 @@ ontology
 					text = <"Priority">
 					description = <"Urgency of the request for service.">
 					comment = <"Specific definitions of emergency and urgent will vary between clinical contexts, clinical systems and the nature of the request itself, so have not be defined in this archetype. If explicit timing is required then the Service period should be clearly stated.">
-				>
-				["at0076"] = <
-					text = <"Information to follow?">
-					description = <"Will supplementary information be following this request?">
-					comment = <"Record as TRUE if additional information has been identified and will be forwarded when available. For example: pending test results.">
 				>
 				["at0078"] = <
 					text = <"Information description">
@@ -391,11 +379,6 @@ Status is used to denote whether this is the initial request, or a follow-up req
 					text = <"*Priority(en)">
 					description = <"*Urgency of the request for service.(en)">
 					comment = <"*Specific definitions of emergency and urgent will vary between clinical contexts, clinical systems and the nature of the request itself, so have not be defined in this archetype. If explicit timing is required then the Service period should be clearly stated.(en)">
-				>
-				["at0076"] = <
-					text = <"*Information to follow?(en)">
-					description = <"*Will supplementary information be following this request?(en)">
-					comment = <"*Record as TRUE if additional information has been identified and will be forwarded when available. For example: pending test results.(en)">
 				>
 				["at0078"] = <
 					text = <"*Information description(en)">
