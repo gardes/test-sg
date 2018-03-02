@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
-  <id>1378e335-92ed-400a-81d3-9c399d832a60</id>
+  <id>5e241b79-511b-43d0-a26a-24659f3f3c55</id>
   <name>Abdominal Xray</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
@@ -60,10 +60,10 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v1" concept_name="Diagnostic imaging request " max="1" name="Pelvic Xray">
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v1" concept_name="Diagnostic imaging request " max="1" name="Abdominal Xray">
     <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
       <constraint xsi:type="textConstraint">
-        <includedValues>Pelvic Xray</includedValues>
+        <includedValues>Abdominal Xray</includedValues>
       </constraint>
     </Rule>
     <Rule path="/activities[at0001]/description[at0009]/items[at0148]" max="0" />
