@@ -81,6 +81,6 @@
     <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v1">
-    <digest id="MD5-CAM-1.0.1">56B4A49A2686F942D9649846F24AA90A</digest>
+    <digest id="MD5-CAM-1.0.1">31BAB2CA31663A781EE677204F23277A</digest>
   </integrity_checks>
 </template>
