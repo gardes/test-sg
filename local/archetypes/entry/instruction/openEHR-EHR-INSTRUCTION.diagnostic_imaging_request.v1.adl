@@ -37,7 +37,8 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Generic framework for a request for a health-related service to be supplied by a healthcare provider or agency.">
+			purpose = <"Generic framework for a request for a health-related service to be supplied by a healthcare provider or agency.
+testsinafnalkjfdhlkajhsflkajhdflkajsfhlkajshdflakjsdhflakjfhlkjhdsfa">
 			use = <"Use to record a request for a health-related service. This archetype has been designed as a framework that can be used as the basis for:
 - a request from one healthcare provider or agency to another healthcare provider or agency for a health-related service - for example, a request for transfer of care to an emergency department, a referral for a second clinical opinion, or provision of home services from a municipal council; or
 - a follow up service to be scheduled for the same healthcare provider or agency - for example, a review appointment in outpatients in 6 weeks. 
@@ -63,8 +64,8 @@ Derived from: Service request, Draft archetype [Internet]. openEHR Foundation, o
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"31BAB2CA31663A781EE677204F23277A">
-		["build_uid"] = <"f739d1f8-a027-4989-b3e6-0655f82122fa">
-		["revision"] = <"1.1.0">
+		["build_uid"] = <"26e9ae93-e450-4c65-8b1d-35f2597d5478">
+		["revision"] = <"1.1.1">
 	>
 
 definition
