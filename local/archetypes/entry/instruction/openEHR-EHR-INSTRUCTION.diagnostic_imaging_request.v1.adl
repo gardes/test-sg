@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=1431b467-7bef-464d-9422-448e9d49c4cc)
-	openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v0
+﻿archetype (adl_version=1.4; uid=3fbdff28-5707-4920-aeb2-bea4e5c1de8d)
+	openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v1
 
 concept
 	[at0000]	-- Diagnostic imaging request 
@@ -51,7 +51,7 @@ In many situations it will be possible to record the steps that occur as part of
 			copyright = <"© openEHR Foundation, Nasjonal IKT HF, Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Fatima Almeida, Critical SW, Portugal", "Tomas Alme, DIPS ASA, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Anita Bjørnnes, Helse Bergen, Norway", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Einar Fosse, UNN HF, Norwegian Centre for Integrated Care and Telemedicine, Norway", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Heather Grain, Llewelyn Grain Informatics, Australia", "Knut Harboe, Stavanger Universitetssjukehus, Norway", "Ingrid Heitmann, Oslo universitetssykehus HF, Norway", "Andreas Hering, Helse Bergen HF, Haukeland universitetssjukehus, Norway", "Anca Heyd, DIPS ASA, Norway", "Hilde Hollås, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Lars Karlsen, DIPS ASA, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Hallvard Lærum, Oslo Universitetssykehus HF, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Jussara Rotzsch, UNB, Brazil", "Line Sæle, Nasjonal IKT HF, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Editor)", "Richard Townley-O'Neill, Australian Digital Health Agency, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -62,9 +62,9 @@ Derived from: Service request, Draft archetype [Internet]. openEHR Foundation, o
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DB14B199FA1DD9F9E69234E734684523">
-		["build_uid"] = <"25a9740b-8a9b-4b41-a46e-9ae49efa8b58">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"56B4A49A2686F942D9649846F24AA90A">
+		["build_uid"] = <"71c8a62f-98a3-469a-a395-79e98639a183">
+		["revision"] = <"1.0.0">
 	>
 
 definition
