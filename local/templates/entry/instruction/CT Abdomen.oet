@@ -66,6 +66,11 @@
         <includedValues>CT Abdomen</includedValues>
       </constraint>
     </Rule>
+    <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+      <constraint xsi:type="multipleConstraint">
+        <includedTypes>Coded_text</includedTypes>
+      </constraint>
+    </Rule>
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v2">
     <digest id="MD5-CAM-1.0.1">28068B162B42478F36DC089A9F74BF12</digest>
