@@ -12,7 +12,7 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"testing this script again">
+			purpose = <"testing duplicate changes only">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"1A585732AC51F24352F5A8A2B94B0B94">
-		["build_uid"] = <"07c9d7e0-008a-43b2-b73c-0d669bf6251f">
+		["build_uid"] = <"9982d4ff-aad9-4103-b6a0-4eb9f735cc83">
 		["revision"] = <"0.0.1-alpha">
 	>
 
