@@ -60,7 +60,7 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v2" concept_name="Test request" max="1" name="Chest Xray 1 projection">
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v2" concept_name="Test request" max="1" name="Chest Xray 2 projections">
     <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
       <constraint xsi:type="textConstraint">
         <includedValues>Chest Xray 2 projections</includedValues>
