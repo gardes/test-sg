@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=84796b01-6e92-4f1d-a0dd-f409ad7648f2)
-	openEHR-EHR-SECTION.emergency_department_order_set.v0
+﻿archetype (adl_version=1.4; uid=c951f295-fa34-463b-ad92-42db01ea50d3)
+	openEHR-EHR-SECTION.emergency_department_order_set.v1
 
 concept
 	[at0000]	-- Emergency department order set
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A4EC961AE5F01448DF3716F846541DA2">
-		["build_uid"] = <"377f0dbd-04f5-4970-a5f7-c93128654d8f">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"B7723856A0DDC9BF53ED5AC294958CA7">
+		["build_uid"] = <"af5389cd-e544-461a-9b51-e6a16141ad84">
+		["revision"] = <"1.0.0">
 	>
 
 definition
