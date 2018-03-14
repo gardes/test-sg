@@ -1,0 +1,86 @@
+﻿archetype (adl_version=1.4; uid=84796b01-6e92-4f1d-a0dd-f409ad7648f2)
+	openEHR-EHR-SECTION.emergency_department_order_set.v0
+
+concept
+	[at0000]	-- Emergency department order set
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A4EC961AE5F01448DF3716F846541DA2">
+		["build_uid"] = <"377f0dbd-04f5-4970-a5f7-c93128654d8f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Emergency department order set
+		items cardinality matches {0..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {*}
+			SECTION[at0002] occurrences matches {0..1} matches {*}
+			SECTION[at0003] occurrences matches {0..1} matches {*}
+			SECTION[at0007] occurrences matches {0..1} matches {*}
+			SECTION[at0008] occurrences matches {0..1} matches {*}
+			SECTION[at0009] occurrences matches {0..1} matches {*}
+			SECTION[at0010] occurrences matches {0..1} matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Emergency department order set">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Goals of Care">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Intravenous Fluids">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Laboratory Investigations">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Diagnostic Imaging">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Other Investigations">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Medications">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Patient Care Orders">
+					description = <"*">
+				>
+			>
+		>
+	>
