@@ -197,9 +197,9 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"945593BCDBBCC5DD5D462D6BABF02DA8">
-		["build_uid"] = <"745fc2ec-68ab-4309-8b4f-3f9a46b3f9e4">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"AF0A14A837AC087C295FE08491BEEDB0">
+		["build_uid"] = <"0038d1da-11f4-4566-8d0e-aebbd0833dd8">
+		["revision"] = <"1.1.0">
 	>
 
 definition
@@ -216,12 +216,10 @@ definition
 							}
 							allow_archetype CLUSTER[at0143] occurrences matches {0..1} matches {	-- Preparation details
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_substance(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.medication_substance(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/.*/}
 							}
 							allow_archetype CLUSTER[at0177] occurrences matches {0..*} matches {	-- Structured dose and timing directions
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.therapeutic_direction(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.therapeutic_direction(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.therapeutic_direction_modified\.v0/}
-								exclude
 									archetype_id/value matches {/.*/}
 							}
 							ELEMENT[at0018] occurrences matches {0..*} matches {	-- Clinical indication
