@@ -151,4 +151,7 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.therapeutic_direction_modified.v1">
     <digest id="MD5-CAM-1.0.1">359595F168B053524A6524998E7080FD</digest>
   </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.knowledge_topic_header.v1">
+    <digest id="MD5-CAM-1.0.1">38708299FEE8BECC3F24211CBBF12B8A</digest>
+  </integrity_checks>
 </template>
