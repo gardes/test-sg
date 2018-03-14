@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=3aabc369-33d4-412c-8c36-dbbea8b3e899)
-	openEHR-EHR-CLUSTER.timing_ahs.v0
+﻿archetype (adl_version=1.4; uid=37d7bd8a-306a-4d4a-b527-e00de9316883)
+	openEHR-EHR-CLUSTER.timing_ahs.v1
 
 concept
 	[at0000]	-- Timing ahs
@@ -20,7 +20,7 @@ This archetype is designed to be used within the 'Timing' SLOT within any clinic
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -28,9 +28,9 @@ This archetype is designed to be used within the 'Timing' SLOT within any clinic
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7764548DAD3F121FCC826F91BF280C14">
-		["build_uid"] = <"1ac00713-141d-4946-99a7-03e7daa6ea93">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"87B5D179CB60010214671E213D31EE37">
+		["build_uid"] = <"ac9aec87-c843-40e0-b4a3-74644b3454b3">
+		["revision"] = <"1.0.0">
 	>
 
 definition
