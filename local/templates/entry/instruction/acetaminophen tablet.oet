@@ -72,16 +72,10 @@
     <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0130]" default="4000 1" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0146]" default="mg">
       <constraint xsi:type="textConstraint">
-        <includedValues>mg</includedValues>
+        <includedValues>mg/day</includedValues>
       </constraint>
     </Rule>
-    <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0053]" default="24">
-      <constraint xsi:type="durationConstraint">
-        <pattern>PTH</pattern>
-        <includesMaximum>false</includesMaximum>
-        <includesMinimum>false</includesMinimum>
-      </constraint>
-    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0051]/items[at0053]" max="0" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0178]" max="0" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0062]/items[at0150]" max="0" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0105]" max="0" />
