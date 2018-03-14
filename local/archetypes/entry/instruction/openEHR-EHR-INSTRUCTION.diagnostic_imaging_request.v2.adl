@@ -2,7 +2,7 @@
 	openEHR-EHR-INSTRUCTION.diagnostic_imaging_request.v2
 
 concept
-	[at0000]	-- Diagnostic imaging request 
+	[at0000]	-- Test request
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -63,13 +63,13 @@ Derived from: Service request, Draft archetype [Internet]. openEHR Foundation, o
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"28068B162B42478F36DC089A9F74BF12">
-		["build_uid"] = <"6e038ca8-1824-4818-bfe5-3c157281ae36">
-		["revision"] = <"2.0.0">
+		["MD5-CAM-1.0.1"] = <"DBF7919445AA1E7728839A67DD5341C0">
+		["build_uid"] = <"b0e5a86c-3ba4-41c8-b1f3-3a4a6b584c74">
+		["revision"] = <"2.0.1">
 	>
 
 definition
-	INSTRUCTION[at0000] matches {	-- Diagnostic imaging request 
+	INSTRUCTION[at0000] matches {	-- Test request
 		activities cardinality matches {0..*; unordered} matches {
 			ACTIVITY[at0001] occurrences matches {1..*} matches {	-- Request
 				description matches {
@@ -208,7 +208,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Diagnostic imaging request ">
+					text = <"Test request">
 					description = <"Request for a health-related service to be supplied by a healthcare provider or agency.">
 					comment = <"For example equipment request.">
 				>
