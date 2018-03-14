@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=d97f54ef-550f-4fe6-84de-e60eb5724bf1)
-	openEHR-EHR-CLUSTER.therapeutic_direction_modified.v0
+﻿archetype (adl_version=1.4; uid=423b00ca-b406-459f-a555-615d425926e9)
+	openEHR-EHR-CLUSTER.therapeutic_direction_modified.v1
 
 concept
 	[at0000]	-- Therapeutic direction modified
@@ -74,7 +74,7 @@ This archetype will gnerally be used in the context of a parent INSTRUCTION arch
 			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Marcus Baw, openGPSoC / BawMedical Ltd, United Kingdom", "John Bennett, NEHTA, Australia", "SB BHATTACHARYYA, Sudisa Consultancy Services, India", "SBhusan Bhattacharyya, Sudisa Consultancy Services, India", "Sharmila Biswas, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Trina Gregory, cpc, Australia", "Robert Hausam, Hausam Consulting LLC, United States", "Sam Heard, Ocean Informatics, Australia (Editor)", "Evelyn Hovenga, EJSH Consulting, Australia", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Russell Leftwich, Russell B Leftwich MD, United States", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Colin Macfarlane, Elsevier, United Kingdom", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Andrej Orel, Marand d.o.o., Slovenia", "Chris Pearce, Melbourne East GP Network, Australia", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Anoop Shah, University College London, United Kingdom", "Iztok Stotl, UKCLJ, Slovenia", "John Taylor, NEHTA, Australia", "Nyree Taylor, Ocean Informatics, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ines Vaz, UFN, Portugal", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -93,9 +93,9 @@ Standards for medication and medical device records – technical annex [Interne
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F8537F6B0B75F863CDE9A732B79DA90E">
-		["build_uid"] = <"8a318f49-47b9-48ef-b56f-35e746433417">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"359595F168B053524A6524998E7080FD">
+		["build_uid"] = <"c7040676-2d44-49cb-a665-500a0b8bc49a">
+		["revision"] = <"1.0.0">
 	>
 
 definition
