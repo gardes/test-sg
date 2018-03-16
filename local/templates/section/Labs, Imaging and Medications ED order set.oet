@@ -60,6 +60,14 @@
       </item>
     </other_details>
   </description>
+  <annotations path="[openEHR-EHR-SECTION.emergency_department_order_set.v1]/items[at0003]/items[openEHR-EHR-SECTION.order_set_heading.v1 and name/value='Hematology']">
+    <items>
+      <item>
+        <key>Order Set Notes.Order Decision Support</key>
+        <value>Complete Blood Count with diff should be ordered if patient presents with basically anything because this is pretty much the most ordered test ever in the history of lab ordering.</value>
+      </item>
+    </items>
+  </annotations>
   <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.emergency_department_order_set.v1" concept_name="Emergency department order set" max="1" name="Labs, Imaging and Medications ED order se">
     <Rule path="/items[at0001]" max="0" />
     <Rule path="/items[at0002]" max="0" />
