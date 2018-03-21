@@ -112,7 +112,7 @@
          </item> 
 		  <item>
             <key>Example with an html fragment from a resource centre (based on iframe)</key>
-            <value>&lt;iframe src="https://ckm-test.oceaninformatics.com/ckm/document?cid=1013.17.176"&gt;&lt;/iframe&gt;</value>
+            <value>&lt;iframe src="https://ckm-test.oceaninformatics.com/ckm/document?cid=1013.17.176&amp;open-directly=true"&gt;&lt;/iframe&gt;</value>
          </item>
 		 <item>
             <key>Clinical Knowledge Topic.Analytics</key>
