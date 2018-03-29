@@ -26,15 +26,22 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"ECDACE3F925F54D1C85DEBB4D9FFD31B">
-		["build_uid"] = <"fa88eccf-a16d-42d0-a984-44da7a5314c3">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"4CEC75B918EDBC091A0588848018EA78">
+		["build_uid"] = <"ef8f1a0d-0dfd-4ed9-9144-887eed8bf6ba">
+		["revision"] = <"1.1.0">
 	>
 
 definition
 	SECTION[at0000] matches {	-- Clinical knowledge topic
-		items cardinality matches {0..*; unordered} matches {
-			SECTION[at0001] occurrences matches {0..1} matches {*}
+		items cardinality matches {1..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {	-- Important Info Before You Begin
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype INSTRUCTION[at0011] occurrences matches {0..*} matches {	-- INSTRUCTION
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 			SECTION[at0002] occurrences matches {0..1} matches {*}
 			SECTION[at0003] occurrences matches {0..1} matches {*}
 			SECTION[at0004] occurrences matches {0..1} matches {*}
@@ -89,6 +96,10 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Acknowledgements">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"INSTRUCTION">
 					description = <"*">
 				>
 			>
