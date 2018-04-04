@@ -60,6 +60,14 @@
       </item>
     </other_details>
   </description>
+  <annotations path="[openEHR-EHR-SECTION.fakeadhoc.v0]">
+    <items>
+      <item>
+        <key>Catalogue Pattern.Clinical Decision Support</key>
+        <value>https://ckm-test.oceaninformatics.com/ckm/document?cid=1013.17.182</value>
+      </item>
+    </items>
+  </annotations>
   <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" />
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0">
     <digest id="MD5-CAM-1.0.1">AC221F52F8B7DD86D2DA6FCCFA25FED9</digest>
