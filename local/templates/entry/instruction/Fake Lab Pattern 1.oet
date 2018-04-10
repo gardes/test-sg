@@ -60,6 +60,14 @@
       </item>
     </other_details>
   </description>
+  <annotations path="[openEHR-EHR-INSTRUCTION.fakelaborder.v0]/activities[at0001]/description[at0002]/items[at0003]">
+    <items>
+      <item>
+        <key>Catalogue Pattern.Clinical Communication</key>
+        <value>https://ckm-test.oceaninformatics.com/ckm/document?cid=1013.17.187</value>
+      </item>
+    </items>
+  </annotations>
   <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" concept_name="Fake Lab Order" max="1" name="Fake Lab Pattern 1">
     <Rule path="/activities[at0001]/description[at0002]/items[at0004]">
       <constraint xsi:type="textConstraint">
