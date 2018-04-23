@@ -86,16 +86,16 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Extended personal demographics">
-					description = <"Personal demographic data extended beyond those specified by ISO 22220.">
+					text = <"Additional person demographic data">
+					description = <"Additional person demographic data besides those specified by ISO 22220">
 				>
 				["at0001"] = <
 					text = <"Marital status">
-					description = <"Marital status.">
+					description = <"Marital status">
 				>
 				["at0002"] = <
 					text = <"Ethnic background">
-					description = <"The person's ethnic background.">
+					description = <"The person's ethnic background">
 				>
 			>
 		>

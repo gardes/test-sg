@@ -20,7 +20,7 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report i.e. OBSERVATION.lab_test.histopathology.">
 			keywords = <"histopathology", "cancer", "laboratory", "lung", "lab", "malignancy", "bronchial", "pathology", "respiratory">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"Initial">
@@ -30,20 +30,31 @@ Use as a component archetype in the context of a suite of archetypes that make u
 Available from: http://www.rcpath.org/index.asp?PageID=1159
 
 College of American Pathologists. Histopathology Lung protocol [Internet]. [cited 2009 Jul 27 ]
-Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/2005/lung05_pw.pdf
-
-Royal College of Pathologists of Australasia. Lung Cancer Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ]
-Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/LUNG%20CANCER%20STRUCTURED%20PATHOLOGY%20REPORTING%20PROTOCOL%20for%20web.pdf
-
-">
-		["MD5-CAM-1.0.1"] = <"86AF8B0C42DE41792B2F647581EAC4A2">
+Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/2005/lung05_pw.pdf">
+		["MD5-CAM-1.0.1"] = <"CE23C590327C57C1567E98068629921F">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Microscopic findings - Lung cancer
-		items cardinality matches {1..*; unordered} matches {
+		items cardinality matches {0..*; unordered} matches {
+			ELEMENT[at0229] occurrences matches {0..1} matches {	-- Histological grade
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0230, 	-- Not applicable
+							at0231, 	-- GX: Cannot be assessed
+							at0232, 	-- G1: Well differentiated
+							at0233, 	-- G2: Moderately differentiated
+							at0234, 	-- G3: Poorly differentiated
+							at0235]	-- G4: Undifferentiated
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
 			CLUSTER[at0269] occurrences matches {0..1} matches {	-- Local tissue invasion findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0270] occurrences matches {0..1} matches {	-- Visceral pleural invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
@@ -83,7 +94,7 @@ definition
 				}
 			}
 			CLUSTER[at0244] occurrences matches {0..1} matches {	-- Bronchial resection margin findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0246] occurrences matches {0..1} matches {	-- Bronchial resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
@@ -117,7 +128,7 @@ definition
 				}
 			}
 			CLUSTER[at0275] occurrences matches {0..1} matches {	-- Vascular resection margin findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0276] occurrences matches {0..1} matches {	-- Vascular resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
@@ -140,15 +151,20 @@ definition
 				}
 			}
 			CLUSTER[at0289] occurrences matches {0..1} matches {	-- Other resection margin findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0290] occurrences matches {0..*} matches {	-- Other resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
 					}
 				}
 			}
+			ELEMENT[at0262] occurrences matches {0..1} matches {	-- Completeness of surgical resection
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
 			CLUSTER[at0252] occurrences matches {0..1} matches {	-- In-situ carcinoma findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0251] occurrences matches {0..1} matches {	-- In-situ carcinoma
 						value matches {
 							DV_CODED_TEXT matches {
@@ -169,7 +185,7 @@ definition
 				}
 			}
 			CLUSTER[at0030] occurrences matches {0..1} matches {	-- Lymph node findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0087] occurrences matches {0..*} matches {	-- Lymph node details
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
@@ -179,7 +195,7 @@ definition
 				}
 			}
 			CLUSTER[at0179] occurrences matches {0..1} matches {	-- Additional findings
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0250] occurrences matches {0..*} matches {	-- Additional finding
 						value matches {
 							DV_CODED_TEXT matches {
@@ -195,6 +211,27 @@ definition
 						}
 					}
 					ELEMENT[at0220] occurrences matches {0..*} matches {	-- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0263] occurrences matches {0..1} matches {	-- Estimate of metastasis
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0264] occurrences matches {0..1} matches {	-- Metastasis
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0267, 	-- M0 - Absent
+									at0268, 	-- M1 - Present
+									at0266]	-- MX - Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0265] occurrences matches {0..1} matches {	-- Description
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -228,6 +265,34 @@ ontology
 				["at0220"] = <
 					text = <"Description">
 					description = <"A text description of additional histopathological findings.">
+				>
+				["at0229"] = <
+					text = <"Histological grade">
+					description = <"The assessed histological grade of the tumour using World Health Organisation (WHO) classification.">
+				>
+				["at0230"] = <
+					text = <"Not applicable">
+					description = <"Grading is not applicable to this tumour.">
+				>
+				["at0231"] = <
+					text = <"GX: Cannot be assessed">
+					description = <"It has not been possible to grade the tumour.">
+				>
+				["at0232"] = <
+					text = <"G1: Well differentiated">
+					description = <"The tumour is well differentiated.">
+				>
+				["at0233"] = <
+					text = <"G2: Moderately differentiated">
+					description = <"The tumour is moderately differentiated.">
+				>
+				["at0234"] = <
+					text = <"G3: Poorly differentiated">
+					description = <"The tumour is pooly differentiated.">
+				>
+				["at0235"] = <
+					text = <"G4: Undifferentiated">
+					description = <"The tumour is undifferentiated.">
 				>
 				["at0238"] = <
 					text = <"Direct tissue invasion">
@@ -284,6 +349,34 @@ ontology
 				["at0261"] = <
 					text = <"Interstitial fibrosis">
 					description = <"Interstitial fibrosis is present.">
+				>
+				["at0262"] = <
+					text = <"Completeness of surgical resection">
+					description = <"Estimate of the completeness of surgical resection.">
+				>
+				["at0263"] = <
+					text = <"Estimate of metastasis">
+					description = <"Details of metastasis as an estimate for staging purposes.">
+				>
+				["at0264"] = <
+					text = <"Metastasis">
+					description = <"Findings of metastatic tumour based on TNM classification.">
+				>
+				["at0265"] = <
+					text = <"Description">
+					description = <"A text description of an estimate of metastasis.">
+				>
+				["at0266"] = <
+					text = <"MX - Unknown">
+					description = <"It is not known if there is metastasis (MX).">
+				>
+				["at0267"] = <
+					text = <"M0 - Absent">
+					description = <"Metastasis is absent (M0).">
+				>
+				["at0268"] = <
+					text = <"M1 - Present">
+					description = <"Metastasis is present (M1).">
 				>
 				["at0269"] = <
 					text = <"Local tissue invasion findings">

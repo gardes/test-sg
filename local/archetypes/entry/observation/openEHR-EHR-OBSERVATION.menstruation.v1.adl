@@ -19,13 +19,12 @@ description
 			use = <"Use history class to record maximum and minimum durations of bleeding - uses the menstruation cluster for details of a specific or typical cycle">
 			keywords = <"LMP", "menstruation">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Initial">
 	other_contributors = <"Sam Heard", ...>
 	other_details = <
-		["references"] = <"">
+		["references"] = <"null">
 	>
 
 definition
@@ -85,23 +84,23 @@ definition
 												items cardinality matches {0..*; unordered} matches {
 													CLUSTER[at0034] occurrences matches {0..1} matches {	-- Onset of LNMP
 														items cardinality matches {0..*; unordered} matches {
-															allow_archetype ELEMENT[at0036] occurrences matches {0..*} matches {
+															allow_archetype ELEMENT occurrences matches {0..*} matches {
 																include
-																	archetype_id/value matches {/openEHR-EHR-ELEMENT\.lnmp\.v1/}
+																	archetype_id/value matches {/lnmp\.v1/}
 															}
 														}
 													}
-													allow_archetype CLUSTER[at0037] occurrences matches {0..1} matches {
+													allow_archetype CLUSTER occurrences matches {0..1} matches {
 														include
-															archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
+															archetype_id/value matches {/menstrual_cycle\.v1/}
 														exclude
 															archetype_id/value matches {/.*/}
 													}
 													CLUSTER[at0014] occurrences matches {0..1} matches {	-- Associated symptoms
 														items cardinality matches {0..*; unordered} matches {
-															allow_archetype CLUSTER[at0038] occurrences matches {0..1} matches {
+															allow_archetype CLUSTER occurrences matches {0..1} matches {
 																include
-																	archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
+																	archetype_id/value matches {/symptom-pain\.v1|symptom\.v1/}
 																exclude
 																	archetype_id/value matches {/.*/}
 															}
@@ -111,17 +110,17 @@ definition
 											}
 											CLUSTER[at0005] occurrences matches {0..1} matches {	-- Typical Menstrual cycle
 												items cardinality matches {0..*; unordered} matches {
-													allow_archetype CLUSTER[at0039] occurrences matches {0..1} matches {
+													allow_archetype CLUSTER occurrences matches {0..1} matches {
 														include
-															archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
+															archetype_id/value matches {/menstrual_cycle\.v1/}
 														exclude
 															archetype_id/value matches {/.*/}
 													}
 													CLUSTER[at0020] occurrences matches {0..1} matches {	-- Associated symptoms
 														items cardinality matches {0..*; unordered} matches {
-															allow_archetype CLUSTER[at0040] occurrences matches {0..1} matches {
+															allow_archetype CLUSTER occurrences matches {0..1} matches {
 																include
-																	archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
+																	archetype_id/value matches {/symptom-pain\.v1|symptom\.v1/}
 															}
 														}
 													}
@@ -136,15 +135,15 @@ definition
 															}
 														}
 													}
-													allow_archetype CLUSTER[at0041] occurrences matches {0..1} matches {
+													allow_archetype CLUSTER occurrences matches {0..1} matches {
 														include
-															archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
+															archetype_id/value matches {/menstrual_cycle\.v1/}
 													}
 													CLUSTER[at0021] occurrences matches {0..1} matches {	-- Associated symptoms
 														items cardinality matches {0..*; unordered} matches {
-															allow_archetype CLUSTER[at0042] occurrences matches {0..1} matches {
+															allow_archetype CLUSTER occurrences matches {0..1} matches {
 																include
-																	archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1/}
+																	archetype_id/value matches {/symptom\.v1|symptom-pain\.v1/}
 															}
 														}
 													}
@@ -181,7 +180,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
@@ -293,34 +291,6 @@ ontology
 				>
 				["at0035"] = <
 					text = <"Onset of menstrual period">
-					description = <"*">
-				>
-				["at0036"] = <
-					text = <"Element: Onset of LNMP">
-					description = <"*">
-				>
-				["at0037"] = <
-					text = <"Cluster: Menstrual cycle">
-					description = <"*">
-				>
-				["at0038"] = <
-					text = <"Cluster: Associated symptoms">
-					description = <"*">
-				>
-				["at0039"] = <
-					text = <"Cluster: Typical Menstrual cycle">
-					description = <"*">
-				>
-				["at0040"] = <
-					text = <"Cluster: associated symptoms">
-					description = <"*">
-				>
-				["at0041"] = <
-					text = <"Cluster: Typical Menstrual cycle">
-					description = <"*">
-				>
-				["at0042"] = <
-					text = <"Cluster: associated symptoms">
 					description = <"*">
 				>
 			>

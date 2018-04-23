@@ -1,0 +1,297 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.pulse_oximetry.v1
+
+concept
+	[at0000]	-- Pulse oximetry
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"7/04/2007">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation der Sauerstoffsättigung im Blut unter Benutzung eines Pulsoxymeters.">
+			use = <"*">
+			keywords = <"Sauerstoff", "Behandlung mit Sauerstoff", "Pulsoxymeter", "Pulsoxymetrie">
+			misuse = <"*">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a measure of peripheral oxygen saturation of haemoglobin (SpO2) in the blood using a pulse oximeter or equivalent non-invasive device.">
+			use = <"Use within varying clinical contexts to record the degree of oxygen saturation of haemoglobin (SpO2) in a subject's blood. 
+
+Where the recording device also supplies other parameters, such as pulse rate or plesmythography waveforms, this should be recorded in a separate archetype, appropriate for the particular measurement e.g  the Pulse archetype, in order to assist consistent querying.">
+			keywords = <"oxygen", "oxygenation", "pulse oximeter", "pulse oximetry", "vital signs", "saturation", "oxygen concentration", "SpO2">
+			misuse = <"NOT to be used to record oxygen saturations determined by methods other than pulse oximetry or equivalent methodology.
+NOT to be used to record aterial (SaO2)or venous (SvO2) oxygen saturation determined by invasive procedures or blood gas sampling.">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Stephen Chu, NeHTA, Australia", "Ed Conley, Cardiff University", "Graham Denyer, Australian Antarctic Division, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Sam Heard, Ocean Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Heather Leslie, Ocean Informatics, Australia", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller, CompuGROUP Software, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Tony Shannon, NHS, United Kingdom">
+	other_details = <
+		["references"] = <"AARC Clinical Practice Guideline - Pulse Oximetry. Respir Care 1992;37(8):891–897
+Available from http://www.rcjournal.com/cpgs/pulsecpg.html
+
+Jubran A. Pulse oximetry [Internet]. Critical Care 1999;3(2):R11-R17.[cited 2009 Oct 29 ] 
+Available from: http://ccforum.com
+
+Hanning CD, Alexander-Williams JM. Fortnightly Review: Pulse oximetry: a practical review [Internet]. BMJ 1995 Aug;311(7001):367-370.[cited 2009 Nov 9 ]
+Available from: http://www.bmj.com.ezp1.bath.ac.uk/cgi/content/abstract/311/7001/367
+
+
+
+">
+		["MD5-CAM-1.0.1"] = <"BDAD88916A0A6255ED35B1FAD74CC4D4">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Pulse oximetry
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Oxygen saturation (Sp02)
+										value matches {
+											DV_PROPORTION matches {
+												numerator matches {|0.0..100.0|}
+												denominator matches {|100.0|}
+												type matches {2}
+											}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..*} matches {	-- Multimedia image
+										value matches {
+											DV_MULTIMEDIA matches {
+												media_type matches {[openEHR::]}
+											}
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0014] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0033] occurrences matches {0..1} matches {	-- Body position
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0034] occurrences matches {0..1} matches {	-- Exertion
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									allow_archetype CLUSTER[at0015] occurrences matches {0..1} matches {	-- Ambient oxygen
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0016] occurrences matches {0..*} matches {	-- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0007] matches {	-- List
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Sensor site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Sensor type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0018] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Pulse oximetry(en)">
+					description = <"*Measure of oxygen saturation  in the blood (SpO2) recorded using a pulse oximeter or equivalent non-invasive device.(en)">
+					comment = <"*Pulse oximetry provides estimates of arterial oxyhemoglobin saturation (SaO2) by utilizing selected wavelengths of light to noninvasively determine the saturation of oxyhemoglobin (SpO2)(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Timing event.(en)">
+				>
+				["at0003"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"*Oxygen saturation (Sp02)(en)">
+					description = <"*The saturation of oxygen in the blood.(en)">
+					comment = <"*SpO2 is defined as the ratio of oxyhaemoglobin (HbO2) to the total concentration of haemoglobin (HbO2 + deoxyhaemoglobin).(en)">
+				>
+				["at0007"] = <
+					text = <"Liste">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"*Sensor site(en)">
+					description = <"*The site of the measurement sensor.(en)">
+				>
+				["at0014"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0015"] = <
+					text = <"*Ambient oxygen(en)">
+					description = <"*Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.(en)">
+				>
+				["at0016"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, feeding in infants, tracheostomy.(en)">
+				>
+				["at0018"] = <
+					text = <"*Device(en)">
+					description = <"*Details of the oximetry device used.(en)">
+				>
+				["at0019"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Details of a series of oximetry readings expressed as a waveform.(en)">
+				>
+				["at0020"] = <
+					text = <"*Sensor type(en)">
+					description = <"*The type of measurement sensor used e.g. transmittal, reflective, clamp or strip.(en)">
+				>
+				["at0033"] = <
+					text = <"*Position(en)">
+					description = <"*The position of the subject at the time of measurement.(en)">
+				>
+				["at0034"] = <
+					text = <"*Exertion(en)">
+					description = <"*Details about physical activity undertaken at the time of measurement.(en)">
+				>
+				["at0036"] = <
+					text = <"*Comment(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pulse oximetry">
+					description = <"Measure of oxygen saturation of haemoglobin in the blood (SpO2), recorded using a pulse oximeter or equivalent non-invasive device.">
+					comment = <"Pulse oximetry provides estimates of arterial oxyhemoglobin saturation (SaO2) by utilizing selected wavelengths of light to noninvasively determine the saturation of oxyhemoglobin (SpO2) using a pulse oximeter or equivalent non-invasive device.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Timing event.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Oxygen saturation (Sp02)">
+					description = <"The saturation of oxygen in the peripheral blood, measured as SpO2.">
+					comment = <"SpO2 is defined as the ratio of oxyhaemoglobin (HbO2) to the total concentration of haemoglobin (HbO2 + deoxyhaemoglobin).">
+				>
+				["at0007"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Sensor site">
+					description = <"The site of the measurement sensor.">
+				>
+				["at0014"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0015"] = <
+					text = <"Ambient oxygen">
+					description = <"Details of the amount of oxygen available to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.">
+				>
+				["at0016"] = <
+					text = <"Confounding factors">
+					description = <"Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, poor perfusion, infant feeding.">
+				>
+				["at0018"] = <
+					text = <"Device">
+					description = <"Details of the pulse oximetry device used.">
+				>
+				["at0019"] = <
+					text = <"Multimedia image">
+					description = <"Details of a series of oximetry readings expressed as a multimedia image or series of images.  Pulse plesthmyography waveforms should be recorded in separate archetype.">
+					comment = <"SpO2 waveform is prinicpally used as a visual guide to signal quality - i.e. indicates presence of confounders.">
+				>
+				["at0020"] = <
+					text = <"Sensor type">
+					description = <"The type of measurement sensor used e.g. transmittal, reflective, clamp or strip.">
+				>
+				["at0033"] = <
+					text = <"Body position">
+					description = <"The position of the subject's body  at the time of measurement.">
+				>
+				["at0034"] = <
+					text = <"Exertion">
+					description = <"Details about physical activity undertaken at the time of measurement.">
+				>
+				["at0036"] = <
+					text = <"Comment">
+					description = <"A text comment about the pulse oximetry result.">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+			>
+		>
+	>

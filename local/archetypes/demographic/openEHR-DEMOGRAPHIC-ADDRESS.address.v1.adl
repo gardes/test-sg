@@ -29,7 +29,7 @@ description
 			use = <"used to communicate with, identify service provision demograph requirements and trends, and to provide direct services.">
 			keywords = <"demographic service", "address">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -37,20 +37,20 @@ description
 			use = <"Usado para comunicação, identificar requisitos para provimento de serviços e tendências, e proporcionar serviços diretos.">
 			keywords = <"serviço demográfico", "endereço">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Ian McNiccol, Ocean Informatics, Scotland", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia">
+	other_contributors = <"Ian McNiccol, Ocean Informatics", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification - International Organization for Standardization.">
 	>
 
 definition
-    ADDRESS[at0000] matches { 
+    ADDRESS[at0000] matches {  -- Endereço
         name matches {
-            DV_TEXT matches {*} 
-            DV_CODED_TEXT matches { 
+            DV_TEXT matches {*}  -- 
+            DV_CODED_TEXT matches {  -- 
                 defining_code matches {
                     [local::
                     at0461,
@@ -63,11 +63,11 @@ definition
             }
         }
         details matches {
-            ITEM_TREE[at0001] occurrences matches {0..1} matches { 
+            ITEM_TREE[at0001] occurrences matches {0..1} matches {  -- Itens do endereço
                 items cardinality matches {1..*; ordered} matches {
-                    CLUSTER[at0002] occurrences matches {0..*} matches {  -- Address line
+                    CLUSTER[at0002] occurrences matches {0..*} matches {  -- Linha de endereço
                         items cardinality matches {1..*; ordered} matches {
-                            ELEMENT[at0021] occurrences matches {0..1} matches {  -- Building/complex sub-unit type—abbreviation
+                            ELEMENT[at0021] occurrences matches {0..1} matches {  -- Abreviação do tipo de sub-unidade
                                 value matches {
                                     DV_CODED_TEXT matches {  
                                         defining_code matches {
@@ -76,32 +76,32 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[at0022] occurrences matches {0..1} matches {  -- Building/complex sub-unit number
+                            ELEMENT[at0022] occurrences matches {0..1} matches {  -- Número da sub-unidade
                                 value matches {
                                     DV_TEXT matches {*} 
                                 }
                             }
-                            ELEMENT[at0023] occurrences matches {0..1} matches {  -- Address site name
+                            ELEMENT[at0023] occurrences matches {0..1} matches {  -- Nome do edifício/propriedade
                                 value matches {
                                     DV_TEXT matches {*} 
                                 }
                             }
-                            ELEMENT[at0024] occurrences matches {0..1} matches {  -- Floor/level number
+                            ELEMENT[at0024] occurrences matches {0..1} matches {  -- Número do andar/nível
                                 value matches {
                                     DV_TEXT matches {*}
                                 }
                             }
-                            ELEMENT[at0025] occurrences matches {0..1} matches {  -- Floor/level type
+                            ELEMENT[at0025] occurrences matches {0..1} matches {  -- Tipo do andar/nível
                                 value matches {
                                     DV_TEXT matches {*} 
                                 }
                             }
-                            ELEMENT[at0026] occurrences matches {0..1} matches {  -- Lot number
+                            ELEMENT[at0026] occurrences matches {0..1} matches {  -- Número do lote
                                 value matches {
                                     DV_TEXT matches {*} 
                                 }
                             }
-                            ELEMENT[at0027] occurrences matches {0..1} matches {  -- Street type
+                            ELEMENT[at0027] occurrences matches {0..1} matches {  -- Tipo do Logradouro
                                 value matches {
                                     DV_CODED_TEXT matches { 
                                         defining_code matches {
@@ -110,17 +110,17 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[at0028] occurrences matches {0..1} matches {  -- Street name
+                            ELEMENT[at0028] occurrences matches {0..1} matches {  -- Logradouro
                                 value matches {
                                     DV_TEXT matches {*}   
                                 }
                             }
-                            ELEMENT[at0029] occurrences matches {0..1} matches {  -- Number
+                            ELEMENT[at0029] occurrences matches {0..1} matches {  -- Número
                                 value matches {
                                     DV_TEXT matches {*}  
                                 }
                             }
-                            ELEMENT[at0030] occurrences matches {0..1} matches {  -- Street suffix
+                            ELEMENT[at0030] occurrences matches {0..1} matches {  -- Sufixo do logradouro
                                 value matches {
                                     DV_CODED_TEXT matches { 
                                         defining_code matches {
@@ -129,33 +129,33 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[at0031] occurrences matches {0..1} matches {  -- Address line
+                            ELEMENT[at0031] occurrences matches {0..1} matches {  -- Linha de endereço
                                 value matches {
                                     DV_TEXT matches {*} 
                                 }
                             }
-                            allow_archetype CLUSTER[at0032] occurrences matches {0..*} matches {
+                            allow_archetype CLUSTER[at0032] occurrences matches {0..1} matches {
                                 include
                                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.local_address_line(-?[a-zA-Z0-9_]+)*\.v1/}
                             }
                         }
                     }
-                    ELEMENT[at0003] occurrences matches {0..1} matches {  -- Delivery Point Identifier
+                    ELEMENT[at0003] occurrences matches {0..1} matches {  -- Caixa Postal
                         value matches {
                             DV_TEXT matches {*}
                         }
                     }
-                    ELEMENT[at0004] occurrences matches {0..1} matches {  -- Postal code
+                    ELEMENT[at0004] occurrences matches {0..1} matches {  -- CEP
                         value matches {
                             DV_TEXT matches {*} 
                         }
                     }
-                    ELEMENT[at0005] occurrences matches {0..1} matches {  -- Suburb/town/locality
+                    ELEMENT[at0005] occurrences matches {0..1} matches {  -- Município
                         value matches {
                             DV_TEXT matches {*}   
                         }
                     }
-                    ELEMENT[at0006] occurrences matches {0..1} matches {  -- State/Province/Territory
+                    ELEMENT[at0006] occurrences matches {0..1} matches {  -- Estado
                         value matches {
                             DV_CODED_TEXT matches { 
                                 defining_code matches {
@@ -164,7 +164,7 @@ definition
                             }
                         }
                     }
-                    ELEMENT[at0007] occurrences matches {0..1} matches {  -- Country
+                    ELEMENT[at0007] occurrences matches {0..1} matches {  -- País
                         value matches {
                             DV_CODED_TEXT matches { 
                                 defining_code matches {
@@ -173,21 +173,21 @@ definition
                             }
                         }
                     }
-                    ELEMENT[at0008] occurrences matches {0..1} matches {  -- Address type start date accuracy indicator
+                    ELEMENT[at0008] occurrences matches {0..1} matches {  -- Indicador de acurácia da data de início de validade do endereço
                         value matches {
                             DV_TEXT matches { 
                                 value matches {/[AEU][AEU][AEU]/}
                             }
                         }
                     }
-                    ELEMENT[at0009] occurrences matches {0..1} matches {  -- Address type end date accuracy indicator
+                    ELEMENT[at0009] occurrences matches {0..1} matches {  -- Indicador de acurácia da data final de validade do endereço
                         value matches {
                             DV_TEXT matches { 
                                 value matches {/[AEU][AEU][AEU]/}
                             }
                         }
                     }
-                    allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {
+                    allow_archetype CLUSTER[at0010] occurrences matches {0..1} matches {
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.local_high_level_address(-?[a-zA-Z0-9_]+)*\.v1/}
                     }

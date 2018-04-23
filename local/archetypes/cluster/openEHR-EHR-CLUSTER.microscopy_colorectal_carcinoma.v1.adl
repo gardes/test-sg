@@ -21,7 +21,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 i.e. OBSERVATION.lab_test.histopathology and CLUSTER.macroscopy.colorectal_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "colonic", "rectal", "anal", "GI", "gastrointestinal", "bowel">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -32,17 +32,15 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 
 Royal College of Pathologists. Dataset for colorectal cancer (2nd edition) [Internet]. 2007 Dec 4;[cited 2009 Jul 29 ]
 Available from: http://www.rcpath.org/index.asp?PageID=1153
-
-Royal College of Pathologists of Australasia. Colorectal Cancer Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ]
-Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/COLORECTAL%20CANCER%20STRUCTURED%20REPORTING%20PROTOCOL%20for%20web.pdf">
-		["MD5-CAM-1.0.1"] = <"45150B03A2A6EFB7E8B8B329C55E4A3E">
+">
+		["MD5-CAM-1.0.1"] = <"6390F6F11C31AE6442C40C25A9A815FB">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Microscopic findings - Colorectal cancer
-		items cardinality matches {1..*; unordered} matches {
+		items cardinality matches {0..*; unordered} matches {
 			CLUSTER[at0269] occurrences matches {0..1} matches {	-- Histological grading
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0270] occurrences matches {0..1} matches {	-- Grade
 						value matches {
 							DV_CODED_TEXT matches {
@@ -51,9 +49,7 @@ definition
 									at0272, 	-- Well differentiated
 									at0273, 	-- Moderately differentiated
 									at0341, 	-- Poorly differentiated
-									at0342, 	-- Undifferentiated
-									at0360, 	-- Low-grade
-									at0361]	-- High grade
+									at0342]	-- Undifferentiated
 								}
 							}
 						}
@@ -66,7 +62,7 @@ definition
 				}
 			}
 			CLUSTER[at0236] occurrences matches {0..1} matches {	-- Local invasion
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0310] occurrences matches {0..1} matches {	-- Local invasion classification
 						value matches {
 							DV_CODED_TEXT matches {
@@ -113,7 +109,7 @@ definition
 				}
 			}
 			CLUSTER[at0244] occurrences matches {0..1} matches {	-- Surgical resection margins
-				items cardinality matches {1..*; unordered} matches {
+				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0246] occurrences matches {0..*} matches {	-- Surgical resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
@@ -183,28 +179,25 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0365] occurrences matches {0..1} matches {	-- Status of apical lymph node
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
 			CLUSTER[at0278] occurrences matches {0..1} matches {	-- Local tissue invasion
 				items cardinality matches {1..*; unordered} matches {
-					allow_archetype CLUSTER[at0277] occurrences matches {0..*} matches {	-- Venous (large vessel) invasion
+					allow_archetype CLUSTER[at0277] occurrences matches {0..1} matches {	-- Venous (large vessel) invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[at0279] occurrences matches {0..*} matches {	-- Lymphatic (small vessel) invasion
+					allow_archetype CLUSTER[at0279] occurrences matches {0..1} matches {	-- Lymphatic (small vessel) invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[at0286] occurrences matches {0..*} matches {	-- Perineural invasion
+					allow_archetype CLUSTER[at0286] occurrences matches {0..1} matches {	-- Perineural invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
 					CLUSTER[at0280] occurrences matches {0..1} matches {	-- Discontinuous extramural deposit findings
 						items cardinality matches {1..*; unordered} matches {
@@ -250,53 +243,21 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0362, 	-- Present
-									at0363, 	-- Absent
-									at0364]	-- Indeterminate
+									at0288, 	-- pM1
+									at0289, 	-- cM0
+									at0290, 	-- cM1
+									at0291]	-- pMX
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0287] occurrences matches {0..*} matches {	-- Sites
+					allow_archetype CLUSTER[at0287] occurrences matches {0..*} matches {	-- Sites 
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
 					ELEMENT[at0265] occurrences matches {0..1} matches {	-- Description
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-				}
-			}
-			CLUSTER[at0366] occurrences matches {0..1} matches {	-- Adenomatous polyps
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0359] occurrences matches {0..1} matches {	-- Type of polyp
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0338] occurrences matches {0..1} matches {	-- Number of polyps
-						value matches {
-							DV_COUNT matches {
-								magnitude matches {|>=0|}
-							}
-						}
-					}
-					ELEMENT[at0367] occurrences matches {0..1} matches {	-- Polyposis syndrome
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0368, 	-- Present
-									at0369, 	-- Absent
-									at0370]	-- Indeterminate
-								}
-							}
-						}
-					}
-					ELEMENT[at0371] occurrences matches {0..1} matches {	-- Comment
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -310,14 +271,28 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
+									at0292, 	-- Adenomatous polyps
 									at0293, 	-- Synchronous carcinoma
 									at0294, 	-- Ulcerative colitis
 									at0295, 	-- Ulcerative colitis with dysplasia
 									at0296, 	-- Crohn's disease
 									at0297, 	-- Crohn's disease with dysplasia
+									at0339, 	-- Familial adenomatous polyposis
 									at0340]	-- Diverticulosis
 								}
 							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0338] occurrences matches {0..1} matches {	-- Number of adenomatous polyps
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[at0359] occurrences matches {0..1} matches {	-- Type of adenomatous polyps
+						value matches {
 							DV_TEXT matches {*}
 						}
 					}
@@ -357,15 +332,16 @@ definition
 					}
 					CLUSTER[at0347] occurrences matches {0..1} matches {	-- Grade of response
 						items cardinality matches {1; unordered} matches {
-							ELEMENT[at0302] occurrences matches {0..1} matches {	-- Grade (AJCC)
+							ELEMENT[at0302] occurrences matches {0..1} matches {	-- Grade (RCPA)
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
-											at0349, 	-- Grade 0 - complete response
-											at0350, 	-- Grade 1 - moderate response
-											at0351, 	-- Grade 2 - minimal response
-											at0352]	-- Grade 3 - poor response
+											at0349, 	-- Grade 0
+											at0350, 	-- Grade 1
+											at0351, 	-- Grade 2
+											at0352, 	-- Grade 3
+											at0353]	-- Grade 4
 										}
 									}
 								}
@@ -407,6 +383,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -553,8 +530,28 @@ ontology
 					description = <"Details of perineural invasion by tumour.">
 				>
 				["at0287"] = <
-					text = <"Sites">
+					text = <"Sites ">
 					description = <"Details of sites of proven distant metastases.">
+				>
+				["at0288"] = <
+					text = <"pM1">
+					description = <"Pathologically proven metastatic disease is present.">
+				>
+				["at0289"] = <
+					text = <"cM0">
+					description = <"Clinical information states there is no metastasis and there is no pathological evidence of metastasis.">
+				>
+				["at0290"] = <
+					text = <"cM1">
+					description = <"Clinical information states there is metastasis but there is no pathological evidence of metastasis.">
+				>
+				["at0291"] = <
+					text = <"pMX">
+					description = <"There is no histological evidence of metastasis and no clinical information regarding metastatic status.">
+				>
+				["at0292"] = <
+					text = <"Adenomatous polyps">
+					description = <"Adenomatous polyps are present.">
 				>
 				["at0293"] = <
 					text = <"Synchronous carcinoma">
@@ -578,23 +575,23 @@ ontology
 				>
 				["at0298"] = <
 					text = <"R0">
-					description = <"No residual tumour - as per AJCC TNM classification 7th Edition.">
+					description = <"No residual tumour.">
 				>
 				["at0299"] = <
 					text = <"R1">
-					description = <"R1 - as per AJCC TNM classification 7th Edition.">
+					description = <"Microscopic margin involvement.">
 				>
 				["at0300"] = <
 					text = <"R2">
-					description = <"R2 - as per AJCC TNM classification 7th Edition.">
+					description = <"Macroscopic margin involvement.">
 				>
 				["at0301"] = <
 					text = <"RX">
-					description = <"Residual tumour cannot be assessed  - as per AJCC TNM classification 7th Edition.">
+					description = <"Residual tumour cannot be assessed.">
 				>
 				["at0302"] = <
-					text = <"Grade (AJCC)">
-					description = <"An estimate of the response to neoadjuvant therapy. (AJCC score).">
+					text = <"Grade (RCPA)">
+					description = <"An estimate of the response to neoadjuvant therapy. (RCPA) Royal College of Pathologists Australia.">
 				>
 				["at0308"] = <
 					text = <"Response to neoadjuvant therapy">
@@ -713,8 +710,12 @@ ontology
 					description = <"Marked regression is absent.">
 				>
 				["at0338"] = <
-					text = <"Number of polyps">
+					text = <"Number of adenomatous polyps">
 					description = <"Number of adenomatous polyps.">
+				>
+				["at0339"] = <
+					text = <"Familial adenomatous polyposis">
+					description = <"Familial adenomatous polyposis is present.">
 				>
 				["at0340"] = <
 					text = <"Diverticulosis">
@@ -749,20 +750,24 @@ ontology
 					description = <"An additional text comment on lymph node findings.">
 				>
 				["at0349"] = <
-					text = <"Grade 0 - complete response">
-					description = <"Complete response to neoadjuvant therapy.">
+					text = <"Grade 0">
+					description = <"No regression.">
 				>
 				["at0350"] = <
-					text = <"Grade 1 - moderate response">
-					description = <"Moderate response to neoadjuvant therapy.">
+					text = <"Grade 1">
+					description = <"Dominant tumour mass with obvious fibrosis and/or vasculopathy.">
 				>
 				["at0351"] = <
-					text = <"Grade 2 - minimal response">
-					description = <"Minimal response to neoadjuvant therapy.">
+					text = <"Grade 2">
+					description = <"Dominant fibrotic changes with few tumour cells or groups (easy to find with 10x ocular).">
 				>
 				["at0352"] = <
-					text = <"Grade 3 - poor response">
-					description = <"Poor response to neoadjuvant therapy.">
+					text = <"Grade 3">
+					description = <"Very few (difficult to find microscopically) tumour cells in fibrotic tissue with or without mucous substance.">
+				>
+				["at0353"] = <
+					text = <"Grade 4">
+					description = <"No tumour cells, only fibrotic mass (total regression or response).">
 				>
 				["at0354"] = <
 					text = <"No residual tumour">
@@ -785,56 +790,8 @@ ontology
 					description = <"Response to treatment is unknown.">
 				>
 				["at0359"] = <
-					text = <"Type of polyp">
-					description = <"Type of adenomatous polyp">
-				>
-				["at0360"] = <
-					text = <"Low-grade">
-					description = <"Well or moderately differentiated">
-				>
-				["at0361"] = <
-					text = <"High grade">
-					description = <"Poorly differentiated or undifferentiated">
-				>
-				["at0362"] = <
-					text = <"Present">
-					description = <"Evidence of distant metastasis.">
-				>
-				["at0363"] = <
-					text = <"Absent">
-					description = <"No evidence of distant metastasis.">
-				>
-				["at0364"] = <
-					text = <"Indeterminate">
-					description = <"Evidence of metastasis has not been determined.">
-				>
-				["at0365"] = <
-					text = <"Status of apical lymph node">
-					description = <"Status of the apical lymph node.">
-				>
-				["at0366"] = <
-					text = <"Adenomatous polyps">
-					description = <"Findings of adenoatous polyps.">
-				>
-				["at0367"] = <
-					text = <"Polyposis syndrome">
-					description = <"Evidence of polyposis syndrome.">
-				>
-				["at0368"] = <
-					text = <"Present">
-					description = <"There is evidence of polyposis syndrome.">
-				>
-				["at0369"] = <
-					text = <"Absent">
-					description = <"There is no evidence of polyposis syndrome.">
-				>
-				["at0370"] = <
-					text = <"Indeterminate">
-					description = <"Evidence of polyposis syndrome has not been determined.">
-				>
-				["at0371"] = <
-					text = <"Comment">
-					description = <"Comment concerning adenomatous polyps.">
+					text = <"Type of adenomatous polyps">
+					description = <"Type of adenomatous polyps.">
 				>
 			>
 		>

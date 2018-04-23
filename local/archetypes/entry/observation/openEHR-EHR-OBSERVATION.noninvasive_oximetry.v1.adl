@@ -1,0 +1,517 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.noninvasive_oximetry.v1
+
+concept
+	[at0000]	-- Pulse and non-invasive oximetry
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"7/04/2007">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation der Sauerstoffsättigung im Blut unter Benutzung eines Pulsoxymeters.">
+			use = <"*">
+			keywords = <"Sauerstoff", "Behandlung mit Sauerstoff", "Pulsoxymeter", "Pulsoxymetrie">
+			misuse = <"*">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a measure of a peripheral blood gas saturation (primarily oxygen) of haemoglobin recorded using pulse oximetery, transcutaneous oximetry or other non-invasive device/methodology.">
+			use = <"Use within varying clinical contexts to record the degree of oxygen saturation of haemoglobin (SpO2/ ptcO2)  and other gases in a subject's blood. 
+Where the recording device also supplies other parameters, such as pulse rate, these should be recorded in a separate archetype, appropriate for the particular measurement e.g  the Pulse archetype, in order to assist consistent querying. The aim is to model a related series of readings, rather to mirror each device.
+
+Pulse plesthmythography waveforms should be recorded here when used to document quality of the blood gas measurements. If used for primary diagnostic purposes e.g cardiac output they should also be recorded in the key  clinical archetype - currently OBSERVATION.heart_rate-pulse.">
+			keywords = <"oxygen", "oxygenation", "pulse oximeter", "pulse oximetry", "vital signs", "saturation", "oxygen concentration", "SpO2", "transcutaneous oximeter", "transcutaneous oximetry", "ptcCO2", "ptcO2", "spMet", "spCO", "spOC", "carboxyhaemoglobin", "methaemoglobin">
+			misuse = <"NOT to be used to record oxygen or other blood gas saturations e.g arterial (SaO2)or venous (SvO2) oxygen saturation determined by direct or invasive methods e.g. lab blood gases or vascular catheter devices. These are effectively different measurements being calculated by direct means and should be recorded within the OBSERVATION.lab_test-blood_gases archetype.
+
+NOT to be used to record  determined by invasive procedures or blood gas sampling.">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Sergio Carmona, Chile", "Stephen Chu, NeHTA, Australia", "Tamsin Cockayne, Australia", "Ed Conley, Cardiff University", "Graham Denyer, Australian Antarctic Division, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Evelyn Hovenga, EJSH Consulting, Australia", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Gorazd Kalan, University Medical Centre Ljubljana, Slovenia", "Heather Leslie, Ocean Informatics, Australia", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller, CompuGROUP Software, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Tony Shannon, NHS, United Kingdom">
+	other_details = <
+		["references"] = <"AARC Clinical Practice Guideline - Pulse Oximetry. Respir Care 1992;37(8):891–897
+Available from http://www.rcjournal.com/cpgs/pulsecpg.html
+
+Jubran A. Pulse oximetry [Internet]. Critical Care 1999;3(2):R11-R17.[cited 2009 Oct 29 ] 
+Available from: http://ccforum.com
+
+Hanning CD, Alexander-Williams JM. Fortnightly Review: Pulse oximetry: a practical review [Internet]. BMJ 1995 Aug;311(7001):367-370.[cited 2009 Nov 9 ]
+Available from: http://www.bmj.com.ezp1.bath.ac.uk/cgi/content/abstract/311/7001/367
+
+Baldwin KM. Transcutaneous Oximetry and Skin Surface Temperature as Objective Measures of Pressure Ulcer Risk [Internet]. Advances in Skin & Wound Care 2001;14(1)Available from: http://journals.lww.com/aswcjournal/Fulltext/2001/01000/Transcutaneous_Oximetry_and_Skin_Surface.14.aspx
+
+Barker SJ, Badal JJ. The measurement of dyshemoglobins and total hemoglobin by pulse oximetry [Internet]. Current Opinion in Anaesthesiology 2008;21(6):805-810.[cited 2010 Jan 12 ]
+Available from: http://journals.lww.com/co-anesthesiology/Abstract/2008/12000/The_measurement_of_dyshemoglobins_and_total.20.aspx">
+		["MD5-CAM-1.0.1"] = <"C8BD7A69FFBAE2C5EB1669643924D538">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Pulse and non-invasive oximetry
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- SpO2 (pulse oximetry)
+										value matches {
+											DV_PROPORTION matches {
+												numerator matches {|0.0..100.0|}
+												denominator matches {|100.0|}
+												type matches {2}
+											}
+										}
+									}
+									CLUSTER[at0042] occurrences matches {0..1} matches {	-- CO-oximetry
+										items cardinality matches {0..*; unordered} matches {
+											ELEMENT[at0044] occurrences matches {0..1} matches {	-- spOC
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::119]>
+														list = <
+															["1"] = <
+																units = <"ml/ml">
+																magnitude = <|>=0.0|>
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0045] occurrences matches {0..1} matches {	-- spCO
+												value matches {
+													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
+														denominator matches {|100.0|}
+														is_integral matches {False}
+														type matches {2}
+													}
+												}
+											}
+											ELEMENT[at0046] occurrences matches {0..1} matches {	-- spMet
+												value matches {
+													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
+														denominator matches {|100.0|}
+														is_integral matches {False}
+														type matches {2}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0041] occurrences matches {0..1} matches {	-- TC electrode oximetry
+										items cardinality matches {0..*; unordered} matches {
+											ELEMENT[at0039] occurrences matches {0..1} matches {	-- ptcO2
+												value matches {
+													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
+														denominator matches {|100.0|}
+														is_integral matches {False}
+														type matches {2}
+													}
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {	-- ptcCO2
+												value matches {
+													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
+														denominator matches {|100.0|}
+														is_integral matches {False}
+														type matches {2}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..*} matches {	-- Multimedia image
+										value matches {
+											DV_MULTIMEDIA matches {
+												media_type matches {[openEHR::]}
+											}
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0014] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0033] occurrences matches {0..1} matches {	-- Body position
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0034] occurrences matches {0..1} matches {	-- Exertion
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									allow_archetype CLUSTER[at0015] occurrences matches {0..1} matches {	-- Ambient oxygen
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0016] occurrences matches {0..*} matches {	-- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0007] matches {	-- List
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Sensor site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Sensor type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0048, 	-- Transmittal
+									at0049, 	-- Reflective
+									at0050, 	-- Clamp
+									at0051, 	-- Strip
+									at0052]	-- Electrode
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0047] occurrences matches {0..1} matches {	-- Transcutaneous electrode
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0037] occurrences matches {0..1} matches {	-- Operating temperature
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::127]>
+										list = <
+											["1"] = <
+												units = <"°C">
+												magnitude = <|0.0..100.0|>
+												precision = <|1|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0038] occurrences matches {0..1} matches {	-- Date time applied
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0018] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Pulse and non-invasive oximetry(en)">
+					description = <"*Measure of gas saturation in the blood such as SpO2, pTCO2 as recorded using pulse oximetery, transcutaneous oximetry or other non-invasive device/methodology. Primarily for oxygen saturations but other gases may be included.(en)">
+					comment = <"*Pulse oximetry provides estimates of arterial oxyhemoglobin saturation (SaO2) by utilizing selected wavelengths of light to noninvasively determine the saturation of oxyhemoglobin (SpO2) using a pulse oximeter or equivalent non-invasive device.(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Timing event.(en)">
+				>
+				["at0003"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"*SpO2 (pulse oximetry)(en)">
+					description = <"*The saturation of oxygen in the peripheral blood, measured by pulse oximetry.(en)">
+					comment = <"*SpO2 is defined as the ratio of oxyhaemoglobin (HbO2) to the total concentration of haemoglobin (HbO2 + deoxyhaemoglobin).(en)">
+				>
+				["at0007"] = <
+					text = <"Liste">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"*Sensor site(en)">
+					description = <"*The site of the measurement sensor.(en)">
+				>
+				["at0014"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0015"] = <
+					text = <"*Ambient oxygen(en)">
+					description = <"*Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.(en)">
+				>
+				["at0016"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, feeding in infants, tracheostomy.(en)">
+				>
+				["at0018"] = <
+					text = <"*Device(en)">
+					description = <"*Details of the non-invasive oximetry device used.(en)">
+				>
+				["at0019"] = <
+					text = <"*Multimedia image(en)">
+					description = <"*Details of a series of oximetry readings expressed as a multimedia image or series of images.  Pulse oximetry waveforms are often used to assess the quality of the SpO2 reading. In other circumstances the pulse waveform is used in direct clinical asessment e.g. as part of an assessment of cardiac capacity - in this case the waveform might reasonably be recorded within the OBSERVATION.pulse archetype or future equivalent.(en)">
+					comment = <"*SpO2 waveform is prinicpally used as a visual guide to signal quality - i.e. indicates presence of confounders.(en)">
+				>
+				["at0020"] = <
+					text = <"*Sensor type(en)">
+					description = <"*The type of measurement sensor used e.g. transmittal, reflective, clamp or strip, electrode.(en)">
+				>
+				["at0033"] = <
+					text = <"*Position(en)">
+					description = <"*The position of the subject at the time of measurement.(en)">
+				>
+				["at0034"] = <
+					text = <"*Exertion(en)">
+					description = <"*Details about physical activity undertaken at the time of measurement.(en)">
+				>
+				["at0036"] = <
+					text = <"*Comment(en)">
+					description = <"*A text comment about the non-invasive oximetry result.(en)">
+				>
+				["at0037"] = <
+					text = <"*Operating temperature(en)">
+					description = <"*The operating temperature of a transcutaneous oximeter electrode.(en)">
+				>
+				["at0038"] = <
+					text = <"*Date time applied(en)">
+					description = <"*The date and time at which a transcutaneous oximetry electrode was first applied.(en)">
+				>
+				["at0039"] = <
+					text = <"*ptcO2(en)">
+					description = <"*The saturation of oxygen in the peripheral blood, measured by transcutaneous electrode oximetry. as ptcO2.(en)">
+				>
+				["at0040"] = <
+					text = <"*ptcCO2(en)">
+					description = <"*The saturation of carbon dioxide in the peripheral blood, measured by transcutaneous electrode oximetry.(en)">
+				>
+				["at0041"] = <
+					text = <"*TC electrode oximetry(en)">
+					description = <"*Blood gas measurements confined to transcutaneous electrode oximetry.(en)">
+					comment = <"*Used by neonatal intensive care units to track precise TcPO2, and TcPCO2, levels noninvasively.  Not recommended as a substitute for arterial blood gas analysis in adults, but as an adjunct that will show trends in TcPO2 and TcPCO2 levels.(en)">
+				>
+				["at0042"] = <
+					text = <"*CO-oximetry(en)">
+					description = <"*Blood gas measurements confined to pulse CO-oximetry.(en)">
+				>
+				["at0044"] = <
+					text = <"*spOC(en)">
+					description = <"*Oxygen Content recorded with pulse CO-oximetry methodology.(en)">
+				>
+				["at0045"] = <
+					text = <"*spCO(en)">
+					description = <"*The saturation of carboxyhaemoglobin in the peripheral blood.(en)">
+				>
+				["at0046"] = <
+					text = <"*spMet(en)">
+					description = <"*The saturation of methoxyhaemoglobin in the peripheral blood.(en)">
+				>
+				["at0047"] = <
+					text = <"*Transcutaneous electrode(en)">
+					description = <"*Details of transcutaneous oximetry methodology.(en)">
+				>
+				["at0048"] = <
+					text = <"*Transmittal(en)">
+					description = <"*A pulse oximetry transmittal sensor was applied.(en)">
+				>
+				["at0049"] = <
+					text = <"*Reflective(en)">
+					description = <"*A pulse oximetry reflective sensor was applied.(en)">
+				>
+				["at0050"] = <
+					text = <"*Clamp(en)">
+					description = <"*A pulse oximetry clamp sensor was applied.(en)">
+				>
+				["at0051"] = <
+					text = <"*Strip(en)">
+					description = <"*A pulse oximetry strip sensor was applied.(en)">
+				>
+				["at0052"] = <
+					text = <"*Electrode(en)">
+					description = <"*A transcutaneous electrode sensor was applied.(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pulse and non-invasive oximetry">
+					description = <"Measure of gas saturation in the blood such as SpO2, pTCO2 as recorded using pulse oximetery, transcutaneous oximetry or other non-invasive device/methodology. Primarily for oxygen saturations but other gases may be included.">
+					comment = <"Pulse oximetry provides estimates of arterial oxyhemoglobin saturation (SaO2) by utilizing selected wavelengths of light to noninvasively determine the saturation of oxyhemoglobin (SpO2) using a pulse oximeter or equivalent non-invasive device.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Timing event.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"SpO2 (pulse oximetry)">
+					description = <"The saturation of oxygen in the peripheral blood, measured by pulse oximetry.">
+					comment = <"SpO2 is defined as the ratio of oxyhaemoglobin (HbO2) to the total concentration of haemoglobin (HbO2 + deoxyhaemoglobin).">
+				>
+				["at0007"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Sensor site">
+					description = <"The site of the measurement sensor.">
+				>
+				["at0014"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0015"] = <
+					text = <"Ambient oxygen">
+					description = <"Details of the amount of oxygen available to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.">
+				>
+				["at0016"] = <
+					text = <"Confounding factors">
+					description = <"Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, poor perfusion, infant feeding.">
+				>
+				["at0018"] = <
+					text = <"Device">
+					description = <"Details of the non-invasive oximetry device used.">
+				>
+				["at0019"] = <
+					text = <"Multimedia image">
+					description = <"Details of a series of oximetry readings expressed as a multimedia image or series of images.  Pulse oximetry waveforms are often used to assess the quality of the SpO2 reading. In other circumstances the pulse waveform is used in direct clinical asessment e.g. as part of an assessment of cardiac capacity - in this case the waveform might reasonably be recorded within the OBSERVATION.pulse archetype or future equivalent.">
+					comment = <"SpO2 waveform is prinicpally used as a visual guide to signal quality - i.e. indicates presence of confounders.">
+				>
+				["at0020"] = <
+					text = <"Sensor type">
+					description = <"The type of measurement sensor used e.g. transmittal, reflective, clamp or strip, electrode.">
+				>
+				["at0033"] = <
+					text = <"Body position">
+					description = <"The position of the subject's body  at the time of measurement.">
+				>
+				["at0034"] = <
+					text = <"Exertion">
+					description = <"Details about physical activity undertaken at the time of measurement.">
+				>
+				["at0036"] = <
+					text = <"Comment">
+					description = <"A text comment about the non-invasive oximetry result.">
+				>
+				["at0037"] = <
+					text = <"Operating temperature">
+					description = <"The operating temperature of a transcutaneous oximeter electrode.">
+				>
+				["at0038"] = <
+					text = <"Date time applied">
+					description = <"The date and time at which a transcutaneous oximetry electrode was first applied.">
+				>
+				["at0039"] = <
+					text = <"ptcO2">
+					description = <"The saturation of oxygen in the peripheral blood, measured by transcutaneous electrode oximetry. as ptcO2.">
+				>
+				["at0040"] = <
+					text = <"ptcCO2">
+					description = <"The saturation of carbon dioxide in the peripheral blood, measured by transcutaneous electrode oximetry.">
+				>
+				["at0041"] = <
+					text = <"TC electrode oximetry">
+					description = <"Blood gas measurements confined to transcutaneous electrode oximetry.">
+					comment = <"Used by neonatal intensive care units to track precise TcPO2, and TcPCO2, levels noninvasively.  Not recommended as a substitute for arterial blood gas analysis in adults, but as an adjunct that will show trends in TcPO2 and TcPCO2 levels.">
+				>
+				["at0042"] = <
+					text = <"CO-oximetry">
+					description = <"Blood gas measurements confined to pulse CO-oximetry.">
+				>
+				["at0044"] = <
+					text = <"spOC">
+					description = <"Oxygen Content recorded with pulse CO-oximetry methodology.">
+				>
+				["at0045"] = <
+					text = <"spCO">
+					description = <"The saturation of carboxyhaemoglobin in the peripheral blood.">
+				>
+				["at0046"] = <
+					text = <"spMet">
+					description = <"The saturation of methoxyhaemoglobin in the peripheral blood.">
+				>
+				["at0047"] = <
+					text = <"Transcutaneous electrode">
+					description = <"Details of transcutaneous oximetry methodology.">
+				>
+				["at0048"] = <
+					text = <"Transmittal">
+					description = <"A pulse oximetry transmittal sensor was applied.">
+				>
+				["at0049"] = <
+					text = <"Reflective">
+					description = <"A pulse oximetry reflective sensor was applied.">
+				>
+				["at0050"] = <
+					text = <"Clamp">
+					description = <"A pulse oximetry clamp sensor was applied.">
+				>
+				["at0051"] = <
+					text = <"Strip">
+					description = <"A pulse oximetry strip sensor was applied.">
+				>
+				["at0052"] = <
+					text = <"Electrode">
+					description = <"A transcutaneous electrode sensor was applied.">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+			>
+		>
+	>

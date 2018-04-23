@@ -1,0 +1,691 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.melanoma_microscopy.v1
+
+concept
+	[at0000]	-- Microscopy findings - Melanoma
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"17/05/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Used to extend the Microscopy->Structured detail slot of a lab_test-histopathology archetype to describe the microscopic reporting of melanoma.">
+			use = <"Used to extend the Microscopy->Structured detail slot of a lab_test-histopathology archetype.">
+			keywords = <"melanoma", "lab", "malignancy", "skin", "dermatology", "histology", "histopathology", "pathology", "cancer">
+			misuse = <"Should not normally be used other than to extend a lab_test-histopathology archetype.">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"56B93F501054A29F944C49667D7941A6">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Microscopy findings - Melanoma
+		items cardinality matches {0..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Breslow thickness
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Thickness
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+										magnitude = <|>=0.0|>
+										precision = <|1|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment on measurement issues
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Marginal involvement
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0067] occurrences matches {0..1} matches {	-- Perpheral In-situ margins 
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0066] occurrences matches {0..1} matches {	-- Peripheral Invasive margins 
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+					}
+					allow_archetype CLUSTER[at0068] occurrences matches {0..*} matches {	-- Deep margins
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Clark level (Level of invasion) 
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0008, 	-- Clark Level I
+							at0009, 	-- Clark Level II
+							at0010, 	-- Clark Level III
+							at0011, 	-- Clark Level IV
+							at0012]	-- Clark Level V
+						}
+					}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Mitotic rate per mm2 (Mitotic index)
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|>=0|}
+					}
+				}
+			}
+			CLUSTER[at0020] occurrences matches {0..1} matches {	-- Ulceration
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Ulceration
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0072, 	-- Present
+									at0073, 	-- Absent
+									at0074]	-- Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- Extent of ulceration
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+			CLUSTER[at0048] occurrences matches {0..1} matches {	-- Lymphovascular invasion
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Lymphovascular invasion
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0075, 	-- Present
+									at0076, 	-- Absent
+									at0077]	-- Indeterminate
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0026] occurrences matches {0..1} matches {	-- Microsatellites
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0027] occurrences matches {0..1} matches {	-- Microsatellites
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0078, 	-- Present
+									at0079, 	-- Absent
+									at0080]	-- Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {	-- In-transit microsatellites
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0094, 	-- Present
+									at0095, 	-- Absent
+									at0096]	-- Indeterminate
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0047] occurrences matches {0..1} matches {	-- Tumour infiltrating lymphocytes
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0032] occurrences matches {0..1} matches {	-- Distribution
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0049, 	-- Brisk / Diffuse
+									at0050, 	-- Nonbrisk /  Focal
+									at0081, 	-- Absent
+									at0082]	-- Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0083] occurrences matches {0..1} matches {	-- Density
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0084, 	-- Sparse
+									at0085, 	-- Dense
+									at0086]	-- Indeterminate
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0034] occurrences matches {0..1} matches {	-- Regression
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0051] occurrences matches {0..1} matches {	-- Intermediate/late regression
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0015, 	-- Absent
+									at0016, 	-- Indeterminate
+									at0052, 	-- Present involving less than 75%
+									at0053, 	-- Present involving 75% or more
+									at0111]	-- Present
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0112] occurrences matches {0..1} matches {	-- Extent of regression 
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0113] occurrences matches {0..1} matches {	-- Marginal clearance of regression
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+				}
+			}
+			CLUSTER[at0037] occurrences matches {0..1} matches {	-- Desmoplasia
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0038] occurrences matches {0..1} matches {	-- Desmoplasia
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014, 	-- Present
+									at0015, 	-- Absent
+									at0016]	-- Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0039] occurrences matches {0..1} matches {	-- Extent of desmoplasia
+						value matches {
+							DV_PROPORTION matches {
+								numerator matches {|0.0..100.0|}
+								denominator matches {|0.0..100.0|}
+								is_integral matches {True}
+								type matches {2}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0100] occurrences matches {0..1} matches {	-- Solar elastosis
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0101] occurrences matches {0..1} matches {	-- Presence of solar elastosis
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0102, 	-- Present
+									at0103, 	-- Absent
+									at0104]	-- Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0105] occurrences matches {0..1} matches {	-- Severity of solar elastosis
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0106] occurrences matches {0..1} matches {	-- Predominant cell type
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0107] occurrences matches {0..1} matches {	-- Predominant cell type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0108, 	-- Spindle cells
+									at0109, 	-- Epithelioid cells
+									at0110]	-- Indeterminate
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0040] occurrences matches {0..1} matches {	-- Neurotropism (perinerual invasion)
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0041] occurrences matches {0..1} matches {	-- Neurotropism
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014, 	-- Present
+									at0015, 	-- Absent
+									at0016]	-- Indeterminate
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0093] occurrences matches {0..*} matches {	-- Neurotropism margins 
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+					}
+				}
+			}
+			CLUSTER[at0092] occurrences matches {0..1} matches {	-- Associated benign melanocytic lesion(s)
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0044] occurrences matches {0..*} matches {	-- Associated benign melanocytic lesion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0091] occurrences matches {0..1} matches {	-- Growth
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0045] occurrences matches {0..1} matches {	-- Intraepidermal growth pattern
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0114, 	-- Pagetoid
+									at0115, 	-- Lentiginous
+									at0116, 	-- Mixed
+									at0117]	-- Indeterminate
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0090] occurrences matches {0..1} matches {	-- Growth phase
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Microscopy findings - Melanoma">
+					description = <"Used within the Microscopy->Structured detail slot of a lab_test-histopathology archetype to describe the microscopic reporting of melanoma.">
+				>
+				["at0001"] = <
+					text = <"Breslow thickness">
+					description = <"The Breslow thickness">
+					comment = <"Breslow thickness is measured from the top of the granular layer of the epidermis or, if the surface is ulcerated, from the base of the ulcer, to the deepest dermal invasive cell. 
+
+This should be measured to nearest 0.1mm
+">
+				>
+				["at0002"] = <
+					text = <"Thickness">
+					description = <"The Breslow thickness to the nearest .1mm">
+					comment = <"The Breslow thickness should be measured in the standard way when there is dermal regression (i.e. dermal regression extending to a greater thickness than the melanoma should not be included in the measurement of Breslow thickness). ">
+				>
+				["at0003"] = <
+					text = <"Comment on measurement issues">
+					description = <"A comment on any difficulties in determining a Breslow thickness.">
+				>
+				["at0004"] = <
+					text = <"Marginal involvement">
+					description = <"Details of surgical margin involvement by tumour.">
+				>
+				["at0007"] = <
+					text = <"Clark level (Level of invasion) ">
+					description = <"Clark Level - A measure of invasion of melanoma.">
+				>
+				["at0008"] = <
+					text = <"Clark Level I">
+					description = <"Melanoma cells confined to the epidermis (melanoma in situ).">
+				>
+				["at0009"] = <
+					text = <"Clark Level II">
+					description = <"Melanoma cells invade into but do not fill or expand the papillary (superficial) dermis.">
+				>
+				["at0010"] = <
+					text = <"Clark Level III">
+					description = <"Melanoma cells fill and expand the papillary dermis with extension of tumour to the papillary-reticular dermal interface. ">
+				>
+				["at0011"] = <
+					text = <"Clark Level IV">
+					description = <"Melanoma cells infiltrate into the reticular dermis.">
+				>
+				["at0012"] = <
+					text = <"Clark Level V">
+					description = <"Melanoma cells infiltrate into the subcutaneous fat.">
+				>
+				["at0013"] = <
+					text = <"Mitotic rate per mm2 (Mitotic index)">
+					description = <"The Mitotic Rate should be determined by beginning the mitotic count in a zone within the invasive tumour of obvious mitotic activity (‘hot spot’) then counting the sum of the number of mitoses in a one square millimetre area. ">
+				>
+				["at0014"] = <
+					text = <"Present">
+					description = <"Margins infiltrated by tumour">
+				>
+				["at0015"] = <
+					text = <"Absent">
+					description = <"There is no evidence of intermediate/late regression">
+				>
+				["at0016"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of tumour infitration of margins has not been determined.">
+				>
+				["at0020"] = <
+					text = <"Ulceration">
+					description = <"Details of tumour associated ulceration.">
+				>
+				["at0022"] = <
+					text = <"Ulceration">
+					description = <"Evidence of tumour associated ulceration.">
+				>
+				["at0023"] = <
+					text = <"Extent of ulceration">
+					description = <"The maximal length/diameter of ulceration visible.">
+				>
+				["at0025"] = <
+					text = <"Lymphovascular invasion">
+					description = <"Evidence of lymphovascular invasion.">
+				>
+				["at0026"] = <
+					text = <"Microsatellites">
+					description = <"Details of melanoma microsatellites.">
+				>
+				["at0027"] = <
+					text = <"Microsatellites">
+					description = <"Evidence of melanoma microsatellites.">
+				>
+				["at0028"] = <
+					text = <"In-transit microsatellites">
+					description = <"Evidence of melanoma in-transit microsatellites.">
+				>
+				["at0032"] = <
+					text = <"Distribution">
+					description = <"Distribution pattern of tumour infiltrating lymphocytes.">
+				>
+				["at0034"] = <
+					text = <"Regression">
+					description = <"Details of melanoma regression. Two differing styles of reporting requirement have been identified and modelled.">
+				>
+				["at0037"] = <
+					text = <"Desmoplasia">
+					description = <"Details of desmoplasia">
+				>
+				["at0038"] = <
+					text = <"Desmoplasia">
+					description = <"Evidence of desmoplasia.">
+				>
+				["at0039"] = <
+					text = <"Extent of desmoplasia">
+					description = <"The extent of desmoplasia, expressed as a percentage.">
+				>
+				["at0040"] = <
+					text = <"Neurotropism (perinerual invasion)">
+					description = <"Details of neurotropism or perineural invasion.">
+				>
+				["at0041"] = <
+					text = <"Neurotropism">
+					description = <"Evidence of neurotropism or perineural invasion.">
+				>
+				["at0044"] = <
+					text = <"Associated benign melanocytic lesion">
+					description = <"A description of any associated benign melanocytic lesions.">
+				>
+				["at0045"] = <
+					text = <"Intraepidermal growth pattern">
+					description = <"A description of the melanoma growth pattern.">
+				>
+				["at0047"] = <
+					text = <"Tumour infiltrating lymphocytes">
+					description = <"Details of tumour infiltrating lymphocytes.">
+				>
+				["at0048"] = <
+					text = <"Lymphovascular invasion">
+					description = <"Details of lymphovascular invasion by melanoma.">
+				>
+				["at0049"] = <
+					text = <"Brisk / Diffuse">
+					description = <"Infiltration either of the entire base of the tumour or diffuse permeation of the invasive melanoma.">
+				>
+				["at0050"] = <
+					text = <"Nonbrisk /  Focal">
+					description = <"Focal areas of infiltration in the tumour.">
+				>
+				["at0051"] = <
+					text = <"Intermediate/late regression">
+					description = <"Evidence of tumour regression.">
+				>
+				["at0052"] = <
+					text = <"Present involving less than 75%">
+					description = <"Tumour regression is present but involves less than 75%">
+				>
+				["at0053"] = <
+					text = <"Present involving 75% or more">
+					description = <"Tumour regression is present and involves 75% or more.">
+				>
+				["at0066"] = <
+					text = <"Peripheral Invasive margins ">
+					description = <"Details of the location of the invasive tumour margins.">
+				>
+				["at0067"] = <
+					text = <"Perpheral In-situ margins ">
+					description = <"Details of the location of the in-situ tumour margins.">
+				>
+				["at0068"] = <
+					text = <"Deep margins">
+					description = <"Details of the location of the deep tumour margins.">
+				>
+				["at0072"] = <
+					text = <"Present">
+					description = <"There is evidence of tumour associated ulceration.">
+				>
+				["at0073"] = <
+					text = <"Absent">
+					description = <"There is no evdence of tumour associated ulceration.">
+				>
+				["at0074"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of tumour associated ulceration has not been determined.">
+				>
+				["at0075"] = <
+					text = <"Present">
+					description = <"There is evidence of lymphvascular invasion.">
+				>
+				["at0076"] = <
+					text = <"Absent">
+					description = <"There is no evidence of lymphvascular invasion.">
+				>
+				["at0077"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of lymphvascular invasion has not been determined.">
+				>
+				["at0078"] = <
+					text = <"Present">
+					description = <"There is evidence of microsatellites.">
+				>
+				["at0079"] = <
+					text = <"Absent">
+					description = <"There is no evidence of microsatellites">
+				>
+				["at0080"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of microsatellites has not been determined.">
+				>
+				["at0081"] = <
+					text = <"Absent">
+					description = <"There is no evidence of tumour infiltrating lymphocytes.">
+				>
+				["at0082"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of tumour infiltrating lymphocytes has not been determined.">
+				>
+				["at0083"] = <
+					text = <"Density">
+					description = <"Density of tumour infiltrating lymphocytes.">
+				>
+				["at0084"] = <
+					text = <"Sparse">
+					description = <"Sparse infiltration by lymphocytes">
+				>
+				["at0085"] = <
+					text = <"Dense">
+					description = <"Dense infitration by lymphocytes.">
+				>
+				["at0086"] = <
+					text = <"Indeterminate">
+					description = <"The density of tumour infiltration has not been determined">
+				>
+				["at0090"] = <
+					text = <"Growth phase">
+					description = <"A description of the melanoma growth phase.">
+				>
+				["at0091"] = <
+					text = <"Growth">
+					description = <"Details of growth pattern and growth phase.">
+				>
+				["at0092"] = <
+					text = <"Associated benign melanocytic lesion(s)">
+					description = <"Descriptions of any associated benign melanocytic lesions.">
+				>
+				["at0093"] = <
+					text = <"Neurotropism margins ">
+					description = <"Details of the location, extent and proximity to margins of any identified neurotropism.">
+				>
+				["at0094"] = <
+					text = <"Present">
+					description = <"There is evidence of in-transit microsatellites.">
+				>
+				["at0095"] = <
+					text = <"Absent">
+					description = <"There is no evidence of in-transit microsatellites.">
+				>
+				["at0096"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of in-transit microsatellites has not been determined">
+				>
+				["at0100"] = <
+					text = <"Solar elastosis">
+					description = <"Evidence of solar elastosis.">
+				>
+				["at0101"] = <
+					text = <"Presence of solar elastosis">
+					description = <"Evidence of the presence of solar elastosis.">
+				>
+				["at0102"] = <
+					text = <"Present">
+					description = <"There is evidence of solar elastosis">
+				>
+				["at0103"] = <
+					text = <"Absent">
+					description = <"There is no evidence of solar elastosis">
+				>
+				["at0104"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of sloar elastosis has not been determined.">
+				>
+				["at0105"] = <
+					text = <"Severity of solar elastosis">
+					description = <"The degree of severity of solar elastosis.">
+				>
+				["at0106"] = <
+					text = <"Predominant cell type">
+					description = <"The predominant cell type found.">
+				>
+				["at0107"] = <
+					text = <"Predominant cell type">
+					description = <"The predominant tumour cell type identified.">
+				>
+				["at0108"] = <
+					text = <"Spindle cells">
+					description = <"Spindle cells form the predominant cell type.">
+				>
+				["at0109"] = <
+					text = <"Epithelioid cells">
+					description = <"Epithelioid cells form the predominant cell type.">
+				>
+				["at0110"] = <
+					text = <"Indeterminate">
+					description = <"The predominant type of cell has not been identified">
+				>
+				["at0111"] = <
+					text = <"Present">
+					description = <"There is evidence of intermediate/late regression">
+				>
+				["at0112"] = <
+					text = <"Extent of regression ">
+					description = <"Width and depth of the regression.">
+				>
+				["at0113"] = <
+					text = <"Marginal clearance of regression">
+					description = <"The maximum distance of regression from the surgical margin.">
+				>
+				["at0114"] = <
+					text = <"Pagetoid">
+					description = <"A pagetoid intraepidermal growth pattern.">
+				>
+				["at0115"] = <
+					text = <"Lentiginous">
+					description = <"A lentiginous intraepidermal growth pattern.">
+				>
+				["at0116"] = <
+					text = <"Mixed">
+					description = <"A mixed intraepidermal growth pattern.">
+				>
+				["at0117"] = <
+					text = <"Indeterminate">
+					description = <"The growth pattern has not been recorded">
+				>
+			>
+		>
+	>

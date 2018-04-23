@@ -27,27 +27,24 @@ description
 			use = <"">
 			keywords = <"Größe", "Volumen">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the dimensions of a body part examined or viewed.">
+			purpose = <"To record the dimensions of a body part examined or viewed">
 			use = <"Use as a re-useable cluster in Entry archetypes and other cluster archetypes that record measurment of body parts.">
 			keywords = <"size", "volume", "area", "width", "length">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"B14424CBA9C103AF726A1081BCA771B4">
+		["references"] = <"null">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Dimensions
-		items cardinality matches {1..*; unordered} matches {
+		items cardinality matches {0..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Circumference
 				value matches {
 					C_DV_QUANTITY <
@@ -231,14 +228,13 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["de"] = <
 			items = <
 				["at0000"] = <
 					text = <"Ausmaße">
-					description = <"Die Ausmaße eines betrachteten Teils.">
+					description = <"Die Ausmaße eines betrachteten Teils">
 				>
 				["at0001"] = <
 					text = <"Umfang">
@@ -246,23 +242,23 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Länge">
-					description = <"Die Länge des betrachteten Teils (longidudinale Körperachse).">
+					description = <"Die Länge des betrachteten Teils (longidudinale Körperachse)">
 				>
 				["at0003"] = <
 					text = <"Breite">
-					description = <"Die Breite oder Weite (transversale Körperachse).">
+					description = <"Die Breite oder Weite (transversale Körperachse)">
 				>
 				["at0004"] = <
 					text = <"Tiefe">
-					description = <"Die Tiefe des betrachteten Teils (dorsal-ventrale Körperachse).">
+					description = <"Die Tiefe des betrachteten Teils (dorsal-ventrale Körperachse)">
 				>
 				["at0005"] = <
 					text = <"Fläche">
-					description = <"Die Fläche des betrachteten Teils.">
+					description = <"Die Fläche des betrachteten Teils">
 				>
 				["at0006"] = <
 					text = <"Volumen">
-					description = <"Das Volumen des betrachteten Teils.">
+					description = <"Das Volumen des betrachteten Teils">
 				>
 			>
 		>
@@ -270,31 +266,31 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Dimensions">
-					description = <"The physical dimensions of a part examined.">
+					description = <"The physical dimensions of a part examined">
 				>
 				["at0001"] = <
 					text = <"Circumference">
-					description = <"The circumference of the part examined.">
+					description = <"The circumference of the part examined">
 				>
 				["at0002"] = <
 					text = <"Length">
-					description = <"The length of the part examined (longitudinal anatomical axis).">
+					description = <"The length of the part examined (longitudinal anatomical axis)">
 				>
 				["at0003"] = <
 					text = <"Breadth">
-					description = <"The width or breadth (transverse anatomical axis).">
+					description = <"The width or breadth (transverse anatomical axis)">
 				>
 				["at0004"] = <
 					text = <"Depth">
-					description = <"The depth of the part examined (dorso-ventral anatomical axis).">
+					description = <"The depth of the part examined (dorso-ventral anatomical axis)">
 				>
 				["at0005"] = <
 					text = <"Area">
-					description = <"The area of the part examined.">
+					description = <"The area of the part examined">
 				>
 				["at0006"] = <
 					text = <"Volume">
-					description = <"The volume of the part examined.">
+					description = <"The volume of the part examined">
 				>
 			>
 		>

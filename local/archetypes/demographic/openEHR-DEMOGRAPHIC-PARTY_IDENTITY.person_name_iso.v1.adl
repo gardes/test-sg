@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4)
-	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.person_name.v1
+	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.person_name_iso.v1
 
 concept
 	[at0000]	-- Nome da pessoa
@@ -26,74 +26,96 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Representation of a personal name, based on ISO/TS 22220 standard.">
-			use = <"Used to represent the names by which a person is known. ISO 22220 allows more than one usage for a name. openEHR reference model allows a single usage for a person name (indicated by the LOCATABLE class name attribute. This attribute should not be confused with the person name). Besides, two different names for a single person cannot have the same usage. If it is necessary to represent two or more usages for the same name, two PARTY_IDENTITY (ies) for the same person name (differing in the name attribute and possibly in the elements time validity and identifier) must be created. In case a person has two names with the same usage (for example, two aliases), the system must use different values in each name attribute ('alias1', 'alias2' ..., for instance). In this case, the ISO 22220 list of values allowed for name usage cannot be used.">
+			use = <"Used to represent the names by which a person is known.">
 			keywords = <"demographic service", "person name">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Representação do nome de uma pessoa com base na norma ISO/TS 22220.">
-			use = <"Utilizado para representar os nomes que uma pessoa pode ter. A norma ISO 22220 permite que um mesmo nome possa ter vários usos. O modelo de referência do openEHR somente permite um único uso por nome (indicado pelo attribute name da classe LoCATABLE. Este atributo não deve ser confundido com o nome da pessoa). Além disso, dois nomes diferentes não podem possuir o mesmo uso. Caso seja necessário representar dois ou mais usos para o mesmo nome, é necessário criar dois PARTY_IDENTITYs para o mesmo nome da pessoa (diferindo no atributo 'name' e possivelmente nos elementos intervalo de utilização e identificador). Caso uma pessoa possua dois nomes com o mesmo uso (por exemplo, dois apelidos), e o sistema precisar armazená-los, então o sistema deverá usar em cada atributo 'name' valores diferentes para cada uso ('apelido1', 'apelido2' ..., por exemplo). Neste caso, a lista de valores permitidos para o uso do nome da norma da ISO22220 não poderá ser usada.">
+			use = <"Utilizado para representar os nomes que uma pessoa pode ter.">
 			keywords = <"serviço demográfico", "nome de uma pessoa">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Ian McNiccol, Ocean Informatics", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia">
+	other_contributors = <"Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
 	>
 
 definition
     PARTY_IDENTITY[at0000] matches {  -- Person name
-	name matches {		-- A classification that enables differentiation between the usage of names for a person.
-	    DV_TEXT matches {*}
-            DV_CODED_TEXT matches {   
-                 defining_code matches {
-                                        [local::
-                                         at0023,
-                                         at0024,
-                                         at0025,
-                                         at0026,
-                                         at0027,
-                                         at0028]
-                 }
-	    }
-        }
         details matches {
             ITEM_TREE[at0001] occurrences matches {0..1} matches {  -- name components
                 items cardinality matches {1..*; ordered} matches {
-                    ELEMENT[at0002] occurrences matches {0..*} matches {  -- Given Name
-                        value matches {
-                            DV_TEXT matches {*}                                
+                    CLUSTER[at0002] occurrences matches {0..1} matches {  -- Given Names 
+                        items cardinality matches {1..*; ordered} matches {
+                            ELEMENT[at0011] occurrences matches {1..*} matches {  -- Given Name
+                                value matches {
+                                    DV_TEXT matches {*}  
+                                }
+                            }
                         }
                     }
-                    ELEMENT[at0003] occurrences matches {0..*} matches {  -- Family Name
-                         value matches {
-                             DV_TEXT matches {*} 
+                    CLUSTER[at0003] occurrences matches {1} matches {  -- Family Names 
+                        items cardinality matches {1..*; ordered} matches {
+                            ELEMENT[at0012] occurrences matches {1..*} matches {  -- Family Name
+                                value matches {
+                                    DV_TEXT matches {*} 
+                                }
+                            }
                         }
                     }
-                    ELEMENT[at0004] occurrences matches {0..*} matches {  -- Name Title
-                          value matches {
-                              DV_TEXT matches {*}
+                    CLUSTER[at0004] occurrences matches {0..1} matches {  -- Title Group
+                        items cardinality matches {1..*; ordered} matches {
+                            ELEMENT[at0014] occurrences matches {1..*} matches {  -- Name Title
+                                value matches {
+                                    DV_TEXT matches {*}
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[at0005] occurrences matches {0..*} matches {  -- Suffix group
+                        items cardinality matches {1..*; ordered} matches {
+                            ELEMENT[at0016] occurrences matches {1..*} matches {  -- Name Suffix
+                                value matches {
+                                    DV_TEXT matches {*}
+                                }
+                            }
                          }
                     }
-                    ELEMENT[at0005] occurrences matches {0..*} matches {  -- Name Suffix
-                          value matches {
-                              DV_TEXT matches {*}
-                         }
-                    }
-                    ELEMENT[at0019] occurrences matches {0..1} matches {  -- Usage Interval
-                          value matches {
-                              DV_INTERVAL<DV_DATE> matches {*}  
-                         }
-                    }
-                    ELEMENT[at0020] occurrences matches {0..1} matches {  -- usage Identifier
-                          value matches {
-                              DV_IDENTIFIER matches {*}
-                         }
+                    CLUSTER[at0006] occurrences matches {1..*} matches {  -- Name Usage Group
+                        items cardinality matches {2..3; ordered} matches {
+                            ELEMENT[at0018] occurrences matches {1..1} matches {  -- Name Usage
+                                value matches {
+				    DV_TEXT matches {*}
+                                    DV_CODED_TEXT matches {   
+                                        defining_code matches {
+                                            [local::
+                                            at0023,
+                                            at0024,
+                                            at0025,
+                                            at0026,
+                                            at0027,
+                                            at0028]
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[at0019] occurrences matches {1..1} matches {  -- Usage Interval
+                                value matches {
+                                    DV_INTERVAL<DV_DATE> matches {*}  
+                                }
+                            }
+                            ELEMENT[at0020] occurrences matches {0..1} matches {  -- usage Identifier
+                                value matches {
+                                    DV_TEXT matches {*} 
+                                }
+                            }
+                        }
                     }
                     CLUSTER[at0007] occurrences matches {0..1} matches {  -- Alternative Name Representation
                         items cardinality matches {1..*; ordered} matches {
@@ -143,7 +165,6 @@ definition
 
 
 
-
 ontology
 	term_definitions = <
 		["pt-br"] = <
@@ -157,20 +178,24 @@ ontology
 					description = <"Componentes do nome da pessoa.">
 				>
 				["at0002"] = <
-					text = <"Nome atribuído">
-					description = <"O nome que identifica a pessoa no grupo familiar ou pelo qual ela é univocamente identificada socialmente.">
+					text = <"Nomes atribuídos">
+					description = <"Nomes atribuídos de uma pessoa.">
 				>
 				["at0003"] = <
-					text = <"Sobrenome">
-					description = <"A parte do nome que uma pessoa possui em comum com outros membros de sua família, distinta do(s) seu(s) nome(s) atribuído(s).">
+					text = <"Sobrenomes">
+					description = <"Sobrenomes de uma pessoa.">
 				>
 				["at0004"] = <
-					text = <"Título do nome">
-					description = <"Uma forma honorífica que inicia o nome, usada ao se referir a uma pessoa pelo nome, seja por correspondência ou por telefone, ou, dependendo da situação cultural, pessoalmente.">
+					text = <"Títulos do nome">
+					description = <"Conjunto de títulos que acompanham o nome de uma pessoa.">
 				>
 				["at0005"] = <
-					text = <"Sufixo do nome">
-					description = <"Termo adicional usado após o nome da pessoa.">
+					text = <"Sufixos do nome">
+					description = <"Conjunto de sufixos que acompanham o nome de uma pessoa.">
+				>
+				["at0006"] = <
+					text = <"Grupo de utilização do nome">
+					description = <"Grupo que descreve como este nome deve ser usado.">
 				>
 				["at0007"] = <
 					text = <"Representação alternativa do nome">
@@ -181,12 +206,32 @@ ontology
 					description = <"Indica o nome pelo qual a pessoa prefere ser identificada.">
 				>
 				["at0009"] = <
-					text = <"Indicador de acurácia/segurança">
+					text = <"Indicador de uso condicional">
 					description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa.">
 				>
 				["at0010"] = <
 					text = <"Nome completo">
 					description = <"O nome completo da pessoa, resultado da concatenação de suas partes componentes.">
+				>
+				["at0011"] = <
+					text = <"Nome atribuído">
+					description = <"O nome que identifica a pessoa no grupo familiar ou pelo qual ela é univocamente identificada socialmente.">
+				>
+				["at0012"] = <
+					text = <"Sobrenome">
+					description = <"A parte do nome que uma pessoa possui em comum com outros membros de sua família, distinta do(s) seu(s) nome(s) atribuído(s).">
+				>
+				["at0014"] = <
+					text = <"Título do nome">
+					description = <"Uma forma honorífica que inicia o nome, usada ao se referir a uma pessoa pelo nome, seja por correspondência ou por telefone, ou, dependendo da situação cultural, pessoalmente.">
+				>
+				["at0016"] = <
+					text = <"Sufixo do nome">
+					description = <"Termo adicional usado após o nome da pessoa.">
+				>
+				["at0018"] = <
+					text = <"Uso do nome">
+					description = <"Uma classificação que permite a diferenciação entre os usos do nome de uma pessoa. Um nome de um indivíduo pode ter muitos usos.">
 				>
 				["at0019"] = <
 					text = <"Intervalo de utilização">
@@ -265,20 +310,24 @@ ontology
 					description = <"Components of a person name.">
 				>
 				["at0002"] = <
-					text = <"Given name">
-					description = <"The person's identifying name(s) within the family group or by which he/she is uniquely socially identified.">
+					text = <"Given names">
+					description = <"Person given names.">
 				>
 				["at0003"] = <
-					text = <"Family name">
-					description = <"The part of a name a person usually has in common with some other members of his/her family, as distinguished from his/her given names.">
+					text = <"Family names">
+					description = <"Person family names.">
 				>
 				["at0004"] = <
-					text = <"Title">
-					description = <"An honorific form of address commencing a name, used when addressing a person by name, whether by mail, by phone, or depending upon cultural situation in person.">
+					text = <"Titles">
+					description = <"Person name titles.">
 				>
 				["at0005"] = <
-					text = <"Suffix">
-					description = <"Additional term used following a person name.">
+					text = <"Suffixes">
+					description = <"Person name suffixes.">
+				>
+				["at0006"] = <
+					text = <"Name usages">
+					description = <"Details of person name usages.">
 				>
 				["at0007"] = <
 					text = <"Alternative name representations">
@@ -289,16 +338,36 @@ ontology
 					description = <"Indicates that this is the name by which a person chooses to be identified.">
 				>
 				["at0009"] = <
-					text = <"Issues of accuracy and privacy">
-					description = <"An indicator of specific conditions or rules that should be applied to the use of the person name.">
+					text = <"Specific issues">
+					description = <"Specific issues that apply to the use of the person name.">
 				>
 				["at0010"] = <
 					text = <"Full Name">
 					description = <"The person's full name as a concatenation of its name parts.">
 				>
+				["at0011"] = <
+					text = <"Given name">
+					description = <"The person's identifying name(s) within the family group or by which he/she is uniquely socially identified.">
+				>
+				["at0012"] = <
+					text = <"Family name">
+					description = <"The part of a name a person usually has in common with some other members of his/her family, as distinguished from his/her given names.">
+				>
+				["at0014"] = <
+					text = <"Title">
+					description = <"An honorific form of address commencing a name, used when addressing a person by name, whether by mail, by phone, or depending upon cultural situation in person.">
+				>
+				["at0016"] = <
+					text = <"Suffix">
+					description = <"Additional term used following a person name.">
+				>
+				["at0018"] = <
+					text = <"Name usage">
+					description = <"A classification that enables differentiation between the usage of names for a person. An individual name may have many name uses">
+				>
 				["at0019"] = <
 					text = <"Usage interval">
-					description = <"The period of time for which the name usage applies.">
+					description = <"The period of time for which this name usage applies.">
 				>
 				["at0020"] = <
 					text = <"Usage identifier">
