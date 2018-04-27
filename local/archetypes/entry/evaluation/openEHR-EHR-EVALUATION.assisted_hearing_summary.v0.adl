@@ -5,6 +5,16 @@ concept
 	[at0000]	-- Assisted hearing summary
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -13,6 +23,22 @@ description
 		["date"] = <"2015-10-05">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To record an ongoing and persistent overview about devices that have been used to assist or enhance hearing.(en)">
+			use = <"bla 1
+
+bla2 
+
+bla3
+
+
+dsds
+
+
+bla33">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record an ongoing and persistent overview about devices that have been used to assist or enhance hearing.">
@@ -33,8 +59,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5D84CAD3C5904EB26C5FC053852394C7">
-		["build_uid"] = <"d12f7b86-7cbb-470a-aac2-f49d78c493ec">
+		["MD5-CAM-1.0.1"] = <"B8B43A05F3FB8C45FBFFF3F445DA53CE">
+		["build_uid"] = <"f6204a33-4b8b-4fb8-80e7-43ca16c01abc">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -202,6 +228,86 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
 					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Assisted hearing summary(en)">
+					description = <"*An ongoing and persistent overview about devices that have been used to assist or enhance hearing.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Status(en)">
+					description = <"*Current aided status.(en)">
+				>
+				["at0003"] = <
+					text = <"*Never aided(en)">
+					description = <"*Hearing assistence has never been used.(en)">
+				>
+				["at0004"] = <
+					text = <"*Currently assisted(en)">
+					description = <"*Hearing assistence is currently being used.(en)">
+				>
+				["at0005"] = <
+					text = <"*Previously aided(en)">
+					description = <"*Hearing assistence has been used in the past.(en)">
+				>
+				["at0006"] = <
+					text = <"*Fitted device(en)">
+					description = <"*Details about each device fitted.(en)">
+				>
+				["at0007"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the device, by name.(en)">
+				>
+				["at0008"] = <
+					text = <"*Fitting date(en)">
+					description = <"*Date of fitting or insertion of the assisted hearing device/s.(en)">
+				>
+				["at0009"] = <
+					text = <"*Cessation date(en)">
+					description = <"*Date that use of the device ceased.(en)">
+				>
+				["at0010"] = <
+					text = <"*Configuration detail(en)">
+					description = <"*Additional structured detail about the device and its configuration.(en)">
+				>
+				["at0011"] = <
+					text = <"*Configuration(en)">
+					description = <"*Details about the configuration of the assisted hearing device.(en)">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site where the device is located/implanted.(en)">
+				>
+				["at0013"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location of the body site where the device is located/implanted.(en)">
+				>
+				["at0014"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the device.(en)">
+				>
+				["at0015"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the use of assisted hearing devices.(en)">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"*Last updated(en)">
+					description = <"*The date this summary was last updated.(en)">
+				>
+				["at0018"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
 				>
 			>
 		>

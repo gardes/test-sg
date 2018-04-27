@@ -4,7 +4,7 @@ specialise
 	openEHR-EHR-OBSERVATION.lab_test-immunology.v1
 
 concept
-	[at0000.1.1]	-- Antinuclear antibody (ANA) test
+	[at0000.1.1]	-- Antinuclear antibody (ANA)
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -25,7 +25,7 @@ description
 ">
 			keywords = <"lab", "pathology", "immunology", "laboratory", "serology", "ANA", "ANF">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -39,11 +39,11 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 
 
 ">
-		["MD5-CAM-1.0.1"] = <"16A276EF6AFF403E2953A1DFE5B4B125">
+		["MD5-CAM-1.0.1"] = <"93D922D2937A2B253E67B0BA7DDA3F76">
 	>
 
 definition
-	OBSERVATION[at0000.1.1] matches {	-- Antinuclear antibody (ANA) test
+	OBSERVATION[at0000.1.1] matches {	-- Antinuclear antibody (ANA)
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -769,7 +769,7 @@ This archetype also acts as the parent for specialisations appropriate for more 
 					description = <"To represent immunology tests where the result is expressed as a titre usually along with a qualitiative result e.g. positive, negative">
 				>
 				["at0000.1.1"] = <
-					text = <"Antinuclear antibody (ANA) test">
+					text = <"Antinuclear antibody (ANA)">
 					description = <"To represent Antinuclear antibody (ANA) immunology test.">
 				>
 				["at0001"] = <

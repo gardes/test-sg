@@ -20,7 +20,7 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology and CLUSTER.microscopy_colorectal_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "colonic", "rectal", "anal", "GI", "gastrointestinal", "bowel">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -32,20 +32,17 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 Royal College of Pathologists. Dataset for colorectal cancer (2nd edition) [Internet]. 2007 Dec 4;[cited 2009 Jul 29 ]
 Available from: http://www.rcpath.org/index.asp?PageID=1153
 
-
-
-">
-		["MD5-CAM-1.0.1"] = <"95E508F7CBEE33EFADB8BAF3E992FC37">
+Royal College of Pathologists of Australasia. Colorectal Cancer Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ]
+Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/COLORECTAL%20CANCER%20STRUCTURED%20REPORTING%20PROTOCOL%20for%20web.pdf">
+		["MD5-CAM-1.0.1"] = <"4243B86239E008CE0500331D107393A5">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Macroscopic findings - Colorectal cancer
-		items cardinality matches {0..*; unordered} matches {
+		items cardinality matches {1..*; unordered} matches {
 			allow_archetype CLUSTER[at0347] occurrences matches {0..1} matches {	-- Tumour dimensions
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties\.v1/}
-				exclude
-					archetype_id/value matches {/.*/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			ELEMENT[at0330] occurrences matches {0..1} matches {	-- Maximum extramuscular extension
 				value matches {
@@ -131,6 +128,11 @@ definition
 							}
 						}
 					}
+					ELEMENT[at0354] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 			CLUSTER[at0335] occurrences matches {0..1} matches {	-- For rectal tumours
@@ -164,7 +166,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
@@ -269,6 +270,10 @@ ontology
 				["at0353"] = <
 					text = <"Distance of tumour from dentate line">
 					description = <"For abdominoperineal resection specimens, distance of tumour from the dentate line.">
+				>
+				["at0354"] = <
+					text = <"Comment">
+					description = <"Furrher text comment on the perforation.">
 				>
 			>
 		>
