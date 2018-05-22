@@ -478,123 +478,153 @@ ontology
 				>
 				["at0.61"] = <
 					text = <"NX">
-					description = <"Regional lymph nodes cannot be assessed (e.g. previously removed).">
+					description = <"Regional lymph nodes cannot be assessed (e.g. previously removed).
+">
 				>
 				["at0.62"] = <
 					text = <"N0">
-					description = <"No regional lymph node metastasis.">
+					description = <"No regional lymph node metastasis.
+">
 				>
 				["at0.63"] = <
 					text = <"N1">
-					description = <"Metastasis in movable ipsilateral axillary lymph node(s).">
+					description = <"Metastasis in movable ipsilateral axillary lymph node(s).
+">
 				>
 				["at0.64"] = <
 					text = <"N2">
-					description = <"Metastasis in fixed ipsilateral axillary lymph node(s) or in clinically apparent* ipsilateral internal mammary lymph node(s) in the absence of clinically evident axillary lymph node metastasis.">
+					description = <"Metastasis in fixed ipsilateral axillary lymph node(s) or in clinically apparent* ipsilateral internal mammary lymph node(s) in the absence of clinically evident axillary lymph node metastasis.
+">
 				>
 				["at0.65"] = <
 					text = <"N2a">
-					description = <"Metastasis in axillary lymph node(s) fixed to one another or to other structures.">
+					description = <"Metastasis in axillary lymph node(s) fixed to one another or to other structures.
+">
 				>
 				["at0.66"] = <
 					text = <"N2b">
-					description = <"Metastasis only in clinically apparent* internal mammary lymph node(s) and in the absence of clinically evident axillary lymph node metastasis.">
+					description = <"Metastasis only in clinically apparent* internal mammary lymph node(s) and in the absence of clinically evident axillary lymph node metastasis.
+">
 				>
 				["at0.67"] = <
 					text = <"N3">
-					description = <"Metastasis in ipsilateral infraclavicular lymph node(s) with or without axillary lymph node involvement; or in clinically apparent ipsilateral internal mammary lymph node(s) in the presence of clinically evident axillary lymph node metastasis; or metastasis in ipsilateral supraclavicular lymph node(s) with or without axillary or internal mammary lymph node involvement.">
+					description = <"Metastasis in ipsilateral infraclavicular lymph node(s) with or without axillary lymph node involvement; or in clinically apparent ipsilateral internal mammary lymph node(s) in the presence of clinically evident axillary lymph node metastasis; or metastasis in ipsilateral supraclavicular lymph node(s) with or without axillary or internal mammary lymph node involvement.
+">
 				>
 				["at0.68"] = <
 					text = <"N3a">
-					description = <"Metastasis in infraclavicular lymph node(s).">
+					description = <"Metastasis in infraclavicular lymph node(s).
+">
 				>
 				["at0.69"] = <
 					text = <"N3b">
-					description = <"Metastasis in internal mammary and axillary lymph nodes.">
+					description = <"Metastasis in internal mammary and axillary lymph nodes.
+">
 				>
 				["at0.70"] = <
 					text = <"N3c">
-					description = <"Metastasis in supraclavicular lymph node(s).">
+					description = <"Metastasis in supraclavicular lymph node(s).
+">
 				>
 				["at0.71"] = <
 					text = <"MX">
-					description = <"MX. Distant metastasis cannot be assessed.">
+					description = <"MX. Distant metastasis cannot be assessed.
+">
 				>
 				["at0.72"] = <
 					text = <"M0">
-					description = <"No distant metastasis.">
+					description = <"No distant metastasis.
+">
 				>
 				["at0.73"] = <
 					text = <"M1">
-					description = <"Distant metastasis.">
+					description = <"Distant metastasis.
+">
 				>
 				["at0.74"] = <
 					text = <"pNX">
-					description = <"Regional lymph nodes cannot be assessed (not removed for study or previously removed).">
+					description = <"Regional lymph nodes cannot be assessed (not removed for study or previously removed).
+">
 				>
 				["at0.75"] = <
 					text = <"pN0">
-					description = <"No regional lymph node metastasis.">
+					description = <"No regional lymph node metastasis.
+">
 				>
 				["at0.76"] = <
 					text = <"pN1mi">
-					description = <"Micrometastasis (larger than 0.2 mm, but none larger than 2 mm in greatest dimension).">
+					description = <"Micrometastasis (larger than 0.2 mm, but none larger than 2 mm in greatest dimension).
+">
 				>
 				["at0.77"] = <
 					text = <"pN1">
-					description = <"Metastasis in 1-3 ipsilateral axillary lymph node(s), and/or in ipsilateral internal mammary nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.">
+					description = <"Metastasis in 1-3 ipsilateral axillary lymph node(s), and/or in ipsilateral internal mammary nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.
+">
 				>
 				["at0.78"] = <
 					text = <"pN1a">
-					description = <"Metastasis in 1-3 axillary lymph node(s), including at least one larger than 2 mm in greatest dimension.">
+					description = <"Metastasis in 1-3 axillary lymph node(s), including at least one larger than 2 mm in greatest dimension.
+">
 				>
 				["at0.79"] = <
 					text = <"pN1b">
-					description = <"Internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.">
+					description = <"Internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.
+">
 				>
 				["at0.80"] = <
 					text = <"pN1c">
-					description = <"Metastasis in 1-3 axillary lymph nodes and internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.">
+					description = <"Metastasis in 1-3 axillary lymph nodes and internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.
+">
 				>
 				["at0.81"] = <
 					text = <"pN2">
-					description = <"Metastasis in 4-9 ipsilateral axillary lymph nodes, or in clinically apparent* ipsilateral internal mammary lymph node(s) in the absence of axillary lymph node metastasis.">
+					description = <"Metastasis in 4-9 ipsilateral axillary lymph nodes, or in clinically apparent* ipsilateral internal mammary lymph node(s) in the absence of axillary lymph node metastasis.
+">
 				>
 				["at0.82"] = <
 					text = <"pN2a">
-					description = <"Metastasis in 4-9 axillary lymph nodes, including at least one that is larger than 2 mm.">
+					description = <"Metastasis in 4-9 axillary lymph nodes, including at least one that is larger than 2 mm.
+">
 				>
 				["at0.83"] = <
 					text = <"pN2b">
-					description = <"Metastasis in clinically apparent internal mammary lymph node(s), in the absence of axillary lymph node metastasis.">
+					description = <"Metastasis in clinically apparent internal mammary lymph node(s), in the absence of axillary lymph node metastasis.
+">
 				>
 				["at0.84"] = <
 					text = <"pN3">
-					description = <"Metastasis in 10 or more ipsilateral axillary lymph nodes; or in ipsilateral infraclavicular lymph nodes; or in clinically apparent ipsilateral internal mammary lymph nodes in the presence of one or more positive axillary lymph nodes; or in more than 3 axillary lymph nodes with clinically negative, microscopic metastasis in internal mammary lymph nodes; or in ipsilateral supraclavicular lymph nodes.">
+					description = <"Metastasis in 10 or more ipsilateral axillary lymph nodes; or in ipsilateral infraclavicular lymph nodes; or in clinically apparent ipsilateral internal mammary lymph nodes in the presence of one or more positive axillary lymph nodes; or in more than 3 axillary lymph nodes with clinically negative, microscopic metastasis in internal mammary lymph nodes; or in ipsilateral supraclavicular lymph nodes.
+">
 				>
 				["at0.85"] = <
 					text = <"pN3a">
-					description = <"Metastasis in 10 or more axillary lymph nodes (at least one larger than 2 mm) or metastasis in infraclavicular lymph nodes.">
+					description = <"Metastasis in 10 or more axillary lymph nodes (at least one larger than 2 mm) or metastasis in infraclavicular lymph nodes.
+">
 				>
 				["at0.86"] = <
 					text = <"pN3b">
-					description = <"Metastasis in clinically apparent internal mammary lymph node(s) in the presence of positive axillary lymph node(s); or metastasis in more than 3 axillary lymph nodes and in internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.">
+					description = <"Metastasis in clinically apparent internal mammary lymph node(s) in the presence of positive axillary lymph node(s); or metastasis in more than 3 axillary lymph nodes and in internal mammary lymph nodes with microscopic metastasis detected by sentinel lymph node dissection but not clinically apparent.
+">
 				>
 				["at0.87"] = <
 					text = <"pN3c">
-					description = <"Metastasis in supraclavicular lymph node(s).">
+					description = <"Metastasis in supraclavicular lymph node(s).
+">
 				>
 				["at0.88"] = <
 					text = <"pMX">
-					description = <"MX. Distant metastasis cannot be assessed.">
+					description = <"MX. Distant metastasis cannot be assessed.
+">
 				>
 				["at0.89"] = <
 					text = <"pM0">
-					description = <"No distant metastasis.">
+					description = <"No distant metastasis.
+">
 				>
 				["at0.90"] = <
 					text = <"pM1">
-					description = <"Distant metastasis.">
+					description = <"Distant metastasis.
+">
 				>
 				["at0.91"] = <
 					text = <"Stage 0">
