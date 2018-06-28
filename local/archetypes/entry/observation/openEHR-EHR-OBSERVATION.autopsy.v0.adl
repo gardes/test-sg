@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.autopsy.v1
+﻿archetype (adl_version=1.4; uid=8e9dfd57-5a27-4824-80f0-62a7670e53e4)
+	openEHR-EHR-OBSERVATION.autopsy.v0
 
 concept
 	[at0000]	-- Autopsy examination
@@ -34,27 +34,34 @@ description
 			purpose = <"Zur Dokumentation von Befunden der Autopsie mittels strukturiertem Text">
 			use = <"">
 			misuse = <"Zur Dokumentation von Diagnosen sollte der EVALUATION.problem-diagnosis Archetyp benutzt werden">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			purpose = <"Для записи результатов вскрытия, используя структурированный текст.">
 			use = <"*(en)">
 			misuse = <"Диагноз должен быть записан с использованием the EVALUATION.problem-diagnosis archetype.">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording findings at autopsy using structured text.">
 			use = <"">
 			misuse = <"Diagnoses should be recorded using the EVALUATION.problem-diagnosis archetype.">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"14F3AC36DA31136DF70679A61C93C15D">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"2468BD3D17E34A2CC49CCA134989D6B9">
+		["build_uid"] = <"103f7a19-952a-47ad-b27a-d109ed5af705">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
