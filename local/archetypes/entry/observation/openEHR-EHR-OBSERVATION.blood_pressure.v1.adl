@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=4c7ecb9e-0b3f-4bd0-b42a-364f3a853142)
 	openEHR-EHR-OBSERVATION.blood_pressure.v1
 
 concept
@@ -13,21 +13,11 @@ language
 				["organisation"] = <"Ocean Informatics, University of Heidelberg">
 			>
 		>
-		["zh-cn"] = <
-			language = <[ISO_639-1::zh-cn]>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
 			author = <
-				["name"] = <"Chunlan Ma, Lin Zhang">
-				["organisation"] = <"Ocean Informatics, BIPH">
-				["email"] = <", linforest@163.com">
-			>
-			accreditation = <"What goes here?">
-		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
-			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
+				["name"] = <"Igor Lizunov">
+				["email"] = <"i.lizunov@infinnity.ru">
 			>
 		>
 		["es-ar"] = <
@@ -39,26 +29,14 @@ language
 			>
 			accreditation = <"Universidad de Morón">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
 			author = <
-				["name"] = <"Mona Saleh">
+				["name"] = <"Jussara Rözsch">
+				["organisation"] = <"OpenEHR  Foundation">
+				["email"] = <"jussara.macedo@gmail.com">
 			>
-		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			author = <
-				["name"] = <"Igor Lizunov">
-				["email"] = <"i.lizunov@infinnity.ru">
-			>
-		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			author = <
-				["name"] = <"Marja Buur">
-				["organisation"] = <"M.C.A.">
-				["email"] = <"m.buur-krom@mca.nl">
-			>
+			accreditation = <"Medical Doctor, Psychiarist, Clinical Modeller, openEHR Diretor, ehealth infostructuture WG ccoordinator- brazilian  ehealth program">
 		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
@@ -68,14 +46,36 @@ language
 				["email"] = <"skoba@moss.gr.jp">
 			>
 		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
 			author = <
-				["name"] = <"Jussara Rözsch">
-				["organisation"] = <"OpenEHR  Foundation">
-				["email"] = <"jussara.macedo@gmail.com">
+				["name"] = <"Mona Saleh">
 			>
-			accreditation = <"Medical Doctor, Psychiarist, Clinical Modeller, openEHR Diretor, ehealth infostructuture WG ccoordinator- brazilian  ehealth program">
+		>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
+			author = <
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"shahla.foozonkhah@oceaninformatics.com">
+			>
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			author = <
+				["name"] = <"Chunlan Ma, Lin Zhang">
+				["organisation"] = <"Ocean Informatics, BIPH">
+				["email"] = <", linforest@163.com">
+			>
+			accreditation = <"What goes here?">
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"Marja Buur">
+				["organisation"] = <"M.C.A.">
+				["email"] = <"m.buur-krom@mca.nl">
+			>
 		>
 	>
 description
@@ -86,30 +86,6 @@ description
 		["date"] = <"2006-03-22">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the systemic arterial blood pressure of an individual.">
-			use = <"Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. The archetype is intended to capture blood pressure measurements in all clinical scenarios - for example, self-measurement with a home blood pressure machine; an emergency assessment of systolic using palpation and a sphygmomanometer; measurements taken in clinical consultations or during exercise stress testing; and a series of measurements made by a machine in Intensive Care.   
-There is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. 
-Named events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).">
-			keywords = <"observations", "measurement", "bp", "vital signs", "mean arterial pressure", "pulse pressure", "systolic", "diastolic", "RR", "NIBP">
-			misuse = <"Not to be used for intravenous pressure.
-Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
-Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
-			copyright = <"© openEHR Foundation">
-		>
-		["ja"] = <
-			language = <[ISO_639-1::ja]>
-			purpose = <"個人の全身動脈血圧を記録するためのもの。">
-			use = <"測定方法や身体部位を問わず、すべての血圧についての表現が記録するために使用される。このアーキタイプはすべての臨床シナリオを網羅することを目指している。たとえば、家庭用の血圧計で自己測定した血圧や、集中治療において機械的に計測された一連の血圧などである。
-患者の体位や運動、攻落する因子や研究におけるティルト台の角度を識別することにより、計測についての理解を手助けする豊富なステートモデルもある。
-指定されているイベントは、24時間平均血圧に制限されているが、テンプレートではデフォルトの「任意のイベント」にさらなる制約を加えることで、特定の時間や間隔にわたって（数学的機能を追加したり、削除して）、血圧を記録するように、血圧測定にタイする特定の要求を行うようにすることができる。">
-			keywords = <"観察", "計測", "血圧", "バイタルサイン", "平均動脈圧", "脈圧", "収縮期", "拡張期", "RR間隔", "非観血血圧">
-			misuse = <"静脈内圧のためには使用されない
-全身に循環する動脈圧の代理としてではない、たとえば、右肺動脈の計測といった動脈圧の計測としては用いられない。
-このような場合には、関連した特殊化であるOBSERVATION.intravascular_pressureを利用すること。">
-			copyright = <"© openEHR Foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Dient der Dokumentation des systemischen arteriellen Blutdrucks einer Person.">
@@ -120,31 +96,6 @@ Benannte Ereignisse wurden auf den 24-stündigen Durchschnitt beschränkt, jedoc
 			misuse = <"Nicht benutzen zur Dokumentation des intravenösen Drucks.
 Nicht benutzen zur Dokumentation des arteriellen Blutdrucks, welcher KEIN Surrogat für den arteriellen Druck in der systemischen Zirkluation ist, z.B. die spezifische Messung des rechten pulmonaren Arteriendrucks.
 In diesem Fall sollte der OBSERVATION.intravascular_pressure Archetyp bzw. dessen Spezialisierungen verwendet werden.">
-			copyright = <"© openEHR Foundation">
-		>
-		["zh-cn"] = <
-			language = <[ISO_639-1::zh-cn]>
-			purpose = <"旨在记录一个人的体循环血压（systemic blood pressure，全身血压，系统血压）。此测量结果原始型记录的是收缩压和舒张压，所采取的记录方式适合于视为代表全身体循环血压的结果。">
-			use = <"用于记录体循环血压测量结果的所有表达形式，无论其用于记录结果的究竟是什么方法或身体位置。本原始型旨在采集所有临床场景下的血压测量结果；例如，采用家用血压测量仪进行的自助检测、采用触诊方法和血压计进行的收缩压紧急评估、临床会诊或运动负荷试验过程中进行的测量以及重症监护过程中利用仪器所完成的一系列测量。
-这是一个丰富的状态模型，支持通过确定患者体位、运动情况、干扰因素以及研究工作所采用的倾斜工作台的角度，来解释测量结果。
-具名事件（named events）仅限于24小时期间的均值；不过，可以利用模板来进一步约束默认的“any event”（任何事件），以满足关于血压测量的具体需要，诸如按具体的时间点（时刻）来记录血压，或者是记录为变化范围（+/-数学函数）。">
-			keywords = <"观察", "观测", "观察指标", "观测指标", "观察结果", "观测结果", "观察项目", "观测项目", "检测", "测量", "测定", "检测指标", "测量指标", "测定指标", "检测结果", "测量结果", "测定结果", "检测项目", "测量项目", "测定项目", "血压", "blood pressure", "bp", "生命体征", "体征", "平均动脉压", "脉压", "脉搏压", "收缩压", "舒张压", "收缩期", "舒张期", "RR", "无创性测压法", "non-invasive blood pressure", "NIBP">
-			misuse = <"并不用于静脉内血压。
-并不用于并非代表体循环动脉压的动脉血压的测量，如右肺动脉压的专用测量指标。
-在上述这两种情况下，请采用血管内压力观察指标原始型（OBSERVATION.intravascular_pressure）及相关的特化形式。">
-			copyright = <"© openEHR Foundation">
-		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			purpose = <"Het registreren van de systemische arteriele bloeddruk van een individu.">
-			use = <"Wordt gebruikt om alle weergaven van de systemische bloeddruk te registreren, ongeacht welke methode of welke lichaamslocatie is gebruikt om de meting te doen. Het archetype is bedoeld om bloeddruk metingen in alle klinische scenario's vast te leggen - bijvoorbeeld, zelf-meting met een thuis bloeddrukmeter; een nood beoordeling van de systolische bloeddruk met behulp van palpatie en een drukmanchet; metingen tijdens consulten, overleg of tijdens inspannings stress testen, en een reeks van metingen die door een apparaat zijn gedaan in de intensieve zorg.
-Er is een uitgebreid status model dat interpretatie van metingen ondersteunt, door patiënt positie, inspanning, beïnvloedende factoren en de hoek/het aantal graden waarin de onderzoekstafel staat, te specificeren.
-Genoemde gebeurtenissen zijn gelimiteerd tot een gemiddelde over een periode van 24 uur, maar templates kunnen de standaard 'iedere gebeurtenis' verder vernauwen om specifieke eisen voor de bloeddrukmeting, zoals registreren van de bloeddruk op een specifiek tijdsmoment, of over een reeks van intervallen (+/- statistisch gebruik) te faciliteren.
-">
-			keywords = <"observaties", "meting", "blddr", "vitale functies", "gemiddelde arteriele druk", "polsdruk", "systolisch", "diastolisch", "RR", "NIBP", "tensie">
-			misuse = <"Niet te gebruiken voor intraveneuze druk.
-Niet te gebruiken voor de meting van de arteriele bloeddruk welke geen surrogaat is voor de arteriele druk in de systemische circulatie, bv de specifieke meting van de rechter arterie pulmonalis druk.
-Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in beide situaties.">
 			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
@@ -158,38 +109,6 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 Не следует использовать для измерения артериального давления, которое не является суррогатом артериального давления в системном кровотоке, например, конкретные измерения давления в легочной артерии.
 Использовать OBSERVATION.intravascular_pressure и смежных специальностей в обоих этих ситуациях.
 ">
-			copyright = <"© openEHR Foundation">
-		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
-			purpose = <"ثبت نمودن فشار خون وریدی کل یک فرد">
-			use = <"برای ثبت هر چیز نشاندهنده اندازه گیری فشاره خون وریدی کل، جدا از ابنکه برای ثبت آن از چه شیوه ای یا کدام بخش از بدن استفاده شده باشد، بکار می رود. این الگوساز برای گردآوری اندازه گیری فشار خون در همه سناریوهای بالینی طراحی شده است، مانند اندازه گیری توسط خود فرد بوسیله دستگاه فشار خون خانگی، ارزیابی اورژانسی سیستولیک با لمس نبض و یک \"فشارسنج خون\"، اندازه گیریهای انجام گرفته در مشاوره بالینی یا حین تست ورزشی، و یا یک رشته از اندازه گیریهای دستگاه مراقبت های ویژه.
-مدل حالت توانمندی وجود دارد که تفسیر اندازه گیری ها را از طریق شناسایی موقعیت بیمار، ورزش، فاکتورهای مبهم و تست تخت شیبدار، پشتیبانی می کند.
-رویدادهای نام گذاری شده بگونه ای محدود شده اند که روی یک دوره 24 ساعته میانگین گیری کنند هر چند که الگو ها می توانند پیش فرض -هر گونه  رویداد- را برای فراهم کردن خواسته های خاص از اندازه گیری فشار خون، با محدودیتهایی نظیر ثبت فشار خون سر وقت یا روی رنجی از فاصله های زمانی (با عمل جمع یا منها)، بیشتر محدود کنند 
-">
-			keywords = <"مشاهدات", "اندازه گیری", "فشار خون", "علایم حیاتی", "میانگین فشار وریدی", "فشار نبض", "سیستولیک", "دیاستولیک", "تنفسهای سریع", "فشار خون غیر تهاجمی">
-			misuse = <"برای فشار داخل وریدی استفاده نشود.
-برای اندازه گیری فشار خون وریدی نباید استفاده شود که جایگزینی برای فشار وریدی در گردش خون کلی نیست، بعنوان مثال اندازه گیری خاص فشار وریدی ریه راست.
-
- و تخصص های مربوطه برای موارد بالا بکار رود\"OBSERVATION.intravascular_pressure\"
- 
-">
-			copyright = <"© openEHR Foundation">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل ضغط الدم الشرياني النظامي للشخص">
-			use = <"يستخدم لتسجيل جميع طرق عرض ضغط الدم الشرايني النظامي, بغض النظر عن الطريقة أو الموضع من الجسم المستخدم في التسجيل.
-
-يستخدم هذا النموذج لالتقاط قياسات ضغط الدم في جميع السيناريوهات السريرية - مثلا, قياس ضغط الدم بواسطة الشخص لنفسه باستخدام آلة القياس المنزلية, تقييم الضغط الانقباضي في حالة الطوارئ باستخدام المجس و مقياس الضغط الزئبقي, القياسات التي تم أخذها في الاستشارات السريرية أو في أثناء اختبار الضغط البدني, و سلسلة من القياسات التي تتم باستخدام آلات العناية المركزة.
-
-يستخدم هذا النموذج الغني في تسجيل حالات القياس من خلال تفسيره في ضوء وضع المريض عند القياس, المجهود البدني, العوامل المربكة, و زاوية انحناء الطاولة المستخدمة عند القياس.
-
-تم تحديد بعض الوقائع إلى المتوسط خلال 24 ساعة, إلا أن القوالب تستطيع تقييد الاختيار التلقائي (إحدى الوقائع) لمتطلبات معينة حول قياسات ضغط الدم مثل تسجيل ضغط الدم في نقاط زمنية معينة أو خلال مدى من الفواصل الزمنية - زائد أو ناقص دوال حسابية">
-			keywords = <"الملاحظات", "القياس", "ضغط الدم", "العلامات الحياتية", "متوسط الضغط الشرياني", "الضغط عند النبض", "الانقباضي", "الانبساطي", "معدل التنفس", "قياس ضغط الدم غير الباضع">
-			misuse = <"لا يستخدم لتسجيل الضغط داخل الوريد.
-لا يستخدم لقياس ضغط الدم الشرياني الذي لا يحل بديلا عن ضغط الدم الشرياني في الدورة الجهازية مثل قياسات معينة لضغط الشريان الرئوي الأيمن.
-استخدم نموذج ملاحظة. الضغط داخل الأوعية الدموية , و التخصيصات المتعلقة في كل من هذين الموقفين.">
 			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
@@ -219,14 +138,102 @@ Não deve ser usada para medida da pressão arterial que NÃO é um substituto d
 Em ambas situações use OBSERVATION.intravascular_pressure e especializações relacionadas.">
 			copyright = <"© openEHR Foundation">
 		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			purpose = <"個人の全身動脈血圧を記録するためのもの。">
+			use = <"測定方法や身体部位を問わず、すべての血圧についての表現が記録するために使用される。このアーキタイプはすべての臨床シナリオを網羅することを目指している。たとえば、家庭用の血圧計で自己測定した血圧や、集中治療において機械的に計測された一連の血圧などである。
+患者の体位や運動、攻落する因子や研究におけるティルト台の角度を識別することにより、計測についての理解を手助けする豊富なステートモデルもある。
+指定されているイベントは、24時間平均血圧に制限されているが、テンプレートではデフォルトの「任意のイベント」にさらなる制約を加えることで、特定の時間や間隔にわたって（数学的機能を追加したり、削除して）、血圧を記録するように、血圧測定にタイする特定の要求を行うようにすることができる。">
+			keywords = <"観察", "計測", "血圧", "バイタルサイン", "平均動脈圧", "脈圧", "収縮期", "拡張期", "RR間隔", "非観血血圧">
+			misuse = <"静脈内圧のためには使用されない
+全身に循環する動脈圧の代理としてではない、たとえば、右肺動脈の計測といった動脈圧の計測としては用いられない。
+このような場合には、関連した特殊化であるOBSERVATION.intravascular_pressureを利用すること。">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the systemic arterial blood pressure of an individual.">
+			use = <"Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. The archetype is intended to capture blood pressure measurements in all clinical scenarios - for example, self-measurement with a home blood pressure machine; an emergency assessment of systolic using palpation and a sphygmomanometer; measurements taken in clinical consultations or during exercise stress testing; and a series of measurements made by a machine in Intensive Care.   
+There is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. 
+Named events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).">
+			keywords = <"observations", "measurement", "bp", "vital signs", "mean arterial pressure", "pulse pressure", "systolic", "diastolic", "RR", "NIBP">
+			misuse = <"Not to be used for intravenous pressure.
+Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
+Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل ضغط الدم الشرياني النظامي للشخص">
+			use = <"يستخدم لتسجيل جميع طرق عرض ضغط الدم الشرايني النظامي, بغض النظر عن الطريقة أو الموضع من الجسم المستخدم في التسجيل.
+
+يستخدم هذا النموذج لالتقاط قياسات ضغط الدم في جميع السيناريوهات السريرية - مثلا, قياس ضغط الدم بواسطة الشخص لنفسه باستخدام آلة القياس المنزلية, تقييم الضغط الانقباضي في حالة الطوارئ باستخدام المجس و مقياس الضغط الزئبقي, القياسات التي تم أخذها في الاستشارات السريرية أو في أثناء اختبار الضغط البدني, و سلسلة من القياسات التي تتم باستخدام آلات العناية المركزة.
+
+يستخدم هذا النموذج الغني في تسجيل حالات القياس من خلال تفسيره في ضوء وضع المريض عند القياس, المجهود البدني, العوامل المربكة, و زاوية انحناء الطاولة المستخدمة عند القياس.
+
+تم تحديد بعض الوقائع إلى المتوسط خلال 24 ساعة, إلا أن القوالب تستطيع تقييد الاختيار التلقائي (إحدى الوقائع) لمتطلبات معينة حول قياسات ضغط الدم مثل تسجيل ضغط الدم في نقاط زمنية معينة أو خلال مدى من الفواصل الزمنية - زائد أو ناقص دوال حسابية">
+			keywords = <"الملاحظات", "القياس", "ضغط الدم", "العلامات الحياتية", "متوسط الضغط الشرياني", "الضغط عند النبض", "الانقباضي", "الانبساطي", "معدل التنفس", "قياس ضغط الدم غير الباضع">
+			misuse = <"لا يستخدم لتسجيل الضغط داخل الوريد.
+لا يستخدم لقياس ضغط الدم الشرياني الذي لا يحل بديلا عن ضغط الدم الشرياني في الدورة الجهازية مثل قياسات معينة لضغط الشريان الرئوي الأيمن.
+استخدم نموذج ملاحظة. الضغط داخل الأوعية الدموية , و التخصيصات المتعلقة في كل من هذين الموقفين.">
+			copyright = <"© openEHR Foundation">
+		>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
+			purpose = <"ثبت نمودن فشار خون وریدی کل یک فرد">
+			use = <"برای ثبت هر چیز نشاندهنده اندازه گیری فشاره خون وریدی کل، جدا از ابنکه برای ثبت آن از چه شیوه ای یا کدام بخش از بدن استفاده شده باشد، بکار می رود. این الگوساز برای گردآوری اندازه گیری فشار خون در همه سناریوهای بالینی طراحی شده است، مانند اندازه گیری توسط خود فرد بوسیله دستگاه فشار خون خانگی، ارزیابی اورژانسی سیستولیک با لمس نبض و یک \"فشارسنج خون\"، اندازه گیریهای انجام گرفته در مشاوره بالینی یا حین تست ورزشی، و یا یک رشته از اندازه گیریهای دستگاه مراقبت های ویژه.
+مدل حالت توانمندی وجود دارد که تفسیر اندازه گیری ها را از طریق شناسایی موقعیت بیمار، ورزش، فاکتورهای مبهم و تست تخت شیبدار، پشتیبانی می کند.
+رویدادهای نام گذاری شده بگونه ای محدود شده اند که روی یک دوره 24 ساعته میانگین گیری کنند هر چند که الگو ها می توانند پیش فرض -هر گونه  رویداد- را برای فراهم کردن خواسته های خاص از اندازه گیری فشار خون، با محدودیتهایی نظیر ثبت فشار خون سر وقت یا روی رنجی از فاصله های زمانی (با عمل جمع یا منها)، بیشتر محدود کنند 
+">
+			keywords = <"مشاهدات", "اندازه گیری", "فشار خون", "علایم حیاتی", "میانگین فشار وریدی", "فشار نبض", "سیستولیک", "دیاستولیک", "تنفسهای سریع", "فشار خون غیر تهاجمی">
+			misuse = <"برای فشار داخل وریدی استفاده نشود.
+برای اندازه گیری فشار خون وریدی نباید استفاده شود که جایگزینی برای فشار وریدی در گردش خون کلی نیست، بعنوان مثال اندازه گیری خاص فشار وریدی ریه راست.
+
+ و تخصص های مربوطه برای موارد بالا بکار رود\"OBSERVATION.intravascular_pressure\"
+ 
+">
+			copyright = <"© openEHR Foundation">
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			purpose = <"旨在记录一个人的体循环血压（systemic blood pressure，全身血压，系统血压）。此测量结果原始型记录的是收缩压和舒张压，所采取的记录方式适合于视为代表全身体循环血压的结果。">
+			use = <"用于记录体循环血压测量结果的所有表达形式，无论其用于记录结果的究竟是什么方法或身体位置。本原始型旨在采集所有临床场景下的血压测量结果；例如，采用家用血压测量仪进行的自助检测、采用触诊方法和血压计进行的收缩压紧急评估、临床会诊或运动负荷试验过程中进行的测量以及重症监护过程中利用仪器所完成的一系列测量。
+这是一个丰富的状态模型，支持通过确定患者体位、运动情况、干扰因素以及研究工作所采用的倾斜工作台的角度，来解释测量结果。
+具名事件（named events）仅限于24小时期间的均值；不过，可以利用模板来进一步约束默认的“any event”（任何事件），以满足关于血压测量的具体需要，诸如按具体的时间点（时刻）来记录血压，或者是记录为变化范围（+/-数学函数）。">
+			keywords = <"观察", "观测", "观察指标", "观测指标", "观察结果", "观测结果", "观察项目", "观测项目", "检测", "测量", "测定", "检测指标", "测量指标", "测定指标", "检测结果", "测量结果", "测定结果", "检测项目", "测量项目", "测定项目", "血压", "blood pressure", "bp", "生命体征", "体征", "平均动脉压", "脉压", "脉搏压", "收缩压", "舒张压", "收缩期", "舒张期", "RR", "无创性测压法", "non-invasive blood pressure", "NIBP">
+			misuse = <"并不用于静脉内血压。
+并不用于并非代表体循环动脉压的动脉血压的测量，如右肺动脉压的专用测量指标。
+在上述这两种情况下，请采用血管内压力观察指标原始型（OBSERVATION.intravascular_pressure）及相关的特化形式。">
+			copyright = <"© openEHR Foundation">
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"Het registreren van de systemische arteriele bloeddruk van een individu.">
+			use = <"Wordt gebruikt om alle weergaven van de systemische bloeddruk te registreren, ongeacht welke methode of welke lichaamslocatie is gebruikt om de meting te doen. Het archetype is bedoeld om bloeddruk metingen in alle klinische scenario's vast te leggen - bijvoorbeeld, zelf-meting met een thuis bloeddrukmeter; een nood beoordeling van de systolische bloeddruk met behulp van palpatie en een drukmanchet; metingen tijdens consulten, overleg of tijdens inspannings stress testen, en een reeks van metingen die door een apparaat zijn gedaan in de intensieve zorg.
+Er is een uitgebreid status model dat interpretatie van metingen ondersteunt, door patiënt positie, inspanning, beïnvloedende factoren en de hoek/het aantal graden waarin de onderzoekstafel staat, te specificeren.
+Genoemde gebeurtenissen zijn gelimiteerd tot een gemiddelde over een periode van 24 uur, maar templates kunnen de standaard 'iedere gebeurtenis' verder vernauwen om specifieke eisen voor de bloeddrukmeting, zoals registreren van de bloeddruk op een specifiek tijdsmoment, of over een reeks van intervallen (+/- statistisch gebruik) te faciliteren.
+">
+			keywords = <"observaties", "meting", "blddr", "vitale functies", "gemiddelde arteriele druk", "polsdruk", "systolisch", "diastolisch", "RR", "NIBP", "tensie">
+			misuse = <"Niet te gebruiken voor intraveneuze druk.
+Niet te gebruiken voor de meting van de arteriele bloeddruk welke geen surrogaat is voor de arteriele druk in de systemische circulatie, bv de specifieke meting van de rechter arterie pulmonalis druk.
+Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in beide situaties.">
+			copyright = <"© openEHR Foundation">
+		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Knut Bernstein, MEDIQ, Denmark", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Beatriz de Faria Leão, Zilics, Brazil", "Paul Donaldson, Nursing Informatics Australia, Australia", "Jose Florez Arango, Universidad de Antioquia, Colombia", "Gerard Freriks, ERC, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Omer Hotomaroglu, Turkey", "Evelyn Hovenga, EJSH Consulting, Australia", "Derek Hoy, United Kingdom", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller-Oest, CompuGROUP Software, Germany", "Melvin Reynolds, United Kingdom", "Tony Shannon, NHS, United Kingdom", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "Stef Verlinden, Vivici, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"O'Brien E, Asmar R, Beilin L, et al. European Society of Hypertension recommendations for conventional, ambulatory and home blood pressure measurement. Journal of Hypertension [Internet]. 2003 [cited 2009 Jul 30] ; 21(5):821-848. Available from http://www.bhsoc.org/bp_monitors/ESH_BP_rec.pdf
 
 Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Human blood pressure determination by sphygmomanometry. Circulation [Internet]. 1993 [cited 2009 Jul 29] 88 (5): 2460.  Available from: http://circ.ahajournals.org/cgi/reprint/88/5/2460">
-		["MD5-CAM-1.0.1"] = <"ECB15524E65241BBA1CC7DBA9CB22C19">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"61ECB97AF407A6CFA224B4ABB0022A55">
+		["build_uid"] = <"c1ed8b27-d783-48ab-84b5-867f00a3ef99">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
