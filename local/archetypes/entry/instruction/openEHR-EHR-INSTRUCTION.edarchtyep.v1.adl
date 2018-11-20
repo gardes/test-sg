@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=cc8050f7-2e7d-4ecc-8f50-b6992096feb1)
-	openEHR-EHR-INSTRUCTION.edarchtyep.v0
+﻿archetype (adl_version=1.4; uid=0e4c948a-043f-433b-adf8-076e01a4e5d8)
+	openEHR-EHR-INSTRUCTION.edarchtyep.v1
 
 concept
 	[at0000]	-- Edarchtype
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"846867707875E3BA9C5A349B3837C095">
-		["build_uid"] = <"8a353600-6c8b-4470-a04b-23f8b6538921">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"76F8B8B9B1C2B07CB0A60254BE6BD89E">
+		["build_uid"] = <"4c212116-607b-49d3-a516-893b43d675f7">
+		["revision"] = <"1.0.0">
 	>
 
 definition
