@@ -2,7 +2,7 @@
 	openEHR-EHR-EVALUATION.blah.v0
 
 concept
-	[at0000]	-- Blah
+	[at0000]	-- Blah2
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -12,7 +12,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
+			purpose = <"fdferfw">
 			use = <"">
 			misuse = <"">
 		>
@@ -24,8 +24,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A52D96478080883DAF7E4CD25158F7E1">
-		["build_uid"] = <"3269a3ef-a00c-4c46-b6f6-6df5d9854229">
+		["MD5-CAM-1.0.1"] = <"3628D9625F31D5E67A6C06020523C6A3">
+		["build_uid"] = <"0b3e0964-47f6-4919-a41e-78434be8b0c6">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -40,7 +40,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Blah">
+					text = <"Blah2">
 					description = <"unknown">
 				>
 			>
