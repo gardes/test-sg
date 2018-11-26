@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=04921562-62e4-4bd3-8f02-fd2e18d927cd)
+﻿archetype (adl_version=1.4; uid=a73f18d4-97c3-4c96-b029-30da09edb4b3)
 	openEHR-EHR-CLUSTER.testdeffsAGAIN.v0
 
 concept
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"ca.ahs">
 		["original_publisher"] = <"Alberta Health Services (Canada)">
 		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"717A804A16871D45CD6614D0E928E143">
-		["build_uid"] = <"f1ee3267-8458-4918-9510-35c663dd2c28">
+		["MD5-CAM-1.0.1"] = <"E49059AE957799E80D842512577435AE">
+		["build_uid"] = <"0cb60be8-8837-4ba2-b8a7-935f2af26ad1">
 		["revision"] = <"0.0.1-alpha">
 	>
 
