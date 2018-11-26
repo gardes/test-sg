@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"ca.ahs">
 		["original_publisher"] = <"Alberta Health Services (Canada)">
 		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"109AA0862A6BCF84F54501644F5420F2">
-		["build_uid"] = <"35850f02-bae8-4809-880c-4c7537ddf907">
+		["MD5-CAM-1.0.1"] = <"D8F25540CC424B5DCE6BAEFDB75767B9">
+		["build_uid"] = <"33ae7a07-736c-4ca9-b6e3-2845aa415089">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -87,7 +87,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"C">
-					description = <"*">
+					description = <"*fdsfdse">
 				>
 			>
 		>
