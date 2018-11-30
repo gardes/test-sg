@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=4aef06e9-f012-4aa9-86f0-231407a61f9b)
-	openEHR-EHR-CLUSTER.service_request_information.v0
+﻿archetype (adl_version=1.4; uid=b19ef960-b1c7-42c9-82dc-6b56993a17fc)
+	openEHR-EHR-CLUSTER.service_request_information.v1
 
 concept
 	[at0000]	-- Service request information
@@ -18,7 +18,7 @@ description
 			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"62433C26DE51D0C673B989D24A9D978A">
-		["build_uid"] = <"2175aa80-0506-4ae7-9de1-8e548852366c">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"0A80817A257C52AA8DC3535E2FA76965">
+		["build_uid"] = <"645e9153-6a2a-43b4-a763-051ae1d74d88">
+		["revision"] = <"1.0.0">
 	>
 
 definition
