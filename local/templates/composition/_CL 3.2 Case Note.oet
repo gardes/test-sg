@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>c02ac396-cfeb-4495-b3f7-3ea28ce59129</id>
+  <name>*CL 3.2 Case Note</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Case Note">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.progress_note.v1" concept_name="Progress Note" max="1" path="/content" name="Note" />
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" concept_name="Problem/Diagnosis" path="/content" />
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Service Plan (Detail to be removed when confirmed)">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Audiology Review">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]" name="Review requested">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Audiology</includedValues>
+              <includedValues>Behavioural Observation Audiometry</includedValues>
+              <includedValues>Automated Brainstem Response</includedValues>
+              <includedValues>Tympanometry</includedValues>
+              <includedValues>Industrial Audiology</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+            <constraint xsi:type="textConstraint">
+              <excludedValues>local::at0136</excludedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Primary Health Centre Recall">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Daily Ear Cleaning</includedValues>
+              <includedValues>Ear Examination</includedValues>
+              <includedValues>ENT Referral</includedValues>
+              <includedValues>Medication Administration</includedValues>
+              <includedValues>Medication Review</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+            <constraint xsi:type="textConstraint">
+              <excludedValues>local::at0136</excludedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Australian Hearing Referral">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request-referral.v1" concept_name="Referral request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Device Consideration</includedValues>
+              <includedValues>Device Review</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+            <constraint xsi:type="textConstraint">
+              <excludedValues>local::at0136</excludedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0.2]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="ENT Surgeon Review">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Clinical Assessment</includedValues>
+              <includedValues>Hearing Aid Clearance</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]">
+            <constraint xsi:type="textConstraint">
+              <includedValues>Teleotology</includedValues>
+              <includedValues>Outpatient Consultation</includedValues>
+              <includedValues>Remote Consultation</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+            <constraint xsi:type="textConstraint">
+              <excludedValues>local::at0136</excludedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Child Hearing Health Coordinator Review">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint">
+              <includedValues>Clinical Assessment</includedValues>
+              <includedValues>Care Coordination</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+            <constraint xsi:type="textConstraint">
+              <excludedValues>local::at0136</excludedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" max="1" path="/items" name="ENT Nurse Review">
+        <Rule path="/activities[at0001]" hide_on_form="true" />
+        <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+          <constraint xsi:type="textConstraint">
+            <includedValues>Clinical Assessment</includedValues>
+          </constraint>
+        </Rule>
+        <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+          <constraint xsi:type="textConstraint">
+            <excludedValues>local::at0136</excludedValues>
+          </constraint>
+        </Rule>
+        <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+        <Rule path="/protocol[at0008]" hide_on_form="true" />
+        <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Community Worker Review">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Treatment Support Strategies</includedValues>
+              <includedValues>Treatment Adherence Strategy</includedValues>
+              <includedValues>Family Support Strategies</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="School Support Services">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items" hide_on_form="true">
+          <Rule path="/activities[at0001]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0121]">
+            <constraint xsi:type="textConstraint" limitToList="false">
+              <includedValues>Implement classroom strategies to support learning for hearing loss</includedValues>
+              <includedValues>Refer to Advisory Support Teacher-Hearing via Student Services</includedValues>
+              <includedValues>Treatment Support Strategies</includedValues>
+              <includedValues>Update Hearing Health Status</includedValues>
+              <includedValues>Other</includedValues>
+            </constraint>
+          </Rule>
+          <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0068]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+          <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+          <Rule path="/protocol[at0008]" hide_on_form="true" />
+          <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+          <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        </Item>
+      </Item>
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request.v0" concept_name="Service request" path="/items">
+        <Rule path="/activities[at0001]" hide_on_form="true" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0068]">
+          <constraint xsi:type="textConstraint">
+            <excludedValues>local::at0136</excludedValues>
+          </constraint>
+        </Rule>
+        <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+        <Rule path="/protocol[at0008]" hide_on_form="true" />
+        <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+      </Item>
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">52DA06F88C835BFFE1677B151B2A867D</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.progress_note.v1">
+    <digest id="MD5-CAM-1.0.1">C7988DE9B322E8817DB5E595E5D7AFD0</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+    <digest id="MD5-CAM-1.0.1">08DDEE4C61B51C49599CE2AB66D80955</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adhoc.v1">
+    <digest id="MD5-CAM-1.0.1">8B8435D0AFF357E409EACE30FC6408E0</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.request.v0">
+    <digest id="MD5-CAM-1.0.1">3B79271B8F5B82F38F64B3FAD272A205</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.request-referral.v1">
+    <digest id="MD5-CAM-1.0.1">25C16B28A60F9903D55831244227C979</digest>
+  </integrity_checks>
+</template>

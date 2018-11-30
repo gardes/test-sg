@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>8af6f8bf-ba04-45c8-95ad-81c9cb95f512</id>
+  <name>*CL 3.1.4.1 226 Hz Tympanogram Report</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>To record the findings from a 226Hz tympanogram assessment.</purpose>
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.tympanogram_226hz.v1]/data[at0001]/events[at0037]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Default View</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.tympanogram_226hz.v1]/data[at0001]/events[at0038]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Added only if Audiologist selects this option.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.tympanogram_226hz.v1]/data[at0001]/events[at0039]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Added only if Audiologist selects this option.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.tympanogram_226hz.v1]/protocol[at0040]/items[openEHR-EHR-CLUSTER.devize.v1]/items[at0001]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>AD:6.1-1</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" concept_name="Result Report" name="226 Hz Tympanogram Report">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.tympanogram_226hz.v1" concept_name="Tympanogram Result - 226Hz" path="/content">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" max="0" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0043]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0046]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0047]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0050]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0041]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0054]" max="0" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.exclusion_exam.v1" concept_name="Exclusion of examination" path="/data[at0001]/events[at0037]/data[at0003]/items[at0075]">
+        <Rule path="/items[at0002]">
+          <constraint xsi:type="textConstraint">
+            <includedValues>Client factors</includedValues>
+            <includedValues>Equipment factors</includedValues>
+            <includedValues>Time constraints</includedValues>
+            <includedValues>Other</includedValues>
+          </constraint>
+        </Rule>
+      </Items>
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.tympanogram_226hz.v1" concept_name="Tympanogram Result - 226Hz" max="1" path="/content" name="Tympanogram Result - 226Hz #1">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" max="0" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0037]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0038]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0032]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Discharge</includedValues>
+          <includedValues>No Seal Obtained</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <excludedValues>local::at0070</excludedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0012]/items[at0033]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Consistent with normal middle ear function (A)</includedValues>
+          <includedValues>Can represent normal middle ear function or stiff middle ear system (hypomobile) (As)</includedValues>
+          <includedValues>Can indicate a flaccid or hypermobile middle ear system, such as ossicular subluxation or healed tympanic membrane perforation (hypermobile) (Ad)</includedValues>
+          <includedValues>Consistent with middle ear effusion or thickened tympanic membrane (B)</includedValues>
+          <includedValues>Consistent with a tympanic membrane perforation (B high)</includedValues>
+          <includedValues>Consistent with wax in the ear canal or probe tip against side of canal wall (B low)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction without the presence of middle ear effusion (C)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and most likely some fluid present in middle ear(Cs)</includedValues>
+          <includedValues>Consistent with eustachian tube dysfunction and either ossicular subluxation or healed tympanic membrane perforation (Cd)</includedValues>
+          <includedValues>Indeterminate (attempted, but no conclusion made)</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0043]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0046]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0047]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0050]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0041]" max="0" />
+      <Rule path="/protocol[at0040]/items[at0054]" max="0" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.exclusion_exam.v1" concept_name="Exclusion of examination" path="/data[at0001]/events[at0037]/data[at0003]/items[at0075]">
+        <Rule path="/items[at0002]">
+          <constraint xsi:type="textConstraint">
+            <includedValues>Client factors</includedValues>
+            <includedValues>Equipment factors</includedValues>
+            <includedValues>Time constraints</includedValues>
+            <includedValues>Other</includedValues>
+          </constraint>
+        </Rule>
+      </Items>
+    </Content>
+    <Context>
+      <Rule path="/context/other_context[at0001]/items[at0002]" max="0" />
+      <Rule path="/context/other_context[at0001]/items[at0005]" max="0" />
+      <hide_on_form>true</hide_on_form>
+    </Context>
+  </definition>
+  <view>
+    <constraints path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='Plan']/items[openEHR-EHR-INSTRUCTION.request.v1 and name/value='Follow up Audiology Appointment']/activities[at0001]/timing">
+      <items id="VisibleInView">
+        <value>timing</value>
+      </items>
+    </constraints>
+  </view>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1">
+    <digest id="MD5-CAM-1.0.1">FBD1709FCBDACC5A2D20E339DE4B13E7</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.tympanogram_226hz.v1">
+    <digest id="MD5-CAM-1.0.1">F63060581562592D8518C6916D02A6C1</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.exclusion_exam.v1">
+    <digest id="MD5-CAM-1.0.1">373F12035AD4CFEEACA0E6EADF21208C</digest>
+  </integrity_checks>
+</template>

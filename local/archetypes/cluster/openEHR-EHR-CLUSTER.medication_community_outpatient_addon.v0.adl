@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=475bd64c-2cbe-42a2-8e9c-3e9adda03cd5)
+﻿archetype (adl_version=1.4; uid=983779b1-0827-4a97-a147-6ae38b95d8d0)
 	openEHR-EHR-CLUSTER.medication_community_outpatient_addon.v0
 
 concept
@@ -22,20 +22,20 @@ It is intended to be used for medication and related orders where refill informa
 
 ">
 			misuse = <"Not to be used to record the activities related to carrying out the order for medication, vaccine, nutritional product or therapeutic item, such as details about actual administration or dispensing. ">
-			copyright = <"© Alberta Health Services (Canada)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Alberta Health Services (Canada)">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"foundationalknowledge@albertahealthservices.ca">
-		["original_namespace"] = <"ca.ahs">
-		["original_publisher"] = <"Alberta Health Services (Canada)">
-		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"13E449C546C171101C44932D6ABB79E2">
-		["build_uid"] = <"6b7bb960-6900-4cc8-8124-e32de9cf8cb4">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"541202F97226BA4283B8AAE726E20D55">
+		["build_uid"] = <"89036342-ff23-4580-baff-3b3d882ff454">
 		["revision"] = <"0.0.1-alpha">
 	>
 

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=b86943e3-a420-4972-a38c-796dc9223dcb)
+﻿archetype (adl_version=1.4; uid=5109b5a3-eca5-4926-b3ef-59a563090d44)
 	openEHR-EHR-EVALUATION.absence.v1
 
 concept
@@ -32,21 +32,20 @@ This archetype has been designed specifically to avoid the need to use of flags 
 			misuse = <"Not to be used to record the presence of adverse reactions, medication use, procedures, problems or diagnoses - use specific archetypes for this purpose.
 
 Not to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
-			copyright = <"© openEHR Foundation, Alberta Health Services (Canada)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"published">
 	other_contributors = <"Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Editor)", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"Alberta Health Services (Canada)">
-		["references"] = <"Derived from: Absence of Information, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2018-05-22]. Available from: http://openehr.org/ckm/#showArchetype_1013.1.1427">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"ca.ahs">
-		["original_publisher"] = <"Alberta Health Services (Canada)">
-		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"F60095265145D89ECD353295AE6B1994">
-		["build_uid"] = <"bc099c2d-5ba7-4795-826f-2bef641abede">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"25550CCC485BFBFBBDBD47251C9D08A5">
+		["build_uid"] = <"89abfbe1-5c30-4c5e-af5b-2685e619750e">
 		["revision"] = <"1.0.0">
 	>
 
