@@ -5,11 +5,27 @@ concept
 	[at0000]	-- TestdeffsAGAIN
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*(en)">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -26,8 +42,8 @@ description
 		["original_namespace"] = <"ca.ahs">
 		["original_publisher"] = <"Alberta Health Services (Canada)">
 		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"C25166966D35B5EFA20E72F30283659E">
-		["build_uid"] = <"8a482d59-6842-4986-bc76-988b748624ed">
+		["MD5-CAM-1.0.1"] = <"B521C013BCB4006AC3CD24711C288C5E">
+		["build_uid"] = <"8422f0c2-b898-4e4c-a4a0-881d134691ac">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -93,6 +109,38 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Test 3 DAM">
+					description = <"*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*TestdeffsAGAIN(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*TestDeff(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*TestOne(en)">
+					description = <"*This is the first test of the deffs for internal coded values(en)">
+				>
+				["at0003"] = <
+					text = <"*TestTwo(en)">
+					description = <"dsfeaferfew">
+				>
+				["at0004"] = <
+					text = <"*New for DAM Testing(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*DAM Test 2 upload arch(en)">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"*Test 3 DAM(en)">
 					description = <"*">
 				>
 			>
