@@ -1,0 +1,14 @@
+<ots:query xmlns:ots="urn:xmlns:oceaninformatics.biz:schema:OTSQuerySchema" name="Onychomycosis" language="en-GB" terminology="Snomed" parentQuery="" description="" baseQuery="" cacheMode="Permanent" pruneDeadHeads="true">
+   <childNodes>
+      <sourceSetBindings>
+         <childNodes>
+            <terminologyBinding sourceSetName="SNOMEDCT_2011_01_31" terminologyRelease="SNOMEDCT_2011_01_31"></terminologyBinding>
+         </childNodes>
+      </sourceSetBindings>
+      <conceptHierarchy sourceSetName="SNOMEDCT_2011_01_31">
+         <childNodes>
+            <tree conceptId="414941008" maxDepth="0" rootOperation="Passthrough" treeOperation="Select" treeRelationship="116680003" reverseTreeRelationship="true"></tree>
+         </childNodes>
+      </conceptHierarchy>
+   </childNodes>
+</ots:query>

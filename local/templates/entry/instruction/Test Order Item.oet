@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>eb1b3e53-8e49-4253-b613-d984a3f5078a</id>
+  <name>Test Order Item</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_medication_and_then.v0" concept_name="Fake medication and then" max="1" name="Test Order Item">
+    <Rule path="/activities[at0001]/description[at0002]/items[at0004]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>tab</includedValues>
+        <includedValues>cap</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0006]/items[at0007]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>100</includedValues>
+        <includedValues>200</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0006]/items[at0009]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>mg</includedValues>
+        <includedValues>mcg</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0006]/items[at0010]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>PO</includedValues>
+        <includedValues>NG</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0006]/items[at0011]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>once</includedValues>
+        <includedValues>daily</includedValues>
+        <includedValues>bid</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0013]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>Fever</includedValues>
+        <includedValues>Pain</includedValues>
+      </constraint>
+    </Rule>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fake_medication_and_then.v0">
+    <digest id="MD5-CAM-1.0.1">61EAD6A8F294BB0BE885177883BFD40A</digest>
+  </integrity_checks>
+</template>

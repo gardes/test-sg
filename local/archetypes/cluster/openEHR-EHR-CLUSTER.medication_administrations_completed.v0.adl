@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=932f6b84-3f0e-43ae-bd20-5275a24b4407)
+﻿archetype (adl_version=1.4; uid=648f2dd9-d1c1-4d5c-ba5d-b525c4fe282e)
 	openEHR-EHR-CLUSTER.medication_administrations_completed.v0
 
 concept
@@ -18,20 +18,20 @@ description
 			purpose = <"To record administrations of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual prior to that order being placed in the individual's current location.">
 			use = <"Use to record administrations of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual prior to that order being placed in the individual's current location.">
 			misuse = <"Not to be used to record the activities related to carrying out the order for medication, vaccine, nutritional product or therapeutic item, such as details about actual administration or dispensing. ">
-			copyright = <"© Alberta Health Services (Canada)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Alberta Health Services (Canada)">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["current_contact"] = <"foundationalknowledge@albertahealthservices.ca">
-		["original_namespace"] = <"ca.ahs">
-		["original_publisher"] = <"Alberta Health Services (Canada)">
-		["custodian_namespace"] = <"ca.ahs">
-		["MD5-CAM-1.0.1"] = <"CC66C1F934AB0728224F06119E725155">
-		["build_uid"] = <"cba82d23-9870-4a97-9435-30c9aa22cdc2">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"537368A9EA81E34FE81675EF53E30CF3">
+		["build_uid"] = <"e65339c8-3f83-4228-93c3-f070cbdc4545">
 		["revision"] = <"0.0.1-alpha">
 	>
 

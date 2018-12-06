@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>8c7e82ae-e2e1-4301-917e-f5152e761dbf</id>
+  <name>Fake Lab Item 3</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-INSTRUCTION.fakelaborder.v0]/activities[at0001]/description[at0002]/items[at0007]">
+    <items>
+      <item>
+        <key>Order Set Notes.Order Decision Support</key>
+        <value>test2</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" concept_name="Fake Lab Order" max="1" name="Fake Lab Item 3 (based off of archetype not template pattern)">
+    <Rule path="/activities[at0001]/description[at0002]/items[at0003]" name="Fake Lab Item 3" />
+    <Rule path="/activities[at0001]/description[at0002]/items[at0004]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>ASAP</includedValues>
+        <includedValues>Routine</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0005]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>Blood</includedValues>
+        <includedValues>Urine</includedValues>
+        <includedValues>Stool</includedValues>
+      </constraint>
+    </Rule>
+    <Rule path="/activities[at0001]/description[at0002]/items[at0007]">
+      <constraint xsi:type="textConstraint">
+        <includedValues>new new test</includedValues>
+      </constraint>
+    </Rule>
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" path="/activities[at0001]/description[at0002]/items[at0009]">
+      <Rule path="/items[at0001]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>test1</includedValues>
+          <includedValues>test2</includedValues>
+          <includedValues>test 3</includedValues>
+        </constraint>
+      </Rule>
+    </Items>
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.test2.v0" concept_name="Test2" max="1" path="/activities[at0001]/description[at0002]/items[at0009]" name="Test2 #1" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0" concept_name="Fakecluster" path="/activities[at0001]/description[at0002]/items[at0009]" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
+    <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.test2.v0">
+    <digest id="MD5-CAM-1.0.1">B09EB7520DEA69691F8695F4A6A7C569</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0">
+    <digest id="MD5-CAM-1.0.1">E3B108517339C1DD01EED94A5427D5DB</digest>
+  </integrity_checks>
+</template>

@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>35ca2269-b5c5-48ea-9373-71da30bfe61d</id>
+  <name>*CL 3.1.5.1 Audiometry Report</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>To record the findings of hearing acuity using audiometry</purpose>
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometric_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0055]/items[at0065]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>If the degree of loss is None, then this data element is not applicable.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometric_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0140]/items[at0147]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Further text description of the 'Reason for No Result' can be captured in the 'Comment' data element.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometry_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0027]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>Only available for legacy data content.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometry_result.v1]/protocol[at0032]/items[openEHR-EHR-CLUSTER.devize.v1]/items[at0001]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>AD:6.1 Asset Register - TBD</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometry_result.v1]/protocol[at0032]/items[openEHR-EHR-CLUSTER.devize.v1]/items[openEHR-EHR-CLUSTER.devize.v1]/items[at0003]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>1.3.5.1-1</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometry_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0037]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>3.1.5.1-2</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" concept_name="Result Report" name="Audiometry Report">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.audiometry_result.v1" concept_name="Audiogram result" path="/content">
+      <Rule path="/data[at0001]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Pure Tone Audiometry</includedValues>
+          <includedValues>Play Audiometry</includedValues>
+          <includedValues>VROA</includedValues>
+          <includedValues>Industrial Audiometry</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0139]/items[at0048]/items[at0011]">
+        <constraint xsi:type="quantityConstraint">
+          <excludedUnits>kHz</excludedUnits>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0139]/items[at0123]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Patient Factors</includedValues>
+          <includedValues>Equipment Factors</includedValues>
+          <includedValues>Time Constraints</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0140]/items[at0143]/items[at0144]">
+        <constraint xsi:type="quantityConstraint">
+          <excludedUnits>kHz</excludedUnits>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0140]/items[at0147]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>Patient Factors</includedValues>
+          <includedValues>Equipment Factors</includedValues>
+          <includedValues>Inappropriate Test Environment</includedValues>
+          <includedValues>Time Constraints</includedValues>
+          <includedValues>Other</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0055]/items[at0135]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>None</includedValues>
+          <includedValues>Mild</includedValues>
+          <includedValues>Moderate</includedValues>
+          <includedValues>Severe</includedValues>
+          <includedValues>Profound</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0055]/items[at0126]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0121]" max="1" name="Summary" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0013]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0013]/items[at0028]" max="0" />
+      <Rule path="/protocol[at0032]" hide_on_form="true" />
+    </Content>
+    <Context>
+      <Rule path="/context/other_context[at0001]/items[at0002]" max="0" />
+      <Rule path="/context/other_context[at0001]/items[at0005]" max="0" />
+    </Context>
+  </definition>
+  <view>
+    <constraints path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='Plan']/items[openEHR-EHR-INSTRUCTION.request.v1 and name/value='Follow up Audiology Appointment']/activities[at0001]/timing">
+      <items id="VisibleInView">
+        <value>timing</value>
+      </items>
+    </constraints>
+  </view>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1">
+    <digest id="MD5-CAM-1.0.1">FBD1709FCBDACC5A2D20E339DE4B13E7</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.audiometry_result.v1">
+    <digest id="MD5-CAM-1.0.1">8E994EE8C7B5B420063CAE8C26CD99E4</digest>
+  </integrity_checks>
+</template>
