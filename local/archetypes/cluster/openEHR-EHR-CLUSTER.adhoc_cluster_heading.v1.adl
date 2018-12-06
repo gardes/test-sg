@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=fbed79a4-29e1-4165-b53f-988de997dea8)
 	openEHR-EHR-CLUSTER.adhoc_cluster_heading.v1
 
 concept
@@ -21,11 +21,18 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Alberta Health Services (Canada)">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"57858FD5EA5A797E78632E82F939BF81">
+		["original_namespace"] = <"ca.ahs">
+		["original_publisher"] = <"Alberta Health Services (Canada)">
+		["custodian_namespace"] = <"ca.ahs">
+		["MD5-CAM-1.0.1"] = <"B87630C57A2DB1AE21050E1105EDE18B">
+		["build_uid"] = <"bb3daf7b-ed0c-4ceb-a311-468e3d0857f2">
+		["revision"] = <"1.0.0">
 	>
 
 definition
@@ -38,6 +45,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -48,7 +56,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Content">
-					description = <"*">
+					description = <"Slot Cluster">
 				>
 			>
 		>
