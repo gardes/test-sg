@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>588cee69-99b6-4798-af9d-fcb1608a3bbb</id>
-  <name>Normal Template</name>
+  <name>Normal Template7</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
@@ -78,6 +78,9 @@
   </annotations>
   <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc">
     <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" path="/items" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #1" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #2" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #3" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0">
     <digest id="MD5-CAM-1.0.1">AC221F52F8B7DD86D2DA6FCCFA25FED9</digest>
