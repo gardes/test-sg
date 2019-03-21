@@ -81,11 +81,31 @@
     <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #1" />
     <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #2" />
     <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1" concept_name="Care Plan" max="1" path="/items" name="Care Plan #3" />
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" concept_name="Fake Lab Order" max="1" path="/items" name="Fake Lab Pattern 2">
+      <Rule path="/activities[at0001]/description[at0002]/items[at0004]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>STAT</includedValues>
+          <includedValues>Routine</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/activities[at0001]/description[at0002]/items[at0005]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Blood</includedValues>
+          <includedValues>Urine</includedValues>
+          <includedValues>Stool</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/activities[at0001]/description[at0002]/items[at0007]" max="0" />
+    </Item>
+    <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" template_id="11a32335-30cb-43ae-a2aa-41ea9f1d4d4f" concept_name="Fake Lab Pattern 2" max="1" path="/items" name="Fake Lab Pattern 2 #1" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0">
     <digest id="MD5-CAM-1.0.1">AC221F52F8B7DD86D2DA6FCCFA25FED9</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.care_plan.v1">
     <digest id="MD5-CAM-1.0.1">9570E35B6E75B2D8D2709AF99405A9CF</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
+    <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
   </integrity_checks>
 </template>
