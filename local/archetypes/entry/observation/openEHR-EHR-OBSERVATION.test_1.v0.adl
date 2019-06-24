@@ -25,8 +25,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2DA04FCEAC3744A6A060ED9822A8245C">
-		["build_uid"] = <"8385cfff-da99-46d2-a83a-4d254aa696c6">
+		["MD5-CAM-1.0.1"] = <"FEEDB7AC7DD643CF60F830443B039AC4">
+		["build_uid"] = <"d7824a9e-1aa4-4eef-b842-9c747779721b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -39,14 +39,53 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Text data element
+									ELEMENT[at0004] occurrences matches {0..6} matches {	-- Text data element
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- and a quantity
+									ELEMENT[at0005] occurrences matches {0..*} matches {	-- and a quantity
 										value matches {
 											C_DV_QUANTITY <
+											>
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Neues Element
+										value matches {
+											DV_INTERVAL<DV_QUANTITY> matches {
+												upper matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+												lower matches {
+													C_DV_QUANTITY <
+														property = <[openehr::118]>
+													>
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- q constrained
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.001..1.001|>
+													>
+												>
+												assumed_value = <
+													units = <"1">
+													precision = <-1>
+													magnitude = <0.002>
+												>
 											>
 										}
 									}
@@ -86,6 +125,14 @@ ontology
 				>
 				["at0005"] = <
 					text = <"and a quantity">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Neues Element">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"q constrained">
 					description = <"*">
 				>
 			>
