@@ -31,9 +31,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"769E7D8C861FFB26D16F3DCC3A0AD5BD">
-		["build_uid"] = <"6e3335a8-e8f6-4669-86e1-bec58d63c48b">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"EA8F9F45C840EEC653B37A4CBCF7E5C6">
+		["build_uid"] = <"0f8cf4f9-50bb-407d-822f-d667768aaf1d">
+		["revision"] = <"1.0.1">
 	>
 
 definition
