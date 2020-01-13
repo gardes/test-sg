@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>c8c8c36f-cc53-49ec-9d99-a2e9d1defae1</id>
   <name>Fake D-Dimer</name>
   <description>
@@ -68,7 +68,7 @@
       </item>
     </items>
   </annotations>
-  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" concept_name="Fake service request 1" max="1" name="Fake D-Dimer">
+  <definition xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" concept_name="Fake service request 1" max="1" name="Fake D-Dimer updated">
     <Rule path="/activities[at0001]/description[at0002]/items[at0003]" name="Fake D-Dimer" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0005]" max="0" />
     <Rule path="/activities[at0001]/description[at0002]/items[at0006]" max="0" />
