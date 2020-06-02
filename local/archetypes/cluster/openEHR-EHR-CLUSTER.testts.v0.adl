@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1A4C542212C8FB015873D18001262211">
-		["build_uid"] = <"c692c170-f9eb-490e-8baf-e95144b5f8b8">
+		["MD5-CAM-1.0.1"] = <"B8E70E8505967D15EC267BEB2EC84885">
+		["build_uid"] = <"c774033c-528b-48c9-8176-326f8ade9785">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -83,6 +83,13 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Neues Element
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0008]}		-- test
+					}
+				}
+			}
 		}
 	}
 
@@ -124,6 +131,10 @@ ontology
 					text = <"An intensional VS with 40+ codes if expanded">
 					description = <"*">
 				>
+				["at0008"] = <
+					text = <"Covid example VS">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -158,6 +169,10 @@ ontology
 					text = <"a INTENSIONAL vs with 40+ codes if expanded">
 					description = <"*">
 				>
+				["ac0008"] = <
+					text = <"Covid example VS">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -170,6 +185,7 @@ ontology
 				["ac0005"] = <terminology://fhir.hl7.org/ValueSet/example-hierarchical>
 				["ac0006"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/allergyintolerance-code>
 				["ac0007"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/additional-instruction-codes>
+				["ac0008"] = <terminology://fhir.hl7.org/ValueSet/SARS-CoV-2-symptoms/$expand>
 			>
 		>
 	>
