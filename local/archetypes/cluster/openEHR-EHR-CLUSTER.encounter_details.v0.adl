@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.encounter_details.v0
 
 concept
-	[at0000]	-- Encounter details
+	[at0000]	-- Encounter details test
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -26,13 +26,13 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"02740215A7C0832E9CA02E063941AAD8">
-		["build_uid"] = <"2fdbfc69-775a-4f0e-b229-3bc4df7680e7">
+		["MD5-CAM-1.0.1"] = <"C5A2C669AA8AC5E89EC41AF5FD2BD744">
+		["build_uid"] = <"ca8779e2-e90a-4598-b681-3d27368fb934">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Encounter details
+	CLUSTER[at0000] matches {	-- Encounter details test
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0003] matches {	-- Encounter ID
 				value matches {
@@ -43,12 +43,13 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Encounter details">
+					text = <"Encounter details test">
 					description = <"Healthcare encounter details">
 				>
 				["at0003"] = <
