@@ -25,14 +25,13 @@ These scales/rules ar often displayed to end users in tabular form with e.g. bur
 Systems should preferably not store anything (e.g. not store 0%) for body part sections and burn depth levels within them that are not injured.">
 			keywords = <"surface area, burns, burn assessment, Lund-Browder, skin area, rule of nines, palmar method, TBSA, TBSA%", ...>
 			misuse = <"Do not use 'Comment' or extensions for detailed descriptions, cause and etiology of injuries and diseases; instead use suitable fields in archetypes like CLUSTER.exam, CLUSTER.exam-skin, CLUSTER.exam_burn or EVALUATION.problem_diagnosis that this surface area assessment is likely nested within when used in EHRs.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Hettiaratchy S, Papini R. Initial management of a major burn: II--assessment and resuscitation. BMJ. 2004;329(7457):101-103. doi:10.1136/bmj.329.7457.101 Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC449823/
 
 Lund-Browder Charts
@@ -47,11 +46,11 @@ Rhodes J, Clay C, Phillips M. The surface area of the hand and the palm for esti
 Scarisbrick JJ, Morris S. How big is your hand and should you use it to score skin in cutaneous T-cell lymphoma?. Br J Dermatol. 2013;169(2):260-265. doi:10.1111/bjd.12403 Available from: https://pubmed.ncbi.nlm.nih.gov/23621659/
 
 https://www.vicburns.org.au/wp-content/uploads/2016/06/poster4-paediatric-burns-assessment-ruler.pdf">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"c51c83b6f869f5252a19bcddde1e00ae">
-		["build_uid"] = <"b6329a2d-6646-4d6b-adfb-de6d5146c30b">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8C084F46711958ACC882C09FF6E9CD4F">
+		["build_uid"] = <"f231cb22-296d-4cfe-9eda-c4ddab0cc393">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -219,7 +218,7 @@ definition
 					}
 					CLUSTER[at0.8] occurrences matches {0..*} matches {    -- Burns per depth category
 						items cardinality matches {1..*; unordered} matches {
-							use_node ELEMENT occurrences matches {0..1} /items[at0020.1]/items[at0.10]/items[at0.1]/items[at0005.1]
+							use_node ELEMENT occurrences matches {0..1} /items[at0020.1]/items[at0.1]/items[at0005.1]
 							ELEMENT[at0023.1] occurrences matches {0..1} matches {    -- Total burnt area of this depth category
 								value matches {
 									DV_PROPORTION matches {
