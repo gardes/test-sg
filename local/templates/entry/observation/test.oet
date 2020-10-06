@@ -63,7 +63,7 @@
   <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.indirect_oximetry.v1" concept_name="*Oximetry(en)">
     <Rule path="/data[at0001]/events[at0002]/state[at0014]/items[at0016]">
       <constraint xsi:type="textConstraint">
-        <termQueryId queryName="terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/vs/snomed-example-vs" />
+        <termQueryId terminologyID="//fhir.hl7.org/ValueSet/" queryName="$expand?url=http://hl7.org/fhir/vs/snomed-example-vs" />
       </constraint>
     </Rule>
   </definition>
