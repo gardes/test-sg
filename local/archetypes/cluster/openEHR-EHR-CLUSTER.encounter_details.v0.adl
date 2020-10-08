@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=552e537d-123f-41f5-8db0-7fdb5480a41a)
-	openEHR-EHR-EVALUATION.bbbb.v0
+﻿archetype (adl_version=1.4; uid=d8cccc1a-2372-40da-8380-8534f45613f3)
+	openEHR-EHR-CLUSTER.encounter_details.v0
 
 concept
-	[at0000]	-- Bbbb
+	[at0000]	-- Encounter details test
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -26,15 +26,22 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F5999794DFEEBE360168FE4B3C636591">
-		["build_uid"] = <"74c6685a-3c69-4822-9a18-47802fd27dff">
+		["MD5-CAM-1.0.1"] = <"C5A2C669AA8AC5E89EC41AF5FD2BD744">
+		["build_uid"] = <"ca8779e2-e90a-4598-b681-3d27368fb934">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Bbbb
-		data matches {*}
+	CLUSTER[at0000] matches {	-- Encounter details test
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0003] matches {	-- Encounter ID
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
 	}
+
 
 
 ontology
@@ -42,8 +49,12 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Bbbb">
-					description = <"unknown">
+					text = <"Encounter details test">
+					description = <"Healthcare encounter details">
+				>
+				["at0003"] = <
+					text = <"Encounter ID">
+					description = <"Healthcare encounter identifier">
 				>
 			>
 		>

@@ -1,7 +1,7 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.exclusion_nehta-adverse_reaction.v1
+﻿archetype (adl_version=1.4; uid=b5031a58-60d7-4e54-93a6-e1fb19a13a25)
+	openEHR-EHR-EVALUATION.exclusion_nehta-adverse_reaction.v0
 specialise
-	openEHR-EHR-EVALUATION.exclusion_nehta.v1
+	openEHR-EHR-EVALUATION.exclusion_nehta.v0
 
 concept
 	[at0000.1]	-- Exclusion of an Adverse Reaction (NEHTA)
@@ -28,12 +28,19 @@ Exclusion statements can only be considered to be current and accurate at the ti
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Exclusion Statement - Adverse Reaction, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.618_1 (accessed 31 July 2013).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"F1055E9180CFD9D9953F1278C9E3F95D">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"36970D95C32BA0C8D4C2EED8C6C071FC">
+		["build_uid"] = <"16dee56d-e1bd-483d-93ec-f2754f5bd2d9">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -58,6 +65,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology

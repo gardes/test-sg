@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c6e30d16-920d-45ee-b047-2dccf5fd62b0)
-	openEHR-EHR-COMPOSITION.structured_document.v0
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.structured_document.v1
 
 concept
 	[at0000]	-- Structured Document
@@ -18,18 +18,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"CCDA13DB41BC64A1C371C1730C3A15C1">
-		["build_uid"] = <"7864f152-ea63-4104-8d56-047c7a10df69">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"2D8744F1AA34D2AFC2FD3113C66DB839">
 	>
 
 definition
@@ -76,11 +68,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0003"] = <
-					text = <"Document Context">
+					text = <"Document Context ">
 					description = <"*">
 				>
 				["at0007"] = <
-					text = <"Health Event Context">
+					text = <"Health Event Context  ">
 					description = <"*">
 				>
 			>
