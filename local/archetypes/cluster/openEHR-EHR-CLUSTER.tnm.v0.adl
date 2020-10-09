@@ -61,7 +61,7 @@ For noen bestemte kreftformer, som Hodgkins eller non-Hodgkins lymfom vil andre 
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the clinical classification and stage grouping of malignancies using the TNM system.">
+			purpose = <"Changed: To record the clinical classification and stage grouping of malignancies using the TNM system.">
 			use = <"Use to record the clinical classification, designated as TNM or cTNM, and stage grouping of malignancies.
 
 This archetype has been designed to be nested inside an ENTRY archetype which will provide a clinical context and the tumour type for the TNM record - for example: the 'Specific details' SLOT within the EVALUATION.problem_diagnosis archetype.
@@ -88,8 +88,8 @@ TNM Classification Help (Manual for Cancer Staging); [cited 2019 10 04].  Availa
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"49365029F3E1176D24C11B4E4EB11C4A">
-		["build_uid"] = <"9d8bb9c8-f212-4366-888c-37083715a9e0">
+		["MD5-CAM-1.0.1"] = <"A6B799F15281E75F46F4108F891DA314">
+		["build_uid"] = <"402fc9c9-f492-4ad8-b5be-95a92c2753a5">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -271,8 +271,8 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Residual tumour (R)">
-					description = <"Assessment of the presence of residual tumour after treatment.">
-					comment = <"For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'.">
+					description = <"Changed: Assessment of the presence of residual tumour after treatment.">
+					comment = <"Changed: For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'.">
 				>
 				["at0008"] = <
 					text = <"RX">
@@ -347,8 +347,8 @@ ontology
 				>
 				["at0025"] = <
 					text = <"Multiple primary tumours (m)">
-					description = <"Presence of multiple simultaneous primary tumours at a single site.">
-					comment = <"Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'.">
+					description = <"Changed: Presence of multiple simultaneous primary tumours at a single site.">
+					comment = <"Changed: Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'.">
 				>
 				["at0026"] = <
 					text = <"Multimodality therapy (y)">
