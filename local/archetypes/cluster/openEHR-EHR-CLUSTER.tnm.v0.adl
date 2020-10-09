@@ -43,7 +43,6 @@ Jeder Krebs hat einen Satz eindeutigen TNM-Klassifikationswerte. Dieser Archetyp
 Bei bestimmten Tumorarten, wie Hodgkin-Lymphomen und anderen Non-Hodgkin-Lymphomen, wird zur Bestimmung des Ausmaßes und der Prognose von Krankheiten ein anderes System verwendet. In diesem Fall wird nur die Stadieneinteilung definiert.">
 			keywords = <"TNM, Krebs, Tumor, cTNM, Grading, Einstufung, Malignität, Klassifikation, Einteilung, Stadium, Neoplasie", ...>
 			misuse = <"Nicht zur Darstellung der pathologischen TNM-Klassifikation verwenden - verwenden Sie für diesen Zweck den Archetyp CLUSTER.tnm-pathological.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -61,7 +60,7 @@ For noen bestemte kreftformer, som Hodgkins eller non-Hodgkins lymfom vil andre 
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Changed: To record the clinical classification and stage grouping of malignancies using the TNM system.">
+			purpose = <"To record the clinical classification and stage grouping of malignancies using the TNM system.">
 			use = <"Use to record the clinical classification, designated as TNM or cTNM, and stage grouping of malignancies.
 
 This archetype has been designed to be nested inside an ENTRY archetype which will provide a clinical context and the tumour type for the TNM record - for example: the 'Specific details' SLOT within the EVALUATION.problem_diagnosis archetype.
@@ -77,19 +76,19 @@ With certain types of tumours, such as Hodgkin and other non-Hodgkin lymphomas, 
 	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Vegar Dagenborg, OUS, Norway", "Kristin Eik, Kreftregisteret, Norway", "Hildegard Franke, freshEHR Clinical Informatics Ltd. UK", "Morten Hørthe, DIPS, Norway", "Sergey Kovalenko, Chelyabinsk Regional Children Hospital, Russia", "Siri Laronningen, Kreftregisteret, Norway", "Liv Laugen, Oslo universitetssykehus, Norway", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Miha Lenic, Marand, Slovenia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Anne M Gromsrud, DIPS AS, Norway", "Ian McNicoll, freshEHR Clinical Informatics Ltd. UK", "Bjørn Næss, DIPS ASA, Norway", "SARA PRETE, Abinsula, Italy", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Brierley JD, Gospodarowicz MK, Wittekind C. TNM Classification of Malignant Tumours, 8th Edition. Wiley-Springer; 2016. 272 p.
 
 Principles of Cancer Staging. AJCC American Joint Committee on Cancer; [cited 2019 03 15]. Available at: https://cancerstaging.org/references-tools/deskreferences/Documents/Principles%20of%20Cancer%20Staging.pdf.
 
 TNM Classification Help (Manual for Cancer Staging); [cited 2019 10 04].  Available at: http://cancerstaging.blogspot.com/.">
 		["current_contact"] = <"Heather Leslie, Atomica Informatics, heather.leslie@atomicainformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A6B799F15281E75F46F4108F891DA314">
-		["build_uid"] = <"402fc9c9-f492-4ad8-b5be-95a92c2753a5">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3AB93FEBE2F5F762ED9AADABA60ED923">
+		["build_uid"] = <"39164f2f-7a4c-4870-9ccf-8afd1b0a95b2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -229,14 +228,13 @@ definition
 	}
 
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"TNM clinical classification">
-					description = <"A framework for the clinical classification and stage grouping of malignancies using the TNM system.">
+					description = <"Another change: A framework for the clinical classification and stage grouping of malignancies using the TNM system.">
 					comment = <"Designated as TNM or cTNM.">
 				>
 				["at0001"] = <
@@ -256,8 +254,8 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Regional lymph nodes (N)">
-					description = <"Assessment of the the absence or presence and extent of regional lymph node metastasis.">
-					comment = <"Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'.">
+					description = <"Another change: Assessment of the the absence or presence and extent of regional lymph node metastasis.">
+					comment = <"Another change: Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'.">
 				>
 				["at0005"] = <
 					text = <"Distant metastasis (M)">
@@ -271,8 +269,8 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Residual tumour (R)">
-					description = <"Changed: Assessment of the presence of residual tumour after treatment.">
-					comment = <"Changed: For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'.">
+					description = <"Assessment of the presence of residual tumour after treatment.">
+					comment = <"For example: 'R2 (Macroscopic residual tumour)'. Represented as 'R' within the 'TNM assessment'.">
 				>
 				["at0008"] = <
 					text = <"RX">
@@ -347,8 +345,8 @@ ontology
 				>
 				["at0025"] = <
 					text = <"Multiple primary tumours (m)">
-					description = <"Changed: Presence of multiple simultaneous primary tumours at a single site.">
-					comment = <"Changed: Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'.">
+					description = <"Presence of multiple simultaneous primary tumours at a single site.">
+					comment = <"Represented by the suffix, either as '(m)' or the number of primary tumours added to the T code in brackets . For example: 'T2(m)' or 'cT2(4)'.">
 				>
 				["at0026"] = <
 					text = <"Multimodality therapy (y)">
@@ -389,7 +387,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"TNM-klassifikasjon klinisk">
-					description = <"Et rammeverk for klinisk klassifikasjon og gradering av maligne tumorer før behandling, i henhold til TNM-systemet.">
+					description = <"*Another change: A framework for the clinical classification and stage grouping of malignancies using the TNM system. (en)">
 					comment = <"Betegnes som TNM eller cTNM.">
 				>
 				["at0001"] = <
@@ -409,8 +407,8 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Regionale lymfeknuter (N)">
-					description = <"Vurdering av hvorvidt det er metastaser i regionale lymfeknuter eller ikke, og i så fall i hvilken grad.">
-					comment = <"Kodes med en N-kode som passer for tumortypen og den anatomiske lokaliseringen, for eksempel \"NX\" eller \"cN2\". Fremkommer i \"TNM-vurdering\" som \"N\" eller \"cN\".">
+					description = <"*Another change: Assessment of the the absence or presence and extent of regional lymph node metastasis. (en)">
+					comment = <"*Another change: Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'. (en)">
 				>
 				["at0005"] = <
 					text = <"Fjernmetastase (M)">
@@ -542,7 +540,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Klinische TNM-Klassifikation">
-					description = <"Ein Archetyp für die klinische Klassifikation und die Einteilung der Malignität in Stadien anhand des TNM-Systems.">
+					description = <"*Another change: A framework for the clinical classification and stage grouping of malignancies using the TNM system. (en)">
 					comment = <"Bezeichnet als TNM oder cTNM.">
 				>
 				["at0001"] = <
@@ -562,8 +560,8 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Regionäre Lymphknoten (N)">
-					description = <"Die Beurteilung des Fehlens oder Vorhandenseins und des Ausmaßes regionären Lymphknotenmetastasen.">
-					comment = <"Die Codierung mit einem N-Code, der der Art des Tumors und der anatomischen Lokalisation entspricht, wird erwartet. Zum Beispiel: \"NX\" oder \"cN2\". Dargestellt als \"N\" oder \"cN\" in der \"TNM-Bewertung\".">
+					description = <"*Another change: Assessment of the the absence or presence and extent of regional lymph node metastasis. (en)">
+					comment = <"*Another change: Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'NX'; or 'cN2'. Represented as 'N' or 'cN' within the 'TNM assessment'. (en)">
 				>
 				["at0005"] = <
 					text = <"Fernmetastasierung (M)">
