@@ -21,13 +21,13 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"07344E0C538B0C29C26EB5D992B918EB">
-		["build_uid"] = <"366371ed-0a55-40e8-868e-7a7119c4fd15">
+		["build_uid"] = <"4e6f6213-361b-4827-bf07-57d1661015ff">
 		["revision"] = <"0.0.1-alpha">
 	>
 
