@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=0160b118-1b4b-4797-a426-e0e67b4f1f1d)
-	openEHR-EHR-COMPOSITION.naz02.v0
+﻿archetype (adl_version=1.4; uid=0da43317-208a-4170-aa97-ada22843c140)
+	openEHR-EHR-COMPOSITION.naz01.v0
 
 concept
 	[at0000]	-- Naz
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"C64ED280AFBD21B4E272AE1DA96F62A5">
-		["build_uid"] = <"9e3ec335-4c37-4992-85e8-4c4d2cf2fae6">
+		["MD5-CAM-1.0.1"] = <"8A62FBFF23EE2F6447E0356DF487A539">
+		["build_uid"] = <"2fd59aa2-2f4e-4c67-8c15-ca880825bb81">
 		["revision"] = <"0.0.1-alpha">
 	>
 
