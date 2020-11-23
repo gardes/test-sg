@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.naztestarch.v0
 
 concept
-	[at0000]	-- Naztestarch
+	[at0000]	-- Naztestarchchange
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -16,13 +16,19 @@ description
 			purpose = <"This is a test new archetype created">
 			use = <"This is a test new archetype created and can be used for testing">
 			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"33B9BD80E579665072651D398AA665B4">
-		["build_uid"] = <"61188853-f555-4a81-a381-7c13acf72523">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"DB8F358D254F30B5B7CE94F3CC170949">
+		["build_uid"] = <"131319ab-35f4-4def-b7bf-c9bb477db63e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -35,7 +41,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Naztestarch">
+					text = <"Naztestarchchange">
 					description = <"TSETING PURPOSE1">
 				>
 			>
