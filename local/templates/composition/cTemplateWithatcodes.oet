@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
-  <id>00da5e3c-4c3e-42e4-8ec6-fa8cf19f70b6</id>
-  <name>test valueset template</name>
+  <id>02a05bd9-3cc8-4cf6-9ccb-08820d72af52</id>
+  <name>cTemplateWithatcodes</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
@@ -60,8 +60,9 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.testts.v0" concept_name="Testts" />
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.testts.v0">
-    <digest id="MD5-CAM-1.0.1">422989D5A6D79FCB283FF45B9D97834C</digest>
+   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.test.v0" concept_name="TEST">
+    </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.test.v0">
+    <digest id="MD5-CAM-1.0.1">78566CD2B138CFFDA9031A7E08A8BCFB</digest>
   </integrity_checks>
 </template>
