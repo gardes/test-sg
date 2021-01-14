@@ -1,10 +1,35 @@
-﻿archetype (adl_version=1.4; uid=901eb1c3-45d3-4258-9463-9a94b4ba3d77)
+﻿archetype (adl_version=1.4; uid=c1e310d7-2c2b-4b17-8fc0-f598a24a8be7)
 	openEHR-EHR-EVALUATION.triage.v0
 
 concept
 	[at0000]	-- Triage evaluation
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Dr. Leonardo Der Jachadurian">
+				["organisation"] = <"Bitios.com">
+			>
+			accreditation = <"Medical Doctor (Internal Medicine Specialist)">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão">
+				["organisation"] = <"Core Consulting">
+				["email"] = <"contato@coreconsulting.com.br">
+			>
+			accreditation = <"Hospital Alemão Oswaldo Cruz (HAOC)">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -19,20 +44,45 @@ description
 			use = <"">
 			keywords = <"triage", "evaluation", "assessment">
 			misuse = <"">
-			copyright = <"© copyright (c) 2008 openEHR Foundation, openEHR Foundation">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"بيان لتقييم الاستنتاجات أو الملخص الذي يقوم به الطبيب السريري لأولويات المعالجة.">
+			use = <"">
+			keywords = <"الفرز", "التقييم", "التقدير">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Evaluación hecha por un médico, respecto a que prioridad es requerida para el manejo de la condición médica que motivó la evaluación.">
+			use = <"">
+			keywords = <"triage", "evaluación", "priorización">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Uma declaração avaliativa para as conclusões ou sumário por um clínico em relação à necessidade de prioridade de tratamento.
+">
+			use = <"">
+			keywords = <"triagem", "avaliação", "abordagem">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0A5A0CE4F3D2A0C425865A5CDC9D5B4F">
-		["build_uid"] = <"fbfff9a6-45d8-413b-9ff9-857b687b8f13">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"C401B30646557A532A579B0CF574FB83">
+		["build_uid"] = <"9a825893-7b92-49b1-afe6-6c6aa25308e4">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -59,7 +109,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
@@ -100,6 +149,126 @@ ontology
 				>
 				["at0018"] = <
 					text = <"Non-urgent">
+					description = <"*">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"تقييم الفرز">
+					description = <"تقييم الحاجة لفورية المعالجة">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"تقييم الفرز">
+					description = <"تسجيل للحاجة إلى ترتيب أولويات المعالجة">
+				>
+				["at0008"] = <
+					text = <"الأساس المنطقي">
+					description = <"الأساس المنطقي للتقييم الذي يتم تقديمه">
+				>
+				["at0014"] = <
+					text = <" مباشر/فوري/عاجل">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"عاجل/مُلِحّ جدا">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"عاجل/مُلِحّ">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"عياري">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"غير عاجل/غير مُلِحّ">
+					description = <"*">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluación Triage">
+					description = <"Evaluación de que urgencia es requerida para el tratamiento.">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Evaluación Triage">
+					description = <"Registro de la necesidad de priorización del tratamiento.">
+				>
+				["at0008"] = <
+					text = <"Fundamentación">
+					description = <"La fundamentación de la evaluación provista.">
+				>
+				["at0014"] = <
+					text = <"Inmediata">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Muy urgente">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Urgente">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Estándar">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"No urgente">
+					description = <"*">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"Avaliação da triagem">
+					description = <"Avaliação da necessidade de tratamento imediato.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Avaliação da triagem">
+					description = <"Registra a necessidade de priorização de tratamento.">
+				>
+				["at0008"] = <
+					text = <"Razão">
+					description = <"Razão pela qual é feita a avaliação.">
+				>
+				["at0014"] = <
+					text = <"Imediata">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Muito urgente">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Urgente">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Padrão">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Não urgente">
 					description = <"*">
 				>
 			>

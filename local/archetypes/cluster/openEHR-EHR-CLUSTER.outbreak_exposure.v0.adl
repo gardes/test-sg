@@ -1,0 +1,102 @@
+﻿archetype (adl_version=1.4; uid=3edd7a66-68bc-444c-8843-34cef385a3dd)
+	openEHR-EHR-CLUSTER.outbreak_exposure.v0
+
+concept
+	[at0000]	-- Location-based exposure
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+		["date"] = <"2020-02-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"To record details of potential exposure to a potentially harmful agent, relating to a specific location, typically an outbreak of infectious disease.">
+			keywords = <"location, outbreak, infection,", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"D140D0945CA61E93EC034A663AC5A9C8">
+		["build_uid"] = <"0a49d5c9-9ef5-4ce4-b80a-1998edc08809">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Location-based exposure
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Outbreak  location
+				value matches {
+					DV_TEXT matches {*}
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..*} matches {    -- Location identifier
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {    -- Risk category
+				value matches {
+					DV_CODED_TEXT matches {*}
+					DV_TEXT matches {*}
+					DV_ORDINAL matches {*}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {    -- Date entered location
+				value matches {
+					DV_DATE matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Date left location
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Location-based exposure">
+					description = <"Details of potential exposure to a potentially harmful agent, relating to a specific location, typically an outbreak of infectious disease.">
+				>
+				["at0007"] = <
+					text = <"Outbreak  location">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Location identifier">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Date entered location">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Date left location">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Risk category">
+					description = <"*">
+				>
+			>
+		>
+	>

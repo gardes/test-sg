@@ -253,8 +253,8 @@ http://en.wikipedia.org/wiki/Apgar_score">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3D3BD552906889C580132A01073F81CB">
-		["build_uid"] = <"06240059-af62-4fa9-8217-710fea603018">
+		["MD5-CAM-1.0.1"] = <"7BA2229E7FE5D5F604D62EA4CE0FDD42">
+		["build_uid"] = <"d49b7686-c278-4f25-9839-70590f96cef8">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -318,10 +318,10 @@ definition
 							}
 						}
 					}
-					POINT_EVENT[at0026] occurrences matches {0..1} matches {	-- 2 minute
+					POINT_EVENT[at0026] occurrences matches {0..1} matches {	-- -2 minute
 						offset matches {
 							DV_DURATION matches {
-								value matches {|PT2M|}
+								value matches {|-PT2M|}
 							}
 						}
 						data matches {
@@ -382,8 +382,6 @@ definition
 			}
 		}
 	}
-
-
 
 ontology
 	terminologies_available = <"SNOMED-CT", "LOINC">
@@ -491,8 +489,8 @@ ontology
 					description = <"The sum of the 5 ordinal scores for each component parameter.">
 				>
 				["at0026"] = <
-					text = <"2 minute">
-					description = <"Apgar score 2 minutes after birth.">
+					text = <"-2 minutes TESTING">
+					description = <"Apgar score -2 minutes after birth. TESTING">
 				>
 				["at0027"] = <
 					text = <"3 minute">
