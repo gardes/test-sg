@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=54a5a019-45a5-43df-ba2c-49aa47b39e44)
+	openEHR-EHR-SECTION.iiiiiiiiiiiiiiiiiiiiii.v0
+
+concept
+	[at0000]	-- Iiiiiiiiiiiiiiiiiiiiii
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A9F8ADCE6A54B9BED29EC345B669C94F">
+		["build_uid"] = <"fedbe947-1501-4eda-9f57-80f05d25de9f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	SECTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Iiiiiiiiiiiiiiiiiiiiii">
+					description = <"unknown">
+				>
+			>
+		>
+	>

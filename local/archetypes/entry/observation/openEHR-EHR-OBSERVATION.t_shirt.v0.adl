@@ -1,0 +1,266 @@
+﻿archetype (adl_version=1.4; uid=79c4d22a-71da-447d-b8cc-1d24cfd4798a)
+	openEHR-EHR-OBSERVATION.t_shirt.v0
+
+concept
+	[at0000]	-- T shirt
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"32D8A7E96F1B78CB5252CA9A9A08A4E3">
+		["build_uid"] = <"3aef1cf2-f5cf-4511-b811-d5d89d1781f1">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- T shirt
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Sleeves
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0010, 	-- Long
+													at0011, 	-- Short
+													at0012]	-- Three quarter
+												}
+											}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Neck
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0013, 	-- Round
+													at0014, 	-- V shape
+													at0015, 	-- Sweetheart
+													at0016, 	-- Square
+													at0017, 	-- Boat
+													at0018, 	-- Halter
+													at0019]	-- Funnel
+												}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Size
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0020, 	-- Extra small
+													at0021, 	-- Small
+													at0022, 	-- Medium
+													at0023, 	-- Large
+													at0024]	-- Extra large
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Colour
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0025, 	-- Black
+													at0026, 	-- White
+													at0027, 	-- Red
+													at0028, 	-- Blue
+													at0029, 	-- Yellow
+													at0030, 	-- Orange
+													at0031, 	-- Green
+													at0032, 	-- Purple
+													at0033]	-- Indigo
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0007] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Material
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"T shirt">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Sleeves">
+					description = <"Details of sleeves.">
+				>
+				["at0005"] = <
+					text = <"Neck">
+					description = <"Details of neckline.">
+				>
+				["at0006"] = <
+					text = <"Size">
+					description = <"Details of size.">
+				>
+				["at0007"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Material">
+					description = <"Details of material.">
+				>
+				["at0009"] = <
+					text = <"Colour">
+					description = <"Details of colour.">
+				>
+				["at0010"] = <
+					text = <"Long">
+					description = <"Long sleeves.">
+				>
+				["at0011"] = <
+					text = <"Short">
+					description = <"Short sleeves.">
+				>
+				["at0012"] = <
+					text = <"Three quarter">
+					description = <"Three quarter sleeves.">
+				>
+				["at0013"] = <
+					text = <"Round">
+					description = <"Round neckline.">
+				>
+				["at0014"] = <
+					text = <"V shape">
+					description = <"V-shape neckline.">
+				>
+				["at0015"] = <
+					text = <"Sweetheart">
+					description = <"Sweetheart neckline.">
+				>
+				["at0016"] = <
+					text = <"Square">
+					description = <"Square neckline">
+				>
+				["at0017"] = <
+					text = <"Boat">
+					description = <"Boat neckline.">
+				>
+				["at0018"] = <
+					text = <"Halter">
+					description = <"Halter neckline.">
+				>
+				["at0019"] = <
+					text = <"Funnel">
+					description = <"Funnel neckline.">
+				>
+				["at0020"] = <
+					text = <"Extra small">
+					description = <"Extra small size.">
+				>
+				["at0021"] = <
+					text = <"Small">
+					description = <"Small size.">
+				>
+				["at0022"] = <
+					text = <"Medium">
+					description = <"Medium size.">
+				>
+				["at0023"] = <
+					text = <"Large">
+					description = <"Large size.">
+				>
+				["at0024"] = <
+					text = <"Extra large">
+					description = <"Extra large size.">
+				>
+				["at0025"] = <
+					text = <"Black">
+					description = <"Black.">
+				>
+				["at0026"] = <
+					text = <"White">
+					description = <"White.">
+				>
+				["at0027"] = <
+					text = <"Red">
+					description = <"Red.">
+				>
+				["at0028"] = <
+					text = <"Blue">
+					description = <"Blue.">
+				>
+				["at0029"] = <
+					text = <"Yellow">
+					description = <"Yellow.">
+				>
+				["at0030"] = <
+					text = <"Orange">
+					description = <"Orange.">
+				>
+				["at0031"] = <
+					text = <"Green">
+					description = <"Green.">
+				>
+				["at0032"] = <
+					text = <"Purple">
+					description = <"Purple.">
+				>
+				["at0033"] = <
+					text = <"Indigo">
+					description = <"Indigo.">
+				>
+			>
+		>
+	>

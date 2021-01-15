@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>41ba6435-6e0f-4c25-9f11-35d512eb0bac</id>
+  <name>Calgary test</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.eeee.v0" concept_name="Eeee">
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.bbbb.v0" concept_name="Bbbb" path="/content" />
+    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.dddd.v0" concept_name="Dddd" path="/content" />
+    <Content xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.cccc.v0" concept_name="Cccc" path="/content" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.aaaa.v0" concept_name="Aaaa" path="/content" />
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.eeee.v0">
+    <digest id="MD5-CAM-1.0.1">886B185A1139DF5F8183D61B9C2AE656</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.bbbb.v0">
+    <digest id="MD5-CAM-1.0.1">F5999794DFEEBE360168FE4B3C636591</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.dddd.v0">
+    <digest id="MD5-CAM-1.0.1">F4EF1D055F5816BB072ABA52DD8D8E35</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.cccc.v0">
+    <digest id="MD5-CAM-1.0.1">C5AC71F90BEDD8AF005AF963C7617D30</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.aaaa.v0">
+    <digest id="MD5-CAM-1.0.1">EC981159333BD63CF4994DA3D6920A0C</digest>
+  </integrity_checks>
+</template>

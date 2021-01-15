@@ -31,6 +31,7 @@ Not to be used to record details about a specific pregnancy - use EVALUATION.pre
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
+		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Pregnancy/Breast Feeding Status; [updated 2012 Dec 02, cited 2012 Dec 02]. Available from: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.1300_3.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"F75369554F8AD6EB3F65CE785F9E9350">
 	>
@@ -69,7 +70,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

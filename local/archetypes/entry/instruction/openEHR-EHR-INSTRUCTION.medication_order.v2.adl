@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=f806ed48-a801-4510-8409-be84acc1079d)
+﻿archetype (adl_version=1.4; uid=3dbfa817-6ccd-49da-8ee4-4163404997e2)
 	openEHR-EHR-INSTRUCTION.medication_order.v2
 
 concept
@@ -89,6 +89,7 @@ Merk at disse bruksområdene innbefatter FHIR-ressursene for både \"Medication 
 Skal ikke brukes for å registrere ordinering av blodkomponenter, som omfatter en fundamentalt ulik klinisk prosess og sannsynligvis vil trenge ulik støtteinformasjon. Bruk arketypen INSTRUCTION.transfusion for dette formålet.
 
 Skal ikke brukes for å registrere ordinering av innlegging av implantater og medisinsk utstyr som pacemakere og defibrillatorer. Bruk arketypen INSTRUCTION.procedure for dette formålet.">
+			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -134,6 +135,7 @@ Debe tenerse en cuenta que estos usos subsumen lso casos de uso tanto de la Orde
 No debe ser utilizado para el registro de órdenes de sangre o sus preparados, lo cual involucra un proceso clínico fundamentalmente diferente que muy probablemente requiera otro tipo de información. Se debe utilizar el ACTION.transfusion para este propósito.
 
 No debe ser utilizado para el registro de órdenes de inserción de implantes o dispositivos médicos tales como marcapasos o defibriladores. Se debe utilizar el ACTION.procedure para este propósito.">
+			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -181,6 +183,7 @@ Observar que esses casos de usos acima descritos incluem os casos de uso da Pres
 Não deve ser utilizado para registrar o pedido de produtos sanguíneos, o que envolve um processo clínico fundamentalmente diferente e é provável que exija informações adicionais diferentes. Use o arquétipo INSTRUCTION.transfusion para este propósito.
 
 Não deve ser utilizado para registrar a ordem de inserção de implantes ou dispositivos médicos, como marcapassos e desfibriladores. Utilize o procedimento INSTRUCTION.Para este fim.">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -230,11 +233,11 @@ Not to be used to record the order for insertion of implants or medical devices 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Tomas Alme, DIPS, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Marcus Baw, openGPSoC / BawMedical Ltd, United Kingdom", "John Bennett, NEHTA, Australia", "Kristian Berg, Universitetssykehuset Nord Norge, Norway (Nasjonal IKT redaktør)", "SumanBhusan Bhattacharyya, Sudisa Consultancy Services, India", "Sharmila Biswas, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Bjørn Christensen, Helse Bergen HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Inderjit Daphu, Helse Bergen, Norway", "Gail Easterbrook, Flinders Medical Centre, Australia", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Stig Erik Hegrestad, Helse Førde, Norway", "David Evans, Queensland Health, Australia", "Samuel Frade, Marand, Portugal", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Cecilie Graver, Oslo universitetssykehus HF, Norway", "Trina Gregory, cpc, Australia", "Bjørn Grøva, Diretoratet for e-helse, Norway", "Robert Hausam, Hausam Consulting LLC, United States", "Sam Heard, Ocean Informatics, Australia (Editor)", "Kristian Heldal, Telemark Hospital Trust, Norway", "Annette Hole Sjøborg, DIPS ASA, Norway", "Hilde Hollås, DIPS ASA, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Gunnar Jårvik, Nasjonal IKT HF, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Mary Kelaher, NEHTA, Australia", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Ole Kristian Losvik, Losol AS, Norway", "Robert L'egan, NEHTA, Australia", "Russell Leftwich, Russell B Leftwich MD, United States", "Fest Legemiddelverket, Statens Legemiddelverk, Norway", "Øygunn Leite Kallevik, Helse Bergen, Norway", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Colin Macfarlane, Elsevier, United Kingdom", "Alan March, Hospital Universitario Austral, Argentina", "Siv Marie Lien, DIPS ASA, Norway", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Martin Paulson, Sykehuset i Vestfold, Norway", "Chris Pearce, Melbourne East GP Network, Australia", "Kristian Pedersen, Nordlandssykehuset HF, Norway", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Tanja Riise, Nasjonal IKT HF, Norway", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Raymond Simkus, Brookswood Family Practice, Canada", "Iztok Stotl, UKCLJ, Slovenia", "John Taylor, NEHTA, Australia", "Nyree Taylor, Ocean Informatics, Australia", "Tesfay Teame, Folkehelseinstituttet, Norway", "Richard Townley-O'Neill, Australian Digital Health Agency, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ines Vaz, UFN, Portugal", "Nils Widnes, Helse-Bergen, Norway", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Medication instruction, Draft Archetype [Internet]. nehta, Australia, nehta Clinical Knowledge Manager [cited: 2015-12-15]. Available from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.838
 
 Intermountain Healthcare Medication order model, Personal Communication to Sam Heard by Dr Stan Huff.
@@ -245,12 +248,12 @@ NHS HSCIC Messaging Implementation Manual (GP2GP messages) http://www.uktcregist
 
 Standards for medication and medical device records – technical annex [Internet]. RCP London. [cited 2015 Dec 15]. Available from: https://www.rcplondon.ac.uk/projects/outputs/standards-medication-and-medical-device-records-technical-annex">
 		["current_contact"] = <"Ian McNicoll, freshEHR Clinical Informatics, UK <ian@freshehr.com>">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"19328C6E85A1CAE39D2522FF43F1A104">
-		["build_uid"] = <"905c7a8a-c53d-4913-88f3-4433b81c27fb">
-		["revision"] = <"2.0.1">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"38CF48AB22C652B7DE2E7BFB4B4114F1">
+		["build_uid"] = <"5991a890-1628-455c-96c4-57594b5f3030">
+		["revision"] = <"2.0.0-alpha">
 	>
 
 definition
@@ -550,6 +553,7 @@ definition
 			}
 		}
 	}
+
 
 
 
