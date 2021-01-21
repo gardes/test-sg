@@ -62,6 +62,6 @@
   </description>
   <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.testts.v0" concept_name="Testts" />
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.testts.v0">
-    <digest id="MD5-CAM-1.0.1">B8E70E8505967D15EC267BEB2EC84885</digest>
+    <digest id="MD5-CAM-1.0.1">B183EB55A1ED91DBD8E3C7356A959A73</digest>
   </integrity_checks>
 </template>

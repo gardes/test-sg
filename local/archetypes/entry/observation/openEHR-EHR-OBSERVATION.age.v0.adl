@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=6bf9cb2c-2bfb-43db-b989-5be1909628f1)
+﻿archetype (adl_version=1.4; uid=c16556dd-c527-4f61-bdbd-3f912fbe5e01)
 	openEHR-EHR-OBSERVATION.age.v0
 
 concept
@@ -9,17 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout">
-				["organisation"] = <"MHH-Hannover">
-				["email"] = <"ballout.sarah@mh-hannover.de">
-			>
-		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			author = <
-				["name"] = <"Silje Ljosland Bakke">
-				["organisation"] = <"Helse Vest IKT AS">
-				["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no">
+				["name"] = <"Sebastian Ocean, Sebastian Gwarde, Sebastian Garde">
+				["organisation"] = <"Ocean Informatics, Ocean Informatics Pty Ltd">
+				["email"] = <"sebastian.garde@oceaninformatics.com, sebasti@ngar.de">
 			>
 		>
 	>
@@ -33,22 +25,11 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Zur Darstellung der Altersparameter einer Person.">
-			use = <"Zur Darstellung der Altersparameter einer Person.
+			purpose = <"*To record parameters about the age of an individual.(en)">
+			use = <"*Use to record parameters about the age of an individual.
 
-Diesen Archetypen zusammen mit dem OBSERVATION.child_growth Archetypen im Template verwenden, um das korrigierte Alter eines Säuglings im Rahmen der Überwachung des Kinderwachstums darzustellen.">
-			keywords = <"Alter", "Lebensalter">
+Use to in a template alongside OBSERVATION.child_growth to record the adjusted age of an infant as part of monitoring child growth patterns.(en)">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"For å registrere informasjon om et individs alder.">
-			use = <"Bruk for å registrere informasjon om et individs alder.
-
-Bruk i et templat sammen med arketypen OBSERVATION.child_growth for å registrere den justerte alderen av et spedbarn, som en del av overvåkning av vekst.">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -64,39 +45,36 @@ Use to in a template alongside OBSERVATION.child_growth to record the adjusted a
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"Derived from: <Add reference to original resource here>">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BFFDD77A850AF727E7D4058F70682DBF">
-		["build_uid"] = <"4b531064-80b4-4be4-9200-4674c63b81d9">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"65E66247F54217067900307A7F03725B">
+		["build_uid"] = <"54ef7b45-54bb-4deb-b3dd-76740706523b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Age
+	OBSERVATION[at0000] matches {	-- Age
 		data matches {
-			HISTORY[at0001] matches {    -- Event Series
+			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {    -- Any event
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {    -- Tree
+							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Chronological age
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Chronological age
 										value matches {
 											DV_DURATION matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Adjusted age
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Adjusted age
 										value matches {
-											DV_DURATION matches {
-												value matches {|PT5S..P1Y|}
-											}
+											DV_DURATION matches {*}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Comment
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Comment
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -142,74 +120,39 @@ ontology
 				["at0006"] = <
 					text = <"Comment">
 					description = <"Additional narrative about the age of an individual, not captured in other fields.">
-					comment = <"For example: pre-term delivery">
+					comment = <"For example: pre-term delivery.">
 				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Alter">
-					description = <"Angaben über das Alter einer Person.">
+					text = <"*Age(en)">
+					description = <"*Details about the age of an individual.(en)">
 				>
 				["at0001"] = <
 					text = <"Event Series">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Beliebiges Ereignis">
-					description = <"Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann.">
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Chronologisches Alter">
-					description = <"Das Alter bezieht sich auf das tatsächliche Geburtsdatum.">
+					text = <"test">
+					description = <"test">
 				>
 				["at0005"] = <
-					text = <"Korrigiertes Alter">
-					description = <"Das Alter bezogen auf das errechnete Geburtsdatum.
-">
+					text = <"*Adjusted age(en)">
+					description = <"testwe">
 				>
 				["at0006"] = <
-					text = <"Kommentar">
-					description = <"Beschreibung des Alters einer Person, das nicht in anderen Datenelementen dargestellt wird.">
-					comment = <"Zum Beispiel: Frühgeburt">
-				>
-			>
-		>
-		["nb"] = <
-			items = <
-				["at0000"] = <
-					text = <"Alder">
-					description = <"Detaljer om et individs alder.">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Uspesifisert hendelse">
-					description = <"Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon.">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Kronologisk alder">
-					description = <"Alder basert på faktisk fødselsdato.">
-				>
-				["at0005"] = <
-					text = <"Justert alder">
-					description = <"Alder basert på termindato.">
-				>
-				["at0006"] = <
-					text = <"Kommentar">
-					description = <"Ytterligere fritekst om et individs alder som ikke fanges opp i andre felt.">
-					comment = <"For eksempel fødsel før termin.">
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the age of an individual, not captured in other fields.(en)">
 				>
 			>
 		>
