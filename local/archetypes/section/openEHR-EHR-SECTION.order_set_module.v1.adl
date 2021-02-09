@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=b70f1035-8e2d-4cca-9fbe-9d9486a6c061)
+	openEHR-EHR-SECTION.order_set_module.v1
+
+concept
+	[at0000]	-- Order set module
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"21EC494C434754F579B54862ACCE43C7">
+		["build_uid"] = <"e6525acf-ec52-48c7-89dc-c7d5d0d49ce1">
+		["revision"] = <"1.0.0">
+	>
+
+definition
+	SECTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Order set module">
+					description = <"unknown">
+				>
+			>
+		>
+	>

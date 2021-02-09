@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=4ad82530-88c6-41f1-b01d-30ea2de5801a)
+﻿archetype (adl_version=1.4; uid=ca0ee384-0c93-4a94-92a2-88fdf9278569)
 	openEHR-EHR-OBSERVATION.avpu-c.v0
 specialise
 	openEHR-EHR-OBSERVATION.avpu.v0
@@ -38,7 +38,7 @@ description
 			use = <"For raskt og enkel vurdering av et individs bevissthetsnivå, særlig egnet til vurdering i akutte situasjoner. Denne vurderingen har blitt oppdatert i 2017 som følge av endringer NEWS skåringsverktøyet. Verktøyet er nå publisert som NEWS 2.">
 			keywords = <"AVPU", "alert", "voice", "pain", "unresponsive", "våken", "tale", "smerte", "bevisstløs", "stemme", "bevissthet", "verbal", "verbalrespons", "semikomatøs", "bevisst", "bevissthetsnivå", "komatøs">
 			misuse = <"">
-			copyright = <"© Apperta UK, openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -46,7 +46,7 @@ description
 			use = <"Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.">
 			keywords = <"avda", "alerta", "voz", "dor", "arresponsivo">
 			misuse = <"">
-			copyright = <"© Apperta UK, openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -54,24 +54,24 @@ description
 			use = <"Use to record a quick and simple assessment of an individual's level of consciousness, especially in an emergency situation. This assessment has been updated in response to 2017 changes to the NEWS assessment, now published as NEWS2.">
 			keywords = <"avpu", "alert", "voice", "pain", "unresponsive", "awake", "speech", "pain", "unconscious", "voice", "consciousness", "verbal", "verbal response", "semicomatose", "conscious", "level of consciousness", "comatose", "confusion", "acvpu">
 			misuse = <"">
-			copyright = <"© Apperta UK, openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Derived from: ACVPU, Draft archetype [Internet]. Apperta UK, Apperta UK Clinical Knowledge Manager [cited: 2019-03-12]. Available from: https://ckm.apperta.org/ckm/#showArchetype_1051.32.706
 
 https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2 [cited 01-Feb-2018].">
 		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9A082D980CDF52430342CB99DA8B4B6F">
-		["build_uid"] = <"717a7bae-c2d5-4120-8665-2fb3afa4a915">
-		["revision"] = <"0.0.2-alpha">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"C6561B4A63ED465A9149F9D8F1EF7E8F">
+		["build_uid"] = <"498080f1-9204-4f9e-9301-6ebed27ee30c">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -136,6 +136,8 @@ definition
 			}
 		}
 	}
+
+
 
 ontology
 	term_definitions = <

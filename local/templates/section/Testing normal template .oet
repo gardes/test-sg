@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>2590cefa-9000-4962-b0c7-bc247e7fac94</id>
+  <name>Testing normal template </name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-SECTION.fake_ad_hoc_heading.v0]/items[openEHR-EHR-SECTION.fake_ad_hoc_heading.v0]/items[openEHR-EHR-SECTION.fake_ad_hoc_heading.v0]/items[at0001]/items[openEHR-EHR-INSTRUCTION.fake_service_request_1.v0]/activities[at0001]/description[at0002]/items[at0008]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Can I add an external link here?  https://extranet.ahsnet.ca/teams/CMIO/CKCM2/Filters/AHS_Use_Cases_Draft_V0.7_Received_%20Nov_8_2017.docx</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0" concept_name="Fake ad hoc heading">
+    <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.fake_cd_item_1.v0" concept_name="Fake cd item 1" path="/items[at0001]/items" />
+    <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0" concept_name="Fake ad hoc heading" path="/items">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.fake_cd_summary_1.v0" concept_name="Fake cd summary 1" path="/items[at0001]/items" />
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0" concept_name="Fake ad hoc heading" path="/items">
+        <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0" concept_name="Fake service request 1" path="/items[at0001]/items">
+          <Rule path="/activities[at0001]/description[at0002]/items[at0003]">
+            <constraint xsi:type="textConstraint">
+              <includedValues>Fake service request 1</includedValues>
+            </constraint>
+          </Rule>
+        </Item>
+      </Item>
+    </Item>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0">
+    <digest id="MD5-CAM-1.0.1">3450F0361ADEAAA680E329006D0ECAB6</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.fake_cd_item_1.v0">
+    <digest id="MD5-CAM-1.0.1">1B40004A0117F7EA6AB72AA15BF7268A</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.fake_cd_summary_1.v0">
+    <digest id="MD5-CAM-1.0.1">680467BE469EF3E18F22684CD0939964</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fake_service_request_1.v0">
+    <digest id="MD5-CAM-1.0.1">B8E8176CD729886D87683AAEB1C93489</digest>
+  </integrity_checks>
+</template>

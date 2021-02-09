@@ -20,7 +20,7 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology and CLUSTER.microscopy_colorectal_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "colonic", "rectal", "anal", "GI", "gastrointestinal", "bowel">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -33,16 +33,7 @@ Royal College of Pathologists. Dataset for colorectal cancer (2nd edition) [Inte
 Available from: http://www.rcpath.org/index.asp?PageID=1153
 
 Royal College of Pathologists of Australasia. Colorectal Cancer Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ]
-Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/COLORECTAL%20CANCER%20STRUCTURED%20REPORTING%20PROTOCOL%20for%20web.pdf
-
-
-
-
-
-
-
-
-">
+Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/COLORECTAL%20CANCER%20STRUCTURED%20REPORTING%20PROTOCOL%20for%20web.pdf">
 		["MD5-CAM-1.0.1"] = <"4243B86239E008CE0500331D107393A5">
 	>
 
@@ -175,7 +166,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

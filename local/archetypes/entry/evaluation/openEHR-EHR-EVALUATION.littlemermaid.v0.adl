@@ -1,0 +1,96 @@
+﻿archetype (adl_version=1.4; uid=7f73599b-c75e-4b13-8c3a-68d2325bc806)
+	openEHR-EHR-EVALUATION.littlemermaid.v0
+
+concept
+	[at0000]	-- Littlemermaid
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			keywords = <"Sebastian", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"87D502616B5EC3B2E0B42265731215F5">
+		["build_uid"] = <"580ede67-425d-446d-8e71-a308fdb592e6">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Littlemermaid
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Triton
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[local::at0003]}		-- Ariel
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Ursula
+						value matches {0|[local::at0006]}		-- Scuttle
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Littlemermaid">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Triton">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Ariel">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Ursula">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Scuttle">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,49 @@
+﻿archetype (adl_version=1.4; uid=1707bd05-0b31-4884-9b16-438d052b1bd0)
+	openEHR-EHR-CLUSTER.naztestarch.v0
+
+concept
+	[at0000]	-- Naztestarchchange
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Nazmun">
+		["date"] = <"2020-11-23">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This is a test new archetype created">
+			use = <"This is a test new archetype created and can be used for testing">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"DB8F358D254F30B5B7CE94F3CC170949">
+		["build_uid"] = <"131319ab-35f4-4def-b7bf-c9bb477db63e">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Naztestarchchange">
+					description = <"TSETING PURPOSE1">
+				>
+			>
+		>
+	>
