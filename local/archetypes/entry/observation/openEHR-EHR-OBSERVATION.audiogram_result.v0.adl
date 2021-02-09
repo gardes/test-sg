@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=388d0200-617a-4e8f-ac1d-49ccbf95b839)
-	openEHR-EHR-OBSERVATION.audiogramme_result.v0
+﻿archetype (adl_version=1.4; uid=f51296c9-331e-4444-9b1f-207b040ee0c7)
+	openEHR-EHR-OBSERVATION.audiogram_result.v0
 
 concept
 	[at0000]	-- Audiogram result
@@ -48,8 +48,8 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"4E63255E87F418CF4919587207592EA0">
-		["build_uid"] = <"98c2e26a-6a94-4c0d-b69e-e3366954779c">
+		["MD5-CAM-1.0.1"] = <"CDADE63F2FEF797867861CF3FE56E63C">
+		["build_uid"] = <"b7757b37-81a3-4a16-93ec-257fa22e9c75">
 		["revision"] = <"0.0.1-alpha">
 	>
 

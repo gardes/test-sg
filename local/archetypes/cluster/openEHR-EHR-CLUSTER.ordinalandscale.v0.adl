@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=753592a5-41b6-4fc9-a59b-8e4fae5f2007)
-	openEHR-EHR-CLUSTER.normalScalesOnly.v0
+﻿archetype (adl_version=1.4; uid=c206585e-e458-4426-9375-bf42e976a2fa)
+	openEHR-EHR-CLUSTER.ordinalandscale.v0
 
 concept
-	[at0000]	-- normalScalesOnly
+	[at0000]	-- Ordinalandscale
 language
 	original_language = <[ISO_639-1::de]>
 description
@@ -26,14 +26,51 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"EF7AF96A000D8FDEA9A5E5D80B689CC1">
-		["build_uid"] = <"d4a4761f-64a9-4dc0-88e1-a7c430822db6">
+		["MD5-CAM-1.0.1"] = <"60400C49A960FAF443B1EC1DB870040B">
+		["build_uid"] = <"9cf7bd48-7710-43a8-9355-7282721c8aa6">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Ordinalandscale
 		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- MYOrdinal
+				value matches {
+					1|[local::at0002], 	-- 1ord
+					2|[local::at0003], 	-- 2ord
+					3|[local::at0004]  	-- 3ord
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- MyScale
+				value matches {
+					1.0|[local::at0006], 	-- 1.0scale
+					2.5|[local::at0007], 	-- 25scale
+					3.0|[local::at0008]  	-- 3.0scale
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- MyScale2
+				value matches {
+					1|[local::at0010], 	-- 1scale
+					2|[local::at0015], 	-- 2scale
+					2.5|[local::at0011], 	-- 25scale
+					3|[local::at0012]  	-- 3scale
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- MyScale3
+				value matches {
+					1.5|[local::at0014], 	-- 15scale
+					2|[local::at0015], 	-- 2scale
+					3|[local::at0016]  	-- 3scale
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- MyScale4
+				value matches {
+					1|[local::at0010], 	-- 1scale
+					2|[local::at0015], 	-- 2scale
+					3|[local::at0006], 	-- 3scale
+					3.5|[local::at0021] 	-- 3.5scale
+				}
+			}
 			ELEMENT[at0017] occurrences matches {0..1} matches {	-- MyScale NORMAL
 				value matches {
 					DV_SCALE[at00170] matches {
@@ -72,12 +109,14 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"normalScalesOnly">
+					text = <"Ordinalandscale">
 					description = <"unknown">
+					blaannotation = <"Test annotations 0">
 				>
 				["at0001"] = <
 					text = <"My Ordinal">
 					description = <"*">
+					blaannotation = <"Test annotations 1">
 				>
 				["at0002"] = <
 					text = <"1ord">
@@ -102,6 +141,7 @@ ontology
 				["at0007"] = <
 					text = <"2.5scale">
 					description = <"*">
+					blaannotation = <"Test annotations 2.5 at0007">
 				>
 				["at0008"] = <
 					text = <"3scale">

@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
-    <id>92fc3fc8-d401-44e3-a84d-b8cd0c89efdd</id>
-    <name>test template norway 1.15.0</name>
+    <id>92fc3fc8-d401-44e3-a84d-b8cd0c89efda</id>
+    <name>test template sg</name>
     <description>
         <original_author>
             <item>
                 <key>name</key>
-                <value>Silje Ljosland Bakke</value>
-            </item>
-            <item>
-                <key>organisation</key>
-                <value>Helse Vest IKT AS</value>
-            </item>
-            <item>
-                <key>email</key>
-                <value>silje.ljosland.bakke@helse-vest-ikt.no</value>
+                <value>sg</value>
             </item>
             <item>
                 <key>date</key>
@@ -68,15 +60,15 @@ Donec eu augue aliquet, elementum tellus id, efficitur mauris. Proin in laoreet 
             </item>
         </other_details>
     </description>
-    <definition archetype_id="openEHR-EHR-OBSERVATION.medication_use.v0"
-        concept_name="Medication screening questionnaire"
-        name="test template norway 1.15.0"
+    <definition archetype_id="openEHR-EHR-OBSERVATION.body_temperature.v1"
+        concept_name="TESTsg"
+        name="TESTsg"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:OBSERVATION"/>
     <integrity_checks
-        archetype_id="openEHR-EHR-OBSERVATION.medication_use.v0"
+        archetype_id="openEHR-EHR-OBSERVATION.body_temperature.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">540341CC7B2D35054B5B7E142F0FB4E3</digest>
+        <digest id="MD5-CAM-1.0.1">67AD0398E82C094EA41963065CD85084</digest>
     </integrity_checks>
 </template>

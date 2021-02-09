@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=06250b9d-16e1-40fe-a238-71bfa5cac900)
-	openEHR-EHR-INSTRUCTION.transfusion.v0
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-INSTRUCTION.transfusion.v1
 
 concept
 	[at0000]	-- Instructions for transfusion
@@ -10,8 +10,7 @@ language
 			language = <[ISO_639-1::de]>
 			author = <
 				["name"] = <"Jasmin Buck, Sebastian Garde">
-				["organisation"] = <"University of Heidelberg, Central Queensland University, Ocean Informatics1">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
 			>
 		>
 	>
@@ -22,7 +21,7 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Zur Dokumentation von Anweisungen bezüglich einer Transfusion. test">
+			purpose = <"Zur Dokumentation von Anweisungen bezüglich einer Transfusion.">
 			use = <"">
 			keywords = <"Transfusion", "Blut">
 			misuse = <"">
@@ -37,17 +36,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"3EDF7D3FE975324CA9F00B36CBFC90F7">
-		["build_uid"] = <"545497dd-a15a-4fd8-b479-d2e24b83ed90">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"5C7D8F0F4F5DB13138ED25918D188F97">
 	>
 
 definition
