@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=5f4a3bdd-44b2-463b-9b63-b12495c974c1)
-	openEHR-EHR-CLUSTER.tnm-pathological.v0
+﻿archetype (adl_version=1.4; uid=957849c5-66b3-4e6b-81a6-08b930adeed6)
+	openEHR-EHR-CLUSTER.tnm-pathological.v1
 specialise
 	openEHR-EHR-CLUSTER.tnm.v0
 
@@ -76,7 +76,7 @@ With certain types of tumours, such as Hodgkin and other non-Hodgkin lymphomas, 
 			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Hildegard Franke, freshEHR Clinical Informatics Ltd. UK", "Sergey Kovalenko, Chelyabinsk Regional Children Hospital, Russia", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway  (openEHR Editor)", "Miha Lenic, Marand, Slovenia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics Ltd. UK", "SARA PRETE, Abinsula, Italy", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -91,9 +91,9 @@ TNM Classification Help (Manual for Cancer Staging); [cited 2019 10 04]. Availab
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7FB411B010286AD6CAC66A486CD824DB">
-		["build_uid"] = <"a5de05c9-4d8c-4a1f-925e-7abd80dc07f4">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"B51F1895D74C1CDB0345DF6E83145585">
+		["build_uid"] = <"fc46c6b0-7a42-4f29-b02b-beeebe9415b3">
+		["revision"] = <"1.0.0">
 	>
 
 definition
