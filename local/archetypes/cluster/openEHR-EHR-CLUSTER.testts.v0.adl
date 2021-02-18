@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=dc53a546-cd68-4a22-8625-f1d1f77b02df)
+﻿archetype (adl_version=1.4; uid=504fe2f4-36f7-4cbe-a27f-32bd3c43437b)
 	openEHR-EHR-CLUSTER.testts.v0
 
 concept
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B8E70E8505967D15EC267BEB2EC84885">
-		["build_uid"] = <"c774033c-528b-48c9-8176-326f8ade9785">
+		["MD5-CAM-1.0.1"] = <"B183EB55A1ED91DBD8E3C7356A959A73">
+		["build_uid"] = <"c70e3f15-c73b-42cf-97c7-a08003775fa0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -90,9 +90,15 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Neues Element
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0009]}		-- test
+					}
+				}
+			}
 		}
 	}
-
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -135,6 +141,10 @@ ontology
 					text = <"Covid example VS">
 					description = <"*">
 				>
+				["at0009"] = <
+					text = <"Covid example VS with designations">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -173,6 +183,10 @@ ontology
 					text = <"Covid example VS">
 					description = <"*">
 				>
+				["ac0009"] = <
+					text = <"Covid example VS with designations">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -186,6 +200,7 @@ ontology
 				["ac0006"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/allergyintolerance-code>
 				["ac0007"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/additional-instruction-codes>
 				["ac0008"] = <terminology://fhir.hl7.org/ValueSet/SARS-CoV-2-symptoms/$expand>
+				["ac0009"] = <terminology://fhir.hl7.org/ValueSet/SARS-CoV-2-symptoms/$expand?includeDesignations=true>
 			>
 		>
 	>
