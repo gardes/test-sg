@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=c8ad4f2f-d791-4f87-960a-4b81345895d8)
 	openEHR-EHR-CLUSTER.tnm_staging-breast.v1
 specialise
 	openEHR-EHR-CLUSTER.tnm_staging.v1
@@ -22,19 +22,26 @@ description
 The classification applies only to carcinomas and concerns the male as well as the female breast.">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "breast">
 			misuse = <"Do not use for editions of TNM classification, other than Sixth edition.">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"American Joint Committee on Cancer. TNM schema files [Internet]. [cited 2009 Jul 27 ] 
 Available from: http://www.cancerstaging.org/education/tnmschema/tnmschema.html
 
 Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on Cancer. AJCC Cancer Staging Manual. 6th ed. New York, NY: Springer-Verlag; 2002. 
 
 ">
-		["MD5-CAM-1.0.1"] = <"793C69CA7F10F976F939125EA7FF1AC8">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"1D0CC7A77937211E4771648240CA550B">
+		["build_uid"] = <"12cb7917-e089-43ea-8940-267ac6102906">
+		["revision"] = <"1.0.0">
 	>
 
 definition
