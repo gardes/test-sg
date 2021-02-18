@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=85443c56-eafe-497c-b7fa-b02e3f3100e9)
-	openEHR-EHR-CLUSTER.tnm_test.v0
+﻿archetype (adl_version=1.4; uid=636e2dc5-3ec4-4a05-bf02-b59cdd8f32fd)
+	openEHR-EHR-CLUSTER.tnm_test.v1
 
 concept
 	[at0000]	-- TNM clinical classification
@@ -74,7 +74,7 @@ With certain types of tumours, such as Hodgkin and other non-Hodgkin lymphomas, 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Vegar Dagenborg, OUS, Norway", "Kristin Eik, Kreftregisteret, Norway", "Hildegard Franke, freshEHR Clinical Informatics Ltd. UK", "Morten Hørthe, DIPS, Norway", "Sergey Kovalenko, Chelyabinsk Regional Children Hospital, Russia", "Siri Laronningen, Kreftregisteret, Norway", "Liv Laugen, Oslo universitetssykehus, Norway", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Miha Lenic, Marand, Slovenia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Anne M Gromsrud, DIPS AS, Norway", "Ian McNicoll, freshEHR Clinical Informatics Ltd. UK", "Bjørn Næss, DIPS ASA, Norway", "SARA PRETE, Abinsula, Italy", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -88,9 +88,9 @@ TNM Classification Help (Manual for Cancer Staging); [cited 2019 10 04].  Availa
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"93A1FF2B3D4C47007E6FECE9A37A7D11">
-		["build_uid"] = <"5bf22173-fc67-4557-a11b-6327d1bc7b95">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"E439BB3F21BD308BE9366008CD02CD26">
+		["build_uid"] = <"90cbcd4e-50a6-447d-9f18-c8b8a3b8bf1c">
+		["revision"] = <"1.0.0">
 	>
 
 definition
