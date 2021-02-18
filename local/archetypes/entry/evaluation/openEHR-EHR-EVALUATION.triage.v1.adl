@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=901eb1c3-45d3-4258-9463-9a94b4ba3d77)
-	openEHR-EHR-EVALUATION.triage.v0
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.triage.v1
 
 concept
 	[at0000]	-- Triage evaluation
@@ -19,21 +19,13 @@ description
 			use = <"">
 			keywords = <"triage", "evaluation", "assessment">
 			misuse = <"">
-			copyright = <"© copyright (c) 2008 openEHR Foundation, openEHR Foundation">
+			copyright = <"copyright (c) 2008 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0A5A0CE4F3D2A0C425865A5CDC9D5B4F">
-		["build_uid"] = <"fbfff9a6-45d8-413b-9ff9-857b687b8f13">
-		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -59,7 +51,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology

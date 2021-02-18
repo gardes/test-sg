@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=dc53a546-cd68-4a22-8625-f1d1f77b02df)
-	openEHR-EHR-CLUSTER.testts.v0
+﻿archetype (adl_version=1.4; uid=3a03c2b0-90f1-42d9-b52a-d500bc38d02c)
+	openEHR-EHR-CLUSTER.testts2.v0
 
 concept
 	[at0000]	-- Testts
@@ -26,13 +26,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B8E70E8505967D15EC267BEB2EC84885">
-		["build_uid"] = <"c774033c-528b-48c9-8176-326f8ade9785">
+		["MD5-CAM-1.0.1"] = <"07344E0C538B0C29C26EB5D992B918EB">
+		["build_uid"] = <"4e6f6213-361b-4827-bf07-57d1661015ff">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Testts
+	CLUSTER[at0000] matches {	-- Testts2
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Neues Element
 				value matches {
@@ -90,6 +90,13 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Neues Element
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0009]}		-- test
+					}
+				}
+			}
 		}
 	}
 
@@ -135,6 +142,10 @@ ontology
 					text = <"Covid example VS">
 					description = <"*">
 				>
+				["at0009"] = <
+					text = <"Covid example VS with designations">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -173,6 +184,10 @@ ontology
 					text = <"Covid example VS">
 					description = <"*">
 				>
+				["ac0009"] = <
+					text = <"Covid example VS with designations">
+					description = <"*">
+				>
 			>
 		>
 	>
@@ -186,6 +201,7 @@ ontology
 				["ac0006"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/allergyintolerance-code>
 				["ac0007"] = <terminology://fhir.hl7.org/ValueSet/$expand?url=http://hl7.org/fhir/ValueSet/additional-instruction-codes>
 				["ac0008"] = <terminology://fhir.hl7.org/ValueSet/SARS-CoV-2-symptoms/$expand>
+				["ac0009"] = <terminology://fhir.hl7.org/ValueSet/SARS-CoV-2-symptoms/$expand?includeDesignations=true>
 			>
 		>
 	>

@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=552e537d-123f-41f5-8db0-7fdb5480a41a)
-	openEHR-EHR-EVALUATION.bbbb.v0
+﻿archetype (adl_version=1.4; uid=c2185a74-0b57-402f-ac7e-4aef760a41c9)
+	openEHR-EHR-COMPOSITION.naz01test.v0
 
 concept
-	[at0000]	-- Bbbb
+	[at0000]	-- Nazmun_TestArch
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -12,7 +12,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
+			purpose = <"TESTING ONLY">
 			use = <"">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
@@ -26,14 +26,18 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F5999794DFEEBE360168FE4B3C636591">
-		["build_uid"] = <"74c6685a-3c69-4822-9a18-47802fd27dff">
+		["MD5-CAM-1.0.1"] = <"88F49EE709EECA4A87FFE32D23CCDB6C">
+		["build_uid"] = <"7dd160d2-9489-4957-b883-24877ab121f3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Bbbb
-		data matches {*}
+	COMPOSITION[at0000] matches {	-- Nazmun_TestArch
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
 	}
 
 
@@ -42,8 +46,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Bbbb">
-					description = <"unknown">
+					text = <"Nazmun_TestArch">
+					description = <"This is my new archetype 01 !">
 				>
 			>
 		>
