@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=dc53a546-cd68-4a22-8625-f1d1f77b02df)
+﻿archetype (adl_version=1.4; uid=504fe2f4-36f7-4cbe-a27f-32bd3c43437b)
 	openEHR-EHR-CLUSTER.testts.v0
 
 concept
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"422989D5A6D79FCB283FF45B9D97834C">
-		["build_uid"] = <"e8ce104e-da36-4775-a873-4929b0a84da9">
+		["MD5-CAM-1.0.1"] = <"B183EB55A1ED91DBD8E3C7356A959A73">
+		["build_uid"] = <"c70e3f15-c73b-42cf-97c7-a08003775fa0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -99,7 +99,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>

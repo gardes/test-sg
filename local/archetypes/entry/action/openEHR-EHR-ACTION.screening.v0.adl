@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=dd98e16b-2f47-4d79-943f-59dfb1de102b)
+﻿archetype (adl_version=1.4; uid=5f3ceb95-acb4-4b57-bc94-9db3abd2962a)
 	openEHR-EHR-ACTION.screening.v0
 
 concept
@@ -8,30 +8,30 @@ language
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"heather.leslie@oceaninformatics.com">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
 		["date"] = <"2015-02-19">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
-			use = <"">
+			purpose = <"To record information about a health-related activity or test carried out to screen a patient for a health condition or assessment of health risk.">
+			use = <"Use to record information about a health-related activity or test carried out to screen a patient for a health condition or assessment of health risk.">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© Northern Territory Department of Health (Australia), openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <>
+	other_contributors = <"Kathy Curry, HHIMS program, Northern Territory, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A11EA338E8BF80BC160BF76EE374881F">
-		["build_uid"] = <"81512969-33ee-4272-9240-5e3ccc173fcf">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4F1AFA5F6E053D63E1A7A2355B70BA47">
+		["build_uid"] = <"fed9265c-b3ad-4d61-b33e-3b1edf6ac4f3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -252,7 +252,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Screening Activity">
-					description = <"Health-related activity or test used to screen a patient for a health condition or assessment of health risks. ">
+					description = <"Health-related activity or test used to screen a patient for a health condition or assessment of health risks.">
 				>
 				["at0002"] = <
 					text = <"Screening planned">
@@ -348,7 +348,7 @@ ontology
 				>
 				["at0031"] = <
 					text = <"Comment">
-					description = <"*">
+					description = <"Additional narrative about the screening test not captured in other fields.">
 				>
 			>
 		>

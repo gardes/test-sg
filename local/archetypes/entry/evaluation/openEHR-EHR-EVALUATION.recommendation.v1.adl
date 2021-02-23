@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=9d4a352d-cb69-4e94-aabf-cece8b8accc5)
+﻿archetype (adl_version=1.4; uid=1acecc29-89c0-4733-833d-162b576f40dc)
 	openEHR-EHR-EVALUATION.recommendation.v1
 
 concept
@@ -35,8 +35,8 @@ language
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"heather.leslie@oceaninformatics.com">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
 		["date"] = <"2013-02-14">
 	>
 	details = <
@@ -48,18 +48,6 @@ description
 El caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.">
 			keywords = <"consejo", "propuesta", "sugerencia">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			purpose = <"Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.">
-			use = <"Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.
-
-O caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.
-Por exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.">
-			keywords = <"conselho", "proposta", "sugestão">
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -70,7 +58,16 @@ Arketypen er ment å understøtte klinikere som dokumenterer en eller flere anbe
 Anbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.">
 			keywords = <"råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.">
+			use = <"Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.
+
+O caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.
+Por exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.">
+			keywords = <"conselho", "proposta", "sugestão">
+			misuse = <"">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -85,17 +82,17 @@ For example, as a component of the conclusions drawn as part of a clinical consu
 		>
 	>
 	lifecycle_state = <"published">
-	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sam Heard, Ocean Informatics, Australia", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway", "Bente Gjelsvik, Helse Bergen, Norway", "Kristian Heldal, Telemark Hospital Trust, Norway", "Hilde Hollås, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Hallvard Lærum, Oslo Universitetssykehus HF, Norway", "Tanja Riise, Nasjonal IKT HF, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
+	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sam Heard, Ocean Informatics, Australia", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway", "Bente Gjelsvik, Helse Bergen, Norway", "Kristian Heldal, Telemark Hospital Trust, Norway", "Hilde Hollås, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Hallvard Lærum, Oslo Universitetssykehus HF, Norway", "Tanja Riise, Nasjonal IKT HF, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7199C82A175858FDCA18E24F5B01625D">
-		["build_uid"] = <"9da97d9b-4726-4539-9d1a-00b1dace5058">
-		["revision"] = <"1.0.0">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"CFB4C8C091ABC7ACFBE46AF0DAFFE54B">
+		["build_uid"] = <"dd2693ed-e1c9-4d58-a990-0aaca1c8f56a">
+		["revision"] = <"1.1.1">
 	>
 
 definition
@@ -207,8 +204,8 @@ ontology
 					comment = <"Pode ser codificada, utilizando terminologia, se necessário.">
 				>
 				["at0003"] = <
-					text = <"*Rationale(en)">
-					description = <"*Justifications for the recommendation.(en)">
+					text = <"Justificativa">
+					description = <"Justificativa para a recomendação.">
 				>
 				["at0004"] = <
 					text = <"Tree">

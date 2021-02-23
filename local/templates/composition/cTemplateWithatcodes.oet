@@ -63,6 +63,6 @@
    <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.test.v0" concept_name="TEST">
     </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.test.v0">
-    <digest id="MD5-CAM-1.0.1">78566CD2B138CFFDA9031A7E08A8BCFB</digest>
+    <digest id="MD5-CAM-1.0.1">8644E0A0E08A49D2B3F7EFCD52BCEF95</digest>
   </integrity_checks>
 </template>

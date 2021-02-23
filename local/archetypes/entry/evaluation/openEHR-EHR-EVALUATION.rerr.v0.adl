@@ -1,0 +1,69 @@
+﻿archetype (adl_version=1.4; uid=5da82159-115a-4577-937f-e5ecdd50f8d8)
+	openEHR-EHR-EVALUATION.rerr.v0
+
+concept
+	[at0000]	-- Rerr
+language
+	original_language = <[ISO_639-1::de]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"C6A49A1BADA05A5FA10A71CF68EE4068">
+		["build_uid"] = <"f4690445-605b-4346-b38c-1ff7befbd74d">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Rerr
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Baum
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Neues Element
+						value matches {
+							DV_DURATION matches {
+								value matches {|-P5D..P10D|}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Rerr">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Neues Element">
+					description = <"*">
+				>
+			>
+		>
+	>
