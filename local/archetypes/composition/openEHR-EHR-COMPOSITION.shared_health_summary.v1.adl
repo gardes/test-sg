@@ -1,0 +1,138 @@
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.120.1.0)
+	openEHR-EHR-COMPOSITION.shared_health_summary.v1
+
+concept
+	[at0000]	-- Shared Health Summary
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"24-Mar-2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"035091DF72EFE533BBC026EDB66DF116">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Shared Health Summary
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {	-- Tree
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0003] occurrences matches {0..1} matches {	-- DateTime Attested
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype SECTION[at0004] occurrences matches {0..1} matches {	-- Adverse Reactions
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.adverse_reactions(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype SECTION[at0005] occurrences matches {0..1} matches {	-- Medications
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.medication_orders(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype SECTION[at0006] occurrences matches {0..1} matches {	-- Past and Current Medical History
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.medical_history(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype SECTION[at0007] occurrences matches {0..1} matches {	-- Immunisations
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.immunisations(-[a-zA-Z0-9_]+)*\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Shared Health Summary">
+					description = <"A clinical document written by the nominated provider, which contains key pieces of information about an individual’s health status and is useful to a wide range of providers in assessing individuals and delivering care. (PCEHR Concept of Operations document)">
+					detail_docref = <"structured_documents/NEHTA-16565-Shared_Health_Summary-Structured_Document.xml">
+					dc_id = <"16565">
+					spec_id = <"120">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"DateTime Attested">
+					description = <"The date (and time if known) that the document author or document authoriser/approver confirms (usually by signature) that a document is complete and genuine.">
+					comment = <"For use in a healthcare setting. The date and time value when the document author determines the document is complete and can be sent by the authoring provider to the document recipients. In an electronic environment, the date and time when the document is last saved by the document authoring application.">
+					detail_docref = <"data_elements/NEHTA-20106-DateTime_Attested-Data_Element.xml">
+					dc_id = <"20106">
+				>
+				["at0004"] = <
+					text = <"Adverse Reactions">
+					description = <"Information about adverse reactions and/or propensity to adverse reaction of the patient (including allergies and intolerances), and any relevant reaction details.">
+					comment = <"Includes allergies and adverse reaction to all substances not just medications / medicines. This might include food allergies, bee sting allergies as well as prescription and nonprescription medicines.">
+					detail_docref = <"sections/NEHTA-20113-Adverse_Reactions-Section.xml">
+					dc_id = <"20113.120.1">
+					spec_id = <"88">
+				>
+				["at0005"] = <
+					text = <"Medications">
+					description = <"Medicines which the subject of care is using, this includes self-prescribed, clinician prescribed and nonprescription medicines.">
+					comment = <"Inclusion of medicines will be at the discretion of the clinician; however it is likely that predominantly long-term medicines will be shared.
+
+Must not be used to record vaccine administration record of the subject of care. The Administered Immunisation section must be used for this purpose.">
+					detail_docref = <"sections/NEHTA-16146-Medications-Section.xml">
+					dc_id = <"16146.120.1">
+					spec_id = <"86">
+				>
+				["at0006"] = <
+					text = <"Past and Current Medical History">
+					description = <"The past and current medical history of the subject of care which is relevant to the clinical event, this includes problem/diagnosis and medical or surgical procedures performed.">
+					comment = <"This includes diagnoses that were identified at the event which are significant to it, and also any interventions performed during the event or those occurring in the past that are significant to it.">
+					detail_docref = <"sections/NEHTA-16117-Past_and_Current_Medical_History-Section.xml">
+					dc_id = <"16117.120.1">
+					spec_id = <"134">
+				>
+				["at0007"] = <
+					text = <"Immunisations">
+					description = <"Information about the immunisation history of the subject of care.">
+					comment = <"Includes immunisations/vaccinations that have been administered or reported to have been administered.">
+					detail_docref = <"sections/NEHTA-16638-Immunisations-Section.xml">
+					dc_id = <"16638.120.1">
+					spec_id = <"137">
+				>
+			>
+		>
+	>

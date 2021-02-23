@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <id>8f001472-9a9f-4b1a-a126-a395f0b0e0fa</id>
+   <name>Trial of assumed value interval template</name>
+   <description>
+      <lifecycle_state>Initial</lifecycle_state>
+      <details>
+         <purpose/>
+         <use/>
+         <misuse/>
+      </details>
+      <other_details>
+         <item>
+            <key>MetaDataSet:Sample Set </key>
+            <value>Template metadata sample set </value>
+         </item>
+         <item>
+            <key>Acknowledgements</key>
+            <value/>
+         </item>
+         <item>
+            <key>Business Process Level</key>
+            <value/>
+         </item>
+         <item>
+            <key>Care setting</key>
+            <value/>
+         </item>
+         <item>
+            <key>Client group</key>
+            <value/>
+         </item>
+         <item>
+            <key>Clinical Record Element</key>
+            <value/>
+         </item>
+         <item>
+            <key>Copyright</key>
+            <value/>
+         </item>
+         <item>
+            <key>Issues</key>
+            <value/>
+         </item>
+         <item>
+            <key>Owner</key>
+            <value/>
+         </item>
+         <item>
+            <key>Sign off</key>
+            <value/>
+         </item>
+         <item>
+            <key>Speciality</key>
+            <value/>
+         </item>
+         <item>
+            <key>User roles</key>
+            <value/>
+         </item>
+      </other_details>
+   </description>
+   <definition
+               archetype_id="openEHR-EHR-INSTRUCTION.trial_of_assumed_value_interval.v0"
+               concept_name="Trial of assumed value interval"
+               xsi:type="INSTRUCTION"/>
+   <integrity_checks
+                     archetype_id="openEHR-EHR-INSTRUCTION.trial_of_assumed_value_interval.v0"
+                     xsi:type="ArchetypeIntegrity">
+      <digest id="MD5-CAM-1.0.1">7334DDA092CEFAFEF2DF1C5981FA7281</digest>
+   </integrity_checks>
+</template>

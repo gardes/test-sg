@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.edinburgh_pnd_scale.v1
 
 concept
-	[at0000]	-- Edinburgh Postnatal Depression Scale
+	[at0000]	-- Edinburgh postnatal depression scale
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -44,11 +44,11 @@ British Journal of Psychiatry 150:782–786
 Queensland Health Department. Edinburgh Postnatal Depression Scale. http://www.health.qld.gov.au/maternity/docs/epds-combined.pdf
 
 Beyond Blue. The Edinburgh Postnatal Depression Scale: A Health Professional's Guide, http://docent.gplearning.com.au/docent/cds/default_shared/GPEA/modules/g03/EPDS_GP.pdf">
-		["MD5-CAM-1.0.1"] = <"DEAD9E5896B6EC693250EB9D120FFD3B">
+		["MD5-CAM-1.0.1"] = <"262BDB8771B1309E89A1CE04079462BF">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Edinburgh Postnatal Depression Scale
+	OBSERVATION[at0000] matches {	-- Edinburgh postnatal depression scale
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -152,13 +152,12 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Edinburgh Postnatal Depression Scale">
+					text = <"Edinburgh postnatal depression scale">
 					description = <"The 10-question Edinburgh Postnatal Depression Scale (EPDS) is used to screen for pregnancy or postnatal depression by assessing how a women has been feeling over the past 7 days.">
 				>
 				["at0001"] = <
@@ -381,7 +380,7 @@ ontology
 				>
 				["at0054"] = <
 					text = <"Total score">
-					description = <"Total score for the Edinburgh Postnatal Depression Scale.">
+					description = <"Total score for the Edinburgh Postnatal Depression Scale">
 				>
 			>
 		>

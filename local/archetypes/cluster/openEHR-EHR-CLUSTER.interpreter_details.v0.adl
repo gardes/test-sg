@@ -1,0 +1,231 @@
+﻿archetype (adl_version=1.4; uid=d7af64c3-06b5-4ee0-8848-d28608b9ca2c)
+	openEHR-EHR-CLUSTER.interpreter_details.v0
+
+concept
+	[at0000]	-- Interpreter Details
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2015-05-04">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about an Interpreter who was involved in, or will be required to be involved in, a clinical activity.">
+			use = <"Use to record details about an Interpreter who was involved in, or will be required to be involved in, a clinical activity.
+
+This archetype is specifically designed to be used within the context of any appropriate ENTRY or CLUSTER archetypes which supply the context of either the request for interpretation, an interpretation that is performed or the persistent overview of the patients interpretation needs.
+
+Use to record a structured request for an interpretator as a part of an order for example in the SLOT 'Patient requirements' in the INSTRUCTION.request archetype.
+
+Use to provide persistent information about the patient's needs for an interpretator using the 'Details' SLOT in the EVALUATION.social_summary.">
+			keywords = <"interpreter", "language">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Avgrenet fra: Interpreter Details, Draft Archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2017-02-10]. Available from: http://openehr.org/ckm/#showArchetype_1013.1.1972">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics<heather.leslie@oceaninformatics.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"08D77E905D8B78A14C069207E3021938">
+		["build_uid"] = <"d7d669d1-306e-48a0-b08f-78ed2613e343">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Interpreter Details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Type of language
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005, 	-- Sign language interpreter
+							at0006]	-- Language interpreter
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Type of interpreter
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0018] occurrences matches {0..*} matches {	-- Language
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0019, 	-- Primary language
+							at0020]	-- Secondary language
+						}
+					}
+				}
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Language
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..*} matches {	-- Dialect
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Gender
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0015, 	-- Male
+							at0016, 	-- Female
+							at0017]	-- No preferences
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Relationship
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Modality
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010, 	-- Attendence
+							at0011, 	-- Video Remote
+							at0012, 	-- Telephone
+							at0013]	-- No preferences
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {	-- Interpreter Details
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.person_name(-[a-zA-Z0-9_]+)*\.v0/}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Interpreter Details">
+					description = <"Details about an Interpreter involved in, or required to be involved in, a clinical activity.">
+				>
+				["at0001"] = <
+					text = <"Type of language">
+					description = <"Identification of the type of language.">
+				>
+				["at0002"] = <
+					text = <"Language">
+					description = <"Identification of the individuals  language.">
+					comment = <"For example: Norwegian, Dutch or German.
+Coding of 'First language' with a terminology is preferred, where possible. ">
+				>
+				["at0003"] = <
+					text = <"Comment">
+					description = <"Additional narrative description about the interpreter.">
+				>
+				["at0004"] = <
+					text = <"Interpreter Details">
+					description = <"Details about the Interpreter that either performed or is requested for the interpretation, including qualifications.">
+					comment = <"Only use this SLOT if Participations are not implemented.">
+				>
+				["at0005"] = <
+					text = <"Sign language interpreter">
+					description = <"The patient needs a sign language interpreter.">
+				>
+				["at0006"] = <
+					text = <"Language interpreter">
+					description = <"The patient needs a languge interpreter.">
+				>
+				["at0008"] = <
+					text = <"Dialect">
+					description = <"Identification of the dialects.">
+				>
+				["at0009"] = <
+					text = <"Modality">
+					description = <"Identification of the way the patient and interpreter were engaged.">
+				>
+				["at0010"] = <
+					text = <"Attendence">
+					description = <"Physical attendence of the interpretator.">
+				>
+				["at0011"] = <
+					text = <"Video Remote">
+					description = <"Video remote interpretation.">
+				>
+				["at0012"] = <
+					text = <"Telephone">
+					description = <"Telephone interpretation.">
+				>
+				["at0013"] = <
+					text = <"No preferences">
+					description = <"The individual has no preferences for the modality of the interpretation.">
+				>
+				["at0014"] = <
+					text = <"Gender">
+					description = <"The gender of the interpreter.">
+				>
+				["at0015"] = <
+					text = <"Male">
+					description = <"Male interpretator.">
+				>
+				["at0016"] = <
+					text = <"Female">
+					description = <"Female interpretator.">
+				>
+				["at0017"] = <
+					text = <"No preferences">
+					description = <"The individual has no preferences regarding the gender of the interpretator.">
+				>
+				["at0018"] = <
+					text = <"Language">
+					description = <"Identification of the individuals primary and secondary languages.">
+				>
+				["at0019"] = <
+					text = <"Primary language">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Secondary language">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Type of interpreter">
+					description = <"Identification of the professional background of the interpreter.">
+				>
+				["at0022"] = <
+					text = <"Relationship">
+					description = <"Identification of the relationship to the subject, including potential conflict of interest.">
+				>
+			>
+		>
+	>
