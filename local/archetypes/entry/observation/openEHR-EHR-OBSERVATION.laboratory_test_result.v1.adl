@@ -141,8 +141,8 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"CD757E52B31EF2F8C86F7FA9B34F4C4B">
-		["build_uid"] = <"d465f577-bbeb-44b2-9c98-e9b19a93ea04">
-		["revision"] = <"1.0.4-alpha">
+		["build_uid"] = <"16cef613-4f2b-49e6-bf63-9b003227d1ab">
+		["revision"] = <"1.0.5-alpha">
 	>
 
 definition
