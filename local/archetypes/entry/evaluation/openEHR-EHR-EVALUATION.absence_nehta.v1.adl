@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=ee0c968a-eb5c-4b0b-bc93-b7dc094bbf3e)
 	openEHR-EHR-EVALUATION.absence_nehta.v1
 
 concept
@@ -32,12 +32,19 @@ So, in a persistent list within a clinical system and if there is no information
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"CommitteeDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Absence of Information, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1427_1 (accessed 14 Mar 2013).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"2DB9C32B9F12D4143EB4E279BA6BBEE4">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"7E54A988E1CC85502762B438E5C57FC4">
+		["build_uid"] = <"4e2da81e-ee2c-48f6-b166-4b62fb42378d">
+		["revision"] = <"1.0.0">
 	>
 
 definition
