@@ -2,7 +2,7 @@
 	openEHR-EHR-EVALUATION.absence_nehta.v1
 
 concept
-	[at0000]	-- Absence of Information (NEHTA)
+	[at0000]	-- Absence of InformationABV (NEHTA)
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -32,7 +32,7 @@ So, in a persistent list within a clinical system and if there is no information
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -42,13 +42,13 @@ So, in a persistent list within a clinical system and if there is no information
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7E54A988E1CC85502762B438E5C57FC4">
-		["build_uid"] = <"4e2da81e-ee2c-48f6-b166-4b62fb42378d">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"76FC486018BA6F5921D69EC825DE2409">
+		["build_uid"] = <"e3abdb38-90c0-4987-b44d-a5f7b54f861b">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Absence of Information (NEHTA)
+	EVALUATION[at0000] matches {	-- Absence of InformationABV (NEHTA)
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
@@ -63,12 +63,13 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Absence of Information (NEHTA)">
+					text = <"Absence of InformationABV (NEHTA)">
 					description = <"Statement that there is no relevant information available, neither a positive presence nor a positive exclusion.">
 				>
 				["at0001"] = <
