@@ -1,0 +1,80 @@
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.86.1.1)
+	openEHR-EHR-SECTION.medication_orders.v1
+
+concept
+	[at0000]	-- Medication Orders
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"07-Mar-2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"
+Suggested design pattern for including an Medication Order List in a template.
+">
+			use = <"">
+			keywords = <"medication", "exclusion", "absence", "current", "list">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"430219EFBDFD37D7BA7C4DD76662C738">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Medication Orders
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[at0001] occurrences matches {0..*} matches {	-- Exclusion Statement - Medications
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-medication\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype INSTRUCTION[at0002] occurrences matches {0..*} matches {	-- Medication
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-[a-zA-Z0-9_]+)*\.v3/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medication Orders">
+					description = <"Suggested design pattern for including an Medication Order List in a template. Synonyms: medication, exclusion, absence, current, list">
+					detail_docref = <"sections/NEHTA-16146-Medication_Orders-Section.xml">
+					dc_id = <"16146">
+					spec_id = <"86">
+				>
+				["at0001"] = <
+					text = <"Exclusion Statement - Medications">
+					description = <"Statement positively asserting that the patient has not been prescribed or is not taking any medication.">
+					comment = <"To positively record the absence or exclusion of any medication use within the health record.">
+					detail_docref = <"data_groups/NEHTA-16136-Exclusion_Statement_Medications-Data_Group.xml">
+					dc_id = <"16136.86.1">
+					spec_id = <"105">
+				>
+				["at0002"] = <
+					text = <"Medication">
+					description = <"Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human.">
+					comment = <"For use in the healthcare setting. Captures detailed information on the medication being used by or prescribed for the subject of care for their personal healthcare. This only includes legal substances. Such information covers not only aspects of the medication itself, but information relating to the ordering, dispensing, administration and review of medications. The specifications herein are presented grouped according to these process states. Recording legal substances such as over-the-counter medications, complementary and alternative medications, and prescribed medications.">
+					detail_docref = <"data_groups/NEHTA-16211-Medication-Data_Group.xml">
+					dc_id = <"16211.86.1">
+					spec_id = <"96">
+				>
+			>
+		>
+	>

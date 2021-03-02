@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>b0855b2c-48ca-45c0-8a56-44d64a135841</id>
+  <name>Allergies and Adverse Reactions for HISO 10041.1</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1 and name/value='Allergies']/data[at0001]/items[at0002]">
+    <items>
+      <item>
+        <key>Notes.Comment</key>
+        <value>Whether the allergy is of drug, food or other can be specified here.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1 and name/value='Adverse Reaction for New Zealand #1']/data[at0001]/items[at0002]">
+    <items>
+      <item>
+        <key>Notes.Comment</key>
+        <value>Whether the adverse reaction is of drugfood or other can be specified here.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1 and name/value='Adverse Reactions']/data[at0001]/items[at0002]">
+    <items>
+      <item>
+        <key>Notes.Comment</key>
+        <value>Whether this is an adverse drug reaction or food intolerance can be specified here.</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1" concept_name="Adverse Reaction List (NEHTA)" name="Allergies and adverse reactions">
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1" concept_name="Adverse Reaction for New Zealand" max="1" path="/content[at0002]" name="Allergies">
+      <Rule path="/data[at0001]/items[at0004]" max="0" />
+      <Rule path="/data[at0001]/items[at0006]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0028]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0018]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0020]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0025]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0031]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0044]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0048]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0045]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0047]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1" concept_name="Adverse Reaction for New Zealand" max="1" path="/content[at0002]" name="Adverse Reactions">
+      <Rule path="/data[at0001]/items[at0004]" max="0" />
+      <Rule path="/data[at0001]/items[at0006]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0028]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0018]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0020]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0025]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0031]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0044]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0048]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0045]" max="0" />
+      <Rule path="/protocol[at0042]/items[at0047]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion_nehta-adverse_reaction.v1" concept_name="Exclusion of an Adverse Reaction (NEHTA)" path="/content[at0003]" />
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.absence_nehta.v1" concept_name="Absence of Information (NEHTA)" path="/content[at0004]" />
+  </definition>
+  <view>
+    <constraints path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta.v1 and name/value='Allergies']/provider">
+      <items id="VisibleInView">
+        <value>provider</value>
+      </items>
+    </constraints>
+    <constraints path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1 and name/value='Allergies']/provider">
+      <items id="VisibleInView">
+        <value>provider</value>
+      </items>
+    </constraints>
+    <constraints path="[openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1]/content[at0002][openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1 and name/value='Adverse Reactions']/provider">
+      <items id="VisibleInView">
+        <value>provider</value>
+      </items>
+    </constraints>
+  </view>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list_nehta.v1">
+    <digest id="MD5-CAM-1.0.1">C6434ACC132CE90EF8EF8AEDDE969B85</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_nehta-nz.v1">
+    <digest id="MD5-CAM-1.0.1">E8D536445577E41B84F5A15586861467</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion_nehta-adverse_reaction.v1">
+    <digest id="MD5-CAM-1.0.1">F1055E9180CFD9D9953F1278C9E3F95D</digest>
+  </integrity_checks>
+    <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.absence_nehta.v1">
+    <digest id="MD5-CAM-1.0.1">2DB9C32B9F12D4143EB4E279BA6BBEE4</digest>
+  </integrity_checks>
+</template>

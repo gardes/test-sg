@@ -1,0 +1,869 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.MAT_form_current_status.v1
+
+concept
+	[at0000]	-- LAR Aktuelt
+language
+	original_language = <[ISO_639-1::nb]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Bjørn Næss">
+		["organisation"] = <"DIPS ASA">
+		["email"] = <"bna@dips.no">
+		["date"] = <"2013-04-15">
+	>
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å dokumentere aktuell situasjon for pasienten">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To document the current situation of the patient">
+			use = <"*(nb)">
+			misuse = <"*(nb)">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"0FF7685A20C236E911EAA82E62C4958A">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- LAR "News"
+		data matches {
+			ITEM_TREE[at0001] matches {	-- *Tree(nb)
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0002] occurrences matches {0..1} matches {	-- A1 Employment
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- a) Occupation Status
+								value matches {
+									0|[local::at0005], 	-- Without employment / unemployment
+									1|[local::at0006], 	-- Full-Time Job
+									2|[local::at0007], 	-- Part time jobs
+									3|[local::at0008], 	-- In education
+									4|[local::at0009], 	-- Part-time work and in education
+									9|[local::at0010]  	-- Unknown
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {	-- b) Is there any kind of vocational rehabilitation ?
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {	-- c ) Are there any non vocational activities ?
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- A2 Main income
+						value matches {
+							0|[local::at0014], 	-- Supported by other
+							1|[local::at0015], 	-- Earned Income
+							2|[local::at0016], 	-- Student loan / grant
+							3|[local::at0017], 	-- Unemployment Benefits
+							4|[local::at0018], 	-- Sick pay / sick pay partial
+							5|[local::at0019], 	-- Work assessment allowance
+							6|[local::at0020], 	-- Disability pension / retirement pension
+							7|[local::at0021], 	-- allowance for single parent
+							8|[local::at0022], 	-- social
+							9|[local::at0024], 	-- Other
+							10|[local::at0023]  	-- Unknown
+						}
+					}
+					ELEMENT[at0025] occurrences matches {0..1} matches {	-- A3 Living Conditions
+						value matches {
+							0|[local::at0026], 	-- No housing
+							1|[local::at0027], 	-- Hospice / bedsits / hotel
+							2|[local::at0028], 	-- Institution
+							3|[local::at0029], 	-- Prison
+							4|[local::at0030], 	-- With Parents
+							5|[local::at0031], 	-- With Other
+							6|[local::at0032], 	-- private residence
+							9|[local::at0033], 	-- Unknown
+							10|[local::at0034]  	-- Other
+						}
+					}
+					CLUSTER[at0035] occurrences matches {0..1} matches {	-- A5 blood contamination Status
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0036] occurrences matches {0..1} matches {	-- a) HIV
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0037] occurrences matches {0..1} matches {	-- b ) Hepatitis C
+								value matches {
+									DV_BOOLEAN matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0045] occurrences matches {0..1} matches {	-- A6 LAR medication
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0038] occurrences matches {0..1} matches {	-- A6 LAR medication
+								value matches {
+									0|[local::at0039], 	-- Methadone
+									1|[local::at0040], 	-- Buprenorphine
+									2|[local::at0041], 	-- Buprenorphine / naloxone
+									3|[local::at0042], 	-- Other
+									9|[local::at0043]  	-- Unknown
+								}
+							}
+							ELEMENT[at0044] occurrences matches {0..1} matches {	-- Other LAR medication
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0046] occurrences matches {0..1} matches {	-- A7 Daily Dose in mg
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::347]>
+								list = <
+									["1"] = <
+										units = <"mg/24h">
+									>
+								>
+								assumed_value = <
+									magnitude = <0.0>
+									units = <"mg/24h">
+									precision = <-1>
+								>
+							>
+						}
+					}
+					ELEMENT[at0047] occurrences matches {0..1} matches {	-- A8 Prescribers
+						value matches {
+							0|[local::at0048], 	-- Physician employed by LAR measures
+							1|[local::at0049], 	-- RGP
+							2|[local::at0050], 	-- Other physician
+							9|[local::at0051]  	-- Unknown
+						}
+					}
+					CLUSTER[at0052] occurrences matches {0..1} matches {	-- A9 Special conditions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0053] occurrences matches {0..1} matches {	-- a) What type of control sample , the patient ?
+								value matches {
+									0|[local::at0054], 	-- Urine Samples
+									1|[local::at0055], 	-- Saliva Samples
+									2|[local::at0056], 	-- Both types
+									9|[local::at0057]  	-- Other / Unknown
+								}
+							}
+							CLUSTER[at0058] occurrences matches {0..1} matches {	-- b ) prescribing benzodiazepines , etc. ?
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0059] occurrences matches {0..1} matches {	-- 1 - Yes / No
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0060] occurrences matches {0..1} matches {	-- if yes - specify:
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER[at0061] occurrences matches {0..1} matches {	-- c ) prescribing some other morphine substances than LAR drug ?
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0062] occurrences matches {0..1} matches {	-- 1 - Yes / No
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True, False}
+											}
+										}
+									}
+									ELEMENT[at0063] occurrences matches {0..1} matches {	-- if yes - specify:
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0064] occurrences matches {0..1} matches {	-- A10 Disclosure of LAR - drug
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0065] occurrences matches {0..1} matches {	-- a) The number of deliveries per week
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+							ELEMENT[at0066] occurrences matches {0..1} matches {	-- b ) Hence the number of dispensed monitored
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+							CLUSTER[at0076] occurrences matches {0..1} matches {	-- c ) Main place of delivery
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0067] occurrences matches {0..1} matches {	-- Collect Location
+										value matches {
+											0|[local::at0068], 	-- LAR measures / Specialist
+											1|[local::at0069], 	-- Pharmacies
+											2|[local::at0070], 	-- Local service system
+											3|[local::at0071], 	-- Institution / Bosenter / prison
+											4|[local::at0072], 	-- Medical centers
+											9|[local::at0074], 	-- Other
+											10|[local::at0073]  	-- Unknown
+										}
+									}
+									ELEMENT[at0075] occurrences matches {0..1} matches {	--  If other - please specify
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"LAR Aktuelt">
+					description = <"For utfylling av aktuell situasjon">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"A1 Beskjeftigelse">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"a) Yrkesstatus">
+					description = <"Gjelder lønnet arbeid og utdanning innenfor grunnskole, videregående skole eller universitet">
+				>
+				["at0005"] = <
+					text = <"Uten beskjeftigelse/arbeidsledig">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Heltidsjobb">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Deltidsjobb">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Under utdanning">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Deltidsjobb og under utdanning">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"b) Er det noen form for yrkesrettet rehabilitering?">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"c) Er det noen form for ikke yrkesrettet aktivitetstilbud?">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"A2 Viktigste inntekt">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Forsørget av andre">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Arbeidsinntekt">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Studielån/stipend">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Dagpenger">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Sykepenger/delvis sykepenger">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Arbeidsavklaringspenger">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Uførepensjon/alderspensjon">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Stønad til enslig forsørger">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Sosialhjelp">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Annet">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"A3 Boligforhold">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Ingen bolig">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Hospits/hybelhus/hotell">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"Institusjon">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"Fengsel">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"Hos foreldre">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"Hos andre">
+					description = <"Inlosjeres for øyeblikket av venner eller slektninger">
+				>
+				["at0032"] = <
+					text = <"Egen bolig">
+					description = <"Hybel, leilighet eller hus som pasienten eier eller leier, tilhører ikke en rehabiliterings eller behandlingsinstitusjon">
+				>
+				["at0033"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Annet">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"A5 Blodsmittestatus">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"a) HIV">
+					description = <"HIV antistoff siste prøve?">
+				>
+				["at0037"] = <
+					text = <"b) Hepatitt C">
+					description = <"HCV antistoff siste prøve?">
+				>
+				["at0038"] = <
+					text = <"LAR medikament">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"Metadon">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"Buprenorfin">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Buprenorfin/nalokson">
+					description = <"*">
+				>
+				["at0042"] = <
+					text = <"Andre">
+					description = <"*">
+				>
+				["at0043"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"Andre LAR medikament">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"A6 LAR-medikament">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"A7 Døgndose i mg">
+					description = <"Kod 999 hvis døgndose er ukjent">
+				>
+				["at0047"] = <
+					text = <"A8 Forskrivende lege">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"Lege ansatt i LAR-tiltak">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"Fastlege">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"Annen lege">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"A9 Spesielle forhold">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"a) Hvilken type kontrollprøve har pasienten?">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"Urinprøver">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"Spyttprøver">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Begge typer">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Annet/ukjent">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"b) Forskrives benzodiazepiner o.l?">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Ja/Nei">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"Hvis ja - spesifiser:">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"c) Forskrives det noen andre morfinstoffer enn LAR-medikament?">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Ja/Nei">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Hvis ja - spesifiser:">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"A10 Utlevering av LAR-medikament">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"a) Antall utleveringer per uke">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"b) Derav antall utlevert overvåket">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"Utleveringssted">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"LAR-tiltak/spesialisthelsetjeneste">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Apotek">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Kommunal tjenesteapparat">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Institusjon/bosenter/fengsel">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Legekontor">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Annet">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Ukjent">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Hvis annet - spesifiser">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"c) Viktigste utleveringssted">
+					description = <"*">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"LAR \"News\"">
+					description = <"For completing the current situation">
+				>
+				["at0001"] = <
+					text = <"*Tree(nb)">
+					description = <"*@ internal @(nb)">
+				>
+				["at0002"] = <
+					text = <"A1 Employment">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"a) Occupation Status">
+					description = <"For paid work and education in elementary school, high school or university universitet(nb)">
+				>
+				["at0005"] = <
+					text = <"Without employment / unemployment">
+					description = <"**(nb)">
+				>
+				["at0006"] = <
+					text = <"Full-Time Job">
+					description = <"**(nb)">
+				>
+				["at0007"] = <
+					text = <"Part time jobs">
+					description = <"**(nb)">
+				>
+				["at0008"] = <
+					text = <"In education">
+					description = <"**(nb)">
+				>
+				["at0009"] = <
+					text = <"Part-time work and in education">
+					description = <"**(nb)">
+				>
+				["at0010"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0011"] = <
+					text = <"b) Is there any kind of vocational rehabilitation ?">
+					description = <"**(nb)">
+				>
+				["at0012"] = <
+					text = <"c ) Are there any non vocational activities ?">
+					description = <"**(nb)">
+				>
+				["at0013"] = <
+					text = <"A2 Main income">
+					description = <"**(nb)">
+				>
+				["at0014"] = <
+					text = <"Supported by other">
+					description = <"**(nb)">
+				>
+				["at0015"] = <
+					text = <"Earned Income">
+					description = <"**(nb)">
+				>
+				["at0016"] = <
+					text = <"Student loan / grant">
+					description = <"**(nb)">
+				>
+				["at0017"] = <
+					text = <"Unemployment Benefits">
+					description = <"**(nb)">
+				>
+				["at0018"] = <
+					text = <"Sick pay / sick pay partial">
+					description = <"**(nb)">
+				>
+				["at0019"] = <
+					text = <"Work assessment allowance">
+					description = <"**(nb)">
+				>
+				["at0020"] = <
+					text = <"Disability pension / retirement pension">
+					description = <"**(nb)">
+				>
+				["at0021"] = <
+					text = <"allowance for single parent">
+					description = <"**(nb)">
+				>
+				["at0022"] = <
+					text = <"social">
+					description = <"**(nb)">
+				>
+				["at0023"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0024"] = <
+					text = <"Other">
+					description = <"**(nb)">
+				>
+				["at0025"] = <
+					text = <"A3 Living Conditions">
+					description = <"**(nb)">
+				>
+				["at0026"] = <
+					text = <"No housing">
+					description = <"**(nb)">
+				>
+				["at0027"] = <
+					text = <"Hospice / bedsits / hotel">
+					description = <"**(nb)">
+				>
+				["at0028"] = <
+					text = <"Institution">
+					description = <"**(nb)">
+				>
+				["at0029"] = <
+					text = <"Prison">
+					description = <"**(nb)">
+				>
+				["at0030"] = <
+					text = <"With Parents">
+					description = <"**(nb)">
+				>
+				["at0031"] = <
+					text = <"With Other">
+					description = <"Currently accommodated by friends or relatives">
+				>
+				["at0032"] = <
+					text = <"private residence">
+					description = <"Rented room, apartment or house that the patient owns or rents, does not belong to a rehab or treatment institution">
+				>
+				["at0033"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0034"] = <
+					text = <"Other">
+					description = <"**(nb)">
+				>
+				["at0035"] = <
+					text = <"A5 blood contamination Status">
+					description = <"**(nb)">
+				>
+				["at0036"] = <
+					text = <"a) HIV">
+					description = <"HIV antibody test last?">
+				>
+				["at0037"] = <
+					text = <"b ) Hepatitis C">
+					description = <"HCV antibody test last?">
+				>
+				["at0038"] = <
+					text = <"A6 LAR medication">
+					description = <"**(nb)">
+				>
+				["at0039"] = <
+					text = <"Methadone">
+					description = <"**(nb)">
+				>
+				["at0040"] = <
+					text = <"Buprenorphine">
+					description = <"**(nb)">
+				>
+				["at0041"] = <
+					text = <"Buprenorphine / naloxone">
+					description = <"**(nb)">
+				>
+				["at0042"] = <
+					text = <"Other">
+					description = <"**(nb)">
+				>
+				["at0043"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0044"] = <
+					text = <"Other LAR medication">
+					description = <"**(nb)">
+				>
+				["at0045"] = <
+					text = <"A6 LAR medication">
+					description = <"**(nb)">
+				>
+				["at0046"] = <
+					text = <"A7 Daily Dose in mg">
+					description = <"Encode 999 if the daily dose is unknown">
+				>
+				["at0047"] = <
+					text = <"A8 Prescribers">
+					description = <"**(nb)">
+				>
+				["at0048"] = <
+					text = <"Physician employed by LAR measures">
+					description = <"**(nb)">
+				>
+				["at0049"] = <
+					text = <"RGP">
+					description = <"**(nb)">
+				>
+				["at0050"] = <
+					text = <"Other physician">
+					description = <"**(nb)">
+				>
+				["at0051"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0052"] = <
+					text = <"A9 Special conditions">
+					description = <"**(nb)">
+				>
+				["at0053"] = <
+					text = <"a) What type of control sample , the patient ?">
+					description = <"**(nb)">
+				>
+				["at0054"] = <
+					text = <"Urine Samples">
+					description = <"**(nb)">
+				>
+				["at0055"] = <
+					text = <"Saliva Samples">
+					description = <"**(nb)">
+				>
+				["at0056"] = <
+					text = <"Both types">
+					description = <"**(nb)">
+				>
+				["at0057"] = <
+					text = <"Other / Unknown">
+					description = <"**(nb)">
+				>
+				["at0058"] = <
+					text = <"b ) prescribing benzodiazepines , etc. ?">
+					description = <"**(nb)">
+				>
+				["at0059"] = <
+					text = <"1 - Yes / No">
+					description = <"**(nb)">
+				>
+				["at0060"] = <
+					text = <"if yes - specify:">
+					description = <"**(nb)">
+				>
+				["at0061"] = <
+					text = <"c ) prescribing some other morphine substances than LAR drug ?">
+					description = <"**(nb)">
+				>
+				["at0062"] = <
+					text = <"1 - Yes / No">
+					description = <"**(nb)">
+				>
+				["at0063"] = <
+					text = <"if yes - specify:">
+					description = <"**(nb)">
+				>
+				["at0064"] = <
+					text = <"A10 Disclosure of LAR - drug">
+					description = <"**(nb)">
+				>
+				["at0065"] = <
+					text = <"a) The number of deliveries per week">
+					description = <"**(nb)">
+				>
+				["at0066"] = <
+					text = <"b ) Hence the number of dispensed monitored">
+					description = <"**(nb)">
+				>
+				["at0067"] = <
+					text = <"Collect Location">
+					description = <"**(nb)">
+				>
+				["at0068"] = <
+					text = <"LAR measures / Specialist">
+					description = <"**(nb)">
+				>
+				["at0069"] = <
+					text = <"Pharmacies">
+					description = <"**(nb)">
+				>
+				["at0070"] = <
+					text = <"Local service system">
+					description = <"**(nb)">
+				>
+				["at0071"] = <
+					text = <"Institution / Bosenter / prison">
+					description = <"**(nb)">
+				>
+				["at0072"] = <
+					text = <"Medical centers">
+					description = <"**(nb)">
+				>
+				["at0073"] = <
+					text = <"Unknown">
+					description = <"**(nb)">
+				>
+				["at0074"] = <
+					text = <"Other">
+					description = <"**(nb)">
+				>
+				["at0075"] = <
+					text = <" If other - please specify">
+					description = <"**(nb)">
+				>
+				["at0076"] = <
+					text = <"c ) Main place of delivery">
+					description = <"**(nb)">
+				>
+			>
+		>
+	>

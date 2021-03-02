@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=0a9d3193-68fc-40d4-82f3-92113940205f)
+﻿archetype (adl_version=1.4; uid=05ce5d27-260b-44f9-a276-8d1d1b1326f0)
 	openEHR-EHR-CLUSTER.testconceptproblem.v0
 
 concept
@@ -21,13 +21,13 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1D03AAD15553EDE78812FCEAACF090E4">
-		["build_uid"] = <"c6e0e11a-29c1-466c-90c5-e1611248734b">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"38428973ABE70AA05C96D1B26DEFEBD5">
+		["build_uid"] = <"a9a170c1-e46b-4f93-9f0c-aef73c13c1eb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -73,6 +73,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -135,7 +136,7 @@ ontology
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0009"] = <http://snomed.info/id/123445>
+				["at0009"] = <[SNOMED-CT::123445]>
 			>
 		>
 	>

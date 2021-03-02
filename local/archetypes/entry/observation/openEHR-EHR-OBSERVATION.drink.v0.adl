@@ -1,0 +1,232 @@
+﻿archetype (adl_version=1.4; uid=e3b07267-cf7b-4701-be7b-babda0d73ada)
+	openEHR-EHR-OBSERVATION.drink.v0
+
+concept
+	[at0000]	-- Drink
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics UK">
+		["email"] = <"ian@freshehr.com">
+		["date"] = <"2017-12-15">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"687BB77D959B6C25FBDAC57918559CE0">
+		["build_uid"] = <"0907c2a3-8ce9-42e6-9d8c-3e65c4abd62b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Drink
+		data matches {
+			HISTORY[at0001] matches {	-- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- ItemTree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Beverage type
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Specific beverage
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Temperature
+										value matches {
+											C_DV_QUANTITY <
+											>
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Volume
+										value matches {
+											C_DV_QUANTITY <
+											>
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0004] matches {	-- ItemTree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Sleep status
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0014] occurrences matches {0..1} matches {	-- Morning
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[History]/events[Any event]/data[ItemTree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0004]	-- /data[History]/events[Any event]/state[ItemTree]
+						}
+					}
+					POINT_EVENT[at0015] occurrences matches {0..1} matches {	-- Elevenses
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[History]/events[Any event]/data[ItemTree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0004]	-- /data[History]/events[Any event]/state[ItemTree]
+						}
+					}
+					POINT_EVENT[at0016] occurrences matches {0..1} matches {	-- Lunch
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[History]/events[Any event]/data[ItemTree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0004]	-- /data[History]/events[Any event]/state[ItemTree]
+						}
+					}
+					POINT_EVENT[at0017] occurrences matches {0..1} matches {	-- Afternoon
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[History]/events[Any event]/data[ItemTree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0004]	-- /data[History]/events[Any event]/state[ItemTree]
+						}
+					}
+					POINT_EVENT[at0018] occurrences matches {0..1} matches {	-- Bedtime
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[History]/events[Any event]/data[ItemTree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0004]	-- /data[History]/events[Any event]/state[ItemTree]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0009] matches {	-- ItemTree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Receptacle
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0011] occurrences matches {0..1} matches {	-- Receptacle details
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"en", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Drink">
+					description = <"drink">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Beverage type">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Specific beverage">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Temperature">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Volume">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0010"] = <
+					text = <"Receptacle">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Receptacle details">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Sleep status">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Morning">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Elevenses">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Lunch">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Afternoon">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Bedtime">
+					description = <"*">
+				>
+			>
+		>
+	>

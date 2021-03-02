@@ -1,0 +1,314 @@
+﻿archetype (adl_version=1.4; uid=699324e5-daec-423a-91d6-6268eefba35f)
+	openEHR-EHR-EVALUATION.assisted_hearing_summary.v0
+
+concept
+	[at0000]	-- Assisted hearing summary
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2015-10-05">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To record an ongoing and persistent overview about devices that have been used to assist or enhance hearing.(en)">
+			use = <"bla 1
+
+bla2 
+
+bla3
+
+
+dsds
+
+
+bla33">
+			misuse = <"">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record an ongoing and persistent overview about devices that have been used to assist or enhance hearing.">
+			use = <"Use to record a summary of devices that have been used to aid hearing including, but not limited to:
+- air-conduction hearing aids;
+- bone-conduction hearing aids;
+- ear trumpet; and
+- auditory implant.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Kathy Currie, NT Hearing Health Program Leader, Australia", ...>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B8B43A05F3FB8C45FBFFF3F445DA53CE">
+		["build_uid"] = <"f6204a33-4b8b-4fb8-80e7-43ca16c01abc">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Assisted hearing summary
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- Never aided
+									at0004, 	-- Currently assisted
+									at0005]	-- Previously aided
+								}
+							}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0006] occurrences matches {0..*} matches {	-- Fitted device
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Fitting date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							CLUSTER[at0011] occurrences matches {0..2} matches {	-- Configuration
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Device name
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Body site
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {	-- Structured body site
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {	-- Configuration detail
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Cessation date
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0016] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Assisted hearing summary">
+					description = <"An ongoing and persistent overview about devices that have been used to assist or enhance hearing.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Status">
+					description = <"Current aided status.">
+				>
+				["at0003"] = <
+					text = <"Never aided">
+					description = <"Hearing assistence has never been used.">
+				>
+				["at0004"] = <
+					text = <"Currently assisted">
+					description = <"Hearing assistence is currently being used.">
+				>
+				["at0005"] = <
+					text = <"Previously aided">
+					description = <"Hearing assistence has been used in the past.">
+				>
+				["at0006"] = <
+					text = <"Fitted device">
+					description = <"Details about each device fitted.">
+				>
+				["at0007"] = <
+					text = <"Device name">
+					description = <"Identification of the device, by name.">
+				>
+				["at0008"] = <
+					text = <"Fitting date">
+					description = <"Date of fitting or insertion of the assisted hearing device/s.">
+				>
+				["at0009"] = <
+					text = <"Cessation date">
+					description = <"Date that use of the device ceased.">
+				>
+				["at0010"] = <
+					text = <"Configuration detail">
+					description = <"Additional structured detail about the device and its configuration.">
+				>
+				["at0011"] = <
+					text = <"Configuration">
+					description = <"Details about the configuration of the assisted hearing device.">
+				>
+				["at0012"] = <
+					text = <"Body site">
+					description = <"Identification of the body site where the device is located/implanted.">
+				>
+				["at0013"] = <
+					text = <"Structured body site">
+					description = <"A structured anatomical location of the body site where the device is located/implanted.">
+				>
+				["at0014"] = <
+					text = <"Description">
+					description = <"Narrative description about the device.">
+				>
+				["at0015"] = <
+					text = <"Description">
+					description = <"Narrative description about the use of assisted hearing devices.">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"Last updated">
+					description = <"The date this summary was last updated.">
+				>
+				["at0018"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Assisted hearing summary(en)">
+					description = <"*An ongoing and persistent overview about devices that have been used to assist or enhance hearing.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Status(en)">
+					description = <"*Current aided status.(en)">
+				>
+				["at0003"] = <
+					text = <"*Never aided(en)">
+					description = <"*Hearing assistence has never been used.(en)">
+				>
+				["at0004"] = <
+					text = <"*Currently assisted(en)">
+					description = <"*Hearing assistence is currently being used.(en)">
+				>
+				["at0005"] = <
+					text = <"*Previously aided(en)">
+					description = <"*Hearing assistence has been used in the past.(en)">
+				>
+				["at0006"] = <
+					text = <"*Fitted device(en)">
+					description = <"*Details about each device fitted.(en)">
+				>
+				["at0007"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the device, by name.(en)">
+				>
+				["at0008"] = <
+					text = <"*Fitting date(en)">
+					description = <"*Date of fitting or insertion of the assisted hearing device/s.(en)">
+				>
+				["at0009"] = <
+					text = <"*Cessation date(en)">
+					description = <"*Date that use of the device ceased.(en)">
+				>
+				["at0010"] = <
+					text = <"*Configuration detail(en)">
+					description = <"*Additional structured detail about the device and its configuration.(en)">
+				>
+				["at0011"] = <
+					text = <"*Configuration(en)">
+					description = <"*Details about the configuration of the assisted hearing device.(en)">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site where the device is located/implanted.(en)">
+				>
+				["at0013"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location of the body site where the device is located/implanted.(en)">
+				>
+				["at0014"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the device.(en)">
+				>
+				["at0015"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the use of assisted hearing devices.(en)">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"*Last updated(en)">
+					description = <"*The date this summary was last updated.(en)">
+				>
+				["at0018"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+				>
+			>
+		>
+	>
