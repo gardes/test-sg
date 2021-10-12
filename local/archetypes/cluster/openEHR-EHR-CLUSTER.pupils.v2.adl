@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=0e94ccba-d8b2-4a76-8f29-d5a61fb3875d)
-	openEHR-EHR-CLUSTER.pupils.v0
+﻿archetype (adl_version=1.4; uid=87ea2eee-c3ea-424f-9a67-83519a992e7c)
+	openEHR-EHR-CLUSTER.pupils.v2
 
 concept
-	[at0000]	-- Pupils
+	[at0000]	-- Pupils_TEST
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -23,17 +23,16 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2754890EE3531B3A2615917B3B3F1F39">
-		["build_uid"] = <"6f45a2a4-e3a0-4450-a4c9-89ce66a1ea71">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"2785E877F6EB45948E9739643229F645">
+		["build_uid"] = <"64fa44a9-12e1-40bd-9897-3f52418d2087">
+		["revision"] = <"2.0.0-alpha">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Pupils
+	CLUSTER[at0000] matches {	-- Pupils_TEST
 		items cardinality matches {1..*; unordered} matches {
 			CLUSTER[at0012] occurrences matches {0..1} matches {	-- Normal statements
 				items cardinality matches {1..*; unordered} matches {
@@ -125,8 +124,9 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Pupils">
-					description = <"Record examination of pupils.">
+					text = <"Pupils_TEST">
+					description = <"Record examination of pupils.-TEST">
+					comment = <"NAZ">
 				>
 				["at0001"] = <
 					text = <"Details">
