@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
   <id>51ec3e49-eeb2-43b4-b8ff-73c0b7450000</id>
-  <name>Test Order Item</name>
+  <name>Test Order Item-Oct2021</name>
   <description>
     <original_author>
       <item>
-        <key>name</key>
+        <key>Nazmun TEST</key>
       </item>
     </original_author>
     <lifecycle_state>Initial</lifecycle_state>
