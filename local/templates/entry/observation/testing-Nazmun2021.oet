@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>8575b821-4da7-4cb9-8992-e6b33c1742b6</id>
-    <name>testing-Nazmun</name>
+    <name>testing-Nazmun2021</name>
     <description>
         <original_author>
             <item>
-                <key>name</key>
+                <key>labtest2021</key>
                 <value>Heather Leslie</value>
             </item>
             <item>
