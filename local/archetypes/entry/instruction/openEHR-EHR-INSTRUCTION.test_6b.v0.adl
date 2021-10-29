@@ -54,8 +54,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AB46AC1A98CCECAC7670B3672A3FD8EA">
-		["build_uid"] = <"f3fd743c-e68d-4faf-94f2-47203c72e0a0">
+		["MD5-CAM-1.0.1"] = <"6D8823B4BFE4B9FB4EF0023EA335DA91">
+		["build_uid"] = <"b221d1c7-8a01-4430-afbc-e725e678fb76">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -163,7 +163,7 @@ ontology
 					description = <"*">
 				>
 				["at0004"] = <
-					text = <"*Interval of quantity(en)">
+					text = <"Quantitätsintervall">
 					description = <"*">
 				>
 			>
