@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.abcd2_score.v0
 
 concept
-	[at0000]	-- ABCD2 score
+	[at0000]	-- ABCD2 core for TIA
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -65,21 +65,21 @@ Rothwell PM, Giles MF, Flossmann E, Lovelock CE, Redgrave JN, Warlow CP, Mehta Z
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9428C2D9309BC578485AA744DEA2F9D9">
-		["build_uid"] = <"d28eda76-491b-4d1d-a91b-b067ce526211">
+		["MD5-CAM-1.0.1"] = <"87D3B6053DDCC7894C812E17E15A2033">
+		["build_uid"] = <"4b9026cb-7f99-456f-9a2e-ec0e280791ca">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- ABCD2 score
+	OBSERVATION[at0000] matches {	-- ABCD2 core for TIA
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Age ≥ 60 years
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Age ≥ 60 years 
 										value matches {
 											0|[local::at0010], 	-- Absent
 											1|[local::at0011]  	-- Present
@@ -108,7 +108,7 @@ definition
 										value matches {
 											0|[local::at0019], 	-- <10 minutes
 											1|[local::at0020], 	-- 10-59 minutes
-											2|[local::at0021]  	-- ≥60 minutes
+											2|[local::at0021]  	-- ≥60 minutes 
 										}
 									}
 									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Total score
@@ -135,13 +135,14 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"ABCD2 score">
-					description = <"Tool to assess the risk of subsequent stroke in an individual presenting with a transient ischaemic attack (TIA).">
+					text = <"ABCD2 core for TIA">
+					description = <"Tool to assess the risk of subsequent stroke in an individual presenting with a transient ischaemic attack (TIA). ">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -156,7 +157,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Age ≥ 60 years">
+					text = <"Age ≥ 60 years ">
 					description = <"Is the person 60 years or older?">
 				>
 				["at0005"] = <
@@ -220,7 +221,7 @@ ontology
 					description = <"*">
 				>
 				["at0021"] = <
-					text = <"≥60 minutes">
+					text = <"≥60 minutes ">
 					description = <"*">
 				>
 				["at0022"] = <
@@ -241,8 +242,8 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"*ABCD2 score(en)">
-					description = <"*Tool to assess the risk of subsequent stroke in an individual presenting with a transient ischaemic attack (TIA).(en)">
+					text = <"*ABCD2 core for TIA(en)">
+					description = <"*Tool to assess the risk of subsequent stroke in an individual presenting with a transient ischaemic attack (TIA). (en)">
 				>
 				["at0001"] = <
 					text = <"*Event Series(en)">
@@ -257,7 +258,7 @@ ontology
 					description = <"*@ internal @(en)">
 				>
 				["at0004"] = <
-					text = <"*Age ≥ 60 years(en)">
+					text = <"*Age ≥ 60 years (en)">
 					description = <"*Is the person 60 years or older?(en)">
 				>
 				["at0005"] = <
@@ -321,8 +322,8 @@ ontology
 					description = <"*">
 				>
 				["at0021"] = <
-					text = <"*≥60 minutes(en)">
-					description = <"**(en)">
+					text = <"≥60 minuter">
+					description = <"*">
 				>
 				["at0022"] = <
 					text = <"*Total score(en)">

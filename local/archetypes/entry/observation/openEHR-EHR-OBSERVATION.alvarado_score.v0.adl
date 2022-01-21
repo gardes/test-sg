@@ -79,8 +79,8 @@ McKay R, Shepherd J. The use of the clinical scoring system by Alvarado in the d
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"040354CC247D57E2E8569F37700C5478">
-		["build_uid"] = <"40c42695-658c-445d-8da8-4e3526ba3880">
+		["MD5-CAM-1.0.1"] = <"4E15A51FBAF80B3B067437FA4919B243">
+		["build_uid"] = <"e3860e70-7396-4c34-b154-d8585767beeb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -151,16 +151,6 @@ definition
 								}
 							}
 						}
-					}
-				}
-			}
-		}
-		protocol matches {
-			ITEM_TREE[at0030] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0031] occurrences matches {0..*} matches {	-- Extension
-						include
-							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -288,15 +278,6 @@ ontology
 					text = <"Yes">
 					description = <"*">
 				>
-				["at0030"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0031"] = <
-					text = <"Extension">
-					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
-					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
-				>
 			>
 		>
 		["sv"] = <
@@ -416,15 +397,6 @@ ontology
 				["at0029"] = <
 					text = <"Ja">
 					description = <"*">
-				>
-				["at0030"] = <
-					text = <"*Tree(en)">
-					description = <"*@ internal @(en)">
-				>
-				["at0031"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
-					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
 				>
 			>
 		>
