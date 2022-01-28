@@ -1,0 +1,121 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.clinical_synopsis.v4
+
+concept
+	[at0000]	-- Clinical Synopsis
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"24-Dec-2008">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A clinician-entered clinical synopsis contains summary information or comments about the clinical management of the subject of care, and the prognosis of problems/diagnoses identified during the healthcare encounter. It may also include health-related information pertinent to the subject of care, and a clinical interpretation of relevant investigations and observations performed on the subject of care (including pathology and diagnostic imaging).
+
+A subject of care-entered or carer-entered clinical synopsis contains information such as reporting on one or more health events, summaries of health issues and assessments of health problems. Health events include blood pressure measurements, descriptions of instances of adverse reactions to food and reflections on mood.">
+			use = <"When used by a health care provider, clinical synopsis is used to describe additional information including clinical interpretation of the condition/tests and subject of care understanding of the health care event, and other relevant clinical details not captured by other structured or unstructured information components pertinent of that health care event.
+
+When used by the subject of care or a nominated representative (including carer), it is used to provide information such as descriptions of health events, summaries of health issues and assessments of health problems as perceived by the subject of care and/or a nominated representative.">
+			keywords = <"Clinical Comment", "Clinical Note", "Clinical Summary", "Clinical Management Summary">
+			misuse = <"Using when more specialised data components are available.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"189F15AAB10956236B0294644DC3D184">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Clinical Synopsis
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Clinical Synopsis Topic
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] matches {	-- Clinical Synopsis Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- DateTime Recorded
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"NCTIS-OID", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical Synopsis">
+					description = <"The clinical synopsis contains summary information or comments about the clinical management of the patient, and the prognosis of diagnoses/ problems identified during the healthcare encounter. It may also include health-related information pertinent to the patient, and a clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).">
+					comment = <"Narrative information is captured or entered here by a healthcare provider from the focus of a healthcare provider, carer, subject of care and/or others unrelated to the subject of care.">
+					detail_docref = <"data_groups/NEHTA-15513-Clinical_Synopsis-Data_Group.xml">
+					spec_id = <"10">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Clinical Synopsis Description">
+					description = <"The clinical synopsis, written in free text.">
+					comment = <"Provides concise narrative about the subject of care and the health care event/encounter. It may include the healthcare provider's interpretation (meta-observation) and the subject of care's understanding of the health care event that complements other structured or unstructured information contents captured or communicated about the health event/encounter.
+
+The description may include a summary of the issues/problems, management strategies, outcomes/progress and possible prognosis.
+
+Examples: 
+  1. Admitted for elective bronchoscopy for assessment of left lingular and bibasal pneumonia. No focal endobronchial pathology identified. No evidence of malignancy and no pathogens isolated on bronchial brushings and washings.
+  2. 3/52 ago involved in a rear end motor vehicle accident, mid-velocity impact- complaining of neck pain, dizziness, nausea and difficulties concentrating. Disturbed sleep. No spinal cord signs.">
+					detail_docref = <"data_elements/NEHTA-15582-Clinical_Synopsis_Description-Data_Element.xml">
+					dc_id = <"15582">
+				>
+				["at0003"] = <
+					text = <"DateTime Recorded">
+					description = <"The date or date and time when the clinical synopsis recording was made.">
+					detail_docref = <"data_elements/NEHTA-15511-DateTime_Recorded-Data_Element.xml">
+				>
+				["at0004"] = <
+					text = <"Clinical Synopsis Topic">
+					description = <"The clinical synopsis title/topic, written in free text.">
+					comment = <"Topic of the clinical description about the subject of care and the health care event/encounter. The topic enables to organise the healthcare provider's description or the subject of care's interpretation of the health event/encounter.
+
+The title may be a free text intended to allow a summary title to the description of the issues/problems, management strategies, outcomes/progress and possible prognosis.
+
+Examples: 
+  1. My Diabetes:
+  2. Diagnosis:
+  3. My Blood Pressure:">
+					detail_docref = <"data_elements/NEHTA-16673-Clinical_Synopsis_Topic-Data_Element.xml">
+					dc_id = <"16673">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["NCTIS-OID"] = <
+			items = <
+				["at0000"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.15513]>
+				["at0002"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.15582]>
+				["at0003"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.15511]>
+				["at0004"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16673]>
+			>
+		>
+	>

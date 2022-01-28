@@ -1,0 +1,111 @@
+﻿archetype (adl_version=1.4; uid=60ec48bf-62c6-44b3-b450-3857db05a03a)
+	openEHR-EHR-OBSERVATION.test_dv_scale.v0
+
+concept
+	[at0000]	-- test_dv_scale
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Silje Ljosland Bakke">
+		["organisation"] = <"Helse Vest IKT AS">
+		["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no">
+		["date"] = <"2021-02-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"85FD1998099ED7BBB3FB283F4C94A301">
+		["build_uid"] = <"fced7db7-43c5-4931-8b5b-6acc845f9294">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- test_dv_scale
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- DV_SCALE
+										value matches {
+											0|[local::at0005],
+											0.5|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"test_dv_scale">
+					description = <"test_dv_scale">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"DV_SCALE">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No Breathlessness at all">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Very Very Slight (Just Noticeable)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Very Slight">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Slight Breathlessness">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+			>
+		>
+	>
