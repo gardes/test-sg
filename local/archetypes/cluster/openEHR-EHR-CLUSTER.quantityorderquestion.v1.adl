@@ -32,8 +32,8 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"D9765AD50B35CF8E9353BEE18007961C">
-		["build_uid"] = <"e8ec812c-8463-4d0a-bbc4-b5cce20b3474">
+		["MD5-CAM-1.0.1"] = <"103BC50F522636E02E9027C61B1D84E4">
+		["build_uid"] = <"1bf41bc8-4074-4b01-8500-180bfb02cb7f">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -47,10 +47,16 @@ definition
 						list = <
 							["1"] = <
 								units = <"cm2">
+								precision = <|3|>
 							>
 							["2"] = <
 								units = <"acre">
 							>
+						>
+						assumed_value = <
+							units = <"acre">
+							precision = <-1>
+							magnitude = <0.0>
 						>
 					>
 				}
