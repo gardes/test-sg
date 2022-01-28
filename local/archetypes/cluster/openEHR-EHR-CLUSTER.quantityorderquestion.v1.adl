@@ -33,7 +33,7 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"C52FC625469A9B07AC10530EEEF781A1">
-		["build_uid"] = <"00a06072-c3d1-456f-9b06-36978ebdf96e">
+		["build_uid"] = <"8b9207ec-6efa-4a8d-a191-3d308b035ecf">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -61,6 +61,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
