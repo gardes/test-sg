@@ -23,7 +23,7 @@ This archetype will be used as the basis of each template used to construct a qu
 			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -32,9 +32,9 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5C9A77149C77B6C8BE8BD9AA2C9E29AB">
-		["build_uid"] = <"6608e2af-bd75-41c7-84cc-f0b10545dd79">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"C52FC625469A9B07AC10530EEEF781A1">
+		["build_uid"] = <"00a06072-c3d1-456f-9b06-36978ebdf96e">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -43,6 +43,15 @@ definition
 			ELEMENT[at0001] occurrences matches {0..*} matches {	-- New element
 				value matches {
 					C_DV_QUANTITY <
+						property = <[openehr::335]>
+						list = <
+							["1"] = <
+								units = <"cm2">
+							>
+							["2"] = <
+								units = <"acre">
+							>
+						>
 					>
 				}
 			}
