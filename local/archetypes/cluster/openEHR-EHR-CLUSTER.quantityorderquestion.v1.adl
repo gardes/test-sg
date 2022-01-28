@@ -32,15 +32,15 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"C52FC625469A9B07AC10530EEEF781A1">
-		["build_uid"] = <"8b9207ec-6efa-4a8d-a191-3d308b035ecf">
+		["MD5-CAM-1.0.1"] = <"D9765AD50B35CF8E9353BEE18007961C">
+		["build_uid"] = <"e8ec812c-8463-4d0a-bbc4-b5cce20b3474">
 		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Quantity order question
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..*} matches {	-- New element
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::335]>
@@ -61,7 +61,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
