@@ -32,46 +32,25 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F6F09EB893409C542965977440CCB71F">
-		["build_uid"] = <"47f7f16e-bfee-4f34-9ad2-f92c6e84ae71">
+		["MD5-CAM-1.0.1"] = <"974A30B2F5ACBB947920C8FEDAEFE371">
+		["build_uid"] = <"d3611251-b852-44dd-94e6-bdfdff225ad5">
 		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- Quantity order question
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
-				value matches {
-					C_DV_QUANTITY <
-										property = <[openehr::124]>
-										list = <
-											["1"] = <
-												units = <"ug">
-												precision = <|0|>
-											>
-											["2"] = <
-												units = <"kg">
-											>
-											["3"] = <
-												units = <"mg">
-												precision = <|0|>
-											>
-										>
-										assumed_value = <
-											units = <"mg">
-											precision = <0>
-											magnitude = <25.0>
-										>
-									>
-				}
-			}
 			allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Cascading Questions
 				include
 					archetype_id/value matches {/.*/}
 			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- New element
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
 		}
 	}
-
 
 
 ontology
@@ -82,13 +61,13 @@ ontology
 					text = <"Quantity order question">
 					description = <"Quantity type order question.">
 				>
-				["at0001"] = <
-					text = <"New element">
-					description = <"Question display name">
-				>
 				["at0002"] = <
 					text = <"Cascading Questions">
 					description = <"Expansion slot for associated questions.">
+				>
+				["at0003"] = <
+					text = <"New element">
+					description = <"*">
 				>
 			>
 		>
