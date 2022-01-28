@@ -32,8 +32,8 @@ This archetype will be used as the basis of each template used to construct a qu
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"103BC50F522636E02E9027C61B1D84E4">
-		["build_uid"] = <"1bf41bc8-4074-4b01-8500-180bfb02cb7f">
+		["MD5-CAM-1.0.1"] = <"F6F09EB893409C542965977440CCB71F">
+		["build_uid"] = <"47f7f16e-bfee-4f34-9ad2-f92c6e84ae71">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -43,22 +43,26 @@ definition
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
 				value matches {
 					C_DV_QUANTITY <
-						property = <[openehr::335]>
-						list = <
-							["1"] = <
-								units = <"cm2">
-								precision = <|3|>
-							>
-							["2"] = <
-								units = <"acre">
-							>
-						>
-						assumed_value = <
-							units = <"acre">
-							precision = <-1>
-							magnitude = <0.0>
-						>
-					>
+										property = <[openehr::124]>
+										list = <
+											["1"] = <
+												units = <"ug">
+												precision = <|0|>
+											>
+											["2"] = <
+												units = <"kg">
+											>
+											["3"] = <
+												units = <"mg">
+												precision = <|0|>
+											>
+										>
+										assumed_value = <
+											units = <"mg">
+											precision = <0>
+											magnitude = <25.0>
+										>
+									>
 				}
 			}
 			allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Cascading Questions
@@ -67,6 +71,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
