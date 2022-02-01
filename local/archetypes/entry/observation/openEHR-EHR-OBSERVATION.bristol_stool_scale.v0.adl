@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=be6d23df-b372-46a9-b863-223f2f320c0f)
+﻿archetype (adl_version=1.4; uid=8ef8fc21-f983-3c40-87cb-c7021ee9831c)
 	openEHR-EHR-OBSERVATION.bristol_stool_scale.v0
 
 concept
@@ -11,6 +11,15 @@ language
 			author = <
 				["name"] = <"?">
 			>
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"Joost Holslag">
+				["organisation"] = <"Nedap">
+				["email"] = <"joost.holslag@nedap.com">
+			>
+			accreditation = <"MD">
 		>
 	>
 description
@@ -37,20 +46,27 @@ description
 			misuse = <"*(en)">
 			copyright = <"© openEHR Foundation">
 		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"Het vastleggen van eigenschappen van faeces na ontlasting volgens de 'Bristol Stool Score' ook wel de 'Meyers' score.">
+			use = <"Het vastleggen van een classificatie van eigenschappen van ontlasting volgens de 'Bristol Stool Score'">
+			keywords = <"ontlasting", "faeces", "feces", "Bristol", "Meyer">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"http://en.wikipedia.org/wiki/Bristol_stool_scale
 Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal transit time\". Scand. J. Gastroenterol. 32 (9): 920–4.">
 		["current_contact"] = <"Ian McNicoll, freshEHR Clinical Informatics, ian.mcnicoll@freshEHR.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"30108D1C94915B4C8C15F3F0AE228AAD">
-		["build_uid"] = <"49408234-df63-42d7-a0ce-baee7b7b020b">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"C05CBDA8A603EBC45086D915E6BD0351">
+		["build_uid"] = <"4b056bde-12a3-4118-b5de-b7f38badb56b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -108,7 +124,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
@@ -256,6 +271,79 @@ ontology
 					text = <"*Extension(en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+			>
+		>
+		["nl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bristol stool score">
+					description = <"Classificatie van faeces eigenschappen volgens de 'Bristol Stool Score'.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Moment in de tijd.">
+					description = <"Standaard, een ongespecificeerd moment in de tijd dat expliciet vastgelegd kan worden in een template terwijl de applicatie loopt.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Opmerking">
+					description = <"Extra informatie over de ontlasting, die niet binnen andere velden past.">
+				>
+				["at0005"] = <
+					text = <"Bristol stool score">
+					description = <"Een score voor het beoordelen van karakteristieken van faeces na ontlasting.">
+				>
+				["at0006"] = <
+					text = <"Losse harde keutels, zoals noten (moeilijk uit te scheiden)">
+					description = <"Ontlasting bestaat uit losse harde keutels, zoals noten (moeilijk uit te scheiden)">
+				>
+				["at0007"] = <
+					text = <"Als een worst, maar klonterig">
+					description = <"Ontlasting is als een worst, maar klonterig.">
+				>
+				["at0008"] = <
+					text = <"Als een worst, maar met barstjes aan de buitenkant">
+					description = <"Ontlasting is als een worst, maar met barstjes aan de buitenkant.">
+				>
+				["at0009"] = <
+					text = <"Als een worst of slang, glad en zacht">
+					description = <"Ontlasting is als een worst of slang, glad en zacht.">
+				>
+				["at0010"] = <
+					text = <"Zachte keutels met duidelijke randen (makkelijk uit te scheiden)">
+					description = <"Ontlasting bestaat uit zachte keutels met duidelijke randen (makkelijk uit te scheiden).">
+				>
+				["at0011"] = <
+					text = <"Zachte stukjes met gehavende randen, een papperige uitscheiding">
+					description = <"Ontlasting bestaat uit zachte stukjes met gehavende randen, een papperige uitscheiding.">
+				>
+				["at0012"] = <
+					text = <"Waterig, geen vaste stukjes, helemaal vloeibaar">
+					description = <"Ontlasting is waterig, geen vaste stukjes, helemaal vloeibaar.">
+				>
+				["at0013"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Beïnvloedende factoren">
+					description = <"Leg factoren vast die van invloed zijn op de 'Bristol Stool Score'.">
+				>
+				["at0015"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0016"] = <
+					text = <"Uitbreiding">
+					description = <"Extra informatie benodigd om de lokale context vast te leggen of te verbinden met andere bronnen.">
+					comment = <"Bijvoorbeeld: metadata over de lokale ziekenhuis afdeling om te verbinden met FHIR of CIMI systemen.">
 				>
 			>
 		>
