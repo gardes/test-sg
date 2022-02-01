@@ -28,7 +28,7 @@ description
 		["references"] = <"NHS Scotland SCI-XML schema http://www.sci.scot.nhs.uk/products/gateway/gate_down_xml.htm
 
 DoH, UK  NHS Message Implementation Guidance, http://www.uktcregistration.nss.cfh.nhs.uk/trud3/user/guest/group/0/pack/23;jsessionid=D52317DAD88F60096DFF3113BA604F1A">
-		["MD5-CAM-1.0.1"] = <"A51F55EEBCE6314B263B4B3DA4E7D6B0">
+		["MD5-CAM-1.0.1"] = <"536CE0259E429B7C972C0346E2AB0484">
 	>
 
 definition
@@ -104,7 +104,7 @@ definition
 	}
 
 ontology
-	terminologies_available = <"DM+D", "SNOMED", "SNOMED-CT">
+	terminologies_available = <"DM+D", "SNOMED", "SNOMED-CT", "READ", "FDB", "EMIS_DRUGS">
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -119,7 +119,7 @@ ontology
 				["at0002"] = <
 					text = <"Causative agent">
 					description = <"Details of the agent or medicinal substance believed to be the cause of the adverse reaction or allergy.">
-					comment = <"There are 4 permissible ways to express a Causative agent: 
+					comment = <"For GP2GP V2 use, there are 4 permissible ways to express a Causative agent: 
 Drug Group (SNOMED-CT),
 dm+d VMP/AMP (dm+d), 
 Ingredient (SNOMED-CT),
@@ -129,7 +129,9 @@ Ingredient (SNOMED-CT),
  
 
 It is MANDATORY that one and only one of these must always be selected. 
-Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can never be sent on its own.">
+Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can never be sent on its own.
+
+For legacy use other codes are permissible such as FDB Agent codes, EMIS Drug codes and READ codes.">
 				>
 				["at0003"] = <
 					text = <"Certainty">
@@ -214,16 +216,7 @@ Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can ne
 				>
 				["ac0002"] = <
 					text = <"Causative Agent">
-					description = <"There are 4 permissible ways to express a Causative agent:
-Drug Group (SNOMED-CT),
-dm+d VMP/AMP (dm+d), 
-Ingredient (SNOMED-CT),
- TradeFamily/TradeFamilyGroup (SNOMED-CT).
-
-
- 
-It is MANDATORY that one and only one of these must always be selected.
-Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can never be sent on its own.">
+					description = <"A causative agent term from one of the approved terminology subsets.">
 				>
 			>
 		>
@@ -255,10 +248,25 @@ Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can ne
 				["ac0002"] = <terminology:DM%2BD?subset=AMP%2FVMP%20>
 			>
 		>
+		["READ"] = <
+			items = <
+				["ac0002"] = <terminology:READ?subset=Allergy%20code>
+			>
+		>
 		["SNOMED-CT"] = <
 			items = <
 				["ac0001"] = <terminology:SNOMED-CT?subset=ClinicalFinding>
 				["ac0002"] = <terminology:SNOMED-CT?subset=Allergy%20code%3B%20dm%2Bd%20Ingredient%3B%20Trade%20family%20%3B%20Trade%20Family%20Group>
+			>
+		>
+		["FDB"] = <
+			items = <
+				["ac0002"] = <terminology:FDB?subset=Agent>
+			>
+		>
+		["EMIS_DRUGS"] = <
+			items = <
+				["ac0002"] = <terminology:EMIS_DRUGS?subset=Agent>
 			>
 		>
 	>
