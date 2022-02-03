@@ -9,9 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Antje Wulff">
-				["organisation"] = <"PLRI for Medical Informatics Medical School Hannover and TU Braunschweig">
-				["email"] = <"wulff.antje@mh-hannover.de">
+				["name"] = <"Antje Wulff, test test">
+				["organisation"] = <"PLRI for Medical Informatics Medical School Hannover and TU Braunschweig, Ocean">
+				["email"] = <"wulff.antje@mh-hannover.de, test@openehr.de">
 			>
 		>
 		["sv"] = <
@@ -54,7 +54,7 @@ description
 
 Diese Skala ist eine Verfeinerung der ursprünglichen AVPU, die 2017 durch Hinzufügen eines \"C\" aktualisiert wurde, wobei C für \"ein neues Auftreten oder eine sich verschlimmernde Verwirrung, ein Delirium oder eine andere veränderte Mentalität\" steht.
 
-Diese Skala wird jetzt als Bestandteil von NEWS2 veröffentlicht, um den Grad des Bewusstseins einer Person zu erfassen.">
+Diese Skala wird jetzt als Bestandteil von NEWS2 veröffentlicht, um den Grad des Bewusstseins einer Person zu erfassen. 2">
 			keywords = <"avpu", "Alarm", "Stimme", "Schmerz", "nicht ansprechbar", "wach", "Rede", "Schmerz", "unbewusst", "Stimme", "Bewusstsein", "verbal", "halbkomatös", "bewusst", "Bewusstseinsebene", "komatös", "Verwirrung", "news2">
 			misuse = <"">
 		>
@@ -99,8 +99,8 @@ This scale is now published as a component of NEWS2.">
 			copyright = <"© Apperta UK, openEHR Foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Grant Forrest, NHS Scotland, United Kingdom", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Morten Hørthe, DIPS, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Liv Laugen, Oslo universitetssykehus, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Svenne Naumann, Finnmarkssykehuset, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Terje Sagmyr, DIPS AS, Norway", "Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Arild Stangeland, Helse Bergen, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "June Susanne Berge, DIPS AS, Norway", "Nyree Taylor, Ocean Informatics, Australia", "Marianne Thorbjørnsen, Oslo Universitetssykehus, Norway", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ingrid Vange, Helse Bergen, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
+	lifecycle_state = <"in_development">
+	other_contributors = <"Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Grant Forrest, Lunaria Ltd, United Kingdom", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Evelyn Hovenga, EJSH Consulting, Australia", "Morten Hørthe, DIPS, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Svenne Naumann, Finnmarkssykehuset, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Terje Sagmyr, DIPS AS, Norway", "Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Arild Stangeland, Helse Bergen, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "June Susanne Berge, DIPS AS, Norway", "Nyree Taylor, Ocean Informatics, Australia", "Marianne Thorbjørnsen, Oslo Universitetssykehus, Norway", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ingrid Vange, Helse Bergen, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -115,9 +115,9 @@ National Early Warning Score (NEWS) 2. Pasientsikkerhetsprogrammet [cited 2019.0
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5892AB5EFA99293E4DAEC7080378135A">
-		["build_uid"] = <"46cd93b6-a2f2-4652-8354-bbcb6e3dff73">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"461FD729C827F90D35BBFD19C904BAF8">
+		["build_uid"] = <"d6fa5596-e9ac-4104-8b82-e8333a8bc0cf">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
