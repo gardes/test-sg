@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=6c71c063-311c-36bc-a5f6-c5e9821588eb)
-	openEHR-EHR-SECTION.problems_and_diagnoses.v0
+﻿archetype (adl_version=1.4; uid=1f22cbcd-d9d7-4963-8df8-7e97e1e746da)
+	openEHR-EHR-SECTION.problems_and_diagnoses.v1
 
 concept
 	[at0000]	-- Problems and diagnoses
@@ -21,7 +21,7 @@ description
 			copyright = <"© Clinical Models UK, Apperta Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -29,9 +29,9 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"42078740689ACF332EBC7B3DA5D98BC0">
-		["build_uid"] = <"f70be938-e8f4-4f65-a359-98df582ea47e">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"E627C5D0C2754B6AF0ABB209A97AA9B5">
+		["build_uid"] = <"a473229f-a018-4832-9838-ade0c5cbc7ce">
+		["revision"] = <"1.0.0">
 	>
 
 definition
