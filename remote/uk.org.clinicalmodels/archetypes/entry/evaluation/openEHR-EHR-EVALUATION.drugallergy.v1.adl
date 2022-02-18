@@ -23,12 +23,12 @@ description
 		>
 	>
 	lifecycle_state = <"Initial">
-	other_contributors = <"Leo Fogarty, GP2GP project, NHS England", "John Williams, GP2GP project, NHS England">
+	other_contributors = <"Leo Fogarty, GP2GP project, NHS England", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "John Williams, GP2GP project, NHS England">
 	other_details = <
 		["references"] = <"NHS Scotland SCI-XML schema http://www.sci.scot.nhs.uk/products/gateway/gate_down_xml.htm
 
 DoH, UK  NHS Message Implementation Guidance, http://www.uktcregistration.nss.cfh.nhs.uk/trud3/user/guest/group/0/pack/23;jsessionid=D52317DAD88F60096DFF3113BA604F1A">
-		["MD5-CAM-1.0.1"] = <"FBD57278DBCC612BF8FF04A47B972710">
+		["MD5-CAM-1.0.1"] = <"536CE0259E429B7C972C0346E2AB0484">
 	>
 
 definition
@@ -39,7 +39,7 @@ definition
 					ELEMENT[at0002] matches {	-- Causative agent
 						value matches {
 							DV_CODED_TEXT matches {
-								defining_code matches {[ac0002]}		-- CausativeAgent
+								defining_code matches {[ac0002]}		-- Causative Agent
 							}
 						}
 					}
@@ -124,7 +124,13 @@ Drug Group (SNOMED-CT),
 dm+d VMP/AMP (dm+d), 
 Ingredient (SNOMED-CT),
  TradeFamily/TradeFamilyGroup (SNOMED-CT).
-It is MANDATORY that one and only one of these must always be selected. Optionally, in addition a SNOMED AllergyCode may be sent as a mapping, but can never be sent on its own.
+
+
+ 
+
+It is MANDATORY that one and only one of these must always be selected. 
+Optionally in addition a SNOMED AllergyCode may be sent as a mapping, but can never be sent on its own.
+
 For legacy use other codes are permissible such as FDB Agent codes, EMIS Drug codes and READ codes.">
 				>
 				["at0003"] = <
@@ -209,7 +215,7 @@ For legacy use other codes are permissible such as FDB Agent codes, EMIS Drug co
 					description = <"Any SNOMED-CT term in the Clinical Finding hierarchy.">
 				>
 				["ac0002"] = <
-					text = <"CausativeAgent">
+					text = <"Causative Agent">
 					description = <"A causative agent term from one of the approved terminology subsets.">
 				>
 			>
@@ -239,7 +245,7 @@ For legacy use other codes are permissible such as FDB Agent codes, EMIS Drug co
 	constraint_bindings = <
 		["DM+D"] = <
 			items = <
-				["ac0002"] = <terminology:DM%2BD?subset=VMP%2FAMP>
+				["ac0002"] = <terminology:DM%2BD?subset=AMP%2FVMP%20>
 			>
 		>
 		["READ"] = <
