@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=bed2270b-d334-4636-a297-49ed55df3b71)
-	openEHR-EHR-ADMIN_ENTRY.arrival.v0
+﻿archetype (adl_version=1.4; uid=ce757a50-106d-46d4-945d-bba28ac8977a)
+	openEHR-EHR-ADMIN_ENTRY.arrival.v1
 
 concept
 	[at0000]	-- Arrival
@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"MOHW team Jamaica", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -29,9 +29,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9556B9AE41DB64676874A0C2386FE56A">
-		["build_uid"] = <"aa60b68d-9474-426b-8b52-ee6e95118141">
-		["revision"] = <"0.0.2-alpha">
+		["MD5-CAM-1.0.1"] = <"D0EBBBE13D01539A2B6AC2D3E6BA9D14">
+		["build_uid"] = <"0c7f45f1-65e4-4b76-8ff7-791b2222a1d5">
+		["revision"] = <"1.0.0">
 	>
 
 definition
