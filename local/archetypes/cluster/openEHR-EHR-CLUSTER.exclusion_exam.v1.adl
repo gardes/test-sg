@@ -60,7 +60,7 @@ Not to be used to record the exclusion or absence of adverse reactions, family h
 			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjoern Arntzen, Oslo university hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, National ICT Norway, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -70,8 +70,8 @@ Not to be used to record the exclusion or absence of adverse reactions, family h
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"2DCECCDEA74C4AD5B9B0F6087F57BE61">
-		["build_uid"] = <"9ebf8286-e78c-40e5-bb9f-01b54114b662">
-		["revision"] = <"1.1.1">
+		["build_uid"] = <"2edd78b8-339b-462e-9952-61ef13ac645e">
+		["revision"] = <"1.1.2-alpha">
 	>
 
 definition
