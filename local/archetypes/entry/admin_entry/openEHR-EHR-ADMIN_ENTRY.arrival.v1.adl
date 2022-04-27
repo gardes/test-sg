@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"MOHW team Jamaica", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -30,8 +30,8 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"D0EBBBE13D01539A2B6AC2D3E6BA9D14">
-		["build_uid"] = <"0c7f45f1-65e4-4b76-8ff7-791b2222a1d5">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"9952403f-a62f-46a4-945e-8adabc328bd2">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
