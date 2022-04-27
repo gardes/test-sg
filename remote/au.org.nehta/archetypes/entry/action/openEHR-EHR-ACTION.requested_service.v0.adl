@@ -1,0 +1,424 @@
+﻿archetype (adl_version=1.4; uid=caeac886-c958-409e-9376-43181080ab6d)
+	openEHR-EHR-ACTION.requested_service.v0
+
+concept
+	[at0000]	-- Requested Service
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["date"] = <"2010-01-22">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To describe services requested for, or provided to, the subject.">
+			use = <"Use to record a group of one or more services that are to be provided in the future (e.g. referral) or a group of services that have already been provided. All services would have the same value for other data elements such as Service Category and Service Booking Status.
+
+Use when the initiating provider knows precisely what is required by the service and when the requesting provider has and wishes to exercise the authority (and expertise) to decide exactly what action will be done. For example, an aged care patient might need to have meals on wheels arranged as well as assistance with house cleaning. In this scenario, it would be expected that values would be provided for both Service Category and Service Description. Other data elements may not be relevant in this scenario, such as Request Validity Period.
+
+Use when the initiating provider defers to the expertise of the referred-to provider. This is used when the initiating provider is seeking another provider or organisation to use their own expertise or authority to determine the specific action to take, for example, when referring to an orthopaedic surgeon for management of advanced knee osteoarthritis. The referral requests an assessment by the surgeon and any consequential management that the surgeon determines. The referrer may query whether a total knee replacement is required, but that decision is left to the surgeon. In this scenario, it would be expected that values would only optionally need to be provided for Service Description. Other data elements would likely be included in such a request, such as Request Validity Period.
+
+Use in relation to services that have already occurred where it can be recorded that an individual is having or has had a number of services. In this scenario, certain data elements may not be necessary, such as some of the details about the original referral that instigated the service (or services). For example, Request Urgency and Request Validity Period.">
+			keywords = <"Arranged Service", ...>
+			misuse = <"Not to be used to specify medication prescriptions.">
+			copyright = <"© Australian Digital Health Agency">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Eric Browne, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "Eleanor Royle, NEHTA, Australia", "Ning Pan, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Don Stewart, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Australian Digital Health Agency">
+		["current_contact"] = <"help@digitalhealth.gov.au">
+		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
+		["original_namespace"] = <"au.org.nehta">
+		["original_publisher"] = <"NEHTA, Australia">
+		["custodian_namespace"] = <"tbd">
+		["source_model_name"] = <"Requested Service (Action)">
+		["MD5-CAM-1.0.1"] = <"D9F711C49737DDA85EE51B977D58D2D7">
+		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Requested Service
+		description matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Reason for Service
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- Reason for Service Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Service Category
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Service Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Intent of Request
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Request Urgency
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0003]}		-- Request Urgency Values
+							}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Request Urgency Notes
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- DateTime Service Scheduled
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Service Commencement Window
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME> matches {
+								upper matches {
+									DV_DATE_TIME matches {*}
+								}
+								lower matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0008] matches {	-- Service Booking Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0001]}		-- Service Booking Status Values
+							}
+						}
+					}
+					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Service Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Supplementary Information to Follow
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Supplementary Information Expected
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..*} matches {	-- Subject of Care Instruction Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0022] occurrences matches {0..1} matches {	-- Reporter
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation(-[a-zA-Z0-9_]+)*\.v0/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype CLUSTER[at0014] occurrences matches {0..1} matches {	-- Service Requester
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation(-[a-zA-Z0-9_]+)*\.v0/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0015] occurrences matches {0..1} matches {	-- Service Provider
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation(-[a-zA-Z0-9_]+)*\.v0/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {	-- Request Validity Period
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME> matches {
+								upper matches {
+									DV_DATE_TIME matches {*}
+								}
+								lower matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							DV_DURATION matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Request Identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+ontology
+	terminologies_available = <"NCTIS-OID", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Requested Service">
+					description = <"Details of services requested for, or provided to, the subject.">
+					detail_docref = <"data_groups/NEHTA-20158-Requested_Service-Data_Group.xml">
+					spec_id = <"51">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Reason for Service">
+					description = <"Reason for the services being requested or provided.">
+					comment = <"It is preferred that this item be coded from the Reason for Service Values Value Domain.
+
+
+Used to communicate information about the reason for services; for example, reason for requesting admission if the subject was referred to the organisation, or for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility.
+In a discharge summary, this data component captures information about reasons for requesting services (by the healthcare provider) to be provided to the subject after discharge from the healthcare facility.
+
+Examples: 
+  1. To rule out ischaemic heart disease.
+  2. To rule out organic brain lesions.">
+					detail_docref = <"data_elements/NEHTA-20172-Reason_for_Service-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Reason for Service Values">
+					value_domain_dc_id = <"16010">
+				>
+				["at0003"] = <
+					text = <"Service Description">
+					description = <"Description of the services requested or provided.">
+					comment = <"It is preferred that this item be coded from the Requested Service Description Values Value Domain.
+
+Used to identify clinical services (e.g. diagnostic procedures, clinical procedures and clinical management) and non-clinical services (e.g. community care services).
+In a service request where more than one instance of this data element is supplied, Service Category is also to be supplied.
+
+Examples: 
+  1. Dialysis
+  2. Adjustment of heart failure/hypertensive medications
+  3. Adjust INR to therapeutic range
+  4. Elective orthopaedic surgery for TKR">
+					detail_docref = <"data_elements/NEHTA-20117-Service_Description-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Requested Service Description Values">
+					value_domain_dc_id = <"20117">
+				>
+				["at0004"] = <
+					text = <"Intent of Request">
+					description = <"The purpose for which the referrer made the request.">
+					comment = <"Description of what the service requester is hoping to achieve through this request; for example, referral to a specialist with the intent of full transfer of care of the subject, palliation vs curative management, etc.">
+					detail_docref = <"data_elements/NEHTA-16126-Intent_of_Request-Data_Element.xml">
+				>
+				["at0005"] = <
+					text = <"Request Urgency">
+					description = <"Assessment of the criticality of a rapid response.">
+					comment = <"Used in the service request scenario.
+
+Only include this data element to identify urgent requests. The absence of data in this data element cannot be assumed to mean that the request is not urgent or that the request is routine.">
+					detail_docref = <"data_elements/NEHTA-16128-Request_Urgency-Data_Element.xml">
+				>
+				["at0006"] = <
+					text = <"DateTime Service Scheduled">
+					description = <"Date, and optionally time, at which the arranged services are scheduled to be provided.">
+					comment = <"This data element is used to record the date, and optionally time, on which the service is actually performed or scheduled to be performed, depending on the value of Service Booking Status data element.
+For a request to supply a service, if the service provision has not been confirmed, the service date may be omitted.
+For supply of a service, this is the date, and optionally time, of completion of supply, and will have the same value as Requested Service DateTime data element.">
+					detail_docref = <"data_elements/NEHTA-16054-DateTime_Service_Scheduled-Data_Element.xml">
+				>
+				["at0007"] = <
+					text = <"Service Commencement Window">
+					description = <"The period of time during which it would be ideal for the subject to be seen, in the opinion of the requester.">
+					comment = <"Specifies the range of time within which the requesting provider is expecting the arranged service to be provided to the subject. It can be used as a means of conveying objective urgency.">
+					detail_docref = <"data_elements/NEHTA-20173-Service_Commencement_Window-Data_Element.xml">
+				>
+				["at0008"] = <
+					text = <"Service Booking Status">
+					description = <"Indication of the status of the requested or provided services.">
+					comment = <"Provides the meaning for the date recorded in Requested Service DateTime data element; for example, whether it is the date that the service is first requested, the date that the booking was made, or the date that the service was supplied.
+For a service request (request for a service to be provided in the future), it is expected that a status value \"EVN\" would not be used for this data element.">
+					detail_docref = <"data_elements/NEHTA-16056-Service_Booking_Status-Data_Element.xml">
+				>
+				["at0009"] = <
+					text = <"Supplementary Information to Follow">
+					description = <"Whether any further information will be sent in support of this request.">
+					comment = <"Used in service request scenario only.
+
+True indicates that additional information has been identified and will be forwarded when available e.g. incomplete pathology test results.">
+					detail_docref = <"data_elements/NEHTA-16129-Supplementary_Information_to_Follow-Data_Element.xml">
+				>
+				["at0010"] = <
+					text = <"Supplementary Information Expected">
+					description = <"Details of the nature of supplementary information that is to follow.">
+					comment = <"Examples: 
+  1. X-ray image of left ankle.">
+					detail_docref = <"data_elements/NEHTA-16130-Supplementary_Information_Expected-Data_Element.xml">
+				>
+				["at0011"] = <
+					text = <"Subject of Care Instruction Description">
+					description = <"Instructions, advice or information that has been given to the subject from a care provider in relation to the requested services.">
+					comment = <"Used in service request scenario only. In the context of referral, the information includes instructions about clinical procedures requested for the subject.
+
+Examples: 
+  1. Bring post-op instruction materials and any old private x-rays.">
+					detail_docref = <"data_elements/NEHTA-10146-Subject_of_Care_Instruction_Description-Data_Element.xml">
+				>
+				["at0012"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Service Requester">
+					description = <"Party that arranges provision of a service.">
+					detail_docref = <"data_groups/NEHTA-10296-Service_Requester-Data_Group.xml">
+					spec_id = <"28">
+				>
+				["at0015"] = <
+					text = <"Service Provider">
+					description = <"The provider (individual or organisation) that has been arranged to provide the service.">
+					comment = <"A service request would normally be sent to an authorised healthcare provider, but could go directly to a carer or to a representative of an organisation to provide services, other than those normally deemed to be healthcare services, such as a Child Protection Agency, Police, etc.
+
+
+In the context of service request, this is the provider to whom the original request is initially made, or the provider that is booked to provide the service. In the context of service provision, this is the provider that supplied the service.">
+					detail_docref = <"data_groups/NEHTA-10296-Service_Provider-Data_Group.xml">
+					spec_id = <"28">
+				>
+				["at0016"] = <
+					text = <"Request Validity Period">
+					description = <"The period during which the request is valid.">
+					comment = <"This data element is only applicable in the service request scenario.
+
+This may be open ended. In the context of referral this data element captures the valid duration of the referral that may be constrained by, for example, Medicare funding policy.">
+					detail_docref = <"data_elements/NEHTA-16132-Request_Validity_Period-Data_Element.xml">
+				>
+				["at0017"] = <
+					text = <"Request Identifier">
+					description = <"Identifier of the Requested Service instruction that initiated this Requested Service action.">
+					fsn = <"Instruction Identifier">
+					detail_docref = <"data_elements/NEHTA-16995-Instruction_Identifier-Data_Element.xml">
+				>
+				["at0019"] = <
+					text = <"Service Category">
+					description = <"Specialty of the services requested or provided.">
+					comment = <"It is preferred that this item be coded from the Requested Service Category Values Value Domain.
+
+In the context of referral (GP to a specialist), this information is often inferred and does not to be explicitly stated.
+
+Examples: 
+  1. Gynaecology
+  2. Paediatric Cardiology
+  3. Podiatry
+  4. Disability supported accommodation">
+					detail_docref = <"data_elements/NEHTA-17021-Service_Category-Data_Element.xml">
+					coding_preferred = <"true">
+					value_domain_name = <"Requested Service Category Values">
+					value_domain_dc_id = <"17017">
+				>
+				["at0021"] = <
+					text = <"Request Urgency Notes">
+					description = <"Narrative about the request urgency that is not captured in other fields.">
+					comment = <"This data element is used to explain the reason for an urgent request.
+Examples: 
+  1. This is urgent because the patient has had sudden onset of severe headache, with minor neurological impairment and is at risk of quick deterioration.
+  2. The patient’s full-time carer has suddenly fallen ill and is unable to provide needed assistance for activities of daily living.">
+					detail_docref = <"data_elements/NEHTA-17022-Request_Urgency_Notes-Data_Element.xml">
+				>
+				["at0022"] = <
+					text = <"Reporter">
+					description = <"Party who reports the information in this service request.">
+					comment = <"Only used when the recorder needs to make it explicit. Otherwise, it is assumed to be the author of the enclosing structured document.">
+					detail_docref = <"data_groups/NEHTA-10296-Reporter-Data_Group.xml">
+					spec_id = <"28">
+				>
+				["at0023"] = <
+					text = <"Reason for Service Description">
+					description = <"Narrative about the reason for the services being requested or provided.">
+					comment = <"Used to communicate to the referee information about the reasons for the referral, which may include information about the problems or issues experienced by the subject of care as identified by the referrer, clinical presentation, etc.
+
+This data element is used when there is no coded information available in Reason for Service, or to provide additional information that the code cannot provide. In the referral scenario, it complements the structured information contained in the referral specification. The content in this data element may vary from a single line in simple cases to many paragraphs for more complex circumstances.
+
+Examples: 
+  1. Thank you for seeing this 14-year-old schoolboy who fell whilst playing football at school yesterday. On examination he has a swollen painful R ankle and cannot weight bear on it today. I suspect he has a fracture of his right tibia and fibula.
+  2. Thank you for seeing this 43-year-old lady who has had 2 episodes of cholecystitis in the last month. She is currently well. Ultrasound of her abdomen done at the Public Hospital Emergency Department shows she has gall stones. She has private cover and wishes to see you to consider cholecystectomy at the Private Hospital.
+  3. Thank you for seeing this 88 year old recently widowed woman. She was previously dependant upon her husband for help around the house for activities such as the heavy cleaning of the house and assistance with driving and shopping. Please arrange assistance for house cleaning and transportation to the local shops once a week.">
+					detail_docref = <"data_elements/NEHTA-17030-Reason_for_Service_Description-Data_Element.xml">
+				>
+				["at0024"] = <
+					text = <"Service Comment">
+					description = <"Additional narrative about the services that is not captured in other fields.">
+					detail_docref = <"data_elements/NEHTA-17035-Service_Comment-Data_Element.xml">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Service Booking Status Values">
+					description = <"Set of values that indicate the status of the requested or provided services.">
+					detail_docref = <"value_domains/NEHTA-16055-Service_Booking_Status_Values-Value_Domain.xml">
+					dc_id = <"16055">
+				>
+				["ac0003"] = <
+					text = <"Request Urgency Values">
+					description = <"Set of values to describe the urgency of a request.">
+					detail_docref = <"value_domains/NEHTA-16127-Request_Urgency_Values-Value_Domain.xml">
+					dc_id = <"16127">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["NCTIS-OID"] = <
+			items = <
+				["at0000"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.20158]>
+				["at0002"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.20172]>
+				["at0003"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.20117]>
+				["at0004"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16126]>
+				["at0005"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16128]>
+				["at0006"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16054]>
+				["at0007"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.20173]>
+				["at0008"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16056]>
+				["at0009"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16129]>
+				["at0010"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16130]>
+				["at0011"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.10146]>
+				["at0014"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.10296.51.2]>
+				["at0015"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.10296.51.3]>
+				["at0016"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16132]>
+				["at0017"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16995]>
+				["at0019"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.17021]>
+				["at0021"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.17022]>
+				["at0022"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.10296.51.1]>
+				["at0023"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.17030]>
+				["at0024"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.17035]>
+			>
+		>
+	>
