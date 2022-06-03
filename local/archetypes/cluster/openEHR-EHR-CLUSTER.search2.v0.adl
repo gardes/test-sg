@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=693773bf-e4f7-447f-986d-74ba662d1e12)
+	openEHR-EHR-CLUSTER.search2.v0
+
+concept
+	[at0000]	-- Search2
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Nauman">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"No purpose.">
+			use = <"This archetype is for testing search function as per CKM-346. Testing should place this archetype higher than search1.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"CDDA4AA40F679B10B0F4F2F991AA6A52">
+		["build_uid"] = <"6e7424ed-4221-4d9c-8a24-036f6d2cb842">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Search2">
+					description = <".">
+				>
+			>
+		>
+	>

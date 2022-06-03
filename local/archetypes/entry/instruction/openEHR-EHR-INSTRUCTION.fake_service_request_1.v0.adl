@@ -1,0 +1,252 @@
+﻿archetype (adl_version=1.4; uid=fa9436eb-7044-43ac-afc3-b48ca284b109)
+	openEHR-EHR-INSTRUCTION.fake_service_request_1.v0
+
+concept
+	[at0000]	-- Fake service request 1
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"to test order items">
+			use = <"for testing only">
+			misuse = <"to be used in anything other than testing">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B8E8176CD729886D87683AAEB1C93489">
+		["build_uid"] = <"1f78e25c-85c0-475b-811c-9572a4f3b18a">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {	-- Fake service request 1
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {	-- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] occurrences matches {0..1} matches {	-- Service name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- Service type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Reason for request
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Reason description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Intent
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Priority
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0010, 	-- STAT
+											at0011]	-- Routine
+										}
+									}
+								}
+							}
+							ELEMENT[at0014] occurrences matches {0..1} matches {	-- Service due
+								value matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddTHH:MM:SS}
+									}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Service period start
+								value matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddTHH:MM:SS}
+									}
+								}
+							}
+							allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {	-- Specific Details
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0016] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Requestor Identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Requestor
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Receiver identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0021] occurrences matches {0..*} matches {	-- Receiver
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Request status
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {	-- Distribution list for response
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fake service request 1">
+					description = <"for testing only">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"Current Activity">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Service name">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Service type">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Description">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Reason for request">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Reason description">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Intent">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Priority">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"STAT">
+					description = <"to be completed immediately">
+				>
+				["at0011"] = <
+					text = <"Routine">
+					description = <"to be complete with next rounds or batch">
+				>
+				["at0012"] = <
+					text = <"Specific Details">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Service due">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Service period start">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Requestor Identifier">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Requestor">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Receiver identifier">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Receiver">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Request status">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Distribution list for response">
+					description = <"*">
+				>
+			>
+		>
+	>

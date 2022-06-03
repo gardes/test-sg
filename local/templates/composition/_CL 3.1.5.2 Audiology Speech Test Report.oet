@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>0a77a1c8-daa9-4719-93bd-393da8c96631</id>
+  <name>*CL 3.1.5.2 Audiology Speech Test Report</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>To record the findings of an audiology speech test</purpose>
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometric_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0055]/items[at0065]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>If the degree of loss is None, then this data element is not applicable.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiometric_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0140]/items[at0147]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Further text description of the 'Reason for No Result' can be captured in the 'Comment' data element.</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-OBSERVATION.audiology_speech_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>1.3.5.2-1</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1" concept_name="Result Report" name="Audiology Speech Test Report">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.audiology_speech_test_result.v1" concept_name="Audiology speech test result" path="/content">
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+        <constraint xsi:type="textConstraint" limitToList="false">
+          <includedValues>AB Word List</includedValues>
+          <includedValues>Kendall Toy Test</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0010]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0017]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0021]" name="Summary" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0022]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0023]/items[at0033]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0023]/items[at0024]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0023]/items[at0102]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0087]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0052]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0091]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0090]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0054]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0057]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0093]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0100]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0060]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0064]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0068]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0069]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0070]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0092]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0040]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0083]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0045]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0036]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0039]" max="0" />
+      <Rule path="/protocol[at0032]/items[at0046]" max="0" />
+    </Content>
+    <Context>
+      <Rule path="/context/other_context[at0001]/items[at0002]" max="0" />
+      <Rule path="/context/other_context[at0001]/items[at0005]" max="0" />
+    </Context>
+  </definition>
+  <view>
+    <constraints path="[openEHR-EHR-COMPOSITION.report-result.v1]/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='Plan']/items[openEHR-EHR-INSTRUCTION.request.v1 and name/value='Follow up Audiology Appointment']/activities[at0001]/timing">
+      <items id="VisibleInView">
+        <value>timing</value>
+      </items>
+    </constraints>
+  </view>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report-result.v1">
+    <digest id="MD5-CAM-1.0.1">FBD1709FCBDACC5A2D20E339DE4B13E7</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.audiology_speech_test_result.v1">
+    <digest id="MD5-CAM-1.0.1">28D180F0CBE24A7ADB3F77932EF52DCC</digest>
+  </integrity_checks>
+</template>

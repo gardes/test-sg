@@ -1,0 +1,114 @@
+﻿archetype (adl_version=1.4; uid=021618c3-3962-4f15-b1f2-9c145b6c67da)
+	openEHR-EHR-EVALUATION.animal.v0
+
+concept
+	[at0000]	-- Animal
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"ckm.test">
+		["organisation"] = <"Ocean Health Systems">
+		["email"] = <"informatics@oceaninformatics.com">
+		["date"] = <"2019-12-13">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The purpose of this archetype is to test a new animal ID">
+			use = <"dd">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"sddfd", ...>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"dd">
+		["current_contact"] = <"ckm test">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"5ADCE346E1C53FE2019F06C62F4BCA78">
+		["build_uid"] = <"35a25c6e-5041-44ba-9bcd-b60eefb02635">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Animal
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Fur
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Feathers
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Scales
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Legs
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- count
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Animal">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"count">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Legs">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Fur">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Feathers">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Scales">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"New cluster">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>00013a12-3762-493f-adff-b86427b54c38</id>
+  <name>Borg Score Annotated</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>Testing</purpose>
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-OBSERVATION.borgscore.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+    <items>
+      <item>
+        <key>Goals of Care.Administration Instructions</key>
+        <value>This is an annotated instruction</value>
+      </item>
+    </items>
+  </annotations>
+  <annotations path="[openEHR-EHR-OBSERVATION.borgscore.v2]/data[at0001]/events[at0002]">
+    <items>
+      <item>
+        <key>Goals of Care.Clinical Decision Support</key>
+        <value>More Annotations</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.borgscore.v2" concept_name="Modified Borg Score">
+    <Rule path="/data[at0001]/events[at0002]" name="Some event" />
+    <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" name="Modified Borg Scale Annotated" />
+    <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0015]" min="1" name="Total Score" />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.borgscore.v2">
+    <digest id="MD5-CAM-1.0.1">2AA3A2698F2070634BE261A0D70BFDD9</digest>
+  </integrity_checks>
+</template>
