@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			author = <
@@ -23,6 +31,24 @@ description
 		["date"] = <"2011-07-15">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"test">
+			use = <"*Use to record details about actual consumption of alcohol and associated behaviour at a specified point in time or over an identified period of time.
+
+An alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.
+
+A record of average alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.
+
+Data that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_consumption_summary archetype (recording the summary and persisting data).
+
+Binge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.(en)">
+			misuse = <"*Not to be used for recording persistent, summary details about typical patterns of alcohol drinking. Use the EVALUATION.alcohol_consumption_summary archetype for this purpose.
+
+Not to be used to record an assessment about alcohol dependence. Use specific archetypes for this purpose, for example the AUDIT assessment - openEHR-EHR-OBSERVATION.alcohol_audit.
+
+Not to be used to record information about consumption of other substances other than alcohol.(en)">
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para gravar detalhes sobre o consumo real de álcool em um determinado período.">
@@ -75,8 +101,8 @@ Not to be used to record information about consumption of other substances other
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CD838D55CFC3EDBB32A50299B32ED4F8">
-		["build_uid"] = <"14ee251a-7353-47ab-995e-a951f2131142">
+		["MD5-CAM-1.0.1"] = <"6CB7572B69EFF6D2E11A75B44E448796">
+		["build_uid"] = <"0da8e21c-ba39-47d4-a4c6-7226f3adef52">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -483,6 +509,122 @@ ontology
 				["at0038"] = <
 					text = <"Doses padrão consumidas">
 					description = <"Número de doses padrão consumidas para este tipo de álcool.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Alcohol intake(en)">
+					description = <"*Actual intake or consumption of alcohol.(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Per type(en)">
+					description = <"*Details about consumption of a specified type of alcoholic beverage.(en)">
+				>
+				["at0006"] = <
+					text = <"*Specific type(en)">
+					description = <"*Specific type of alcohol consumed, if required.(en)">
+				>
+				["at0014"] = <
+					text = <"*Standard drinks consumed(en)">
+					description = <"*Number of standard drinks of this type of alcohol consumed.(en)">
+				>
+				["at0016"] = <
+					text = <"*Grams consumed(en)">
+					description = <"*Grams of alcohol consumed.(en)">
+				>
+				["at0017"] = <
+					text = <"*Triggers(en)">
+					description = <"*Narrative description about triggers which may increase consumption of this form of alcohol.(en)">
+				>
+				["at0018"] = <
+					text = <"*Context(en)">
+					description = <"*Narrative description about the social or cultural context in which this form of alcohol is consumed.(en)">
+				>
+				["at0019"] = <
+					text = <"*Evidence of dependence(en)">
+					description = <"*Narrative description about any behavioural issues that may indicate alcohol abuse or dependence.(en)">
+				>
+				["at0021"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the individual's consumption of alcohol, not captured in other fields.(en)">
+				>
+				["at0022"] = <
+					text = <"*Average intake(en)">
+					description = <"*Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.(en)">
+				>
+				["at0023"] = <
+					text = <"*Specified day(en)">
+					description = <"*Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.(en)">
+				>
+				["at0024"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0025"] = <
+					text = <"*Standard drink definition(en)">
+					description = <"*Amount of alcohol defining a standard drink.(en)">
+				>
+				["at0027"] = <
+					text = <"*Readiness for change(en)">
+					description = <"*Details about readiness to change consumption of alcohol.(en)">
+				>
+				["at0028"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+				>
+				["at0029"] = <
+					text = <"*Beer(en)">
+					description = <"*Fermented beverage made from grain mash.(en)">
+				>
+				["at0030"] = <
+					text = <"*Wine(en)">
+					description = <"*Fermented beverage made from grapes and sometimes other fruits.(en)">
+				>
+				["at0031"] = <
+					text = <"*Cider(en)">
+					description = <"*Fermented beverage made from any fruit juice.(en)">
+				>
+				["at0032"] = <
+					text = <"*Mead(en)">
+					description = <"*Fermented beverage made from honey, sometimes with various fruits spices, grains or hops.(en)">
+				>
+				["at0033"] = <
+					text = <"*Pulque(en)">
+					description = <"*Fermented beverage made from 'honey water\" of cacti.(en)">
+				>
+				["at0034"] = <
+					text = <"*Spirits(en)">
+					description = <"*Fermented beverage made by a distillation process. Usually has an alcohol content >20%. Includes liquers, cocktails and rectified spirits.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fortified wine(en)">
+					description = <"*Wine with added spirits.(en)">
+				>
+				["at0036"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the consumption of the type of alcohol.(en)">
+				>
+				["at0037"] = <
+					text = <"*Overall description(en)">
+					description = <"*Narrative description about the consumption of the all types of alcohol.(en)">
+				>
+				["at0038"] = <
+					text = <"*Standard drinks consumed(en)">
+					description = <"*Number of standard drinks of all alcohol consumed.(en)">
 				>
 			>
 		>
