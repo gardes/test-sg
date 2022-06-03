@@ -27,7 +27,7 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <>
+	other_contributors = <"Sebastian Garde, Ocean Informaticsw, Germany (DEV Editor)", "ckm tester, Ocean Health, Australia (DEV Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"Ocean Informatics">
@@ -35,8 +35,8 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F5E7D64BFB84798E0FB3E568C4AC7E4A">
-		["build_uid"] = <"83bdcc41-5066-407f-91d3-ce6a39a57878">
+		["MD5-CAM-1.0.1"] = <"AA30D373CC43D38E1A03658233F5B142">
+		["build_uid"] = <"569489c0-0658-4366-b2d2-4e55aea90d8c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
