@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=3ac3a8b9-4813-44f4-84ab-c36d9b50f4a4)
 	openEHR-EHR-EVALUATION.cpr_decision_uk.v1
 
 concept
@@ -26,9 +26,11 @@ Some patients with capacity to make their own decision may refuse attempted card
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Information Standards Board ISB Data Dictionary Available at http://www.datadictionary.nhs.uk/
 
 End of Life Care Co-ordination: Core Content Standard Specification Available at http://www.isb.nhs.uk/documents/isb-1580/amd-29-2012/index_html
@@ -36,7 +38,12 @@ End of Life Care Co-ordination: Core Content Standard Specification Available at
 NHS Scotland Key Information Summary
 
 Leeds ePaccs team">
-		["MD5-CAM-1.0.1"] = <"8D92CCAE32C4F81A7A1D1D71D2B4261F">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"3E2432FCE7F751699AAAE28FB725DF44">
+		["build_uid"] = <"ff8997b7-6bf2-4f5e-b6d6-070c49f8c8c5">
+		["revision"] = <"1.0.0">
 	>
 
 definition

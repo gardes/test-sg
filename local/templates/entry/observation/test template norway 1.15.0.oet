@@ -77,6 +77,6 @@ Donec eu augue aliquet, elementum tellus id, efficitur mauris. Proin in laoreet 
         archetype_id="openEHR-EHR-OBSERVATION.medication_use.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">540341CC7B2D35054B5B7E142F0FB4E3</digest>
+        <digest id="MD5-CAM-1.0.1">5F6EC6FC51AE0A35DACB06FA6F99E075</digest>
     </integrity_checks>
 </template>

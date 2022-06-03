@@ -5,27 +5,11 @@ concept
 	[at0000]	-- Aaaa
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			author = <
-				["name"] = <"Sebastian Garde">
-				["organisation"] = <"Ocean Informaticsw">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -43,8 +27,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"66A17813610608AE8C5517E4B5EEA929">
-		["build_uid"] = <"1273ae6b-b219-4c79-a9ed-3129f39e196c">
+		["MD5-CAM-1.0.1"] = <"213C41815DED6D7287DCB85DAD0E549A">
+		["build_uid"] = <"345c9274-90f0-488b-bb57-0c9395d14d5b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -81,7 +65,6 @@ definition
 	}
 
 
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -95,11 +78,11 @@ ontology
 					description = <"*">
 				>
 				["at0002"] = <
-					text = <"New element2 with EMPTY description">
-					description = <"">
+					text = <"New element2">
+					description = <"*">
 				>
 				["at0003"] = <
-					text = <"new quantity goes in here">
+					text = <"new quanitty goes in here">
 					description = <"*">
 				>
 				["at0004"] = <
@@ -108,34 +91,6 @@ ontology
 				>
 				["at0005"] = <
 					text = <"New cluster">
-					description = <"*">
-				>
-			>
-		>
-		["de"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Aaaa(en)">
-					description = <"*unknown(en)">
-				>
-				["at0001"] = <
-					text = <"Neues EL">
-					description = <"TEST">
-				>
-				["at0002"] = <
-					text = <"fedrf">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"*new quantity goes in here(en)">
-					description = <"*">
-				>
-				["at0004"] = <
-					text = <"*New element(en)">
-					description = <"*">
-				>
-				["at0005"] = <
-					text = <"*New cluster(en)">
 					description = <"*">
 				>
 			>

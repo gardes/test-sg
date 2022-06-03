@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=4d6fa1b5-d45c-4c4d-83fc-84d79091ed28)
 	openEHR-EHR-CLUSTER.tnm_staging_7th.v1
 
 concept
@@ -19,14 +19,21 @@ description
 			use = <"May be specialised or template-constrained for each particular tumour. e.g. TNM classification for bronchial carcinoma">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis">
 			misuse = <"Should not normally be used for TNM classification without specialisation or template-constraints">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
-		["MD5-CAM-1.0.1"] = <"DDDA3560727BB4E2A3373FACF8F9C61B">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"13187AFF59EDE0A9D5B3FE90E2A04EDA">
+		["build_uid"] = <"2d8b6acd-69af-44bd-87a2-d56289b76526">
+		["revision"] = <"1.0.0">
 	>
 
 definition
