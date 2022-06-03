@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=f3ddb6dd-5bfc-4851-a20a-c8b4ce019162)
-	openEHR-EHR-OBSERVATION.alcohol_intake.v0
+﻿archetype (adl_version=1.4; uid=032c7b78-d68b-4a89-b312-6e6aeba10d3d)
+	openEHR-EHR-OBSERVATION.alcohol_intake.v1
 
 concept
 	[at0000]	-- Alcohol intake
@@ -91,7 +91,7 @@ Not to be used to record information about consumption of other substances other
 			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Tim Garden, NTG Department of Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -101,9 +101,9 @@ Not to be used to record information about consumption of other substances other
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6CB7572B69EFF6D2E11A75B44E448796">
-		["build_uid"] = <"0da8e21c-ba39-47d4-a4c6-7226f3adef52">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"7344B7B4784CD06062081AFD993FC39E">
+		["build_uid"] = <"4c3489b2-6b79-4cac-a531-6603d3a43a26">
+		["revision"] = <"1.0.0">
 	>
 
 definition
