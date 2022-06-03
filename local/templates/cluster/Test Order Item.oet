@@ -1,13 +1,22 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
-  <id>94da9ee2-62b6-4c6e-ab96-3f36b8c61148</id>
-  <name>Default Test</name>
+  <id>51ec3e49-eeb2-43b4-b8ff-73c0b7450000</id>
+  <name>Test Order Item</name>
   <description>
+    <original_author>
+      <item>
+        <key>name</key>
+      </item>
+    </original_author>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose />
-      <use />
-      <misuse />
+      <purpose>To test order items</purpose>
+      <keywords>
+        <item>test1</item>
+        <item>test2</item>
+      </keywords>
+      <use>Use to demo.</use>
+      <misuse>To for anthing else apart from testing.</misuse>
     </details>
     <other_details>
       <item>
@@ -60,23 +69,20 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.defaulttest.v0" concept_name="Defaulttest">
-    <Rule path="/items[at0001]" default="My Default Text" />
-    <Rule path="/items[at0002]" default="local::at0016::ABC" />
-    <Rule path="/items[at0003]" default="1 1" />
-    <Rule path="/items[at0004]" default="40" />
-    <Rule path="/items[at0005]" default="2017-12-01T10:00:00" />
-    <Rule path="/items[at0006]" default="P1Y2M" />
-    <Rule path="/items[at0007]" default="true" />
-    <Rule path="/items[at0008]" default="lower{1}upper{6}" />
-    <Rule path="/items[at0009]" default="lower{1 kg}upper{6 kg}" />
-    <Rule path="/items[at0013]" default="40.75%" />
-    <Rule path="/items[at0014]" default="myissuer::myassigner::myid::mytype" />
-    <Rule path="/items[at0015]">
-      <constraint xsi:type="parsableConstraint" />
-    </Rule>
+  <annotations path="[openEHR-EHR-CLUSTER.device_details.v1]/items[at0013]">
+    <items>
+      <item>
+        <key>Notes.Authors Note</key>
+        <value>Just a test annotation here.</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.device_details.v1" concept_name="Device details">
+    <Rule path="/items[at0006]" max="0" />
+    <Rule path="/items[at0002]" min="1" />
+    <Rule path="/items[at0010]" max="0" />
   </definition>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.defaulttest.v0">
-    <digest id="MD5-CAM-1.0.1">73BE93572D1E85A60BC8D958006514C9</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.device_details.v1">
+    <digest id="MD5-CAM-1.0.1">ABFCDBD4FEB5A92D17BBB76F3E1099F9</digest>
   </integrity_checks>
 </template>

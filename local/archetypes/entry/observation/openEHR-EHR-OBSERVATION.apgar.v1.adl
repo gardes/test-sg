@@ -91,7 +91,7 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Zur Dokumentation des Apgar Wertes als eine einfache, nachvollziehbare Methode zur Dokumentation des Status eines Neugeborenen direkt nach der Geburt. Der zu Grunde liegende Zeitpunkt der Ereignisreihe ist immer die Geburt.">
+			purpose = <"Zur Dokumentation ÄÖÜ?ßedw §$%µ des Apgar Wertes als eine einfache, nachvollziehbare Methode zur Dokumentation des Status eines Neugeborenen direkt nach der Geburt. Der zu Grunde liegende Zeitpunkt der Ereignisreihe ist immer die Geburt.">
 			use = <"Ermöglicht die Dokumentation des Wohlergehens des Säuglings 1, 2, 3, 5 und/oder 10 Minuten nach der Geburt, sowie zu anderen Zeitpunkten bei Bedarf. 
 Normale Praxis ist es, den Apgar Wert 1 und 5 Minuten nach der Geburt zu dokumentieren, weitere Werte können je nach klinischer Indikation ergänzt werden. Mit diesem Archetype ist es möglich, den Apgar Wert zu jedem Zeitpunkt nach der Geburt zu dokumentieren.
 Normale klinische Praxis ist es, alle 5 Parameter und den Gesamtwert zu dokumentieren, jedoch erlaubt dieser Archetyp die Dokumentation einer beliebigen Untermenge, wenn z.B. aus Altdaten nicht mehr verfügbar ist.
@@ -254,7 +254,7 @@ http://en.wikipedia.org/wiki/Apgar_score">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"3D3BD552906889C580132A01073F81CB">
-		["build_uid"] = <"06240059-af62-4fa9-8217-710fea603018">
+		["build_uid"] = <"d4a03f95-4281-4b19-8041-2a6016a82c0e">
 		["revision"] = <"1.0.1-alpha">
 	>
 
@@ -382,6 +382,7 @@ definition
 			}
 		}
 	}
+
 
 
 

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=5917eb9b-b25d-419b-afbf-617df1dd6405)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.menstrual_cycle.v1
 
 concept
@@ -26,17 +26,10 @@ Use some of the elements to record details about menstrual bleeding and associat
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B851D51FF538A35CE4ADF26D21C3392C">
-		["build_uid"] = <"4f86bea4-5096-4cb0-a6e2-a2c794265fbe">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"B7786879AA9DC4660960E6877E4D4B54">
 	>
 
 definition
