@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=9e038d01-5a50-45c9-b12a-d43cc14e317f)
+﻿archetype (adl_version=1.4; uid=dd0cd80f-aba3-4230-8890-beb5ddc92af7)
 	openEHR-EHR-EVALUATION.test.v0
 
 concept
@@ -28,12 +28,12 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9EAFF8ECB03F5EF0A8D33DD6DCF899F3">
-		["build_uid"] = <"fb124a94-2057-407c-bcd5-474201805e73">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"46D8FD5362A1DA8001221E9CF76823C6">
+		["build_uid"] = <"3de9cfcd-d003-4003-9eda-0fb7376b3ecf">
 		["revision"] = <"0.0.1-alpha">
 	>
 
