@@ -1,0 +1,62 @@
+﻿archetype (adl_version=1.4; uid=998bd559-8d50-4b9b-aa76-997d55020545)
+	openEHR-EHR-ACTION.marks_test_archetype.v0
+
+concept
+	[at0000]	-- Marks test archetype
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Mark Messiha">
+		["organisation"] = <"Ocean Health Systems">
+		["email"] = <"mark.messiha@oceanhealthsystems.com">
+		["date"] = <"2022-07-12">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing CKM Regression Test Cases!">
+			use = <"Testing!">
+			misuse = <"Cannot misuse this Archetype!">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Mark Messiha", ...>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["review_date"] = <"12/07/2022">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["current_contact"] = <"mark.messiha@oceanhealthsystems.com">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"BB79749B5A769CC3A04E824D8605D3E6">
+		["build_uid"] = <"fe8cbf52-8672-457a-904e-9c366470e613">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Marks test archetype
+		description matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks test archetype">
+					description = <"Testing CKM Regression Test Cases!">
+					comment = <"Test Archetype">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
