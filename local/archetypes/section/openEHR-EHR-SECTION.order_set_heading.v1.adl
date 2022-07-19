@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=912fc879-295f-4e70-b794-8688b28c46f3)
+	openEHR-EHR-SECTION.order_set_heading.v1
+
+concept
+	[at0000]	-- Order set heading
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"821055A4FDBBD84CAE9205FA32CC65AD">
+		["build_uid"] = <"9b75d0bb-0511-4e44-92cc-013e8c534432">
+		["revision"] = <"1.0.0">
+	>
+
+definition
+	SECTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Order set heading">
+					description = <"unknown">
+				>
+			>
+		>
+	>

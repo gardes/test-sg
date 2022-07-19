@@ -1,0 +1,80 @@
+﻿archetype (adl_version=1.4; uid=86b7adf0-8790-46a5-af3e-a9318f9e5d44)
+	openEHR-EHR-EVALUATION.test_3.v0
+
+concept
+	[at0000]	-- Test 3
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"E67F086D31A249BF10DDAA103EE9B901">
+		["build_uid"] = <"2383b511-7ef7-4a89-9309-6f4155e9eef0">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Test 3
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Ordinary
+						value matches {
+							C_DV_ORDINAL <
+							>
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- True or False?
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test 3">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Ordinary">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"True or False?">
+					description = <"*">
+				>
+			>
+		>
+	>

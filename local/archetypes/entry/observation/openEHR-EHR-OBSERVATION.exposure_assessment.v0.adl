@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=7bb54daf-b7a3-4189-83f3-85ee407388bd)
+﻿archetype (adl_version=1.4; uid=3142f0df-3944-46e9-8507-def69dd23a08)
 	openEHR-EHR-OBSERVATION.exposure_assessment.v0
 
 concept
@@ -40,6 +40,7 @@ Häufige Anwendungsfälle sind unter anderem:
 - Systematische Befragung bei jeder Konsultation; oder
 - Spezifische Befragung im Zusammenhang mit der Überwachung von Infektionskrankheiten.">
 			misuse = <"Nicht zur Darstellung von detaillierten Informationen über eine bestimmte Exposition, die als vorhanden identifiziert wurde oder vorhanden war. Verwenden Sie zu diesem Zweck den Archetyp EVALUATION.exposure.">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -50,6 +51,7 @@ Vanlige bruksområder inkluderer, men er ikke begrenset til:
 - Systematisk spørring i enhver konsultasjon; eller
 - Spesifikk spørring relatert til overvåkning av infeksjonssykdom.">
 			misuse = <"Skal ikke brukes for å registrere spesifikke detaljer om en eksponering som er identifisert som å være eller har vært tilstede. Bruk EVALUATION.problem_exposure for dette formålet.">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -66,13 +68,13 @@ Common use cases include, but are not limited to:
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"AFF6FEE1D12B76D075848A42962C4B77">
-		["build_uid"] = <"5d3d10ec-96e7-4149-965c-e41882d4042d">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"39F8AE16A5766FF950C708496E537B0D">
+		["build_uid"] = <"e78b6a22-3b79-4121-8625-b2f58e7c99a4">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>

@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>2b6b1b1c-a7db-4bbe-afa0-114f1d287744</id>
+  <name>Fake Knowledge Topic 1</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-SECTION.fakeadhoc.v0]">
+    <items>
+      <item>
+        <key>Clinical Knowledge Topic.Important Information Before You Begin</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Rationale</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Goals of Management</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Nursing Assessment and Documentation</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Initial Decision Making</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Procedures, Protocols &amp; Guidelines</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Disposition Planning</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Rural Considerations</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Analytics</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.References</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Clinical Recommendations</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Clinical Decision Support</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Physician Assessment and Documentation</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Appendix A</key>
+        <value>test</value>
+      </item>
+      <item>
+        <key>Clinical Knowledge Topic.Patient Experience and Expectations</key>
+        <value>test</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" name="Header">
+    <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" path="/items">
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" template_id="a31cfb47-20c2-4f18-b9c8-3cf96be6508f" concept_name="Fake Lab Item 1" max="1" path="/items" name="Fake Lab Item 1" />
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0" template_id="f3a940d4-d814-4c69-a206-8a11af772c5d" concept_name="Fake Lab Item 2" max="1" path="/items" name="Fake Lab Item 2" />
+    </Item>
+    <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" concept_name="Fake ad hoc" max="1" path="/items" name="Fake ad hoc #1">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0" template_id="0dd29cdc-da8f-465d-b2e9-f275060413e6" concept_name="Fake item including documentation" max="1" path="/items" name="Fake item including documentation" />
+    </Item>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.fakeadhoc.v0">
+    <digest id="MD5-CAM-1.0.1">AC221F52F8B7DD86D2DA6FCCFA25FED9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fakelaborder.v0">
+    <digest id="MD5-CAM-1.0.1">24450D70E4A41F8021BDB9A44A688CB9</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.fakecluster.v0">
+    <digest id="MD5-CAM-1.0.1">E3B108517339C1DD01EED94A5427D5DB</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.fake_medication_and_then.v0">
+    <digest id="MD5-CAM-1.0.1">61EAD6A8F294BB0BE885177883BFD40A</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.testeval.v0">
+    <digest id="MD5-CAM-1.0.1">AF4E5433B0A3DB2612599531C8EA4F13</digest>
+  </integrity_checks>
+</template>

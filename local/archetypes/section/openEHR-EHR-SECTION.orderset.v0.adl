@@ -1,0 +1,49 @@
+﻿archetype (adl_version=1.4; uid=53fa0aa1-e3e4-4cec-a8bf-0b893db31aff)
+	openEHR-EHR-SECTION.orderset.v0
+
+concept
+	[at0000]	-- Mini Order Set
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Example">
+			use = <"Example">
+			misuse = <"">
+			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"9C3A8B8A7950E3F9947682ABCCABBF0C">
+		["build_uid"] = <"0d274f09-40b5-4c3e-a02c-d29711450a47">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	SECTION[at0000] matches {*}
+
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Mini Order Set">
+					description = <"Example">
+				>
+			>
+		>
+	>

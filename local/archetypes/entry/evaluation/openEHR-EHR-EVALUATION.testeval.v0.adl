@@ -1,0 +1,139 @@
+﻿archetype (adl_version=1.4; uid=ed1e6690-458f-4af8-8e60-3935b37d4737)
+	openEHR-EHR-EVALUATION.testeval.v0
+
+concept
+	[at0000]	-- Testeval
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"AF4E5433B0A3DB2612599531C8EA4F13">
+		["build_uid"] = <"632051e5-7bb9-485a-bfa9-68446ea7413c">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Testeval
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- 1
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- 2
+						value matches {
+							C_DV_QUANTITY <
+							>
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- 3
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- 4
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- 5
+						value matches {
+							C_DV_ORDINAL <
+							>
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {	-- 6
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {*}
+					CLUSTER[at0009] occurrences matches {0..1} matches {	-- 8
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- 9
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Testeval">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"1">
+					description = <"1">
+				>
+				["at0003"] = <
+					text = <"2">
+					description = <"2">
+				>
+				["at0004"] = <
+					text = <"3">
+					description = <"3">
+				>
+				["at0005"] = <
+					text = <"4">
+					description = <"4">
+				>
+				["at0006"] = <
+					text = <"5">
+					description = <"5">
+				>
+				["at0007"] = <
+					text = <"6">
+					description = <"6">
+				>
+				["at0008"] = <
+					text = <"7">
+					description = <"7">
+				>
+				["at0009"] = <
+					text = <"8">
+					description = <"8">
+				>
+				["at0010"] = <
+					text = <"9">
+					description = <"9">
+				>
+			>
+		>
+	>

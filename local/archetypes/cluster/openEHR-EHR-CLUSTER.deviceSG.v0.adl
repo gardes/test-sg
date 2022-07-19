@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=05da6284-a4c5-4e02-b516-f876cd9416e3)
+﻿archetype (adl_version=1.4; uid=d4986ff4-1312-4485-9227-ee98c7b57a70)
 	openEHR-EHR-CLUSTER.deviceSG.v0
 
 concept
@@ -46,7 +46,7 @@ Este arquetipo esta diseñado para proveer la base de una representación estruc
 Para los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).">
 			keywords = <"dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto">
 			misuse = <"No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.">
-			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), Alberta Health Services (Canada), openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -70,7 +70,7 @@ The data field 'Software Version' allows for only a single version to be recorde
 To record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.(en)">
 			keywords = <"*device(en)", "*machine(en)", "*implant(en)", "*appliance(en)", "*catheter(en)", "*prosthesis(en)", "*aid(en)", "*biomedical(en)", "*instrument(en)", "*equipment(en)", "*meter(en)", "*monitor(en)", "*software(en)">
 			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic direct effect. For example: a medicine impregnated dressing should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.(en)">
-			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), Alberta Health Services (Canada), openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -86,7 +86,7 @@ To record additional details for durable or persistent devices that relate to ow
 و بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.">
 			keywords = <"الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ">
 			misuse = <"لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية">
-			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), Alberta Health Services (Canada), openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -112,23 +112,23 @@ To record additional details for durable or persistent devices that relate to ow
 This archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.">
 			keywords = <"device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software">
 			misuse = <"Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.">
-			copyright = <"© openEHR Foundation, Alberta Health Services (Canada), Alberta Health Services (Canada), openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway", "Mate Bestek, Ministry of Health of the Republic of Slovenia, Slovenia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Diego Bosca, IBIME group, Spain", "Margaret Campbell, Queensland Health, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, Queensland Health, Australia", "Samo Drnovsek, Marand ltd, Slovenia", "Ivan Drvaric, NIJZ- National institute for public health of Slovenia, Slovenia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Grahame Grieve, Australia", "Sam Heard, Ocean Informatics, Australia", "Gorazd Kalan, University Medical Centre Ljubljana, Slovenia", "Lars Karlsen, DIPS ASA, Norway", "Daniel Karlsson, Linköping University, Sweden", "Russell Leftwich, Russell B Leftwich MD, United States", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Vesna Levasic, Orthopaedic Hospital Valdoltra, Slovenia", "Luis Marco Ruiz, Norwegian Center for Integrated Care and Telemedicine, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Bjoern Naess, DIPS ASA, Norway", "Dave Nurse, Allocate Software, United Kingdom", "Živa Rant, National Instittute of Public Health, Slovenia", "Anoop Shah, University College London, United Kingdom", "Micaela Thierley, Helse Bergen, Norway">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Resource Device [Internet]. HL7 International, FHIR Specification first DSTU version (v 0.0.82) [cited: 2015-02-25]. Available from: http://www.hl7.org/implement/standards/fhir/device.html.
 
 Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Association [cited: 2015-02-25]. Available from: http://standards.ieee.org/regauth/oui/tutorials/EUI64.html.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"95EC08B29A4449CD5D86F2277AA2EF32">
-		["build_uid"] = <"770bc0be-4eab-42de-b190-cb28e6048797">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"BBC1B56BEF5B384A3E47699590694F19">
+		["build_uid"] = <"10ec9b53-80b2-413c-b901-12e29e62064b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -227,6 +227,8 @@ definition
 			}
 		}
 	}
+
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>

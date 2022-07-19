@@ -1,0 +1,71 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.clinical_synposes.v1
+
+concept
+	[at0000]	-- Clinical Synopses
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"08-Nov-2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"
+
+">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E295588C0831EFCBE6D089172DB16029">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Clinical Synopses
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[at0001] occurrences matches {0..*} matches {	-- Clinical Synopsis
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype ACTION[at0002] occurrences matches {0..*} matches {	-- Medicationi
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinical Synopses">
+					description = <"A section that captures one or more narratives about a subject of care health and related matters as entered by the subject of care or their authorised representative.">
+					detail_docref = <"sections/NEHTA-16684-Clinical_Synopses-Section.xml">
+					dc_id = <"16684">
+					spec_id = <"152">
+				>
+				["at0001"] = <
+					text = <"Clinical Synopsis">
+					description = <"Information about problems/diagnoses and procedures that form part of the current and past medical history of the subject of care and are not available as structured data.">
+					detail_docref = <"data_groups/NEHTA-15513-Clinical_Synopsis-Data_Group.xml">
+					dc_id = <"15513.152.1">
+					spec_id = <"10">
+				>
+				["at0002"] = <
+					text = <"Medicationi">
+					description = <"*">
+				>
+			>
+		>
+	>

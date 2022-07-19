@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>b3b7562d-69f0-4777-84f4-4702fe8ada0e</id>
+  <name>*CL 7.3 Medication List</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.medication_list.v0]/content[openEHR-EHR-INSTRUCTION.medication_order.v0]/activities[at0001]/description[at0002]/items[at0070]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>8-6</value>
+      </item>
+    </items>
+  </annotations>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.medication_list.v0" concept_name="Medication list">
+    <Content xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v0" concept_name="Medication order" path="/content">
+      <Rule path="/activities[at0001]/description[at0002]/items[at0047]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0109]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0055]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0056]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0133]/items[at0108]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0133]/items[at0102]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0133]/items[at0134]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0133]/items[at0136]" max="0" />
+      <Rule path="/activities[at0001]/description[at0002]/items[at0133]/items[at0094]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1" concept_name="Exclusion of a Medication" path="/content">
+      <Rule path="/data[at0001]/items[at0002.1]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>Not currently taking any medications</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+      <Rule path="/data[at0001]/items[at0007]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.absence.v1" concept_name="Absence of Information" path="/content">
+      <Rule path="/data[at0001]/items[at0002]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>No information available about medications</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/items[at0005]" max="0" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.medication_list.v0">
+    <digest id="MD5-CAM-1.0.1">7A704137E782B837BAD4911E9234BC40</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v0">
+    <digest id="MD5-CAM-1.0.1">2341A784013BE9A43AD7A0D1D9583EBD</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1">
+    <digest id="MD5-CAM-1.0.1">20AE44E213800D8CCFE164F6B7515D8F</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.absence.v1">
+    <digest id="MD5-CAM-1.0.1">25550CCC485BFBFBBDBD47251C9D08A5</digest>
+  </integrity_checks>
+</template>
