@@ -5,6 +5,16 @@ concept
 	[at0000]	-- Marks test archetype
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ar-eg"] = <
+			language = <[ISO_639-1::ar-eg]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Mark Messiha">
@@ -13,6 +23,12 @@ description
 		["date"] = <"2022-07-12">
 	>
 	details = <
+		["ar-eg"] = <
+			language = <[ISO_639-1::ar-eg]>
+			purpose = <"*Testing CKM Regression Test Cases!(en)">
+			use = <"*Testing!(en)">
+			misuse = <"*Cannot misuse this Archetype!(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing CKM Regression Test Cases!">
@@ -31,8 +47,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BB79749B5A769CC3A04E824D8605D3E6">
-		["build_uid"] = <"fe8cbf52-8672-457a-904e-9c366470e613">
+		["MD5-CAM-1.0.1"] = <"3781EBCC5A05A92A3562C9AC8BD02BBC">
+		["build_uid"] = <"588c02b2-11a2-46e7-b5bb-c1a2ff436285">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -52,6 +68,18 @@ ontology
 					text = <"Marks test archetype">
 					description = <"Testing CKM Regression Test Cases!">
 					comment = <"Test Archetype">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["ar-eg"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks test archetype(en)">
+					description = <"*Testing CKM Regression Test Cases!(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
