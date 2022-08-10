@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=f96aa68d-3c89-48f1-839b-b39684130424)
-	openEHR-EHR-EVALUATION.blah.v0
+﻿archetype (adl_version=1.4; uid=1955f9f7-1222-4100-9265-d3fcc7ec817c)
+	openEHR-EHR-EVALUATION.blahblah.v0
 
 concept
 	[at0000]	-- blah
@@ -29,8 +29,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"4D60E655C74BA784CB65D47599839865">
-		["build_uid"] = <"81edd70e-1df0-4daf-84ff-3a0e31550a67">
+		["MD5-CAM-1.0.1"] = <"1E08541ADABC75244CF949E09B471554">
+		["build_uid"] = <"58144075-7687-4bd0-9828-f27c87cf9552">
 		["revision"] = <"0.0.1-alpha">
 	>
 
