@@ -5,11 +5,29 @@ concept
 	[at0000]	-- Fffffffffffffffffffffffffffff
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*(en)
+Dies ist ein Test für die Sprachübersetzung">
+			use = <"*(en) 
+
+Dies ist ein Test für die Sprachübersetzung">
+			misuse = <"*(en)
+Dies ist ein Test für die Sprachübersetzung">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -26,8 +44,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A18A8088D02176E4DB41206CA94669A3">
-		["build_uid"] = <"a1f11b3c-f500-4ef0-8e2f-4be764ba6e15">
+		["MD5-CAM-1.0.1"] = <"BFD177A2B8B35BC9B0DEAEA981A8B5EE">
+		["build_uid"] = <"579349dd-f6db-46ca-9457-b48ffe21a7b1">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -78,6 +96,31 @@ ontology
 				["at0004"] = <
 					text = <"New element">
 					description = <"*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Fffffffffffffffffffffffffffff(en)">
+					description = <"Dies ist ein Test für die Sprachübersetzung">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+					comment = <"Dies ist ein Test für die Sprachübersetzung">
 				>
 			>
 		>
