@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=fca332d9-6bef-4fbe-8f1a-16583e77ee2f)
-	openEHR-EHR-OBSERVATION.fffffffffffffffffffffffffffff.v0
+﻿archetype (adl_version=1.4; uid=01890da5-fd3e-471c-987f-1bd19e01d2c0)
+	openEHR-EHR-OBSERVATION.Mark_Changed_Archetype_ID_Concept_Only.v0
 
 concept
 	[at0000]	-- Fffffffffffffffffffffffffffff
@@ -44,8 +44,8 @@ Dies ist ein Test für die Sprachübersetzung">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BFD177A2B8B35BC9B0DEAEA981A8B5EE">
-		["build_uid"] = <"579349dd-f6db-46ca-9457-b48ffe21a7b1">
+		["MD5-CAM-1.0.1"] = <"123BC2D241A38054509FCC3BB5DD87D4">
+		["build_uid"] = <"b9b68e57-114f-4807-84ae-a416a89f57a0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
