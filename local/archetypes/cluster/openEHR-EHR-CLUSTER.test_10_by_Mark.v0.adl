@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c54c4429-1088-4f89-a19e-2ddf9a8c914d)
-	openEHR-EHR-CLUSTER.test_10.v0
+﻿archetype (adl_version=1.4; uid=7187c0f0-fe98-430a-b127-cd31b6bb9037)
+	openEHR-EHR-CLUSTER.test_10_by_Mark.v0
 
 concept
 	[at0000]	-- Test 10
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"1F502A0CA5C1B33B43229F4377CF35EB">
-		["build_uid"] = <"52ac7512-42e8-4b06-b420-dc309a88e52c">
+		["MD5-CAM-1.0.1"] = <"FCEE1582730550D11F69EC1CA253D1B2">
+		["build_uid"] = <"076844dc-5ca8-416b-89fc-84d94e03e964">
 		["revision"] = <"0.0.1-alpha">
 	>
 
