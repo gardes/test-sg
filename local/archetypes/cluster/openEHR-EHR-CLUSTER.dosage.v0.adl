@@ -95,7 +95,9 @@ Tempos específicos de início e parada de administração devem ser especificad
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the combination of a medication amount and the administration timing within a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items.">
+			purpose = <"To record the combination of a medication amount and the administration timing within a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items.
+
+UPDATED WITH THIS TEXT BY MARK FOR TESTING PURPOSES">
 			use = <"Use to record the combination of a medication amount and the administration timing for a single day, as part of a medication order or medication management or for other appropriate therapeutic/prescribable items. 
 The timing pattern for a single day can be as simple as a single administration time, or multiple administration times with varying levels of complexity.
 
@@ -105,9 +107,11 @@ In the context of a therapeutic INSTRUCTION, this archetype may be inserted into
 
 In the context of an ACTION archetype insert this archetype directly into the 'Amount' SLOT to record the dose and timing of the actual administration of a therapeutic item.
 
-Specific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.">
+Specific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.
+
+UPDATED WITH THIS TEXT BY MARK FOR TESTING PURPOSES">
 			keywords = <"medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "pharmaceutical", "product", "posology", "treatment", "fluid", "nutrition", "timing", "administration", "dose">
-			misuse = <"">
+			misuse = <"UPDATED WITH THIS TEXT BY MARK FOR TESTING PURPOSES">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -126,22 +130,22 @@ Standards for the clinical structure and content of patient records (Complete do
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2283EAADFB91C1C8924196222E467167">
-		["build_uid"] = <"8daca64b-a273-4a95-9788-12d84308fc4d">
+		["MD5-CAM-1.0.1"] = <"E77C79D63118552014491A4F2020346C">
+		["build_uid"] = <"d9f171ea-88ce-4d63-8c18-62cf48e5e701">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	CLUSTER[at0000] occurrences matches {0..*} matches {    -- Dosage
+	CLUSTER[at0000] occurrences matches {0..*} matches {	-- Dosage
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0164] occurrences matches {0..1} matches {    -- Dosage sequence
+			ELEMENT[at0164] occurrences matches {0..1} matches {	-- Dosage sequence
 				value matches {
 					DV_COUNT matches {
 						magnitude matches {|>=1|}
 					}
 				}
 			}
-			ELEMENT[at0144] occurrences matches {0..1} matches {    -- Dose amount
+			ELEMENT[at0144] occurrences matches {0..1} matches {	-- Dose amount
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::380]>
@@ -178,27 +182,22 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0145] occurrences matches {0..1} matches {    -- Dose unit
+			ELEMENT[at0145] occurrences matches {0..1} matches {	-- Dose unit
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0135] occurrences matches {0..1} matches {    -- Dose formula
-				value matches {
-					DV_TEXT matches {*}
-					DV_QUANTITY matches {*}
-				}
-			}
-			ELEMENT[at0178] occurrences matches {0..1} matches {    -- Dose description
+			ELEMENT[at0135] occurrences matches {0..1} matches {*}
+			ELEMENT[at0178] occurrences matches {0..1} matches {	-- Dose description
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			allow_archetype CLUSTER[at0037] occurrences matches {0..*} matches {    -- Daily timing
+			allow_archetype CLUSTER[at0037] occurrences matches {0..*} matches {	-- Daily timing
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.timing_daily(-[a-zA-Z0-9_]+)*\.v1/}
 			}
-			ELEMENT[at0134] occurrences matches {0..1} matches {    -- Administration rate
+			ELEMENT[at0134] occurrences matches {0..1} matches {	-- Administration rate
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::126]>
@@ -224,14 +223,14 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0102] occurrences matches {0..1} matches {    -- Administration duration
+			ELEMENT[at0102] occurrences matches {0..1} matches {	-- Administration duration
 				value matches {
 					DV_DURATION matches {
 						value matches {PDTHMS/|>=PT0H|}
 					}
 				}
 			}
-			ELEMENT[at0176] occurrences matches {0..1} matches {    -- Alternate dose amount
+			ELEMENT[at0176] occurrences matches {0..1} matches {	-- Alternate dose amount
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::380]>
@@ -268,14 +267,13 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0177] occurrences matches {0..1} matches {    -- Alternate dose unit
+			ELEMENT[at0177] occurrences matches {0..1} matches {	-- Alternate dose unit
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 		}
 	}
-
 
 
 ontology
