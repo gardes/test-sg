@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=2c24ad6c-045b-4856-917f-aee29b6f6bf9)
-	openEHR-EHR-SECTION.clinical_knowledge_topic.v0
+﻿archetype (adl_version=1.4; uid=2a4c1d0e-e3fd-46b6-8ec3-142c53b70a3e)
+	openEHR-EHR-SECTION.clinical_knowledge_topic.v1
 
 concept
 	[at0000]	-- Clinical knowledge topic
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"067D48F5CC24F02797965575496D07E4">
-		["build_uid"] = <"58531744-a961-4ce5-ac17-d6432e74a592">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"ECDACE3F925F54D1C85DEBB4D9FFD31B">
+		["build_uid"] = <"fa88eccf-a16d-42d0-a984-44da7a5314c3">
+		["revision"] = <"1.0.0">
 	>
 
 definition
