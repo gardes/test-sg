@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=6f76003e-cd96-4e85-b1f5-6ee8677c2c12)
+﻿archetype (adl_version=1.4; uid=ef305717-3761-4510-94bb-687aa738f5ba)
 	openEHR-EHR-OBSERVATION.condition_screening.v0
 
 concept
@@ -33,13 +33,18 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Zur Darstellung der Antworten in einem Screening-Fragebogen zur Ermittlung von Zuständen.">
-			use = <"Verwenden Sie diesen Archetyp, um die Antworten in einem Screening-Fragebogen zur Ermittlung von Zuständen darzustellen.
+			purpose = <"Zur Darstellung der Antworten in einem Personen- oder Selbstbeurteilungs-Screening-Fragebogen zur Ermittlung von Zuständen, einschließlich Schwangerschaft.">
+			use = <"Verwenden Sie diesen Archetyp, um die Antworten in einem Personen- oder Selbstbeurteilungs-Screening-Fragebogen zur Ermittlung von Zuständen, einschließlich Schwangerschaft, darzustellen.
+
+Wenn zusätzliche Informationen zu einem bestimmten Zustand oder einer bestimmten Diagnose dargestellt werden müssen, definieren Sie mit der LINK-Klasse im Referenzmodel eine Beziehung zwischen diesem Archetyp und einer Instanz des Archetyps EVALUATION.problem_diagnosis im derselben Template.
+
+Wenn zusätzliche Informationen zu einer Schwangerschaft dargestellt werden müssen, verwenden Sie die LINK-Klasse im Referenzmodel, um eine Beziehung zwischen diesem Archetyp und den relevanten Archetypen zur Schwangerschaft im derselben Template darzustellen.
 
 Häufige Anwendungsfälle sind unter anderem:
-- Systematische Befragung in einer Beratung; oder
+- Systematische Befragung bei jeder Beratung; oder
 - Spezifische Befragung im Zusammenhang mit der Überwachung von Infektionskrankheiten.">
 			misuse = <"Nicht zu verwenden, um Details zu einem bestimmten gesundheitlichen Zustand im Rahmen einer typischen klinischen Beratung darzustellen. Verwenden Sie dazu EVALUATION.problem_diagnosis.">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -50,6 +55,7 @@ Vanlige bruksområder inkluderer, men er ikke begrenset til:
 - Systematisk spørring i enhver konsultasjon; eller
 - Spesifikk spørring relatert til overvåkning av infeksjonssykdom.">
 			misuse = <"Skal ikke brukes for å registrere spesifikke detaljer om en tilstand som en del av en typisk klinisk konsultasjon. Bruk EVALUATION.problem_diagnosis for dette formålet.">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -60,18 +66,19 @@ Common use cases include, but are not limited to:
 - Systematic questioning in any consultation; or
 - Specific questioning related to infectious disease surveillance.">
 			misuse = <"Not to be used to record details about a specific condition as part of a typical clinical consultation. Use EVALUATION.problem_diagnosis for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, UK", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"C957C048399964F65BECC1D7FB2DB4D4">
-		["build_uid"] = <"30a62693-3360-454a-8bb6-a07dc2ee78ff">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"5C8BAE8FE37C8539B482F5B86AF48F67">
+		["build_uid"] = <"cbbde57f-c26f-474f-b439-662f94245b86">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -323,8 +330,8 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Screening-Fragebogen für Zustände">
-					description = <"Ein Screening-Fragebogen für Zustände, einschließlich Probleme und Diagnosen.">
+					text = <"Screening-Fragebogen zur Ermittlung von Zuständen">
+					description = <"*An screeing questionnaire for conditions, including problems and diagnoses. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -368,8 +375,9 @@ ontology
 					description = <"Der spezifische Zustand ist nicht vorhanden.">
 				>
 				["at0025"] = <
-					text = <"Kommentar">
-					description = <"Zusätzliche Beschreibung der Zustände, die nicht in anderen Bereichen dargestellt wurde.">
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the conditions, not captured in other fields.
+ (en)">
 				>
 				["at0027"] = <
 					text = <"Unbekannt">
@@ -397,8 +405,8 @@ ontology
 					comment = <"Zum Beispiel: präoperatives Screening.">
 				>
 				["at0039"] = <
-					text = <"Zusätzliche detaillierte Fragen">
-					description = <"Zusätzliche Fragen im Fragebogen, die in direktem Zusammenhang mit dem spezifischen Zustand stehen.">
+					text = <"*Additional detailed questions (en)">
+					description = <"*Additional questionnaire questions directly related to the specific condition. (en)">
 				>
 			>
 		>

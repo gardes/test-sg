@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=8e75904f-1f01-47a7-b835-448ba1a287bc)
+﻿archetype (adl_version=1.4; uid=fa9b4e02-4f1e-43a4-a787-60bd8a602ebc)
 	openEHR-EHR-OBSERVATION.affected_body_surface_area.v0
 
 concept
@@ -19,18 +19,19 @@ description
 			use = <"Use to record details about the estimated proportion of body surface area affected by a skin injury or disease, including the total body surface area affected, the body surface area affected per body site and the body surface area affected per severity.">
 			keywords = <"TBSA", "BSA", "burn", "rash", "psoriasis">
 			misuse = <"Not to be used to record the measured or calculated body surface area of an individual - use the OBSERVATION.body_surface_area for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Åsa Skagerhult, Region Östergötland, Sweden (openEHR Editor)", "Erik Sundvall, Region Östergötland + Linköping University, Sweden (openEHR Editor)">
+	other_contributors = <"Erik Sundvall", "Åsa Skagerhult", "Silje Ljosland Bakke">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1FF142D22E7C3F0EC0BFCB614839DCBC">
-		["build_uid"] = <"f4f3c9f8-e1bb-4c6d-986d-b4507983b3a4">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A4EF1D2B22F77BBA35AA548D463E277F">
+		["build_uid"] = <"a08e0d72-9437-4a29-a08f-884dc27e77b5">
 		["revision"] = <"0.0.1-alpha">
 	>
 

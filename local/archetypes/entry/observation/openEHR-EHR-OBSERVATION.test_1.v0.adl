@@ -1,0 +1,140 @@
+﻿archetype (adl_version=1.4; uid=e7d43767-b93a-4c0c-89ef-c768fb11f3fe)
+	openEHR-EHR-OBSERVATION.test_1.v0
+
+concept
+	[at0000]	-- Test 1
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"FEEDB7AC7DD643CF60F830443B039AC4">
+		["build_uid"] = <"7c23b8be-5ba2-448b-8f7a-7c1886927217">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Test 1
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..6} matches {	-- Text data element
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..*} matches {	-- and a quantity
+										value matches {
+											C_DV_QUANTITY <
+											>
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Neues Element
+										value matches {
+											DV_INTERVAL<DV_QUANTITY> matches {
+												upper matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+												lower matches {
+													C_DV_QUANTITY <
+														property = <[openehr::118]>
+													>
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- q constrained
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.001..1.001|>
+													>
+												>
+												assumed_value = <
+													units = <"1">
+													precision = <-1>
+													magnitude = <0.002>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test 1">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Text data element">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"and a quantity">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Neues Element">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"q constrained">
+					description = <"*">
+				>
+			>
+		>
+	>

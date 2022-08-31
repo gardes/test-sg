@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=f031f209-11a9-4dd2-8828-68c11dd31962)
+﻿archetype (adl_version=1.4; uid=68b9e311-9399-4e54-ac79-5c6b8826e64d)
 	openEHR-EHR-OBSERVATION.avpu.v0
 
 concept
@@ -38,6 +38,13 @@ description
 			misuse = <"">
 			copyright = <"© Nasjonal IKT HF">
 		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.">
+			use = <"Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.">
+			keywords = <"avda", "alerta", "voz", "dor", "arresponsivo">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record an individual's level of consciousness.">
@@ -45,13 +52,6 @@ description
 			keywords = <"avpu", "alert", "voice", "pain", "unresponsive", "awake", "speech", "pain", "unconscious", "voice", "consciousness", "verbal", "verbal response", "semicomatose", "conscious", "level of consciousness", "comatose">
 			misuse = <"">
 			copyright = <"© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF">
-		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			purpose = <"Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.">
-			use = <"Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.">
-			keywords = <"avda", "alerta", "voz", "dor", "arresponsivo">
-			misuse = <"">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -66,8 +66,8 @@ Kelly, CA; Upex A; Bateman DN. (February 2005). \"Comparison of consciousness le
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1C487D3F2E18E58E6D1203AD95DEABE5">
-		["build_uid"] = <"630e25a8-7efb-45a6-8a1f-2570075ccc7e">
+		["MD5-CAM-1.0.1"] = <"81213B782BF80D49B8CB0CB9A6F35911">
+		["build_uid"] = <"bc141064-8ca4-4650-bea0-dd8f9b71e562">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -132,6 +132,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology

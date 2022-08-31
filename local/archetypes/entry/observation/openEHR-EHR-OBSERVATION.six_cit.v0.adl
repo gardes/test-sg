@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=d6751f75-9f9a-43fa-baf4-8faf3c7ba239)
+﻿archetype (adl_version=1.4; uid=59c72678-9dac-42ae-843b-eeeb5be0ce99)
 	openEHR-EHR-OBSERVATION.six_cit.v0
 
 concept
@@ -25,23 +25,24 @@ The Kingshill Research Centre, Swindon, UK owns the copyright to The Kingshill V
 Copyright information: https://6cit.co.uk/.">
 			keywords = <"6CIT", "cognitive", "impairment", "dementia">
 			misuse = <"">
-			copyright = <"© Apperta Foundation, openEHR Foundation">
+			copyright = <"© Apperta Foundation, openEHR Foundation, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics Ltd.", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Derived from: https://ckm.apperta.org/ckm/archetypes/1051.32.384
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>
+Derived from: https://ckm.apperta.org/ckm/archetypes/1051.32.384
 
 6CIT Test – Official Application Website. Available from: http://6cit.co.uk/ [cited 25 Feb 2021].">
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7DE38A9939E135B570D72CE7D61A4F81">
-		["build_uid"] = <"730ccdc2-2e2e-443f-a9e6-4ccc17160ef9">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"CAE9BE335E5506B9C91F29FC4AF5E00F">
+		["build_uid"] = <"4825c226-cbd8-43b8-b8f2-fcc8a965e406">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -121,6 +122,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology

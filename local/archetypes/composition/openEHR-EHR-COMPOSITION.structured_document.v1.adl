@@ -1,0 +1,80 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.structured_document.v1
+
+concept
+	[at0000]	-- Structured Document
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The Structured Document is a container for a structured document within each domain.  This general composition contains a Document Context and a Health Context (which contains the Subject of Care).">
+			use = <"This composition should be used for all compositional needs that required a document metaphor.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"2D8744F1AA34D2AFC2FD3113C66DB839">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Structured Document
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {	-- Tree
+						items cardinality matches {2..*; unordered} matches {
+							allow_archetype CLUSTER[at0003] matches {	-- Document Context 
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_context\.v3/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0007] matches {	-- Health Event Context  
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event_context\.v3/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Structured Document">
+					description = <"This Composition is used as a generic container for a structured document (such as a Referral or Discharge summary).  It contains document context but does not include any sections or other clinical content.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Document Context ">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Health Event Context  ">
+					description = <"*">
+				>
+			>
+		>
+	>

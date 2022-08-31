@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>fc87ed32-40e1-4965-b41d-978ed78986b0</id>
+  <name>*CL 7.4 Adverse Reaction List</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list.v1" concept_name="Adverse reaction list">
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_risk.v1" concept_name="Adverse reaction risk" path="/content">
+      <Rule path="/data[at0001]/items[at0002]">
+        <constraint xsi:type="textConstraint" limitToList="false" />
+      </Rule>
+      <Rule path="/data[at0001]/items[at0063]">
+        <constraint xsi:type="multipleConstraint">
+          <includedTypes>Coded_text</includedTypes>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/items[at0101]" max="0" />
+      <Rule path="/data[at0001]/items[at0120]" max="0" />
+      <Rule path="/data[at0001]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0010]" hide_on_form="true" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0021]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0012]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0027]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0028]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0089]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0020]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0025]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0106]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0018]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0040]" max="0" />
+      <Rule path="/data[at0001]/items[at0009]/items[at0032]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1" concept_name="Exclusion of an Adverse Reaction" path="/content">
+      <Rule path="/data[at0001]/items[at0002.1]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>No known history of adverse reaction or allergy</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/items[at0003.1]" max="0" />
+      <Rule path="/data[at0001]/items[at0007]" max="0" />
+    </Content>
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.absence.v1" concept_name="Absence of Information" path="/content">
+      <Rule path="/data[at0001]/items[at0002]">
+        <constraint xsi:type="textConstraint">
+          <includedValues>No information available about previous adverse reaction or allergy</includedValues>
+        </constraint>
+      </Rule>
+      <Rule path="/data[at0001]/items[at0005]" max="0" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.adverse_reaction_list.v1">
+    <digest id="MD5-CAM-1.0.1">4B6AA0418BCED8170DC960C7A179EF88</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_risk.v1">
+    <digest id="MD5-CAM-1.0.1">08ECE169A21AB545E79E1221039462EE</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1">
+    <digest id="MD5-CAM-1.0.1">E16FAA97344C551556B200E2559F9CC7</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.absence.v1">
+    <digest id="MD5-CAM-1.0.1">25550CCC485BFBFBBDBD47251C9D08A5</digest>
+  </integrity_checks>
+</template>
