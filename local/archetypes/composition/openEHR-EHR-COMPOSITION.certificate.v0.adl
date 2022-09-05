@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=22bed45b-b8b7-44b6-8783-e263745b3a61)
+﻿archetype (adl_version=1.4; uid=735d9c8b-169f-4e0d-882a-b2c6f67a3bd9)
 	openEHR-EHR-COMPOSITION.certificate.v0
 
 concept
@@ -19,22 +19,24 @@ description
 			use = <"Intended to be used to carry deathcertificates, birthcertificates, certificates stating clinician diagnosis or statement.">
 			keywords = <"Deathcertificate, medical certificate, statement of health", ...>
 			misuse = <"Not to be used for code signing certificates, not to be used to certify ownership.">
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics", "Marit Alice Venheim, Helse Vest IKT HF">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Nasjonal IKT">
-		["references"] = <"«Vital Records Ordering and Tracking». Hawaii State Department of Health, http://vitalrecords.ehawaii.gov. Åpnet 3. august 2020.
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>
+
+«Vital Records Ordering and Tracking». Hawaii State Department of Health, http://vitalrecords.ehawaii.gov. Åpnet 3. august 2020.
 «General Register Office Certificate Application Forms». GOV.UK, https://www.gov.uk/government/publications/general-register-office-gro-certificate-application-forms. Åpnet 3. august 2020.
 «Attester». Skatteetaten, /person/folkeregister/attester-og-opplysninger/attester/. Åpnet 3. august 2020.">
-		["original_namespace"] = <"no.nasjonalikt">
-		["original_publisher"] = <"Nasjonal IKT">
-		["custodian_namespace"] = <"no.nasjonalikt">
-		["MD5-CAM-1.0.1"] = <"BE221FCD110E575BAA27EF4960E0BBE2">
-		["build_uid"] = <"d48e0476-5346-41f8-b189-09537a7a4f34">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"61FE7D0EC6BB401DD6F3FFE36B92C807">
+		["build_uid"] = <"7d61c06b-740f-4da2-9d10-7b0a3feb4ec5">
 		["revision"] = <"0.0.1-alpha">
 	>
 
