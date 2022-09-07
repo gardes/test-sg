@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=ea6a798e-31dc-4889-98c3-d7f28ad7b104)
+﻿archetype (adl_version=1.4; uid=1d7dc127-8644-4236-8afd-e1d8ea8fb868)
 	openEHR-DEMOGRAPHIC-ITEM_TREE.person_details.v0
 
 concept
@@ -36,7 +36,7 @@ description
 			use = <"Usado em serviço demográficos para coletar os dados demográficos de uma pessoa">
 			keywords = <"serviço demográfico", "dados demográficos de uma pessoa">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation Ocean">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -44,7 +44,7 @@ description
 			use = <"Used in demographic service to collect a person's demographic data">
 			keywords = <"demographic service", "person's demographic data">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation Ocean">
 		>
 		["es-py"] = <
 			language = <[ISO_639-1::es-py]>
@@ -52,13 +52,18 @@ description
 			use = <"Utilizado en servicios demográficos para recolectar los datos demográficos de una persona.">
 			keywords = <"servicio demográfico", "datos demográficos de una persona">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
+			copyright = <"© openEHR Foundation Ocean">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Rigoleta Dutra, Ministry of Defense, Brazil (openEHR Editor)", "Sergio Freire, State University of Rio de Janeiro, Brazil (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)">
 	other_details = <
-		["build_uid"] = <"27815179-bf81-4f21-81dc-9179ddb47e85">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"MM">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["build_uid"] = <"89ae3a3d-7a87-4d74-a8a5-bd0f17970d1f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
