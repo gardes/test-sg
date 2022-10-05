@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=79e1c8d0-a039-4a34-b1da-2b382aa3b773)
+﻿archetype (adl_version=1.4; uid=2d9a2fe7-0466-4016-87ff-27028c73b670)
 	openEHR-EHR-OBSERVATION.dash_score.v0
 
 concept
@@ -27,30 +27,29 @@ description
 			purpose = <"*To record individual DASH prediction score parameters and total score. (en)">
 			use = <"*Use to record individual DASH prediction score parameters and total score as part of an evaluation for the need for ongoing anticoagulant therapy. (en)">
 			misuse = <"">
-			copyright = <"© Cambio Healthcare Systems, openEHR Foundation, openEHR Foundation">
+			copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record individual DASH prediction score parameters and total score.">
 			use = <"Use to record individual DASH prediction score parameters and total score as part of an evaluation for the need for ongoing anticoagulant therapy.">
 			misuse = <"">
-			copyright = <"© Cambio Healthcare Systems, openEHR Foundation, openEHR Foundation">
+			copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"Derived from: <Add reference to original resource here>
-Kearon C, Iorio A, Palareti G; Subcommittee on Control of Anticoagulation of the SSC of the ISTH. Risk of recurrent venous thromboembolism after stopping treatment in cohort studies: recommendation for acceptable rates and standardized reporting. J Thromb Haemost. 2010 Oct;8(10):2313-5. doi: 10.1111/j.1538-7836.2010.03991.x. PMID: 20738761.
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Kearon C, Iorio A, Palareti G; Subcommittee on Control of Anticoagulation of the SSC of the ISTH. Risk of recurrent venous thromboembolism after stopping treatment in cohort studies: recommendation for acceptable rates and standardized reporting. J Thromb Haemost. 2010 Oct;8(10):2313-5. doi: 10.1111/j.1538-7836.2010.03991.x. PMID: 20738761.
 
 Tosetto A, Iorio A, Marcucci M, Baglin T, Cushman M, Eichinger S, Palareti G, Poli D, Tait RC, Douketis J. Predicting disease recurrence in patients with previous unprovoked venous thromboembolism: a proposed prediction score (DASH). J Thromb Haemost. 2012 Jun;10(6):1019-25. doi: 10.1111/j.1538-7836.2012.04735.x. PMID: 22489957.">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B1F61531C4D7461599F946E5E9438DB7">
-		["build_uid"] = <"c93dad59-d137-4e5c-98cc-82ab8ae0e399">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"E05A219AD49EA7DF45FB2C6D142BAF20">
+		["build_uid"] = <"23e80409-1755-4fc8-9a0b-3a30a4c334a4">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -110,7 +109,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology

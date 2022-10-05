@@ -1,14 +1,13 @@
-﻿archetype (adl_version=1.4; uid=96de9cc1-f69f-4e89-a2d7-3b44bb4011ed)
+﻿archetype (adl_version=1.4; uid=99b0925d-20fe-4ddd-afc8-a9cfea3d6fb1)
 	openEHR-EHR-OBSERVATION.hearing_screening_result.v0
 
 concept
-	[at0000]	-- Hearing screening result
+	[at0000]	-- Hearing screening test result
 language
 	original_language = <[ISO_639-1::en]>
 description
 	original_author = <
 		["name"] = <"Kerrie Lee">
-		["organisation"] = <"Ocean Informatics">
 		["email"] = <"kerrie.lee2@bigpond.com">
 		["date"] = <"2012-12-14">
 	>
@@ -37,26 +36,28 @@ Not to be used to record other auditory assessments such as:
 - Transient Evoked Otoacoustic Emission (TEOAE); and
 - Distortion Product Otoacoustic Emission (DPOAE).
 These assessments need to be recorded in specific archetypes for the purpose.">
-			copyright = <"© Northern Territory Department of Health, Australia, openEHR Foundation">
+			copyright = <"© Northern Territory Department of Health (Australia), openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Stephen Chu, NEHTA, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Fiona Wake, RAHC, Australia", "Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Lisa Dawson, NT Hearing Services, Australia">
+	other_contributors = <"Stephen Chu, NEHTA, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Atomica Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Fiona Wake, RAHC, Australia", "Amarjit Anand, NT Department of Health/NT Hearing, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Lisa Dawson, NT Hearing Services, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"FF62AC067F9596902C67D26DF074FA88">
-		["build_uid"] = <"5902b792-afa0-4d4b-8f38-8bb645772876">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Derived from: Hearing screening result, Draft archetype [Internet]. Australian Digital Health Agency (NEHTA), ADHA Clinical Knowledge Manager. Authored: 2012 Dec 14. Available at: http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1133_4 (discontinued).
+		
+Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
+		["current_contact"] = <"Heather Leslie, Atomica Informatics, Australia<heather.leslie@atomicainformatics.com>">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"16AB79C85D07DFC390FE1B65A96D3E34">
+		["build_uid"] = <"799e27af-8676-49f1-84f3-808dd892b759">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Hearing screening result
+	OBSERVATION[at0000] matches {	-- Hearing screening test result
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -76,8 +77,8 @@ definition
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
-															at0008, 	-- Left ear
 															at0009, 	-- Right ear
+															at0008, 	-- Left ear
 															at0049]	-- Binaural
 														}
 													}
@@ -131,17 +132,6 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0051] occurrences matches {0..1} matches {	-- Screening outcome
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0052, 	-- Pass
-															at0053]	-- Fail
-														}
-													}
-												}
-											}
 											ELEMENT[at0122] occurrences matches {0..1} matches {	-- No test result
 												value matches {
 													DV_BOOLEAN matches {
@@ -152,6 +142,17 @@ definition
 											ELEMENT[at0123] occurrences matches {0..1} matches {	-- Reason for no test result
 												value matches {
 													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {	-- Screening outcome
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0052, 	-- Pass
+													at0053]	-- Fail
 												}
 											}
 										}
@@ -196,6 +197,14 @@ definition
 							}
 						}
 					}
+					POINT_EVENT[at0142] occurrences matches {0..1} matches {	-- Neonatal screening
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any point in time]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0013]	-- /data[Event Series]/events[Any point in time]/state[Tree]
+						}
+					}
 				}
 			}
 		}
@@ -212,9 +221,7 @@ definition
 								defining_code matches {
 									[local::
 									at0076, 	-- Audiometric booth
-									at0079, 	-- Non-sound treated room
-									at0077, 	-- Clinically significant
-									at0078]	-- Not clinically significant
+									at0079]	-- Non-sound treated room
 								}
 							}
 						}
@@ -246,7 +253,7 @@ definition
 					}
 					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {	-- Test device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-hearing_test_instrument(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[at0116] occurrences matches {0..*} matches {	-- Earphones
 						include
@@ -327,7 +334,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Hearing screening result">
+					text = <"Hearing screening test result">
 					description = <"Record of results of a hearing screening assessment and the screening outcome.">
 				>
 				["at0001"] = <
@@ -336,7 +343,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any point in time">
-					description = <"Default, unspecified point in time which may be explicitly defined in a template or at run-time. ">
+					description = <"Default, unspecified point in time which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -423,7 +430,7 @@ ontology
 				>
 				["at0051"] = <
 					text = <"Screening outcome">
-					description = <"Result of screening for the ear.">
+					description = <"Overall result of screening.">
 					comment = <"In some existing screening programs, the result has previously been recorded as one of three options: 'Pass', 'Re-test' or 'Refer'. This confounds the result with subsequent next actions. This data element is recording the outcome of the test alone - thus 'Pass' or 'Fail' are the only two options. Following a 'Fail' result, a clinical system can support the clinician to initiate appropriate a subsequent activity (eg based on other information such as previous screening test results) - either a rescheduling of the screening test (ie a 'Re-test') or initiation of a referral for further investigation (ie  a 'Refer'). ">
 				>
 				["at0052"] = <
@@ -536,6 +543,10 @@ ontology
 				["at0141"] = <
 					text = <"Narrow band noise">
 					description = <"The test stimulus is a narrow band noise centred on the specified frequency.">
+				>
+				["at0142"] = <
+					text = <"Neonatal screening">
+					description = <"Test performed soon after birth to screen for hearing defects that warrant urgent investigation.">
 				>
 				["at0143"] = <
 					text = <"Multimedia">
