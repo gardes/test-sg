@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=85fedf25-3e7d-47b7-a110-23d8fde9dc25)
-	openEHR-EHR-OBSERVATION.alcohol_uses.v0
+﻿archetype (adl_version=1.4; uid=7aaa9b2d-0785-4de6-b145-562625975172)
+	openEHR-EHR-OBSERVATION.alcohol_use.v0
 
 concept
 	[at0000]	-- Alcohol Use
@@ -68,8 +68,8 @@ Not to be used to record information about consumption of other substances other
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B39711EA5A3B540DFA8F3BF4CEDC85A0">
-		["build_uid"] = <"2c921060-2f81-48ac-adc0-caf2d320d68a">
+		["MD5-CAM-1.0.1"] = <"5AF23CB138F1FC52812727FB4FF2EE61">
+		["build_uid"] = <"2f9abbf9-29af-4eb0-9646-15ff595345b1">
 		["revision"] = <"0.0.1-alpha">
 	>
 
