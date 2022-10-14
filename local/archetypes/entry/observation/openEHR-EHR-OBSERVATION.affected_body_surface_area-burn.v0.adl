@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=e75ccced-f0b9-46fe-9380-c9eaf7022afb)
-	openEHR-EHR-OBSERVATION.affected_body_surface_area-burns.v0
+﻿archetype (adl_version=1.4; uid=95490200-7653-437b-b04f-bff7a9c47773)
+	openEHR-EHR-OBSERVATION.affected_body_surface_area-burn.v0
 specialise
 	openEHR-EHR-OBSERVATION.affected_body_surface_area.v0
 
@@ -32,8 +32,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2E67CFB3F8BF5DEB98365222FB2CCF24">
-		["build_uid"] = <"d3443998-3ec6-4e31-b70f-e23c2e4d74fd">
+		["MD5-CAM-1.0.1"] = <"8710E9631DC021045855D559B0C01A66">
+		["build_uid"] = <"7a192af1-f5ec-4eef-b5b4-51cf34b8fbd4">
 		["revision"] = <"0.0.1-alpha">
 	>
 
