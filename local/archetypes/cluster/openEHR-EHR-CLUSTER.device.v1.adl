@@ -29,6 +29,8 @@ language
 				["name"] = <"John Tore Valand">
 				["organisation"] = <"Helse Bergen HF">
 			>
+			version_last_translated = <"1.0.1">
+			other_contributors = <"TomasAlme, DIPS, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Koray Atalag, University of Auckland, New Zealand">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -199,8 +201,8 @@ Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Asso
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"08C28B0330D6A5C90573D9FF66DB1AF3">
-		["build_uid"] = <"61be4c14-03c6-4486-b22d-a324311b0b6c">
-		["revision"] = <"1.1.0">
+		["build_uid"] = <"7822903c-42a4-4110-8a13-2097340c23fb">
+		["revision"] = <"1.1.1">
 	>
 
 definition
@@ -298,8 +300,6 @@ definition
 			}
 		}
 	}
-
-
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
