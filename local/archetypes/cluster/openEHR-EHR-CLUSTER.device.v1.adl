@@ -29,8 +29,6 @@ language
 				["name"] = <"John Tore Valand">
 				["organisation"] = <"Helse Bergen HF">
 			>
-			version_last_translated = <"1.0.1">
-			other_contributors = <"TomasAlme, DIPS, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Koray Atalag, University of Auckland, New Zealand">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
