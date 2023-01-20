@@ -27,7 +27,7 @@ If the note requires association with a healthcare provider, then participations
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", ...>
+	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heath Frankel, Ocean Informatics, Australia", "Heather L, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "test test, Ocean, Åland Islands (openEHR Editor)", "test">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -36,7 +36,7 @@ If the note requires association with a healthcare provider, then participations
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"D6EA5C6700AB7364E7847D3CC47302C9">
-		["build_uid"] = <"716717eb-92c0-4753-a625-2e7c1638f91f">
+		["build_uid"] = <"b15d3b2c-d7b7-4932-b128-8e37c9133bf7">
 		["revision"] = <"0.0.1-alpha">
 	>
 
