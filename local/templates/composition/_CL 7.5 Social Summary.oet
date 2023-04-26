@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>a069d532-2024-482e-b1d2-52e86b514119</id>
+  <name>*CL 7.5 Social Summary</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.social_summary.v1" concept_name="Social Summary">
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.social_summary.v1" concept_name="Social Summary" max="1" path="/content[at0001]">
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.household.v1" concept_name="Household" max="1" path="/data[at0001]/items[at0003]">
+        <Rule path="/items[at0001]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0004]" max="0" />
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.housing.v1" concept_name="Housing" max="1" path="/data[at0001]/items[at0003]">
+        <Rule path="/items[at0001]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0004]" max="0" />
+        <Rule path="/items[at0003]" max="0" />
+        <Rule path="/items[at0005]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.home_environment.v1" concept_name="Home Environment" max="1" path="/items[at0006]">
+          <Rule path="/items[at0002]" max="0" />
+          <Rule path="/items[at0003]" max="0" />
+        </Items>
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.education.v1" concept_name="Education and Training" max="1" path="/data[at0001]/items[at0003]" name="Education">
+        <Rule path="/items[at0018]" max="0" />
+        <Rule path="/items[at0003]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0005]" max="0" />
+        <Rule path="/items[at0007]" max="0" />
+      </Items>
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.social_summary.v1">
+    <digest id="MD5-CAM-1.0.1">3AA5E44836E1A13A59699DC956472586</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.social_summary.v1">
+    <digest id="MD5-CAM-1.0.1">2A827766C6F61B021B80CF776CCD17E6</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.household.v1">
+    <digest id="MD5-CAM-1.0.1">78343BA03C7D5847A3607BFB22D2B0C0</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.housing.v1">
+    <digest id="MD5-CAM-1.0.1">42D547BE4291C4A78FB9979FEC4C7ED4</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.home_environment.v1">
+    <digest id="MD5-CAM-1.0.1">A35306C9CA666E434C5AE301C2497461</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.education.v1">
+    <digest id="MD5-CAM-1.0.1">B91E58C3A0014D764CAB40978F010D30</digest>
+  </integrity_checks>
+</template>

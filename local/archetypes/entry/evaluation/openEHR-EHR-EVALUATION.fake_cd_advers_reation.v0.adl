@@ -1,0 +1,179 @@
+﻿archetype (adl_version=1.4; uid=46d4dcd6-d246-481b-825b-acd091beaaad)
+	openEHR-EHR-EVALUATION.fake_cd_advers_reation.v0
+
+concept
+	[at0000]	-- Fake cd advers reation
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"6E461CD0F01CE08220BF78757212CA42">
+		["build_uid"] = <"346884fe-78f1-4165-ab9c-2d81f84a1bff">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Fake cd advers reation
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Substance
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Status
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Criticality
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Category
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Onset of last reaction
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Reacion mechanism
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0009] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0010] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Last updated
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype ITEM[at0012] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Supporting clinical record information
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Reaction reported
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					CLUSTER[at0015] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fake cd advers reation">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Substance">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Status">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Criticality">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Category">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Onset of last reaction">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Reacion mechanism">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Reaction event">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Last updated">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Supporting clinical record information">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Reaction reported">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Report summary">
+					description = <"*">
+				>
+			>
+		>
+	>

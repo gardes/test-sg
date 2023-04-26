@@ -1,0 +1,1167 @@
+﻿archetype (adl_version=1.4; uid=2f4f511c-4df2-436e-b4b9-72e28cbdb24c)
+	openEHR-EHR-ACTION.device_fitting.v0
+
+concept
+	[at0000]	-- Device fitting
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			author = <
+				["name"] = <"Art Latyp; Латыпов Артур">
+				["organisation"] = <"RusBITech; РусБИТех, Москва">
+			>
+			accreditation = <"hmm">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"John Tore Valand / Silje Ljosland Bakke">
+				["organisation"] = <"Helse Bergen HF">
+			>
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Thiago F. F. Dias">
+				["organisation"] = <"FMRP-USP">
+			>
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["name"] = <"Uroš Rajkovič, Biljana Prinčič">
+				["organisation"] = <"Slovenia">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2007-03-12">
+	>
+	details = <
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Para registrar os detalhes sobre um procedimento realizado.">
+			use = <"Usado para registrar informações detalhadas sobre o procedimento realizado em um indivíduo.
+Informações sobre atividades relacionadas ao procedimento, como a anestesia ou a administração de medicamentos, devem ser registrados em arquétipos de ACTION separados.">
+			keywords = <"procedimento", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za beleženje podrobnosti o izvedeni aktivnosti">
+			use = <"Za beleženje podrobnosto o izvedeni aktivnosti, ki zadeva posameznega pacienta/subjekt">
+			keywords = <"aktivnosti", "postopek">
+			misuse = <"Podrobnosti o aktivnostih povezani z opisano kativnostjo, kot npr. dajanje zdravil, se zabeleži v arhetipih tipa ACTION">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information about the activities required to carry out the fitting of a non-invasive device to an individual.">
+			use = <"Use to record information about the activities required to carry out the fitting of a non-invasive device to an individual, including the planning, scheduling, performance, suspension, cancellation, documentation and completion. This is done by the recording of data against specific activities, as defined by the 'Pathway' careflow steps in this archetype.
+
+The scope of this archetype encompasses activities for a broad range of devices. Examples include, but are not limited to:
+- hearing aid;
+- orthotics; and eyeglasses.
+
+Additional structured and detailed information about the device fitting can be captured using purpose-specific archetypes inserted into the 'Fitting detail' slot, where required.
+
+Timings related to a fitting can be managed in one of two ways:
+- Using the reference model - the time for performance of any pathway step will use the ACTION time attribute for each step.
+- Archetyped data elements:
+--- the 'Scheduled date/time' data element is intended to record the time when the fitting is planned. Note: the corresponding ACTION time attribute for the Scheduled pathway step will record the time that the fitting was scheduled into a system, not the intended date/time on which the fitting is intended to be carried out; and
+--- the 'Final end date/time' is intended to record the precise time when the fitting was ended. It can be used to document the complex fittings with multiple components. Note: the corresponding ACTION time attribute for the 'fitting performed' will document the time each component performed was commenced. This 'Final end date/time' data element will record the date/time of the final active component of the fitting. This will enable a full duration of the active fitting to be calculated.
+
+Within the context of a fitting consultation, this archetype will be used to record only what was done during the fitting. Separate archetypes will be used to record the other required components such as test resutls and plans for follow up.
+
+Within the context of a device summary record, this archetype may be used to represent each fitting that has been performed and a summary EVALUATION archetype can represent basic information about each previous fitting - for example EVALUATION.assisted_hearing_summary.
+
+In most situations, it is likely that there will be a formal order for a fitting using a corresponding INSTRUCTION.request, or similar, archetype. This ACTION archetype can then be used to record the workflow of when and how the order has been carried out.
+
+Recording information using this ACTION archetype indicates that some sort of activity has actually occurred; this will usually be the fitting itself but may be a failed attempt or another activity such as postponing the fitting. 
+
+Please note that in the openEHR Reference Model there is a 'Time' attribute, which is intended to record the date and time at which each pathway step of the Action was performed. This is the attribute to use to record the start of the fitting (using the 'Fitting performed' pathway step) or the time that the fitting was completed (using the 'Fitting completed' pathway step).">
+			keywords = <"fitting", "intervention", "surgical", "medical", "clinical", "therapeutic", "diagnostic", "cure", "treatment", "evaluation", "investigation", "screening", "palliative", "therapy">
+			misuse = <"Not to be used to record details about an overview of devices fitted - use an EVALUATION archetype for this purpose.
+
+Not to be used to record details about education delivered - use ACTION.health_education for this purpose.
+
+Not to be used to record details about administrative activities - use specific ADMIN archetypes for this purpose.">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفاصيل حول إجراء طبي تم بالفعل إجراؤه">
+			use = <"لتسجيل معلومات تفصيلية حول إجراء طبي تم تنفيذه على شخص ما. و ينبغي تسجيل المعلومات حول النشاطات المتعلقة بالنشاطات المتعلقة بالإجراء الطبي, مثل التخدير أو إعطاء الأدوية في نماذج (فعل) منفردة.">
+			keywords = <"الإجراء الطبي", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи сведений об проведенной процедуре">
+			use = <"Используется для записи подробной информации о процедуре, выполненной пациенту.
+Информация о действиях, связанных с выполнением процедуры, таких как анестезия или применение лекарств, долдно быть записано в отдельных архетипах типа ДЕЙСТВИЕ">
+			keywords = <"процедура, выполнение", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere informasjon om aktiviteter som må gjennomføres for å utføre en prosedyre, inkludert planlegging, fastsetting av tidspunkt, utførelse, utsettelse, kansellering, dokumentering og fullføring.">
+			use = <"Brukes til å registrere nødvendig informasjon om aktiviteter i gjennomføringen av en prosedyre. Dette inkluderer planlegging, fastsetting av tidspunkt, utførelse, utsettelse, avlysning, dokumentering og fullføring. Dette gjøres ved å registrere data knyttet til spesifikke aktiviteter som definert i arketypens prosesstrinn (Engelsk: \"Pathway careflow steps\").
+
+Arketypen dekker aktiviteter for en bredt spekter av kliniske prosedyrer utført i evaluerende, undersøkende, diagnostisk, kurativ, terapeutisk eller palliativ hensikt. Eksempler strekker seg fra relativt enkle aktiviteter som innsetting av en intravenøs kanyle, til komplekse kirurgiske operasjoner.
+
+Strukturert og detaljert tilleggsinformasjon om prosedyren kan registreres ved bruk av spesifikke CLUSTER-arketyper satt inn i \"Prosedyredetaljer\"-SLOTet der dette kreves.
+
+Start dato/tid er lagt inn som et eget dataelement. Registreres en Start dato/tid samtidig som prosesstrinnet \"Prosedyre planlagt\", regnes dette som planlagt start dato/tid. Registreres en Start dato/tid samtidig som prosesstrinnet \"Prosedyre utført\" regnes dette som den faktiske Start dato/tid for prosedyren.
+
+Slutt dato/tid er også inkludert som et dataelement, og er ment for situasjoner der en enten trenger å registrere to separate slutt-tider, eller når man bruker arketypen til å dokumentere en prosedyre som allerede er avsluttet. Et eksempel på førstnevnte kan være når man avslutter en operasjon og selve inngrepet er ferdig, men det gjenstår aktiviteter som at pasienten vaskes, legges på bandasje, leiring etc. før prosedyren som helhet kan regnet som fullført.
+
+I konteksten operasjonsrapport skal arketypen bare benyttes for å registrere hva som ble utført under prosedyren. Egne arketyper vil bli benyttet for å registrere andre komponenter av operasjonsrapporten, dette inkluderer biopsitakning, bildediagnostisk veiledning, funn under operasjonen, postoperative instruksjoner og videre planer for oppfølging.
+
+I en problemliste eller i et problemsammendrag kan denne arketypen benyttes for å gi en oversikt over hvilke prosedyrer som er utført. Arketypen EVALUATION.problem_diagnosis vil benyttes for å gi en oversikt over pasientens problemer og diagnoser.
+
+I praksis vil mange prosedyrer (f.eks. i primærhelsetjenesten) utføres én gang, og ikke bestilles i forkant. Prosesstrinnet \"Prosedyre utført\" (eller \"Mislykket førsøk\" eller \"Prosedyre avbrutt) vil da settes, og detaljene registreres. I noen tilfeller vil en gjentagende prosedyre bli rekvirert, og i en slik situasjon registreres prosesstrinnet \"Prosedyre utført\" i hvert enkelt tilfelle, og instruksjonen forblir i en aktiv tilstand. Når den siste prosedyren i serien er registrert settes prosesstrinnet \"Prosedyre avsluttet\", og rekvisisjonen gis status som avsluttet.
+
+I andre situasjoner, for eksempel i spesialisthelsetjenesten, kan det foreligge en formell rekvisisjon for en prosedyre hvor en motsvarende INSTRUCTION-arketype er benyttet. Denne ACTION-arketypen benyttes da for å registrere arbeidsflyt og for når og hvordan prosedyren ble utført.
+
+Registrering av informasjon i denne ACTION-arketypen indikerer at en eller annen type aktivitet faktisk er utført; dette vil vanligvis være prosedyren i seg selv, men kan også være et mislykket forsøk eller en annen aktivitet som f.eks. en utsettelse av prosedyren. Finnes det en formell henvisning til en prosedyre, er henvisningens status representert i det prosesstrinnet hvor data er registrert. For eksempel vil gjennomføringen av en gastroskopi lagret i denne arketypen kunne registreres som flere påfølgende oppføringer innen et fremdriftsnotat, en oppføring for hvert prosesstrinn:
+
+- registrert planlagt Start dato/tid for gastroskopien (\"Prosedyre planlagt\")
+- registrert at gastroskopien var forsøkt utført, men mislykket (\"Mislykket forsøk\")
+- registrert at gastroskopiprosedyren er fullført, inkludert informasjon om prosedyredetaljene (\"Prosedyre avsluttet\").">
+			keywords = <"prosedyre", "intervensjon", "kirurgisk", "medisinsk", "klinisk", "terapeutisk", "diagnostisk", "behandling", "kur">
+			misuse = <"Benyttes ikke til registrering om relaterte aktiviteter som bruk av bildeveiledning under prosedyren, bruk spesifikke ACTION-arketyper for dette formålet.
+
+Benyttes ikke for å registrere en hel operasjon eller prosedyrerapport.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Tomas Alme, DIPS, Norway", "Vebjoern Arntzen, Oslo university hospital, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Kari Beate Engseth, Finnmarkssykehuset HF + Klinikk Kirkenes, Norway", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Diego Bosca, IBIME group, Spain", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Megan Hawkins, Mater Health Services, Australia", "Sam Heard, Ocean Informatics, Australia", "Andreas Hering, Helse Bergen HF, Haukeland universitetssjukehus, Norway", "Anca Heyd, DIPS ASA, Norway", "Lars Karlsen, DIPS ASA, Norway", "Mary Kelaher, NEHTA, Australia", "Shinji Kobayashi, Kyoto University, Japan", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Hallvard Lærum, Oslo University Hospital, Norway", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Lars Morgan Karlsen, DIPS ASA, Norway", "Stewart Morrison, NEHTA, Australia", "Bjoern Naess, DIPS ASA, Norway", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Michael Osborne, Mater Health Services, Australia", "Anne Pauline Anderssen, Helse Nord RHF, Norway", "Chris Pearce, Melbourne East GP Network, Australia", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Jussara Rotzsch, UNB, Brazil", "Peter Scott, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "Norwegian Review Summary, Nasjonal IKT, Norway", "John Taylor, NEHTA, Australia", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Editor)", "Richard Townley-O'Neill, NEHTA, Australia">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"fitting, Draft Archetype [Internet]. National eHealth Transition Authority, Australia, NEHTA Clinical Knowledge Manager [cited: 2015-03-21]. Available from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.936.">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"C660959C82AEB9E6E76C8B5ACADCD9BB">
+		["build_uid"] = <"1e83293d-81cd-4aae-8ccc-c856e5af8bd6">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Device fitting
+		ism_transition matches {
+			ISM_TRANSITION[at0034] matches {	-- Fitting planned
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::524]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0034]}		-- Fitting planned
+					}
+				}
+			}
+			ISM_TRANSITION[at0035] matches {	-- Fitting request sent
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::524]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0035]}		-- Fitting request sent
+					}
+				}
+			}
+			ISM_TRANSITION[at0038] matches {	-- Fitting postponed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::527]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0038]}		-- Fitting postponed
+					}
+				}
+			}
+			ISM_TRANSITION[at0039] matches {	-- Fitting cancelled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::528]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0039]}		-- Fitting cancelled
+					}
+				}
+			}
+			ISM_TRANSITION[at0036] matches {	-- Fitting scheduled
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::529]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0036]}		-- Fitting scheduled
+					}
+				}
+			}
+			ISM_TRANSITION[at0068] matches {	-- Fitting commenced
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0068]}		-- Fitting commenced
+					}
+				}
+			}
+			ISM_TRANSITION[at0047] matches {	-- Fitting performed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0047]}		-- Fitting performed
+					}
+				}
+			}
+			ISM_TRANSITION[at0040] matches {	-- Fitting suspended
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::530]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0040]}		-- Fitting suspended
+					}
+				}
+			}
+			ISM_TRANSITION[at0041] matches {	-- Fitting aborted
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::531]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0041]}		-- Fitting aborted
+					}
+				}
+			}
+			ISM_TRANSITION[at0043] matches {	-- Fitting completed
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::532]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0043]}		-- Fitting completed
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] matches {	-- Device name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0049] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0058] occurrences matches {0..1} matches {	-- Urgency
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0063] occurrences matches {0..*} matches {	-- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {	-- Fitting detail
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location_clock(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[at0048] occurrences matches {0..1} matches {	-- Outcome
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0066] occurrences matches {0..1} matches {	-- Scheduled date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0060] occurrences matches {0..1} matches {	-- Final end date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0062] occurrences matches {0..*} matches {	-- Multimedia
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[at0014] occurrences matches {0..*} matches {	-- Reason
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0053] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0064] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0054] occurrences matches {0..1} matches {	-- Requestor order identifier
+						value matches {
+							DV_TEXT matches {*}
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0055] occurrences matches {0..1} matches {	-- Requestor
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0056] occurrences matches {0..1} matches {	-- Receiver order identifier
+						value matches {
+							DV_TEXT matches {*}
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0057] occurrences matches {0..*} matches {	-- Receiver
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Device fitting(en)">
+					description = <"*A clinical activity carried out to fit a non-invasive device to an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the fitting by name.(en)">
+					comment = <"*Coding of the specific fitting with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Fitting detail(en)">
+					description = <"*Structured information about the device fitting.(en)">
+					comment = <"*Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.(en)">
+				>
+				["at0005"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the activity or care pathway step not captured in other fields.(en)">
+				>
+				["at0014"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the activity or care pathway step for the identified fitting was carried out.(en)">
+					comment = <"*For example: the reason for the cancellation or suspension of the fitting.(en)">
+				>
+				["at0034"] = <
+					text = <"*Fitting planned(en)">
+					description = <"*The fitting to be undertaken is planned.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fitting request sent(en)">
+					description = <"*Request for fitting sent.(en)">
+				>
+				["at0036"] = <
+					text = <"*Fitting scheduled(en)">
+					description = <"*The fitting has been scheduled.(en)">
+				>
+				["at0038"] = <
+					text = <"*Fitting postponed(en)">
+					description = <"*The fitting has been postponed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Fitting cancelled(en)">
+					description = <"*The planned fitting has been cancelled prior to commencement.(en)">
+				>
+				["at0040"] = <
+					text = <"*Fitting suspended(en)">
+					description = <"*The fitting has been suspended.(en)">
+				>
+				["at0041"] = <
+					text = <"*Fitting aborted(en)">
+					description = <"*The fitting has been aborted.(en)">
+				>
+				["at0043"] = <
+					text = <"*Fitting completed(en)">
+					description = <"*The fitting has been performed and all associated clinical activities completed.(en)">
+				>
+				["at0047"] = <
+					text = <"*Fitting performed(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been performed.(en)">
+				>
+				["at0048"] = <
+					text = <"*Outcome(en)">
+					description = <"*Outcome of fitting the device.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.(en)">
+				>
+				["at0049"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the fitting, as appropriate for the pathway step.(en)">
+					comment = <"*For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.(en)">
+				>
+				["at0053"] = <
+					text = <"Tree(en)">
+					description = <"@ internal @">
+				>
+				["at0054"] = <
+					text = <"Identificador do solicitante do pedido">
+					description = <"ID local atribuído ao pedido pela profissional ou organização de saúde solicitante do serviço.">
+				>
+				["at0055"] = <
+					text = <"Solicitante">
+					description = <"Detalhes sobre o profissional ou organização de saúde que solicitou o serviço.">
+				>
+				["at0056"] = <
+					text = <"Identificador do destinatário do pedido">
+					description = <"O ID atribuído ao pedido pelo profissional ou organização de saúde que está recebendo a requisição do serviço. Isto também é referenciado como o Identificador de Preenchimento do Pedido.">
+				>
+				["at0057"] = <
+					text = <"Destinatário">
+					description = <"Detalhes sobre o profissional ou organização de saúde que recebeu o requerimento para o serviço.">
+				>
+				["at0058"] = <
+					text = <"*Urgency(en)">
+					description = <"*Urgency of the fitting.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible.(en)">
+				>
+				["at0060"] = <
+					text = <"*Final end date/time(en)">
+					description = <"*The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.(en)">
+					comment = <"*Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.(en)">
+				>
+				["at0062"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Mulitimedia representation of a performed fitting.(en)">
+				>
+				["at0063"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site for the fitting.(en)">
+					comment = <"*Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.(en)">
+				>
+				["at0064"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0066"] = <
+					text = <"*Scheduled date/time(en)">
+					description = <"*The date and/or time on which the fitting is intended to be performed.(en)">
+					comment = <"*Only for use in association with the 'fitting scheduled' pathway step.(en)">
+				>
+				["at0068"] = <
+					text = <"*Fitting commenced(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been commenced.(en)">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Device fitting(en)">
+					description = <"*A clinical activity carried out to fit a non-invasive device to an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the fitting by name.(en)">
+					comment = <"*Coding of the specific fitting with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Fitting detail(en)">
+					description = <"*Structured information about the device fitting.(en)">
+					comment = <"*Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.(en)">
+				>
+				["at0005"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the activity or care pathway step not captured in other fields.(en)">
+				>
+				["at0014"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the activity or care pathway step for the identified fitting was carried out.(en)">
+					comment = <"*For example: the reason for the cancellation or suspension of the fitting.(en)">
+				>
+				["at0034"] = <
+					text = <"*Fitting planned(en)">
+					description = <"*The fitting to be undertaken is planned.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fitting request sent(en)">
+					description = <"*Request for fitting sent.(en)">
+				>
+				["at0036"] = <
+					text = <"*Fitting scheduled(en)">
+					description = <"*The fitting has been scheduled.(en)">
+				>
+				["at0038"] = <
+					text = <"*Fitting postponed(en)">
+					description = <"*The fitting has been postponed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Fitting cancelled(en)">
+					description = <"*The planned fitting has been cancelled prior to commencement.(en)">
+				>
+				["at0040"] = <
+					text = <"*Fitting suspended(en)">
+					description = <"*The fitting has been suspended.(en)">
+				>
+				["at0041"] = <
+					text = <"*Fitting aborted(en)">
+					description = <"*The fitting has been aborted.(en)">
+				>
+				["at0043"] = <
+					text = <"*Fitting completed(en)">
+					description = <"*The fitting has been performed and all associated clinical activities completed.(en)">
+				>
+				["at0047"] = <
+					text = <"*Fitting performed(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been performed.(en)">
+				>
+				["at0048"] = <
+					text = <"*Outcome(en)">
+					description = <"*Outcome of fitting the device.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.(en)">
+				>
+				["at0049"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the fitting, as appropriate for the pathway step.(en)">
+					comment = <"*For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.(en)">
+				>
+				["at0053"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0054"] = <
+					text = <"ID naročila - naročnik">
+					description = <"Interni ID naročila, kot ga določi naročnik, npr. številka napotnice">
+				>
+				["at0055"] = <
+					text = <"Naročnik">
+					description = <"Kdo je naročil aktivnost, posameznik ali organizacija">
+				>
+				["at0056"] = <
+					text = <"ID naročila - prejemnik">
+					description = <"Interni ID naročila, kot ga določi prejemnik, npr. zap.št.pošte">
+				>
+				["at0057"] = <
+					text = <"Prejemnik">
+					description = <"Prejemnik naročila za izvedbo aktivnosti">
+				>
+				["at0058"] = <
+					text = <"*Urgency(en)">
+					description = <"*Urgency of the fitting.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible.(en)">
+				>
+				["at0060"] = <
+					text = <"*Final end date/time(en)">
+					description = <"*The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.(en)">
+					comment = <"*Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.(en)">
+				>
+				["at0062"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Mulitimedia representation of a performed fitting.(en)">
+				>
+				["at0063"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site for the fitting.(en)">
+					comment = <"*Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.(en)">
+				>
+				["at0064"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0066"] = <
+					text = <"*Scheduled date/time(en)">
+					description = <"*The date and/or time on which the fitting is intended to be performed.(en)">
+					comment = <"*Only for use in association with the 'fitting scheduled' pathway step.(en)">
+				>
+				["at0068"] = <
+					text = <"*Fitting commenced(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been commenced.(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Device fitting">
+					description = <"A clinical activity carried out to fit a non-invasive device to an individual.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Device name">
+					description = <"Identification of the fitting by name.">
+					comment = <"Coding of the specific fitting with a terminology is preferred, where possible.">
+				>
+				["at0003"] = <
+					text = <"Fitting detail">
+					description = <"Structured information about the device fitting.">
+					comment = <"Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.">
+				>
+				["at0005"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+				>
+				["at0014"] = <
+					text = <"Reason">
+					description = <"Reason that the activity or care pathway step for the identified fitting was carried out.">
+					comment = <"For example: the reason for the cancellation or suspension of the fitting.">
+				>
+				["at0034"] = <
+					text = <"Fitting planned">
+					description = <"The fitting to be undertaken is planned.">
+				>
+				["at0035"] = <
+					text = <"Fitting request sent">
+					description = <"Request for fitting sent.">
+				>
+				["at0036"] = <
+					text = <"Fitting scheduled">
+					description = <"The fitting has been scheduled.">
+				>
+				["at0038"] = <
+					text = <"Fitting postponed">
+					description = <"The fitting has been postponed.">
+				>
+				["at0039"] = <
+					text = <"Fitting cancelled">
+					description = <"The planned fitting has been cancelled prior to commencement.">
+				>
+				["at0040"] = <
+					text = <"Fitting suspended">
+					description = <"The fitting has been suspended.">
+				>
+				["at0041"] = <
+					text = <"Fitting aborted">
+					description = <"The fitting has been aborted.">
+				>
+				["at0043"] = <
+					text = <"Fitting completed">
+					description = <"The fitting has been performed and all associated clinical activities completed.">
+				>
+				["at0047"] = <
+					text = <"Fitting performed">
+					description = <"The fitting, or subfitting in a multicomponent fitting, has been performed.">
+				>
+				["at0048"] = <
+					text = <"Outcome">
+					description = <"Outcome of fitting the device.">
+					comment = <"Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.">
+				>
+				["at0049"] = <
+					text = <"Description">
+					description = <"Narrative description about the fitting, as appropriate for the pathway step.">
+					comment = <"For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.">
+				>
+				["at0053"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0054"] = <
+					text = <"Requestor order identifier">
+					description = <"The local ID assigned to the order by the healthcare provider or organisation requesting the service.">
+				>
+				["at0055"] = <
+					text = <"Requestor">
+					description = <"Details about the healthcare provider or organisation requesting the service.">
+				>
+				["at0056"] = <
+					text = <"Receiver order identifier">
+					description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.">
+				>
+				["at0057"] = <
+					text = <"Receiver">
+					description = <"Details about the healthcare provider or organisation receiving the request for service.">
+				>
+				["at0058"] = <
+					text = <"Urgency">
+					description = <"Urgency of the fitting.">
+					comment = <"Coding with a terminology is preferred, where possible.">
+				>
+				["at0060"] = <
+					text = <"Final end date/time">
+					description = <"The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.">
+					comment = <"Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.">
+				>
+				["at0062"] = <
+					text = <"Multimedia">
+					description = <"Mulitimedia representation of a performed fitting.">
+				>
+				["at0063"] = <
+					text = <"Body site">
+					description = <"Identification of the body site for the fitting.">
+					comment = <"Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.">
+				>
+				["at0064"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0066"] = <
+					text = <"Scheduled date/time">
+					description = <"The date and/or time on which the fitting is intended to be performed.">
+					comment = <"Only for use in association with the 'fitting scheduled' pathway step.">
+				>
+				["at0068"] = <
+					text = <"Fitting commenced">
+					description = <"The fitting, or subfitting in a multicomponent fitting, has been commenced.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Device fitting(en)">
+					description = <"*A clinical activity carried out to fit a non-invasive device to an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the fitting by name.(en)">
+					comment = <"*Coding of the specific fitting with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Fitting detail(en)">
+					description = <"*Structured information about the device fitting.(en)">
+					comment = <"*Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.(en)">
+				>
+				["at0005"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the activity or care pathway step not captured in other fields.(en)">
+				>
+				["at0014"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the activity or care pathway step for the identified fitting was carried out.(en)">
+					comment = <"*For example: the reason for the cancellation or suspension of the fitting.(en)">
+				>
+				["at0034"] = <
+					text = <"*Fitting planned(en)">
+					description = <"*The fitting to be undertaken is planned.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fitting request sent(en)">
+					description = <"*Request for fitting sent.(en)">
+				>
+				["at0036"] = <
+					text = <"*Fitting scheduled(en)">
+					description = <"*The fitting has been scheduled.(en)">
+				>
+				["at0038"] = <
+					text = <"*Fitting postponed(en)">
+					description = <"*The fitting has been postponed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Fitting cancelled(en)">
+					description = <"*The planned fitting has been cancelled prior to commencement.(en)">
+				>
+				["at0040"] = <
+					text = <"*Fitting suspended(en)">
+					description = <"*The fitting has been suspended.(en)">
+				>
+				["at0041"] = <
+					text = <"*Fitting aborted(en)">
+					description = <"*The fitting has been aborted.(en)">
+				>
+				["at0043"] = <
+					text = <"*Fitting completed(en)">
+					description = <"*The fitting has been performed and all associated clinical activities completed.(en)">
+				>
+				["at0047"] = <
+					text = <"*Fitting performed(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been performed.(en)">
+				>
+				["at0048"] = <
+					text = <"*Outcome(en)">
+					description = <"*Outcome of fitting the device.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.(en)">
+				>
+				["at0049"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the fitting, as appropriate for the pathway step.(en)">
+					comment = <"*For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.(en)">
+				>
+				["at0053"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0054"] = <
+					text = <"عنصر معرِّف فريد بواسطة طالب الاختبار">
+					description = <"العنصر التعريفي الفريد المحلي الذي يتم إعطاؤه للأمر بالاختبار بواسطة مقدم الخدمة الصحية أو المؤسسة التي تطلب الخدمة.">
+				>
+				["at0055"] = <
+					text = <"الطالب">
+					description = <"تفاصيل حول مقدم الخدمة الصحية أو المؤسسة التي تطلب الخدمة">
+				>
+				["at0056"] = <
+					text = <"عنصر معرِّف فريد بواسطة مستقبِل الطلب">
+					description = <"العنصر التعريفي الذي يتم إعطاؤه للأمر بالاختبار بواسطة مقدم الخدمة الصحية أو المؤسسة التي تستقبل طلب الخدمة. و يُعرَف أيضا بالعنصر معرِّف فريد بواسطة منفذ الاختبار">
+				>
+				["at0057"] = <
+					text = <"المستقبِل">
+					description = <"تفاصيل حول مقدم الخدمة الصحية أو المؤسسة التي تستقبل طلب الخدمة.">
+				>
+				["at0058"] = <
+					text = <"*Urgency(en)">
+					description = <"*Urgency of the fitting.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible.(en)">
+				>
+				["at0060"] = <
+					text = <"*Final end date/time(en)">
+					description = <"*The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.(en)">
+					comment = <"*Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.(en)">
+				>
+				["at0062"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Mulitimedia representation of a performed fitting.(en)">
+				>
+				["at0063"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site for the fitting.(en)">
+					comment = <"*Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.(en)">
+				>
+				["at0064"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0066"] = <
+					text = <"*Scheduled date/time(en)">
+					description = <"*The date and/or time on which the fitting is intended to be performed.(en)">
+					comment = <"*Only for use in association with the 'fitting scheduled' pathway step.(en)">
+				>
+				["at0068"] = <
+					text = <"*Fitting commenced(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been commenced.(en)">
+				>
+			>
+		>
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Device fitting(en)">
+					description = <"*A clinical activity carried out to fit a non-invasive device to an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the fitting by name.(en)">
+					comment = <"*Coding of the specific fitting with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Fitting detail(en)">
+					description = <"*Structured information about the device fitting.(en)">
+					comment = <"*Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.(en)">
+				>
+				["at0005"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the activity or care pathway step not captured in other fields.(en)">
+				>
+				["at0014"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the activity or care pathway step for the identified fitting was carried out.(en)">
+					comment = <"*For example: the reason for the cancellation or suspension of the fitting.(en)">
+				>
+				["at0034"] = <
+					text = <"*Fitting planned(en)">
+					description = <"*The fitting to be undertaken is planned.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fitting request sent(en)">
+					description = <"*Request for fitting sent.(en)">
+				>
+				["at0036"] = <
+					text = <"*Fitting scheduled(en)">
+					description = <"*The fitting has been scheduled.(en)">
+				>
+				["at0038"] = <
+					text = <"*Fitting postponed(en)">
+					description = <"*The fitting has been postponed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Fitting cancelled(en)">
+					description = <"*The planned fitting has been cancelled prior to commencement.(en)">
+				>
+				["at0040"] = <
+					text = <"*Fitting suspended(en)">
+					description = <"*The fitting has been suspended.(en)">
+				>
+				["at0041"] = <
+					text = <"*Fitting aborted(en)">
+					description = <"*The fitting has been aborted.(en)">
+				>
+				["at0043"] = <
+					text = <"*Fitting completed(en)">
+					description = <"*The fitting has been performed and all associated clinical activities completed.(en)">
+				>
+				["at0047"] = <
+					text = <"*Fitting performed(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been performed.(en)">
+				>
+				["at0048"] = <
+					text = <"*Outcome(en)">
+					description = <"*Outcome of fitting the device.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.(en)">
+				>
+				["at0049"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the fitting, as appropriate for the pathway step.(en)">
+					comment = <"*For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.(en)">
+				>
+				["at0053"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0054"] = <
+					text = <"Указатель на заказ">
+					description = <"Локальный идентификатор заказа от организации, запросившей услугу">
+				>
+				["at0055"] = <
+					text = <"Заказчик">
+					description = <"Подробности о заказчике (организации), запросившей услугу">
+				>
+				["at0056"] = <
+					text = <"идентификатор получателя заказа">
+					description = <"Идентификатор, присвоенный заказу орагнизацией, получившей заявку. Также называется \"Идентифакатор полученного заказа\". ">
+				>
+				["at0057"] = <
+					text = <"Исполнитель">
+					description = <"Подробные сведение об организации, получившей заявку на выполнение процедуры">
+				>
+				["at0058"] = <
+					text = <"*Urgency(en)">
+					description = <"*Urgency of the fitting.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible.(en)">
+				>
+				["at0060"] = <
+					text = <"*Final end date/time(en)">
+					description = <"*The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.(en)">
+					comment = <"*Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.(en)">
+				>
+				["at0062"] = <
+					text = <"*Multimedia(en)">
+					description = <"*Mulitimedia representation of a performed fitting.(en)">
+				>
+				["at0063"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site for the fitting.(en)">
+					comment = <"*Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.(en)">
+				>
+				["at0064"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0066"] = <
+					text = <"*Scheduled date/time(en)">
+					description = <"*The date and/or time on which the fitting is intended to be performed.(en)">
+					comment = <"*Only for use in association with the 'fitting scheduled' pathway step.(en)">
+				>
+				["at0068"] = <
+					text = <"*Fitting commenced(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been commenced.(en)">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Device fitting(en)">
+					description = <"*A clinical activity carried out to fit a non-invasive device to an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Device name(en)">
+					description = <"*Identification of the fitting by name.(en)">
+					comment = <"*Coding of the specific fitting with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Fitting detail(en)">
+					description = <"*Structured information about the device fitting.(en)">
+					comment = <"*Use to capture detailed, structured information about anatomical location, method & technique, equipment used, devices implanted, results, findings etc.(en)">
+				>
+				["at0005"] = <
+					text = <"Kommentar">
+					description = <"Ytterligere narrativ beskrivelse av aktivitet eller prosesstrinn som ikke er registrert i andre felt.">
+				>
+				["at0014"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the activity or care pathway step for the identified fitting was carried out.(en)">
+					comment = <"*For example: the reason for the cancellation or suspension of the fitting.(en)">
+				>
+				["at0034"] = <
+					text = <"*Fitting planned(en)">
+					description = <"*The fitting to be undertaken is planned.(en)">
+				>
+				["at0035"] = <
+					text = <"*Fitting request sent(en)">
+					description = <"*Request for fitting sent.(en)">
+				>
+				["at0036"] = <
+					text = <"*Fitting scheduled(en)">
+					description = <"*The fitting has been scheduled.(en)">
+				>
+				["at0038"] = <
+					text = <"*Fitting postponed(en)">
+					description = <"*The fitting has been postponed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Fitting cancelled(en)">
+					description = <"*The planned fitting has been cancelled prior to commencement.(en)">
+				>
+				["at0040"] = <
+					text = <"*Fitting suspended(en)">
+					description = <"*The fitting has been suspended.(en)">
+				>
+				["at0041"] = <
+					text = <"*Fitting aborted(en)">
+					description = <"*The fitting has been aborted.(en)">
+				>
+				["at0043"] = <
+					text = <"*Fitting completed(en)">
+					description = <"*The fitting has been performed and all associated clinical activities completed.(en)">
+				>
+				["at0047"] = <
+					text = <"*Fitting performed(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been performed.(en)">
+				>
+				["at0048"] = <
+					text = <"*Outcome(en)">
+					description = <"*Outcome of fitting the device.(en)">
+					comment = <"*Coding with a terminology is preferred, where possible. For example: successful fitting or description of any problems encountered.(en)">
+				>
+				["at0049"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the fitting, as appropriate for the pathway step.(en)">
+					comment = <"*For example: description about the performance and findings from the the fitting, the aborted attempt or the cancellation of the fitting.(en)">
+				>
+				["at0053"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0054"] = <
+					text = <"Rekvisisjonsidentifikator">
+					description = <"Den lokale IDen tilordnet rekvisisjonen av helsepersonellet eller organisasjonen som rekvirerer prosedyren.">
+				>
+				["at0055"] = <
+					text = <"Rekvirent">
+					description = <"Detaljer om helsepersonellet eller organisasjonen som har rekvirert prosedyren.">
+				>
+				["at0056"] = <
+					text = <"Mottakers rekvisisjonsidentifikator">
+					description = <"IDen tilordnet rekvisisjonen av helsepersonellet eller organisasjonen som mottar rekvisisjonen.">
+				>
+				["at0057"] = <
+					text = <"Mottaker">
+					description = <"Detaljer om helsepersonellet eller organisasjonen som mottar prosedyrerekvisisjonen.">
+				>
+				["at0058"] = <
+					text = <"Hastegrad">
+					description = <"Prosedyrens hastegrad.">
+					comment = <"Koding med en terminologi er ønskelig, om mulig.">
+				>
+				["at0060"] = <
+					text = <"*Final end date/time(en)">
+					description = <"*The date and/or time when the entire fitting or the last component of a multicomponent fitting, was finished.(en)">
+					comment = <"*Only for use in association with the 'fitting performed' pathway step, and in situations where the fitting is repeated on multiple occasions before being completed or there are multiple components to the whole fitting. This may be the same as the RM time attribute for the 'fitting completed' pathway step.(en)">
+				>
+				["at0062"] = <
+					text = <"Multimedia">
+					description = <"Multimediarepresentasjon av en utført prosedyre.">
+				>
+				["at0063"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of the body site for the fitting.(en)">
+					comment = <"*Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'fitting detail' SLOT in this archetype. If the anatomical location is included in the 'fitting name' via precoordinated codes, this data element becomes redundant.(en)">
+				>
+				["at0064"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0066"] = <
+					text = <"*Scheduled date/time(en)">
+					description = <"*The date and/or time on which the fitting is intended to be performed.(en)">
+					comment = <"*Only for use in association with the 'fitting scheduled' pathway step.(en)">
+				>
+				["at0068"] = <
+					text = <"*Fitting commenced(en)">
+					description = <"*The fitting, or subfitting in a multicomponent fitting, has been commenced.(en)">
+				>
+			>
+		>
+	>
