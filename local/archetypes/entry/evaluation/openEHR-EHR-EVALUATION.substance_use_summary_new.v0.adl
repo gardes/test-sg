@@ -1,0 +1,622 @@
+﻿archetype (adl_version=1.4; uid=40186790-831d-4f05-87b7-6c9e81092aa0)
+	openEHR-EHR-EVALUATION.substance_use_summary_new.v0
+
+concept
+	[at0000]	-- substance_use_summary_new
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2020-02-13">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record summary or peristent information about the individual's pattern of use of harmful or hazardous use of medications or other legal and illegal substances.
+
+">
+			use = <"Use to record summary or peristent information about the individual's pattern of use of harmful or hazardous use of (medications or other) legal and illegal substances.
+Also known as substance abuse, and includes substance dependence, addiction and doping. 
+
+This archetype is to be used to record information about both current and previous substance use behaviour.
+
+The specific scope of this archetype includes all types of addictive substances, including, but not limited to: recreational drugs; solvents; caffeine; amphetamines, barbiturates, benzodiazepines, cannabis, cocaine, hallucinogens, opioids, anabolic steroids, erythropoietin, or sniffing glue.
+The only exceptions are alcohol consumption, tobacco smoking and smokeless tobacco use because these substances have been modelled in other, specific archetypes.
+
+The 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of substance used and can be repeated once per type.
+
+The 'Episode' cluster allows for recording of specific details, routes and forms during a specified period of time. If the pattern, route or form changes significantly, record the details in a new instance of the Episode' CLUSTER.
+Triggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual:
+- quits for a significant period of time; or
+- significantly changes their amount, route or form of their substance use.
+
+If multiple forms of the substance are consumed, the details will be recorded in the 'Per form' CLUSTER within this archetype.
+
+If multiple routes are used, the details will be recorded in the 'Per route' CLUSTER within this archetype. 
+
+Use to incorporate the narrative descriptions of substance use habits within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.">
+			keywords = <"abuse, addiction, illegal drugs, doping, misuse, illicit substance", ...>
+			misuse = <"Not to be used to record information about tobacco use - use EVALUATION.tobacco_smoking_summary or EVALUATION.smokeless_tobacco_summary for this purpose.
+
+Not to be used to record information about alcohol use - use EVALUATION.alcohol_use_summary for this purpose.
+
+Not to be used to record event-or period-based information about substance use, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.substance_use archetype.">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "John Tore Valand, Haukeland Universitetssjukehus, Norway (openEHR Editor)", "Ingrid Skard, DIPS AS, Norway">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["current_contact"] = <"Heather Leslie, Atomica Informatics, heather.leslie@atomicainformatics.com">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"7A611234611C608C4E402C7BD2758224">
+		["build_uid"] = <"2957dfa5-3523-4c97-ac26-32c4f2e1f384">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- substance_use_summary_new
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Overall status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Never used
+									at0005,    -- Current user
+									at0006]    -- Former user
+								}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Overall description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- First ever use
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Regular use commenced
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Daily use commenced
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					CLUSTER[at0042] occurrences matches {0..1} matches {    -- *Per type
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0043] matches {    -- *Type
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0044] occurrences matches {0..1} matches {    -- *(Type) Status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0045,    -- Current user
+											at0046,    -- Former user
+											at0047]    -- Never used
+										}
+									}
+								}
+							}
+							ELEMENT[at0048] occurrences matches {0..1} matches {    -- *(Type) Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0012] occurrences matches {0..*} matches {    -- Per episode
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Episode label
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|>=0|}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Episode start date
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Episode end date
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Episode Description
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Pattern
+										value matches {
+											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0020,    -- Daily
+													at0021]    -- Non-daily
+												}
+											}
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Typical use (amount/frequency)
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"mg/d">
+													>
+													["2"] = <
+														units = <"g/d">
+													>
+													["3"] = <
+														units = <"mg/wk">
+													>
+													["4"] = <
+														units = <"g/wk">
+													>
+													["5"] = <
+														units = <"mg/mo">
+													>
+													["6"] = <
+														units = <"g/mo">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- *Typical frequency/time
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+														magnitude = <|>=0.0|>
+														precision = <|0|>
+													>
+													["2"] = <
+														units = <"1/wk">
+														magnitude = <|>=0.0|>
+														precision = <|0|>
+													>
+													["3"] = <
+														units = <"1/mo">
+														magnitude = <|>=0.0|>
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Substance free days
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/wk">
+														magnitude = <|0.0..7.0|>
+													>
+													["2"] = <
+														units = <"1/mo">
+														magnitude = <|0.0..31.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Number of quit attempts
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|>=0|}
+											}
+										}
+									}
+									allow_archetype CLUSTER[at0025] occurrences matches {0..*} matches {    -- Episode details
+										include
+											archetype_id/value matches {/.*/}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Episode comment
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+									CLUSTER[at0033] occurrences matches {0..*} matches {    -- Per form/route
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0036] matches {    -- Form/route
+												value matches {
+													DV_TEXT matches {*}
+												}
+												name matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0038,    -- Form
+															at0039]    -- Route
+														}
+													}
+												}
+											}
+											ELEMENT[at0037] occurrences matches {0..1} matches {    -- (form/route) Description
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- (form/route) Typical use
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											ELEMENT[at0041] occurrences matches {0..1} matches {    -- (form/route) Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+										name matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0034,    -- Per form
+													at0035]    -- Per route
+												}
+											}
+										}
+									}
+								}
+							}
+							allow_archetype CLUSTER[at0058] occurrences matches {0..*} matches {    -- Type detail
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0051] occurrences matches {0..1} matches {    -- *(Type) Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0050] occurrences matches {0..1} matches {    -- *(Type) Quit date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0027] occurrences matches {0..*} matches {    -- Overall details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Overall quit date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0052] occurrences matches {0..1} matches {    -- *Overall years of use
+						value matches {
+							DV_QUANTITY matches {*}
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Overall comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0029] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0032] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0053] occurrences matches {0..1} matches {    -- *Quit date derfinition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0054] occurrences matches {0..1} matches {    -- *Quit attempt definition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0055] occurrences matches {0..1} matches {    -- *Current user definition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0056] occurrences matches {0..1} matches {    -- *Former user definition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0057] occurrences matches {0..1} matches {    -- *Never used definition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"substance_use_summary_new">
+					description = <"Summary or peristent information about the individual's pattern of use of harmful or hazardous use of medications or other legal and illegal substances.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Overall status">
+					description = <"Statement about current use of any substance, in all forms and by all routes.">
+				>
+				["at0004"] = <
+					text = <"Never used">
+					description = <"The individual has never used the identified substance.">
+				>
+				["at0005"] = <
+					text = <"Current user">
+					description = <"The individual is currently using the identified substance.">
+				>
+				["at0006"] = <
+					text = <"Former user">
+					description = <"The individual has previously used the identified substance.">
+				>
+				["at0007"] = <
+					text = <"Overall description">
+					description = <"Narrative summary about use behaviour for any substances.">
+				>
+				["at0008"] = <
+					text = <"First ever use">
+					description = <"Date when the individual first used any substances.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0009"] = <
+					text = <"Regular use commenced">
+					description = <"The date when the individual first started frequent or regular, but usually non-daily, use of any substances.">
+					comment = <"Can be a partial date, for example, only a year. For example, this date could represent when the individual commenced using substances every Friday night or at parties.">
+				>
+				["at0010"] = <
+					text = <"Daily use commenced">
+					description = <"The date when the individual first started daily use of any substances.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0012"] = <
+					text = <"Per episode">
+					description = <"Details about a discrete period of use of the substance.">
+				>
+				["at0013"] = <
+					text = <"Episode label">
+					description = <"Identification of an episode of the specified type substance use - either as a number in a sequence or a named event.">
+					comment = <"For example: '2' as the second episode within a sequence of episodes; or 'Pregnancy with twins' if describing the substance use during a health event such as a specific pregnancy.">
+				>
+				["at0014"] = <
+					text = <"Episode start date">
+					description = <"Date when this episode commenced.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0018"] = <
+					text = <"Episode Description">
+					description = <"Narrative summary about the specified type substance use during the episode.">
+				>
+				["at0015"] = <
+					text = <"Episode end date">
+					description = <"Date when this episode ceased.">
+					comment = <"Can be a partial date, for example, only a year. This data field will be empty if the episode is current and ongoing.">
+				>
+				["at0019"] = <
+					text = <"Pattern">
+					description = <"The typical pattern of substance use .
+
+*The typical pattern of use for the specified type of substance.">
+					comment = <"The typical pattern of use can be made more granular by coding with a terminology or a local value set in a template.">
+				>
+				["at0020"] = <
+					text = <"Daily">
+					description = <"Use the substance at least once every day.">
+				>
+				["at0021"] = <
+					text = <"Non-daily">
+					description = <"Not using the substance every day.">
+				>
+				["at0022"] = <
+					text = <"Substance free days">
+					description = <"The number of days where the spesified type of substance was not used.">
+				>
+				["at0023"] = <
+					text = <"Typical use (amount/frequency)">
+					description = <"Typical amount per frequency of use for the specified type of substance.">
+				>
+				["at0024"] = <
+					text = <"Number of quit attempts">
+					description = <"Total number of times the individual has attempted to stop using the specified type substance within this episode.">
+				>
+				["at0025"] = <
+					text = <"Episode details">
+					description = <"Additional details about the episode.">
+				>
+				["at0026"] = <
+					text = <"Episode comment">
+					description = <"Additional narrative about use of the specific type substance during this episode, not captured in other fields.">
+				>
+				["at0027"] = <
+					text = <"Overall details">
+					description = <"Additional structured details about the overall use of the any type of substance.">
+				>
+				["at0028"] = <
+					text = <"Overall quit date">
+					description = <"The date when the individual last ceased all use/misuse of substances.">
+				>
+				["at0029"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0030"] = <
+					text = <"Overall comment">
+					description = <"Additional narrative about the overall use of any type of substances that has not been captured in other fields.">
+				>
+				["at0031"] = <
+					text = <"Last updated">
+					description = <"The date this summary was last updated.">
+				>
+				["at0032"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0033"] = <
+					text = <"Per form/route">
+					description = <"Details about the substance use per physical form of the substance or per route of administration, during the episode.">
+				>
+				["at0034"] = <
+					text = <"Per form">
+					description = <"Details about each form of the substance. For example: buds or oil.">
+				>
+				["at0035"] = <
+					text = <"Per route">
+					description = <"Details about each route of administration . For example: intravenous or inhalation.">
+				>
+				["at0036"] = <
+					text = <"Form/route">
+					description = <"The name of the  physical form or administrasjon route (delivery methods).">
+					comment = <"For example: 'smoking', 'nasal insufflation (sniffing and snorting)', 'injection', 'oil', 'powder', 'pills'.">
+				>
+				["at0037"] = <
+					text = <"(form/route) Description">
+					description = <"Narrative description about the substance use by the identified form or route.">
+				>
+				["at0038"] = <
+					text = <"Form">
+					description = <"The form of the substance administered.">
+				>
+				["at0039"] = <
+					text = <"Route">
+					description = <"The route of administration of the substance.">
+				>
+				["at0040"] = <
+					text = <"(form/route) Typical use">
+					description = <"Typical use by the identified form or route.">
+				>
+				["at0041"] = <
+					text = <"(form/route) Comment">
+					description = <"Additional narrative about the substance use by the identified form or route that has not been captured in other fields.">
+				>
+				["at0042"] = <
+					text = <"*Per type">
+					description = <"Details about use of a specified type of substance.">
+					comment = <"Coding with an external terminology is preferred, where possible.">
+				>
+				["at0043"] = <
+					text = <"*Type">
+					description = <"The name of the specific type or grouping of substance. 
+">
+					comment = <"For example: A specific type could be 'marijuana' or 'hashish', while a group could be 'cannabis'. Or 'heroin', 'fentanyl', 'Vicodin' or 'morphine', while a group could be opioids.
+
+Coding with an external terminology is preferred, where possible.
+
+">
+				>
+				["at0044"] = <
+					text = <"*(Type) Status">
+					description = <"Statement about current use of the specified type of substance.">
+				>
+				["at0045"] = <
+					text = <"Current user">
+					description = <"The individual is a current user of the specified type of substance.">
+				>
+				["at0046"] = <
+					text = <"Former user">
+					description = <"The individual has previously used the specified substance, but is not a current user.">
+				>
+				["at0047"] = <
+					text = <"Never used">
+					description = <"The individual has never used the specified type of substance.">
+				>
+				["at0048"] = <
+					text = <"*(Type) Description">
+					description = <"Narrative summary about use of the specified type of substance.">
+				>
+				["at0049"] = <
+					text = <"*Typical frequency/time">
+					description = <"Estimate of number of times that an individual uses the specified type of substance per time period.">
+					comment = <"For example: the number of 'joints', 'user doses' or 'pills' per day or per week.">
+				>
+				["at0050"] = <
+					text = <"*(Type) Quit date">
+					description = <"Date when the individual last used the specified type of substance.">
+					comment = <"Can be a partial date, for example, only a year. Definitions for a 'Quit date' vary enormously and can be defined using the 'Quit data definition' data element in the Protocol section of this archetype. This date will be identical to the 'Episode end date' for the most recent episode. This date could be used by decision support guidance to determine if the individual is at risk of relapse, for example in the first 12 months since quitting.">
+				>
+				["at0051"] = <
+					text = <"*(Type) Comment">
+					description = <"Additional narrative about the use of the specified type of substance, not captured in other fields.">
+				>
+				["at0052"] = <
+					text = <"*Overall years of use">
+					description = <"The cumulative number of years that the individual has used/misused substanses.">
+					comment = <"This data element does not take into account the amount of substanses used.">
+				>
+				["at0053"] = <
+					text = <"*Quit date derfinition">
+					description = <"The applied definition for the 'Quit date' data elements used in this archetype.">
+				>
+				["at0054"] = <
+					text = <"*Quit attempt definition">
+					description = <"The applied definition for a Quit attempt used to determine value for the 'Number of quit attempts' data element used in this archetype.">
+					comment = <"For example: 'stopped smoking substance for one day or longer with the intention of quitting'.">
+				>
+				["at0055"] = <
+					text = <"*Current user definition">
+					description = <"The applied definition for the 'Current user' value in each of the 'Status' data elements used in this archetype.">
+					comment = <"Definition may need to be specified per type.">
+				>
+				["at0056"] = <
+					text = <"*Former user definition">
+					description = <"The applied definition for the 'Former user' value in each of the 'Status' data elements used in this archetype.">
+					comment = <"Definition may need to be specified per type.">
+				>
+				["at0057"] = <
+					text = <"*Never used definition">
+					description = <"The applied definition for the 'Never used' value in each of the 'Status' data elements used in this archetype.">
+					comment = <"Definition may need to be specified per type. For example, the definition may not be zero, but less than a specified amount used during a specified time interval.">
+				>
+				["at0058"] = <
+					text = <"Type detail">
+					description = <"Additional structured details relating to the specified type of substance use.">
+				>
+			>
+		>
+	>

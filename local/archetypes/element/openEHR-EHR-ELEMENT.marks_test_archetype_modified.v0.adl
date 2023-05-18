@@ -1,0 +1,52 @@
+﻿archetype (adl_version=1.4; uid=11aef30f-f077-4543-b1f3-64c160004e3a)
+	openEHR-EHR-ELEMENT.marks_test_archetype_modified.v0
+
+concept
+	[at0000]	-- Marks Test Archetype 1
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <" ">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing Bulk Upload functionality in CKM">
+			use = <"Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file">
+			misuse = <"None">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"419A855A5F21AE982376F3FE5C43A754">
+		["build_uid"] = <"65506777-57dd-485f-8a1d-4db00b795489">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ELEMENT[at0000] matches {	-- Marks Test Archetype 1
+		value matches {
+			DV_IDENTIFIER matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks Test Archetype 1">
+					description = <"This is going to be used to test Bulk uploading more than one Archetype in a ZIP file">
+				>
+			>
+		>
+	>
