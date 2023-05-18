@@ -1,0 +1,56 @@
+﻿archetype (adl_version=1.4; uid=9ef682af-2e03-4c91-bdd8-1298c8a268ca)
+	openEHR-EHR-EVALUATION.marks_testing.v0
+
+concept
+	[at0000]	-- Marks testing
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing">
+			use = <"More testing">
+			misuse = <"CKM-T2">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F4BE88A609C3D8D4C77E018AFA953B66">
+		["build_uid"] = <"d8b170a7-7de1-4087-a9cc-b8dbbcb9d371">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Marks testing
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks testing">
+					description = <"New Archetyp ID created to test CKM-T2">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
