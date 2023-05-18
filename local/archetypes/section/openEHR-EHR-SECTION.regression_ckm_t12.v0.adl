@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=321e35b9-e9af-4b8e-a3b1-4872185cf925)
-	openEHR-EHR-ACTION.ckm_t12_archetype.v0
+﻿archetype (adl_version=1.4; uid=d97cdb3f-6412-4f16-920e-c1b329f78a9e)
+	openEHR-EHR-SECTION.regression_ckm_t12.v0
 
 concept
-	[at0000]	-- CKM-T12 ARCHETYPE
+	[at0000]	-- Regression ckm t12
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -12,9 +12,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Testing CKM-T12">
-			use = <"Testing CKM-T12">
-			misuse = <"Hope it works">
+			purpose = <"CKM-T12">
+			use = <"Testing man">
+			misuse = <"None">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -26,13 +26,13 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"E64B4E4437E5C207DA5BD96276C3E5AC">
-		["build_uid"] = <"afcfcefa-afe2-4315-bc11-3744bb71cf08">
+		["MD5-CAM-1.0.1"] = <"772C6E5EA355BD8BCE85163BC412F8A5">
+		["build_uid"] = <"834a0b07-1d2e-4f06-a27e-434f9d2add52">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	ACTION[at0000] matches {*}
+	SECTION[at0000] matches {*}
 
 
 ontology
@@ -40,7 +40,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"CKM-T12 ARCHETYPE">
+					text = <"Regression ckm t12">
 					description = <"unknown">
 				>
 			>
