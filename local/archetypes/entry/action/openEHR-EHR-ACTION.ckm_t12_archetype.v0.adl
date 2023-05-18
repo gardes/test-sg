@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=321e35b9-e9af-4b8e-a3b1-4872185cf925)
+	openEHR-EHR-ACTION.ckm_t12_archetype.v0
+
+concept
+	[at0000]	-- CKM-T12 ARCHETYPE
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing CKM-T12">
+			use = <"Testing CKM-T12">
+			misuse = <"Hope it works">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"E64B4E4437E5C207DA5BD96276C3E5AC">
+		["build_uid"] = <"5700b16f-beb3-4276-8d7f-cc633cb4848b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"CKM-T12 ARCHETYPE">
+					description = <"unknown">
+				>
+			>
+		>
+	>
