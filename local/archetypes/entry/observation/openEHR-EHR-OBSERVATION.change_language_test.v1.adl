@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=9b00ea6b-2bc7-4d38-8ac4-0c7ce18c143c)
-	openEHR-EHR-OBSERVATION.change_language_test.v0
+﻿archetype (adl_version=1.4; uid=e551768c-4e5e-46df-8371-002d58ce72d3)
+	openEHR-EHR-OBSERVATION.change_language_test.v1
 
 concept
 	[at0000]	-- Change Language Test
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7DE1FCFF3A0C1E0C92F668398165DAB0">
-		["build_uid"] = <"1c943cd4-dddd-4252-8408-437567209ee5">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"0369E46758B295E89B77297DA9E5F9F5">
+		["build_uid"] = <"951155a0-a0ed-482d-9d47-6b8fb3ce53f5">
+		["revision"] = <"1.0.0">
 	>
 
 definition
