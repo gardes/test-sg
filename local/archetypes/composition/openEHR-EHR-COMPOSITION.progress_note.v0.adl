@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=e5243e9c-8e98-4877-af93-eeee308a2c37)
+﻿archetype (adl_version=1.4; uid=533faffd-b4de-43d2-a9a9-74b3468a1f4a)
 	openEHR-EHR-COMPOSITION.progress_note.v0
 
 concept
@@ -40,6 +40,7 @@ description
 Ein typischer Fortschrittsbericht während einer Krankenhausepisode für die Krankenpglege kann Archetypen EVALUATION.reason_for_encounter, EVALUATION.progress_note zur Darstellung der Beschreibung der Schicht der Krankenpflege enthalten oder eine Kombination von OBSERVATION-Archetypen zur Darstellung von Vitalzeichen-Parameter und / oder ACTION-Archetypen zur Darstellung der durchgeführten Maßnahmen oder Prozeduren umfassen.">
 			keywords = <"Fortschrittsbericht, Fortschrittsnotiz", ...>
 			misuse = <"">
+			copyright = <"© Australian Digital Health Agency, openEHR Foundation, openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -49,6 +50,7 @@ Ein typischer Fortschrittsbericht während einer Krankenhausepisode für die Kra
 Et typisk fortløpende sykepleienotat under en innleggelse kan inkludere EVALUATION.reason_for_encounter, EVALUATION.progress_note for å registrere en fritekstlig oppsummering fra vaktskiftet, en kombinasjon av OBSERVATIONS for å registrere vitaltegn, målinger og/eller ACTIONS for å registrere planer eller prosedyrer som ble utført.">
 			keywords = <"Fortløpende notat", ...>
 			misuse = <"">
+			copyright = <"© Australian Digital Health Agency, openEHR Foundation, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -58,20 +60,22 @@ Et typisk fortløpende sykepleienotat under en innleggelse kan inkludere EVALUAT
 A typical nursing progress note during a hospital episode might include EVALUATION.reason_for_encounter, EVALUATION.progress_note to record the narrative summary of the nursing shift, a combination of OBSERVATIONS for recording vital signs measurements and/or ACTIONS to record the tasks or procedures carried out.">
 			keywords = <"progress note", ...>
 			misuse = <"">
-			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
+			copyright = <"© Australian Digital Health Agency, openEHR Foundation, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Derived from: Progress note, Draft archetype [Internet]. Australian Digital Health Agency (NEHTA), ADHA Clinical Knowledge Manager. Authored: 2013 Apr 11. Available at: http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1278_1 (discontinued)">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Progress Note, Draft archetype [Internet]. openEHR Foundation, International Archetypes Clinical Knowledge Manager [cited: 2023-05-25]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.1640
+
+Derived from: Progress note, Draft archetype [Internet]. Australian Digital Health Agency (NEHTA), ADHA Clinical Knowledge Manager. Authored: 2013 Apr 11. Available at: http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1278_1 (discontinued)">
 		["current_contact"] = <"Dr Heather Leslie, Atomica Informatics, Australia<heather.leslie@atomicainformatics.com>">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"828E3A9242B5A392FFB0A74D4AC7F494">
-		["build_uid"] = <"fba771b3-54c6-4bf6-97eb-12c3f52af0fd">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"DB944A80092FAFBD384F00964DC8417D">
+		["build_uid"] = <"76400be6-c5ee-4efc-94e4-3cbc4191cfe9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
