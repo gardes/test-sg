@@ -5,6 +5,21 @@ concept
 	[at0000]	-- blah
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastianåæâß Ocean">
+				["organisation"] = <"Ocean Infws">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+			other_details = <
+				["other_contributors"] = <"Test other contributor, Germany
+Test33, rfr.dw, wrew
+Test2, Some org, Austria">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -13,6 +28,12 @@ description
 		["date"] = <"2021-02-17">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -29,8 +50,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"1E08541ADABC75244CF949E09B471554">
-		["build_uid"] = <"58144075-7687-4bd0-9828-f27c87cf9552">
+		["MD5-CAM-1.0.1"] = <"5B1F3049D73C3039FB537D3C57B4CFCB">
+		["build_uid"] = <"ffbfb11b-79da-4488-9d2b-9313773d2924">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -65,6 +86,22 @@ ontology
 					text = <"test">
 					description = <"&">
 					comment = <"&">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*blah(en)">
+					description = <"*blah(en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Test">
+					description = <"&">
 				>
 			>
 		>
