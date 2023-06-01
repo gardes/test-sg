@@ -12,9 +12,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
+			purpose = <"Added this text">
+			use = <"Added this use">
+			misuse = <"Added this as cannot misuse template">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -27,8 +27,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"213C41815DED6D7287DCB85DAD0E549A">
-		["build_uid"] = <"345c9274-90f0-488b-bb57-0c9395d14d5b">
+		["MD5-CAM-1.0.1"] = <"F7C4D21DFF6A64BCE206E349688C2919">
+		["build_uid"] = <"c32e5b27-d0e4-418a-b0ae-8af4ee09f347">
 		["revision"] = <"0.0.1-alpha">
 	>
 

@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.address-nz.v1
+﻿archetype (adl_version=1.4; uid=1663c4bf-2ff0-4ed7-9dd3-b64e19e8ca2b)
+	openEHR-EHR-CLUSTER.address-nz.v0
 specialise
 	openEHR-EHR-CLUSTER.address.v1
 
@@ -17,17 +17,24 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details of one or more personal addresses for an individual.">
-			use = <"">
+			use = <"Record more psersonal details of an individual.">
 			keywords = <"address", ...>
-			misuse = <"">
+			misuse = <"None.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
-		["MD5-CAM-1.0.1"] = <"FBA69C96FBC0325235AF19DDBE4E4D0B">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"D103C8094264F24A06F32442867978EC">
+		["build_uid"] = <"84bf17e6-9bfc-47d1-9284-df7c4cdb516e">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

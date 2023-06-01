@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.address.v1
+﻿archetype (adl_version=1.4; uid=005a91cc-6d77-4386-83d8-df1bc3cdb3a9)
+	openEHR-EHR-CLUSTER.address.v0
 
 concept
 	[at0000]	-- Address
@@ -22,28 +22,35 @@ description
 		["date"] = <"11/11/2007">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record details of one or more personal addresses for an individual.">
-			use = <"">
-			keywords = <"address", ...>
-			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Dokumentation einer oder mehrerer Adressen einer Person oder Einrichtung.">
 			use = <"">
 			keywords = <"Adresse", ...>
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR foundation">
+			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of one or more personal addresses for an individual being where they live">
+			use = <"To see where an individual lives">
+			keywords = <"address", ...>
+			misuse = <"No misuse">
+			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
-		["MD5-CAM-1.0.1"] = <"CD4E0D86020F35378BB03F30F08B56B4">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"E69B639D230399B19B979D0931315253">
+		["build_uid"] = <"b770ac71-14e1-4d11-b4ae-15435db151f7">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
