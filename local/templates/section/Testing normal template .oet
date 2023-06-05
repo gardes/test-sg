@@ -78,6 +78,8 @@
   </annotations>
   <definition xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.fake_ad_hoc_heading.v0" concept_name="Fake ad hoc heading">
     <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.fake_cd_item_1.v0" concept_name="Fake cd item 1" path="/items[at0001]/items">
+      <Rule path="/data[at0001]" name="TESTING CKM-T28" />
+      <Rule path="/data[at0001]/events[at0002]" name="CKM-T28" />
       <SubjectOfCare>
         <includedValues>openehr::0</includedValues>
       </SubjectOfCare>
