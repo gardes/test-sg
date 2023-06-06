@@ -12,6 +12,12 @@ language
 				["name"] = <"?">
 			>
 		>
+		["ji"] = <
+			language = <[ISO_639-1::ji]>
+			author = <
+				["name"] = <"?">
+			>
+		>
 	>
 description
 	original_author = <
@@ -31,6 +37,12 @@ description
 			misuse = <"None">
 			copyright = <"© openEHR Foundation">
 		>
+		["ji"] = <
+			language = <[ISO_639-1::ji]>
+			purpose = <"*Testing Bulk Upload functionality in CKM(en)">
+			use = <"*Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file(en)">
+			misuse = <"*None(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -40,8 +52,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8C8033C996288AA066D318983EA145EC">
-		["build_uid"] = <"035b9913-af93-469d-9a34-c210dab52e2e">
+		["MD5-CAM-1.0.1"] = <"55BFD9E6E5818723ACFDD0D8B2C34124">
+		["build_uid"] = <"a8d0a6a2-8268-487f-87f8-e60316640c71">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -64,6 +76,14 @@ ontology
 			>
 		>
 		["fi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Test Archetype 1(en)">
+					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file(en)">
+				>
+			>
+		>
+		["ji"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Marks Test Archetype 1(en)">
