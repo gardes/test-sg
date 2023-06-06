@@ -5,11 +5,25 @@ concept
 	[at0000]	-- Marks Test Archetype 1
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <" ">
 	>
 	details = <
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			purpose = <"*Testing Bulk Upload functionality in CKM.  Added this(en) again">
+			use = <"*Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file(en)">
+			misuse = <"*None(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing Bulk Upload functionality in CKM">
@@ -26,8 +40,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"419A855A5F21AE982376F3FE5C43A754">
-		["build_uid"] = <"65506777-57dd-485f-8a1d-4db00b795489">
+		["MD5-CAM-1.0.1"] = <"8C8033C996288AA066D318983EA145EC">
+		["build_uid"] = <"035b9913-af93-469d-9a34-c210dab52e2e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -46,6 +60,14 @@ ontology
 				["at0000"] = <
 					text = <"Marks Test Archetype 1">
 					description = <"This is going to be used to test Bulk uploading more than one Archetype in a ZIP file">
+				>
+			>
+		>
+		["fi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Test Archetype 1(en)">
+					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file(en)">
 				>
 			>
 		>
