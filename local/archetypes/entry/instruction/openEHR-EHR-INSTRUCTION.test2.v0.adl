@@ -5,11 +5,25 @@ concept
 	[at0000]	-- Test2
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ko"] = <
+			language = <[ISO_639-1::ko]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["ko"] = <
+			language = <[ISO_639-1::ko]>
+			purpose = <"*unknown(en)">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"">
@@ -26,8 +40,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2BF78BD0383D094450AEE68A54643A66">
-		["build_uid"] = <"207edb97-f728-432e-9c60-a5af11efef26">
+		["MD5-CAM-1.0.1"] = <"3957EC2D6AB3CEE17B26EAD9ED627909">
+		["build_uid"] = <"121b550d-4b14-4201-b864-a01ac21844b3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -77,6 +91,26 @@ ontology
 				["at0003"] = <
 					text = <"Quantity">
 					description = <"Assumed Value Set">
+				>
+			>
+		>
+		["ko"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Test2(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*Current Activity(en)">
+					description = <"*Current Activity(en)">
+				>
+				["at0002"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0003"] = <
+					text = <"*Quantity(en)">
+					description = <"*Assumed Value Set(en)">
 				>
 			>
 		>
