@@ -13,8 +13,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 ">
-			use = <"TESTING PURPOSES">
-			misuse = <"NONE AT ALL">
+			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field">
+			misuse = <"NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -27,7 +29,7 @@ description
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"FCF3EE610979B69DCC0CF4C1036B6194">
-		["build_uid"] = <"0cd8a3d9-a16f-456b-9921-6e6a603f04a1">
+		["build_uid"] = <"6789c9c6-488a-492e-a927-853bf5190fbb">
 		["revision"] = <"0.0.1-alpha">
 	>
 
