@@ -1,7 +1,7 @@
 ﻿archetype (adl_version=1.4; uid=13bad134-d81e-46f1-b95b-8a92dbd97c6a)
 	openEHR-EHR-OBSERVATION.non_special-Level1.v0
 specialise
-	openEHR-EHR-OBSERVATION.non_special.v1
+	openEHR-EHR-OBSERVATION.non_special.v0
 
 concept
 	[at0000.1]	-- Non special!
@@ -28,8 +28,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"28393F55F2F07224992CCCD0949B9254">
-		["build_uid"] = <"e316018f-4bad-4b27-9acd-2e3b62d32196">
+		["MD5-CAM-1.0.1"] = <"F5AE53AC5ACF31788CF5FCE757C00E9D">
+		["build_uid"] = <"c5d2437f-9b3d-45bf-9b39-c22affa11fd9">
 		["revision"] = <"0.0.3-alpha">
 	>
 
