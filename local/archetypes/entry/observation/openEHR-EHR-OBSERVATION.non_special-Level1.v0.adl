@@ -1,10 +1,10 @@
-﻿archetype (adl_version=1.4; uid=99a21852-c47b-4fca-92e7-7c1aa73e78f3)
-	openEHR-EHR-OBSERVATION.testing01-Testing02.v0
+﻿archetype (adl_version=1.4; uid=13bad134-d81e-46f1-b95b-8a92dbd97c6a)
+	openEHR-EHR-OBSERVATION.non_special-Level1.v0
 specialise
-	openEHR-EHR-OBSERVATION.testing01.v1
+	openEHR-EHR-OBSERVATION.non_special.v1
 
 concept
-	[at0000.1]	-- Testing01!
+	[at0000.1]	-- Non special!
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -14,13 +14,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Testing01.">
-			use = <"All purpose man.">
-			misuse = <"None.">
+			purpose = <"Non Specialised Archetype 1.">
+			use = <"">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"rejected">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -28,19 +28,27 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"60D1C5B131AC1A0CBE638A4365EC44AF">
-		["build_uid"] = <"fd16da31-6164-4c21-9ec4-1bec6e007eab">
-		["revision"] = <"0.0.1">
+		["MD5-CAM-1.0.1"] = <"28393F55F2F07224992CCCD0949B9254">
+		["build_uid"] = <"e316018f-4bad-4b27-9acd-2e3b62d32196">
+		["revision"] = <"0.0.3-alpha">
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Testing01!
+	OBSERVATION[at0000.1] matches {	-- Non special!
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- New element
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -54,11 +62,11 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Testing01">
+					text = <"Non special">
 					description = <"unknown">
 				>
 				["at0000.1"] = <
-					text = <"Testing01!">
+					text = <"Non special!">
 					description = <"unknown!">
 				>
 				["at0001"] = <
@@ -72,6 +80,10 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"New element">
+					description = <"*">
 				>
 			>
 		>
