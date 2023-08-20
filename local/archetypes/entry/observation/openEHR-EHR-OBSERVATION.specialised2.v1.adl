@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ffd6e0d3-9216-4dbe-9a1b-49de54ea9074)
-	openEHR-EHR-OBSERVATION.specialised2.v0
+﻿archetype (adl_version=1.4; uid=bca3dd1d-4022-4acc-a964-c14b997a8163)
+	openEHR-EHR-OBSERVATION.specialised2.v1
 
 concept
 	[at0000]	-- Specialised2
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B52D970E0B137C50F9AA58194EB0CBEA">
-		["build_uid"] = <"c303e544-c9ca-4c7f-bd75-445ba38ef194">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"A68DE3B166FCD12433DF36A54B188B1A">
+		["build_uid"] = <"cfad3f39-93e4-4dc0-9aac-d3c8d864dcb3">
+		["revision"] = <"1.0.0">
 	>
 
 definition
