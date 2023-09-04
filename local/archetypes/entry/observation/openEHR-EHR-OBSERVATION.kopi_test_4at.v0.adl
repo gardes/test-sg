@@ -30,7 +30,6 @@ description
 Merk at 4AT ikke er laget for daglig monitorering av ny forekomst av delirium (dette på grunn av læringseffekten av oppgaven \"Rekkefølge av årets måneder baklengs\"). Endret nivå \"Årvåkenhet\" og \"Akutt endring eller fluktasjon i tilstand\", kan brukes daglig eller hyppigere sammen med en klinisk vurdering og/eller bruk av verktøy som er spesifikt laget for monitorering av delirium.">
 			keywords = <"delirium", ...>
 			misuse = <"Brukes ikke for daglig monitorering av ny forekomst av delirium (dette på grunn av læringseffekten av oppgaven \"Rekkefølge av årets måneder baklengs\").">
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,20 +39,20 @@ Merk at 4AT ikke er laget for daglig monitorering av ny forekomst av delirium (d
 Note that the 4AT is not designed for repeated daily monitoring for new onset delirium (because of practice effects with the Months Backwards task). Altered level of arousal (Item 1), and change or fluctuation (Item 4) can readily be used daily or even more frequently, along with general clinical judgement and/or use of tools specifically designed for ongoing monitoring of delirium.">
 			keywords = <"delirium", ...>
 			misuse = <"Not to be used for repeated daily monitoring for new onset delirium (because of practice effects with the Months Backwards task).">
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
+			copyright = <"© Nasjonal IKT HF">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <>
+	other_contributors = <"Univsersity", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Nasjonal IKT">
 		["references"] = <"https://www.the4at.com/">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
+		["original_namespace"] = <"no.nasjonalikt">
+		["original_publisher"] = <"Nasjonal IKT">
+		["custodian_namespace"] = <"no.nasjonalikt">
 		["MD5-CAM-1.0.1"] = <"704180E781F929023C8E96D4BE4D98BB">
-		["build_uid"] = <"9bb24074-fe0d-4ad3-901d-30b083a367aa">
+		["build_uid"] = <"af4b83f2-71c1-4dfe-8be3-85b2bdd5fd9b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
