@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=4e8090a7-93f5-456e-a786-b88a3328886a)
-	openEHR-EHR-OBSERVATION.social_context_screening.v0
+﻿archetype (adl_version=1.4; uid=92fe1012-6738-4713-8c4e-162f61967391)
+	openEHR-EHR-OBSERVATION.social_context_screening.v1
 
 concept
 	[at0000]	-- Social context screening questionnaire
@@ -136,7 +136,7 @@ This archetype has been designed to be used as a screening tool or to record sim
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Nuno Abreu, Oporto Hospital Center, Portugal", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Ivar Berge, Oslo Universitetssykehus, Norway", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Hugo Claudio Briceño García, Catsalut, Spain", "Stefan Dubois, Dep't of Pathology and Genetics, University Hospitals of Lund and Malmö, Sweden", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Kåre Flø, DIPS ASA, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Sølvi Johansen, Oslo Universitetssykehus, Ullevål, Norway", "Mika Kiviaho, Tietoevry, Finland", "Lise Kristin Knutsen, Oslo universitetssykehus, Norway", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Jamie LaPaglia, Claim Clarity, United States", "Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Svenne Naumann, Finnmarkssykehuset, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Sobath Premaratne, Barts Health NHS Trust, United Kingdom", "FREDERICO RIBEIRO, Hospital das Clínicas da UFPE, Brazil", "Marte Rime Bø, Direktoratet for e-helse, Norway", "Michael Seneviratne, NHS, United Kingdom", "Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Kanthan Theivendran, NHS, United Kingdom", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -144,10 +144,10 @@ This archetype has been designed to be used as a screening tool or to record sim
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"14F22846C9898B2041D3E53CB5F6EF37">
-		["build_uid"] = <"a7c4c69c-8f07-467b-9ec9-75f7ad968a0a">
+		["MD5-CAM-1.0.1"] = <"9F76BFF96EF6A04A71185CF17C4E551F">
+		["build_uid"] = <"2f61cde2-31e7-4fde-a970-93e0099d4bc6">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"0.0.1-alpha">
+		["revision"] = <"1.0.0">
 	>
 
 definition
