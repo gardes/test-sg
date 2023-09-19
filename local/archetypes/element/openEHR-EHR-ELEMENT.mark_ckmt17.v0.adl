@@ -13,7 +13,9 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 ">
-			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field">
+			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!">
 			misuse = <"NONE AT ALL.
 
 ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983">
@@ -29,7 +31,7 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"FCF3EE610979B69DCC0CF4C1036B6194">
-		["build_uid"] = <"15b27f2a-6dda-45f1-9e34-719ef7ce9b71">
+		["build_uid"] = <"0335e169-0744-4f0f-8de1-37b51c62c36d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
