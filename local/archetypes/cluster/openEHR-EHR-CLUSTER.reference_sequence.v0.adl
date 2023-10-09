@@ -37,7 +37,6 @@ description
 			use = <"">
 			keywords = <"genetische Befunde", "Referenzsequenz", "Gentest", "Variante", "genomisch", "variant calling">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -45,7 +44,6 @@ description
 			use = <"">
 			keywords = <"genetiske funn", "referansesekvens", "genetisk testing", "gentester", "variant", "genetikk", "variasjon", "mutasjon", "sekvensering", "VCF">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -59,14 +57,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Francesca Frexia, CRS4 - Center for advanced studies, research and development in Sardinia, Italy", "Gideon Giacomelli, Charité Berlin, Germany", "Evelyn Hovenga, EJSH Consulting, Australia", "Christina Jaeger-Schmidt, Heidelberg University Hospital, Germany", "Florian Kaercher, Charité Berlin, Germany", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Cecilia Mascia, CRS4, Italy (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Simon Schumacher, HiGHmed, Germany", "Aurelie Tomczak, Uniklinikum Heidelberg, Germany", "Paolo Uva, CRS4, Italy", "Gianluigi Zanetti, CRS4, Italy">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"\"Den Dunnen et al. (2016) HGVS recommendations for the description of sequence variants: 2016 update. Hum.Mutat. 25: 37: 564-569\".">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"5597A6BBAED9F395A7B1B889F4AF9DD6">
-		["build_uid"] = <"eae1353d-9abc-4b96-9ddb-8b1bde227fd3">
+		["build_uid"] = <"99aecbf7-e83b-4042-a54a-e686da80e79f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
