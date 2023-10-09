@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=846d985f-4e1a-49d5-9526-a9fcdad26e3e)
-	openEHR-EHR-OBSERVATION.long_name_archetype.v0
+﻿archetype (adl_version=1.4; uid=ead9d738-77cb-48ea-a7db-3d8f05b6f78c)
+	openEHR-EHR-OBSERVATION.long_name_archetype.v1
 
 concept
 	[at0000]	-- Long name archetype to text CKM-2044 to check Ellipsis is displayed with a very very very  long name
@@ -16,15 +16,20 @@ description
 			purpose = <"Test a long Archetype name">
 			use = <"Test a long Archetype name">
 			misuse = <"None">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"his work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.') is different to the standard licence for this CKM ('This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.').">
-		["MD5-CAM-1.0.1"] = <"C5B236E8A214795B017B1A0C40513DF3">
-		["build_uid"] = <"9666e7d0-ba21-471e-a4ef-e20ebef315f9">
-		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"D723C3A95B269AE8CBED77DFE273C88A">
+		["build_uid"] = <"4bace589-fd76-4ea5-9869-02accb96647c">
+		["revision"] = <"1.0.0">
 	>
 
 definition
