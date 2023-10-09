@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=0c6ec83d-215b-4f43-9c44-bfa177ca4996)
-	openEHR-EHR-OBSERVATION.esas_r.v0
+﻿archetype (adl_version=1.4; uid=dbcfb428-11fd-4d38-b65c-d9a5074cb176)
+	openEHR-EHR-OBSERVATION.esas_r.v1
 
 concept
 	[at0000]	-- Edmonton Symptom Assessment System Revised (ESAS-r)
@@ -48,7 +48,7 @@ Each symptom is rated on a 0 to 10 scale, with 0 representing an absence of the 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Nuno Abreu, Oporto Hospital Center, Portugal", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)", "June Susanne Berge, DIPS AS, Norway", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Nina Hauge, Helse Fonna, Norway", "Anca Heyd, DIPS ASA, Norway", "Terje Bektesevic Holmlund, UiT Norges arktiske universitet, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Sergey Kovalenko, Chelyabinsk Regional Children Hospital, Russia", "Liv Laugen, Oslo universitetssykehus, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Siv Marie Lien, DIPS ASA, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Jayashree Panickar, Karolinska Institute, Sweden", "Kjersti Solvåg, HAraldsplass Diakonale Sykehus, Norway", "Micaela Thierley, Helse Bergen/Haraldsplass sykehus, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)", "Sebastian von Hofacker, Haradsplass Diakonale Sykehus, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -65,9 +65,9 @@ Watanabe SM, Nekolaichuk C, Beaumont C, Johnson L, Myers J, Strasser F. A multic
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DF3364231B8D114F5A89F8CE9E1CF7CE">
-		["build_uid"] = <"aebd869c-0a7a-4a4b-a740-d80eda41a1f3">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"3620FE1FEE7517C350B15582186AFBC5">
+		["build_uid"] = <"6a92f49f-4ff9-46cd-bdfd-ccdb2db3efa3">
+		["revision"] = <"1.0.0">
 	>
 
 definition
