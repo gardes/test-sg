@@ -51,7 +51,6 @@ This archetype is designed to be nested within the 'Additional details' SLOT in 
 			misuse = <"Nicht zur Darstellung der Befunde verwenden, die logischerweise für eine bestimmte Körperstruktur oder -region erwartet werden. Verwenden Sie zu diesem Zweck spezialisierte Archetypen aus der Familie CLUSTER.imaging_exam oder den generischen Archetyp CLUSTER.imaging_exam.
 
 Dieser Archetyp darf nicht verwendet werden, um Informationen in Bezug auf die Gesamtbefunde, den Kontext oder technische Details in Bezug auf ein vollständiges Testergebnis einer bildgebenden Untersuchung darzustellen. Verwenden Sie zu diesem Zweck den Archetyp OBERSERVATION.imaging_exam_result. Zum Beispiel, Kommentare zur Studienqualität, zu Differenzialdiagnosen und zum Gesamteindruck.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -73,7 +72,6 @@ This archetype is designed to be nested within the 'Additional details' SLOT in 
 			misuse = <"Skal ikke brukes for å registrere funn eller observasjoner som man kan forvente for en spesifisert kroppsstruktur eller region. Bruk andre arketyper innen gruppen av CLUSTER.imaging_exam - arketyper for dette.
 
 Skal ikke brukes til å registrere overordnede undersøkelsesfunn, kontekst eller tekniske detaljer relatert til et fullstendig svar på billedundersøkelsen. Bruk arketypen OBSERVATION.imaging_exam_result (Bildediagnostisk svar) for å registrere dette, for eksempel kommentar om undersøkelseskvalitet, differensialdiagnose og overordnet konklusjon.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -101,13 +99,13 @@ Not to be used to record details related to the overall findings, context or tec
 	lifecycle_state = <"in_development">
 	other_contributors = <"Andreas Abildgaard, OUS, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Jesper Blomquist, Haraldsplass Diakonale Sykehus, Norway", "Randi Brendberg, Helse Nord RHF, Norway", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Peter Fedorcsak, University of Oslo, Norway (openEHR Editor)", "Kåre Flø, DIPS ASA, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Johan Gustav Bellika, Norwegian Centre for Integrated Care and Telemedicine, Norway", "Anca Heyd, DIPS ASA, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Anjali Kulkarni, Karkinos, India", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Arunakiry Natarajan, medondo, Germany", "Svenne Naumann, Finnmarkssykehuset, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F96AF1D54777429315072B8F4E47EBBA">
-		["build_uid"] = <"87aecc54-9f37-47a9-92e7-a74a5e5fcabf">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"EC8DD6C39F94DE23B67CABF646BF1129">
+		["build_uid"] = <"d77c8dd1-6562-4cef-a537-498b74abdabd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -177,7 +175,7 @@ definition
 							at0027,    -- Width
 							at0028,    -- Height
 							at0029,    -- Depth
-							at0030]    -- Diameter
+							at0051]    -- Diameter
 						}
 					}
 				}
@@ -262,11 +260,6 @@ ontology
 					text = <"Label">
 					description = <"A label for the anomaly.">
 					comment = <"Use to differentiate one anomaly from another when there is more than one present within the context of the same body structure or region.">
-				>
-				["at0030"] = <
-					text = <"Type">
-					description = <"The type of anomaly.">
-					comment = <"Coding of the anomaly with an external terminology is preferred, where possible. For example, a cyst or nodule.">
 				>
 				["at0050"] = <
 					text = <"Dimension">
@@ -417,10 +410,9 @@ If there is no clear orientation of the anomaly, for example length vs width vs 
 					text = <"Blodforsyning beskrivelse">
 					description = <"*Description about the blood flow related to to the anomaly. (en)">
 				>
-				["at0030"] = <
-					text = <"Type">
-					description = <"Type lesjon.">
-					comment = <"*Coding of the anomaly with an external terminology is preferred, where possible. For example, a cyst or nodule. (en)">
+				["at0051"] = <
+					text = <"Diameter">
+					description = <"*The measured length of the anomaly from edge to edge, usually of an approximately round or oval anomaly, passing through its centre. (en)">
 				>
 				["at0050"] = <
 					text = <"*Dimension (en)">
@@ -452,10 +444,6 @@ If there is no clear orientation of the anomaly, for example length vs width vs 
 				["at0029"] = <
 					text = <"*Depth (en)">
 					description = <"*The measured length of the third aspect of the anomaly, usually perpendicular to the length and width or measurement of the vertical aspect of the anomaly from the surface to the base. May also known as thickness. (en)">
-				>
-				["at0051"] = <
-					text = <"*Diameter (en)">
-					description = <"*The measured length of the anomaly from edge to edge, usually of an approximately round or oval anomaly, passing through its centre. (en)">
 				>
 				["at0031"] = <
 					text = <"*Calcification description (en)">
@@ -582,11 +570,6 @@ If there is no clear orientation of the anomaly, for example length vs width vs 
 				["at0029"] = <
 					text = <"Tiefe">
 					description = <"Die gemessene Länge des dritten Aspekts der Anomalie, normalerweise senkrecht zur Länge und Breite oder Messung der vertikalen Seite der Anomalie von der Oberfläche bis zur Basis. Auch bekannt als Dicke.">
-				>
-				["at0030"] = <
-					text = <"Art">
-					description = <"Art der Anomalie.">
-					comment = <"*Coding of the anomaly with an external terminology is preferred, where possible. For example, a cyst or nodule. (en)">
 				>
 				["at0051"] = <
 					text = <"Durchmesser">
