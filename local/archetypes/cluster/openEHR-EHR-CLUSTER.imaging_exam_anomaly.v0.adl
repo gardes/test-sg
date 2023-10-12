@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=bfc43d05-50a4-4074-9df0-19b98b42736f)
-	openEHR-EHR-CLUSTER.imaging_exam-anomaly.v0
+﻿archetype (adl_version=1.4; uid=742d7ae4-9632-4869-a033-49fb995157b9)
+	openEHR-EHR-CLUSTER.imaging_exam_anomaly.v0
 
 concept
 	[at0000]	-- Imaging examination of an anomaly
@@ -51,6 +51,7 @@ This archetype is designed to be nested within the 'Additional details' SLOT in 
 			misuse = <"Nicht zur Darstellung der Befunde verwenden, die logischerweise für eine bestimmte Körperstruktur oder -region erwartet werden. Verwenden Sie zu diesem Zweck spezialisierte Archetypen aus der Familie CLUSTER.imaging_exam oder den generischen Archetyp CLUSTER.imaging_exam.
 
 Dieser Archetyp darf nicht verwendet werden, um Informationen in Bezug auf die Gesamtbefunde, den Kontext oder technische Details in Bezug auf ein vollständiges Testergebnis einer bildgebenden Untersuchung darzustellen. Verwenden Sie zu diesem Zweck den Archetyp OBERSERVATION.imaging_exam_result. Zum Beispiel, Kommentare zur Studienqualität, zu Differenzialdiagnosen und zum Gesamteindruck.">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -72,6 +73,7 @@ This archetype is designed to be nested within the 'Additional details' SLOT in 
 			misuse = <"Skal ikke brukes for å registrere funn eller observasjoner som man kan forvente for en spesifisert kroppsstruktur eller region. Bruk andre arketyper innen gruppen av CLUSTER.imaging_exam - arketyper for dette.
 
 Skal ikke brukes til å registrere overordnede undersøkelsesfunn, kontekst eller tekniske detaljer relatert til et fullstendig svar på billedundersøkelsen. Bruk arketypen OBSERVATION.imaging_exam_result (Bildediagnostisk svar) for å registrere dette, for eksempel kommentar om undersøkelseskvalitet, differensialdiagnose og overordnet konklusjon.">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -99,13 +101,13 @@ Not to be used to record details related to the overall findings, context or tec
 	lifecycle_state = <"in_development">
 	other_contributors = <"Andreas Abildgaard, OUS, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Jesper Blomquist, Haraldsplass Diakonale Sykehus, Norway", "Randi Brendberg, Helse Nord RHF, Norway", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Peter Fedorcsak, University of Oslo, Norway (openEHR Editor)", "Kåre Flø, DIPS ASA, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Johan Gustav Bellika, Norwegian Centre for Integrated Care and Telemedicine, Norway", "Anca Heyd, DIPS ASA, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Anjali Kulkarni, Karkinos, India", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Arunakiry Natarajan, medondo, Germany", "Svenne Naumann, Finnmarkssykehuset, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"85B2FD3C72E06F98605992A28025C63E">
-		["build_uid"] = <"9bb706c5-c26d-4962-a3ea-b2087497c1d5">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"7970C503E101E471AF46E37B65FDB509">
+		["build_uid"] = <"9f07c4f3-69ce-4b2d-9ce4-a7e950678a29">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -251,11 +253,6 @@ ontology
 					text = <"Absent">
 					description = <"Calcification is not present.">
 				>
-				["at0020"] = <
-					text = <"Label">
-					description = <"A label for the anomaly.">
-					comment = <"Use to differentiate one anomaly from another when there is more than one present within the context of the same body structure or region.">
-				>
 				["at0000"] = <
 					text = <"Imaging examination of an anomaly">
 					description = <"An incidental or ambiguous finding of an anomaly on radiological examination that deviates from what is expected or normal within an identified body structure or region.">
@@ -371,11 +368,6 @@ If there is no clear orientation of the anomaly, for example length vs width vs 
 					text = <"Fraværende">
 					description = <"*Calcification is not present. (en)">
 				>
-				["at0020"] = <
-					text = <"Merkelapp">
-					description = <"Identifisering eller betegnelse for lesjonen.">
-					comment = <"Brukes for å skille mellom en lesjon fra en annen dersom det er flere lesjoner til stede innenfor samme kroppsstruktur eller region.">
-				>
 				["at0044"] = <
 					text = <"Blodforsyning beskrivelse">
 					description = <"*Description about the blood flow related to to the anomaly. (en)">
@@ -490,11 +482,6 @@ If there is no clear orientation of the anomaly, for example length vs width vs 
 				["at0018"] = <
 					text = <"Nicht vorhanden">
 					description = <"*Calcification is not present. (en)">
-				>
-				["at0020"] = <
-					text = <"Label">
-					description = <"Eine Bezeichnung für die Anomalie.">
-					comment = <"Wird verwendet, um eine Anomalie von einer anderen zu unterscheiden, wenn im Kontext derselben Körperstruktur oder -region mehr als eine Anomalie vorhanden ist.">
 				>
 				["at0044"] = <
 					text = <"Beschreibung der Vaskularisierung.">
