@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c4209894-5b49-4402-a1ca-2954511d4389)
-	openEHR-EHR-CLUSTER.clinical_evidence.v0
+﻿archetype (adl_version=1.4; uid=b2adec20-a34a-4c2d-8f2a-3671e02e6b24)
+	openEHR-EHR-CLUSTER.clinical_evidence.v1
 
 concept
 	[at0000]	-- Clinical evidence
@@ -117,7 +117,7 @@ Not to be used to record summary details about an identified contraindication - 
 			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Stein Arne Rimehaug, Sunnaas sykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Kristian Berg, Universitetssykehuset Nord Norge, Norway", "SB BHATTACHARYYA, Sudisa Consultancy Services, India", "SBhusan Bhattacharyya, Sudisa Consultancy Services, India", "Bjørn Christensen, Helse Bergen HF, Norway", "Chris Dickson, NHS Digital, United Kingdom", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Bente Gjelsvik, Helse Bergen, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Hanne Joensen, Helse Bergen HUS, Norway", "Siri Larønningen, Kreftregisteret, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hallvard Lærum, Direktoratet for e-helse, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Lars Morgan Karlsen, DIPS ASA, Norway", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Navin Ramachandran, NHS, United Kingdom", "Raymond Simkus, Brookswood Family Practice, Canada", "Iztok Stotl, UKCLJ, Slovenia", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)", "Mette Wam, Esito AS, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -126,9 +126,9 @@ Not to be used to record summary details about an identified contraindication - 
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"538F54F3E06BA1C9246463622718AA66">
-		["build_uid"] = <"a33ad3d9-7566-45d2-a598-050ea3d1624e">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"903D739953EAAD77340CD11F7381FA5E">
+		["build_uid"] = <"521e9e32-8137-4dae-84b0-e05b24b67968">
+		["revision"] = <"1.0.0">
 	>
 
 definition
