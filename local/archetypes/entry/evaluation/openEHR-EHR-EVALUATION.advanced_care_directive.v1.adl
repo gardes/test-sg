@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=aa6b3e6f-9678-4c96-9551-05301c797c9c)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.advanced_care_directive.v1
 
 concept
@@ -18,17 +18,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"0">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"81172E4BD769ECF91DEF61405A41BD46">
-		["build_uid"] = <"7cb8849a-8e1c-43b1-a748-c7573aece064">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"3141DBDFCB948DA8A794DA401E761419">
 	>
 
 definition

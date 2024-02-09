@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=aa889fcc-68d7-42fa-a5b2-032eb342f8f1)
+﻿archetype (adl_version=1.4; uid=753592a5-41b6-4fc9-a59b-8e4fae5f2007)
 	openEHR-EHR-CLUSTER.normalScalesOnly.v0
 
 concept
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9AF5CC4271B34001633BB207B5C6B273">
-		["build_uid"] = <"f5274bd5-5cae-45a1-838c-4471c260bec8">
+		["MD5-CAM-1.0.1"] = <"EF7AF96A000D8FDEA9A5E5D80B689CC1">
+		["build_uid"] = <"d4a4761f-64a9-4dc0-88e1-a7c430822db6">
 		["revision"] = <"0.0.1-alpha">
 	>
 

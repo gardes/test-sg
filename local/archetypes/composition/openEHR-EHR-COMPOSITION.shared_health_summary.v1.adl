@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=d5eebcdc-32be-4a41-8a03-77b361a892a3)
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.120.1.0)
 	openEHR-EHR-COMPOSITION.shared_health_summary.v1
 
 concept
@@ -21,17 +21,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "cka cka, Test Organisation, Australia (Test Editor)", "Project Editor, Antigua & Barbuda (Test Editor)", "Sebastian Garde, Ocean Health Systems, Germany (Test Editor)", "Sarmad Kufaishi, Ocean Health Systems, Australia (Test Editor)", "Robert L'egan, NEHTA", "Sebastianåæâß Ocean, Ocean Infws, Germany (Test Editor)", "Ning Pan, NEHTA", "Stephen Royce, NEHTA", "Eleanor Royle, NEHTA", "Don Stewart, NEHTA">
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "Eleanor Royle, NEHTA", "Robert L'egan, NEHTA", "Don Stewart, NEHTA", "Ning Pan, NEHTA", "Stephen Royce, NEHTA">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"69561BA083CE155AF5EE841EC585CD71">
-		["build_uid"] = <"94efae53-de3f-4f95-8d88-df88139ee340">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"035091DF72EFE533BBC026EDB66DF116">
 	>
 
 definition

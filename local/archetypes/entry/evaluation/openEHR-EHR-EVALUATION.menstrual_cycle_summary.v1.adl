@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=b0e44875-e8cd-4bdf-a8e2-4b42c844b518)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.menstrual_cycle_summary.v1
 
 concept
@@ -22,17 +22,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"491B591D575C25F9663A567CE904102A">
-		["build_uid"] = <"22e54f1a-323f-4bd0-9783-28e03284e4b8">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"3D97821FA60F1D0FB67D1C294A6669A8">
 	>
 
 definition

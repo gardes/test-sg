@@ -46,8 +46,8 @@ Initial design of this archetype was funded by the Hearing Health project, North
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"3AA5E44836E1A13A59699DC956472586">
-		["build_uid"] = <"221a44b4-2d1f-4223-88c8-97543b50b848">
-		["revision"] = <"1.0.1">
+		["build_uid"] = <"787155eb-0860-49e0-8301-12db82f45dd8">
+		["revision"] = <"1.0.0">
 	>
 
 definition

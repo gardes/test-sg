@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=29ae43b9-c3a7-4a95-abb8-f925498078dc)
+﻿archetype (adl_version=1.4; uid=ed8708e5-4950-4aa9-9fad-d836560394e6)
 	openEHR-EHR-OBSERVATION.medication_use.v0
 
 concept
@@ -42,7 +42,7 @@ Dieser Archetyp wurde speziell für aggregierte Informationen entwickelt, wie ma
 Nicht für die Dokumentation der Verabreichung oder die Einnahme eines Medikaments verwenden - verwenden Sie dazu ACTION.medication.
 
 Nicht für die Dokumentation einer Zusammenfassung der Verabreichung oder der Einnahme eines Medikaments über die Lebenszeit der Person verwenden - verwenden Sie zu diesem Zweck EVALUATION.medication_summary.">
-			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation, openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -53,7 +53,7 @@ Nicht für die Dokumentation einer Zusammenfassung der Verabreichung oder der Ei
 Skal ikke brukes for å dokumentere administrering eller inntak av et legemiddel - bruk ACTION.medication for dette formålet.
 
 Skal ikke brukes for å dokumentere et sammendrag av legemiddelinntak for individets levetid - bruk EVALUATION.medication_summary for dette formålet.">
-			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -64,7 +64,7 @@ Skal ikke brukes for å dokumentere et sammendrag av legemiddelinntak for indivi
 Not to be used for recording the administration or consumption of a medication - use ACTION.medication for this purpose.
 
 Not to be used for recording a summary of administration or consumption of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.">
-			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -75,8 +75,8 @@ Not to be used for recording a summary of administration or consumption of a med
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5F6EC6FC51AE0A35DACB06FA6F99E075">
-		["build_uid"] = <"73a5dd31-eb04-4d9e-ba54-d5daadafbeee">
+		["MD5-CAM-1.0.1"] = <"540341CC7B2D35054B5B7E142F0FB4E3">
+		["build_uid"] = <"a151ba81-90ef-4ebb-ae21-b8ed54020753">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -159,6 +159,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
