@@ -1,0 +1,94 @@
+﻿archetype (adl_version=1.4; uid=11aef30f-f077-4543-b1f3-64c160004e3a)
+	openEHR-EHR-ELEMENT.marks_test_archetype_modified.v0
+
+concept
+	[at0000]	-- Marks Test Archetype 1
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+		["ji"] = <
+			language = <[ISO_639-1::ji]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <" ">
+	>
+	details = <
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			purpose = <"*Testing Bulk Upload functionality in CKM.  Added this(en) again">
+			use = <"*Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file(en)">
+			misuse = <"*None(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing Bulk Upload functionality in CKM">
+			use = <"Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file">
+			misuse = <"None">
+			copyright = <"© openEHR Foundation">
+		>
+		["ji"] = <
+			language = <[ISO_639-1::ji]>
+			purpose = <"*Testing Bulk Upload functionality in CKM(en)">
+			use = <"*Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file(en)">
+			misuse = <"*None(en)">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"55BFD9E6E5818723ACFDD0D8B2C34124">
+		["build_uid"] = <"0d75dee9-1ee4-45f0-bdbe-8a78b51c24eb">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ELEMENT[at0000] matches {	-- Marks Test Archetype 1
+		value matches {
+			DV_IDENTIFIER matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks Test Archetype 1">
+					description = <"This is going to be used to test Bulk uploading more than one Archetype in a ZIP file">
+				>
+			>
+		>
+		["fi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Test Archetype 1(en)">
+					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file(en)">
+				>
+			>
+		>
+		["ji"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Test Archetype 1(en)">
+					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file(en)">
+				>
+			>
+		>
+	>

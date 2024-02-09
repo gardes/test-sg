@@ -1,0 +1,56 @@
+﻿archetype (adl_version=1.4; uid=a3f2f9fe-3ad9-40e3-a885-9bf5f3e202df)
+	openEHR-EHR-EVALUATION.language_error.v0
+
+concept
+	[at0000]	-- Language error
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Mark Messiha">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Ensure an error mesage is obtained when we upload the Archetype!">
+			use = <"Ensure the error message tells the user what the problem is.">
+			misuse = <"Can't misuse this Archetype!">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"699E209B1723C2F71122E8A784C8ABF4">
+		["build_uid"] = <"5c12669d-c667-4a20-b4e3-399fdf5747d6">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Language error
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Language error">
+					description = <"Error message expected when upoading Archetype!">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

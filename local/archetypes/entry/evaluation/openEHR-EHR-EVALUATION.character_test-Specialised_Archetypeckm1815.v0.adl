@@ -1,0 +1,80 @@
+﻿archetype (adl_version=1.4; uid=1698c5b8-f3c4-463c-89ad-c37fdbae82e8)
+	openEHR-EHR-EVALUATION.character_test-Specialised_Archetypeckm1815.v0
+specialise
+	openEHR-EHR-EVALUATION.character_test.v0
+
+concept
+	[at0000.1]	-- Character Test!
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"\"Steps are:
+Open Specialised Archetype
+Go to Revision History
+Details on latest Trunk commit
+Change Archetype ID Concept only
+Change the Archetype ID and the problem in the card should no longer occur.
+
+
+The only characters accepted are alpha, underscores, and hyphens, and numbers.
+
+Anything else will give an error as noted in the second in the point in the card and the change should not occur
+
+Test Case 1
+Change the name with the correct characters. No error message will appear and the change is successful
+
+
+Test Case 2
+Change the name with the incorrect characters. An error message will appear and the change will not be successful\"
+">
+			use = <"Testing CKM-1815.">
+			misuse = <"None.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"2AC9185999CE69A058580EACE2382529">
+		["build_uid"] = <"1caef6bb-509e-482a-98cc-2d18a6df1d69">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Character Test!
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Character Test">
+					description = <"Specialised Archetype">
+				>
+				["at0000.1"] = <
+					text = <"Character Test!">
+					description = <"Specialised Archetype!">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
