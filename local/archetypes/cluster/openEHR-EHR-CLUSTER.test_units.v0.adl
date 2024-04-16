@@ -15,19 +15,18 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"133825F374606837B9EC33B86DE66AAE">
-		["build_uid"] = <"6ce28bb2-9bf4-4021-9a18-8c03cddf20ba">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"FC6AED536E191DE07DE08D43032A673E">
+		["build_uid"] = <"f37bb177-bcca-4786-970b-f09f1d3cd21e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -89,6 +88,15 @@ definition
 							>
 							["6"] = <
 								units = <"J/m3">
+							>	
+							["7"] = <
+								units = <"Cel">
+							>
+							["8"] = <
+								units = <"[degF]">
+							>
+							["9"] = <
+								units = <"ug">
 							>
 						>
 					>
