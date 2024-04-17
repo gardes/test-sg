@@ -27,6 +27,18 @@ language
 				["notes"] = <"Generated automatically by Adl Designer">
 			>
 		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Health">
+			other_details = <
+				["other_contributors"] = <"Mark3.test, mark.test, everyone else">
+			>
+		>
 	>
 description
 	original_author = <
@@ -88,6 +100,14 @@ Not to be used to record details about any parallel procedure undertaken. Use th
 Not to be used to record details about medications administered during the imaging test. Use specific medication-related archetypes, for example ACTION.medication.">
 			copyright = <"© openEHR Foundation">
 		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			purpose = <"To test the checkout and commitment of a Translated Archetype on CKM-2126
+
+Per testare il checkout e l'impegno di un Archetipo Tradotto su CKM-2126">
+			use = <"Non posso parlare italiano">
+			misuse = <"Non posso più parlare italiano">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Sharmila Biswas, Australia", "Eric Browne", "David Cartwright, Queensland Health, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "David Evans, Queensland Health, Australia", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Diane Kirkham, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Ning Pan", "Chris Pearce, Melbourne East GP Network, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Stephen Royce, NEHTA, Australia", "Eleanor Royle", "Don Stewart", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
@@ -108,8 +128,8 @@ Imaging examination result, draft archetype, NEHTA Clinical Knowledge Manager [I
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6C2FFEDE3171E7CBFAF802B404DD6418">
-		["build_uid"] = <"166c23b5-3bec-4942-aa74-840ea064bd97">
+		["MD5-CAM-1.0.1"] = <"D93BD7BFF10FCFB9C676026499C90941">
+		["build_uid"] = <"7b1dcbe2-4982-4482-95ac-78a77e8150c5">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -987,6 +1007,250 @@ ontology
 					text = <"Empfehlung">
 					description = <"Empfehlung für weitere Bildgebung, Untersuchungen und / oder Überweisung und assoziierte Begründung.">
 					comment = <"Dieses Datenelement hat Vorkommen von 0 .. *, um mehr als eine Empfehlung und die assoziierte Begründungen zu berücksichtigen. Formelle Verordnungen für eine zusätzliche bildgebende Untersuchung und Prüfung sollten unter Verwendung eines INSTRUCTION-Archetyps wie z.B. INSTRUCTION.service_request dargestellt werden.">
+				>
+			>
+		>
+		["it"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pass">
+					description = <"PASSAGGIO">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Testing">
+					description = <"Test">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0005"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0006"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0007"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0008"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0009"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0010"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0011"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0012"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0013"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0014"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0020"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0021"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0023"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0024"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0025"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0026"] = <
+					text = <"*Receiving imaging service(en)">
+					description = <"*Demographic details about the receiving imaging service performing the imaging test.(en)">
+				>
+				["at0027"] = <
+					text = <"*Examination request details(en)">
+					description = <"*Details concerning a single examination requested. Note: Usually there is one examination request for each result, however in some circumstances multiple examination requests may be represented using a single Imaging examination result archetype.(en)">
+				>
+				["at0028"] = <
+					text = <"*Requester order identifier(en)">
+					description = <"*The local identifier assigned to the order by the order requester. Equivalent to the HL7 Placer Order Identifier.(en)">
+				>
+				["at0029"] = <
+					text = <"*Examination requested name(en)">
+					description = <"*Identification of imaging examination or procedure requested, where the examination requested differs from the examination actually performed.(en)">
+				>
+				["at0030"] = <
+					text = <"*Requester(en)">
+					description = <"*Details about the clinician or organisation requesting the imaging examination.(en)">
+				>
+				["at0031"] = <
+					text = <"*Receiver order identifier(en)">
+					description = <"*The local identifier assigned to the examination order by the order filler, usually by the Radiology Information System (RIS). Usually equivalent to the HL7 Filler Order Number.(en)">
+				>
+				["at0032"] = <
+					text = <"*DICOM study identifier(en)">
+					description = <"*Unique identifier of this study allocated by the imaging service.(en)">
+				>
+				["at0033"] = <
+					text = <"*Report identifier(en)">
+					description = <"*The local identifier given to the imaging examination report.(en)">
+				>
+				["at0034"] = <
+					text = <"*Image details(en)">
+					description = <"*Images referred to, or provided, to assist clinical understanding of the examination. If attached image is in DICOM format, all the fields below should be populated so the values are available to software that does not process DICOM images.(en)">
+				>
+				["at0035"] = <
+					text = <"*Image identifier(en)">
+					description = <"*Unique identifier of this image allocated by the imaging service (often the DICOM image instance UID).(en)">
+				>
+				["at0036"] = <
+					text = <"*DICOM series identifier(en)">
+					description = <"*Unique identifier of this series allocated by the imaging service.(en)">
+				>
+				["at0037"] = <
+					text = <"*View(en)">
+					description = <"*The name of the imaging view e.g Lateral or Antero-posterior (AP). Coding using a terminology is desirable, where possible.(en)">
+				>
+				["at0038"] = <
+					text = <"*Position(en)">
+					description = <"*Description of the subject of care's positon when the image was performed.(en)">
+				>
+				["at0039"] = <
+					text = <"*Image DateTime(en)">
+					description = <"*Specific date/time the imaging examination was performed.(en)">
+				>
+				["at0040"] = <
+					text = <"*Image(en)">
+					description = <"*An attached or referenced image of a current view.(en)">
+				>
+				["at0041"] = <
+					text = <"*Structured technique(en)">
+					description = <"*Additional structured details of technical details and procedure.(en)">
+				>
+				["at0044"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0045"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0046"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms.(en)">
+				>
+				["at0047"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0048"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Narrative description of factors, not recorded elsewhere, that may influence the examination findings and/or result.(en)">
+				>
+				["at0049"] = <
+					text = <"*Technique(en)">
+					description = <"*Narrative description about the technical details and procedure.(en)">
+				>
+				["at0053"] = <
+					text = <"*Reported image(en)">
+					description = <"*Details about the image being reported.(en)">
+				>
+				["at0054"] = <
+					text = <"*Comparison image(en)">
+					description = <"*Details about an image being compared to the image being reported.(en)">
+				>
+				["at0055"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questTesting this text for CKM-2126
+
+Test di questo testo per CKM-2126o testo per CKM-2126">
+				>
+				["at0056"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0057"] = <
+					text = <"*Imaging quality(en)">
+					description = <"*Narrative description about the quality of the examination.(en)">
+				>
+				["at0058"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
+				>
+				["at0059"] = <
+					text = <"Testing this text for CKM-2126 Test di questo testo per CKM-2126">
+					description = <"Testing this text for CKM-2126
+
+Test di questo testo per CKM-2126">
 				>
 			>
 		>
