@@ -52,7 +52,6 @@ Dieser Archetyp wird in der Regel als eine Komponente eines Gesamtberichts inner
 Nicht zur Dokumentation von parallel durchgeführten Prozeduren verwenden. Für diesen Zweck soll der spezifische Prozeduren bezogene Archetyp, z.B. ACTION.procedure, verwendet werden.
 
 Nicht zur Dokumentation von Details einer Medikamentenvergabe, die während eines bildgebenden Verfahrens stattgefunden hat, verwenden. Für diesen Zweck soll der dafür gebräuchliche Medikationsbezogene Archetyp, z.B. ACTION.medication, verwendet werden.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -71,7 +70,6 @@ Brukes ikke til å registrere opplysninger om prosedyrer som utføres parallelt.
 
 Brukes ikke til å registrere informasjon om legemidlene som administreres under en bildediagnostisk undersøkelse. Bruk spesifikke legemiddelrelaterte arketyper, for eksempel ACTION.medication.
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -94,8 +92,8 @@ Not to be used to record details about medications administered during the imagi
 	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Sharmila Biswas, Australia", "Eric Browne", "David Cartwright, Queensland Health, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "David Evans, Queensland Health, Australia", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Diane Kirkham, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Ning Pan", "Chris Pearce, Melbourne East GP Network, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Stephen Royce, NEHTA, Australia", "Eleanor Royle", "Don Stewart", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"IHE.net Technical Frameworks - Radiology [Internet]. [date unknown];[cited 2011 Jan 2 ] Available from: http://www.ihe.net/Technical_Framework/index.cfm#radiology
 
 Faculty of Clinical Radiology Council. Clinical Radiology Written Report Guidelines, Version 6.0 [Internet]. Sydney: The Royal Australian and New Zeland College of Radiologists; 2017 Jan [cited 2020 Mar 31]. 10 p. Available from: https://www.ranzcr.com/college/document-library/clinical-radiology-written-report-guidelines
@@ -107,11 +105,11 @@ Radiology Written Report Guideline Project (Draft Consultation); December 2010.
 Diagnostic Imaging data specifications; NEHTA, version 1.0, 2007 Jun 29.
 
 Imaging examination result, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. London: NEHTA. Authored: 11 Feb 2007. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.943_6 (no longer available).">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0C679B9EB289E9B843866FFE232B39CB">
-		["build_uid"] = <"59f63f9c-8688-4466-b82e-c4de091e7340">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6C2FFEDE3171E7CBFAF802B404DD6418">
+		["build_uid"] = <"166c23b5-3bec-4942-aa74-840ea064bd97">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -343,6 +341,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
