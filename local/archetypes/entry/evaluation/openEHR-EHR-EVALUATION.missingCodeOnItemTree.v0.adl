@@ -1,0 +1,64 @@
+﻿archetype (adl_version=1.4; uid=810b88de-5ad4-405a-8a9b-cbe197f0c50e)
+	openEHR-EHR-EVALUATION.missingCodeOnItemTree.v0
+
+concept
+	[at0000]	-- missingCodeOnItemTree
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"test">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"purpose">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B8D35367710A495FF7B86584E23F58C2">
+		["build_uid"] = <"6b84c057-1709-4ef9-86b4-c73d5cf4a042">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- missingCodeOnItemTree
+		data matches {
+			ITEM_TREE matches {	-- Tree
+				items cardinality matches {2..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..2} matches {	-- New element
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"missingCodeOnItemTree">
+					description = <"missingCodeOnItemTree causing a VACSI error">
+				>
+				["at0002"] = <
+					text = <"New element">
+					description = <"*">
+				>
+			>
+		>
+	>
