@@ -1,0 +1,56 @@
+﻿archetype (adl_version=1.4; uid=0d77e75f-13c0-41c2-9c45-2dc1412d6e99)
+	openEHR-EHR-EVALUATION.to_be_deleted.v0
+
+concept
+	[at0000]	-- TO BE DELETED MAN
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"TESTING AUDIT LOG">
+			use = <"TESTING AUDIT LOG TIME AND DATE">
+			misuse = <"NONE WHATSOEVER">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"017C24FA7923BCA39ACC5035E3CDD865">
+		["build_uid"] = <"0a1e0aad-3c7c-4902-960e-98797fa2c65f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- TO BE DELETED MAN
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"TO BE DELETED MAN">
+					description = <"AUDIT LOG AND DELETE">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
