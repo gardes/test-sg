@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=0095dc12-c411-418e-a5ce-9a7f3d8fa2b8)
-	openEHR-EHR-OBSERVATION.body_mass_index_many.v0
+﻿archetype (adl_version=1.4; uid=71c45e0f-aa06-48a0-bc29-d509a0118280)
+	openEHR-EHR-OBSERVATION.body_mass_index_many.v1
 
 concept
 	[at0000]	-- Body Mass Index MANY
@@ -22,7 +22,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Sam Heard, Ocean Informatics", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Angela de Zwart, Orion Health, New Zealand", "Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Andrew James, University of Toronto, Canada", "Shinji Kobayashi, Ehime University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Arturo Romero, SESCAM, Spain", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -41,9 +41,9 @@ Tzamaloukas AH, Patron A, Malhotra D. Body Mass Index in Amputees. Journal of Pa
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"39491304D085BE15CF3C09A324635960">
-		["build_uid"] = <"9c2ce1e4-4d63-4d58-8e6f-fd8b9178138b">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"7AF0CDC8F9724686857CEFCFAB3E7D9C">
+		["build_uid"] = <"4df31a99-d89b-4254-9ee1-435b50cd1d71">
+		["revision"] = <"1.0.0">
 	>
 
 definition
