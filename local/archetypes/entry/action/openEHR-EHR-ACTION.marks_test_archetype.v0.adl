@@ -33,7 +33,7 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing CKM Regression Test Cases!
 
-Another Change Rewuest to test CKM-2072">
+Another Change Request to test CKM-2072">
 			use = <"Testing! TESTING CKM-1983 AGAIN
 
 Whatever we need">
@@ -54,7 +54,7 @@ Absolutley none whatsoever">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"3781EBCC5A05A92A3562C9AC8BD02BBC">
-		["build_uid"] = <"3f0c2321-9127-41fa-943b-0902f6514e57">
+		["build_uid"] = <"67f6a469-2e2c-443d-bf36-3496b94ee223">
 		["revision"] = <"0.0.1-alpha">
 	>
 
