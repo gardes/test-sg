@@ -1,0 +1,191 @@
+﻿archetype (adl_version=1.4; uid=71c45e0f-aa06-48a0-bc29-d509a0118280)
+	openEHR-EHR-OBSERVATION.body_mass_index_many.v1
+
+concept
+	[at0000]	-- Body Mass Index MANY
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"National E-Health Transition Authority">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"22-Mar-2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the Body Mass Index (BMI) of a person. Body Mass Index is a calculated ratio describing how an individual's body weight relates to the weight that is regarded as normal, or desirable, for the individual's height.">
+			use = <"Use to record the Body Mass Index of both adults and children. Use to enter the Body Mass Index either manually (ie calculated and directly entered by the clinician), or automatically (ie calculation and entry is done automatically by a software application, based on separate height and weight measurements). Formulas: Body Mass Index is commonly calculated as weight (kg) / [height (m) squared]. This is the assumed formula unless otherwise specified in the Formula element within Protocol. Alternatively estimate Body Mass Index using pounds and inches: weight (lb) / [height (in) squared] x 703 (with ounces (oz) and fractions changed to decimal values). In some situations the Body Mass Index formula is corrected eg for use in amputees - this specific formula can be recorded as part of the protocol. Alternatively the common Body Mass Index calculation can be used with amputees and similar injuries or disabilities if using adjusted height and/or adjusted weight, as appropriate, rather than actual height and weight. See openEHR-EHR-OBSERVATION.height-adjusted and openEHR-EHR-OBSERVATION.body_weight-adjusted. See WHO reference re adjusting height/length for Body Mass Index in paediatrics. In children and teens, BMI needs to be assessed using age-related reference charts.">
+			keywords = <"obesity", "index", "body mass", "BMI", "anorexia", "Quetelet", "malnutrition", "failure to thrive", "bulimia">
+			misuse = <"Not intended to record information regarding Body Mass Index percentiles - these will be recorded in separate archetypes.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <"Sam Heard, Ocean Informatics", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Angela de Zwart, Orion Health, New Zealand", "Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Andrew James, University of Toronto, Canada", "Shinji Kobayashi, Ehime University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Arturo Romero, SESCAM, Spain", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults: The Evidence Report [Internet]. Bethesda (MD): National Heart, Lung, and Blood Institute; NIH Publication No. 98-4083, Sep 1998, [cited 2009 July 02]. Available from: http://www.nhlbi.nih.gov/guidelines/obesity/
+
+About BMI for Children and Teens [Internet]. Atlanta (GA): Division of Nutrition, Physical Activity and Obesity, Centers for Disease Control and Prevention; 2009 Jan 27 [cited 2009 Jul 28 ]. Available from: http://www.cdc.gov/healthyweight/assessing/bmi/childrens_BMI/about_childrens_BMI.html
+
+WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development. [Internet] Geneva, Switzerland: WHO Multicentre Growth Reference Study Group, World Health Organization; 2006 [cited 2009 July 02].  Chapter 6, BMI-for-age standards. Available from: http://www.who.int/childgrowth/standards/Chap_6.pdf.
+
+Obesity: Preventing and Managing the Global Epidemic: Report of a WHO Consultation [Internet]. Geneva, Switzerland: World Health Organisation; 2000 [cited 2009 Jul 28]. Available from: http://www.who.int/nutrition/publications/obesity/WHO_TRS_894/en/index.html
+
+Tzamaloukas AH, Patron A, Malhotra D. Body Mass Index in Amputees. Journal of Parenteral and Enteral Nutrition [Internet]. 1994 [cited 2009 Jul 28]; 18 (4): 355. Available from: http://pen.sagepub.com/cgi/content/abstract/18/4/355
+
+">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"7AF0CDC8F9724686857CEFCFAB3E7D9C">
+		["build_uid"] = <"c6a160f0-8369-4806-b436-242f008ce15a">
+		["revision"] = <"1.1.2">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Body Mass Index
+		data matches {
+			HISTORY[at0001] matches {	-- history
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {1..*} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0004] matches {	-- Body Mass Index
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::349]>
+												list = <
+													["1"] = <
+														units = <"kg/m2">
+														magnitude = <|0.0..<1000.0|>
+														precision = <|1|>
+													>
+													["2"] = <
+														units = <"lb/in2">
+														magnitude = <|0.0..<1000.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..*} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Method
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007, 	-- Automatic entry
+									at0008]	-- Direct entry
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Formula
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"NCTIS-OID", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Body Mass Index MANY">
+					description = <"Details pertinent to the physical measurement of the Body Mass Index (BMI) of a person.">
+					comment = <"The height, together with the weight, of a subject of care enables derivation of Body Mass Index (BMI) which is a key observation that may be used for dosage calculation for certain medication prescription protocols, such as chemotherapy.">
+					detail_docref = <"data_groups/NEHTA-16856-Body_Mass_Index-Data_Group.xml">
+					spec_id = <"191">
+				>
+				["at0001"] = <
+					text = <"history">
+					description = <"history">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Any event">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Body Mass Index">
+					description = <"Index describing ratio of weight to height.">
+					detail_docref = <"data_elements/NEHTA-16857-Body_Mass_Index-Data_Element.xml">
+					ref_range = <"true">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Method">
+					description = <"The method of entering the Body Mass Index.">
+					detail_docref = <"data_elements/NEHTA-16859-BMI_Entry_Method-Data_Element.xml">
+					fsn = <"BMI Entry Method">
+					value_domain_name = <"BMI Entry Method Values">
+					value_domain_dc_id = <"16858">
+				>
+				["at0007"] = <
+					text = <"Automatic entry">
+					description = <"Body Mass Index calculated and entered automatically without user intervention.">
+				>
+				["at0008"] = <
+					text = <"Direct entry">
+					description = <"Body Mass Index calculated and entered directly by user.">
+				>
+				["at0010"] = <
+					text = <"Formula">
+					description = <"The formula used to calculate the Body Mass Index.">
+					comment = <"Examples: 
+  1. Body Mass Index is commonly calculated as weight (kg) / [height (m) squared].">
+					detail_docref = <"data_elements/NEHTA-16860-BMI_Calculation_Formula-Data_Element.xml">
+					fsn = <"BMI Calculation Formula">
+				>
+				["at0011"] = <
+					text = <"Multi-Comment">
+					description = <"Additional comments relevant to the observation.">
+					detail_docref = <"data_elements/NEHTA-15600-BMI_Observation_Note-Data_Element.xml">
+					fsn = <"BMI Observation Note">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["NCTIS-OID"] = <
+			items = <
+				["at0000"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.102.16856]>
+				["at0004"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16857]>
+				["at0006"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16859]>
+				["at0010"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.16860]>
+				["at0011"] = <[NCTIS-OID::1.2.36.1.2001.1001.101.103.15600]>
+			>
+		>
+	>
