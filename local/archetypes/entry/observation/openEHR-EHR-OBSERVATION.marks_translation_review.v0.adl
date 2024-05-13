@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Marks Translation Review
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["et"] = <
+			language = <[ISO_639-1::et]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -17,6 +25,12 @@ description
 			misuse = <"None at all">
 			copyright = <"© openEHR Foundation">
 		>
+		["et"] = <
+			language = <[ISO_639-1::et]>
+			purpose = <"*To test CKM-2020 for Translation Review Rounds(en)">
+			use = <"*Testing that Translation Review Rounds cannot be reactivated if the main status of the archetype itself is an inactive state (i.e. deprecated or rejected).(en)">
+			misuse = <"*None at all(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -26,8 +40,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AADAEE89E9E53C7A01768CA740453333">
-		["build_uid"] = <"f6de9305-3656-496a-afc6-52f51fbdd9fb">
+		["MD5-CAM-1.0.1"] = <"AB7FC4E01C6920E636A49B7A9A3967E3">
+		["build_uid"] = <"c69a13d0-6091-45e6-b399-d831fd03e062">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -58,6 +72,22 @@ ontology
 				["at0002"] = <
 					text = <"Any event">
 					description = <"*">
+				>
+			>
+		>
+		["et"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Translation Review(en)">
+					description = <"*Testing CKM-2020(en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
 				>
 			>
 		>
