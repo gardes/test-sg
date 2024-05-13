@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=f0052837-c243-43ba-b78b-b522479e118a)
-	openEHR-EHR-OBSERVATION.marks_translation_review.v0
+﻿archetype (adl_version=1.4; uid=974adb97-204b-4ca2-9482-d19ac4c27e59)
+	openEHR-EHR-OBSERVATION.marks_translation_review.v1
 
 concept
 	[at0000]	-- Marks Translation Review
@@ -32,7 +32,7 @@ description
 			misuse = <"*None at all(en)">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -40,9 +40,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"AB7FC4E01C6920E636A49B7A9A3967E3">
-		["build_uid"] = <"1971947d-1411-4402-b378-89cbf35147c0">
-		["revision"] = <"0.0.2-alpha">
+		["MD5-CAM-1.0.1"] = <"B9D4E8D1C95062804F335E51EE9159EB">
+		["build_uid"] = <"4ff3c3b1-8f23-446a-afac-d13a9473681e">
+		["revision"] = <"1.0.0">
 	>
 
 definition
