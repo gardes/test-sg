@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=ddfd5211-0762-4852-958a-0dd79699c0fe)
-	openEHR-EHR-OBSERVATION.marks_terminology_review.v0
+﻿archetype (adl_version=1.4; uid=069af93e-a9a8-40c2-aaf7-4e6f9593150c)
+	openEHR-EHR-OBSERVATION.marks_terminology_review.v1
 
 concept
 	[at0000]	-- Marks Terminology Review
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A03FBB4B10ABC7ED73EEA9F979E36CA0">
-		["build_uid"] = <"0f054824-971f-4242-98ac-443763572418">
-		["revision"] = <"0.0.2-alpha">
+		["MD5-CAM-1.0.1"] = <"6FA950AFE46749DFFE55B9D2C1F18237">
+		["build_uid"] = <"95e1331a-1114-4627-bb7d-50849aa79155">
+		["revision"] = <"1.0.0">
 	>
 
 definition
