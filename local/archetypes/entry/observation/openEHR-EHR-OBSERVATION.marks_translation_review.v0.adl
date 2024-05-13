@@ -1,0 +1,94 @@
+﻿archetype (adl_version=1.4; uid=f0052837-c243-43ba-b78b-b522479e118a)
+	openEHR-EHR-OBSERVATION.marks_translation_review.v0
+
+concept
+	[at0000]	-- Marks Translation Review
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["et"] = <
+			language = <[ISO_639-1::et]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To test CKM-2020 for Translation Review Rounds">
+			use = <"Testing that Translation Review Rounds cannot be reactivated if the main status of the archetype itself is an inactive state (i.e. deprecated or rejected).">
+			misuse = <"None at all">
+			copyright = <"© openEHR Foundation">
+		>
+		["et"] = <
+			language = <[ISO_639-1::et]>
+			purpose = <"*To test CKM-2020 for Translation Review Rounds(en)">
+			use = <"*Testing that Translation Review Rounds cannot be reactivated if the main status of the archetype itself is an inactive state (i.e. deprecated or rejected).(en)">
+			misuse = <"*None at all(en)">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"AB7FC4E01C6920E636A49B7A9A3967E3">
+		["build_uid"] = <"1971947d-1411-4402-b378-89cbf35147c0">
+		["revision"] = <"0.0.2-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Marks Translation Review
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks Translation Review">
+					description = <"Testing CKM-2020">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+			>
+		>
+		["et"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks Translation Review(en)">
+					description = <"*Testing CKM-2020(en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>
