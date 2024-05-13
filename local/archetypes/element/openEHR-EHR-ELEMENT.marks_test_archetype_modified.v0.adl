@@ -32,10 +32,16 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Testing Bulk Upload functionality in CKM. ADDED THIS TEXT IN CAPS">
+			purpose = <"Testing Bulk Upload functionality in CKM. ADDED THIS TEXT IN CAPS
+
+DATA ADDED TO CHECK CHANGES IN BRANCH VS TRUNK">
 			use = <"Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file
-FOR TESTING CKM-2034">
-			misuse = <"None AT ALL AS THIS IS USED FOR TESTING PURPOSES">
+FOR TESTING CKM-2034
+
+ADDED DATA AGAIN TO SEE IF CHANGES ARE NOTED IN BRANCH VS TRUNK">
+			misuse = <"None AT ALL AS THIS IS USED FOR TESTING PURPOSES
+
+TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL">
 			copyright = <"© openEHR Foundation">
 		>
 		["ji"] = <
@@ -53,8 +59,8 @@ FOR TESTING CKM-2034">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"34AC414788590795E75C84336BFA297D">
-		["build_uid"] = <"62d37025-738f-4e94-90ed-c3681b1cdab0">
+		["MD5-CAM-1.0.1"] = <"69D9C158F7BFA54BA7E298FF99668266">
+		["build_uid"] = <"2cd13842-b23d-46f0-b12f-778cb3731ff7">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -72,7 +78,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Marks Test Archetype 1">
-					description = <"This is going to be used to test Bulk uploading more than one Archetype in a ZIP file AND TES THIS DATA IN CAPS">
+					description = <"This is going to be used to test Bulk uploading more than one Archetype in a ZIP file AND TES THIS DATA IN CAPS FOR CKM-2034">
 				>
 			>
 		>
