@@ -1,0 +1,83 @@
+﻿archetype (adl_version=1.4; uid=ddfd5211-0762-4852-958a-0dd79699c0fe)
+	openEHR-EHR-OBSERVATION.marks_terminology_review.v0
+
+concept
+	[at0000]	-- Marks Terminology Review
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To test CKM-2020 for Terminology Review Rounds">
+			use = <"Testing that Terminology Review Rounds cannot be reactivated if the main status of the archetype itself is an inactive state (i.e. deprecated or rejected).">
+			misuse = <"None">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A03FBB4B10ABC7ED73EEA9F979E36CA0">
+		["build_uid"] = <"0f054824-971f-4242-98ac-443763572418">
+		["revision"] = <"0.0.2-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Marks Terminology Review
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks Terminology Review">
+					description = <"Testing CKM-2020">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT(1)::at001]>
+				["at0001"] = <[SNOMED-CT(2)::ES]>
+				["at0002"] = <[SNOMED-CT(3)::AE]>
+				["at0003"] = <[SNOMED-CT(4)::TREE]>
+			>
+		>
+	>
