@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=11aef30f-f077-4543-b1f3-64c160004e3a)
-	openEHR-EHR-ELEMENT.marks_test_archetype_modified.v0
+﻿archetype (adl_version=1.4; uid=a7052aa7-89ff-4a7f-a13c-4801f6d91787)
+	openEHR-EHR-ELEMENT.marks_test_archetype_modified.v1
 
 concept
 	[at0000]	-- Marks Test Archetype 1
@@ -51,7 +51,7 @@ TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL">
 			misuse = <"*None(en)">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"deprecated">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -59,9 +59,9 @@ TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"69D9C158F7BFA54BA7E298FF99668266">
-		["build_uid"] = <"561cce6f-2d96-4db5-a8ca-e5f3dbebd516">
-		["revision"] = <"0.0.2-alpha">
+		["MD5-CAM-1.0.1"] = <"CCFD7C1F9FF299FFBF708DE43975A8B5">
+		["build_uid"] = <"5c683fa5-a9c1-4855-abfc-74e3efb5e6df">
+		["revision"] = <"1.0.1">
 	>
 
 definition
