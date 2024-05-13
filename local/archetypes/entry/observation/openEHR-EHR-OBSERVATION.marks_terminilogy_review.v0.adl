@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.marks_terminilogy_review.v0
 
 concept
-	[at0000]	-- Marks terminilogy review
+	[at0000]	-- Marks Terminilogy Review
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -15,24 +15,19 @@ description
 			purpose = <"To test CKM-2020 for Terminology Review Rounds">
 			use = <"Testing that Terminology Review Rounds cannot be reactivated if the main status of the archetype itself is an inactive state (i.e. deprecated or rejected).">
 			misuse = <"None">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"6AFDC26F1F7A5B8D0CB769CDBF4C6725">
-		["build_uid"] = <"3427f5c2-0980-48d9-a1c4-334b1169da0f">
+		["MD5-CAM-1.0.1"] = <"965DB745E82A14073C3DCA9772AD9482">
+		["build_uid"] = <"cc7342cf-db08-480d-8ff6-6ca40f0756ec">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Marks terminilogy review
+	OBSERVATION[at0000] matches {	-- Marks Terminilogy Review
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -48,7 +43,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Marks terminilogy review">
+					text = <"Marks Terminilogy Review">
 					description = <"Testing CKM-2020">
 				>
 				["at0001"] = <
