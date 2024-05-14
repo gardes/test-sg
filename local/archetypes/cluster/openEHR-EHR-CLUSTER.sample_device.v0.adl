@@ -20,20 +20,14 @@ description
 Use to record the details pertaining to the device that is used to record clinical details.  This is likely to be as a nested archetype as part of a Protocol.">
 			keywords = <"Device", "Machine", "Tool">
 			misuse = <"NOT FOR LIVE USE">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"null">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"27E26DFFA1133A386DFDD0750E07BDB8">
-		["build_uid"] = <"3ada94d0-3e31-4ef1-af9b-5603fca2402a">
+		["MD5-CAM-1.0.1"] = <"CF9EE6CB916C1DF461D4132D93BBD103">
+		["build_uid"] = <"839ca049-7dfc-4bed-8961-ec2dc192aa76">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -73,7 +67,7 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER occurrences matches {0..*} matches {
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v0/}
 					}
 				}
 			}
