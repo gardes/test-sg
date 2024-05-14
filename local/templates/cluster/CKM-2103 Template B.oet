@@ -60,9 +60,7 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.sample_device.v0" concept_name="Device details (training sample)">
-    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.sample_device.v0" template_id="74ba641f-09d3-438a-8192-71e8f065afb0" concept_name="CKM-2103 Template A" path="/items[at0007]/items" />
-  </definition>
+  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.sample_device.v0" concept_name="Device details (training sample)" />
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.sample_device.v0">
     <digest id="MD5-CAM-1.0.1">CF9EE6CB916C1DF461D4132D93BBD103</digest>
   </integrity_checks>
