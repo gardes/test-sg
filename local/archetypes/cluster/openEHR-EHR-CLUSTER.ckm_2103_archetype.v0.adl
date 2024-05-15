@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"0534ADF6CEBDEFDBCA75AF531EC87B00">
-		["build_uid"] = <"6807b055-389b-444e-bd91-c0631fc08b56">
+		["MD5-CAM-1.0.1"] = <"77E2D3C59A01454FF43963A53ED080A7">
+		["build_uid"] = <"de1cf3f2-ee7b-4d10-81b9-895400b3ddd9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -81,6 +81,18 @@ definition
 				}
 			}
 			ELEMENT[at0009] occurrences matches {0..1} matches {*}
+			allow_archetype ELEMENT[at0010] occurrences matches {0..*} matches {	-- Slot Item as Element
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {	-- SlotItem as Cluster
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype ITEM[at0012] occurrences matches {0..*} matches {	-- Slot as Item
+				include
+					archetype_id/value matches {/.*/}
+			}
 		}
 	}
 
@@ -128,6 +140,18 @@ ontology
 				["at0009"] = <
 					text = <"Question Mark">
 					description = <"*Question Mark">
+				>
+				["at0010"] = <
+					text = <"Slot Item as Element">
+					description = <"Slot Item as Element">
+				>
+				["at0011"] = <
+					text = <"SlotItem as Cluster">
+					description = <"Slot item as Cluster">
+				>
+				["at0012"] = <
+					text = <"Slot as Item">
+					description = <"*Slot as Item">
 				>
 			>
 		>
