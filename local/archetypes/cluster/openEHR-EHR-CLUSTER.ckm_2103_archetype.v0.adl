@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.4; uid=9c139aac-66dc-4160-b8cd-061862a9faa7)
+	openEHR-EHR-CLUSTER.ckm_2103_archetype.v0
+
+concept
+	[at0000]	-- CKM 2103 Archetype
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Used to help test CKM-2103">
+			use = <"Link this Archetype to the Templates  to help test CKM-2103">
+			misuse = <"None as this contains no clinical information at all">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"76091AD4B1046A0AC3E2FE4471A59403">
+		["build_uid"] = <"92682b8c-d738-4f86-96ba-a8564aeb3c66">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"CKM 2103 Archetype">
+					description = <"Archetype to test CKM-2103">
+				>
+			>
+		>
+	>
