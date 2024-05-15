@@ -26,27 +26,27 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8254C3C938C6F05EB98EFD97147EC7D8">
-		["build_uid"] = <"28f23ae6-a1dd-4de5-8cfa-26a8b8c7e4d9">
+		["MD5-CAM-1.0.1"] = <"0534ADF6CEBDEFDBCA75AF531EC87B00">
+		["build_uid"] = <"6807b055-389b-444e-bd91-c0631fc08b56">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
 	CLUSTER[at0000] matches {	-- CKM 2103 Archetype
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Element 1
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Element 2
 				value matches {
 					DV_COUNT matches {
 						magnitude matches {|1..50|}
 					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- New element
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Element 3
 				value matches {
 					DV_IDENTIFIER matches {
 						issuer matches {/MM/}
@@ -55,6 +55,32 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Ordinal Element
+				value matches {
+					C_DV_ORDINAL <
+					>
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Quantity Element
+				value matches {
+					C_DV_QUANTITY <
+					>
+				}
+			}
+			CLUSTER[at0006] occurrences matches {0..1} matches {*}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Boolean
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Date and Time
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {*}
 		}
 	}
 
@@ -68,16 +94,40 @@ ontology
 					description = <"Archetype to test CKM-2103">
 				>
 				["at0001"] = <
-					text = <"New element">
+					text = <"Element 1">
 					description = <"*This Archetype is used for Testing">
 				>
 				["at0002"] = <
-					text = <"New element">
+					text = <"Element 2">
 					description = <"*This is the third test">
 				>
 				["at0003"] = <
-					text = <"New element">
+					text = <"Element 3">
 					description = <"*ALL GOOD">
+				>
+				["at0004"] = <
+					text = <"Ordinal Element">
+					description = <"*Ordinal Element">
+				>
+				["at0005"] = <
+					text = <"Quantity Element">
+					description = <"*Quantity Element">
+				>
+				["at0006"] = <
+					text = <"A new Cluster">
+					description = <"*New CLuster">
+				>
+				["at0007"] = <
+					text = <"Boolean">
+					description = <"*Boolean">
+				>
+				["at0008"] = <
+					text = <"Date and Time">
+					description = <"*Date and Time">
+				>
+				["at0009"] = <
+					text = <"Question Mark">
+					description = <"*Question Mark">
 				>
 			>
 		>
