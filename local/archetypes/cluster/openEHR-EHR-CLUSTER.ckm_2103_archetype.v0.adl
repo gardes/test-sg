@@ -26,13 +26,37 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"76091AD4B1046A0AC3E2FE4471A59403">
-		["build_uid"] = <"92682b8c-d738-4f86-96ba-a8564aeb3c66">
+		["MD5-CAM-1.0.1"] = <"8254C3C938C6F05EB98EFD97147EC7D8">
+		["build_uid"] = <"28f23ae6-a1dd-4de5-8cfa-26a8b8c7e4d9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	CLUSTER[at0000] matches {*}
+	CLUSTER[at0000] matches {	-- CKM 2103 Archetype
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- New element
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- New element
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|1..50|}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- New element
+				value matches {
+					DV_IDENTIFIER matches {
+						issuer matches {/MM/}
+						type matches {/M7/}
+						id matches {/7/}
+					}
+				}
+			}
+		}
+	}
 
 
 ontology
@@ -42,6 +66,18 @@ ontology
 				["at0000"] = <
 					text = <"CKM 2103 Archetype">
 					description = <"Archetype to test CKM-2103">
+				>
+				["at0001"] = <
+					text = <"New element">
+					description = <"*This Archetype is used for Testing">
+				>
+				["at0002"] = <
+					text = <"New element">
+					description = <"*This is the third test">
+				>
+				["at0003"] = <
+					text = <"New element">
+					description = <"*ALL GOOD">
 				>
 			>
 		>
