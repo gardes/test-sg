@@ -60,9 +60,7 @@
       </item>
     </other_details>
   </description>
-  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ckm_2103_archetype.v0" concept_name="CKM 2103 Archetype">
-    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ckm_2103_archetype.v0" template_id="edcd5234-89b5-429b-a909-5bb1225dea25" concept_name="Template 1" path="/items[at0012]" />
-  </definition>
+  <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.ckm_2103_archetype.v0" concept_name="CKM 2103 Archetype" />
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.ckm_2103_archetype.v0">
     <digest id="MD5-CAM-1.0.1">77E2D3C59A01454FF43963A53ED080A7</digest>
   </integrity_checks>
