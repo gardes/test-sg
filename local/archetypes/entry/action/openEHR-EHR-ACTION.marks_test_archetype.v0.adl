@@ -33,17 +33,9 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Testen von CKM-Regressionstestfällen!
-
-Another Change Request to test CKM-2072(en)
-
-Eine weitere Änderungsanforderung zum Testen von CKM-2072">
-			use = <"Testen! CKM-1983 erneut testen
-
-Whatever we need(en)">
-			misuse = <"Dieser Archetyp kann nicht missbraucht werden! DIESEN TEXT FÜR STUFE 2 VON CKM-1983 HINZUGEFÜGT
-
-Absolutley none whatsoever(en)">
+			purpose = <"Another Change Request to test CKM-2072(en)">
+			use = <"Whatever we need(en)">
+			misuse = <"Absolutely none whatsoever(en)">
 			copyright = <"*© openEHR Foundation(en)">
 		>
 		["ar-eg"] = <
@@ -77,7 +69,7 @@ Absolutley none whatsoever">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"ED7573F3822C37039103964359EEEE75">
-		["build_uid"] = <"c9b57607-437f-4787-921b-1d67bc7e1b8e">
+		["build_uid"] = <"4ef6a6f9-a432-4d6a-b090-062c4d566088">
 		["revision"] = <"0.0.1-alpha">
 	>
 
