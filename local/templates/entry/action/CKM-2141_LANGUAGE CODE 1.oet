@@ -3,11 +3,24 @@
   <id>7620faf4-595e-4e31-95e1-18e0fd051dba</id>
   <name>CKM-2141_LANGUAGE CODE 1</name>
   <description>
+    <original_author>
+      <item>
+        <key>MM</key>
+        <value>Mark Messiha</value>
+      </item>
+    </original_author>
+    <other_contributors>
+      <item>SG</item>
+    </other_contributors>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
       <purpose>TESTING DE LANGUAGE CODE</purpose>
+      <keywords>
+        <item>Testing</item>
+      </keywords>
       <use>TESTING DATA</use>
       <misuse>NONE AT ALL</misuse>
+      <copyright>Ocean</copyright>
     </details>
     <other_details>
       <item>
