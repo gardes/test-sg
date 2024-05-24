@@ -31,15 +31,9 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Testing CKM Regression Test Cases!
-
-Another Change Request to test CKM-2072">
-			use = <"Testing! TESTING CKM-1983 AGAIN
-
-Whatever we need">
-			misuse = <"Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983
-
-Absolutley none whatsoever">
+			purpose = <"Testing CKM Regression Test Cases!">
+			use = <"Testing! TESTING CKM-1983 AGAIN">
+			misuse = <"Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -54,7 +48,7 @@ Absolutley none whatsoever">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"3781EBCC5A05A92A3562C9AC8BD02BBC">
-		["build_uid"] = <"67f6a469-2e2c-443d-bf36-3496b94ee223">
+		["build_uid"] = <"60e44373-4d49-4120-98b5-913154cbd8f8">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -64,6 +58,7 @@ definition
 			ITEM_TREE[at0001] matches {*}
 		}
 	}
+
 
 
 ontology
