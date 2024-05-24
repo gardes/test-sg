@@ -6,6 +6,12 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"?">
+			>
+		>
 		["ar-eg"] = <
 			language = <[ISO_639-1::ar-eg]>
 			author = <
@@ -23,6 +29,19 @@ description
 		["date"] = <"2022-07-12">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*Testing CKM Regression Test Cases!
+
+Another Change Request to test CKM-2072(en)">
+			use = <"*Testing! TESTING CKM-1983 AGAIN
+
+Whatever we need(en)">
+			misuse = <"*Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983
+
+Absolutley none whatsoever(en)">
+			copyright = <"*© openEHR Foundation(en)">
+		>
 		["ar-eg"] = <
 			language = <[ISO_639-1::ar-eg]>
 			purpose = <"*Testing CKM Regression Test Cases!(en)">
@@ -31,9 +50,15 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Testing CKM Regression Test Cases!">
-			use = <"Testing! TESTING CKM-1983 AGAIN">
-			misuse = <"Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983">
+			purpose = <"Testing CKM Regression Test Cases!
+
+Another Change Request to test CKM-2072">
+			use = <"Testing! TESTING CKM-1983 AGAIN
+
+Whatever we need">
+			misuse = <"Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983
+
+Absolutley none whatsoever">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -47,18 +72,17 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"3781EBCC5A05A92A3562C9AC8BD02BBC">
-		["build_uid"] = <"60e44373-4d49-4120-98b5-913154cbd8f8">
+		["MD5-CAM-1.0.1"] = <"D426BE6AFA59FEC30859D20FF409C851">
+		["build_uid"] = <"87d72c04-fe88-4d5d-a816-1a55e3307413">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	ACTION[at0000] matches {	-- Marks test archetype
+	ACTION[at0000] matches {	-- *Marks test archetype(en)
 		description matches {
 			ITEM_TREE[at0001] matches {*}
 		}
 	}
-
 
 
 ontology
@@ -85,6 +109,19 @@ ontology
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks test archetype(en)">
+					description = <"*Testing CKM Regression Test Cases!(en)">
+					comment = <"*Test Archetype(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
 				>
 			>
 		>
