@@ -19,12 +19,12 @@ ADDED THIS TO TEST CKM-2153 WILL ADD NEW TRUNK REVISION">
 
 Used to test CKM-1455!
 
-USE TESTING to test CCKM-2153 and add new Trunk Revision">
+USE TESTING to test CKM-2153 and add new Trunk Revision">
 			misuse = <"NONE AT ALL.
 
 ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983
 
-MISUSE TESTING to test CCKM-2153 and add new Trunk Revision">
+MISUSE TESTING to test CKM-2153 and add new Trunk Revision">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -37,7 +37,7 @@ MISUSE TESTING to test CCKM-2153 and add new Trunk Revision">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"FCF3EE610979B69DCC0CF4C1036B6194">
-		["build_uid"] = <"7e068ac0-a5b9-4fbb-b469-b721e440ca80">
+		["build_uid"] = <"9bd1d529-2d9c-405f-b434-b5a197aa1d0c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
