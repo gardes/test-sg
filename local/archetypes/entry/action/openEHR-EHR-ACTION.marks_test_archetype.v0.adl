@@ -9,7 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"?">
+				["name"] = <"?, cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
 			>
 		>
 		["ar-eg"] = <
@@ -31,13 +33,15 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"*Testing CKM Regression Test Cases!
+			purpose = <"Testen von CKM-Regressionstestfällen!
 
-Another Change Request to test CKM-2072(en)">
-			use = <"*Testing! TESTING CKM-1983 AGAIN
+Another Change Request to test CKM-2072(en)
+
+Eine weitere Änderungsanforderung zum Testen von CKM-2072">
+			use = <"Testen! CKM-1983 erneut testen
 
 Whatever we need(en)">
-			misuse = <"*Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983
+			misuse = <"Dieser Archetyp kann nicht missbraucht werden! DIESEN TEXT FÜR STUFE 2 VON CKM-1983 HINZUGEFÜGT
 
 Absolutley none whatsoever(en)">
 			copyright = <"*© openEHR Foundation(en)">
@@ -72,8 +76,8 @@ Absolutley none whatsoever">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"D426BE6AFA59FEC30859D20FF409C851">
-		["build_uid"] = <"87d72c04-fe88-4d5d-a816-1a55e3307413">
+		["MD5-CAM-1.0.1"] = <"ED7573F3822C37039103964359EEEE75">
+		["build_uid"] = <"fddb1932-7ed2-4002-b43d-7ad53969132a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
