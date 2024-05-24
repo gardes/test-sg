@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
+  <id>7620faf4-595e-4e31-95e1-18e0fd051dba</id>
+  <name>CKM-2141_LANGUAGE CODE 1</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose>TESTING ES LANGUADE CODE</purpose>
+      <use>TESTING DATA</use>
+      <misuse>NONE AT ALL</misuse>
+    </details>
+    <other_details>
+	<item>
+        <key>original_language</key>
+        <value>ISO_639-1::ES</value>
+      </item>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.marks_test_archetype.v0" concept_name="Marks test archetype" />
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.marks_test_archetype.v0">
+    <digest id="MD5-CAM-1.0.1">3781EBCC5A05A92A3562C9AC8BD02BBC</digest>
+  </integrity_checks>
+</template>
