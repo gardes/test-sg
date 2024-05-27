@@ -14,17 +14,23 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 
 
-CKM-2153 TESTING">
+CKM-2153 TESTING
+
+SECND TEST">
 			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
 
 Used to test CKM-1455!
 
-CKM-2153 TESTING">
+CKM-2153 TESTING
+
+SECND TEST">
 			misuse = <"NONE AT ALL.
 
 ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983
 
-CKM-2153 TESTING">
+CKM-2153 TESTING
+
+SECND TEST">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -37,7 +43,7 @@ CKM-2153 TESTING">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"A05B3F9A308BDA173B371C1291E144D7">
-		["build_uid"] = <"bcf9537a-b431-47f2-864d-a0af1ee978f8">
+		["build_uid"] = <"8fd179f2-46c3-450c-9de6-53c7de63b4c1">
 		["revision"] = <"0.0.1-alpha">
 	>
 
