@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>7620faf4-595e-4e31-95e1-18e0fd051dba</id>
-  <name>CKM-2141_LANGUAGE CODE 1 AND TO TEST CKM-2153</name>
+  <name>CKM-2141_LANGUAGE CODE 1</name>
   <description>
     <original_author>
       <item>
@@ -14,7 +14,7 @@
     </other_contributors>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose>TESTING DE LANGUAGE CODE AND TESTING CKM-2153</purpose>
+      <purpose>TESTING DE LANGUAGE CODE</purpose>
       <keywords>
         <item>Testing</item>
       </keywords>
