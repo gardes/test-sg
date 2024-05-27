@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>7620faf4-595e-4e31-95e1-18e0fd051dba</id>
-  <name>CKM-2141_LANGUAGE CODE 1</name>
+  <name>CKM-2141_LANGUAGE CODE 1 AND TO TEST CKM-2153</name>
   <description>
     <original_author>
       <item>
@@ -14,12 +14,12 @@
     </other_contributors>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose>TESTING DE LANGUAGE CODE</purpose>
+      <purpose>TESTING DE LANGUAGE CODE AND TESTING CKM-2153</purpose>
       <keywords>
         <item>Testing</item>
       </keywords>
-      <use>TESTING DATA</use>
-      <misuse>NONE AT ALL</misuse>
+      <use>TESTING DATA WITH MULTIPLE CARDS</use>
+      <misuse>NONE AT ALL AS THIS IS USED FOR TESTING</misuse>
       <copyright>Ocean</copyright>
     </details>
     <other_details>
@@ -78,7 +78,7 @@
     </other_details>
   </description>
   <definition xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.marks_test_archetype.v0" concept_name="Marks test archetype">
-    <Rule path="/description[at0001]" name="Making sure this test works" />
+    <Rule path="/description[at0001]" name="Making sure this test works AND WORKS FOR CKM-2153" />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.marks_test_archetype.v0">
     <digest id="MD5-CAM-1.0.1">ED7573F3822C37039103964359EEEE75</digest>
