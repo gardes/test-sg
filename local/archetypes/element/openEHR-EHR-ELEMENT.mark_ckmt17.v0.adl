@@ -16,21 +16,21 @@ description
 
 CKM-2153 TESTING
 
-SECND TEST">
+SECOND TEST">
 			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
 
 Used to test CKM-1455!
 
 CKM-2153 TESTING
 
-SECND TEST">
+SECOND TEST">
 			misuse = <"NONE AT ALL.
 
 ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983
 
 CKM-2153 TESTING
 
-SECND TEST">
+SECOND TEST">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -43,7 +43,7 @@ SECND TEST">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"A05B3F9A308BDA173B371C1291E144D7">
-		["build_uid"] = <"8fd179f2-46c3-450c-9de6-53c7de63b4c1">
+		["build_uid"] = <"3a14a368-7a25-4f8c-87af-94a30ee19333">
 		["revision"] = <"0.0.1-alpha">
 	>
 
