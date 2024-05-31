@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=998bd559-8d50-4b9b-aa76-997d55020545)
-	openEHR-EHR-ACTION.marks_test_archetype.v0
+﻿archetype (adl_version=1.4; uid=00310cc1-93df-40f7-8319-df14ea07fac5)
+	openEHR-EHR-ACTION.marks_test_archetype_changed.v0
 
 concept
 	[at0000]	-- Marks test archetype
@@ -68,8 +68,8 @@ Absolutley none whatsoever">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"ED7573F3822C37039103964359EEEE75">
-		["build_uid"] = <"bc0c90c7-36ff-4024-9bd4-4ac89ec4a753">
+		["MD5-CAM-1.0.1"] = <"C2DDF8053078CE730E777F753D1EEB28">
+		["build_uid"] = <"fc6c7450-6e9b-4541-b9c3-966ed6bcc1a2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
