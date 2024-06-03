@@ -5,6 +5,16 @@ concept
 	[at0000]	-- Mark CKM-T17 YEP YEP
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -33,6 +43,28 @@ CKM-2153 TESTING
 SECOND TEST">
 			copyright = <"© openEHR Foundation">
 		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -42,8 +74,8 @@ SECOND TEST">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"A05B3F9A308BDA173B371C1291E144D7">
-		["build_uid"] = <"3a14a368-7a25-4f8c-87af-94a30ee19333">
+		["MD5-CAM-1.0.1"] = <"D5E7492D8E6DA96AE8DCCFA8D2BA84EB">
+		["build_uid"] = <"d3ab4b53-acd1-42ae-a119-fb7827491f78">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -59,6 +91,14 @@ ontology
 					text = <"Mark CKM-T17 YEP YEP">
 					description = <"ARCHETYPE CREATED BY MARK FOR TESTING PURPOSES">
 					comment = <"WHO DA MAN?">
+				>
+			>
+		>
+		["zu"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*ARCHETYPE CREATED BY MARK FOR TESTING PURPOSES(en)">
 				>
 			>
 		>
