@@ -6,10 +6,26 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 		["sk"] = <
 			language = <[ISO_639-1::sk]>
 			author = <
 				["name"] = <"?">
+			>
+		>
+		["da"] = <
+			language = <[ISO_639-1::da]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
 			>
 		>
 	>
@@ -18,6 +34,12 @@ description
 		["name"] = <"">
 	>
 	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
 		["sk"] = <
 			language = <[ISO_639-1::sk]>
 			purpose = <"*Just for testing(en)">
@@ -31,6 +53,12 @@ description
 			misuse = <"None that can be done">
 			copyright = <"© openEHR Foundation">
 		>
+		["da"] = <
+			language = <[ISO_639-1::da]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -40,8 +68,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"FA3EB48FD78F22B189A76BC8A63B7C9E">
-		["build_uid"] = <"ebf761df-7640-4cc8-b450-5694e4801bb9">
+		["MD5-CAM-1.0.1"] = <"A1DA7360D150F254AA89D282234E2F50">
+		["build_uid"] = <"c7fbe403-0130-4404-a029-2a6d1f04eaa3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -100,6 +128,46 @@ ontology
 				["at0003"] = <
 					text = <"*Tree(en)">
 					description = <"*@ internal @(en)">
+				>
+			>
+		>
+		["da"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
 				>
 			>
 		>
