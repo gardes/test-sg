@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 		["he"] = <
 			language = <[ISO_639-1::he]>
 			author = <
@@ -14,12 +22,30 @@ language
 				["email"] = <"cka@test-oceaninformatics.com">
 			>
 		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 ">
@@ -41,6 +67,16 @@ Used to test CKM-1455!(en)">
 
 ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -50,8 +86,8 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"220A9CCA12E7F404A31CA3CFB03273F4">
-		["build_uid"] = <"52537ab9-3e31-4f44-a2e5-3070dbf71711">
+		["MD5-CAM-1.0.1"] = <"31DA0184116AD9C87B4B8A8DE515F305">
+		["build_uid"] = <"fe499931-e9c9-4020-8a5b-7247e1545343">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -76,6 +112,22 @@ ontology
 					text = <"*Mark CKM-T17 YEP YEP(en)">
 					description = <"*JUST TESTING BRO(en)">
 					comment = <"*WHO DA MAN?(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+				>
+			>
+		>
+		["tr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
 				>
 			>
 		>
