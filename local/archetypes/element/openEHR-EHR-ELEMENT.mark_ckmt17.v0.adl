@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 		["zu"] = <
 			language = <[ISO_639-1::zu]>
 			author = <
@@ -17,9 +25,9 @@ language
 		["sq"] = <
 			language = <[ISO_639-1::sq]>
 			author = <
-				["name"] = <"cka cka">
-				["organisation"] = <"Test Organisation">
-				["email"] = <"cka@test-oceaninformatics.com">
+				["name"] = <"mark10 test">
+				["organisation"] = <"Testing Active Users">
+				["email"] = <"mm2@hotmail.com">
 			>
 		>
 	>
@@ -28,6 +36,28 @@ description
 		["name"] = <"">
 	>
 	details = <
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983
+
+CKM-2153 TESTING
+
+SECOND TEST(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 
@@ -104,8 +134,8 @@ SECOND TEST(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F99DE6EA5622AA12EA11F74AB355F310">
-		["build_uid"] = <"121c8b21-f573-49e3-9990-78afdeae2d5a">
+		["MD5-CAM-1.0.1"] = <"A96AB9B702E7EBD639420685BC53E00A">
+		["build_uid"] = <"f97c4b41-bd2f-4c39-8dfa-b7a8ae00d666">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -125,6 +155,14 @@ ontology
 			>
 		>
 		["zu"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*ARCHETYPE CREATED BY MARK FOR TESTING PURPOSES(en)">
+				>
+			>
+		>
+		["mt"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Mark CKM-T17 YEP YEP(en)">
