@@ -6,12 +6,10 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
 			author = <
-				["name"] = <"mark3 test">
-				["organisation"] = <"Ocean">
-				["email"] = <"markmessiha@hotmail.com">
+				["name"] = <"?">
 			>
 		>
 	>
@@ -27,8 +25,8 @@ description
 			misuse = <"CKM-T2">
 			copyright = <"© openEHR Foundation">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
 			purpose = <"*Testing(en)">
 			use = <"*More testing(en)">
 			misuse = <"*CKM-T2(en)">
@@ -42,8 +40,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"82B48A4DC37DECA0E969AC3ACEF7D071">
-		["build_uid"] = <"64fa6018-d50a-472e-889c-9f6f418454e5">
+		["MD5-CAM-1.0.1"] = <"F2C032146ABA210839354CC62633EE82">
+		["build_uid"] = <"6dfa8288-de64-40fb-9e27-fcbef8b9ca5d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -69,15 +67,15 @@ ontology
 				>
 			>
 		>
-		["ca"] = <
+		["zu"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Marks testing(en)">
 					description = <"*New Archetyp ID created to test CKM-T2(en)">
 				>
 				["at0001"] = <
-					text = <"Tree">
-					description = <"@ internal @">
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
 				>
 			>
 		>
