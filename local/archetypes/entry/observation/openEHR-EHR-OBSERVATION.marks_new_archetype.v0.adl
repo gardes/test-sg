@@ -82,8 +82,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"2B67117E974EE93E5F87B1D517130C5C">
-		["build_uid"] = <"6be706eb-53a1-4bde-a69a-5456a30bd064">
+		["MD5-CAM-1.0.1"] = <"9B3665E27C2F640B09E2F0976D5E90C6">
+		["build_uid"] = <"1252622f-ebd3-4ec0-8340-1a0488123c3b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -169,7 +169,9 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Marks new archetype(en)">
-					description = <"*This is a test for testing test Case CKM-T12(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)
+
+GREEK AGAIN">
 				>
 				["at0001"] = <
 					text = <"Event Series">
