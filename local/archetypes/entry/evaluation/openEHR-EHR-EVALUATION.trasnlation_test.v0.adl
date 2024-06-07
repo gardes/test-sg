@@ -14,6 +14,14 @@ language
 				["email"] = <"markmessiha@hotmail.com">
 			>
 		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
 			author = <
@@ -33,6 +41,13 @@ description
 			purpose = <"*Testing CKM-1461(en)">
 			use = <"*Testing purposes(en)">
 			misuse = <"*None at all(en)">
+		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			keywords = <"ITALIAN TRANSLATION BY CKA.CLA", ...>
+			misuse = <"ITALIAN TRANSLATION BY CKA.CLA">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -56,8 +71,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B17F52F09D387433DD89CD106C104C34">
-		["build_uid"] = <"0da304f5-d180-4d5e-b4f1-05d48f7fc180">
+		["MD5-CAM-1.0.1"] = <"17509B8B9C2B1CBF0427CC4A0317E10D">
+		["build_uid"] = <"66e8286a-caca-48f8-8828-e3a2af62c2fc">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -90,6 +105,14 @@ ontology
 				["at0000"] = <
 					text = <"*Trasnlation Status Test(en)">
 					description = <"*Testing Translation Status(en)">
+				>
+			>
+		>
+		["ja"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"ITALIAN TRANSLATION BY CKA.CLA">
 				>
 			>
 		>
