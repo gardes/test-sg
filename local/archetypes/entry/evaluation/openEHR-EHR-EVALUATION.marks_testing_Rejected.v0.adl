@@ -6,10 +6,26 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 		["zu"] = <
 			language = <[ISO_639-1::zu]>
 			author = <
 				["name"] = <"?">
+			>
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
 			>
 		>
 	>
@@ -18,6 +34,12 @@ description
 		["name"] = <"">
 	>
 	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Testing(en)">
+			use = <"*More testing(en)">
+			misuse = <"*CKM-T2(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing">
@@ -31,6 +53,12 @@ description
 			use = <"*More testing(en)">
 			misuse = <"*CKM-T2(en)">
 		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			purpose = <"*Testing(en)">
+			use = <"*More testing(en)">
+			misuse = <"*CKM-T2(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -40,8 +68,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F2C032146ABA210839354CC62633EE82">
-		["build_uid"] = <"6dfa8288-de64-40fb-9e27-fcbef8b9ca5d">
+		["MD5-CAM-1.0.1"] = <"6B85C0BED4427373A1514E5D9C74A7CD">
+		["build_uid"] = <"9281047e-4484-4ab8-982e-cdf805f7f086">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -76,6 +104,30 @@ ontology
 				["at0001"] = <
 					text = <"*Tree(en)">
 					description = <"*@ internal @(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks testing(en)">
+					description = <"*New Archetyp ID created to test CKM-T2(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["tr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks testing(en)">
+					description = <"*New Archetyp ID created to test CKM-T2(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
 				>
 			>
 		>
