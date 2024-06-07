@@ -14,6 +14,14 @@ language
 				["email"] = <"markmessiha@hotmail.com">
 			>
 		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -33,6 +41,12 @@ description
 			misuse = <"None at all">
 			copyright = <"© openEHR Foundation">
 		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			misuse = <"Proprio nessuno">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -42,8 +56,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5CBE9552346061052F33338D926D68F9">
-		["build_uid"] = <"27c96069-8fc8-4e2c-b9e9-8592a144d0c8">
+		["MD5-CAM-1.0.1"] = <"B17F52F09D387433DD89CD106C104C34">
+		["build_uid"] = <"0da304f5-d180-4d5e-b4f1-05d48f7fc180">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -68,6 +82,14 @@ ontology
 				["at0000"] = <
 					text = <"*Trasnlation Status Test(en)">
 					description = <"Dokimastikí katástasi metáfrasis">
+				>
+			>
+		>
+		["it"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"*Testing Translation Status(en)">
 				>
 			>
 		>
