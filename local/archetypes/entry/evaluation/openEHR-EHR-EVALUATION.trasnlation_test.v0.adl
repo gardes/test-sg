@@ -5,11 +5,27 @@ concept
 	[at0000]	-- Trasnlation Status Test
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			misuse = <"*None at all(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing CKM-1461">
@@ -26,8 +42,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"93A74E13693E0B7BF893893E65F5D772">
-		["build_uid"] = <"01d889c9-4317-4623-afb8-ab263289620f">
+		["MD5-CAM-1.0.1"] = <"5CBE9552346061052F33338D926D68F9">
+		["build_uid"] = <"27c96069-8fc8-4e2c-b9e9-8592a144d0c8">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -44,6 +60,14 @@ ontology
 				["at0000"] = <
 					text = <"Trasnlation Status Test">
 					description = <"Testing Translation Status">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"Dokimastikí katástasi metáfrasis">
 				>
 			>
 		>
