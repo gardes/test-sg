@@ -25,9 +25,9 @@ language
 		["tr"] = <
 			language = <[ISO_639-1::tr]>
 			author = <
-				["name"] = <"mark3 test">
-				["organisation"] = <"Ocean">
-				["email"] = <"markmessiha@hotmail.com">
+				["name"] = <"mark3 test, mark12 test">
+				["organisation"] = <"Ocean, Ocean's The Coolest!!!!">
+				["email"] = <"markmessiha@hotmail.com, mm12@hotmail.com">
 			>
 		>
 	>
@@ -86,8 +86,8 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"31DA0184116AD9C87B4B8A8DE515F305">
-		["build_uid"] = <"31fe2b7d-8f0e-4c05-9f60-ac225c38e930">
+		["MD5-CAM-1.0.1"] = <"D3809F922AA614165448512945F92A98">
+		["build_uid"] = <"8c429a51-841e-475b-b2cb-a8a6f58e42c5">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -127,7 +127,9 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Mark CKM-T17 YEP YEP(en)">
-					description = <"*JUST TESTING BRO(en)">
+					description = <"*JUST TESTING BRO(en)
+
+NOTHING NEW">
 				>
 			>
 		>
