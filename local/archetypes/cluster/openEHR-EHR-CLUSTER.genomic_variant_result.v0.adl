@@ -82,8 +82,8 @@ Richards S, Aziz N, Bale S, Bick D, Das S, Gastier-Foster J, Grody WW, Hegde M, 
 		["original_namespace"] = <"org.openehr">
 		["custodian_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
-		["MD5-CAM-1.0.1"] = <"CE7D52771FF693568CEA29328EBE1038">
-		["build_uid"] = <"8a219cb4-e3ac-4924-bcc0-700592bee1da">
+		["MD5-CAM-1.0.1"] = <"36F34C44DFB1B494F415D53DBA496C83">
+		["build_uid"] = <"253ed854-7583-459a-92bb-5a48ccf1e5bf">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -752,8 +752,8 @@ If both this element and the 'Structured variant' SLOT are used simultaneously, 
 				>
 				["at0102"] = <
 					text = <"Variant identification">
-					description = <"A reference to a specific variation recorded into an external biological variation database.">
-					comment = <"For example: 'rs123456'&gt (Item name) from 'dbSNP' (Knowledge base name) 'version 151' (Knowledge base version). This CLUSTER.knowledge_base_reference archetype is repeatable to allow several different IDs from different databases for the same variant.">
+					description = <"A reference to a specific variation recorded into an external biological variation database&gt.">
+					comment = <"For example: 'rs123456' (Item name) from 'dbSNP' (Knowledge base name) 'version 151' (Knowledge base version). This CLUSTER.knowledge_base_reference archetype is repeatable to allow several different IDs from different databases for the same variant.">
 				>
 			>
 		>
