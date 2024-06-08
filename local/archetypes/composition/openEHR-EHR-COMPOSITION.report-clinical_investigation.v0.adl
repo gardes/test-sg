@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=2f7c553f-fd96-4390-9d68-3b3deba970e6)
+﻿archetype (adl_version=1.4; uid=969f98a3-7760-453a-97a5-b79ad82fb4a5)
 	openEHR-EHR-COMPOSITION.report-clinical_investigation.v0
 specialise
 	openEHR-EHR-COMPOSITION.report.v1
@@ -243,13 +243,14 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Kristian Heldal, Telemark Hospital Trust, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, National Institute of Public Health, Japan", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Line Sæle, Nasjonal IKT HF, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Clinical investigation report, Draft archetype [Internet]. openEHR Foundation, International Archetypes Clinical Knowledge Manager [cited: 2024-06-08]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.6386">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"AA1A96183879AD044D29E236B926E0A0">
-		["build_uid"] = <"f3f0ef12-2f22-4771-8d2a-2a67c83849ac">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"CFF5B0F90147242897DDB5008F51F01F">
+		["build_uid"] = <"69632630-5c1d-4648-a7eb-87816c01f2e7">
 		["revision"] = <"0.0.1-alpha">
 	>
 
