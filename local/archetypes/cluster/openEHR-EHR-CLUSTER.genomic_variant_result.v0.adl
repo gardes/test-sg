@@ -56,8 +56,8 @@ Denne arketypen gjør det mulig å registrere genomiske varianter i en HGVS-synt
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To report findings and annotations related to one variant found in the genome by a sequencing test g.33038255C&ampgt;A.">
-			use = <"Use to report findings and annotations related to one variant found in the genome by a sequencing test g.33038255C&ampgt;A. 
+			purpose = <"To report findings and annotations related to one variant found in the genome by a sequencing test gg.33038255C&gt;A.">
+			use = <"Use to report findings and annotations related to one variant found in the genome by a sequencing test g.33038255C&gt;A. 
 
 This archetype has been designed to be nested in the 'Test result' SLOT within the OBSERVATION.laboratory_test_result archetype. It is intended to provide a consistent framework for nesting any specific genomic variant CLUSTER archetype within the 'Structured variant' SLOT.
 
@@ -82,8 +82,8 @@ Richards S, Aziz N, Bale S, Bick D, Das S, Gastier-Foster J, Grody WW, Hegde M, 
 		["original_namespace"] = <"org.openehr">
 		["custodian_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
-		["MD5-CAM-1.0.1"] = <"AE970D661D73F330E630701CB7955192">
-		["build_uid"] = <"f461274a-3f1f-4c86-bf72-33bfe9c5b1d9">
+		["MD5-CAM-1.0.1"] = <"531FBA16CB5A8ADDEA08400DED76D049">
+		["build_uid"] = <"87c31abe-bd51-4199-ad29-90ba75ebf7a2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -753,7 +753,7 @@ If both this element and the 'Structured variant' SLOT are used simultaneously, 
 				>
 				["at0102"] = <
 					text = <"Variant identification">
-					description = <"A reference to a specific variation recorded into an external biological variation database g.33038255C&ampgt;A.">
+					description = <"A reference to a specific variation recorded into an external biological variation database g.33038255C&gt;A.">
 					comment = <"For example: 'rs123456' (Item name) from 'dbSNP' (Knowledge base name) 'version 151' (Knowledge base version). This CLUSTER.knowledge_base_reference archetype is repeatable to allow several different IDs from different databases for the same variant.">
 				>
 			>
