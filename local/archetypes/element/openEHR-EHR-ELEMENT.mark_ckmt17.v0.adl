@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["vi"] = <
+			language = <[ISO_639-1::vi]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			author = <
@@ -36,6 +44,16 @@ description
 		["name"] = <"">
 	>
 	details = <
+		["vi"] = <
+			language = <[ISO_639-1::vi]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
@@ -86,8 +104,8 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"D3809F922AA614165448512945F92A98">
-		["build_uid"] = <"8c429a51-841e-475b-b2cb-a8a6f58e42c5">
+		["MD5-CAM-1.0.1"] = <"123FBD0D246B6F296FF8121EB4598FEA">
+		["build_uid"] = <"da46fc78-dc4d-4fbb-9eaf-9410fc175320">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -130,6 +148,14 @@ ontology
 					description = <"*JUST TESTING BRO(en)
 
 NOTHING NEW">
+				>
+			>
+		>
+		["vi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"Translated">
 				>
 			>
 		>
