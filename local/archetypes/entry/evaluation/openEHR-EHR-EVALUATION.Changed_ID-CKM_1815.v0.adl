@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=bcde62ba-764d-450a-8d66-67643626e89d)
-	openEHR-EHR-EVALUATION.new_specialised_archetype-Specialised_Archetype.v0
+﻿archetype (adl_version=1.4; uid=d8d5e51d-3c08-4db2-af14-a51e5f9e4989)
+	openEHR-EHR-EVALUATION.Changed_ID-CKM_1815.v0
 specialise
 	openEHR-EHR-EVALUATION.new_specialised_archetype.v0
 
@@ -28,8 +28,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F5BD0963D396CB409A402C0161B71625">
-		["build_uid"] = <"77ae2c3c-7aa0-45b2-ac49-06980ad87886">
+		["MD5-CAM-1.0.1"] = <"E5F95C21CECD5CC7FE61855755A08848">
+		["build_uid"] = <"5a8e3548-bf8c-4039-83f9-5efedb8bdc3d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
