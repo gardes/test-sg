@@ -1,0 +1,62 @@
+﻿archetype (adl_version=1.4; uid=bcde62ba-764d-450a-8d66-67643626e89d)
+	openEHR-EHR-EVALUATION.new_specialised_archetype-Specialised_Archetype.v0
+specialise
+	openEHR-EHR-EVALUATION.new_specialised_archetype.v0
+
+concept
+	[at0000.1]	-- New specialised archetype!
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Specialised Archetype for Regression testing">
+			use = <"Testing">
+			misuse = <"None">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F5BD0963D396CB409A402C0161B71625">
+		["build_uid"] = <"77ae2c3c-7aa0-45b2-ac49-06980ad87886">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- New specialised archetype!
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"New specialised archetype">
+					description = <"Specialised Archetype">
+				>
+				["at0000.1"] = <
+					text = <"New specialised archetype!">
+					description = <"Specialised Archetype!">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
