@@ -1,0 +1,64 @@
+﻿archetype (adl_version=1.4; uid=25c81beb-9c1f-44a2-bed5-c975f8bf4495)
+	openEHR-EHR-EVALUATION.ckm_1_20_regression_archetype-First_Specialisation.v0
+specialise
+	openEHR-EHR-EVALUATION.ckm_1_20_regression_archetype.v0
+
+concept
+	[at0000.1]	-- CkM 1 20 Regression Archetype!
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Deprecated and Rejected Archetypes within Specialised Archetypes">
+			use = <"Regression Testing CKM 1.20.">
+			misuse = <"None at all">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B48BAE96D003734619E4865D2F3AAAF1">
+		["build_uid"] = <"300d0332-5b75-4931-b511-49c9ee8d651a">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- CkM 1 20 Regression Archetype!
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"CkM 1 20 Regression Archetype">
+					description = <"CKM 1.20 Regression testing">
+					comment = <"Deprecated and Rejected Archetypes within Specialised Archetypes">
+				>
+				["at0000.1"] = <
+					text = <"CkM 1 20 Regression Archetype!">
+					description = <"CKM 1.20 Regression testing!">
+					comment = <"Deprecated and Rejected Archetypes within Specialised Archetypes!">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
