@@ -48,13 +48,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing CKM Regression Test Cases!
 
-Another Change Request to test CKM-2072">
+Another Regression Test for CKM 1.20">
 			use = <"Testing! TESTING CKM-1983 AGAIN
 
-Whatever we need">
+Whatever we need for testing CKM and TD">
 			misuse = <"Cannot misuse this Archetype! ADDED THIS TEXT FOR STAGE 2 OF CKM-1983
 
-Absolutley none whatsoever">
+Absolutley none whatsoever as this is simply a Test Archetype">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -69,12 +69,12 @@ Absolutley none whatsoever">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"C2DDF8053078CE730E777F753D1EEB28">
-		["build_uid"] = <"fc6c7450-6e9b-4541-b9c3-966ed6bcc1a2">
+		["build_uid"] = <"02666987-ce29-436a-8d57-1889f1d7a5f0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	ACTION[at0000] matches {	-- *Marks test archetype(en)
+	ACTION[at0000] matches {	-- Marks test archetype
 		description matches {
 			ITEM_TREE[at0001] matches {*}
 		}
