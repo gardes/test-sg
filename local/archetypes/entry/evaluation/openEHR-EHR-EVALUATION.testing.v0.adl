@@ -14,7 +14,7 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Testing CKM-2 again">
 			use = <"Testing">
-			misuse = <"None">
+			misuse = <"None at all">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"FC1F7F24D7F41E9BDCD6B9AE1C807F70">
-		["build_uid"] = <"36667481-061e-4b6c-b02c-f7a1e87d2722">
+		["build_uid"] = <"78efa7a8-4582-4ce5-8d05-702a6373607a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -37,6 +37,7 @@ definition
 			ITEM_TREE[at0001] matches {*}
 		}
 	}
+
 
 
 ontology
