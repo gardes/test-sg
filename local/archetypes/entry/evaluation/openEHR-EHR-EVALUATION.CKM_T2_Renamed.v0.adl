@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=c079dd14-cfbf-451d-b448-ab4dfd9e0861)
-	openEHR-EHR-EVALUATION.Testing_CKM_T2.v0
+﻿archetype (adl_version=1.4; uid=99612847-d939-45af-ace8-92bff9d8d3c9)
+	openEHR-EHR-EVALUATION.CKM_T2_Renamed.v0
 
 concept
 	[at0000]	-- Testing CKM-2
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"07BA804167FF4E4821B26D55CDFD593C">
-		["build_uid"] = <"bf997a5b-706c-4ae8-8d34-ed46963c8088">
+		["MD5-CAM-1.0.1"] = <"67113BDC571EA1141CD922C094EEF269">
+		["build_uid"] = <"4ebfee3a-032d-40ff-b410-c501fd0b505a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
