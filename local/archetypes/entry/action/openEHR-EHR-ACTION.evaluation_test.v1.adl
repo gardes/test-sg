@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=a02b5b6d-fe65-4bc6-ae33-efa3a62c7f1f)
-	openEHR-EHR-ACTION.evaluation_test.v0
+﻿archetype (adl_version=1.4; uid=7603e4ba-55f9-4be3-b72f-d0d59f665c6d)
+	openEHR-EHR-ACTION.evaluation_test.v1
 
 concept
 	[at0000]	-- Evaluation Test
@@ -21,7 +21,7 @@ description
 			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Mark Testing", "John Tester", "Con Puter">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -30,9 +30,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8E06E5C075A8660E24D90AE2F39048F8">
-		["build_uid"] = <"966a005f-bab1-43e8-be58-37450c6ab916">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"730788597E60D9F6A3F9734EA077DEA9">
+		["build_uid"] = <"4f956ef5-10a0-4290-949e-a46df95d8c6c">
+		["revision"] = <"1.0.0">
 	>
 
 definition
