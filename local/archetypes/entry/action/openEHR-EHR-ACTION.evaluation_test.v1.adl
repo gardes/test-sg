@@ -5,6 +5,43 @@ concept
 	[at0000]	-- Evaluation Test
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			author = <
+				["name"] = <"Mark CKA">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"AFAR Language">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Greek">
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			author = <
+				["name"] = <"Mark CKA, cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Albanian Translation">
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Mark Messiha">
@@ -13,12 +50,36 @@ description
 		["date"] = <"2024-08-12">
 	>
 	details = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE">
 			use = <"TESTING CHANGING RM CLASS">
 			misuse = <"NONE AT ALL">
 			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
 		>
 	>
 	lifecycle_state = <"published">
@@ -30,9 +91,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"730788597E60D9F6A3F9734EA077DEA9">
-		["build_uid"] = <"10a26183-2f7f-4876-9ee3-64f0491b519a">
-		["revision"] = <"1.0.1">
+		["MD5-CAM-1.0.1"] = <"37B6B37BE9989A8DB8F0C63A52B08952">
+		["build_uid"] = <"1241a47b-93f1-4805-b928-e54549880e59">
+		["revision"] = <"1.0.2">
 	>
 
 definition
@@ -47,6 +108,38 @@ ontology
 					text = <"Evaluation Test">
 					description = <"Need to see if we change the element via a Text Editor">
 					comment = <"See if this works">
+				>
+			>
+		>
+		["zu"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["aa"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
 				>
 			>
 		>
