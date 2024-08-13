@@ -15,6 +15,14 @@ language
 			>
 			accreditation = <"AFAR Language">
 		>
+		["th"] = <
+			language = <[ISO_639-1::th]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			author = <
@@ -56,6 +64,12 @@ description
 			use = <"*TESTING CHANGING RM CLASS(en)">
 			misuse = <"*NONE AT ALL(en)">
 		>
+		["th"] = <
+			language = <[ISO_639-1::th]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
@@ -91,9 +105,9 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"37B6B37BE9989A8DB8F0C63A52B08952">
-		["build_uid"] = <"1241a47b-93f1-4805-b928-e54549880e59">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"9529F9CF0E1D9B5D822314806952C065">
+		["build_uid"] = <"98703b08-dab9-49fa-b54b-969b24c83144">
+		["revision"] = <"1.0.3">
 	>
 
 definition
@@ -140,6 +154,14 @@ ontology
 				["at0000"] = <
 					text = <"*Evaluation Test(en)">
 					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["th"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bæb thds̄xb pramein p̄hl">
+					description = <"T̂xng dū ẁā reā pelī̀yn xngkh̒ prakxb p̄h̀ān porkærm kæ̂k̄hị k̄ĥxkhwām h̄rụ̄x mị̀">
 				>
 			>
 		>
