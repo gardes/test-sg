@@ -22,6 +22,14 @@ language
 				["email"] = <"markmessiha@hotmail.com">
 			>
 		>
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
+			author = <
+				["name"] = <"Mark Testing">
+				["organisation"] = <"Test Organisation in Ocean">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
 		["he"] = <
 			language = <[ISO_639-1::he]>
 			author = <
@@ -64,6 +72,16 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
 			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
 			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
 
@@ -122,8 +140,8 @@ ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"446BD68BD5E32D12699C1D10EC6FF256">
-		["build_uid"] = <"4784275e-da9d-4ec5-b900-114f7ccbf14c">
+		["MD5-CAM-1.0.1"] = <"FAA45CDB21C5A49CC3BA6BDEF205EA54">
+		["build_uid"] = <"341e4aeb-24c6-4797-a528-e5cb3ea31d78">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -178,6 +196,14 @@ NOTHING NEW">
 			>
 		>
 		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+				>
+			>
+		>
+		["mt"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Mark CKM-T17 YEP YEP(en)">
