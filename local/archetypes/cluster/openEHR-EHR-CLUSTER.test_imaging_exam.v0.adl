@@ -17,8 +17,8 @@ language
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
-				["name"] = <"Vebjørn Arntzen">
-				["organisation"] = <"Oslo University Hospital">
+				["name"] = <"Vebjørn Arntzen, Vebjorn Arntzen">
+				["organisation"] = <"Oslo University Hospital, Oslo universitetssykehus">
 				["email"] = <"varntzen@ous-hf.no">
 			>
 		>
@@ -51,7 +51,7 @@ Darf nicht verwendet werden, um Details in Bezug auf die Gesamtbefunde, den Kont
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
-			purpose = <"For å registrere funn og tolkning av radiologisk undersøkelse av et definert organ eller en kroppsdel.">
+			purpose = <"TRA LA LA! For å registrere funn og tolkning av radiologisk undersøkelse av et definert organ eller en kroppsdel.">
 			use = <"Bruk for å registrere funn og tolkning av radiologisk undersøkelse av et definert organ eller en kroppsdel.
 
 Formålet med designet på hele gruppen av arketyper innen CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur) er å kunne registrere alle detaljerte funn og observasjoner ved radiologiske undersøkelser. Gruppen av spesialiserte arketyper er avledet fra denne generiske forelder-arketypen, CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur), og har et universelt design for å registrere ethvert funn i ethvert organ eller kroppsdel og ved bruk av enhver modalitet.
@@ -94,8 +94,8 @@ Not to be used to record details related to the overall findings, context or tec
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"3EA6846F9D9140E0A429317DFEDD0B02">
-		["build_uid"] = <"58a5d5f7-c7c5-4fea-8bf2-2df35b297dbd">
+		["MD5-CAM-1.0.1"] = <"B5912572F7CFE2A423E1B54CA7A3F816">
+		["build_uid"] = <"91651d5e-ae22-4e00-9f0e-7f1101ebeaee">
 		["revision"] = <"0.0.1-alpha">
 	>
 
