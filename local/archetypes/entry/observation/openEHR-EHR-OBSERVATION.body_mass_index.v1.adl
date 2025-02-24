@@ -130,8 +130,8 @@ ontology
 				["at0004"] = <
 					text = <"Body Mass Index">
 					description = <"Index describing ratio of weight to height.">
-					detail_docref = <"data_elements/NEHTA-16857-Body_Mass_Index-Data_Element.xml">
 					ref_range = <"true">
+					detail_docref = <"data_elements/NEHTA-16857-Body_Mass_Index-Data_Element.xml">
 				>
 				["at0005"] = <
 					text = <"Tree">
@@ -140,10 +140,10 @@ ontology
 				["at0006"] = <
 					text = <"Method">
 					description = <"The method of entering the Body Mass Index.">
-					detail_docref = <"data_elements/NEHTA-16859-BMI_Entry_Method-Data_Element.xml">
-					fsn = <"BMI Entry Method">
 					value_domain_name = <"BMI Entry Method Values">
+					detail_docref = <"data_elements/NEHTA-16859-BMI_Entry_Method-Data_Element.xml">
 					value_domain_dc_id = <"16858">
+					fsn = <"BMI Entry Method">
 				>
 				["at0007"] = <
 					text = <"Automatic entry">

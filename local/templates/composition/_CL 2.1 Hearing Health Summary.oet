@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
   <id>d9170290-c064-407e-aa2d-d7caed1eef07</id>
   <name>*CL 2.1 Hearing Health Summary</name>
   <description>
@@ -60,6 +60,14 @@
       </item>
     </other_details>
   </description>
+  <annotations path="[openEHR-EHR-COMPOSITION.health_summary.v0]/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='Recent Results (see CL 3.1.3 Otoscopy Report &amp; CL 3.1.5 Audiometry Report; Risk of hearing loss derived from CL 7.1 Risk Factor Register)']/items[openEHR-EHR-SECTION.adhoc.v1 and name/value='Hearing Assessment (limited display only of most recent assessment - Assessment Date, Location, Context, Audiogram graph + data: date, reliability, background noise)']/content[openEHR-EHR-OBSERVATION.audiology_speech_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
+    <items>
+      <item>
+        <key>HHIMS.Value Set</key>
+        <value>1.3.5.2-1</value>
+      </item>
+    </items>
+  </annotations>
   <annotations path="[openEHR-EHR-COMPOSITION.health_summary.v0]/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='Recent Results (see CL 3.1.3 Otoscopy Report &amp; CL 3.1.5 Audiometry Report; Risk of hearing loss derived from CL 7.1 Risk Factor Register)']/items[openEHR-EHR-SECTION.adhoc.v1 and name/value='Hearing Assessment (limited display only of most recent assessment - Assessment Date, Location, Context, Audiogram graph + data: date, reliability, background noise)']/items[openEHR-EHR-OBSERVATION.audiogram_result.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0037]">
     <items>
       <item>
@@ -69,16 +77,16 @@
     </items>
   </annotations>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.health_summary.v0" concept_name="Health summary" name="Hearing health summary">
-    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Header">
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Informed Consent status (see CL 7.8 Consent template)" />
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Priority (derived from Admin algorithms)" />
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Neonatal Hearing Screen status (see CL 2.2 Neonatal Hearing Screen template)" />
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Last Surgery (derived from all CL 3.3 Operation Note templates)" />
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Aided Device (see CL 7.7 Assisted hearing template)" />
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Header">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Informed Consent status (see CL 7.8 Consent template)" />
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Priority (derived from Admin algorithms)" />
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Neonatal Hearing Screen status (see CL 2.2 Neonatal Hearing Screen template)" />
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Last Surgery (derived from all CL 3.3 Operation Note templates)" />
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Aided Device (see CL 7.7 Assisted hearing template)" />
     </Content>
-    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Service Plan (See CL 8.0 Service Plan)" />
-    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Recent Results (see CL 3.1.3 Otoscopy Report &amp; CL 3.1.5 Audiometry Report; Risk of hearing loss derived from CL 7.1 Risk Factor Register)">
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Hearing Assessment (limited display only of most recent assessment - Assessment Date, Location, Context, Audiogram graph + data: date, reliability, background noise)">
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Service Plan (See CL 8.0 Service Plan)" />
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Recent Results (see CL 3.1.3 Otoscopy Report &amp; CL 3.1.5 Audiometry Report; Risk of hearing loss derived from CL 7.1 Risk Factor Register)">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Hearing Assessment (limited display only of most recent assessment - Assessment Date, Location, Context, Audiogram graph + data: date, reliability, background noise)">
         <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.audiogram_result.v0" concept_name="Audiogram result" path="/items">
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" max="2" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/items[at0139]" max="0" />
@@ -144,7 +152,7 @@
           <Rule path="/protocol[at0032]/items[at0046]" max="0" />
         </Item>
       </Item>
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Ear Assessment (limited display only of most recent assessment - Assessment date, Location, Context, plus Ear Diagnosis and Tympanometry Result">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/items" name="Ear Assessment (limited display only of most recent assessment - Assessment date, Location, Context, plus Ear Diagnosis and Tympanometry Result">
         <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" concept_name="Problem/Diagnosis" max="1" path="/items" name="Ear Diagnosis (0..2)">
           <Rule path="/data[at0001]/items[at0002]" name="Diagnosis">
             <constraint xsi:type="textConstraint" limitToList="false" />
@@ -209,7 +217,8 @@
         </Item>
       </Item>
     </Content>
-    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Otitis Media Summary (see CL 7.2 Problem List - Otitis Media Diagnosis by query only)" />
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Otitis Media Summary (see CL 7.2 Problem List - Otitis Media Diagnosis by query only)" />
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc Heading" max="1" path="/content" name="Service History (See CL 4.0 Consultations)" />
     <Context />
   </definition>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.health_summary.v0">

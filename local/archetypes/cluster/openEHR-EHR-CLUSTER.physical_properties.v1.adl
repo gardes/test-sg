@@ -119,8 +119,8 @@ ontology
 				["at0000"] = <
 					text = <"Physical Properties of an Object">
 					description = <"To record the phycial properties of an object such as a body part, specimen or lesion.">
-					detail_docref = <"data_groups/NEHTA-16166-Physical_Properties_of_an_Object-Data_Group.xml">
 					spec_id = <"107">
+					detail_docref = <"data_groups/NEHTA-16166-Physical_Properties_of_an_Object-Data_Group.xml">
 				>
 				["at0020"] = <
 					text = <"Weight">

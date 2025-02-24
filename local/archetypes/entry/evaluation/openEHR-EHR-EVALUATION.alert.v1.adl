@@ -120,8 +120,8 @@ ontology
 				["at00018"] = <
 					text = <"Alert">
 					description = <"Information pertaining to a subject of care that may: Need special consideration by a healthcare provider before making a decision about his/her actions in order to avert an unfavourable healthcare event; Need consideration and/or action by a healthcare provider or facility in relation to the care and safety of the subject of care, staff and/or other individuals; or Notify the healthcare provider of special circumstances that may be relevant in delivering care and/or interacting with the subject of care.">
-					detail_docref = <"data_groups/NEHTA-00018-Alert-Data_Group.xml">
 					version = <"1.0">
+					detail_docref = <"data_groups/NEHTA-00018-Alert-Data_Group.xml">
 				>
 				["at00084"] = <
 					text = <"Alert Type">

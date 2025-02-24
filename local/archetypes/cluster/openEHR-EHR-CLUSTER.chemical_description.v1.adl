@@ -153,10 +153,10 @@ ontology
   1. \"Therapeutic\". The chemical has a known and desired effect which is positive.
   2. \"Toxic\". This chemical is toxic and has no therapeutic effect.
   3. \"Adjuvant\". The chemical is active but aids the therapeutic effect of another ingredient.">
-					detail_docref = <"data_elements/NEHTA-16412-Active_Ingredient_Role-Data_Element.xml">
-					fsn = <"Active Ingredient Role">
 					value_domain_name = <"Active Ingredient Role Values">
 					value_domain_dc_id = <"16411">
+					detail_docref = <"data_elements/NEHTA-16412-Active_Ingredient_Role-Data_Element.xml">
+					fsn = <"Active Ingredient Role">
 				>
 				["at0006"] = <
 					text = <"Therapeutic">
@@ -184,10 +184,10 @@ Examples:
   2. Capsule.
   3. Oral Drops.
   4. Effervescent powder.">
-					detail_docref = <"data_elements/NEHTA-10186-Form-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Medication Form Reference Set">
 					value_domain_dc_id = <"16618">
+					detail_docref = <"data_elements/NEHTA-10186-Form-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0011"] = <
 					text = <"Inactive Ingredient">
@@ -221,10 +221,10 @@ Examples:
   3. \"Propellent\". Inert propellent.
   4. \"Preservative\". The ingredient is present to prolong the life of the substance.
   5. \"Colouring\". The ingredient is used to colour the substance.">
-					detail_docref = <"data_elements/NEHTA-16419-Inactive_Ingredient_Role-Data_Element.xml">
-					fsn = <"Inactive Ingredient Role">
 					value_domain_name = <"Inactive Ingredient Role Values">
 					value_domain_dc_id = <"16418">
+					detail_docref = <"data_elements/NEHTA-16419-Inactive_Ingredient_Role-Data_Element.xml">
+					fsn = <"Inactive Ingredient Role">
 				>
 				["at0016"] = <
 					text = <"Additive">

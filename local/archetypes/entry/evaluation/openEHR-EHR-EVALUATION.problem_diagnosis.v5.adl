@@ -62,7 +62,7 @@ Mosby's Pocket Dictionary of Medicine, Nursing and Health Professional, 6th Edit
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"14BDC2083962408B228B799BB9CC2E5D">
-		["build_uid"] = <"1d67b67d-d82b-48b8-ab5a-f79c62c85002">
+		["build_uid"] = <"233179b6-7139-4ccc-bbce-634f78f432a7">
 		["revision"] = <"5.0.0-alpha">
 	>
 
@@ -204,9 +204,9 @@ ontology
 					text = <"Problem/Diagnosis">
 					description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
 					comment = <"An account of relevant identified health related problems as reported by a healthcare provider. This can include a disease, condition, injury, poisoning, sign, symptom, abnormal finding, complaint, or other factor influencing health status as assessed by a healthcare provider.">
-					detail_docref = <"data_groups/NEHTA-15530-Problem_Diagnosis-Data_Group.xml">
 					dc_id = <"15530">
 					spec_id = <"12">
+					detail_docref = <"data_groups/NEHTA-15530-Problem_Diagnosis-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -218,60 +218,60 @@ ontology
 					comment = <"It is preferred that this item be coded from the Problem/Diagnosis Reference Set Value Domain.
 
 This item denotes the name of the condition used by the healthcare provider, after assessment, to describe the health problem or diagnosis experienced by the subject of care.">
+					value_domain_dc_id = <"16617">
+					value_domain_name = <"Problem/Diagnosis Reference Set">
 					fsn = <"Problem/Diagnosis Identification">
-					detail_docref = <"data_elements/NEHTA-15514-Problem_Diagnosis_Identification-Data_Element.xml">
 					dc_id = <"15514">
 					coding_preferred = <"true">
-					value_domain_name = <"Problem/Diagnosis Reference Set">
-					value_domain_dc_id = <"16617">
+					detail_docref = <"data_elements/NEHTA-15514-Problem_Diagnosis_Identification-Data_Element.xml">
 				>
 				["at0009"] = <
 					text = <"Clinical Description">
 					description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
 					comment = <"Used to provide additional narrative information in relation to a problem/diagnosis.">
-					detail_docref = <"data_elements/NEHTA-15597-Clinical_Description-Data_Element.xml">
 					dc_id = <"15597">
+					detail_docref = <"data_elements/NEHTA-15597-Clinical_Description-Data_Element.xml">
 				>
 				["at0010"] = <
 					text = <"Date of Onset">
 					description = <"Estimated or actual date the problem/diagnosis began, in the opinion of the clinician.">
-					detail_docref = <"data_elements/NEHTA-15507-Date_of_Onset-Data_Element.xml">
 					dc_id = <"15507">
+					detail_docref = <"data_elements/NEHTA-15507-Date_of_Onset-Data_Element.xml">
 				>
 				["at0018"] = <
 					text = <"Occurrence Summary">
 					description = <"Summary information about occurrences or exacerbations.">
 					comment = <"Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
 					fsn = <"Problem/Diagnosis Occurrence Summary">
-					detail_docref = <"data_groups/NEHTA-16554-Problem_Diagnosis_Occurrence_Summary-Data_Group.xml">
 					dc_id = <"16554">
+					detail_docref = <"data_groups/NEHTA-16554-Problem_Diagnosis_Occurrence_Summary-Data_Group.xml">
 				>
 				["at0019"] = <
 					text = <"Frequency">
 					description = <"The frequency or estimated frequency of occurrences or exacerbations of the problem/diagnosis.">
 					fsn = <"Problem/Diagnosis Occurrence Frequency">
-					detail_docref = <"data_elements/NEHTA-16556-Problem_Diagnosis_Occurrence_Frequency-Data_Element.xml">
 					dc_id = <"16556">
+					detail_docref = <"data_elements/NEHTA-16556-Problem_Diagnosis_Occurrence_Frequency-Data_Element.xml">
 				>
 				["at0020"] = <
 					text = <"Latest Occurrence">
 					description = <"The date of the last occurrence or exacerbation of the problem/diagnosis.">
 					fsn = <"Problem/Diagnosis Latest Occurrence">
-					detail_docref = <"data_elements/NEHTA-16557-Problem_Diagnosis_Latest_Occurrence-Data_Element.xml">
 					dc_id = <"16557">
+					detail_docref = <"data_elements/NEHTA-16557-Problem_Diagnosis_Latest_Occurrence-Data_Element.xml">
 				>
 				["at0025"] = <
 					text = <"Number">
 					description = <"Cumulative number of occurrences or exacerbations of the problem/diagnosis.">
 					fsn = <"Problem/Diagnosis Occurrence Count">
-					detail_docref = <"data_elements/NEHTA-16555-Problem_Diagnosis_Occurrence_Count-Data_Element.xml">
 					dc_id = <"16555">
+					detail_docref = <"data_elements/NEHTA-16555-Problem_Diagnosis_Occurrence_Count-Data_Element.xml">
 				>
 				["at0026"] = <
 					text = <"Related Items">
 					description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
-					detail_docref = <"data_groups/NEHTA-16541-Related_Items-Data_Group.xml">
 					dc_id = <"16541">
+					detail_docref = <"data_groups/NEHTA-16541-Related_Items-Data_Group.xml">
 				>
 				["at0028"] = <
 					text = <"Related Item">
@@ -279,79 +279,79 @@ This item denotes the name of the condition used by the healthcare provider, aft
 					comment = <"It is preferred that this item be coded from the Related Item Values Value Domain.
 
 This item identifies the relevant health problem experienced by the subject of care, as assessed by the healthcare provider. This element provides a link to one or more established problem(s) or diagnoses.">
-					detail_docref = <"data_elements/NEHTA-15562-Related_Item-Data_Element.xml">
-					dc_id = <"15562">
-					coding_preferred = <"true">
-					value_domain_name = <"Related Item Values">
 					value_domain_dc_id = <"15562">
+					value_domain_name = <"Related Item Values">
+					coding_preferred = <"true">
+					dc_id = <"15562">
+					detail_docref = <"data_elements/NEHTA-15562-Related_Item-Data_Element.xml">
 				>
 				["at0030"] = <
 					text = <"Date of Resolution/Remission">
 					description = <"The date or estimated date that the problem/diagnosis resolved or went into remission, as indicated/identified by the clinician.">
-					detail_docref = <"data_elements/NEHTA-15510-Date_of_Resolution_Remission-Data_Element.xml">
 					dc_id = <"15510">
+					detail_docref = <"data_elements/NEHTA-15510-Date_of_Resolution_Remission-Data_Element.xml">
 				>
 				["at0031"] = <
 					text = <"Age at Resolution/Remission">
 					description = <"The age of the person at the time of resolution or remission of the problem/diagnosis.">
 					comment = <"May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
-					detail_docref = <"data_elements/NEHTA-16544-Age_at_Resolution_Remission-Data_Element.xml">
 					dc_id = <"16544">
+					detail_docref = <"data_elements/NEHTA-16544-Age_at_Resolution_Remission-Data_Element.xml">
 				>
 				["at0037"] = <
 					text = <"Age at Onset">
 					description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began.">
 					comment = <"May be important in situations where approximations of age based on calculations are not accurate enough, e.g. in infants under one year. It may also be important for assessing clinical implications such as prognosis of condition, e.g. early onset Alzheimer, multiple sclerosis, certain cancers, etc.">
-					detail_docref = <"data_elements/NEHTA-16535-Age_at_Onset-Data_Element.xml">
 					dc_id = <"16535">
+					detail_docref = <"data_elements/NEHTA-16535-Age_at_Onset-Data_Element.xml">
 				>
 				["at0044"] = <
 					text = <"Anatomical Location">
 					description = <"Slot to contain detailed and structured anatomical location details.">
-					detail_docref = <"data_groups/NEHTA-16150-Anatomical_Location-Data_Group.xml">
 					dc_id = <"16150.12.1">
+					detail_docref = <"data_groups/NEHTA-16150-Anatomical_Location-Data_Group.xml">
 					spec_id = <"108">
 				>
 				["at0054"] = <
 					text = <"Diagnostic Criteria">
 					description = <"The criteria on which the problem/diagnosis is based.">
-					detail_docref = <"choices/NEHTA-16623-Diagnostic_Criteria-Choice.xml">
 					dc_id = <"16623">
+					detail_docref = <"choices/NEHTA-16623-Diagnostic_Criteria-Choice.xml">
 				>
 				["at0055"] = <
 					text = <"Clinical Stage/Grade">
 					description = <"Clinical stage or grade of a problem/diagnosis.">
-					detail_docref = <"choices/NEHTA-16624-Clinical_Stage_Grade-Choice.xml">
 					dc_id = <"16624">
+					detail_docref = <"choices/NEHTA-16624-Clinical_Stage_Grade-Choice.xml">
 				>
 				["at0056"] = <
 					text = <"Relationship Type">
 					description = <"The type of relationship that this problem/diagnosis has to the related item.">
-					fsn = <"Item Relationship Type">
-					detail_docref = <"data_elements/NEHTA-16560-Item_Relationship_Type-Data_Element.xml">
-					dc_id = <"16560">
-					value_domain_name = <"Item Relationship Type Values">
 					value_domain_dc_id = <"16559">
+					value_domain_name = <"Item Relationship Type Values">
+					fsn = <"Item Relationship Type">
+					dc_id = <"16560">
+					detail_docref = <"data_elements/NEHTA-16560-Item_Relationship_Type-Data_Element.xml">
 				>
 				["at0069"] = <
 					text = <"Comment">
 					description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
 					fsn = <"Problem/Diagnosis Comment">
-					detail_docref = <"data_elements/NEHTA-16545-Problem_Diagnosis_Comment-Data_Element.xml">
 					dc_id = <"16545">
+					detail_docref = <"data_elements/NEHTA-16545-Problem_Diagnosis_Comment-Data_Element.xml">
 				>
 				["at0072"] = <
 					text = <"Description">
 					description = <"A narrative description, including outcomes and other key details, about occurrences or exacerbations of the problem/diagnosis.">
 					fsn = <"Problem/Diagnosis Occurrence Description">
-					detail_docref = <"data_elements/NEHTA-16558-Problem_Diagnosis_Occurrence_Description-Data_Element.xml">
 					dc_id = <"16558">
+					detail_docref = <"data_elements/NEHTA-16558-Problem_Diagnosis_Occurrence_Description-Data_Element.xml">
 				>
 				["at0073"] = <
 					text = <"Link to Occurrence Details">
 					description = <"Link to further information about past occurrences or exacerbations of the problem/diagnosis that exist elsewhere in the health record.">
-					detail_docref = <"data_elements/NEHTA-10124-Link_to_Occurrence_Details-Data_Element.xml">
 					dc_id = <"10124">
+					detail_docref = <"data_elements/NEHTA-10124-Link_to_Occurrence_Details-Data_Element.xml">
 				>
 				["at0074"] = <
 					text = <"Tree">
@@ -360,14 +360,14 @@ This item identifies the relevant health problem experienced by the subject of c
 				["at0075"] = <
 					text = <"Link to Supporting Clinical Evidence">
 					description = <"Links to other relevant information, including pathology reports.">
-					detail_docref = <"data_elements/NEHTA-16546-Link_to_Supporting_Clinical_Evidence-Data_Element.xml">
 					dc_id = <"16546">
+					detail_docref = <"data_elements/NEHTA-16546-Link_to_Supporting_Clinical_Evidence-Data_Element.xml">
 				>
 				["at0076"] = <
 					text = <"Status">
 					description = <"Descriptor for context- or use-case specific label or workflow-related aspect of the diagnostic process which may not be safe to exchange between systems or use in a shared environment.">
-					detail_docref = <"choices/NEHTA-16625-Status-Choice.xml">
 					dc_id = <"16625">
+					detail_docref = <"choices/NEHTA-16625-Status-Choice.xml">
 				>
 				["at0080"] = <
 					text = <"Caused by">
@@ -380,8 +380,8 @@ This item identifies the relevant health problem experienced by the subject of c
 				["at0082"] = <
 					text = <"Severity">
 					description = <"A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician.">
-					detail_docref = <"data_elements/NEHTA-15531-Severity-Data_Element.xml">
 					dc_id = <"15531">
+					detail_docref = <"data_elements/NEHTA-15531-Severity-Data_Element.xml">
 				>
 			>
 		>

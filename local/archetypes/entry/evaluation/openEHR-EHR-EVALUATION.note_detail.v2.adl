@@ -60,11 +60,11 @@ ontology
 				["at0000"] = <
 					text = <"Note Detail">
 					description = <"Details pertinent to additional or supplementary information about the containing concept, which is not captured by other information structures contained in the concept.">
-					detail_docref = <"data_groups/NEHTA-16212-Note_Detail-Data_Group.xml">
 					dc_id = <"16212">
+					detail_docref = <"data_groups/NEHTA-16212-Note_Detail-Data_Group.xml">
 					spec_id = <"98">
-					version = <"1.0">
 					status = <"Published">
+					version = <"1.0">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -73,26 +73,26 @@ ontology
 				["at0002"] = <
 					text = <"Note">
 					description = <"Free text comments relevant to the concept.">
-					detail_docref = <"data_elements/NEHTA-16213-Note-Data_Element.xml">
 					dc_id = <"16213">
-					version = <"1.0">
 					status = <"Published">
+					detail_docref = <"data_elements/NEHTA-16213-Note-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0003"] = <
 					text = <"DateTime Note Created">
 					description = <"The date (and optionally time) that the note was written.">
-					detail_docref = <"data_elements/NEHTA-16089-DateTime_Note_Created-Data_Element.xml">
 					dc_id = <"16089">
-					version = <"1.0">
 					status = <"Published">
+					detail_docref = <"data_elements/NEHTA-16089-DateTime_Note_Created-Data_Element.xml">
+					version = <"1.0">
 				>
 				["at0004"] = <
 					text = <"Note Author">
 					description = <"The healthcare provider who wrote the note.">
-					detail_docref = <"data_groups/NEHTA-10296-Note_Author-Data_Group.xml">
 					dc_id = <"10296.98.1">
-					version = <"1.0">
 					status = <"Published">
+					detail_docref = <"data_groups/NEHTA-10296-Note_Author-Data_Group.xml">
+					version = <"1.0">
 				>
 			>
 		>

@@ -1,0 +1,228 @@
+﻿archetype (adl_version=1.4; uid=1.2.36.1.2001.1001.100.106.1.0)
+	openEHR-EHR-CLUSTER.specimen_preparation.v1
+
+concept
+	[at0000]	-- Specimen Preparation
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"NEHTA">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"13-Aug-2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of laboratory specimen processing">
+			use = <"Generally used within a CLUSTER.specimen archetype.">
+			keywords = <"specimen", "laboratory", "sample", "histopathology", "histology", "pathology">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"ApprovedCandidate">
+	other_contributors = <"Dr Ian McNicoll", "Sam Heard Ocean Informatics", "Heather Leslie Ocean Informatics", "Koray Atalag University of Auckland", "Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
+	other_details = <
+		["references"] = <"Digital Imaging and Communications in Medicine (DICOM) Supplement 122: Specimen Module and Revised Pathology SOP Classes DICOM Standards Committee, Working Groups 26, Pathology IHE Anatomic Pathology Technical Framework Volume 1 (PAT TF-1) Revision 1.2 – Trial Implementation November 24, 2008">
+		["MD5-CAM-1.0.1"] = <"469EFAB49F635E54119CD7B4D140D064">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Specimen Preparation
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0077] occurrences matches {0..1} matches {	-- Processing Step
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0072] occurrences matches {0..1} matches {	-- DateTime of Processing Step
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0085] occurrences matches {0..1} matches {	-- Parent Specimen Identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0071] occurrences matches {0..1} matches {	-- Processing Step Type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0078, 	-- Specimen collection
+									at0079, 	-- Specimen receiving
+									at0080, 	-- Sampling of tussue specimen
+									at0081, 	-- Staining
+									at0082, 	-- Specimen processing
+									at0083]	-- Specimen storage
+								}
+							}
+						}
+					}
+					ELEMENT[at0074] occurrences matches {0..1} matches {	-- Specimen Processing Type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0087] occurrences matches {0..1} matches {	-- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0086] occurrences matches {0..1} matches {	-- Specific Preparation
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0073] occurrences matches {0..1} matches {	-- Sampling Method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0084] occurrences matches {0..1} matches {	-- Staining Method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0075] occurrences matches {0..1} matches {	-- Embedding Medium
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0076] occurrences matches {0..1} matches {	-- Fixative
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Specimen Preparation">
+					description = <"To record details of laboratory specimen processing">
+					dc_id = <"16174">
+					detail_docref = <"data_groups/NEHTA-16174-Specimen_Preparation-Data_Group.xml">
+					spec_id = <"106">
+					status = <"Draft">
+					version = <"1.0">
+				>
+				["at0071"] = <
+					text = <"Processing Step Type">
+					description = <"A DICOM compatible code describing a single processing step.">
+					dc_id = <"16317">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16317-Processing_Step_Type-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0072"] = <
+					text = <"DateTime of Processing Step">
+					description = <"The data and time that the processing step occured.">
+					dc_id = <"16315">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16315-DateTime_of_Processing_Step-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0073"] = <
+					text = <"Sampling Method">
+					description = <"The sampling method used. e.g dissection, block sampling">
+					dc_id = <"16321">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16321-Sampling_Method-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0074"] = <
+					text = <"Specimen Processing Type">
+					description = <"A physical process applied to the specimen e.g. block embedding">
+					dc_id = <"16318">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16318-Specimen_Processing_Type-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0075"] = <
+					text = <"Embedding Medium">
+					description = <"The medium within which the specimen is embedded e.g paraffin">
+					dc_id = <"16323">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16323-Embedding_Medium-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0076"] = <
+					text = <"Fixative">
+					description = <"The fixative used">
+					dc_id = <"16324">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16324-Fixative-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0077"] = <
+					text = <"Processing Step">
+					description = <"Used to support DICOM Supp 122 compatible specimen processing steps. Describes the single immediate processing step to go from parent to current specimen">
+					dc_id = <"16314">
+					status = <"Draft">
+					detail_docref = <"data_groups/NEHTA-16314-Processing_Step-Data_Group.xml">
+					version = <"1.0">
+				>
+				["at0078"] = <
+					text = <"Specimen collection">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Specimen receiving">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Sampling of tussue specimen">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Staining">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Specimen processing">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"Specimen storage">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"Staining Method">
+					description = <"Stain used for a microscopy slide.">
+					dc_id = <"16322">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16322-Staining_Method-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0085"] = <
+					text = <"Parent Specimen Identifier">
+					description = <"Unique identifier of the parent specimen, where the specimen is split into sub-samples.">
+					dc_id = <"16187">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16187-Parent_Specimen_Identifier-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0086"] = <
+					text = <"Specific Preparation">
+					description = <"Details of the specific preparation carried out during a single processing step.">
+					dc_id = <"16320">
+					status = <"Draft">
+					detail_docref = <"data_groups/NEHTA-16320-Specific_Preparation-Data_Group.xml">
+					version = <"1.0">
+				>
+				["at0087"] = <
+					text = <"Description">
+					description = <"A general description of the specimen prepartion.">
+					dc_id = <"16319">
+					status = <"Draft">
+					detail_docref = <"data_elements/NEHTA-16319-Description-Data_Element.xml">
+					version = <"1.0">
+				>
+			>
+		>
+	>

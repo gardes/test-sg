@@ -312,10 +312,10 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
   5. 278453011000036118, Panadeine Forte tablet: uncoated, 20 tablets, blister pack
   6. 315236011000036113, bandage compression 10 cm x 3.5 m bandage: high stretch, 1 bandage
   7. 186324011000036116, Eloflex (2480) (bandage compression 10 cm x 3.5 m) bandage: high stretch, 1 bandage">
-					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Therapeutic Good Identification Values">
 					value_domain_dc_id = <"16115">
+					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0002"] = <
 					text = <"Dosage">
@@ -356,10 +356,10 @@ Examples:
   5. Three times a day.
   6. Stat.
   7. PRN.">
-					detail_docref = <"data_elements/NEHTA-10153-Frequency-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Frequency Values">
 					value_domain_dc_id = <"10153">
+					detail_docref = <"data_elements/NEHTA-10153-Frequency-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0007"] = <
 					text = <"Frequency Qualifier">
@@ -372,19 +372,19 @@ Examples:
   3. Before bed
   4. In the morning
   5. At night">
-					detail_docref = <"data_elements/NEHTA-10154-Frequency_Qualifier-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Frequency Qualifier Values">
 					value_domain_dc_id = <"10154">
+					detail_docref = <"data_elements/NEHTA-10154-Frequency_Qualifier-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0008"] = <
 					text = <"Route of Administration">
 					description = <"The way through which a therapeutic good is administered.">
 					comment = <"It is preferred that this item be coded from the Route of Administration Values Value Domain.">
-					detail_docref = <"data_elements/NEHTA-10147-Route_of_Administration-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Route of Administration Values">
 					value_domain_dc_id = <"10147">
+					detail_docref = <"data_elements/NEHTA-10147-Route_of_Administration-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0009"] = <
 					text = <"Site of Administration">
@@ -395,10 +395,10 @@ Examples:
   1. Outer thigh
   2. Upper left arm
   3. Upper right arm">
-					detail_docref = <"data_elements/NEHTA-10156-Site_of_Administration-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Site of Administration Values">
 					value_domain_dc_id = <"10156">
+					detail_docref = <"data_elements/NEHTA-10156-Site_of_Administration-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0010"] = <
 					text = <"Additional Dose Instruction">
@@ -502,10 +502,10 @@ Examples:  (See: .)">
 Applicable to dispense records.
 
 The primary purpose of this data element is to enable the determination of the source of any applicable financial subsidy for the item. Not to be confused with Medical Benefit Category Type.">
-					detail_docref = <"data_elements/NEHTA-16060-Claim_Category_Type-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Claim Category Type Values">
 					value_domain_dc_id = <"16060">
+					detail_docref = <"data_elements/NEHTA-16060-Claim_Category_Type-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0026"] = <
 					text = <"Label Instruction">
@@ -598,10 +598,10 @@ Examples:
 Examples: 
   1. Dose increased to 10mg.
   2. Correction of prescription error.">
-					detail_docref = <"data_elements/NEHTA-10176-Changes_Made-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Changes Made Values">
 					value_domain_dc_id = <"10176">
+					detail_docref = <"data_elements/NEHTA-10176-Changes_Made-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0038"] = <
 					text = <"Follow Up Required">
@@ -647,10 +647,10 @@ Delivery compliance aids are particularly useful for the elderly and those with 
 Examples: 
   1. Webster pack
   2. Dosett">
-					detail_docref = <"data_elements/NEHTA-10151-Delivery_Compliance_Aid_Description-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Delivery Compliance Aid Description Values">
 					value_domain_dc_id = <"10151">
+					detail_docref = <"data_elements/NEHTA-10151-Delivery_Compliance_Aid_Description-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0043"] = <
 					text = <"Cautionary Advice">
@@ -659,10 +659,10 @@ Examples:
 
 Examples: 
   1. May cause drowsiness">
-					detail_docref = <"data_elements/NEHTA-10166-Cautionary_Advice-Data_Element.xml">
-					coding_preferred = <"true">
 					value_domain_name = <"Cautionary Advice Values">
 					value_domain_dc_id = <"10166">
+					detail_docref = <"data_elements/NEHTA-10166-Cautionary_Advice-Data_Element.xml">
+					coding_preferred = <"true">
 				>
 				["at0044"] = <
 					text = <"Serial Number">

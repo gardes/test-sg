@@ -65,9 +65,9 @@ ontology
 				["at0000"] = <
 					text = <"Amount of Medication">
 					description = <"The amount of a medication or substance for medication orders, administrations, dispensing etc.">
+					spec_id = <"117">
 					detail_docref = <"data_groups/NEHTA-16423-Amount_of_Medication-Data_Group.xml">
 					dc_id = <"16423">
-					spec_id = <"117">
 				>
 				["at0001"] = <
 					text = <"Quantity">
@@ -103,8 +103,8 @@ ontology
 				["ac0001"] = <
 					text = <"Dose Unit Reference Set">
 					description = <"The set of values for dose unit.">
-					something2 = <"Would this come through as well?">
 					something1 = <"Would this come through?">
+					something2 = <"Would this come through as well?">
 				>
 			>
 		>

@@ -112,8 +112,8 @@ ontology
 				["at0001"] = <
 					text = <"Unexpected result indicator">
 					description = <"Indicates the degree of diagnostic significance associated with a pathology test result based on all the available clinical information.">
-					dc_id = <"11027">
 					no_exception = <"false">
+					dc_id = <"11027">
 				>
 				["at0002"] = <
 					text = <"Result comment">
@@ -123,8 +123,8 @@ ontology
 				["at0003"] = <
 					text = <"Testing method">
 					description = <"Description of the method use for an individual result.">
-					dc_id = <"11025">
 					no_exception = <"false">
+					dc_id = <"11025">
 				>
 				["at0004"] = <
 					text = <"Result status">
@@ -143,8 +143,8 @@ ontology
 				["at0007"] = <
 					text = <"Result name">
 					description = <"Name of the result to which this annotation refers. This will often be coded with a reference terminology such as LOINC.">
-					dc_id = <"11022">
 					no_exception = <"false">
+					dc_id = <"11022">
 				>
 				["at0008"] = <
 					text = <"Interim">

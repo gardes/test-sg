@@ -5,16 +5,32 @@ concept
 	[at0000]	-- Aaaa
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde">
+				["organisation"] = <"Ocean Informaticsw">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Added this text">
-			use = <"Added this use">
-			misuse = <"Added this as cannot misuse template">
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -27,8 +43,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F7C4D21DFF6A64BCE206E349688C2919">
-		["build_uid"] = <"c32e5b27-d0e4-418a-b0ae-8af4ee09f347">
+		["MD5-CAM-1.0.1"] = <"66A17813610608AE8C5517E4B5EEA929">
+		["build_uid"] = <"1273ae6b-b219-4c79-a9ed-3129f39e196c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -65,6 +81,7 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -78,11 +95,11 @@ ontology
 					description = <"*">
 				>
 				["at0002"] = <
-					text = <"New element2">
-					description = <"*">
+					text = <"New element2 with EMPTY description">
+					description = <"">
 				>
 				["at0003"] = <
-					text = <"new quanitty goes in here">
+					text = <"new quantity goes in here">
 					description = <"*">
 				>
 				["at0004"] = <
@@ -91,6 +108,34 @@ ontology
 				>
 				["at0005"] = <
 					text = <"New cluster">
+					description = <"*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"Neues EL">
+					description = <"TEST">
+				>
+				["at0002"] = <
+					text = <"fedrf">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"*new quantity goes in here(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*New cluster(en)">
 					description = <"*">
 				>
 			>

@@ -222,8 +222,8 @@ ontology
 				["at0000"] = <
 					text = <"Adverse Reaction">
 					description = <"A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, venom from animal stings or a medication at therapeutic or sub-therapeutic doses.">
-					detail_docref = <"data_groups/NEHTA-15517-Adverse_Reaction-Data_Group.xml">
 					spec_id = <"9">
+					detail_docref = <"data_groups/NEHTA-15517-Adverse_Reaction-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -242,10 +242,10 @@ Examples:
   3. Bee venom
   4. Animal protein
   5. Latex">
-					detail_docref = <"data_elements/NEHTA-15521-Substance_Agent-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Substance/Agent Values">
 					value_domain_dc_id = <"15521">
+					value_domain_name = <"Substance/Agent Values">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-15521-Substance_Agent-Data_Element.xml">
 				>
 				["at0004"] = <
 					text = <"Absolute Contraindication">
@@ -270,10 +270,10 @@ Examples:
 					comment = <"It is preferred that this item be coded from the Substance/Agent Values Value Domain.
 
 This may include a medication trade name.">
-					detail_docref = <"data_elements/NEHTA-16349-Specific_Substance_Agent-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Substance/Agent Values">
 					value_domain_dc_id = <"15521">
+					value_domain_name = <"Substance/Agent Values">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-16349-Specific_Substance_Agent-Data_Element.xml">
 				>
 				["at0011"] = <
 					text = <"Manifestation">
@@ -288,10 +288,10 @@ Examples:
   3. Tinnitus.
   4. Nausea.
   5. Rash.">
-					detail_docref = <"data_elements/NEHTA-15564-Manifestation-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Clinical Manifestation Values">
 					value_domain_dc_id = <"15564">
+					value_domain_name = <"Clinical Manifestation Values">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-15564-Manifestation-Data_Element.xml">
 				>
 				["at0012"] = <
 					text = <"Reaction Description">
@@ -318,10 +318,10 @@ Examples:
   4. Intolerance / sensitivity.
   5. Pseudoallergy / anaphylactoid reaction.
   6. Side effects.">
-					detail_docref = <"data_elements/NEHTA-15554-Reaction_Type-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Adverse Substance Reaction Type Values">
 					value_domain_dc_id = <"15554">
+					value_domain_name = <"Adverse Substance Reaction Type Values">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-15554-Reaction_Type-Data_Element.xml">
 				>
 				["at0018"] = <
 					text = <"Exposure Description">
@@ -373,8 +373,8 @@ Examples:  (Please see)">
 				["at0029"] = <
 					text = <"Additional Reaction Detail">
 					description = <"Additional detail about the reaction, including anatomical location.">
-					detail_docref = <"data_groups/NEHTA-16150-Additional_Reaction_Detail-Data_Group.xml">
 					spec_id = <"108">
+					detail_docref = <"data_groups/NEHTA-16150-Additional_Reaction_Detail-Data_Group.xml">
 				>
 				["at0031"] = <
 					text = <"Multimedia">

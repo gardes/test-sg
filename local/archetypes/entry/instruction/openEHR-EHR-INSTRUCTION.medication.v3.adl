@@ -289,8 +289,8 @@ ontology
 				["at0000"] = <
 					text = <"Medication Instruction">
 					description = <"Details of a medicine, vaccine or other therapeutic good with instructions for use.">
-					detail_docref = <"data_groups/NEHTA-16211-Medication_Instruction-Data_Group.xml">
 					spec_id = <"96">
+					detail_docref = <"data_groups/NEHTA-16211-Medication_Instruction-Data_Group.xml">
 				>
 				["at0001"] = <
 					text = <"Order">
@@ -318,17 +318,17 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
   6. 315236011000036113, bandage compression 10 cm x 3.5 m bandage: high stretch, 1 bandage
   7. 186324011000036116, Eloflex (2480) (bandage compression 10 cm x 3.5 m) bandage: high stretch, 1 bandage
   8. 73875011000036101, Je-Vax (Japanese encephalitis virus inactivated vaccine) injection: powder for, vial">
-					fsn = <"Therapeutic Good Identification">
-					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Medicines Terminology">
 					value_domain_dc_id = <"16115">
+					value_domain_name = <"Medicines Terminology">
+					fsn = <"Therapeutic Good Identification">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
 				>
 				["at0004"] = <
 					text = <"Ingredients and Form">
 					description = <"Detailed information about the ingredient(s) including form and strength.">
-					detail_docref = <"data_groups/NEHTA-16408-Ingredients_and_Form-Data_Group.xml">
 					spec_id = <"112">
+					detail_docref = <"data_groups/NEHTA-16408-Ingredients_and_Form-Data_Group.xml">
 				>
 				["at0005"] = <
 					text = <"Dose Description">
@@ -338,8 +338,8 @@ Examples:  (Some examples of AMT ConceptID and their AMT Preferred Term are:)
 				["at0006"] = <
 					text = <"Structured Dose">
 					description = <"The amount of medicine, vaccine or other therapeutic good to be dispensed.">
-					detail_docref = <"data_groups/NEHTA-16423-Structured_Dose-Data_Group.xml">
 					spec_id = <"117">
+					detail_docref = <"data_groups/NEHTA-16423-Structured_Dose-Data_Group.xml">
 				>
 				["at0007"] = <
 					text = <"Grounds for Concurrent Supply">
@@ -437,10 +437,10 @@ Examples:
 					comment = <"It is preferred that this item be coded from the Administrative Manufacturer Code Values Value Domain.
 
 This element is to be used to assist with claims processing.">
-					detail_docref = <"data_elements/NEHTA-16648-Administrative_Manufacturer_Code-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Administrative Manufacturer Code Values">
 					value_domain_dc_id = <"16647">
+					value_domain_name = <"Administrative Manufacturer Code Values">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-16648-Administrative_Manufacturer_Code-Data_Element.xml">
 				>
 				["at0025"] = <
 					text = <"Number of Repeats">
@@ -502,10 +502,10 @@ Examples:
 				["at0034"] = <
 					text = <"Change or Recommendation?">
 					description = <"Identifies whether the change has already been made or is a recommendation which has not been made.">
+					value_domain_dc_id = <"16626">
+					value_domain_name = <"Change Status Values">
 					fsn = <"Change Status">
 					detail_docref = <"data_elements/NEHTA-16595-Change_Status-Data_Element.xml">
-					value_domain_name = <"Change Status Values">
-					value_domain_dc_id = <"16626">
 				>
 				["at0035"] = <
 					text = <"Comment">
@@ -524,8 +524,8 @@ Examples:
 				["at0037"] = <
 					text = <"Structured Timing">
 					description = <"Structured details of the timing of the use or administration.">
-					detail_docref = <"data_groups/NEHTA-16431-Structured_Timing-Data_Group.xml">
 					spec_id = <"118">
+					detail_docref = <"data_groups/NEHTA-16431-Structured_Timing-Data_Group.xml">
 				>
 				["at0038"] = <
 					text = <"Indication for Authorised Use">
@@ -544,9 +544,9 @@ Examples:
   1. New prescription
   2. Change of previous
   3. Cancellation">
-					detail_docref = <"data_elements/NEHTA-16593-Change_Type-Data_Element.xml">
-					value_domain_name = <"Change Type Values">
 					value_domain_dc_id = <"16592">
+					value_domain_name = <"Change Type Values">
+					detail_docref = <"data_elements/NEHTA-16593-Change_Type-Data_Element.xml">
 				>
 				["at0041"] = <
 					text = <"Unchanged">
@@ -563,16 +563,16 @@ Examples:
   1. Eligible for PBS subsidy
   2. Eligible for Closing the Gap - PBS Co-Payment Measure subsidy
   3. Not eligible for a pharmaceutical subsidy">
-					detail_docref = <"data_elements/NEHTA-16095-Concession_Benefit-Data_Element.xml">
-					coding_preferred = <"true">
-					value_domain_name = <"Therapeutic Good Benefit Category Reference Set">
 					value_domain_dc_id = <"16095">
+					value_domain_name = <"Therapeutic Good Benefit Category Reference Set">
+					coding_preferred = <"true">
+					detail_docref = <"data_elements/NEHTA-16095-Concession_Benefit-Data_Element.xml">
 				>
 				["at0043"] = <
 					text = <"Administration Details">
 					description = <"Details of the administration of the medicine, vaccine or other therapeutic good.">
-					detail_docref = <"data_groups/NEHTA-10108-Administration_Details-Data_Group.xml">
 					spec_id = <"115">
+					detail_docref = <"data_groups/NEHTA-10108-Administration_Details-Data_Group.xml">
 				>
 				["at0044"] = <
 					text = <"Additional Instruction">
@@ -582,8 +582,8 @@ Examples:
 				["at0045"] = <
 					text = <"Quantity">
 					description = <"The amount of medicine, vaccine or other therapeutic good to be dispensed.">
-					detail_docref = <"data_groups/NEHTA-16423-Quantity-Data_Group.xml">
 					spec_id = <"117">
+					detail_docref = <"data_groups/NEHTA-16423-Quantity-Data_Group.xml">
 				>
 				["at0046"] = <
 					text = <"Minimum Interval Between Repeats">
