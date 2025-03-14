@@ -1,0 +1,210 @@
+﻿archetype (adl_version=1.4; uid=530c4763-b3ee-4e64-891f-7100451d2b78)
+	openEHR-EHR-OBSERVATION.marks_new_archetype.v0
+
+concept
+	[at0000]	-- Marks new archetype
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+		["sk"] = <
+			language = <[ISO_639-1::sk]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+		["da"] = <
+			language = <[ISO_639-1::da]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
+		["sk"] = <
+			language = <[ISO_639-1::sk]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Just for testing">
+			use = <"Any use at all">
+			misuse = <"None that can be done">
+			copyright = <"© openEHR Foundation">
+		>
+		["da"] = <
+			language = <[ISO_639-1::da]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			purpose = <"*Just for testing(en)">
+			use = <"*Any use at all(en)">
+			misuse = <"*None that can be done(en)">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"9B3665E27C2F640B09E2F0976D5E90C6">
+		["build_uid"] = <"1252622f-ebd3-4ec0-8340-1a0488123c3b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Marks new archetype
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks new archetype">
+					description = <"This is a test for testing test Case CKM-T12">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["sk"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+			>
+		>
+		["da"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)
+
+GREEK AGAIN">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["tr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks new archetype(en)">
+					description = <"*This is a test for testing test Case CKM-T12(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

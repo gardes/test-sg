@@ -1,0 +1,134 @@
+﻿archetype (adl_version=1.4; uid=51bc71ff-020f-4992-bd2c-9106ebde9e77)
+	openEHR-EHR-EVALUATION.marks_testing_Rejected.v0
+
+concept
+	[at0000]	-- Marks testing
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Testing(en)">
+			use = <"*More testing(en)">
+			misuse = <"*CKM-T2(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing">
+			use = <"More testing">
+			misuse = <"CKM-T2">
+			copyright = <"© openEHR Foundation">
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			purpose = <"*Testing(en)">
+			use = <"*More testing(en)">
+			misuse = <"*CKM-T2(en)">
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			purpose = <"*Testing(en)">
+			use = <"*More testing(en)">
+			misuse = <"*CKM-T2(en)">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"6B85C0BED4427373A1514E5D9C74A7CD">
+		["build_uid"] = <"9281047e-4484-4ab8-982e-cdf805f7f086">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Marks testing
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Marks testing">
+					description = <"New Archetyp ID created to test CKM-T2">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["zu"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks testing(en)">
+					description = <"*New Archetyp ID created to test CKM-T2(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks testing(en)">
+					description = <"*New Archetyp ID created to test CKM-T2(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["tr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Marks testing(en)">
+					description = <"*New Archetyp ID created to test CKM-T2(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

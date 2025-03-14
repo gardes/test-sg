@@ -1,0 +1,214 @@
+﻿archetype (adl_version=1.4; uid=6d87b035-7ba6-4362-9ff4-4d8e26029030)
+	openEHR-EHR-ELEMENT.mark_ckmt17.v0
+
+concept
+	[at0000]	-- Mark CKM-T17 YEP YEP
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["vi"] = <
+			language = <[ISO_639-1::vi]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
+			author = <
+				["name"] = <"Mark Testing">
+				["organisation"] = <"Test Organisation in Ocean">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["he"] = <
+			language = <[ISO_639-1::he]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			author = <
+				["name"] = <"mark3 test, mark12 test">
+				["organisation"] = <"Ocean, Ocean's The Coolest!!!!">
+				["email"] = <"markmessiha@hotmail.com, mm12@hotmail.com">
+			>
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["vi"] = <
+			language = <[ISO_639-1::vi]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["mt"] = <
+			language = <[ISO_639-1::mt]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 ">
+			use = <"TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!">
+			misuse = <"NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983">
+			copyright = <"© openEHR Foundation">
+		>
+		["he"] = <
+			language = <[ISO_639-1::he]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["tr"] = <
+			language = <[ISO_639-1::tr]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*NEW ARCHETYPE TO TEST REGRESSON TEST CASE CKM-T17 (en)">
+			use = <"*TESTING PURPOSES. TESTING CKM-T1983 with one change made in the Use field
+
+Used to test CKM-1455!(en)">
+			misuse = <"*NONE AT ALL.
+
+ADDED THIS TEST AS A 2ND CHANGE TO TEXT CKM-1983(en)">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"FAA45CDB21C5A49CC3BA6BDEF205EA54">
+		["build_uid"] = <"341e4aeb-24c6-4797-a528-e5cb3ea31d78">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ELEMENT[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Mark CKM-T17 YEP YEP">
+					description = <"JUST TESTING BRO">
+					comment = <"WHO DA MAN?">
+				>
+			>
+		>
+		["he"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+					comment = <"*WHO DA MAN?(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+				>
+			>
+		>
+		["tr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)
+
+NOTHING NEW">
+				>
+			>
+		>
+		["vi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"Translated">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+				>
+			>
+		>
+		["mt"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Mark CKM-T17 YEP YEP(en)">
+					description = <"*JUST TESTING BRO(en)">
+				>
+			>
+		>
+	>

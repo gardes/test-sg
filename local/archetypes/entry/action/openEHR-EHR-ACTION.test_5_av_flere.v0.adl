@@ -1,0 +1,84 @@
+﻿archetype (adl_version=1.4; uid=f0c3a5fe-f269-4890-a54a-a01325f7f1cd)
+	openEHR-EHR-ACTION.test_5_av_flere.v0
+
+concept
+	[at0000]	-- Test_5_av_flere
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2021-02-18">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"5565DCABA7089A7D7B63523E2D0CAF9A">
+		["build_uid"] = <"970ae8c4-feff-4a47-a8eb-cdd0c965dfdc">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ACTION[at0000] matches {    -- Test_5_av_flere
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Så gjør vi så
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Når vi vasker vårt tøy
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Test_5_av_flere">
+					description = <"Test_5_av_flere">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Så gjør vi så">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Når vi vasker vårt tøy">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

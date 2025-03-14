@@ -1,0 +1,67 @@
+﻿archetype (adl_version=1.4; uid=3ccc590a-56b5-448f-904b-ccde8aed0893)
+	openEHR-EHR-OBSERVATION.bult_test_1.v0
+
+concept
+	[at0000]	-- Bult test 1
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Bulk Test 1">
+			use = <"Regression testing CKm 1.20.0 Test Case CKM-T116 ">
+			misuse = <"None">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["MD5-CAM-1.0.1"] = <"D013FA6ABED8279A9ABF07E0FDA8D156">
+		["build_uid"] = <"7e490ded-9709-4f7c-b00b-0b016198a273">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Bult test 1
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bult test 1">
+					description = <"Regression tresting CKM-T116 for CKM 1.20.0">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

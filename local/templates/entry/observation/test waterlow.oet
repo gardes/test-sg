@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template">
+    <id>9610910a-6501-43a5-9d54-32a2de9ee9ff</id>
+    <name>test waterlow</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Silje Ljosland Bakke</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>Helse Vest IKT AS</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>silje.ljosland.bakke@helse-vest-ikt.no</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2020-10-12</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-OBSERVATION.waterlow_score.v0"
+        concept_name="Waterlow score" name="test waterlow"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:OBSERVATION">
+        <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0014]">
+            <constraint xsi:type="tem:countConstraint">
+                <maxMagnitude>49</maxMagnitude>
+                <minMagnitude>1</minMagnitude>
+                <includesMaximum>true</includesMaximum>
+                <includesMinimum>true</includesMinimum>
+            </constraint>
+        </Rule>
+    </definition>
+    <integrity_checks
+        archetype_id="openEHR-EHR-OBSERVATION.waterlow_score.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">F86256A47BC1C240D92E52A3DA2DECD1</digest>
+    </integrity_checks>
+</template>

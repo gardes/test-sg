@@ -1,0 +1,51 @@
+﻿archetype (adl_version=1.4; uid=2cb039b6-4445-45cb-a9c9-bcbf01f25090)
+	openEHR-EHR-EVALUATION.buk_test_2.v0
+
+concept
+	[at0000]	-- Buk test 2
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Bulk Test 2 for Regression Testing CKM 1.20.0">
+			use = <"Regression testing CKm 1.20.0 for Test Case CKM-T116">
+			misuse = <"None at all">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"AB0E0CEFDE55D80BA787D862D8DBA50E">
+		["build_uid"] = <"66854aca-33b2-4839-9de3-22773820770f">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Buk test 2
+		data matches {*}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Buk test 2">
+					description = <"CKM 1.20.0 Regression Testing Test Case CKM-T116">
+					comment = <"Regression Testing Test Case CKM-T116">
+				>
+			>
+		>
+	>

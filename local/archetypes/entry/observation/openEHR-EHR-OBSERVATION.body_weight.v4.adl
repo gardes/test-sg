@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=b72a57d9-e2ba-4c7a-8f1d-3f0d9b93d72e)
 	openEHR-EHR-OBSERVATION.body_weight.v4
 
 concept
@@ -25,10 +25,17 @@ In prescriptions: For children 12 years old or younger a body weight MUST be rec
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"OrganisationDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"9EEF31F728C0194F8486DB916CAF8421">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"9A2B4E6D49165B07D1A5FCB943A13882">
+		["build_uid"] = <"93da7587-e443-4c49-892b-afd2b44316d9">
+		["revision"] = <"4.0.0-alpha">
 	>
 
 definition
@@ -73,8 +80,8 @@ ontology
 					text = <"Body Weight">
 					description = <"Details pertinent to the physical measurement of the weight (mass) of a subject of care's body.">
 					comment = <"The weight of a subject of care is a key observation used for dosage calculation for paediatric and chemotherapy prescriptions.">
-					dc_id = <"16124">
 					detail_docref = <"data_groups/NEHTA-16124-Body_Weight-Data_Group.xml">
+					dc_id = <"16124">
 					spec_id = <"77">
 				>
 				["at0001"] = <
@@ -107,11 +114,11 @@ Examples:
   1. Fully clothed.
   2. Subject of care agitated and restless.
   3. Standing without footwear.">
-					value_domain_name = <"State of the Subject of Care Values">
+					detail_docref = <"data_elements/NEHTA-16051-State_of_the_Subject_of_Care-Data_Element.xml">
 					dc_id = <"16051">
 					coding_preferred = <"true">
+					value_domain_name = <"State of the Subject of Care Values">
 					value_domain_dc_id = <"16051">
-					detail_docref = <"data_elements/NEHTA-16051-State_of_the_Subject_of_Care-Data_Element.xml">
 				>
 				["at0006"] = <
 					text = <"Observation Note">

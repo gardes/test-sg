@@ -1,0 +1,57 @@
+﻿archetype (adl_version=1.4; uid=99612847-d939-45af-ace8-92bff9d8d3c9)
+	openEHR-EHR-EVALUATION.CKM_T2_Renamed.v0
+
+concept
+	[at0000]	-- Testing CKM-2
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing CKM-2 again">
+			use = <"Testing">
+			misuse = <"None at all">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"67113BDC571EA1141CD922C094EEF269">
+		["build_uid"] = <"4ebfee3a-032d-40ff-b410-c501fd0b505a">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Testing CKM-2
+		data matches {
+			ITEM_TREE[at0001] matches {*}
+		}
+	}
+
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Testing CKM-2">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

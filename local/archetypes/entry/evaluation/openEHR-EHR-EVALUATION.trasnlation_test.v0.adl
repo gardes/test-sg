@@ -1,0 +1,142 @@
+﻿archetype (adl_version=1.4; uid=5cc0fad4-b517-498b-89db-e0c01759dc63)
+	openEHR-EHR-EVALUATION.trasnlation_test.v0
+
+concept
+	[at0000]	-- Trasnlation Status Test
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			author = <
+				["name"] = <"mark3 test">
+				["organisation"] = <"Ocean">
+				["email"] = <"markmessiha@hotmail.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			keywords = <"TRANSLATED TO PORTUGESE", ...>
+			misuse = <"*None at all(en)">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			misuse = <"*None at all(en)">
+		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			keywords = <"ITALIAN TRANSLATION BY CKA.CLA", ...>
+			misuse = <"ITALIAN TRANSLATION BY CKA.CLA">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing CKM-1461">
+			use = <"Testing purposes">
+			misuse = <"None at all">
+			copyright = <"© openEHR Foundation">
+		>
+		["it"] = <
+			language = <[ISO_639-1::it]>
+			purpose = <"*Testing CKM-1461(en)">
+			use = <"*Testing purposes(en)">
+			misuse = <"Proprio nessuno">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"A42DA1B3D919D9E343CC30755E54DECB">
+		["build_uid"] = <"40dd6a58-9b26-4e90-bad6-f4010750a885">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Trasnlation Status Test
+		data matches {*}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Trasnlation Status Test">
+					description = <"Testing Translation Status">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"Dokimastikí katástasi metáfrasis">
+				>
+			>
+		>
+		["it"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"*Testing Translation Status(en)">
+				>
+			>
+		>
+		["ja"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"ITALIAN TRANSLATION BY CKA.CLA">
+				>
+			>
+		>
+		["pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Trasnlation Status Test(en)">
+					description = <"*Testing Translation Status(en)">
+				>
+			>
+		>
+	>

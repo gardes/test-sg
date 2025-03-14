@@ -1,0 +1,168 @@
+﻿archetype (adl_version=1.4; uid=7603e4ba-55f9-4be3-b72f-d0d59f665c6d)
+	openEHR-EHR-ACTION.evaluation_test.v1
+
+concept
+	[at0000]	-- Evaluation Test
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			author = <
+				["name"] = <"Mark CKA">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"AFAR Language">
+		>
+		["th"] = <
+			language = <[ISO_639-1::th]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Greek">
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			author = <
+				["name"] = <"Mark CKA, cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Albanian Translation">
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Mark Messiha">
+		["organisation"] = <"Ocean Health Systems">
+		["email"] = <"mark.messiha@oceanhealthsystems.com">
+		["date"] = <"2024-08-12">
+	>
+	details = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["th"] = <
+			language = <[ISO_639-1::th]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE">
+			use = <"TESTING CHANGING RM CLASS">
+			misuse = <"NONE AT ALL">
+			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["zu"] = <
+			language = <[ISO_639-1::zu]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*TESTING CHANGING ARCHETYPE FROM EVALUATION TO COMPOSITION ARCHETYPE AND TESTING ERROR MESSAGE(en)">
+			use = <"*TESTING CHANGING RM CLASS(en)">
+			misuse = <"*NONE AT ALL(en)">
+		>
+	>
+	lifecycle_state = <"published">
+	other_contributors = <"Mark Testing", "John Tester", "Con Puter">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["current_contact"] = <"Mark Messiha, Ocean Health Systems<mark.messiha@oceanhealthsystems.com>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"9529F9CF0E1D9B5D822314806952C065">
+		["build_uid"] = <"98703b08-dab9-49fa-b54b-969b24c83144">
+		["revision"] = <"1.0.3">
+	>
+
+definition
+	ACTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluation Test">
+					description = <"Need to see if we change the element via a Text Editor">
+					comment = <"See if this works">
+				>
+			>
+		>
+		["zu"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["aa"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Evaluation Test(en)">
+					description = <"*Need to see if we change the element via a Text Editor(en)">
+				>
+			>
+		>
+		["th"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bæb thds̄xb pramein p̄hl">
+					description = <"T̂xng dū ẁā reā pelī̀yn xngkh̒ prakxb p̄h̀ān porkærm kæ̂k̄hị k̄ĥxkhwām h̄rụ̄x mị̀">
+				>
+			>
+		>
+	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=c757858d-7197-49d5-8e96-52b313ff5328)
+﻿archetype (adl_version=1.4; uid=9c520b84-31be-47fa-a188-99a365b409d7)
 	openEHR-EHR-CLUSTER.exam.v2
 
 concept
@@ -153,8 +153,8 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"63D119269960FAA3DB02B3796E05E880">
-		["build_uid"] = <"b505dbce-42e7-4578-b1a5-2654ef910cba">
+		["MD5-CAM-1.0.1"] = <"D76037742EBEC18384BA64F0503612F6">
+		["build_uid"] = <"71d2eacb-cd5d-4187-9fc9-9d75f37b98ca">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"2.0.0-alpha">
 	>

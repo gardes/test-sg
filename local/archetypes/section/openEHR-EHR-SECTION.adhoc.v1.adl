@@ -80,8 +80,8 @@ description
 			copyright = <"© openEHR Foundation, Alberta Health Services (Canada)">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Bakke, Bergen Hospital Trust, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)">
+	lifecycle_state = <"in_development">
+	other_contributors = <"Tomas Alme, DIPS, Norway", "Koray Atalag, University of Auckland, New Zealand", "Silje Bakke, Bergen Hospital Trust, Norway", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "cka cka, Test Organisation, Australia (Test Editor)", "Project Editor, Antigua & Barbuda (Test Editor)", "Sebastian Garde, Ocean Health Systems, Germany (Test Editor)", "Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden", "Lars Karlsen, DIPS ASA, Norway", "Sarmad Kufaishi, Ocean Health Systems, Australia (Test Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)", "Sebastianåæâß Ocean, Ocean Infws, Germany (Test Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"Alberta Health Services (Canada)">
@@ -91,8 +91,8 @@ description
 		["original_publisher"] = <"Alberta Health Services (Canada)">
 		["custodian_namespace"] = <"ca.ahs">
 		["MD5-CAM-1.0.1"] = <"519BFA81F8FAFAF035B03D4A108FFFA5">
-		["build_uid"] = <"3e92af6d-4305-4512-b25a-2ab7184a47c7">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"0169535c-f10a-4585-9e96-873bfe15b511">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition

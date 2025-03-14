@@ -5,6 +5,14 @@ concept
 	[at0000]	-- Test
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ro"] = <
+			language = <[ISO_639-1::ro]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -17,6 +25,12 @@ description
 			misuse = <"">
 			copyright = <"© Alberta Health Services (Canada), openEHR Foundation">
 		>
+		["ro"] = <
+			language = <[ISO_639-1::ro]>
+			purpose = <"*(en)sdsd">
+			use = <"">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -26,8 +40,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"8EB589D613AD523517AE152BCB0A9FEA">
-		["build_uid"] = <"6ef4fd75-477c-4a22-9743-5c7b4a063f88">
+		["MD5-CAM-1.0.1"] = <"CC4271B3960FBF98730D7A3B5C65BA06">
+		["build_uid"] = <"568ef43d-daff-4d66-8325-072ba4835064">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -83,6 +97,26 @@ ontology
 				["at0003"] = <
 					text = <"Quantity">
 					description = <"Assumed Value Set">
+				>
+			>
+		>
+		["ro"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Test(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*Current Activity(en)">
+					description = <"*Current Activity(en)">
+				>
+				["at0002"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0003"] = <
+					text = <"*Quantity(en)">
+					description = <"*Assumed Value Set(en)">
 				>
 			>
 		>
