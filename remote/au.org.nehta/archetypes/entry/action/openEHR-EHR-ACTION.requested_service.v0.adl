@@ -30,17 +30,17 @@ Use in relation to services that have already occurred where it can be recorded 
 	lifecycle_state = <"in_development">
 	other_contributors = <"Eric Browne, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "Eleanor Royle, NEHTA, Australia", "Ning Pan, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Don Stewart, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Australian Digital Health Agency">
 		["current_contact"] = <"help@digitalhealth.gov.au">
-		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
-		["original_namespace"] = <"au.org.nehta">
+		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
 		["original_publisher"] = <"NEHTA, Australia">
-		["custodian_namespace"] = <"tbd">
+		["original_namespace"] = <"au.org.nehta">
 		["source_model_name"] = <"Requested Service (Action)">
 		["MD5-CAM-1.0.1"] = <"D9F711C49737DDA85EE51B977D58D2D7">
-		["build_uid"] = <"a9a66de2-211f-4d2c-9cb1-1fa5d3ca029b">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_namespace"] = <"tbd">
+		["source_model_id"] = <"1.2.36.1.2001.1001.104.51.5.1">
+		["custodian_organisation"] = <"Australian Digital Health Agency">
 	>
 
 definition

@@ -22,13 +22,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["revision"] = <"0.0.1-alpha">
+		["build_uid"] = <"40d5e55b-713b-4c78-95c3-65efb7b12a96">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"CA2BB04D1C4DA287E6EFAEB435BFE62F">
-		["build_uid"] = <"40d5e55b-713b-4c78-95c3-65efb7b12a96">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["custodian_organisation"] = <"Ocean Informatics">
 	>
 
 definition

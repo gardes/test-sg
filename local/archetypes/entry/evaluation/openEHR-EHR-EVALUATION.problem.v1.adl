@@ -74,8 +74,8 @@ Some examples:
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"4A7BAF9ECB8E210E032DAC7C90FBF7D2">
+		["references"] = <"">
 	>
 
 definition

@@ -40,8 +40,8 @@ Not to be used to record vaccinations administered.">
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
-		["references"] = <"Medication List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 06 Nov 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.286_5 (accessed 14 Mar 2013).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Medication List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 06 Nov 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.286_5 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"15C87770D9DAF0DAE18FBD970E3EC26F">
 	>
 

@@ -26,6 +26,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 	lifecycle_state = <"Initial">
 	other_contributors = <"David Rowed, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Cathy Richardson, NEHTA, Australia", "David McKillop, NEHTA, Australia", "Koray Atalag, University of Auckland, New Zealand", "Matt Cordell, NEHTA, Australia">
 	other_details = <
+		["MD5-CAM-1.0.1"] = <"C53E5BC4751A2B3B3B762DEB226400D2">
 		["references"] = <"The Royal College of Pathologists, NHS Cancer Screening Programmes. Pathology Reporting of Breast Disease [Internet]. 2005 Jan ;[cited 2009 Jul 26] 
 Available from: http://www.rcpath.org/resources/pdf/PathologyReportingOfBreastDisease-CORRECTED-lowres.pdf
 
@@ -34,7 +35,6 @@ British Columbia Cancer Agency. Synoptic Report Form for Breast Cancer [Internet
 
 
 ">
-		["MD5-CAM-1.0.1"] = <"C53E5BC4751A2B3B3B762DEB226400D2">
 	>
 
 definition

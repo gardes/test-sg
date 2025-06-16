@@ -63,8 +63,8 @@ Permission is required to modify the Barthel Index or to use it for commercial p
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"Mahoney FI, Barthel D. Functional evaluation: the Barthel Index. Maryland State Med Journal 1965;14:56-61.">
 		["MD5-CAM-1.0.1"] = <"5D131961862468DC5837B7CB7D527865">
+		["references"] = <"Mahoney FI, Barthel D. Functional evaluation: the Barthel Index. Maryland State Med Journal 1965;14:56-61.">
 	>
 
 definition

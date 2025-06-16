@@ -25,8 +25,8 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"1E7CCC3AEAD7C3A4D4E4F2162A42AB85">
+		["references"] = <"">
 	>
 
 definition

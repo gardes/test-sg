@@ -66,8 +66,8 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["references"] = <"Pain, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 20 Feb 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.246 (accessed 18 Dec 2012).">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Pain, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 20 Feb 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.246 (accessed 18 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"5B0299992BFB827BA906C4CF94F542B3">
 	>
 

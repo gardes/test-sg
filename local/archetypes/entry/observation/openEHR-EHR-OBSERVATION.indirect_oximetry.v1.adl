@@ -52,6 +52,7 @@ NOT to be used to record direct blood gas measurement e.g arterial (SaO2), venou
 	lifecycle_state = <"Published">
 	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Sergio Carmona, Chile", "Stephen Chu, NeHTA, Australia", "Tamsin Cockayne, Australia", "Ed Conley, Cardiff University", "Graham Denyer, Australian Antarctic Division, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Sebastian Garde, Ocean Informatics, Germany (Editor)", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Omer Hotomaroglu, Turkey (Editor)", "Evelyn Hovenga, EJSH Consulting, Australia", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Gorazd Kalan, University Medical Centre Ljubljana, Slovenia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller, CompuGROUP Software, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Arturo Romero, SESCAM, Spain", "Tony Shannon, NHS, United Kingdom">
 	other_details = <
+		["MD5-CAM-1.0.1"] = <"20011847A5995DE4BEE632C7C59EDF8D">
 		["references"] = <"AARC Clinical Practice Guideline - Pulse Oximetry. Respir Care 1992;37(8):891–897,[cited 2010 Jan 31 ]
 Available from http://www.rcjournal.com/cpgs/pulsecpg.html
 
@@ -66,7 +67,6 @@ Available from: http://journals.lww.com/aswcjournal/Fulltext/2001/01000/Transcut
 
 Barker SJ, Badal JJ. The measurement of dyshemoglobins and total hemoglobin by pulse oximetry [Internet]. Current Opinion in Anaesthesiology 2008;21(6):805-810.[cited 2010 Jan 12 ]
 Available from: http://journals.lww.com/co-anesthesiology/Abstract/2008/12000/The_measurement_of_dyshemoglobins_and_total.20.aspx">
-		["MD5-CAM-1.0.1"] = <"20011847A5995DE4BEE632C7C59EDF8D">
 	>
 
 definition

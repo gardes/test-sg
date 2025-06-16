@@ -63,8 +63,8 @@ Usado com mudou 'Assunto de cuidado' para gravação de diagnósticos em parente
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"25DE4AB34DEAEC07427F236A035F33B2">
+		["references"] = <"">
 	>
 
 definition

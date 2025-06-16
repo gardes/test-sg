@@ -44,8 +44,8 @@ description
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
-		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"555A747F3BEA5BCB86F63A0D5C003BEA">
+		["references"] = <"">
 	>
 
 definition
