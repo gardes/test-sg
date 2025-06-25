@@ -9,9 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout">
-				["organisation"] = <"MHH-Hannover">
-				["email"] = <"ballout.sarah@mh-hannover.de">
+				["name"] = <"Sarah Ballout, cka cka">
+				["organisation"] = <"MHH-Hannover, Test Organisation">
+				["email"] = <"ballout.sarah@mh-hannover.de, cka@test-oceaninformatics.com">
 			>
 		>
 		["nb"] = <
@@ -70,8 +70,8 @@ Use to in a template alongside OBSERVATION.child_growth to record the adjusted a
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BFFDD77A850AF727E7D4058F70682DBF">
-		["build_uid"] = <"4b531064-80b4-4be4-9200-4674c63b81d9">
+		["MD5-CAM-1.0.1"] = <"232FC83D149330E42D3525FC4E563A4E">
+		["build_uid"] = <"ac7b2693-4bca-426e-9ab7-3555bf625ec8">
 		["revision"] = <"0.0.1-alpha">
 	>
 
