@@ -5,6 +5,24 @@ concept
 	[at0000]	-- Fake service request 1
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["en-au"] = <
+			language = <[ISO_639-1::en-au]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+		["ar-dz"] = <
+			language = <[ISO_639-1::ar-dz]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
@@ -17,6 +35,18 @@ description
 			misuse = <"to be used in anything other than testing">
 			copyright = <"© openEHR Foundation">
 		>
+		["en-au"] = <
+			language = <[ISO_639-1::en-au]>
+			purpose = <"*to test order items(en)">
+			use = <"*for testing only(en)">
+			misuse = <"*to be used in anything other than testing(en)">
+		>
+		["ar-dz"] = <
+			language = <[ISO_639-1::ar-dz]>
+			purpose = <"*to test order items(en)">
+			use = <"*for testing only(en)">
+			misuse = <"*to be used in anything other than testing(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -26,8 +56,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B8E8176CD729886D87683AAEB1C93489">
-		["build_uid"] = <"167fd186-ea05-4422-925b-53aa548767c6">
+		["MD5-CAM-1.0.1"] = <"EAB75117246AAED9AAA9F282DB31200D">
+		["build_uid"] = <"f2591d46-5b34-4c52-965e-0ac21bf81ef0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -225,8 +255,8 @@ ontology
 					description = <"*">
 				>
 				["at0018"] = <
-					text = <"Requestor Identifier">
-					description = <"*">
+					text = <"Requestor Identifier - test -1">
+					description = <"* this is a test - 1">
 				>
 				["at0019"] = <
 					text = <"Requestor">
@@ -246,6 +276,206 @@ ontology
 				>
 				["at0023"] = <
 					text = <"Distribution list for response">
+					description = <"*">
+				>
+			>
+		>
+		["en-au"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Fake service request 1(en)">
+					description = <"*for testing only(en)">
+				>
+				["at0001"] = <
+					text = <"*Current Activity(en)">
+					description = <"*Current Activity(en)">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"*Service name(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*Service type(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*Description(en)">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"*Reason for request(en)">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"*Reason description(en)">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"*Intent(en)">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"*Priority(en)">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"*STAT(en)">
+					description = <"*to be completed immediately(en)">
+				>
+				["at0011"] = <
+					text = <"*Routine(en)">
+					description = <"*to be complete with next rounds or batch(en)">
+				>
+				["at0012"] = <
+					text = <"*Specific Details(en)">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"*Comment(en)">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"*Service due(en)">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"*Service period start(en)">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"*Extension(en)">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"*Requestor Identifier(en)">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"*Requestor(en)">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"*Receiver identifier(en)">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"*Receiver(en)">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"*Request status(en)">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"*Distribution list for response(en)">
+					description = <"*">
+				>
+			>
+		>
+		["ar-dz"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Fake service request 1(en)">
+					description = <"*for testing only(en)">
+				>
+				["at0001"] = <
+					text = <"*Current Activity(en)">
+					description = <"*Current Activity(en)">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"*Service name(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*Service type(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*Description(en)">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"*Reason for request(en)">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"*Reason description(en)">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"*Intent(en)">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"*Priority(en)">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"*STAT(en)">
+					description = <"*to be completed immediately(en)">
+				>
+				["at0011"] = <
+					text = <"*Routine(en)">
+					description = <"*to be complete with next rounds or batch(en)">
+				>
+				["at0012"] = <
+					text = <"*Specific Details(en)">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"*Comment(en)">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"*Service due(en)">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"*Service period start(en)">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"*Extension(en)">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"*Requestor Identifier(en)">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"*Requestor(en)">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"*Receiver identifier(en)">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"*Receiver(en)">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"*Request status(en)">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"*Distribution list for response(en)">
 					description = <"*">
 				>
 			>
