@@ -1,0 +1,322 @@
+﻿archetype (adl_version=1.4; uid=81905bee-e274-4333-9447-c422c5e518bb)
+	openEHR-EHR-EVALUATION.infection_surveillance.v0
+
+concept
+	[at0000]	-- Infection Surveillance
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"24/06/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about an investigation, carried out by an Infection Control Practiitioner, upon a patient who has had a positive blood culture result.">
+			use = <"">
+			keywords = <"blood ", "culture", "infection", "surveillance", "investigation", "control">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Merrilyn Curtis, AnalyzeIT, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"BSI Definition – Approved by Healthcare Associated Infections Advisory Committee – Sept 04">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"73E5DAF208AB2B520E62E4FC7729DEC9">
+		["build_uid"] = <"84d88b79-ecb3-4134-b0b5-9d0d54d50bd5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Infection Surveillance
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0062] occurrences matches {0..1} matches {	-- Investigation trigger
+						items cardinality matches {1..*; unordered} matches {
+							CLUSTER[at0008] occurrences matches {0..*} matches {	-- Organisms
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0002] matches {	-- Organism
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0003] occurrences matches {0..1} matches {	-- Pathogenic status
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0059, 	-- Confirmed Pathogen
+													at0061]	-- Contaminant
+												}
+											}
+										}
+									}
+								}
+							}
+							ELEMENT[at0020] occurrences matches {0..1} matches {	-- Original laboratory report
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+							ELEMENT[at0065] occurrences matches {0..1} matches {	-- Culture Date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0054] occurrences matches {0..1} matches {	-- Radiology report
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0055] occurrences matches {0..1} matches {	-- Original radiology report
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {	-- Acquisition
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.infection_acquisition(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {	-- Specific infection details
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.blood_stream_infection(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					CLUSTER[at0052] occurrences matches {0..*} matches {	-- Associated Devices
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0058] occurrences matches {0..*} matches {	-- Device
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							}
+							ELEMENT[at0029] occurrences matches {0..*} matches {	-- Original Device information
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+							ELEMENT[at0043] occurrences matches {0..*} matches {	-- Time in situ
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0053] occurrences matches {0..*} matches {	-- Associated Procedures
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0026] occurrences matches {0..*} matches {	-- Contributing Procedure
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..*} matches {	-- Date of Procedure
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0027] occurrences matches {0..*} matches {	-- Original Procedure information
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0050] occurrences matches {0..*} matches {	-- Risk index
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0057] occurrences matches {0..*} matches {	-- Diagnostic criteria
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Same organism isolated from additional site?
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0039] occurrences matches {0..*} matches {	-- Additional site Laboratory report
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0051] occurrences matches {0..*} matches {	-- Associated investigation
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Outcome
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0046] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype ITEM[at0023] occurrences matches {0..*} matches {	-- Additional data
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0063] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0064] occurrences matches {0..*} matches {	-- Validation criteria
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Infection Surveillance">
+					description = <"Investigation about the finding of a positive blood culture.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Organism">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Pathogenic status">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Organisms">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Acquisition">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Same organism isolated from additional site?">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Original laboratory report">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Outcome">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Additional data">
+					description = <"Slot for inclusion of any additional or localised data requirements.">
+				>
+				["at0026"] = <
+					text = <"Contributing Procedure">
+					description = <"Identification of procedure that may be related to the infection.">
+				>
+				["at0027"] = <
+					text = <"Original Procedure information">
+					description = <"Link to the original information where the Procedure details have been documented.">
+				>
+				["at0029"] = <
+					text = <"Original Device information">
+					description = <"Link to the original information where the Device details/insertion have been documented.">
+				>
+				["at0039"] = <
+					text = <"Additional site Laboratory report">
+					description = <"Link to laboratory report providing details about the same organism being isolated from an additional site.">
+				>
+				["at0043"] = <
+					text = <"Time in situ">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"Comment">
+					description = <"Comment about the blood stream infection surveillance.">
+				>
+				["at0047"] = <
+					text = <"Specific infection details">
+					description = <"Specific investigation details about blood stream infection.">
+				>
+				["at0050"] = <
+					text = <"Risk index">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Associated investigation">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"Associated Devices">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"Associated Procedures">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"Radiology report">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"Original radiology report">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Date of Procedure">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Diagnostic criteria">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"Device">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Confirmed Pathogen">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Contaminant">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Investigation trigger">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0064"] = <
+					text = <"Validation criteria">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"Culture Date">
+					description = <"Specimen collection time">
+				>
+			>
+		>
+	>
