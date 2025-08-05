@@ -1,0 +1,208 @@
+﻿archetype (adl_version=1.4; uid=a35d308e-4662-44d8-88a5-080e7a0640a7)
+	openEHR-EHR-ADMIN_ENTRY.patient_location.v0
+
+concept
+	[at0000]	-- Patient location
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"3906AD94B0B577C5D21336456C4F5D33">
+		["build_uid"] = <"82408ac7-d6e3-4b8b-a711-b8d982836615">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Patient location
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0131] occurrences matches {0..1} matches {	-- Visit number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0074] occurrences matches {0..1} matches {	-- Point of care/Unit
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0077] occurrences matches {0..1} matches {	-- Ward
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0079] occurrences matches {0..1} matches {	-- Bed
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0078] occurrences matches {0..1} matches {	-- Room
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0101] occurrences matches {0..1} matches {	-- Building
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0102] occurrences matches {0..1} matches {	-- Floor
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Facility name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Facility id
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0103] occurrences matches {0..1} matches {	-- Location description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0132] occurrences matches {0..1} matches {	-- Location type
+						value matches {
+							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0133, 	-- Clinic
+									at0134, 	-- Home
+									at0135, 	-- Department
+									at0136, 	-- Nursing unit
+									at0137]	-- Provider's office
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] matches {	-- Date time
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME> matches {
+								upper matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddTHH:MM:SS}
+									}
+								}
+								lower matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddTHH:MM:SS}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient location">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Facility name">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Facility id">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Date time">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Point of care/Unit">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Ward">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Room">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Bed">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"Building">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Floor">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Location description">
+					description = <"*">
+				>
+				["at0131"] = <
+					text = <"Visit number">
+					description = <"*">
+				>
+				["at0132"] = <
+					text = <"Location type">
+					description = <"*">
+				>
+				["at0133"] = <
+					text = <"Clinic">
+					description = <"Clinic">
+				>
+				["at0134"] = <
+					text = <"Home">
+					description = <"*">
+				>
+				["at0135"] = <
+					text = <"Department">
+					description = <"*">
+				>
+				["at0136"] = <
+					text = <"Nursing unit">
+					description = <"*">
+				>
+				["at0137"] = <
+					text = <"Provider's office">
+					description = <"*">
+				>
+			>
+		>
+	>
