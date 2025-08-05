@@ -1,0 +1,398 @@
+﻿archetype (adl_version=1.4; uid=304d48df-f8df-4a6c-be43-e873ec2d6801)
+	openEHR-EHR-ADMIN_ENTRY.inpatient_administration.v0
+
+concept
+	[at0000]	-- Inpatient administration
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Chunlan Ma">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"chunlan.ma@oceaninformatics.biz">
+		["date"] = <"19/07/07">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This patient adminstration ADMIN_ENTRY archetype was designed for representing data about the admission, transfer and discharge of a patient from a facility. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1.">
+			use = <"">
+			keywords = <"admission", "transfer", "discharge", "inpatient administration">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Sistine Barretto", ...>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"077FFC9D78CF27F34E5273770C9B9566">
+		["build_uid"] = <"b1cbe030-ef37-46a8-9cb8-256dc1bd6150">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Inpatient administration
+		other_participations cardinality matches {0..*; unordered} matches {
+			PARTICIPATION occurrences matches {0..*} matches {
+				function matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0150, 	-- Attending doctor
+							at0151, 	-- Referring doctor
+							at0152, 	-- Consulting doctor
+							at0153, 	-- Admitting doctor
+							at0154]	-- Discharge doctor
+						}
+					}
+				}
+			}
+		}
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {2..*; unordered} matches {
+					ELEMENT[at0131] occurrences matches {0..1} matches {	-- Visit number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0143] occurrences matches {0..1} matches {	-- Movement category
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0145] occurrences matches {0..1} matches {	-- Movement type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] matches {	-- Patient class
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0073] occurrences matches {0..1} matches {	-- Assigned patient location
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0147] occurrences matches {0..1} matches {	-- Healthcare organisation
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0074] occurrences matches {0..1} matches {	-- Point of care/Unit
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0079] occurrences matches {0..1} matches {	-- Bed
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0078] occurrences matches {0..1} matches {	-- Room
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0101] occurrences matches {0..1} matches {	-- Building
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0102] occurrences matches {0..1} matches {	-- Floor
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0103] occurrences matches {0..1} matches {	-- Location description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0081] occurrences matches {0..1} matches {	-- Location type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Admission type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- Pre-admit number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0094] occurrences matches {0..1} matches {	-- Prior patient location
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0148] occurrences matches {0..1} matches {	-- Healthcare organisation
+								include
+									archetype_id/value matches {/.*/}
+							}
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0074]	-- /data[Tree]/items[Assigned patient location]/items[Point of care/Unit]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0079]	-- /data[Tree]/items[Assigned patient location]/items[Bed]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0078]	-- /data[Tree]/items[Assigned patient location]/items[Room]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0101]	-- /data[Tree]/items[Assigned patient location]/items[Building]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0102]	-- /data[Tree]/items[Assigned patient location]/items[Floor]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0103]	-- /data[Tree]/items[Assigned patient location]/items[Location description]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0081]	-- /data[Tree]/items[Assigned patient location]/items[Location type]
+						}
+					}
+					allow_archetype CLUSTER[at0146] occurrences matches {0..1} matches {	-- Doctors
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0041] occurrences matches {0..1} matches {	-- Hospital service
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0049] occurrences matches {0..1} matches {	-- Admit source
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0061] occurrences matches {0..1} matches {	-- Financial class
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0066] occurrences matches {0..1} matches {	-- Charge price indicator
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0001]}		-- Any term that 'is a' 'Charge price indicator'
+							}
+						}
+					}
+					ELEMENT[at0071] matches {	-- Admit date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0133] occurrences matches {0..1} matches {	-- Accident type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0134] occurrences matches {0..1} matches {	-- Movement number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0137] occurrences matches {0..1} matches {	-- Treatment category
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0144] occurrences matches {0..1} matches {	-- Discharge date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					CLUSTER[at0140] occurrences matches {0..1} matches {	-- Discharge to location
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0149] occurrences matches {0..1} matches {	-- Healthcare organisation
+								include
+									archetype_id/value matches {/.*/}
+							}
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0074]	-- /data[Tree]/items[Assigned patient location]/items[Point of care/Unit]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0079]	-- /data[Tree]/items[Assigned patient location]/items[Bed]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0078]	-- /data[Tree]/items[Assigned patient location]/items[Room]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0101]	-- /data[Tree]/items[Assigned patient location]/items[Building]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0102]	-- /data[Tree]/items[Assigned patient location]/items[Floor]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0103]	-- /data[Tree]/items[Assigned patient location]/items[Location description]
+							use_node ELEMENT occurrences matches {0..1} /data[at0001]/items[at0073]/items[at0081]	-- /data[Tree]/items[Assigned patient location]/items[Location type]
+						}
+					}
+					ELEMENT[at0136] occurrences matches {0..1} matches {	-- Discharge disposition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0135] occurrences matches {0..1} matches {	-- Mode of arrival
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Inpatient administration">
+					description = <"Used for all administrative details of an patient from admission, transfer through to discharge from a facility.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Patient class">
+					description = <"Intended mode of treatment">
+				>
+				["at0013"] = <
+					text = <"Admission type">
+					description = <"The circumstance under which the patient will be admitted.">
+				>
+				["at0023"] = <
+					text = <"Pre-admit number">
+					description = <"ID number of patient's pre-admission">
+				>
+				["at0041"] = <
+					text = <"Hospital service">
+					description = <"For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.">
+				>
+				["at0049"] = <
+					text = <"Admit source">
+					description = <"Refer to NHDD 000385 ?Mode of admission? and
+NHDD 000150 ?Source of referral to public psychiatric hospital?">
+				>
+				["at0061"] = <
+					text = <"Financial class">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Charge price indicator">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Admit date/time">
+					description = <"Date/time the patient was admitted.">
+				>
+				["at0073"] = <
+					text = <"Assigned patient location">
+					description = <"Assigned patient location when the patient was admitted.">
+				>
+				["at0074"] = <
+					text = <"Point of care/Unit">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Room">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Bed">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Location type">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"Prior patient location">
+					description = <"The patient location prior admission">
+				>
+				["at0101"] = <
+					text = <"Building">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Floor">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Location description">
+					description = <"*">
+				>
+				["at0131"] = <
+					text = <"Visit number">
+					description = <"Case number or visit number.">
+				>
+				["at0133"] = <
+					text = <"Accident type">
+					description = <"*">
+				>
+				["at0134"] = <
+					text = <"Movement number">
+					description = <"Accession number for the movement.">
+				>
+				["at0135"] = <
+					text = <"Mode of arrival">
+					description = <"*">
+				>
+				["at0136"] = <
+					text = <"Discharge disposition">
+					description = <"*">
+				>
+				["at0137"] = <
+					text = <"Treatment category">
+					description = <"*">
+				>
+				["at0140"] = <
+					text = <"Discharge to location">
+					description = <"*">
+				>
+				["at0143"] = <
+					text = <"Movement category">
+					description = <"Movement category (e.g. Admission, Discharge, Transfer, Outpatient Visit, Absence Start and Absence End)">
+				>
+				["at0144"] = <
+					text = <"Discharge date/time">
+					description = <"*">
+				>
+				["at0145"] = <
+					text = <"Movement type">
+					description = <"Movement type - particularly useful for distinguishing outpatient visits (e.g. \"First Visit\", \"Repeat Visit\").">
+				>
+				["at0146"] = <
+					text = <"Doctors">
+					description = <"The doctors providing services to the patient (e.g. attending doctor, referring doctor, consulting doctor, admitting doctor and discharge doctor).">
+				>
+				["at0147"] = <
+					text = <"Healthcare organisation">
+					description = <"Details about the facility or healthcare organisation that the patient has been assigned to including the address and ward details.">
+				>
+				["at0148"] = <
+					text = <"Healthcare organisation">
+					description = <"Details about the facility or healthcare organisation of the patient's prior location including the address and ward details.">
+				>
+				["at0149"] = <
+					text = <"Healthcare organisation">
+					description = <"Details about the facility or healthcare organisation of the patient's discharge location including the address and ward details.">
+				>
+				["at0150"] = <
+					text = <"Attending doctor">
+					description = <"*">
+				>
+				["at0151"] = <
+					text = <"Referring doctor">
+					description = <"*">
+				>
+				["at0152"] = <
+					text = <"Consulting doctor">
+					description = <"*">
+				>
+				["at0153"] = <
+					text = <"Admitting doctor">
+					description = <"*">
+				>
+				["at0154"] = <
+					text = <"Discharge doctor">
+					description = <"*">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Any term that 'is a' 'Charge price indicator'">
+					description = <"*">
+				>
+			>
+		>
+	>
