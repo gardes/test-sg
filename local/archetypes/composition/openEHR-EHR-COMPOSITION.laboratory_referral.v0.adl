@@ -1,0 +1,145 @@
+﻿archetype (adl_version=1.4; uid=825a2713-1353-4cb0-bdba-48f87501f2cf)
+	openEHR-EHR-COMPOSITION.laboratory_referral.v0
+
+concept
+	[at0000]	-- Laboratory referral
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"NHS CfH / Ocean Informatics">
+		["email"] = <"ian.mcnicoll@oceaninformatics .com">
+		["date"] = <"08/01/2008">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For communication of a referral or service request to a service provider">
+			use = <"">
+			keywords = <"referral", "request">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR foundation, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Heather Leslie", ...>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"16E5D6E18D805D779B0217A8114368EC">
+		["build_uid"] = <"6aa29dcb-9028-4e7a-ba63-d909836c1571">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Laboratory referral
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				participations cardinality matches {0..*; unordered} matches {
+					PARTICIPATION occurrences matches {0..1} matches {
+						function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0033, 	-- Clinician making laboratory referral
+									at0034, 	-- Receiver of laboratory referral
+									at0035, 	-- Other clinicians to receive copies of laboratory referral
+									at0036, 	-- Payor
+									at0037, 	-- General Practitioner
+									at0041]	-- Specimen collector
+								}
+							}
+						}
+					}
+				}
+				other_context matches {
+					ITEM_TREE[at0001] matches {	-- Tree
+						items cardinality matches {3..*; unordered} matches {
+							ELEMENT[at0028] occurrences matches {0..1} matches {	-- Requestor Identifier
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0039] occurrences matches {0..1} matches {	-- DateTime attested
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0040] occurrences matches {0..1} matches {	-- Document Status
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER occurrences matches {0..*} matches {
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Laboratory referral">
+					description = <"A document expressing all information required to make a request for provision of a specific laboratory service by another healthcare provider or organisation.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0028"] = <
+					text = <"Requestor Identifier">
+					description = <"Copy of INSTRUCTION.request-referral's Requestor Identifier.">
+				>
+				["at0033"] = <
+					text = <"Clinician making laboratory referral">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Receiver of laboratory referral">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"Other clinicians to receive copies of laboratory referral">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"Payor">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"General Practitioner">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"DateTime attested">
+					description = <"Date/Time that the referral has been authorised or approved.">
+				>
+				["at0040"] = <
+					text = <"Document Status">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Specimen collector">
+					description = <"*">
+				>
+			>
+		>
+	>
