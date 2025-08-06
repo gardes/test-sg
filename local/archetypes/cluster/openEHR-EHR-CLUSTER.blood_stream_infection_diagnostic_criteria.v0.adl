@@ -1,0 +1,84 @@
+﻿archetype (adl_version=1.4; uid=d6d479ca-730e-4129-9dd4-c4d6ef8eae2c)
+	openEHR-EHR-CLUSTER.blood_stream_infection_diagnostic_criteria.v0
+
+concept
+	[at0000]	-- Blood Stream Infection Diagnostic Criteria
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F1F84665C4912C7D3AE018BEDBBC69D9">
+		["build_uid"] = <"132b02d0-ad83-4639-80d2-17896717e180">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Blood Stream Infection Diagnostic Criteria
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- ??CDC ??Diagnostic criteria
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002, 	-- Recognised pathogen; non neonatal intensive care
+							at0003, 	-- Potential contaminant in patient aged >1 year
+							at0004, 	-- Potential contaminant in patient aged <1 year, not including neonates
+							at0005]	-- Contaminant
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Blood Stream Infection Diagnostic Criteria">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"??CDC ??Diagnostic criteria">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Recognised pathogen; non neonatal intensive care">
+					description = <"Criterion 1">
+				>
+				["at0003"] = <
+					text = <"Potential contaminant in patient aged >1 year">
+					description = <"Criterion 2">
+				>
+				["at0004"] = <
+					text = <"Potential contaminant in patient aged <1 year, not including neonates">
+					description = <"Criterion 3">
+				>
+				["at0005"] = <
+					text = <"Contaminant">
+					description = <"Criterion 4">
+				>
+			>
+		>
+	>
