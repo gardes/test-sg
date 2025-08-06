@@ -1,0 +1,116 @@
+﻿archetype (adl_version=1.4; uid=5cc119ef-6e95-4eeb-8c6b-759e3c15c61a)
+	openEHR-EHR-CLUSTER.diagnostic_criteria-blood_stream_infection.v0
+specialise
+	openEHR-EHR-CLUSTER.diagnostic_criteria.v1
+
+concept
+	[at0000.1]	-- Diagnostic criteria - Blood Stream Infection
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"31F1BAD8661675EB60E125CEBCFEDC2C">
+		["build_uid"] = <"e93600b8-e5ce-4198-9d12-656aeb92124a">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Diagnostic criteria - Blood Stream Infection
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {	-- Diagnostic criteria
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001.1] occurrences matches {0..*} matches {	-- CDC criteria
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.4, 	-- Criterion 1 - Recognised pathogen; non neonatal intensive care
+							at0.5, 	-- Criterion 2 - Potential contaminant in patient aged >1 year
+							at0.6]	-- Criterion 3 - Potential contaminant in patient aged <1 year, not including neonates
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype ITEM[at0002] occurrences matches {0..*} matches {	-- Additional criteria
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.4"] = <
+					text = <"Criterion 1 - Recognised pathogen; non neonatal intensive care">
+					description = <"*">
+				>
+				["at0.5"] = <
+					text = <"Criterion 2 - Potential contaminant in patient aged >1 year">
+					description = <"*">
+				>
+				["at0.6"] = <
+					text = <"Criterion 3 - Potential contaminant in patient aged <1 year, not including neonates">
+					description = <"*">
+				>
+				["at0.7"] = <
+					text = <"Criterion 4 - Contaminant">
+					description = <"*">
+				>
+				["at0000"] = <
+					text = <"Diagnostic criteria">
+					description = <"A set of criteria that indicate what symptoms, signs or results must be present (and for how long) in order to qualify for a diagnosis (called inclusion criteria) as well as those symptoms that must not be present (called exclusion criteria) in order for an individual to qualify for a particular diagnosis.">
+				>
+				["at0000.1"] = <
+					text = <"Diagnostic criteria - Blood Stream Infection">
+					description = <"A set of criteria that indicate what symptoms, signs or results must be present (and for how long) in order to qualify for a diagnosis (called inclusion criteria) as well as those symptoms that must not be present (called exclusion criteria) in order for an individual to qualify for a particular diagnosis.!">
+				>
+				["at0001"] = <
+					text = <"Diagnostic criteria">
+					description = <"Set of criteria to support the making of a diagnosis.">
+				>
+				["at0001.1"] = <
+					text = <"CDC criteria">
+					description = <"Set of criteria to support the making of a diagnosis.">
+					comment = <"Reference: Horan TC, Andrus M, Dudeck MA. CDC/NHSN surveillance definition of health care-associated infection and criteria for specific types of infections in the acute care setting. Am J Infect Control. Jun 2008;36(5):309-32">
+				>
+				["at0002"] = <
+					text = <"Additional criteria">
+					description = <"Slot to contain related Diagnostic Criteria archetypes.">
+				>
+				["at0003"] = <
+					text = <"Comment">
+					description = <"Comment on the diagnostic criteria.">
+				>
+			>
+		>
+	>
