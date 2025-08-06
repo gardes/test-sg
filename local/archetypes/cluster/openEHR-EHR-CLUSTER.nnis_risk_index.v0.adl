@@ -1,0 +1,101 @@
+﻿archetype (adl_version=1.4; uid=c767c576-33f9-4814-8a79-1bb107fb9a69)
+	openEHR-EHR-CLUSTER.nnis_risk_index.v0
+
+concept
+	[at0000]	-- NNIS Risk Index
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"14/07/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about each component comprising the NNIS Risk Index.">
+			use = <"Use this archetype within the specific standalone OBSERVATION.nnis_risk_index or within another archetype that provides context for the index eg an investigation for surgical site surveillance.">
+			keywords = <"national", "nosocomial", "infections", "surveillance", "risk", "index">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"\"A Healthy Discussion About Patient Risks: Assessing patient risk for surgical site infections (SSIs)\" - http://www.google.com.au/url?sa=t&source=web&ct=res&cd=9&ved=0CCgQFjAI&url=http%3A%2F%2Fwww.apic.org%2FContent%2FNavigationMenu%2FEducation%2FEducationResources%2FHealthyDiscuSSIons%2FPat_Risks.pdf&rct=j&q=A+closer+look+at+SSIs&ei=7bEUS5iwJMyTkAW5oeD8Bg&usg=AFQjCNE3vsWk6ZWfTVegyX95TbbjtFocVQ">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"E086B71D24955D21C1720BA5983F3624">
+		["build_uid"] = <"dfe9bedc-84f2-49e8-833d-6f8a7b75f3d5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- NNIS Risk Index
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Surgical Wound Classification II, III or IV
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- ASA pre-operative score of >2
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Duration of operation exceeds standard T point
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Total NNIS Score
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|0..3|}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"NNIS Risk Index">
+					description = <"Risk index for surgical site infection derived from Surgical Wound Classification, ASA pre-operative status and operation duration.">
+				>
+				["at0001"] = <
+					text = <"Surgical Wound Classification II, III or IV">
+					description = <"Assign one point if patient will have an operation that is contaminated or infected (Class II-IV) according to Surgical Wound Classification.">
+				>
+				["at0002"] = <
+					text = <"ASA pre-operative score of >2">
+					description = <"Assign 1 point if patient has an American Society of Anesthesiologists (ASA) pre-operative assessment score of 3, 4 or 5.">
+				>
+				["at0003"] = <
+					text = <"Duration of operation exceeds standard T point">
+					description = <"Duration of operation exceeds T hours, where T is the approxi-
+mate 75th percentile of the duration of the specific operation being performed.">
+				>
+				["at0004"] = <
+					text = <"Total NNIS Score">
+					description = <"Record total NNIS score (calculated by application or manually entered)">
+				>
+			>
+		>
+	>
