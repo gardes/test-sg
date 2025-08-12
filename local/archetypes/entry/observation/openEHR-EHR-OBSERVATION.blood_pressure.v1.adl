@@ -231,9 +231,9 @@ Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Hum
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"61ECB97AF407A6CFA224B4ABB0022A55">
-		["build_uid"] = <"7f7494c8-66c0-40ba-b401-d7ac49596410">
-		["revision"] = <"1.1.0">
+		["MD5-CAM-1.0.1"] = <"4E7A4CFF3E37BC5E54A06EFA234EACEA">
+		["build_uid"] = <"941d7450-a782-4879-ad14-2c4b90c42d2b">
+		["revision"] = <"1.1.1">
 	>
 
 definition
@@ -1900,6 +1900,7 @@ ontology
 				["at0013"] = <
 					text = <"اندازه کاف">
 					description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون">
+					comment = <"*Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Human blood pressure determination by sphygmomanometry. Circulation 1993;88;2460-2470. (en)">
 				>
 				["at0014"] = <
 					text = <"*Location of measurement(en)">
