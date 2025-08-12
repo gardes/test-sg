@@ -220,7 +220,7 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Knut Bernstein, MEDIQ, Denmark", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Beatriz de Faria Leão, Zilics, Brazil", "Paul Donaldson, Nursing Informatics Australia, Australia", "Jose Florez Arango, Universidad de Antioquia, Colombia", "Gerard Freriks, ERC, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Sam Heard, Ocean Informatics, Australia", "Karsten Heusser, Hannover Medical School, Germany", "Omer Hotomaroglu, Turkey", "Evelyn Hovenga, EJSH Consulting, Australia", "Derek Hoy, United Kingdom", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller-Oest, CompuGROUP Software, Germany", "Melvin Reynolds, United Kingdom", "Tony Shannon, NHS, United Kingdom", "Hwei-Yee Tai, Tan Tock Seng Hospital, Singapore", "Stef Verlinden, Vivici, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -232,8 +232,8 @@ Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Hum
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"4E7A4CFF3E37BC5E54A06EFA234EACEA">
-		["build_uid"] = <"941d7450-a782-4879-ad14-2c4b90c42d2b">
-		["revision"] = <"1.1.1">
+		["build_uid"] = <"9415e90e-afb8-40ed-90c6-7e38bb4c5d61">
+		["revision"] = <"1.1.2-alpha">
 	>
 
 definition
