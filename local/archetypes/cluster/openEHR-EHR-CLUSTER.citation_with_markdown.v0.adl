@@ -1,0 +1,492 @@
+﻿archetype (adl_version=1.4; uid=e7496c66-e925-482f-b5bc-4899f0f5ab94)
+	openEHR-EHR-CLUSTER.citation_with_markdown.v0
+
+concept
+	[at0000]	-- Citation with markdown
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Aurelie Tomczak">
+				["organisation"] = <"Institute of Pathology, University Hospital Heidelberg, Germany">
+				["email"] = <"au.tomczak@yahoo.com">
+			>
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"Anca Heyd">
+				["organisation"] = <"Dips ASA">
+				["ahe@dips.no"] = <"ahe@dips.no">
+			>
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Gabriela Alves">
+				["organisation"] = <"Core Consulting">
+				["email"] = <"contato@coreconsulting.com.br">
+			>
+			accreditation = <"Hospital Alemão Oswaldo Cruz (HAOC)">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			author = <
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"18/06/2010">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Damit wird ermöglicht bestimmte Abschnitte der Gesundheitsinformationen, die an anderer Stelle gespeichert sind, in die aktuelle Krankenakte aufzunehmen.">
+			use = <"Verwenden Sie diese Option, um auf Informationen zu verweisen, die an einer anderen Stelle im selben EHR oder außerhalb des aktiven EHR gespeichert sind, damit sie in das aktuelle Dokument oder die aktuelle Nachricht aufgenommen werden können, die gerade erstellt wird. Beispielsweise kann eine Entlassungszusammenfassung den zusammenfassenden Bericht eines Labortests unter Verwendung dieses Zitierarchetyps enthalten, anstatt den gesamten Laborbericht zu duplizieren.
+Dieser Archetyp ist bewusst als Archetyp der Klasse CLUSTER konzipiert, sodass das Zitieren durch Einfügen in einen Slot im Kontext anderer Archetypen oder als eigenständige Instanz innerhalb des spezifischen Archetyps EVALUATION.citation erfolgen kann.">
+			keywords = <"Zitat", "Referenz">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å gjøre det mulig å inkludere spesifikk helseinformasjon, som er lagret en annen plass i pasientens journal, i den aktuelle kliniske dokumentasjonen.">
+			use = <"Brukes for å henvise til informasjon som er lagret en annen plass i samme elektronsik pasientjournal eller ekstern til den aktive elektronsike pasientjournalen, slik at den kan inkluderes i det aktuelle dokumentet, som opprettes aktuelt. For eksempel kan en utskrivingsrapport inkludere en henvising til laboratoriefunn heller enn å duplisere alle laboratoriefunnene. 
+Denne arketypen er bevist designet som CLUSTER arketype, slik at hnvisningen kan gjøres via en slot innenfor kontaksten av andre arketyper, eller som en selvstendig instans innenfor den spesifikke EVALUATION.citation arketypen.">
+			keywords = <"henvisning", "referens">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Possibilitar que seções específicas de informações de saúde armazenadas em outros lugares sejam incluídas no registro clínico atual.">
+			use = <"Usado para referenciar informações que estão armazenadas em outro local do RES ou externas ao RES ativo, então essas informações podem ser incluídas no documento atual ou na mensagem que está sendo criada. Por exemplo, um sumário de alta pode incluir um relatório resumido de um teste laboratorial com o uso deste arquétipo de citação, em vez de duplicar todo o relatório laboratorial.
+Este arquétipo está deliberadamente projetado como uma classe de arquétipo CLUSTER de forma que a citação possa ser feita por meio de inserção em um slot dentro do contexto de outros arquétipos ou como uma instancia independente dentro do arquétipo específico EVALUATION.citation.">
+			keywords = <"citação", "referência">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+> > Markdown double indented is a lightweight markup language with plain-text-formatting syntax.
+> > > Markdown triple indented is a lightweight markup language with plain-text-formatting syntax.">
+			use = <"Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
+This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.
+
+# Markdown syntax guide
+
+*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)
+
+## Emphasis
+
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+But what happens if you just start **bold but do not end.
+**And what if you do this at the beginning of a line?
+
+## Lists
+
+H~2~O 
+x^2^
+
+## Using html tags:
+
+H<sub>2</sub>O
+x<sup>2</sup>
+
+
+For example, in hey ~~you~~, you will be rendered as strikethrough text.
+
+This might be used for <u>underline</u>.
+
+
+### Unordered
+
+* Item 1
+* Item 2
+* Item 2a
+* Item 2b
+    * Item 3a
+    * Item 3b
+
+### Unordered using hyphen
+
+- Item 1 
+- Item 2
+    - Item 2.1
+    - Item 2.2
+- Item 3
+ 
+ 
+- Test sublists without markup as sometimes used in archetypes: for example http://127.0.0.1:8889/ckm/archetypes/1013.1.4439 procedure Screening
+--- sublist 1
+--- sublist 2
+
+See what happens after translation
+
+ 
+ 
+Use cases include, but are not limited to:
+- simultaneously record the chronological age and adjusted age alongside child growth parameters;
+- record the age of an individual at the time of recording as context for the other content in a document, such as the age of a child at the time of referral;
+- record the age of the mother (designated as the subject of care at ENTRY level) at the time of recording within a newborn's record; or
+- the age of an individual at the time of filling out a health assessment questionnaire.
+- the basis for calculated reference values for physiological measurements. For example in the CHA₂DS₂-VASc score archetype.
+
+ 
+
+### Ordered
+
+1. Item 1
+2. Item 2
+3. Item 3
+    1. Item 3a
+    2. Item 3b
+
+## Images
+
+![This is an alt text.](http://127.0.0.1:8889/ckm/picture?assetname=logo-header \"This is a sample image.\")
+
+## Links
+
+You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
+
+Testing a div. This is not supposed to be interpreted as html.
+Bold via b tag - again, should this be just interpreted as such? no...
+Underline via u tag - should we allow this? maybe...
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+
+&gt;&gt; Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
+## Tables
+
+| Left columns  | Right columns |
+| ------------- |:-------------:|
+| left foo      | right foo     |
+| left bar      | right bar     |
+| left baz      | right baz     |
+
+## Headers
+
+# This is a Heading h1
+## This is a Heading h2
+###### This is a Heading h6
+
+
+# now some ways to represent a hr
+
+***
+
+---
+
+_________________
+
+
+## Blocks of code
+
+```
+let message = 'Hello world';
+test(message);
+```
+
+## Inline code
+
+This web site is using `markedjs/marked`. test.">
+			keywords = <"citation", "reference">
+			misuse = <"Some examples that should not be supported, nasty html tags.
+			
+			
+
+
+
+  
+  Submit
+  
+
+
+
+
+
+			">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"ليتمكن من تضمين المقاطع المحددة للمعلومات الطبية في داخل السجل السريري الحالي, و التي كان يتم تخزينها في مكان آخر">
+			use = <"يستخدم كمرجع للمعلومات التي يتم تخزينها في مكان آخر في داخل ذات السجل الطبي الإلكتروني, أو في خارج السجل الطبي الإلكتروني النشط, بحيث يمكن تضمينه في الوثيقة الحالية أو الرسالة التي يتم تكوينها.
+مثلا: قد يتضمن ملخص الخروج تقريرا موجزا لاختبار معملي عن طريق استخدام هذا النموذج الخاص بالمرجعية, بدلا من تكرار إدراج نفس التقرير المعملي.
+و قد تم تعمد تصميم هذا النموذج على هيئة فئة نماذج (عنقود) حتى يتم إدراج المرجعية في شرفة في سياق النماذج الأخرى, أو كمعلومة مستقلة في النموذج المخصص (تقييم. اقتباس).">
+			keywords = <"الاقتباس", "المرجع">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			purpose = <"*To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.(en)">
+			use = <"*Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
+This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.(en)">
+			keywords = <"*citation(en)", "*reference(en)">
+			misuse = <"">
+			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"93E75C17C5AE57589D0ABDDCA61BD57C">
+		["build_uid"] = <"d2afe3c1-c2b2-492f-b70f-664b593bf149">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Citation
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Citation
+				value matches {
+					DV_PARSABLE matches {*}
+					DV_MULTIMEDIA matches {
+						media_type matches {[openEHR::]}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- URI to original data
+				value matches {
+					DV_URI matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Citation with markdown">
+					description = <"Reference to information held elsewhere, in the same EHR or external to the EHR. 
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+## Lists
+
+H~2~O 
+x^2^
+">
+				>
+				["at0001"] = <
+					text = <"Citation with markdown 0001">
+					description = <"Representation of the citation.
+
+_You **can** combine them_
+
+But what happens if you just start **bold but do not end.
+**And what if you do this at the beginning of a line?
+
+## Lists
+
+H~2~O 
+x^2^">
+				>
+				["at0002"] = <
+					text = <"URI to original data">
+					description = <"Link to the original data. 
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+## Lists
+
+H~2~O 
+x^2^">
+					comment = <"A comment  about the citation with a few chars 
+	test < fe > dwfer & test ' test ' ' test \" test.">
+				>
+				["at0003"] = <
+					text = <"Comment">
+					description = <"Comment about the citation.">
+				>
+				["at0004"] = <
+					text = <"Description">
+					description = <"Description about the citation.
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sitering">
+					description = <"Sitering av informasjon som lagres en annen plass i samme elektronisk journal eller utenfor elektronisk journal.">
+				>
+				["at0001"] = <
+					text = <"Sitering">
+					description = <"Representasjon av siteringen.">
+				>
+				["at0002"] = <
+					text = <"URL til original data">
+					description = <"Lenke til original data.">
+				>
+				["at0003"] = <
+					text = <"Kommentar">
+					description = <"Kommentar til siteringen.">
+				>
+				["at0004"] = <
+					text = <"Beskrivelse">
+					description = <"Beskrivelse av siteringen.">
+				>
+			>
+		>
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"引用">
+					description = <"*Reference to information held elsewhere, in the same EHR or external to the EHR.(en)">
+				>
+				["at0001"] = <
+					text = <"引用">
+					description = <"*Representation of the citation.(en)">
+				>
+				["at0002"] = <
+					text = <"原始数据URI链接">
+					description = <"*Link to the original data.(en)">
+				>
+				["at0003"] = <
+					text = <"评论">
+					description = <"*Comment about the citation.(en)">
+				>
+				["at0004"] = <
+					text = <"描述">
+					description = <"*Description about the citation.(en)">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"Citação">
+					description = <"Referência para informações mantidas em outro lugar do mesmo RES ou de um RES externo.">
+				>
+				["at0001"] = <
+					text = <"Citação">
+					description = <"Representação da citação.">
+				>
+				["at0002"] = <
+					text = <"URI dos dados originais">
+					description = <"Link para os dados originais.">
+				>
+				["at0003"] = <
+					text = <"Comentários">
+					description = <"Comentários sobre a citação.">
+				>
+				["at0004"] = <
+					text = <"Descrição">
+					description = <"Descrição sobre a citação.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"اقتباس">
+					description = <"المرجع للمعلومات الموجودة في مكان آخر, إما في ذات السجل الطبي الإلكتروني أو في خارج السجل الطبي الإلكتروني">
+				>
+				["at0001"] = <
+					text = <"الاقتباس">
+					description = <"عرض الاقتباس">
+				>
+				["at0002"] = <
+					text = <"رابط البيانات الأصلية">
+					description = <"رابط للمعلومات الأصلية">
+				>
+				["at0003"] = <
+					text = <"تعليق">
+					description = <"تعليق حول الاقتباس">
+				>
+				["at0004"] = <
+					text = <"الوصف">
+					description = <"وصف حول الاقتباس">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Zitat">
+					description = <"Verweis auf Informationen, die an anderer Stelle im selben oder außerhalb des EHR aufbewahrt werden.
+
+">
+				>
+				["at0001"] = <
+					text = <"Zitat">
+					description = <"Repräsentation des Zitats/Verweises.">
+				>
+				["at0002"] = <
+					text = <"URI zu Originaldaten">
+					description = <"Link zu den Originaldaten.">
+				>
+				["at0003"] = <
+					text = <"Kommentar">
+					description = <"Kommentar zum Zitat.">
+				>
+				["at0004"] = <
+					text = <"Beschreibung">
+					description = <"Beschreibung des Zitats/Verweises.">
+				>
+			>
+		>
+	>
