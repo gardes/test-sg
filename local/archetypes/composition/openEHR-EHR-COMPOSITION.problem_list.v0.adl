@@ -5,6 +5,16 @@ concept
 	[at0000]	-- Problem list
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde">
+				["organisation"] = <"Ocean Health Systems">
+				["email"] = <"sebastian.garde@oceanhealthsystems.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Sam Heard">
@@ -13,6 +23,13 @@ description
 		["date"] = <"23/03/2006">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"test">
+			use = <"*For active and inactive problems (inactive have a resolution date set to true)(en)">
+			keywords = <"*problem list(en)", ...>
+			misuse = <"*Not for short term problems.(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To maintain a managed list of significant ongoing health problems of the subject.">
@@ -31,8 +48,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"5E2836F13DD09FEF64CBB63154AC9DE0">
-		["build_uid"] = <"759ce72e-e9ac-47e4-b4e0-aa8c529a2788">
+		["MD5-CAM-1.0.1"] = <"8C0AF0E7CE35117CA70C993138FB87A1">
+		["build_uid"] = <"5225afbb-8505-4c39-8463-383a1e5ce8c3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -70,6 +87,22 @@ ontology
 				>
 				["at0002"] = <
 					text = <"ACTION">
+					description = <"*">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Problem list(en)">
+					description = <"*A list of the ongoing health problems of this person.(en)">
+				>
+				["at0001"] = <
+					text = <"*EVALUATION(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*ACTION(en)">
 					description = <"*">
 				>
 			>
