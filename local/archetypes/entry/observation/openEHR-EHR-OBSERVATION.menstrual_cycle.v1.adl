@@ -34,9 +34,9 @@ Use some of the elements to record details about menstrual bleeding and associat
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B851D51FF538A35CE4ADF26D21C3392C">
-		["build_uid"] = <"4f86bea4-5096-4cb0-a6e2-a2c794265fbe">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"495F4F283296D78FD757CA8CF2D48F50">
+		["build_uid"] = <"d6ab440b-bd6b-4ae7-b198-724d04babf28">
+		["revision"] = <"1.0.1">
 	>
 
 definition
