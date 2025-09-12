@@ -1,0 +1,117 @@
+﻿archetype (adl_version=1.4; uid=d4567c1d-3c47-4768-acdc-b6d1432d098c)
+	openEHR-EHR-OBSERVATION.my_uncanny_uri_test.v0
+
+concept
+	[at0000]	-- my uncanny uri test
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2024-12-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Departament de Salut de la Generalitat de Catalunya, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"Creative Commons Attribution-ShareAlike 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"9002A2FB8B1677767F62218B8D0F5C9F">
+		["build_uid"] = <"d406bec6-d0c2-4a6e-8fa9-f8b8a27b8bc7">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- my uncanny uri test
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- archetype uri
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[ac0000]
+												}
+											}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- template uri
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+ontology
+	terminologies_available = <"MY ARCHETYPE URI", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"my uncanny uri test">
+					description = <"my uncanny uri test">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"archetype uri">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"template uri">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0000"] = <
+					text = <"my archetype uri">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_bindings = <
+		["MY ARCHETYPE URI"] = <
+			items = <
+				["ac0000"] = <terminology://fhir.hl7.org/CodeSystem/$expand?url=https://preproduccio.fhir.tst.hes.catsalut.intranet.gencat.cat/fhir/CodeSystem/2.16.840.1.113883.4.292.10.12.5>
+			>
+		>
+	>
