@@ -5,21 +5,108 @@ concept
 	[at0000]	-- Aaaa
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			other_details = <
+				["other_contributors"] = <"Mark Messiha, Ocean Health Systems, Australia
+Leigh Hicks, Microsoft, japan
+Sebastian Garde, Dell, Canda. Note: Sebastian is the CEO . Don't mess with him!!!">
+			>
+		>
+		["ar-eg"] = <
+			language = <[ISO_639-1::ar-eg]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			other_details = <
+				["other_contributors"] = <"fake.user
+juhi.jose">
+			>
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			other_details = <
+				["other_contributors"] = <"notareal.user
+mark.fakeuser">
+			>
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+			accreditation = <"Passed">
+			other_details = <
+				["other_contributors"] = <"M7">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"">
 	>
 	details = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["ar-eg"] = <
+			language = <[ISO_639-1::ar-eg]>
+			purpose = <"*unknown(en)">
+			use = <"">
+			misuse = <"">
+		>
+		["ja"] = <
+			language = <[ISO_639-1::ja]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
+		["el"] = <
+			language = <[ISO_639-1::el]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Added this text">
-			use = <"Added this use">
-			misuse = <"Added this as cannot misuse template">
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
+		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <>
+	other_contributors = <"cka cka, Test Organisation, Australia", "S G, test, Germany (Test Editor)", "Sistine Leveston, Ocean Informatics Pty Ltd, Australia (Test Editor)", "mark3.test", "Sebastianåæâß Ocean, Ocean Infws, Germany (Test Editor)", "ckm tester, Ocean Health, Australia (Test Editor)", "TESTING.SUGGESTEDCONTRIBUTORS", "notareal.user", "mark.fakeuser">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"Ocean Informatics">
@@ -27,8 +114,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"F7C4D21DFF6A64BCE206E349688C2919">
-		["build_uid"] = <"c32e5b27-d0e4-418a-b0ae-8af4ee09f347">
+		["MD5-CAM-1.0.1"] = <"9F443B0565DCD648B2FEBB01DB273927">
+		["build_uid"] = <"29d84809-2b97-45df-a2f3-24e2c6cfd035">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -91,6 +178,146 @@ ontology
 				>
 				["at0005"] = <
 					text = <"New cluster">
+					description = <"*">
+				>
+			>
+		>
+		["ar-eg"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0002"] = <
+					text = <"*New element2(en)">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"*new quanitty goes in here(en)">
+					description = <"**(en)">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"**(en)">
+				>
+				["at0005"] = <
+					text = <"*New cluster(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"AAAA">
+					description = <"Testing">
+				>
+				["at0001"] = <
+					text = <"A1">
+					description = <"Testing">
+				>
+				["at0002"] = <
+					text = <"A2">
+					description = <"Testing">
+				>
+				["at0003"] = <
+					text = <"3">
+					description = <"Testing">
+				>
+				["at0004"] = <
+					text = <"ASAAA">
+					description = <"Testing CKM">
+				>
+				["at0005"] = <
+					text = <"Cluster">
+					description = <"Testing">
+				>
+			>
+		>
+		["ja"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*New element2(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"*new quanitty goes in here(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*New cluster(en)">
+					description = <"*">
+				>
+			>
+		>
+		["el"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*New element2(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"*new quanitty goes in here(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*New cluster(en)">
+					description = <"*">
+				>
+			>
+		>
+		["en-us"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Aaaa(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"*New element2(en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"*new quanitty goes in here(en)">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"*New element(en)">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"*New cluster(en)">
 					description = <"*">
 				>
 			>
