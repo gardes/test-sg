@@ -1,0 +1,104 @@
+﻿archetype (adl_version=1.4; uid=9d77b868-c610-4282-a9d2-6a1455b4c66d)
+	openEHR-EHR-CLUSTER.testslot.v2
+
+concept
+	[at0000]	-- test_SLOTS7
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2024-03-05">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Derived from: <Add reference to original resource here>">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"32144E07B78AE4561AAE4E8A01CF36B7">
+		["build_uid"] = <"9e075a46-4144-4891-8bdc-4ec3681c4bdd">
+		["revision"] = <"2.0.0-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- test_loinc277
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0002]    -- qw
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- DV_PROPORTION
+				value matches {
+					DV_PROPORTION matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- CLUSTER_SLOT_nothing
+			}
+			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- CLUSTER_SLOT2_includeall
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0006] occurrences matches {0..1} matches {    -- CLUSTER_SLOT_occ 
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"test_SLOTS7">
+					description = <"test_slots">
+				>
+				["at0001"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"qw">
+					description = <"qwe">
+				>
+				["at0003"] = <
+					text = <"DV_PROPORTION">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"CLUSTER_SLOT_nothing">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"CLUSTER_SLOT2_includeall">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"CLUSTER_SLOT_occ only">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"CLUSTER_SLOT_head only ">
+					description = <"">
+				>
+			>
+		>
+	>
