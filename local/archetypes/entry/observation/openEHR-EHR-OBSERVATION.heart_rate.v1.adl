@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=4b6bdeeb-29f6-4fc9-ae8a-b1c4c750cb0f)
 	openEHR-EHR-OBSERVATION.heart_rate.v1
 
 concept
@@ -45,11 +45,17 @@ Concepts such as Maximal or Target Heart Rate should be recorded in separate arc
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"rejected">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"76B6FFDF34DEC0810BE951A85892C792">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"149F1EDD72C4565FBAAFD2906CB11B45">
+		["build_uid"] = <"ab20c21a-79d7-479a-ad30-4e1351c877eb">
 	>
 
 definition
