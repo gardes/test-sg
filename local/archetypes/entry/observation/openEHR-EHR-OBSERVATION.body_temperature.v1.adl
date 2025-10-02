@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=dbc3369f-6ae3-4bdc-b6db-5eba4e270242)
 	openEHR-EHR-OBSERVATION.body_temperature.v1
 
 concept
@@ -11,14 +11,6 @@ language
 			author = <
 				["name"] = <"Sebastian Garde">
 				["organisation"] = <"Ocean Informatics">
-			>
-		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
-			author = <
-				["name"] = <"Shahla Foozonkhah">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"Shahla.foozonkhah@oceaninformatics.com">
 			>
 		>
 		["ru"] = <
@@ -37,6 +29,14 @@ language
 			>
 			accreditation = <"P2D Health Advisor Council">
 		>
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
+			author = <
+				["name"] = <"Shahla Foozonkhah">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"Shahla.foozonkhah@oceaninformatics.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -46,17 +46,6 @@ description
 		["date"] = <"18/05/2004">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the measured temperature of a person - as a surrogate for the temperature of the whole body.">
-			use = <"Used for recording the whole body temperature of a person or body.
-Additional clusters can be included to provide additional state data - including environmental conditions, menstrual cycle details and exertion details, where appropriate.
-Please Note: The site and method of recording may need to be displayed to the end user to facilitate accurate interpretation of the temperature recorded.">
-			keywords = <"temperature", "body", "core", "fever", "hypothermia", "hyperthermia">
-			misuse = <"This archetype is not to be used to record the temperature of any other object.
-This archetype is not to be used to record the temperature of a part of the body in isolation e.g. temperature of the sole of the foot as a part of chronic diabetes management.">
-			copyright = <"© openEHR Foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Messung der Temperatur einer Person - als Surrogat for die Temperatur des gesamten Körpers.">
@@ -77,6 +66,17 @@ Bitte beachten: Die Stelle und Methode der Messung muss ggf. dem Endverbraucher 
 Dieser Archetyp soll nicht benutzt werden, um die Temperatur eines Körperteils isoliert zu messen, z. B. die Temperatur an der Fußsohle im Rahmen des Managements von chronischem Diabetes.">
 			copyright = <"© openEHR Foundation">
 		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи измеряемой температуры человека - в качестве суррогата температуры всего тела.">
+			use = <"Используется для записи температуры тела пациента или органа.
+Дополнительные кластеры могут быть включены для получения дополнительной информации о состоянии - в том числе условия внешней среды, фаза менструального цикла и другие детали, где это уместно.
+Обратите внимание: запись о месте и методе измерения  может потребоваться  для облегчения точной интерпретации регистрируемой температуры.">
+			keywords = <"температура", "лихорадка", "жар", "гипертермия", "гипотермия">
+			misuse = <"Этот архетип не следует использовать для записи температуры любого другого объекта.
+Этот архетип не следует использовать для записи температуры части тела, например, отдельного измерения температуры ступни в лечении больных с диабетической стопой.">
+			copyright = <"© openEHR Foundation">
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para registrar a temperatura aferida de uma pessoa - com valor médio equivalente para o corpo inteiro.">
@@ -89,15 +89,15 @@ Observação: O local e método de gravação podem precisar de ser exibidos ao 
 Esse arquétipo não pode ser usado para registrar a temperatura de uma parte do corpo isoladamente, por exemplo, temperatura da sola do pé, como parte do controle de diabetes crônica.">
 			copyright = <"© openEHR Foundation">
 		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Для записи измеряемой температуры человека - в качестве суррогата температуры всего тела.">
-			use = <"Используется для записи температуры тела пациента или органа.
-Дополнительные кластеры могут быть включены для получения дополнительной информации о состоянии - в том числе условия внешней среды, фаза менструального цикла и другие детали, где это уместно.
-Обратите внимание: запись о месте и методе измерения  может потребоваться  для облегчения точной интерпретации регистрируемой температуры.">
-			keywords = <"температура", "лихорадка", "жар", "гипертермия", "гипотермия">
-			misuse = <"Этот архетип не следует использовать для записи температуры любого другого объекта.
-Этот архетип не следует использовать для записи температуры части тела, например, отдельного измерения температуры ступни в лечении больных с диабетической стопой.">
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the measured temperature of a person - as a surrogate for the temperature of the whole body.">
+			use = <"Used for recording the whole body temperature of a person or body.
+Additional clusters can be included to provide additional state data - including environmental conditions, menstrual cycle details and exertion details, where appropriate.
+Please Note: The site and method of recording may need to be displayed to the end user to facilitate accurate interpretation of the temperature recorded.">
+			keywords = <"temperature", "body", "core", "fever", "hypothermia", "hyperthermia">
+			misuse = <"This archetype is not to be used to record the temperature of any other object.
+This archetype is not to be used to record the temperature of a part of the body in isolation e.g. temperature of the sole of the foot as a part of chronic diabetes management.">
 			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
@@ -113,10 +113,16 @@ Esse arquétipo não pode ser usado para registrar a temperatura de uma parte do
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Knut Bernstein", "Sebastian Garde", "Ian McNicoll", "Omer Hotomaroglu", "Sundaresan Jaganathan", "Heather Leslie", "Shahla Foozonkhah">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"67AD0398E82C094EA41963065CD85084">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"B814701C580D4D644BBECF0A6ECBF241">
+		["build_uid"] = <"80cfa84b-c0b7-4fbf-b03a-f7aa21fd3bf4">
 	>
 
 definition
