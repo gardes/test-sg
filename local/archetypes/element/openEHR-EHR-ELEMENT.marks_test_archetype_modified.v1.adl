@@ -81,8 +81,8 @@ TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL(en)">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"9508AC5A8C6F339D16DD026F4EF5593F">
-		["build_uid"] = <"56c35ba2-9fc3-4eb1-92f0-404acb9a3630">
-		["revision"] = <"1.0.3-alpha">
+		["build_uid"] = <"772d5b70-ade3-4e1b-819a-d440c7b38e09">
+		["revision"] = <"1.0.4-alpha">
 	>
 
 definition
