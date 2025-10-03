@@ -5,6 +5,16 @@ concept
 	[at0000]	-- Angina symptom Classification (CCS)
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"cka cka">
+				["organisation"] = <"Test Organisation">
+				["email"] = <"cka@test-oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
@@ -13,6 +23,12 @@ description
 		["date"] = <"2013-03-08">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To record a classification of patient angina on the basis of reported chest pain.  Based on Canadian Cardiovascular Society (CCS) Angina Status score, adjusted to add Class 0, to record situations where patients have no symptoms.(en)">
+			use = <"*Use to record a classification of patient angina on the basis of reported chest pain based on the CCS Angina Status Score.(en)">
+			misuse = <"*Note that Class 0 is not defined in the formal Canadian Cardiovascular Society (CCS) Angina Status score.(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a classification of patient angina on the basis of reported chest pain.  Based on Canadian Cardiovascular Society (CCS) Angina Status score, adjusted to add Class 0, to record situations where patients have no symptoms.">
@@ -25,19 +41,19 @@ description
 	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"1.0.0">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Canadian Cardiovascular Society grading of angina pectoris
 Available from: http://www.ccs.ca/download/position_statements/Grading%20of%20Angina.pdf
 
 CANADIAN CARDIOVASCULAR SOCIETY ANGINA GRADE 0 – A CLINICALLY USEFUL ADDITION
 Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
-		["build_uid"] = <"79e87134-0cb0-4b70-aa7d-e603e783718d">
-		["original_publisher"] = <"Ocean Informatics">
 		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BDF6C71F494D7955D2BA5C21DB941456">
+		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["MD5-CAM-1.0.1"] = <"3A1CC97077C798081690576EE526EE7D">
+		["build_uid"] = <"db71fd72-7468-430f-ac4e-04ddd4556da1">
+		["revision"] = <"1.0.1">
 	>
 
 definition
@@ -111,6 +127,50 @@ ontology
 				["at0009"] = <
 					text = <"Class IV">
 					description = <"Inability to perform any physical activity without discomfort.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Angina symptom Classification (CCS)(en)">
+					description = <"*Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status score.(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Any event.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Angina classification(en)">
+					description = <"*Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status classification.(en)">
+				>
+				["at0005"] = <
+					text = <"Test 544">
+					description = <"Der Patient hat keine Angina-Symptome.">
+				>
+				["at0006"] = <
+					text = <"*Class I(en)">
+					description = <"*Angina which does not limit ordinary physical activity.(en)">
+				>
+				["at0007"] = <
+					text = <"*Class II(en)">
+					description = <"*Slight limitation of ordinary activity.(en)">
+				>
+				["at0008"] = <
+					text = <"*Class III(en)">
+					description = <"*Marked limitation of ordinary physical activity.(en)">
+				>
+				["at0009"] = <
+					text = <"*Class IV(en)">
+					description = <"*Inability to perform any physical activity without discomfort.(en)">
 				>
 			>
 		>
