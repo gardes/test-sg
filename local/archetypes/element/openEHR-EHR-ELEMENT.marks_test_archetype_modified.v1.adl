@@ -12,14 +12,6 @@ language
 				["name"] = <"?">
 			>
 		>
-		["tr"] = <
-			language = <[ISO_639-1::tr]>
-			author = <
-				["name"] = <"mark10 test">
-				["organisation"] = <"Testing Active Users">
-				["email"] = <"mm2@hotmail.com">
-			>
-		>
 		["ji"] = <
 			language = <[ISO_639-1::ji]>
 			author = <
@@ -52,19 +44,6 @@ ADDED DATA AGAIN TO SEE IF CHANGES ARE NOTED IN BRANCH VS TRUNK">
 TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL">
 			copyright = <"© openEHR Foundation">
 		>
-		["tr"] = <
-			language = <[ISO_639-1::tr]>
-			purpose = <"*Testing Bulk Upload functionality in CKM. ADDED THIS TEXT IN CAPS
-
-DATA ADDED TO CHECK CHANGES IN BRANCH VS TRUNK(en)">
-			use = <"*Testing Bulk Upload functionality in CKM with more than Archetype file in a Zip file
-FOR TESTING CKM-2034
-
-ADDED DATA AGAIN TO SEE IF CHANGES ARE NOTED IN BRANCH VS TRUNK(en)">
-			misuse = <"*None AT ALL AS THIS IS USED FOR TESTING PURPOSES
-
-TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL(en)">
-		>
 		["ji"] = <
 			language = <[ISO_639-1::ji]>
 			purpose = <"*Testing Bulk Upload functionality in CKM(en)">
@@ -80,8 +59,8 @@ TESTING CKM-2034 IS THE MAIN USE BUT NOT MISUSE AT ALL(en)">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"9508AC5A8C6F339D16DD026F4EF5593F">
-		["build_uid"] = <"772d5b70-ade3-4e1b-819a-d440c7b38e09">
+		["MD5-CAM-1.0.1"] = <"CCFD7C1F9FF299FFBF708DE43975A8B5">
+		["build_uid"] = <"a224ac61-d824-4e8a-b1b7-7da34efee256">
 		["revision"] = <"1.0.4-alpha">
 	>
 
@@ -91,6 +70,7 @@ definition
 			DV_IDENTIFIER matches {*}
 		}
 	}
+
 
 
 ontology
@@ -116,14 +96,6 @@ ontology
 				["at0000"] = <
 					text = <"*Marks Test Archetype 1(en)">
 					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file(en)">
-				>
-			>
-		>
-		["tr"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Marks Test Archetype 1(en)">
-					description = <"*This is going to be used to test Bulk uploading more than one Archetype in a ZIP file AND TES THIS DATA IN CAPS FOR CKM-2034(en)">
 				>
 			>
 		>

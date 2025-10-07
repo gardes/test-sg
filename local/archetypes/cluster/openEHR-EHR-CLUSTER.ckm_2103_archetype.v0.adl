@@ -14,7 +14,7 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Used to help test CKM-2103">
 			use = <"Link this Archetype to the Templates  to help test CKM-2103">
-			misuse = <"None as this contains no clinical information at all and this is only used for testing">
+			misuse = <"None as this contains no clinical information at all">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"7E8E114C12701CC7BF8273B3B6A7E180">
-		["build_uid"] = <"3db6470f-f5db-4ae7-8598-0aec1ac4adc0">
+		["MD5-CAM-1.0.1"] = <"77E2D3C59A01454FF43963A53ED080A7">
+		["build_uid"] = <"d524426a-6594-4ebb-81cf-0c110f2ba675">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -97,6 +97,7 @@ definition
 	}
 
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -104,7 +105,6 @@ ontology
 				["at0000"] = <
 					text = <"CKM 2103 Archetype">
 					description = <"Archetype to test CKM-2103">
-					comment = <"Comment added for Regession testing">
 				>
 				["at0001"] = <
 					text = <"Element 1">
