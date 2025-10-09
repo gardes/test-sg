@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>00da5e3c-4c3e-42e4-8ec6-fa8cf19f70b6</id>
-  <name>test valueset template</name>
+  <name>" test valueset template "</name>
   <description>
-    <lifecycle_state>Initial</lifecycle_state>
+    <lifecycle_state> Initial </lifecycle_state>
     <details>
       <purpose />
       <use />
