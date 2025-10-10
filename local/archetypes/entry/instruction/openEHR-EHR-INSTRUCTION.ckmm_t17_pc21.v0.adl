@@ -1,0 +1,65 @@
+﻿archetype (adl_version=1.4; uid=441c733f-2884-484b-828a-1490c7e8c118)
+	openEHR-EHR-INSTRUCTION.ckmm_t17_pc21.v0
+
+concept
+	[at0000]	-- Ckm t17 pc1
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Mark Messiha">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Testing CKM-T17. This ADL file is to satisfy pre-condition 1.">
+			use = <"Testing CKM-T17!">
+			misuse = <"None. Feel free to do what you like with this one.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"561BDA4F9CF80CE522E9915C87EB8B99">
+		["build_uid"] = <"020e2815-a1a5-46da-a861-cfa1fe6948e5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {	-- Ckm t17 pc1
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {*}
+				}
+			}
+		}
+	}
+
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ckm t17 pc1">
+					description = <"Testing CKM-T17.">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"Current Activity.">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
