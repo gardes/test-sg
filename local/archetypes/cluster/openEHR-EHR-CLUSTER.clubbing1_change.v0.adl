@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=653e36a8-8bd5-4ba2-a103-52986b60addd)
-	openEHR-EHR-CLUSTER.clubbing1.v0
+﻿archetype (adl_version=1.4; uid=03e4f962-7237-4eb4-96ce-858f17dddc3a)
+	openEHR-EHR-CLUSTER.clubbing1_change.v0
 
 concept
 	[at0000]	-- Clubbing
@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"041418ABF607F389C8EAE768D5C48D38">
-		["build_uid"] = <"d4359144-93a5-490d-9ce7-71aab527f420">
+		["MD5-CAM-1.0.1"] = <"25ADCD98E430493018DB26F7C7608D1F">
+		["build_uid"] = <"d02ea327-1ed1-4d3f-9952-346b96c477dc">
 		["revision"] = <"0.0.1-alpha">
 	>
 
