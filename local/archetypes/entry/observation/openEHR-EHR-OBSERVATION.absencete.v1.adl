@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=8c903a70-f7d5-45df-8317-c83cfa957052)
-	openEHR-EHR-OBSERVATION.absencetest.v0
+﻿archetype (adl_version=1.4; uid=a9306c3d-1a31-4ac8-9ea2-f486584ab82f)
+	openEHR-EHR-OBSERVATION.absencete.v1
 
 concept
 	[at0000]	-- Absence of Information
@@ -44,9 +44,9 @@ Not to be used to record the exclusion of adverse reactions, medication use, pro
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"BC953E3E2AC1BC5F3D7BA5F670BBD8AA">
-		["build_uid"] = <"a770dee9-320c-47d1-a26b-3ea32fe750e4">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"9BD18CDFB172B2F15B997FC8D6FB6B85">
+		["build_uid"] = <"0d242502-2611-4ee0-9595-586d1420ef37">
+		["revision"] = <"1.0.0-alpha">
 	>
 
 definition
@@ -83,6 +83,7 @@ definition
 			}
 		}
 	}
+
 
 
 
