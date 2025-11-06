@@ -21,6 +21,13 @@ description
 		["date"] = <"10/11/2010">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To describe the amount of a substance for reuse in different ENTRY classes.(en)">
+			use = <"*In INSTRUCTION medication, ACTION medication for amount ordered, dispensed, administered.(en)">
+			misuse = <"test">
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To describe the amount of a substance for reuse in different ENTRY classes.">
@@ -29,25 +36,18 @@ description
 			misuse = <"For a range of amount use the specialised class amount-range.">
 			copyright = <"© openEHR Foundation">
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			purpose = <"*To describe the amount of a substance for reuse in different ENTRY classes.(en)">
-			use = <"*In INSTRUCTION medicadtion, ACTION medication for amount ordered, dispensed, administered.(en)">
-			misuse = <"test">
-			copyright = <"© openEHR Foundation">
-		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"d527ee8a-c898-4b5a-9c4e-8dec6d4c760f">
-		["original_publisher"] = <"Ocean Informatics">
-		["original_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"6D997DB3115619EFE331D8E77C7E8BD7">
-		["custodian_namespace"] = <"com.oceaninformatics">
 		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"6D997DB3115619EFE331D8E77C7E8BD7">
+		["build_uid"] = <"069c1bbd-3aff-47ac-9aac-6f645600627f">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
