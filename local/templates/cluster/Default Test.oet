@@ -63,7 +63,7 @@
   <definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.defaulttest.v0" concept_name="Defaulttest">
     <Rule path="/items[at0001]" default="My Default Text" />
     <Rule path="/items[at0002]" default="local::at0016::ABC" />
-    <Rule path="/items[at0003]" default="1 mg" />
+    <Rule path="/items[at0003]" default="1 1" />
     <Rule path="/items[at0004]" default="40" />
     <Rule path="/items[at0005]" default="2017-12-01T10:00:00" />
     <Rule path="/items[at0006]" default="P1Y2M" />

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=97943a58-f71a-4cd0-8935-0f232a637a6e)
+﻿archetype (adl_version=1.4; uid=e7e0ae8f-42f3-4444-a462-7643ceaf59c8)
 	openEHR-EHR-OBSERVATION.apgar.v2
 
 concept
@@ -312,25 +312,27 @@ La pràctica clínica habitual és registrar els 5 paràmetres més el total, pe
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Andrew James, University of Toronto, Canada", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"Ocean Informatics">
-		["references"] = <"Apgar V.  A proposal of a New Method of Evaluation of the Newborn Infant. Curr Res Anesth Analg.  1953 Jul-Aug;32(4):260-7.
+		["references"] = <"Derived from: <Add reference to original resource here>
 
-Apgar V, Holaday DA, James LS, Weisbrod IM, and Berrien C.  Evaluation of the newborn infant; second report.  J Am Med Assoc.  1958 Dec 13;168(15):1985-8.
+Apgar V. A proposal of a New Method of Evaluation of the Newborn Infant. Curr Res Anesth Analg. 1953 Jul-Aug;32(4):260-7.
 
-Apgar V.  The newborn (Apgar) scoring system.  Pediatr Clin North Am. 1966 Aug;13(3):645-50.
+Apgar V, Holaday DA, James LS, Weisbrod IM, and Berrien C. Evaluation of the newborn infant; second report. J Am Med Assoc. 1958 Dec 13;168(15):1985-8.
 
-Whaley LF, Wong DL (1979).  Nursing Care of Infants and Children.  St. Louis, Toronto, London, The C.V. Mosby Company.">
+Apgar V. The newborn (Apgar) scoring system. Pediatr Clin North Am. 1966 Aug;13(3):645-50.
+
+Whaley LF, Wong DL (1979). Nursing Care of Infants and Children. St. Louis, Toronto, London, The C.V. Mosby Company.">
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"95903C3443EF4F75EA6AD49019A824DB">
-		["build_uid"] = <"958de29e-5f57-44c9-95aa-24b7b0395c7b">
+		["MD5-CAM-1.0.1"] = <"DCD40C6631C6DCB441110414FD2AA3E4">
+		["build_uid"] = <"8401c392-f476-4de5-97fb-6a858daade39">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"2.0.0">
+		["revision"] = <"2.0.0-alpha">
 	>
 
 definition
@@ -2353,9 +2355,8 @@ ontology
 			items = <
 				["/data[at0002]/events[at0003]"] = <[LOINC::48334-7]>
 				["/data[at0002]/events[at0028]"] = <[LOINC::48333-9]>
-				["/data[at0002]/events[at0026]"] = <[LOINC::103631-8]>
-				["/data[at0002]/events[at0027]"] = <[LOINC::106623-2]>
 				["/data[at0002]/events[at0031]"] = <[LOINC::48332-1]>
+				["/data[at0002]/events[at0026]"] = <[LOINC::103631-8]>
 				["at0006"] = <[LOINC::LA6716-0]>
 				["at0007"] = <[LOINC::LA6717-8]>
 				["at0008"] = <[LOINC::LA6718-6]>
