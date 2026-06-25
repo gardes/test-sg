@@ -488,7 +488,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"MKB", ...>
 	term_definitions = <

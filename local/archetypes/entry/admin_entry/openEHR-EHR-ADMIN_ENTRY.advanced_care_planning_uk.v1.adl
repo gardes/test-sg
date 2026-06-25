@@ -87,7 +87,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"RCD99", "READ2", "SNOMED-CT">
 	term_definitions = <

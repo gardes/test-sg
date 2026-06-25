@@ -34,8 +34,6 @@ description
 definition
 	SECTION[at0000] matches {*}
 
-
-
 ontology
 	term_definitions = <
 		["en"] = <

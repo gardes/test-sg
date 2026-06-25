@@ -213,7 +213,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"NCTIS-OID", ...>
 	term_definitions = <

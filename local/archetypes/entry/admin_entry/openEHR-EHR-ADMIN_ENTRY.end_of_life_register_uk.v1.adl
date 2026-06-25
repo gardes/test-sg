@@ -65,7 +65,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"READ2", "RCD99">
 	term_definitions = <

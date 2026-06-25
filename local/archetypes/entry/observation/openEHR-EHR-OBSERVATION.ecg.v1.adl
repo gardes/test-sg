@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=2e1ba734-a023-4388-b1af-548f8260d85d)
 	openEHR-EHR-OBSERVATION.ecg.v1
 
 concept
@@ -43,11 +43,18 @@ Not to be used for recording Holter monitor results.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]">
-		["MD5-CAM-1.0.1"] = <"89BCC0D4C591B32A94D28BF7EBEFCC97">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"525550BACF69E26730E38B94DEC75B65">
+		["build_uid"] = <"9ce28f0c-80e7-43f8-bdf1-0beae9fc72ec">
+		["revision"] = <"1.0.0">
 	>
 
 definition
