@@ -328,9 +328,9 @@ Whaley LF, Wong DL (1979).  Nursing Care of Infants and Children.  St. Louis, To
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"95903C3443EF4F75EA6AD49019A824DB">
-		["build_uid"] = <"958de29e-5f57-44c9-95aa-24b7b0395c7b">
+		["build_uid"] = <"28eebabb-caff-463e-a448-b97cf603571f">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"2.0.0">
+		["revision"] = <"2.0.1">
 	>
 
 definition
