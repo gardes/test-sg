@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=4fd4f954-b0dd-4c50-9483-74baca9b6a6a)
-	openEHR-EHR-CLUSTER.inpatient_episode_details.v0
+﻿archetype (adl_version=1.4; uid=24cb63a9-6f52-424a-87e6-ed9f3ea6e777)
+	openEHR-EHR-CLUSTER.inpatient_episode_details.v1
 
 concept
 	[at0000]	-- Inpatient episode details
@@ -48,7 +48,7 @@ Not to be used for planning future admissions to an inpatient facility. At the t
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -57,9 +57,9 @@ Not to be used for planning future admissions to an inpatient facility. At the t
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"B0966779418F44FFBF8D4BDE24288A2C">
-		["build_uid"] = <"c4873e7b-91dc-4ec8-b9bb-96fc7d967734">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"32BD790B23FF501F9F784E48C5E0CC80">
+		["build_uid"] = <"d5330b60-4adb-4a02-8c8c-54a882dbbcd7">
+		["revision"] = <"1.0.0">
 	>
 
 definition
