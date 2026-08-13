@@ -5,15 +5,6 @@ concept
 	[at0000]	-- Ear Cleaning Details
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["zh"] = <
-			language = <[ISO_639-1::zh]>
-			author = <
-				["name"] = <"naz mun">
-				["email"] = <"nazmunmunia@gmail.com">
-			>
-		>
-	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -32,15 +23,6 @@ This archetype has been designed to provide structured details as part of a requ
 			misuse = <"">
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
-		["zh"] = <
-			language = <[ISO_639-1::zh]>
-			purpose = <"*To record details about cleaning of the external auditory canal.(en)">
-			use = <"*Use to record details about the cleaning of the external auditory canal.
-
-This archetype has been designed to provide structured details as part of a request for ear cleaning or recording an ear cleaning activity - use within INSTRUCTION.procedure or ACTION.procedure archetypes.(en)">
-			keywords = <"*ear(en)", "*cleaning(en)", "*method(en)", "*canal(en)", "*external(en)", "*auditory(en)", "*pus(en)", "*discharge(en)", "*wax(en)", "*instrument(en)", "*suction(en)", "*irrigation(en)", "*flushing(en)", "*tissue(en)">
-			misuse = <"">
-		>
 	>
 	lifecycle_state = <"published">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Kathy Currie, Northern Territory Health, Australia", "Jade Frederikson, Hearing Health Program, DoH, NT", "Sam Heard, Ocean Informatics, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Vanessa Rotumah, NT Government - Health DEvelopment, Australia">
@@ -51,9 +33,9 @@ This archetype has been designed to provide structured details as part of a requ
 		["original_namespace"] = <"com.oceaninformatics">
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"DE08FB8A30A1C6E58F0B5D136FE53715">
-		["build_uid"] = <"1a4183c0-ff52-4e09-92e4-491fca7c4b45">
-		["revision"] = <"1.0.1">
+		["MD5-CAM-1.0.1"] = <"B7FC137641F1C0593FEF1AC121C64D30">
+		["build_uid"] = <"4e025070-ea7e-4b0d-bb5e-bf4db1617df8">
+		["revision"] = <"1.1.0">
 	>
 
 definition
@@ -89,22 +71,6 @@ ontology
 					text = <"Instrument">
 					description = <"Instrument used to assist cleaning.">
 					comment = <"Coding with a terminology is preferred, if possible. For example Jobson Horne probe, or micro forceps.">
-				>
-			>
-		>
-		["zh"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Ear Cleaning Details(en)">
-					description = <"*Details about method for cleaning the external ear canal.(en)">
-				>
-				["at0004"] = <
-					text = <"*Wash Agent(en)">
-					description = <"*Substance used for ear wash.(en)">
-				>
-				["at0006"] = <
-					text = <"*Instrument(en)">
-					description = <"*Instrument used to assist cleaning.(en)">
 				>
 			>
 		>
