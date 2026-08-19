@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=4e11a54f-4a12-4242-b3e2-1c09360b8ae4)
+﻿archetype (adl_version=1.4; uid=fcba2201-4d9f-404f-a7f2-54bd2f20e0a4)
 	openEHR-EHR-OBSERVATION.self_test_result.v0
 
 concept
@@ -31,13 +31,13 @@ Use cases include, but are not limited to:
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"Ocean Informatics">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"">
-		["original_namespace"] = <"com.oceaninformatics">
-		["original_publisher"] = <"Ocean Informatics">
-		["custodian_namespace"] = <"com.oceaninformatics">
-		["MD5-CAM-1.0.1"] = <"3DE3791657E277B74EC9D3D0816A5B19">
-		["build_uid"] = <"60fa1b64-adf6-4dc8-aaf6-04ca8f3aac22">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"B80E64216FAF9E2907735CB59ADF0711">
+		["build_uid"] = <"97515a5b-8c76-4627-bbb5-24e1dbdb71af">
 		["revision"] = <"0.0.1-alpha">
 	>
 
