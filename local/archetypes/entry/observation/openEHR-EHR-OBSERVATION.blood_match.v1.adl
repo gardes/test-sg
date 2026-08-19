@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=203bdabc-ef28-4eba-9f78-ef31d670ecff)
 	openEHR-EHR-OBSERVATION.blood_match.v1
 
 concept
@@ -27,21 +27,21 @@ description
 		["email"] = <"sam.heard@oceaninformatics.com">
 	>
 	details = <
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Запись группы крови и обнаруженных антител.">
-			use = <"Записывает лаборатория переливания крови.">
-			keywords = <"группа", "переливание">
-			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Dokumentation der Blutgruppe und Befunde der Antikörper.">
 			use = <"Dokumentiert von einem Bluttransfusion-Labor.">
 			keywords = <"Gruppe", "Transfusion">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Запись группы крови и обнаруженных антител.">
+			use = <"Записывает лаборатория переливания крови.">
+			keywords = <"группа", "переливание">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -49,13 +49,20 @@ description
 			use = <"Reporting by blood transfusion laboratory.">
 			keywords = <"group", "transfusion">
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"820A60C343A1184BF368CC94822B084E">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"0DE0EA1BC0C3CA5E7AAC3D2D81B3472B">
+		["build_uid"] = <"1f30ff8f-32f3-4bdd-928f-9564a0fd6deb">
+		["revision"] = <"1.0.0">
 	>
 
 definition
