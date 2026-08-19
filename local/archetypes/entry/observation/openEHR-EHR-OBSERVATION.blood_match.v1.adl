@@ -52,7 +52,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"deprecated">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -61,8 +61,8 @@ description
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"0DE0EA1BC0C3CA5E7AAC3D2D81B3472B">
-		["build_uid"] = <"1f30ff8f-32f3-4bdd-928f-9564a0fd6deb">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"37557362-48a3-490a-b74c-f1382499fa53">
+		["revision"] = <"1.0.1">
 	>
 
 definition
