@@ -3,7 +3,7 @@
     <id>f4452c51-3132-4981-9d3e-4e5379e72d21</id>
     <name>TEST DVQ ckm 2561</name>
     <description>
-        <lifecycle_state>in_development</lifecycle_state>
+        <lifecycle_state>published</lifecycle_state>
         <details>
             <purpose/>
             <use/>
@@ -60,7 +60,7 @@
             </item>
             <item>
                 <key>build_uid</key>
-                <value>a673faac-4637-4b5d-89f3-7b80c596c826</value>
+                <value>54a3e89c-51d6-4480-be05-8160339f32f9</value>
             </item>
         </other_details>
     </description>
