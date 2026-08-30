@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=cbf6f836-bc5a-4156-b0c9-ec1ab2f6adc2)
-	openEHR-EHR-COMPOSITION.care_plan.v1
+﻿archetype (adl_version=1.4; uid=032b795b-b5ba-427c-a9f6-c13b2460e9fb)
+	openEHR-EHR-COMPOSITION.care_plan.v0
 
 concept
 	[at0000]	-- Care plan
@@ -32,7 +32,7 @@ The SECTION.care_plan archetype is an example of a framework for clinical conten
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -41,9 +41,9 @@ The SECTION.care_plan archetype is an example of a framework for clinical conten
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8F58C9F3484BF63765C9506FCD05C432">
-		["build_uid"] = <"cd22bb04-8a68-49ae-adf7-890782864526">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"BD197485EE1D74F636796512E51A96BD">
+		["build_uid"] = <"40d3e27b-6a55-4bf6-b6f4-84c79436e8d3">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

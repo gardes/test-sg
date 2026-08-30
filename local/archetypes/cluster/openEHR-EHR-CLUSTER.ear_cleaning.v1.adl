@@ -34,8 +34,8 @@ This archetype has been designed to provide structured details as part of a requ
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"B7FC137641F1C0593FEF1AC121C64D30">
-		["build_uid"] = <"4e025070-ea7e-4b0d-bb5e-bf4db1617df8">
-		["revision"] = <"1.1.0">
+		["build_uid"] = <"47032353-e1b4-4e0e-9bce-a35327c477ff">
+		["revision"] = <"1.0.0">
 	>
 
 definition
