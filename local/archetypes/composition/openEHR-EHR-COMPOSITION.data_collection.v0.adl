@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=fa261963-7013-4fef-a755-83eb956e59f5)
+﻿archetype (adl_version=1.4; uid=0fc95583-64d6-4ca0-bafd-221a11e1c368)
 	openEHR-EHR-COMPOSITION.data_collection.v0
 
 concept
@@ -25,12 +25,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"FCF243DEF8667524497A8C368B9DF1E0">
-		["build_uid"] = <"1edded54-66b5-4350-9a87-71582dff52f9">
+		["custodian_organisation"] = <"Ocean Informatics">
+		["references"] = <"Data collection, Draft archetype [Internet]. openEHR Foundation, International Archetypes Clinical Knowledge Manager [cited: 2026-08-31]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.3512">
+		["original_namespace"] = <"com.oceaninformatics">
+		["original_publisher"] = <"Ocean Informatics">
+		["custodian_namespace"] = <"com.oceaninformatics">
+		["MD5-CAM-1.0.1"] = <"F4D5E46D0754DC5A72A6087814E42AAA">
+		["build_uid"] = <"05fb3499-f866-44b9-b7ae-8c02ff85c766">
 		["revision"] = <"0.0.1-alpha">
 	>
 
