@@ -35,7 +35,7 @@ Not to be used to record the activities that occur in the planning and fitting o
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"deprecated">
+	lifecycle_state = <"published">
 	other_contributors = <"Kathy Currie, NT Hearing Health Program Leader, Australia", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -44,8 +44,8 @@ Not to be used to record the activities that occur in the planning and fitting o
 		["original_publisher"] = <"Ocean Informatics">
 		["custodian_namespace"] = <"com.oceaninformatics">
 		["MD5-CAM-1.0.1"] = <"16A892CCFC1C08DE2449F19BAF4D8CF7">
-		["build_uid"] = <"5b6c73fa-5312-48da-9a11-fb7980c134c2">
-		["revision"] = <"1.0.1">
+		["build_uid"] = <"0bc6956f-8d78-48c6-a6d0-244a190ef9f7">
+		["revision"] = <"1.0.2">
 	>
 
 definition
